@@ -161,7 +161,6 @@ footer{background:var(--slate-900);padding:48px 40px 24px}
     <tbody id="hero-ct-body"></tbody>
   </table>
   <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
-    <span style="background:#EFF6FF;color:#1D4ED8;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px">UE 9 — Comptabilité</span>
     <div style="display:flex;gap:8px">
       <button onclick="toggleHeroSound()" id="hero-sound-btn" style="background:transparent;border:1px solid #DBEAFE;border-radius:8px;padding:6px 12px;font-size:12px;color:#64748B;cursor:pointer">🔊 Son</button>
       <button onclick="startHeroAnim()" style="background:transparent;border:1px solid #DBEAFE;border-radius:8px;padding:6px 12px;font-size:12px;color:#64748B;cursor:pointer">↺ Rejouer</button>
@@ -203,43 +202,6 @@ function startHeroAnim(){
 }
 startHeroAnim();
 </script>
-<!-- TABS FONCTIONNALITÉS -->
-<div style="margin-top:16px;border-top:1px solid #DBEAFE;padding-top:16px">
-  <div style="display:flex;gap:8px;margin-bottom:16px">
-    <button onclick="showTab('trou')" id="tab-trou" style="background:transparent;border:1px solid #E2E8F0;border-radius:8px;padding:6px 14px;font-size:12px;color:#64748B;cursor:pointer">✏️ Texte à trous</button>
-    <button onclick="showTab('audio')" id="tab-audio" style="background:transparent;border:1px solid #E2E8F0;border-radius:8px;padding:6px 14px;font-size:12px;color:#64748B;cursor:pointer">🎧 Audio</button>
-  </div>
-  <div id="panel-trou" style="display:none">
-    <div style="font-size:14px;color:#1E293B;line-height:2;background:#fff;border-radius:10px;padding:16px;border:1px solid #DBEAFE">
-      L'amortissement <input id="trou1" type="text" placeholder="?" style="width:100px;border:none;border-bottom:2px solid #60A5FA;background:transparent;font-size:14px;color:#2563EB;text-align:center;outline:none;padding:2px 4px"> répartit le coût sur la <input id="trou2" type="text" placeholder="?" style="width:100px;border:none;border-bottom:2px solid #60A5FA;background:transparent;font-size:14px;color:#2563EB;text-align:center;outline:none;padding:2px 4px"> d'usage.
-    </div>
-    <div style="display:flex;gap:8px;margin-top:12px;align-items:center">
-      <button onclick="checkTrous()" style="background:#2563EB;color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer">Vérifier</button>
-      <button onclick="revealTrous()" style="background:transparent;border:1px solid #DBEAFE;padding:8px 14px;border-radius:8px;font-size:13px;color:#64748B;cursor:pointer">Voir la correction</button>
-      <span id="trou-result" style="font-size:13px;font-weight:500"></span>
-    </div>
-  </div>
-  <div id="panel-audio" style="display:none">
-    <div style="background:#F0FDFA;border:1px solid #99F6E4;border-radius:12px;padding:16px">
-      <div style="font-size:13px;font-weight:500;color:#0F766E;margin-bottom:4px">Pourquoi débiter le 2154 ?</div>
-      <div style="font-size:12px;color:#14B8A6;margin-bottom:14px">1 min 30 s · UE9 — Immobilisations</div>
-      <div style="display:flex;align-items:center;gap:12px">
-        <button id="play-btn" onclick="toggleAudioDemo()" style="width:40px;height:40px;border-radius:50%;background:#14B8A6;border:none;color:#fff;font-size:18px;cursor:pointer;flex-shrink:0">▶</button>
-        <div style="flex:1">
-          <div style="background:#CCFBF1;border-radius:4px;height:6px;position:relative;overflow:hidden">
-            <div id="audio-progress" style="background:#0D9488;height:100%;width:0%;transition:width 0.1s linear;border-radius:4px"></div>
-          </div>
-          <div style="display:flex;justify-content:space-between;margin-top:4px">
-            <span id="audio-time" style="font-size:11px;color:#0D9488">0:00</span>
-            <span style="font-size:11px;color:#94A3B8">1:30</span>
-          </div>
-        </div>
-      </div>
-      <div id="audio-caption" style="margin-top:12px;font-size:13px;color:#0F766E;font-style:italic;min-height:36px;line-height:1.5"></div>
-    </div>
-  </div>
-</div>
-<script>
 function showTab(name){
   ['trou','audio'].forEach(function(t){
     document.getElementById('panel-'+t).style.display=t===name?'block':'none';
