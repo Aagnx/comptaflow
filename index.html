@@ -154,6 +154,51 @@ footer{background:var(--slate-900);padding:48px 40px 24px}
     <div class="trust-avatars"><div class="avatar" style="background:#DBEAFE;color:#1E40AF">A</div><div class="avatar" style="background:#D1FAE5;color:#065F46">M</div><div class="avatar" style="background:#FEF3C7;color:#92400E">L</div><div class="avatar" style="background:#FCE7F3;color:#9D174D">T</div></div>
     <span class="trust-text"><strong>+1 200 étudiants</strong> préparent leur DCG avec Comptaflow</span>
   </div>
+  <div id="hero-anim" style="margin-top:32px;background:#F8FAFC;border-radius:16px;padding:28px;border:1px solid #DBEAFE;width:100%;max-width:520px">
+  <div style="font-size:11px;font-weight:600;color:#0D9488;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;text-align:center">Compte en T</div>
+  <table style="width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden;border:1px solid #DBEAFE">
+    <thead><tr><th style="background:#0F172A;color:#94A3B8;font-size:12px;font-weight:500;padding:10px 16px;text-align:center">Débit</th><th style="background:#0F172A;color:#94A3B8;font-size:12px;font-weight:500;padding:10px 16px;text-align:center">Crédit</th></tr></thead>
+    <tbody id="hero-ct-body"></tbody>
+  </table>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+    <span style="background:#EFF6FF;color:#1D4ED8;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px">UE 9 — Comptabilité</span>
+    <div style="display:flex;gap:8px">
+      <button onclick="toggleHeroSound()" id="hero-sound-btn" style="background:transparent;border:1px solid #DBEAFE;border-radius:8px;padding:6px 12px;font-size:12px;color:#64748B;cursor:pointer">🔊 Son</button>
+      <button onclick="startHeroAnim()" style="background:transparent;border:1px solid #DBEAFE;border-radius:8px;padding:6px 12px;font-size:12px;color:#64748B;cursor:pointer">↺ Rejouer</button>
+    </div>
+  </div>
+</div>
+<script>
+var heroSound=true,heroAudioCtx=null;
+function getHeroCtx(){if(!heroAudioCtx)heroAudioCtx=new(window.AudioContext||window.webkitAudioContext)();return heroAudioCtx;}
+function playHeroClick(){if(!heroSound)return;try{var ctx=getHeroCtx(),buf=ctx.createBuffer(1,ctx.sampleRate*0.04,ctx.sampleRate),data=buf.getChannelData(0);for(var i=0;i<data.length;i++)data[i]=(Math.random()*2-1)*Math.exp(-i/(ctx.sampleRate*0.008));var src=ctx.createBufferSource();src.buffer=buf;var gain=ctx.createGain();gain.gain.setValueAtTime(0.18,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.04);var filter=ctx.createBiquadFilter();filter.type='bandpass';filter.frequency.value=3200;filter.Q.value=0.8;src.connect(filter);filter.connect(gain);gain.connect(ctx.destination);src.start();}catch(e){}}
+function toggleHeroSound(){heroSound=!heroSound;document.getElementById('hero-sound-btn').textContent=heroSound?'🔊 Son':'🔇 Son';}
+var heroRows=[{section:'2154 — Matériel industriel',label:'Acquisition',debit:'12 000',credit:''},{section:'44562 — TVA déductible',label:'TVA 20 %',debit:'2 400',credit:''},{section:'404 — Fournisseurs d\'immo.',label:'Total TTC',debit:'',credit:'14 400'}];
+function startHeroAnim(){
+  var body=document.getElementById('hero-ct-body');body.innerHTML='';
+  heroRows.forEach(function(r,i){
+    var sTr=document.createElement('tr'),sTd=document.createElement('td');
+    sTd.colSpan=2;sTd.style.cssText='background:#EFF6FF;color:#0D9488;font-size:11px;font-weight:600;padding:6px 16px;border-top:1px solid #DBEAFE;opacity:0;transition:opacity 0.3s ease';
+    sTd.textContent=r.section;sTr.appendChild(sTd);
+    var dTr=document.createElement('tr'),lTd=document.createElement('td'),aTd=document.createElement('td');
+    lTd.style.cssText='padding:9px 16px;font-size:13px;color:#1E293B;border-top:1px solid #F1F5F9;opacity:0;transition:opacity 0.3s ease';
+    lTd.textContent=r.label;
+    aTd.style.cssText='padding:9px 16px;font-size:13px;font-weight:500;text-align:right;border-top:1px solid #F1F5F9;font-family:monospace;opacity:0;transition:opacity 0.3s ease;color:'+(r.debit?'#2563EB':'#0D9488');
+    aTd.id='hamt'+i;dTr.appendChild(lTd);dTr.appendChild(aTd);
+    body.appendChild(sTr);body.appendChild(dTr);
+    setTimeout(function(st,lt,at,rv){return function(){
+      st.style.opacity='1';
+      setTimeout(function(){lt.style.opacity='1';at.style.opacity='1';
+        var v=rv,j=0,iv=setInterval(function(){
+          if(j<=v.length){playHeroClick();at.textContent=v.substring(0,j);j++;}
+          else{clearInterval(iv);at.textContent=v;}
+        },80);
+      },250);
+    };}(sTd,lTd,aTd,r.debit||r.credit),i*900+300);
+  });
+}
+startHeroAnim();
+</script>
 </section>
 <div class="stats-bar">
   <div class="stat-item"><div class="stat-num">13</div><div class="stat-lbl">UE couvertes</div></div>
