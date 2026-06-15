@@ -140,11 +140,13 @@ footer{background:var(--slate-900);padding:48px 40px 24px}
 </style>
 </head>
 <body>
+
 <nav>
   <a class="logo" href="#"><div class="logo-mark">C</div><span class="logo-name">Compta<span>flow</span></span></a>
   <div class="nav-links"><a href="#">Cours</a><a href="#">Exercices</a><a href="#">Tarifs</a></div>
   <div class="nav-cta"><button class="btn-ghost">Connexion</button><button class="btn-primary">Commencer gratuitement</button></div>
 </nav>
+
 <section class="hero">
   <div class="hero-pill"><span class="hero-pill-dot"></span>&nbsp; Préparation DCG — 13 unités couvertes</div>
   <h1>La comptabilité,<br>enfin <em>logique</em></h1>
@@ -154,23 +156,119 @@ footer{background:var(--slate-900);padding:48px 40px 24px}
     <div class="trust-avatars"><div class="avatar" style="background:#DBEAFE;color:#1E40AF">A</div><div class="avatar" style="background:#D1FAE5;color:#065F46">M</div><div class="avatar" style="background:#FEF3C7;color:#92400E">L</div><div class="avatar" style="background:#FCE7F3;color:#9D174D">T</div></div>
     <span class="trust-text"><strong>+1 200 étudiants</strong> préparent leur DCG avec Comptaflow</span>
   </div>
-  <div id="hero-anim" style="margin-top:32px;background:#F8FAFC;border-radius:16px;padding:28px;border:1px solid #DBEAFE;width:100%;max-width:520px">
-  <div style="font-size:11px;font-weight:600;color:#0D9488;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;text-align:center">Compte en T</div>
-  <table style="width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden;border:1px solid #DBEAFE">
-    <thead><tr><th style="background:#0F172A;color:#94A3B8;font-size:12px;font-weight:500;padding:10px 16px;text-align:center">Débit</th><th style="background:#0F172A;color:#94A3B8;font-size:12px;font-weight:500;padding:10px 16px;text-align:center">Crédit</th></tr></thead>
-    <tbody id="hero-ct-body"></tbody>
-  </table>
-  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
-    <div style="display:flex;gap:8px">
+
+  <div style="margin-top:32px;background:#F8FAFC;border-radius:16px;padding:28px;border:1px solid #DBEAFE;width:100%;max-width:520px">
+    <div style="font-size:11px;font-weight:600;color:#0D9488;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;text-align:center">Compte en T — Achat matériel 12 000 € HT</div>
+    <table style="width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden;border:1px solid #DBEAFE">
+      <thead><tr>
+        <th style="background:#0F172A;color:#94A3B8;font-size:12px;font-weight:500;padding:10px 16px;text-align:center">Débit</th>
+        <th style="background:#0F172A;color:#94A3B8;font-size:12px;font-weight:500;padding:10px 16px;text-align:center">Crédit</th>
+      </tr></thead>
+      <tbody id="hero-ct-body"></tbody>
+    </table>
+    <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:12px">
       <button onclick="toggleHeroSound()" id="hero-sound-btn" style="background:transparent;border:1px solid #DBEAFE;border-radius:8px;padding:6px 12px;font-size:12px;color:#64748B;cursor:pointer">🔊 Son</button>
       <button onclick="startHeroAnim()" style="background:transparent;border:1px solid #DBEAFE;border-radius:8px;padding:6px 12px;font-size:12px;color:#64748B;cursor:pointer">↺ Rejouer</button>
-      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
-  <div style="display:flex;align-items:center;gap:6px;background:#F0FDFA;border:1px solid #99F6E4;border-radius:8px;padding:7px 12px;font-size:12px;font-weight:500;color:#0F766E">✅ Exercices interactifs inclus</div>
-  <div style="display:flex;align-items:center;gap:6px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:7px 12px;font-size:12px;font-weight:500;color:#1D4ED8">🎧 Corrigés audio pas à pas</div>
-</div>
+    </div>
+    <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
+      <div style="display:flex;align-items:center;gap:6px;background:#F0FDFA;border:1px solid #99F6E4;border-radius:8px;padding:7px 12px;font-size:12px;font-weight:500;color:#0F766E">✅ Exercices interactifs inclus</div>
+      <div style="display:flex;align-items:center;gap:6px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:7px 12px;font-size:12px;font-weight:500;color:#1D4ED8">🎧 Corrigés audio pas à pas</div>
     </div>
   </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">13</div><div class="stat-lbl">UE couvertes</div></div>
+  <div class="stat-item"><div class="stat-num">200+</div><div class="stat-lbl">Exercices interactifs</div></div>
+  <div class="stat-item"><div class="stat-num">50+</div><div class="stat-lbl">Fiches de cours PDF</div></div>
+  <div class="stat-item"><div class="stat-num">Audio</div><div class="stat-lbl">Explications vocales</div></div>
 </div>
+
+<section class="section section-white">
+  <div class="sec-header"><div class="sec-eyebrow">Programme</div><div class="sec-title">Toutes les UE du DCG</div><div class="sec-sub">Clique sur une UE pour accéder aux fiches et exercices</div></div>
+  <div class="ue-grid">
+    <div class="ue-card"><div class="ue-tag">UE 1</div><div class="ue-name">Introduction au droit</div><div class="ue-meta">8 fiches</div></div>
+    <div class="ue-card"><div class="ue-tag">UE 2</div><div class="ue-name">Droit des sociétés</div><div class="ue-meta">12 fiches</div></div>
+    <div class="ue-card"><div class="ue-tag">UE 3</div><div class="ue-name">Droit social</div><div class="ue-meta">10 fiches</div></div>
+    <div class="ue-card"><div class="ue-tag">UE 4</div><div class="ue-name">Droit fiscal</div><div class="ue-meta">14 fiches</div></div>
+    <div class="ue-card"><div class="ue-tag">UE 5</div><div class="ue-name">Économie</div><div class="ue-meta">9 fiches</div></div>
+    <div class="ue-card"><div class="ue-tag">UE 6</div><div class="ue-name">Finance d'entreprise</div><div class="ue-meta">11 fiches</div></div>
+    <div class="ue-card"><div class="ue-tag">UE 7</div><div class="ue-name">Management</div><div class="ue-meta">8 fiches</div></div>
+    <div class="ue-card"><div class="ue-tag">UE 8</div><div class="ue-name">Systèmes d'information</div><div class="ue-meta">7 fiches</div></div>
+    <div class="ue-card featured"><div class="ue-tag">UE 9</div><div class="ue-name">Comptabilité</div><div class="ue-meta">22 fiches · populaire ★</div></div>
+    <div class="ue-card"><div class="ue-tag">UE 10</div><div class="ue-name">Comptabilité appro.</div><div class="ue-meta">18 fiches</div></div>
+    <div class="ue-card"><div class="ue-tag">UE 11</div><div class="ue-name">Contrôle de gestion</div><div class="ue-meta">15 fiches</div></div>
+    <div class="ue-card"><div class="ue-tag">UE 12</div><div class="ue-name">Anglais des affaires</div><div class="ue-meta">6 fiches</div></div>
+    <div class="ue-card"><div class="ue-tag">UE 13</div><div class="ue-name">Communication</div><div class="ue-meta">5 fiches</div></div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="sec-header"><div class="sec-eyebrow">Fonctionnalités</div><div class="sec-title sec-title-light">Apprendre autrement</div><div class="sec-sub sec-sub-light">Des outils pensés pour la comptabilité, pas juste des PDF</div></div>
+  <div class="features-grid">
+    <div class="feat"><div class="feat-icon">📄</div><div class="feat-title">Fiches de cours structurées</div><div class="feat-desc">Résumés clairs par notion, téléchargeables en PDF, mis à jour chaque session.</div></div>
+    <div class="feat"><div class="feat-icon">✏️</div><div class="feat-title">Textes à trous interactifs</div><div class="feat-desc">Complète les définitions et mécanismes clés. Correction instantanée avec explications.</div></div>
+    <div class="feat"><div class="feat-icon">📊</div><div class="feat-title">Comptes en T corrigés</div><div class="feat-desc">Saisie des écritures dans un vrai format compte en T. Affiche la correction d'un clic.</div></div>
+    <div class="feat"><div class="feat-icon">🎧</div><div class="feat-title">Explications audio</div><div class="feat-desc">Un extrait vocal explique le sens économique de chaque écriture importante.</div></div>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="sec-header"><div class="sec-eyebrow">Aperçu</div><div class="sec-title">Un exercice en conditions réelles</div><div class="sec-sub">UE9 — Immobilisations corporelles</div></div>
+  <div class="exercise-wrap">
+    <div class="ex-card">
+      <div class="ex-header"><span class="ex-header-title">Exercice — Amortissement linéaire</span><span class="ex-badge">UE 9</span></div>
+      <div class="ex-body">
+        <div class="ex-label">Texte à trous</div>
+        <div class="ex-text">L'amortissement <span class="blank">linéaire</span> répartit le coût de façon égale sur la <span class="blank">durée d'usage</span>. Le taux annuel est de <span class="blank">1 ÷ n</span>. Il débute à la <span class="blank">date de mise en service</span>.</div>
+        <div class="ex-label">Compte en T — Achat matériel 12 000 € HT · TVA 20 %</div>
+        <div class="compte-t">
+          <div class="ct-head"><div class="ct-head-cell">Débit</div><div class="ct-head-cell">Crédit</div></div>
+          <div class="ct-section">2154 — Matériel industriel</div>
+          <div class="ct-row"><div class="ct-cell">Acquisition</div><div class="ct-cell debit">12 000</div></div>
+          <div class="ct-section">44562 — TVA déductible</div>
+          <div class="ct-row"><div class="ct-cell">TVA 20 %</div><div class="ct-cell debit">2 400</div></div>
+          <div class="ct-section">404 — Fournisseurs d'immo.</div>
+          <div class="ct-row"><div class="ct-cell" style="color:#94A3B8;font-style:italic">—</div><div class="ct-cell credit">14 400</div></div>
+        </div>
+        <div class="audio-strip">
+          <button class="play-btn">▶</button>
+          <div class="audio-info"><div class="audio-title">Sens de l'écriture — expliqué en 90 secondes</div><div class="audio-dur">1 min 30 s</div></div>
+          <div class="audio-wave" id="wave"></div>
+        </div>
+        <div class="ex-actions"><button class="btn-correction">Afficher la correction</button><button class="btn-next">Exercice suivant →</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="sec-header"><div class="sec-eyebrow">Tarifs</div><div class="sec-title">Simple et transparent</div><div class="sec-sub">One-shot ou abonnement — sans engagement</div></div>
+  <div class="pricing-grid">
+    <div class="price-card"><div class="price-name">Fiche seule</div><div class="price-amount"><sup>€</sup>2,90</div><div class="price-period">paiement unique · accès permanent</div><div class="price-divider"></div><ul class="price-items"><li>PDF téléchargeable</li><li>Exercices associés</li><li>Audio de l'écriture clé</li></ul><button class="btn-price-outline">Choisir une fiche</button></div>
+    <div class="price-card pop"><div class="price-pop-tag">Le plus populaire</div><div class="price-name">Abonnement mensuel</div><div class="price-amount"><sup>€</sup>14,90</div><div class="price-period">par mois · résiliable à tout moment</div><div class="price-divider"></div><ul class="price-items"><li>Toutes les UE débloquées</li><li>200+ exercices interactifs</li><li>Toutes les fiches PDF</li><li>Audio complet</li><li>Mises à jour incluses</li></ul><button class="btn-price-main">S'abonner maintenant</button></div>
+    <div class="price-card"><div class="price-name">UE complète</div><div class="price-amount"><sup>€</sup>19,90</div><div class="price-period">paiement unique · accès permanent</div><div class="price-divider"></div><ul class="price-items"><li>1 UE au choix</li><li>Toutes les fiches + exercices</li><li>Corrections détaillées</li><li>Audio inclus</li></ul><button class="btn-price-outline">Choisir une UE</button></div>
+  </div>
+</section>
+
+<div class="social-section">
+  <div><div class="social-title">On est aussi sur les réseaux</div><div class="social-sub">Conseils quotidiens, astuces mémo et coulisses du projet</div></div>
+  <div class="social-cards">
+    <div class="social-card"><div class="soc-icon" style="background:#FCE7F3">📸</div><div><div class="soc-name">Instagram</div><div class="soc-handle">@comptaflow</div></div></div>
+    <div class="social-card"><div class="soc-icon" style="background:#F1F5F9">🎵</div><div><div class="soc-name">TikTok</div><div class="soc-handle">@comptaflow</div></div></div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-brand"><span>◆</span> Comptaflow</div><div class="footer-tagline">La plateforme des étudiants DCG qui veulent comprendre, pas juste mémoriser.</div><div class="footer-stripe">🔒 Paiements sécurisés par Stripe</div></div>
+    <div><div class="f-col-title">Cours</div><div class="f-links"><a href="#">UE9 — Comptabilité</a><a href="#">UE4 — Droit fiscal</a><a href="#">UE11 — Contrôle de gestion</a><a href="#">Toutes les UE →</a></div></div>
+    <div><div class="f-col-title">Plateforme</div><div class="f-links"><a href="#">Tarifs</a><a href="#">Mon espace</a><a href="#">FAQ</a><a href="#">Contact</a></div></div>
+    <div><div class="f-col-title">Légal</div><div class="f-links"><a href="#">CGV</a><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div>
+  </div>
+  <div class="footer-bottom"><span class="footer-copy">© 2026 Comptaflow</span><div class="footer-legal"><a href="#">CGV</a><a href="#">Mentions légales</a></div></div>
+</footer>
+
 <script>
 var heroSound=true,heroAudioCtx=null;
 function getHeroCtx(){if(!heroAudioCtx)heroAudioCtx=new(window.AudioContext||window.webkitAudioContext)();return heroAudioCtx;}
@@ -200,137 +298,9 @@ function startHeroAnim(){
     };}(sTd,lTd,aTd,r.debit||r.credit),i*900+300);
   });
 }
-startHeroAnim();
-</script>
-function showTab(name){
-  ['trou','audio'].forEach(function(t){
-    document.getElementById('panel-'+t).style.display=t===name?'block':'none';
-    var btn=document.getElementById('tab-'+t);
-    if(t===name){btn.style.background='#EFF6FF';btn.style.border='1px solid #BFDBFE';btn.style.color='#2563EB';btn.style.fontWeight='600';}
-    else{btn.style.background='transparent';btn.style.border='1px solid #E2E8F0';btn.style.color='#64748B';btn.style.fontWeight='400';}
-  });
-}
-function checkTrous(){
-  var v1=document.getElementById('trou1').value.trim().toLowerCase();
-  var v2=document.getElementById('trou2').value.trim().toLowerCase();
-  var ok1=v1==='linéaire'||v1==='lineaire';
-  var ok2=v2==='durée'||v2==='duree';
-  var res=document.getElementById('trou-result');
-  if(ok1&&ok2){res.textContent='✅ Bravo !';res.style.color='#0D9488';}
-  else{res.textContent='❌ Pas tout à fait...';res.style.color='#EF4444';}
-}
-function revealTrous(){
-  document.getElementById('trou1').value='linéaire';
-  document.getElementById('trou2').value='durée';
-  document.getElementById('trou-result').textContent='✅ Voilà la correction !';
-  document.getElementById('trou-result').style.color='#0D9488';
-}
-var audioDemoPlaying=false,audioDemoTimer=null,audioDemoSec=0;
-var audioCaptions=['On débite le compte 2154 car on acquiert un bien durable...','Ce bien va générer des avantages économiques futurs...','La TVA est récupérable, on la place en 44562...','Le crédit en 404 représente la dette envers le fournisseur.'];
-function toggleAudioDemo(){
-  if(audioDemoPlaying){clearInterval(audioDemoTimer);audioDemoPlaying=false;document.getElementById('play-btn').textContent='▶';}
-  else{audioDemoPlaying=true;document.getElementById('play-btn').textContent='⏸';
-    audioDemoTimer=setInterval(function(){
-      audioDemoSec++;
-      document.getElementById('audio-progress').style.width=Math.min(audioDemoSec/90*100,100)+'%';
-      var m=Math.floor(audioDemoSec/60),s=audioDemoSec%60;
-      document.getElementById('audio-time').textContent=m+':'+(s<10?'0':'')+s;
-      var ci=Math.floor(audioDemoSec/22);
-      if(ci<audioCaptions.length)document.getElementById('audio-caption').textContent='"'+audioCaptions[ci]+'"';
-      if(audioDemoSec>=90){clearInterval(audioDemoTimer);audioDemoPlaying=false;document.getElementById('play-btn').textContent='▶';audioDemoSec=0;}
-    },1000);
-  }
-}
-</script>  
-</section>
-<div class="stats-bar">
-  <div class="stat-item"><div class="stat-num">13</div><div class="stat-lbl">UE couvertes</div></div>
-  <div class="stat-item"><div class="stat-num">200+</div><div class="stat-lbl">Exercices interactifs</div></div>
-  <div class="stat-item"><div class="stat-num">50+</div><div class="stat-lbl">Fiches de cours PDF</div></div>
-  <div class="stat-item"><div class="stat-num">Audio</div><div class="stat-lbl">Explications vocales</div></div>
-</div>
-<section class="section section-white">
-  <div class="sec-header"><div class="sec-eyebrow">Programme</div><div class="sec-title">Toutes les UE du DCG</div><div class="sec-sub">Clique sur une UE pour accéder aux fiches et exercices</div></div>
-  <div class="ue-grid">
-    <div class="ue-card"><div class="ue-tag">UE 1</div><div class="ue-name">Introduction au droit</div><div class="ue-meta">8 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 2</div><div class="ue-name">Droit des sociétés</div><div class="ue-meta">12 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 3</div><div class="ue-name">Droit social</div><div class="ue-meta">10 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 4</div><div class="ue-name">Droit fiscal</div><div class="ue-meta">14 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 5</div><div class="ue-name">Économie</div><div class="ue-meta">9 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 6</div><div class="ue-name">Finance d'entreprise</div><div class="ue-meta">11 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 7</div><div class="ue-name">Management</div><div class="ue-meta">8 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 8</div><div class="ue-name">Systèmes d'information</div><div class="ue-meta">7 fiches</div></div>
-    <div class="ue-card featured"><div class="ue-tag">UE 9</div><div class="ue-name">Comptabilité</div><div class="ue-meta">22 fiches · populaire ★</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 10</div><div class="ue-name">Comptabilité appro.</div><div class="ue-meta">18 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 11</div><div class="ue-name">Contrôle de gestion</div><div class="ue-meta">15 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 12</div><div class="ue-name">Anglais des affaires</div><div class="ue-meta">6 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 13</div><div class="ue-name">Communication</div><div class="ue-meta">5 fiches</div></div>
-  </div>
-</section>
-<section class="section section-dark">
-  <div class="sec-header"><div class="sec-eyebrow">Fonctionnalités</div><div class="sec-title sec-title-light">Apprendre autrement</div><div class="sec-sub sec-sub-light">Des outils pensés pour la comptabilité, pas juste des PDF</div></div>
-  <div class="features-grid">
-    <div class="feat"><div class="feat-icon">📄</div><div class="feat-title">Fiches de cours structurées</div><div class="feat-desc">Résumés clairs par notion, téléchargeables en PDF, mis à jour chaque session.</div></div>
-    <div class="feat"><div class="feat-icon">✏️</div><div class="feat-title">Textes à trous interactifs</div><div class="feat-desc">Complète les définitions et mécanismes clés. Correction instantanée avec explications.</div></div>
-    <div class="feat"><div class="feat-icon">📊</div><div class="feat-title">Comptes en T corrigés</div><div class="feat-desc">Saisie des écritures dans un vrai format compte en T. Affiche la correction d'un clic.</div></div>
-    <div class="feat"><div class="feat-icon">🎧</div><div class="feat-title">Explications audio</div><div class="feat-desc">Un extrait vocal explique le sens économique de chaque écriture importante.</div></div>
-  </div>
-</section>
-<section class="section section-light">
-  <div class="sec-header"><div class="sec-eyebrow">Aperçu</div><div class="sec-title">Un exercice en conditions réelles</div><div class="sec-sub">UE9 — Immobilisations corporelles</div></div>
-  <div class="exercise-wrap">
-    <div class="ex-card">
-      <div class="ex-header"><span class="ex-header-title">Exercice — Amortissement linéaire</span><span class="ex-badge">UE 9</span></div>
-      <div class="ex-body">
-        <div class="ex-label">Texte à trous</div>
-        <div class="ex-text">L'amortissement <span class="blank">linéaire</span> répartit le coût de façon égale sur la <span class="blank">durée d'usage</span>. Le taux annuel est de <span class="blank">1 ÷ n</span>. Il débute à la <span class="blank">date de mise en service</span>.</div>
-        <div class="ex-label">Compte en T — Achat matériel 12 000 € HT · TVA 20 %</div>
-        <div class="compte-t">
-          <div class="ct-head"><div class="ct-head-cell">Débit</div><div class="ct-head-cell">Crédit</div></div>
-          <div class="ct-section">2154 — Matériel industriel</div>
-          <div class="ct-row"><div class="ct-cell">Acquisition</div><div class="ct-cell debit">12 000</div></div>
-          <div class="ct-section">44562 — TVA déductible</div>
-          <div class="ct-row"><div class="ct-cell">TVA 20 %</div><div class="ct-cell debit">2 400</div></div>
-          <div class="ct-section">404 — Fournisseurs d'immo.</div>
-          <div class="ct-row"><div class="ct-cell" style="color:#94A3B8;font-style:italic">—</div><div class="ct-cell credit">14 400</div></div>
-        </div>
-        <div class="audio-strip">
-          <button class="play-btn">▶</button>
-          <div class="audio-info"><div class="audio-title">Sens de l'écriture — expliqué en 90 secondes</div><div class="audio-dur">1 min 30 s</div></div>
-          <div class="audio-wave" id="wave"></div>
-        </div>
-        <div class="ex-actions"><button class="btn-correction">Afficher la correction</button><button class="btn-next">Exercice suivant →</button></div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section section-white">
-  <div class="sec-header"><div class="sec-eyebrow">Tarifs</div><div class="sec-title">Simple et transparent</div><div class="sec-sub">One-shot ou abonnement — sans engagement</div></div>
-  <div class="pricing-grid">
-    <div class="price-card"><div class="price-name">Fiche seule</div><div class="price-amount"><sup>€</sup>2,90</div><div class="price-period">paiement unique · accès permanent</div><div class="price-divider"></div><ul class="price-items"><li>PDF téléchargeable</li><li>Exercices associés</li><li>Audio de l'écriture clé</li></ul><button class="btn-price-outline">Choisir une fiche</button></div>
-    <div class="price-card pop"><div class="price-pop-tag">Le plus populaire</div><div class="price-name">Abonnement mensuel</div><div class="price-amount"><sup>€</sup>14,90</div><div class="price-period">par mois · résiliable à tout moment</div><div class="price-divider"></div><ul class="price-items"><li>Toutes les UE débloquées</li><li>200+ exercices interactifs</li><li>Toutes les fiches PDF</li><li>Audio complet</li><li>Mises à jour incluses</li></ul><button class="btn-price-main">S'abonner maintenant</button></div>
-    <div class="price-card"><div class="price-name">UE complète</div><div class="price-amount"><sup>€</sup>19,90</div><div class="price-period">paiement unique · accès permanent</div><div class="price-divider"></div><ul class="price-items"><li>1 UE au choix</li><li>Toutes les fiches + exercices</li><li>Corrections détaillées</li><li>Audio inclus</li></ul><button class="btn-price-outline">Choisir une UE</button></div>
-  </div>
-</section>
-<div class="social-section">
-  <div><div class="social-title">On est aussi sur les réseaux</div><div class="social-sub">Conseils quotidiens, astuces mémo et coulisses du projet</div></div>
-  <div class="social-cards">
-    <div class="social-card"><div class="soc-icon" style="background:#FCE7F3">📸</div><div><div class="soc-name">Instagram</div><div class="soc-handle">@comptaflow</div></div></div>
-    <div class="social-card"><div class="soc-icon" style="background:#F1F5F9">🎵</div><div><div class="soc-name">TikTok</div><div class="soc-handle">@comptaflow</div></div></div>
-  </div>
-</div>
-<footer>
-  <div class="footer-grid">
-    <div><div class="footer-brand"><span>◆</span> Comptaflow</div><div class="footer-tagline">La plateforme des étudiants DCG qui veulent comprendre, pas juste mémoriser.</div><div class="footer-stripe">🔒 Paiements sécurisés par Stripe</div></div>
-    <div><div class="f-col-title">Cours</div><div class="f-links"><a href="#">UE9 — Comptabilité</a><a href="#">UE4 — Droit fiscal</a><a href="#">UE11 — Contrôle de gestion</a><a href="#">Toutes les UE →</a></div></div>
-    <div><div class="f-col-title">Plateforme</div><div class="f-links"><a href="#">Tarifs</a><a href="#">Mon espace</a><a href="#">FAQ</a><a href="#">Contact</a></div></div>
-    <div><div class="f-col-title">Légal</div><div class="f-links"><a href="#">CGV</a><a href="#">Mentions légales</a><a href="#">Confidentialité</a></div></div>
-  </div>
-  <div class="footer-bottom"><span class="footer-copy">© 2026 Comptaflow</span><div class="footer-legal"><a href="#">CGV</a><a href="#">Mentions légales</a></div></div>
-</footer>
-<script>
 const wave=document.getElementById('wave');
 [4,7,12,16,20,14,18,22,16,10,14,18,12,8,10,14,20,16,10,6].forEach(h=>{const b=document.createElement('div');b.className='wv';b.style.height=h+'px';wave.appendChild(b);});
+startHeroAnim();
 </script>
 </body>
 </html>
