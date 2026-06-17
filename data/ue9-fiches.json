@@ -1,1 +1,43 @@
+{
+  "ue": "UE9",
+  "titre": "Comptabilité",
+  "fiches": [
+    {
+      "id": 1,
+      "titre": "Les immobilisations corporelles",
+      "chapitre": "Immobilisations",
+      "resume": "Une immobilisation corporelle est un bien durable utilisé par l'entreprise pour son activité. Elle figure à l'actif du bilan.",
+      "points_cles": [
+        "Durée d'utilisation supérieure à 1 an",
+        "Valeur significative",
+        "Usage dans l'activité de l'entreprise"
+      ],
+      "comptes": ["2154 — Matériel industriel", "2183 — Matériel de bureau", "2184 — Mobilier"]
+    },
+    {
+      "id": 2,
+      "titre": "L'amortissement linéaire",
+      "chapitre": "Amortissements",
+      "resume": "L'amortissement linéaire répartit le coût d'une immobilisation de façon égale sur sa durée d'usage.",
+      "points_cles": [
+        "Taux = 1 / durée",
+        "Début à la date de mise en service",
+        "Prorata temporis la première année"
+      ],
+      "comptes": ["6811 — Dotations aux amortissements", "28 — Amortissements"]
+    },
+    {
+      "id": 3,
+      "titre": "La TVA déductible",
+      "chapitre": "TVA",
+      "resume": "La TVA payée sur les achats est récupérable. Elle est enregistrée dans un compte distinct et déduite de la TVA collectée.",
+      "points_cles": [
+        "Taux normal : 20%",
+        "Compte 44562 — TVA déductible sur immobilisations",
+        "Compte 44566 — TVA déductible sur biens et services"
+      ],
+      "comptes": ["44562", "44566", "44571 — TVA collectée"]
+    }
+  ]
+}
 
