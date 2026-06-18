@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UE9 Comptabilité — Fiches de cours · Comptaflow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --blue-50: #EFF6FF;
+    --blue-100: #DBEAFE;
+    --blue-200: #BFDBFE;
+    --blue-500: #3B82F6;
+    --blue-600: #2563EB;
+    --blue-700: #1D4ED8;
+    --teal-400: #2DD4BF;
+    --teal-500: #14B8A6;
+    --teal-600: #0D9488;
+    --slate-400: #94A3B8;
+    --slate-500: #64748B;
+    --slate-700: #334155;
+    --slate-800: #1E293B;
+    --slate-900: #0F172A;
+  }
+
+  body { font-family: 'Inter', sans-serif; background: #fff; color: var(--slate-800); }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--blue-100);
+    padding: 0 24px; height: 60px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { font-size: 18px; font-weight: 700; color: var(--blue-600); text-decoration: none; letter-spacing: -0.3px; }
+  .nav-logo span { color: var(--teal-500); }
+  .nav-links { display: flex; gap: 24px; align-items: center; }
+  .nav-links a { font-size: 14px; font-weight: 500; color: var(--slate-500); text-decoration: none; transition: color 0.15s; }
+  .nav-links a:hover { color: var(--blue-600); }
+  .nav-cta { background: var(--blue-600); color: #fff !important; padding: 8px 16px; border-radius: 8px; font-size: 13px !important; }
+  .nav-cta:hover { background: var(--blue-700) !important; }
+
+  /* BREADCRUMB */
+  .breadcrumb {
+    max-width: 860px; margin: 0 auto;
+    padding: 16px 24px 0;
+    display: flex; align-items: center; gap: 6px;
+    font-size: 13px; color: var(--slate-400);
+  }
+  .breadcrumb a { color: var(--blue-500); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+  .breadcrumb-sep { color: var(--slate-400); }
+
+  /* HEADER */
+  .page-header {
+    max-width: 860px; margin: 0 auto;
+    padding: 24px 24px 32px;
+    border-bottom: 1px solid var(--blue-100);
+    display: flex; align-items: flex-start; gap: 20px;
+    flex-wrap: wrap;
+  }
+  .ue-badge-big {
+    width: 56px; height: 56px;
+    background: var(--blue-50);
+    border: 1.5px solid var(--blue-100);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700; color: var(--blue-600);
+    flex-shrink: 0;
+  }
+  .page-header-info { flex: 1; min-width: 200px; }
+  .page-header-info h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.4px; color: var(--slate-900); margin-bottom: 6px; }
+  .page-header-info p { font-size: 14px; color: var(--slate-500); line-height: 1.5; }
+  .header-stats { display: flex; gap: 16px; margin-top: 14px; flex-wrap: wrap; }
+  .stat { display: flex; align-items: center; gap: 5px; font-size: 13px; color: var(--slate-500); }
+  .stat-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal-500); }
+
+  /* FILTERS */
+  .filters {
+    max-width: 860px; margin: 0 auto;
+    padding: 20px 24px 0;
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .filter-btn {
+    padding: 6px 14px; border-radius: 20px;
+    border: 1.5px solid var(--blue-100);
+    background: #fff;
+    font-size: 12px; font-weight: 500; color: var(--slate-500);
+    cursor: pointer; transition: all 0.15s;
+    font-family: 'Inter', sans-serif;
+  }
+  .filter-btn:hover { border-color: var(--blue-500); color: var(--blue-600); }
+  .filter-btn.active { background: var(--blue-600); border-color: var(--blue-600); color: #fff; }
+
+  /* FICHES LIST */
+  .fiches-section {
+    max-width: 860px; margin: 0 auto;
+    padding: 24px 24px 48px;
+  }
+  .fiches-grid { display: flex; flex-direction: column; gap: 12px; }
+
+  .fiche-card {
+    border: 1.5px solid var(--blue-100);
+    border-radius: 12px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: box-shadow 0.18s, border-color 0.18s, transform 0.15s;
+    background: #fff;
+    cursor: pointer;
+  }
+  .fiche-card:hover {
+    border-color: var(--blue-500);
+    box-shadow: 0 3px 16px rgba(59,130,246,0.1);
+    transform: translateY(-1px);
+  }
+
+  .fiche-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: var(--blue-50);
+    border: 1px solid var(--blue-100);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 18px;
+  }
+
+  .fiche-info { flex: 1; min-width: 0; }
+  .fiche-theme {
+    font-size: 11px; font-weight: 600;
+    color: var(--teal-600);
+    text-transform: uppercase; letter-spacing: 0.06em;
+    margin-bottom: 3px;
+  }
+  .fiche-titre {
+    font-size: 15px; font-weight: 600;
+    color: var(--slate-800); line-height: 1.3; margin-bottom: 5px;
+  }
+  .fiche-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .fiche-tag {
+    font-size: 11px; color: var(--slate-400);
+    display: flex; align-items: center; gap: 4px;
+  }
+
+  .fiche-arrow {
+    width: 32px; height: 32px;
+    background: var(--blue-50);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--blue-500);
+    flex-shrink: 0;
+    font-size: 16px;
+    transition: background 0.15s;
+  }
+  .fiche-card:hover .fiche-arrow { background: var(--blue-500); color: #fff; }
+
+  .niveau-badge {
+    display: inline-block;
+    font-size: 10px; font-weight: 600;
+    padding: 2px 8px; border-radius: 20px;
+    text-transform: uppercase; letter-spacing: 0.04em;
+  }
+  .niveau-essentiel { background: #F0FDF4; color: #15803D; border: 1px solid #BBF7D0; }
+  .niveau-avance    { background: #FFF7ED; color: #C2410C; border: 1px solid #FED7AA; }
+
+  /* EMPTY */
+  #empty {
+    text-align: center; padding: 40px;
+    color: var(--slate-400); font-size: 14px;
+    display: none;
+  }
+
+  footer {
+    border-top: 1px solid var(--blue-100);
+    padding: 28px 24px; text-align: center;
+  }
+  .footer-logo { font-size: 16px; font-weight: 700; color: var(--blue-600); margin-bottom: 6px; }
+  .footer-logo span { color: var(--teal-500); }
+  footer p { font-size: 12px; color: var(--slate-400); }
+
+  @media (max-width: 600px) {
+    .nav-links a:not(.nav-cta) { display: none; }
+    .fiche-arrow { display: none; }
+    .page-header-info h1 { font-size: 21px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../../index.html" class="nav-logo">Compta<span>flow</span></a>
+  <div class="nav-links">
+    <a href="../../ue.html">Cours</a>
+    <a href="../../index.html#pricing">Tarifs</a>
+    <a href="../../index.html#pricing" class="nav-cta">Commencer</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="../../ue.html">Toutes les UE</a>
+  <span class="breadcrumb-sep">›</span>
+  <span>UE9 — Comptabilité</span>
+</div>
+
+<div class="page-header">
+  <div class="ue-badge-big">UE9</div>
+  <div class="page-header-info">
+    <h1>Comptabilité</h1>
+    <p>Maîtrisez la comptabilité générale : du plan comptable aux écritures de clôture, avec des exercices interactifs corrigés.</p>
+    <div class="header-stats">
+      <div class="stat"><div class="stat-dot"></div><span id="count-fiches">0 fiche</span></div>
+      <div class="stat"><div class="stat-dot" style="background:var(--blue-400)"></div><span>Exercices inclus</span></div>
+      <div class="stat"><div class="stat-dot" style="background:#F59E0B"></div><span>Audio disponible</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="filters" id="filters">
+  <button class="filter-btn active" data-theme="tous">Tous les thèmes</button>
+</div>
+
+<div class="fiches-section">
+  <div class="fiches-grid" id="fiches-grid"></div>
+  <div id="empty">Aucune fiche dans cette catégorie pour l'instant.</div>
+</div>
+
+<footer>
+  <div class="footer-logo">Compta<span>flow</span></div>
+  <p>© 2025 Comptaflow · @comptaflow sur Instagram &amp; TikTok</p>
+</footer>
+
+<script>
+const ICONS = {
+  "Fondamentaux": "📋",
+  "Immobilisations": "🏗️",
+  "Fiscalité": "📊",
+  "Stocks": "📦",
+  "Trésorerie": "💳",
+  "Clôture": "🗂️",
+  "Provisions": "🛡️"
+};
+
+let allFiches = [];
+let activeTheme = 'tous';
+
+async function loadFiches() {
+  try {
+    const res = await fetch('../../data/ue9-fiches.json');
+    const data = await res.json();
+    allFiches = data.fiches;
+    buildFilters();
+    renderFiches();
+    updateCount();
+  } catch(e) {
+    document.getElementById('fiches-grid').innerHTML =
+      '<p style="color:#94A3B8;font-size:14px;padding:20px 0">Chargement des fiches impossible. Vérifiez que le fichier JSON est bien en place.</p>';
+  }
+}
+
+function buildFilters() {
+  const themes = [...new Set(allFiches.map(f => f.theme))];
+  const container = document.getElementById('filters');
+  themes.forEach(t => {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn';
+    btn.dataset.theme = t;
+    btn.textContent = t;
+    btn.addEventListener('click', () => setFilter(t));
+    container.appendChild(btn);
+  });
+  document.querySelector('[data-theme="tous"]').addEventListener('click', () => setFilter('tous'));
+}
+
+function setFilter(theme) {
+  activeTheme = theme;
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.theme === theme);
+  });
+  renderFiches();
+}
+
+function renderFiches() {
+  const filtered = activeTheme === 'tous' ? allFiches : allFiches.filter(f => f.theme === activeTheme);
+  const grid = document.getElementById('fiches-grid');
+  const empty = document.getElementById('empty');
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+  grid.innerHTML = filtered.map(ficheCard).join('');
+}
+
+function ficheCard(f) {
+  const icon  = ICONS[f.theme] || '📄';
+  const niv   = f.niveau === 'avance' ? 'avancé' : 'essentiel';
+  const nivClass = f.niveau === 'avance' ? 'niveau-avance' : 'niveau-essentiel';
+  return `
+    <a href="fiche.html?id=${f.id}" class="fiche-card">
+      <div class="fiche-icon">${icon}</div>
+      <div class="fiche-info">
+        <div class="fiche-theme">${f.theme}</div>
+        <div class="fiche-titre">${f.titre}</div>
+        <div class="fiche-meta">
+          <div class="fiche-tag">⏱ ${f.duree}</div>
+          <div class="fiche-tag"><span class="niveau-badge ${nivClass}">${niv}</span></div>
+        </div>
+      </div>
+      <div class="fiche-arrow">›</div>
+    </a>`;
+}
+
+function updateCount() {
+  const n = allFiches.length;
+  document.getElementById('count-fiches').textContent = `${n} fiche${n > 1 ? 's' : ''}`;
+}
+
+loadFiches();
+</script>
+</body>
+</html>
