@@ -1,1 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarifs — Comptaflow</title>
+<style>
+:root{--blue-50:#EFF6FF;--blue-100:#DBEAFE;--blue-400:#60A5FA;--blue-500:#3B82F6;--blue-600:#2563EB;--blue-700:#1D4ED8;--blue-800:#1E40AF;--teal-50:#F0FDFA;--teal-200:#99F6E4;--teal-400:#2DD4BF;--teal-500:#14B8A6;--teal-600:#0D9488;--teal-700:#0F766E;--slate-100:#F1F5F9;--slate-200:#E2E8F0;--slate-400:#94A3B8;--slate-500:#64748B;--slate-800:#1E293B;--slate-900:#0F172A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--blue-50);color:var(--slate-800)}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px;background:#fff;border-bottom:1px solid var(--blue-100)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:32px;height:32px;border-radius:8px;background:var(--blue-800);display:flex;align-items:center;justify-content:center;color:var(--teal-400);font-size:18px;font-weight:700}
+.logo-name{font-size:17px;font-weight:600;color:var(--slate-900)}
+.logo-name span{color:var(--blue-500)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:14px;color:var(--slate-500);text-decoration:none}
+.nav-links a:hover{color:var(--slate-900)}
+.nav-links a.active{color:var(--blue-600);font-weight:600}
+.header{text-align:center;padding:56px 40px 16px}
+.header .tag{display:inline-block;background:var(--teal-50);color:var(--teal-600);font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+.header h1{font-size:36px;font-weight:700;color:var(--slate-900);margin-bottom:12px}
+.header p{font-size:16px;color:var(--slate-500);max-width:520px;margin:0 auto}
+.reassurance{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:20px}
+.reassurance span{font-size:13px;color:var(--teal-700);display:flex;align-items:center;gap:6px}
+.grid{max-width:1100px;margin:0 auto;padding:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
+.card{background:#fff;border:1px solid var(--blue-100);border-radius:16px;padding:28px 22px;display:flex;flex-direction:column;height:100%}
+.card.highlight{border:2px solid var(--blue-500);box-shadow:0 8px 24px rgba(59,130,246,.12)}
+.card-badge{background:var(--blue-50);color:var(--blue-700);font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:14px;align-self:flex-start}
+.card-badge.free{background:var(--teal-50);color:var(--teal-600)}
+.card-name{font-size:16px;font-weight:600;color:var(--slate-900);margin-bottom:10px}
+.card-price{font-size:32px;font-weight:700;color:var(--slate-900);line-height:1}
+.card-price sup{font-size:16px;vertical-align:top;margin-top:6px;display:inline-block;color:var(--slate-500);font-weight:400}
+.card-price .per{font-size:14px;color:var(--slate-400);font-weight:400}
+.card-sub{font-size:12px;color:var(--slate-400);margin-top:6px;min-height:32px}
+.card-sub strong{color:var(--teal-600);font-weight:600}
+.divider{height:1px;background:var(--slate-100);margin:18px 0}
+.features{list-style:none;flex:1;margin-bottom:20px}
+.features li{font-size:13px;color:var(--slate-800);padding:6px 0;display:flex;gap:8px;align-items:flex-start}
+.features li::before{content:"✓";color:var(--teal-500);font-weight:700;flex-shrink:0}
+.features li.no{color:var(--slate-400)}
+.features li.no::before{content:"✕";color:var(--slate-200)}
+.btn{width:100%;padding:12px;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;text-align:center;text-decoration:none;display:block}
+.btn-fill{background:var(--blue-500);color:#fff;border:none}
+.btn-fill:hover{background:var(--blue-700)}
+.btn-out{background:#fff;color:var(--slate-800);border:1px solid var(--slate-200)}
+.btn-out:hover{background:var(--slate-50)}
+.faq{max-width:680px;margin:0 auto;padding:20px 40px 64px}
+.faq h2{font-size:22px;font-weight:700;color:var(--slate-900);text-align:center;margin-bottom:24px}
+.faq-item{background:#fff;border:1px solid var(--blue-100);border-radius:12px;padding:18px 20px;margin-bottom:10px}
+.faq-q{font-size:14px;font-weight:600;color:var(--slate-900);margin-bottom:6px}
+.faq-a{font-size:13px;color:var(--slate-500);line-height:1.6}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){nav{padding:0 20px}.nav-links{display:none}.header{padding:40px 20px 8px}.header h1{font-size:28px}.grid{grid-template-columns:1fr;padding:24px 20px}.faq{padding:20px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/"><div class="logo-mark">C</div><span class="logo-name">Compta<span>flow</span></span></a>
+  <div class="nav-links">
+    <a href="/cours/ue9.html">Cours</a>
+    <a href="#">Exercices</a>
+    <a href="/tarifs.html" class="active">Tarifs</a>
+  </div>
+  <a href="#" class="btn-fill" style="width:auto;padding:9px 18px">Commencer</a>
+</nav>
 
+<div class="header">
+  <div class="tag">Tarifs</div>
+  <h1>Choisis la formule qui te ressemble</h1>
+  <p>Du gratuit à l'accès à vie — tu paies seulement ce dont tu as besoin pour réussir ton DCG.</p>
+  <div class="reassurance">
+    <span>✓ Sans engagement</span>
+    <span>✓ Résiliable à tout moment</span>
+    <span>✓ Paiement sécurisé</span>
+  </div>
+</div>
+
+<div class="grid">
+
+  <div class="card">
+    <span class="card-badge free">Gratuit</span>
+    <div class="card-name">Découverte</div>
+    <div class="card-price"><sup>€</sup>0</div>
+    <div class="card-sub">Pour toujours</div>
+    <div class="divider"></div>
+    <ul class="features">
+      <li>Quelques fiches UE9</li>
+      <li>Exercices d'essai</li>
+      <li>Accès à la communauté</li>
+      <li class="no">Toutes les UE</li>
+      <li class="no">Audio complet</li>
+    </ul>
+    <a href="#" class="btn btn-out">Commencer gratuitement</a>
+  </div>
+
+  <div class="card highlight">
+    <span class="card-badge">Le plus populaire</span>
+    <div class="card-name">Abonnement mensuel</div>
+    <div class="card-price"><sup>€</sup>12,90<span class="per">/mois</span></div>
+    <div class="card-sub"><strong>Sans engagement</strong> · résiliable à tout moment</div>
+    <div class="divider"></div>
+    <ul class="features">
+      <li>Toutes les UE débloquées</li>
+      <li>200+ exercices interactifs</li>
+      <li>Toutes les fiches PDF</li>
+      <li>Corrigés audio pas à pas</li>
+      <li>Mises à jour incluses</li>
+    </ul>
+    <a href="#" class="btn btn-fill">S'abonner</a>
+  </div>
+
+  <div class="card">
+    <span class="card-badge">À l'unité</span>
+    <div class="card-name">Pack UE</div>
+    <div class="card-price"><sup>€</sup>19,90</div>
+    <div class="card-sub">Paiement unique · 1 UE au choix</div>
+    <div class="divider"></div>
+    <ul class="features">
+      <li>1 UE complète au choix</li>
+      <li>Toutes ses fiches + exercices</li>
+      <li>Corrigés audio</li>
+      <li>Accès permanent</li>
+      <li class="no">Les autres UE</li>
+    </ul>
+    <a href="#" class="btn btn-out">Choisir une UE</a>
+  </div>
+
+  <div class="card">
+    <span class="card-badge">Le meilleur deal</span>
+    <div class="card-name">Accès à vie</div>
+    <div class="card-price"><sup>€</sup>149</div>
+    <div class="card-sub">Paiement unique · pour toujours</div>
+    <div class="divider"></div>
+    <ul class="features">
+      <li>Toutes les UE à vie</li>
+      <li>Tous les exercices</li>
+      <li>Tous les audios</li>
+      <li>Toutes les mises à jour futures</li>
+      <li>Aucun abonnement</li>
+    </ul>
+    <a href="#" class="btn btn-out">Accès à vie</a>
+  </div>
+
+</div>
+
+<div class="faq">
+  <h2>Questions fréquentes</h2>
+  <div class="faq-item">
+    <div class="faq-q">Puis-je résilier mon abonnement quand je veux ?</div>
+    <div class="faq-a">Oui, l'abonnement mensuel est sans engagement. Tu peux résilier à tout moment en un clic, depuis ton espace.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">La formule gratuite est-elle vraiment gratuite ?</div>
+    <div class="faq-a">Oui, totalement. Tu accèdes à une sélection de fiches et d'exercices UE9 sans payer, et sans carte bancaire.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Quelle différence entre le Pack UE et l'accès à vie ?</div>
+    <div class="faq-a">Le Pack UE débloque une seule UE de ton choix pour toujours. L'accès à vie débloque les 13 UE, à vie, avec toutes les mises à jour.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Les prix sont-ils définitifs ?</div>
+    <div class="faq-a">Les tarifs affichés sont indicatifs pendant le lancement et pourront évoluer. Les abonnés en cours gardent leur tarif.</div>
+  </div>
+</div>
+
+</body>
+</html>
