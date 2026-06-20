@@ -1,1 +1,82 @@
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiche — Comptaflow</title>
+<style>
+:root{--blue-50:#EFF6FF;--blue-100:#DBEAFE;--blue-400:#60A5FA;--blue-500:#3B82F6;--blue-600:#2563EB;--blue-800:#1E40AF;--teal-50:#F0FDFA;--teal-200:#99F6E4;--teal-400:#2DD4BF;--teal-500:#14B8A6;--teal-600:#0D9488;--teal-700:#0F766E;--slate-100:#F1F5F9;--slate-200:#E2E8F0;--slate-400:#94A3B8;--slate-500:#64748B;--slate-800:#1E293B;--slate-900:#0F172A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--blue-50);color:var(--slate-800)}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px;background:#fff;border-bottom:1px solid var(--blue-100)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:32px;height:32px;border-radius:8px;background:var(--blue-800);display:flex;align-items:center;justify-content:center;color:var(--teal-400);font-size:18px;font-weight:700}
+.logo-name{font-size:17px;font-weight:600;color:var(--slate-900)}
+.logo-name span{color:var(--blue-500)}
+.back-link{font-size:14px;color:var(--slate-500);text-decoration:none}
+.back-link:hover{color:var(--slate-900)}
+.content{max-width:760px;margin:0 auto;padding:48px 40px}
+.breadcrumb{font-size:13px;color:var(--slate-400);margin-bottom:20px}
+.breadcrumb a{color:var(--teal-600);text-decoration:none}
+.tag{display:inline-block;background:var(--teal-50);color:var(--teal-600);font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+.fiche-titre{font-size:32px;font-weight:700;color:var(--slate-900);margin-bottom:16px}
+.fiche-resume{font-size:16px;color:var(--slate-500);line-height:1.7;margin-bottom:28px}
+.section-block{background:#fff;border:1px solid var(--blue-100);border-radius:14px;padding:24px;margin-bottom:16px}
+.block-title{font-size:12px;font-weight:600;color:var(--teal-600);text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px}
+.points-list{list-style:none}
+.points-list li{font-size:14px;color:var(--slate-800);padding:7px 0;display:flex;gap:10px;align-items:flex-start;border-bottom:1px solid var(--slate-100)}
+.points-list li:last-child{border-bottom:none}
+.points-list li::before{content:"→";color:var(--blue-600);flex-shrink:0;font-weight:600}
+.comptes{display:flex;flex-wrap:wrap;gap:8px}
+.compte-chip{background:var(--blue-50);border:1px solid var(--blue-100);color:var(--blue-600);font-size:12px;padding:6px 12px;border-radius:8px;font-family:monospace}
+.loading{color:var(--slate-400);text-align:center;padding:60px}
+.nav-fiches{display:flex;justify-content:space-between;margin-top:24px;gap:12px}
+.nav-btn{flex:1;background:#fff;border:1px solid var(--blue-100);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--slate-800);text-decoration:none;cursor:pointer}
+.nav-btn:hover{border-color:var(--blue-400);background:var(--blue-50)}
+.nav-btn.disabled{opacity:.4;pointer-events:none}
+@media(max-width:768px){nav{padding:0 20px}.content{padding:32px 20px}.fiche-titre{font-size:26px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/"><div class="logo-mark">C</div><span class="logo-name">Compta<span>flow</span></span></a>
+  <a class="back-link" href="/cours/ue9.html">← Toutes les fiches</a>
+</nav>
+<div class="content" id="fiche-content">
+  <p class="loading">Chargement de la fiche...</p>
+</div>
+<script>
+function getParam(name){
+  var url=new URL(window.location.href);
+  return url.searchParams.get(name);
+}
+var ficheId=parseInt(getParam('id'))||1;
+fetch('/data/ue9-fiches.json')
+  .then(function(r){return r.json();})
+  .then(function(data){
+    var fiches=data.fiches;
+    var idx=fiches.findIndex(function(f){return f.id===ficheId;});
+    if(idx===-1)idx=0;
+    var f=fiches[idx];
+    var content=document.getElementById('fiche-content');
+    var points=f.points_cles.map(function(p){return '<li>'+p+'</li>';}).join('');
+    var comptes=f.comptes.map(function(c){return '<span class="compte-chip">'+c+'</span>';}).join('');
+    var prev=idx>0?fiches[idx-1]:null;
+    var next=idx<fiches.length-1?fiches[idx+1]:null;
+    var prevBtn=prev?'<a class="nav-btn" href="/cours/fiche.html?id='+prev.id+'">← '+prev.titre+'</a>':'<span class="nav-btn disabled">← Début</span>';
+    var nextBtn=next?'<a class="nav-btn" href="/cours/fiche.html?id='+next.id+'" style="text-align:right">'+next.titre+' →</a>':'<span class="nav-btn disabled" style="text-align:right">Fin →</span>';
+    content.innerHTML=
+      '<div class="breadcrumb"><a href="/cours/ue9.html">UE9 — Comptabilité</a> / '+f.chapitre+'</div>'+
+      '<div class="tag">'+f.chapitre+'</div>'+
+      '<h1 class="fiche-titre">'+f.titre+'</h1>'+
+      '<p class="fiche-resume">'+f.resume+'</p>'+
+      '<div class="section-block"><div class="block-title">Points clés</div><ul class="points-list">'+points+'</ul></div>'+
+      '<div class="section-block"><div class="block-title">Comptes utilisés</div><div class="comptes">'+comptes+'</div></div>'+
+      '<div class="nav-fiches">'+prevBtn+nextBtn+'</div>';
+  })
+  .catch(function(){
+    document.getElementById('fiche-content').innerHTML='<p class="loading" style="color:#EF4444">Erreur de chargement de la fiche.</p>';
+  });
+</script>
+</body>
+</html>
