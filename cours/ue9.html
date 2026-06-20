@@ -59,6 +59,8 @@ fetch('/data/ue9-fiches.json')
     data.fiches.forEach(function(f){
       var card=document.createElement('div');
       card.className='fiche-card';
+      card.style.cursor='pointer';
+      card.onclick=function(){window.location.href='/cours/fiche.html?id='+f.id;};
       var points=f.points_cles.map(function(p){return '<li>'+p+'</li>';}).join('');
       var comptes=f.comptes.map(function(c){return '<span class="compte-chip">'+c+'</span>';}).join('');
       card.innerHTML='<div class="fiche-chapitre">'+f.chapitre+'</div>'+
