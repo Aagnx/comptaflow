@@ -303,5 +303,11 @@ const wave=document.getElementById('wave');
 [4,7,12,16,20,14,18,22,16,10,14,18,12,8,10,14,20,16,10,6].forEach(h=>{const b=document.createElement('div');b.className='wv';b.style.height=h+'px';wave.appendChild(b);});
 startHeroAnim();
 </script>
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:#3B82F6;color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 4px 12px rgba(59,130,246,.4);display:none;z-index:200">↑</button>
+<script>
+window.addEventListener('scroll',function(){
+  document.getElementById('back-to-top').style.display=window.scrollY>400?'block':'none';
+});
+</script>
 </body>
 </html>
