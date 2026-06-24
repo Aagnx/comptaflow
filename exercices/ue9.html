@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercices UE9 — Comptaflow</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231E40AF'/><text x='50' y='72' font-size='70' font-weight='bold' text-anchor='middle' fill='%232DD4BF' font-family='Arial'>C</text></svg>">
+<style>
+:root{--blue-50:#EFF6FF;--blue-100:#DBEAFE;--blue-400:#60A5FA;--blue-500:#3B82F6;--blue-600:#2563EB;--blue-700:#1D4ED8;--blue-800:#1E40AF;--teal-50:#F0FDFA;--teal-200:#99F6E4;--teal-400:#2DD4BF;--teal-500:#14B8A6;--teal-600:#0D9488;--teal-700:#0F766E;--slate-100:#F1F5F9;--slate-200:#E2E8F0;--slate-400:#94A3B8;--slate-500:#64748B;--slate-800:#1E293B;--slate-900:#0F172A;--green:#16A34A;--red:#DC2626}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--blue-50);color:var(--slate-800)}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px;background:#fff;border-bottom:1px solid var(--blue-100)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:32px;height:32px;border-radius:8px;background:var(--blue-800);display:flex;align-items:center;justify-content:center;color:var(--teal-400);font-size:18px;font-weight:700}
+.logo-name{font-size:17px;font-weight:600;color:var(--slate-900)}
+.logo-name span{color:var(--blue-500)}
+.back-link{font-size:14px;color:var(--slate-500);text-decoration:none}
+.back-link:hover{color:var(--slate-900)}
+.header{padding:48px 40px 24px;background:#fff;border-bottom:1px solid var(--blue-100)}
+.header-inner{max-width:760px;margin:0 auto}
+.tag{display:inline-block;background:var(--teal-50);color:var(--teal-600);font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+.header h1{font-size:32px;font-weight:700;color:var(--slate-900);margin-bottom:8px}
+.header p{font-size:15px;color:var(--slate-500)}
+.content{max-width:760px;margin:0 auto;padding:32px 40px 80px}
+.ex-card{background:#fff;border:1px solid var(--blue-100);border-radius:16px;padding:24px;margin-bottom:20px}
+.ex-num{font-size:11px;font-weight:600;color:var(--teal-600);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.ex-titre{font-size:17px;font-weight:600;color:var(--slate-900);margin-bottom:16px}
+.ex-texte{font-size:15px;line-height:2.2;color:var(--slate-800)}
+.trou{display:inline-block;min-width:120px;border:1px solid var(--blue-400);border-radius:6px;padding:4px 8px;font-size:14px;color:var(--blue-700);text-align:center;outline:none;background:#fff}
+.trou:focus{border-color:var(--blue-600);box-shadow:0 0 0 2px rgba(59,130,246,.15)}
+.trou.ok{border-color:var(--green);background:#F0FDF4;color:var(--green);font-weight:600}
+.trou.ko{border-color:var(--red);background:#FEF2F2;color:var(--red)}
+.ex-actions{display:flex;gap:10px;margin-top:18px;align-items:center;flex-wrap:wrap}
+.btn-verif{background:var(--blue-500);color:#fff;border:none;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer}
+.btn-verif:hover{background:var(--blue-700)}
+.btn-corrige{background:#fff;color:var(--slate-800);border:1px solid var(--slate-200);padding:10px 20px;border-radius:8px;font-size:14px;cursor:pointer}
+.btn-corrige:hover{background:var(--slate-50)}
+.result{font-size:14px;font-weight:600;margin-left:4px}
+.result.ok{color:var(--green)}
+.result.ko{color:var(--red)}
+.progress-bar{max-width:760px;margin:0 auto;padding:0 40px}
+.progress-track{background:var(--blue-100);border-radius:8px;height:8px;overflow:hidden}
+.progress-fill{background:var(--teal-400);height:100%;width:0;transition:width .4s ease}
+.progress-label{font-size:12px;color:var(--slate-500);margin-top:8px;text-align:center}
+@media(max-width:768px){nav{padding:0 20px}.header{padding:32px 20px 20px}.content{padding:24px 20px 60px}.header h1{font-size:26px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/"><div class="logo-mark">C</div><span class="logo-name">Compta<span>flow</span></span></a>
+  <a class="back-link" href="/cours/ue9.html">← Cours UE9</a>
+</nav>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="tag">UE 9 · Exercices</div>
+    <h1>Entraîne-toi sur l'UE9</h1>
+    <p>Complète les trous, vérifie tes réponses, et progresse à ton rythme.</p>
+  </div>
+</div>
+
+<div class="progress-bar">
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="progress-label" id="progress-label">0 / 3 exercices réussis</div>
+</div>
+
+<div class="content" id="exercices"></div>
+
+<script>
+var exercices=[
+  {
+    titre:"Amortissement linéaire",
+    segments:[
+      {text:"L'amortissement "},
+      {blank:true,answer:["linéaire","lineaire"]},
+      {text:" répartit le coût de façon égale sur la "},
+      {blank:true,answer:["durée d'usage","duree d'usage","durée","duree"]},
+      {text:". Le taux annuel se calcule en divisant "},
+      {blank:true,answer:["1","100%","100"]},
+      {text:" par la durée."}
+    ]
+  },
+  {
+    titre:"TVA déductible",
+    segments:[
+      {text:"Lors de l'achat d'un bien, la TVA payée est dite "},
+      {blank:true,answer:["déductible","deductible"]},
+      {text:". Elle est enregistrée au "},
+      {blank:true,answer:["débit","debit"]},
+      {text:" du compte 44562. Le taux normal de TVA en France est de "},
+      {blank:true,answer:["20%","20 %","20"]},
+      {text:"."}
+    ]
+  },
+  {
+    titre:"Acquisition d'immobilisation",
+    segments:[
+      {text:"À l'achat d'un matériel, on débite le compte de la classe "},
+      {blank:true,answer:["2","21"]},
+      {text:" (immobilisations). La dette envers le fournisseur d'immobilisation est créditée au compte "},
+      {blank:true,answer:["404"]},
+      {text:"."}
+    ]
+  }
+];
+
+var solved=[false,false,false];
+
+function normalize(s){return s.trim().toLowerCase().replace(/\s+/g,' ');}
+
+function buildExercices(){
+  var container=document.getElementById('exercices');
+  exercices.forEach(function(ex,ei){
+    var card=document.createElement('div');
+    card.className='ex-card';
+    var html='<div class="ex-num">Exercice '+(ei+1)+'</div><div class="ex-titre">'+ex.titre+'</div><div class="ex-texte">';
+    ex.segments.forEach(function(seg,si){
+      if(seg.blank){
+        html+='<input class="trou" id="t-'+ei+'-'+si+'" type="text" placeholder="?">';
+      }else{
+        html+=seg.text;
+      }
+    });
+    html+='</div><div class="ex-actions"><button class="btn-verif" onclick="verifier('+ei+')">Vérifier</button><button class="btn-corrige" onclick="corriger('+ei+')">Voir la correction</button><span class="result" id="res-'+ei+'"></span></div>';
+    card.innerHTML=html;
+    container.appendChild(card);
+  });
+}
+
+function verifier(ei){
+  var ex=exercices[ei];
+  var allOk=true;
+  ex.segments.forEach(function(seg,si){
+    if(seg.blank){
+      var input=document.getElementById('t-'+ei+'-'+si);
+      var val=normalize(input.value);
+      var ok=seg.answer.some(function(a){return normalize(a)===val;});
+      input.classList.remove('ok','ko');
+      input.classList.add(ok?'ok':'ko');
+      if(!ok)allOk=false;
+    }
+  });
+  var res=document.getElementById('res-'+ei);
+  if(allOk){
+    res.textContent='✅ Bravo, tout est correct !';
+    res.className='result ok';
+    solved[ei]=true;
+  }else{
+    res.textContent='❌ Quelques erreurs, réessaie';
+    res.className='result ko';
+    solved[ei]=false;
+  }
+  updateProgress();
+}
+
+function corriger(ei){
+  var ex=exercices[ei];
+  ex.segments.forEach(function(seg,si){
+    if(seg.blank){
+      var input=document.getElementById('t-'+ei+'-'+si);
+      input.value=seg.answer[0];
+      input.classList.remove('ko');
+      input.classList.add('ok');
+    }
+  });
+  var res=document.getElementById('res-'+ei);
+  res.textContent='✅ Correction affichée';
+  res.className='result ok';
+  solved[ei]=true;
+  updateProgress();
+}
+
+function updateProgress(){
+  var count=solved.filter(Boolean).length;
+  document.getElementById('progress-fill').style.width=(count/exercices.length*100)+'%';
+  document.getElementById('progress-label').textContent=count+' / '+exercices.length+' exercices réussis';
+}
+
+buildExercices();
+</script>
+</body>
+</html>
