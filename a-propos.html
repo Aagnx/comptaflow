@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>À propos & Contact — Comptaflow</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231E40AF'/><text x='50' y='72' font-size='70' font-weight='bold' text-anchor='middle' fill='%232DD4BF' font-family='Arial'>C</text></svg>">
+<style>
+:root{--blue-50:#EFF6FF;--blue-100:#DBEAFE;--blue-400:#60A5FA;--blue-500:#3B82F6;--blue-600:#2563EB;--blue-700:#1D4ED8;--blue-800:#1E40AF;--teal-50:#F0FDFA;--teal-200:#99F6E4;--teal-400:#2DD4BF;--teal-600:#0D9488;--teal-700:#0F766E;--slate-100:#F1F5F9;--slate-200:#E2E8F0;--slate-400:#94A3B8;--slate-500:#64748B;--slate-800:#1E293B;--slate-900:#0F172A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--blue-50);color:var(--slate-800)}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px;background:#fff;border-bottom:1px solid var(--blue-100)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:32px;height:32px;border-radius:8px;background:var(--blue-800);display:flex;align-items:center;justify-content:center;color:var(--teal-400);font-size:18px;font-weight:700}
+.logo-name{font-size:17px;font-weight:600;color:var(--slate-900)}
+.logo-name span{color:var(--blue-500)}
+.back-link{font-size:14px;color:var(--slate-500);text-decoration:none}
+.back-link:hover{color:var(--slate-900)}
+.hero{text-align:center;padding:56px 40px 32px}
+.tag{display:inline-block;background:var(--teal-50);color:var(--teal-600);font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+.hero h1{font-size:34px;font-weight:700;color:var(--slate-900);margin-bottom:12px}
+.hero p{font-size:16px;color:var(--slate-500);max-width:540px;margin:0 auto;line-height:1.6}
+.content{max-width:720px;margin:0 auto;padding:20px 40px 40px}
+.story{background:#fff;border:1px solid var(--blue-100);border-radius:16px;padding:32px;margin-bottom:24px}
+.story h2{font-size:20px;font-weight:700;color:var(--slate-900);margin-bottom:14px}
+.story p{font-size:15px;color:var(--slate-500);line-height:1.8;margin-bottom:14px}
+.story p:last-child{margin-bottom:0}
+.values{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:24px}
+.value{background:#fff;border:1px solid var(--blue-100);border-radius:14px;padding:22px}
+.value-icon{font-size:24px;margin-bottom:10px}
+.value-title{font-size:15px;font-weight:600;color:var(--slate-900);margin-bottom:6px}
+.value-desc{font-size:13px;color:var(--slate-500);line-height:1.6}
+.contact{background:#fff;border:1px solid var(--blue-100);border-radius:16px;padding:32px}
+.contact h2{font-size:20px;font-weight:700;color:var(--slate-900);margin-bottom:6px;text-align:center}
+.contact-sub{font-size:14px;color:var(--slate-500);text-align:center;margin-bottom:24px}
+.contact-methods{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.method{display:flex;align-items:center;gap:8px;background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;padding:10px 16px;font-size:13px;color:var(--slate-800);text-decoration:none}
+.method:hover{border-color:var(--blue-400)}
+form{display:flex;flex-direction:column;gap:12px}
+input,textarea{padding:12px 14px;border:1px solid var(--blue-100);border-radius:10px;font-size:14px;outline:none;font-family:inherit}
+input:focus,textarea:focus{border-color:var(--blue-400)}
+textarea{resize:vertical}
+.btn-send{background:var(--blue-500);color:#fff;border:none;padding:13px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer}
+.btn-send:hover{background:var(--blue-700)}
+@media(max-width:768px){nav{padding:0 20px}.hero{padding:40px 20px 24px}.hero h1{font-size:27px}.content{padding:16px 20px 40px}.story,.contact{padding:24px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/"><div class="logo-mark">C</div><span class="logo-name">Compta<span>flow</span></span></a>
+  <a class="back-link" href="/">← Retour à l'accueil</a>
+</nav>
+
+<div class="hero">
+  <div class="tag">À propos</div>
+  <h1>L'histoire derrière Comptaflow</h1>
+  <p>Une plateforme créée par un étudiant DCG, pour les étudiants DCG.</p>
+</div>
+
+<div class="content">
+  <div class="story">
+    <h2>Pourquoi Comptaflow ?</h2>
+    <p>Comptaflow est né d'un constat simple : préparer le DCG, c'est jongler entre des manuels denses, des cours parfois indigestes et un manque cruel d'entraînement concret. <span style="color:#2563EB">[Personnalise ici : raconte ton parcours — ex : « En préparant moi-même mon DCG tout en travaillant à côté, j'ai cherché un outil qui aille droit au but. Il n'existait pas, alors je l'ai créé. »]</span></p>
+    <p>L'idée : transformer la compta, souvent perçue comme abstraite, en quelque chose de <strong>logique et concret</strong>. Des fiches qui vont à l'essentiel, des exercices où on pratique vraiment, et des explications audio pour comprendre le sens de chaque écriture.</p>
+    <p>Comptaflow grandit progressivement, UE par UE, avec une obsession : être l'outil que j'aurais aimé avoir.</p>
+  </div>
+
+  <div class="values">
+    <div class="value"><div class="value-icon">🎯</div><div class="value-title">Aller à l'essentiel</div><div class="value-desc">Pas de blabla. Le programme officiel, synthétisé pour réviser efficacement.</div></div>
+    <div class="value"><div class="value-icon">🤝</div><div class="value-title">Prix juste</div><div class="value-desc">Des tarifs pensés pour un budget étudiant, avec une vraie offre gratuite.</div></div>
+    <div class="value"><div class="value-icon">🚀</div><div class="value-title">En évolution</div><div class="value-desc">De nouvelles UE et fonctionnalités ajoutées régulièrement.</div></div>
+  </div>
+
+  <div class="contact">
+    <h2>Une question ? Écris-nous</h2>
+    <div class="contact-sub">On répond vite, promis.</div>
+    <div class="contact-methods">
+      <a class="method" href="mailto:ag.ginioux@gmail.com">✉️ ag.ginioux@gmail.com</a>
+      <a class="method" href="#">📸 Instagram</a>
+      <a class="method" href="#">🎵 TikTok</a>
+    </div>
+    <form action="https://formsubmit.co/ag.ginioux@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Message depuis la page À propos">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://comptaflow-xi.vercel.app/merci.html">
+      <input type="text" name="nom" placeholder="Ton prénom" required>
+      <input type="email" name="email" placeholder="Ton email" required>
+      <textarea name="message" placeholder="Ton message..." required rows="4"></textarea>
+      <button type="submit" class="btn-send">Envoyer</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
