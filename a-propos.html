@@ -87,5 +87,41 @@ textarea{resize:vertical}
     </form>
   </div>
 </div>
+<script>
+function envoyerContact(e){
+  e.preventDefault();
+  var form=document.getElementById('contact-form');
+  var btn=document.getElementById('contact-btn');
+  var status=document.getElementById('contact-status');
+  btn.textContent='Envoi en cours...';
+  btn.disabled=true;
+  var data={
+    access_key:'8505ac31-d3dc-4979-968a-df781aecb7c5',
+    subject:'Nouveau message depuis la page À propos',
+    name:form.name.value,
+    email:form.email.value,
+    message:form.message.value
+  };
+  fetch('https://api.web3forms.com/submit',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(data)
+  }).then(function(r){return r.json();}).then(function(d){
+    if(d.success){
+      window.location.href='/merci.html';
+    }else{
+      status.textContent='Une erreur est survenue, réessaie.';
+      status.style.color='#DC2626';
+      btn.textContent='Envoyer';
+      btn.disabled=false;
+    }
+  }).catch(function(){
+    status.textContent='Erreur de connexion, réessaie.';
+    status.style.color='#DC2626';
+    btn.textContent='Envoyer';
+    btn.disabled=false;
+  });
+}
+</script>
 </body>
 </html>
