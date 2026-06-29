@@ -78,13 +78,12 @@ textarea{resize:vertical}
       <a class="method" href="#">📸 Instagram</a>
       <a class="method" href="#">🎵 TikTok</a>
     </div>
-    <form action="https://formsubmit.co/el/heweje" method="POST">
-      <input type="hidden" name="_subject" value="Message depuis la page À propos">
-      <input type="hidden" name="_next" value="https://comptaflow-xi.vercel.app/merci.html">
-      <input type="text" name="nom" placeholder="Ton prénom" required>
+    <form id="contact-form" onsubmit="envoyerContact(event)">
+      <input type="text" name="name" placeholder="Ton prénom" required>
       <input type="email" name="email" placeholder="Ton email" required>
       <textarea name="message" placeholder="Ton message..." required rows="4"></textarea>
-      <button type="submit" class="btn-send">Envoyer</button>
+      <button type="submit" id="contact-btn" class="btn-send">Envoyer</button>
+      <div id="contact-status" style="font-size:14px;text-align:center;margin-top:8px"></div>
     </form>
   </div>
 </div>
