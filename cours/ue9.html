@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -43,9 +42,15 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .axe-body{display:none;padding:0 22px 20px 70px}
 .axe.open .axe-body{display:block}
 .axe-desc{font-size:13px;color:var(--slate-500);line-height:1.6;margin-bottom:14px}
+.sub-label{font-size:11px;font-weight:600;color:var(--slate-400);text-transform:uppercase;letter-spacing:.5px;margin:16px 0 8px}
 .sous-partie{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-top:1px solid var(--slate-100)}
 .sp-hours{background:var(--teal-50);color:var(--teal-700);font-size:11px;font-weight:600;padding:3px 9px;border-radius:6px;white-space:nowrap;flex-shrink:0}
 .sp-text{font-size:13px;color:var(--slate-800);line-height:1.5}
+.fiche{display:flex;align-items:center;gap:12px;padding:11px 14px;background:#F8FAFF;border:1px solid var(--blue-100);border-radius:10px;margin-bottom:8px;text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s}
+.fiche:hover{border-color:var(--blue-400);background:var(--blue-50)}
+.fiche-num{width:26px;height:26px;border-radius:7px;background:var(--blue-500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.fiche-title{font-size:13px;color:var(--slate-800);font-weight:500;flex:1}
+.fiche-arrow{font-size:14px;color:var(--slate-400)}
 .total-bar{background:var(--slate-900);border-radius:12px;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;margin-top:24px;flex-wrap:wrap;gap:12px}
 .total-label{font-size:14px;color:#94A3B8}
 .total-value{font-size:22px;font-weight:700;color:var(--teal-400)}
@@ -93,6 +98,10 @@ var axes=[
       {h:"5h",t:"Définir la comptabilité et identifier ses rôles dans une perspective historique"},
       {h:"10h",t:"Positionner la profession comptable au sein du monde économique (expert-comptable, CAC, déontologie)"},
       {h:"5h",t:"Reconnaître l'intérêt de la normalisation et de la réglementation comptable (PCG, principes comptables)"}
+    ],
+    fiches:[
+      {n:1,t:"Le rôle de la comptabilité"},
+      {n:2,t:"La réglementation et la normalisation comptables"}
     ]
   },
   {
@@ -103,6 +112,10 @@ var axes=[
     sous:[
       {h:"5h",t:"Identifier les flux et les transcrire en comptabilité (partie double, débit/crédit, emplois/ressources)"},
       {h:"15h",t:"Organisation comptable : du journal aux comptes annuels (livres comptables, bilan, compte de résultat, balance)"}
+    ],
+    fiches:[
+      {n:3,t:"La méthode comptable : écritures et documents comptables"},
+      {n:4,t:"La classification comptable : actif, passif, charge, produit"}
     ]
   },
   {
@@ -115,6 +128,25 @@ var axes=[
       {h:"10h",t:"Opérations d'investissement et de placement (immobilisations, valeurs mobilières de placement)"},
       {h:"10h",t:"Cessions d'immobilisations et de valeurs mobilières de placement"},
       {h:"10h",t:"Sources de financement mobilisables par l'organisation (emprunts, subventions...)"}
+    ],
+    fiches:[
+      {n:5,t:"La TVA : généralités"},
+      {n:6,t:"La TVA : comptabilisation"},
+      {n:7,t:"Les opérations d'achat et de vente"},
+      {n:8,t:"Les réductions commerciales sur les achats et ventes"},
+      {n:9,t:"Les réductions financières sur les achats et ventes"},
+      {n:10,t:"Les frais accessoires liés aux achats et aux ventes"},
+      {n:11,t:"Les autres charges et produits"},
+      {n:12,t:"Les immobilisations incorporelles et corporelles"},
+      {n:13,t:"Les titres financiers"},
+      {n:14,t:"Les règlements"},
+      {n:15,t:"Les arrhes, avances et acomptes"},
+      {n:16,t:"La paie"},
+      {n:17,t:"Les opérations de financement"},
+      {n:18,t:"Le financement par subvention"},
+      {n:19,t:"Les emballages"},
+      {n:25,t:"Le traitement des opérations en devises"},
+      {n:26,t:"Les sorties des immobilisations et VMP du patrimoine"}
     ]
   },
   {
@@ -125,6 +157,16 @@ var axes=[
     sous:[
       {h:"40h",t:"Finalité et enjeux des opérations d'inventaire (amortissements, dépréciations, provisions, régularisations)"},
       {h:"10h",t:"Déterminer le résultat, clôturer et rouvrir les comptes"}
+    ],
+    fiches:[
+      {n:20,t:"L'évaluation des stocks à l'inventaire"},
+      {n:21,t:"L'amortissement"},
+      {n:22,t:"La dépréciation des immobilisations incorporelles et corporelles"},
+      {n:23,t:"La dépréciation des éléments d'actif autres que les immobilisations"},
+      {n:24,t:"Les provisions"},
+      {n:27,t:"Les autres opérations de régularisation"},
+      {n:28,t:"La clôture et la réouverture de l'exercice comptable"},
+      {n:29,t:"L'affectation du résultat"}
     ]
   },
   {
@@ -134,6 +176,9 @@ var axes=[
     desc:"Comprendre les enjeux de l'établissement et de la diffusion des documents de synthèse.",
     sous:[
       {h:"10h",t:"Bilan, compte de résultat et annexe : établissement et diffusion des comptes annuels"}
+    ],
+    fiches:[
+      {n:30,t:"Les documents de synthèse"}
     ]
   },
   {
@@ -143,6 +188,11 @@ var axes=[
     desc:"Comprendre les effets des changements numériques sur la comptabilité.",
     sous:[
       {h:"10h",t:"Dématérialisation, automatisation et évolution des outils comptables"}
+    ],
+    fiches:[
+      {n:31,t:"Les systèmes et traitements comptables"},
+      {n:32,t:"Les contrôles comptables"},
+      {n:33,t:"La comptabilité et l'environnement numérique"}
     ]
   }
 ];
@@ -154,13 +204,20 @@ axes.forEach(function(a,i){
   var sousHtml=a.sous.map(function(s){
     return '<div class="sous-partie"><span class="sp-hours">'+s.h+'</span><span class="sp-text">'+s.t+'</span></div>';
   }).join('');
+  var fichesHtml=a.fiches.map(function(f){
+    return '<a class="fiche" href="/cours/fiche.html?id='+f.n+'"><span class="fiche-num">'+f.n+'</span><span class="fiche-title">'+f.t+'</span><span class="fiche-arrow">›</span></a>';
+  }).join('');
   div.innerHTML=
     '<div class="axe-head" onclick="toggleAxe('+i+')">'+
       '<div class="axe-num">'+a.num+'</div>'+
       '<div class="axe-titles"><div class="axe-title">'+a.titre+'</div><div class="axe-hours">'+a.hours+'</div></div>'+
       '<div class="axe-arrow">›</div>'+
     '</div>'+
-    '<div class="axe-body"><div class="axe-desc">'+a.desc+'</div>'+sousHtml+'</div>';
+    '<div class="axe-body">'+
+      '<div class="axe-desc">'+a.desc+'</div>'+
+      '<div class="sub-label">Programme officiel</div>'+sousHtml+
+      '<div class="sub-label">Fiches à réviser</div>'+fichesHtml+
+    '</div>';
   container.appendChild(div);
 });
 
