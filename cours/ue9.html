@@ -47,8 +47,8 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .sp-hours{background:var(--teal-50);color:var(--teal-700);font-size:11px;font-weight:600;padding:3px 9px;border-radius:6px;white-space:nowrap;flex-shrink:0}
 .sp-text{font-size:13px;color:var(--slate-800);line-height:1.5}
 .fiche{display:flex;align-items:center;gap:12px;padding:11px 14px;background:#F8FAFF;border:1px solid var(--blue-100);border-radius:10px;margin-bottom:8px;text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s}
-.fiche:hover{border-color:var(--blue-400);background:var(--blue-50)}
-.fiche-num{width:26px;height:26px;border-radius:7px;background:var(--blue-500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.fiche:hover{border-color:var(--teal-400);background:var(--teal-50)}
+.fiche-num{width:26px;height:26px;border-radius:7px;background:var(--teal-500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
 .fiche-title{font-size:13px;color:var(--slate-800);font-weight:500;flex:1}
 .fiche-arrow{font-size:14px;color:var(--slate-400)}
 .total-bar{background:var(--slate-900);border-radius:12px;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;margin-top:24px;flex-wrap:wrap;gap:12px}
@@ -205,18 +205,18 @@ axes.forEach(function(a,i){
     return '<div class="sous-partie"><span class="sp-hours">'+s.h+'</span><span class="sp-text">'+s.t+'</span></div>';
   }).join('');
   var fichesHtml=a.fiches.map(function(f){
-    return '<a class="fiche" href="/cours/fiche.html?id='+f.n+'"><span class="fiche-num">'+f.n+'</span><span class="fiche-title">'+f.t+'</span><span class="fiche-arrow">›</span></a>';
+    return '<a class="fiche" href="/cours/fiche.html?id='+f.n+'"><span class="fiche-num">'+f.n+'</span><span class="fiche-title"><span style="color:#0D9488;font-weight:600">Fiche N°'+f.n+'</span> · '+f.t+'</span><span class="fiche-arrow">›</span></a>';
   }).join('');
   div.innerHTML=
     '<div class="axe-head" onclick="toggleAxe('+i+')">'+
       '<div class="axe-num">'+a.num+'</div>'+
-      '<div class="axe-titles"><div class="axe-title">'+a.titre+'</div><div class="axe-hours">'+a.hours+'</div></div>'+
+      '<div class="axe-titles"><div class="axe-title"><span style="color:#0D9488">Axe N°'+a.num+'</span> · '+a.titre+'</div><div class="axe-hours">'+a.hours+'</div></div>'+
       '<div class="axe-arrow">›</div>'+
     '</div>'+
     '<div class="axe-body">'+
       '<div class="axe-desc">'+a.desc+'</div>'+
       '<div class="sub-label">Programme officiel</div>'+sousHtml+
-      '<div class="sub-label">Fiches à réviser</div>'+fichesHtml+
+      '<div class="sub-label" style="color:#0D9488">✏️ Fiches à réviser</div>'+fichesHtml+
     '</div>';
   container.appendChild(div);
 });
