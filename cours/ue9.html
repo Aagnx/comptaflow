@@ -42,15 +42,22 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .axe-body{display:none;padding:0 22px 20px 70px}
 .axe.open .axe-body{display:block}
 .axe-desc{font-size:13px;color:var(--slate-500);line-height:1.6;margin-bottom:14px}
-.sub-label{font-size:11px;font-weight:600;color:var(--slate-400);text-transform:uppercase;letter-spacing:.5px;margin:16px 0 8px}
-.sous-partie{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-top:1px solid var(--slate-100)}
-.sp-hours{background:var(--teal-50);color:var(--teal-700);font-size:11px;font-weight:600;padding:3px 9px;border-radius:6px;white-space:nowrap;flex-shrink:0}
+.bloc{border-radius:12px;padding:18px 20px;margin-top:16px}
+.bloc-officiel{background:#F8FAFC;border:1px solid var(--blue-100)}
+.bloc-fiches{background:var(--teal-50);border:1px solid var(--teal-200)}
+.bloc-label{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px}
+.bloc-officiel .bloc-label{color:var(--blue-700)}
+.bloc-fiches .bloc-label{color:var(--teal-700)}
+.sous-partie{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-top:1px solid var(--blue-100)}
+.sous-partie:first-of-type{border-top:none;padding-top:0}
+.sp-hours{background:#fff;color:var(--teal-700);border:1px solid var(--teal-200);font-size:11px;font-weight:600;padding:3px 9px;border-radius:6px;white-space:nowrap;flex-shrink:0}
 .sp-text{font-size:13px;color:var(--slate-800);line-height:1.5}
-.fiche{display:flex;align-items:center;gap:12px;padding:11px 14px;background:#F8FAFF;border:1px solid var(--blue-100);border-radius:10px;margin-bottom:8px;text-decoration:none;cursor:pointer;transition:border-color .15s,background .15s}
-.fiche:hover{border-color:var(--teal-400);background:var(--teal-50)}
-.fiche-num{width:26px;height:26px;border-radius:7px;background:var(--teal-500);color:#fff;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;flex-shrink:0}
+.fiche{display:flex;align-items:center;gap:12px;padding:12px 14px;background:#fff;border:1px solid var(--teal-200);border-radius:10px;margin-bottom:8px;text-decoration:none;cursor:pointer;transition:border-color .15s,box-shadow .15s}
+.fiche:last-child{margin-bottom:0}
+.fiche:hover{border-color:var(--teal-400);box-shadow:0 2px 8px rgba(20,184,166,.12)}
+.fiche-num{background:var(--teal-500);color:#fff;padding:4px 9px;border-radius:6px;font-size:11px;font-weight:700;white-space:nowrap;flex-shrink:0}
 .fiche-title{font-size:13px;color:var(--slate-800);font-weight:500;flex:1}
-.fiche-arrow{font-size:14px;color:var(--slate-400)}
+.fiche-arrow{font-size:16px;color:var(--teal-500)}
 .total-bar{background:var(--slate-900);border-radius:12px;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;margin-top:24px;flex-wrap:wrap;gap:12px}
 .total-label{font-size:14px;color:#94A3B8}
 .total-value{font-size:22px;font-weight:700;color:var(--teal-400)}
@@ -205,7 +212,7 @@ axes.forEach(function(a,i){
     return '<div class="sous-partie"><span class="sp-hours">'+s.h+'</span><span class="sp-text">'+s.t+'</span></div>';
   }).join('');
   var fichesHtml=a.fiches.map(function(f){
-    return '<a class="fiche" href="/cours/fiche.html?id='+f.n+'"><span class="fiche-num">'+f.n+'</span><span class="fiche-title"><span style="color:#0D9488;font-weight:600">Fiche N°'+f.n+'</span> · '+f.t+'</span><span class="fiche-arrow">›</span></a>';
+    return '<a class="fiche" href="/cours/fiche.html?id='+f.n+'"><span class="fiche-num">Fiche N°'+f.n+'</span><span class="fiche-title">'+f.t+'</span><span class="fiche-arrow">›</span></a>';
   }).join('');
   div.innerHTML=
     '<div class="axe-head" onclick="toggleAxe('+i+')">'+
@@ -215,8 +222,8 @@ axes.forEach(function(a,i){
     '</div>'+
     '<div class="axe-body">'+
       '<div class="axe-desc">'+a.desc+'</div>'+
-      '<div class="sub-label">Programme officiel</div>'+sousHtml+
-      '<div class="sub-label" style="color:#0D9488">✏️ Fiches à réviser</div>'+fichesHtml+
+      '<div class="bloc bloc-officiel"><div class="bloc-label">📋 Programme officiel</div>'+sousHtml+'</div>'+
+      '<div class="bloc bloc-fiches"><div class="bloc-label">✏️ Fiches à réviser</div>'+fichesHtml+'</div>'+
     '</div>';
   container.appendChild(div);
 });
