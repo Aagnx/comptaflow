@@ -1,43 +1,143 @@
 {
   "ue": "UE9",
-  "titre": "Comptabilité",
+  "intitule": "Introduction à la comptabilité",
   "fiches": [
     {
-      "id": 1,
-      "titre": "Les immobilisations corporelles",
-      "chapitre": "Immobilisations",
-      "resume": "Une immobilisation corporelle est un bien durable utilisé par l'entreprise pour son activité. Elle figure à l'actif du bilan.",
-      "points_cles": [
-        "Durée d'utilisation supérieure à 1 an",
-        "Valeur significative",
-        "Usage dans l'activité de l'entreprise"
+      "id": "ue9-ch1",
+      "numero": 1,
+      "titre": "Le rôle de la comptabilité",
+      "axe": "Axe 1 — Introduction générale à la comptabilité",
+      "pageManuel": 9,
+      "exercicesUrl": "../exercices/ue9.html",
+      "motsCles": [
+        "Aide à la décision",
+        "Comptabilité",
+        "Contrôle",
+        "Droit comptable",
+        "Preuve",
+        "Source d'information"
       ],
-      "comptes": ["2154 — Matériel industriel", "2183 — Matériel de bureau", "2184 — Mobilier"]
-    },
-    {
-      "id": 2,
-      "titre": "L'amortissement linéaire",
-      "chapitre": "Amortissements",
-      "resume": "L'amortissement linéaire répartit le coût d'une immobilisation de façon égale sur sa durée d'usage.",
-      "points_cles": [
-        "Taux = 1 / durée",
-        "Début à la date de mise en service",
-        "Prorata temporis la première année"
+      "utilite": {
+        "pourcentage": 8,
+        "niveau": "Faible — chapitre introductif",
+        "commentaire": "Chapitre de cadrage : il tombe très rarement comme dossier à part entière. Ce qui rapporte réellement des points ici, ce sont les questions rédactionnelles « de cours » : définir la comptabilité (art. 121-1 du PCG), citer les sources du droit comptable, distinguer les types de comptabilités. La thématique plus large « principes comptables et sources du droit comptable » apparaît dans environ 77 % des sujets (2014-2025), mais surtout via la Fiche 2. À connaître pour ne pas perdre les points faciles de définition, pas à sur-réviser.",
+        "themesRecurrents": [
+          "Opérations courantes avec les tiers — 100 % des sujets",
+          "Opérations d'inventaire — 100 %",
+          "Immobilisations, amortissements et dépréciations — 92 %",
+          "Liquidation de la TVA — 85 %",
+          "Principes comptables et sources du droit comptable — 77 %"
+        ]
+      },
+      "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+      "notionsCles": [
+        {
+          "titre": "Définition de la comptabilité",
+          "reference": "Art. 121-1 du PCG",
+          "contenu": "La comptabilité est un système d'information permettant de refléter les opérations de l'entreprise et sa situation. Au sens de l'article 121-1 du PCG, c'est un système d'organisation de l'information financière permettant de saisir, classer et enregistrer des données chiffrées, puis de présenter des états reflétant une image fidèle du patrimoine, de la situation financière et du résultat de l'entité à la date de clôture."
+        },
+        {
+          "titre": "Le fonctionnement du système comptable",
+          "contenu": "Le système comptable transforme des pièces comptables en documents comptables en trois temps : Collecte et organisation → Enregistrement → Production et communication de l'information financière."
+        },
+        {
+          "titre": "Les quatre rôles de la comptabilité",
+          "contenu": "1) Moyen de preuve entre commerçants. 2) Instrument de contrôle : santé et performance de l'entreprise, assiette de l'impôt, charges sociales. 3) Aide à la prise de décision : source d'information pour les partenaires et acteurs. 4) Matière première pour produire des indicateurs et outils de gestion : statistiques nationales, plan d'investissement."
+        },
+        {
+          "titre": "Régularité, sincérité et image fidèle",
+          "reference": "Art. L123-23 du Code de commerce",
+          "contenu": "La comptabilité doit être régulière et sincère et donner une image fidèle du patrimoine et de l'activité de l'entreprise. Dès lors qu'elle est tenue selon les normes applicables, elle est présumée sincère et peut servir de preuve en matière de droit commercial."
+        },
+        {
+          "titre": "Les comptes annuels",
+          "formule": "Comptes annuels = Bilan + Compte de résultat + Annexe",
+          "contenu": "Les comptes annuels forment un tout indissociable. Le bilan présente le patrimoine, le compte de résultat l'activité de l'exercice, et l'annexe complète et commente les deux précédents."
+        },
+        {
+          "titre": "Les différentes comptabilités",
+          "contenu": "La comptabilité financière (ou générale) est la seule obligatoire et fortement réglementée, destinée à des utilisateurs externes, en unité monétaire et de portée historique. La comptabilité de gestion, la comptabilité budgétaire et la gestion financière sont facultatives, non réglementées et tournées vers la prise de décision interne.",
+          "tableau": {
+            "colonnes": ["", "Comptabilité financière", "Comptabilité de gestion", "Comptabilité budgétaire", "Gestion financière"],
+            "lignes": [
+              ["Objectif", "Informer sur la situation de l'entreprise", "Aider aux prises de décisions", "Comparatif prévisionnel / réalisé", "Aider aux prises de décisions"],
+              ["Destinataires", "Externes", "Internes", "Internes", "Internes et externes"],
+              ["Force", "Obligatoire", "Facultative", "Facultative", "Facultative"],
+              ["Réglementation", "Forte", "Absence", "Absence", "Absence"],
+              ["Unité de mesure", "Monétaire", "Monétaire et/ou physique", "Monétaire et/ou physique", "Monétaire"],
+              ["Portée", "Historique", "Historique et prévisionnelle", "Historique et prévisionnelle", "Historique et prévisionnelle"]
+            ]
+          }
+        },
+        {
+          "titre": "Une discipline au confluent de l'économie et du droit",
+          "contenu": "La comptabilité reflète les relations économiques de l'entreprise avec ses partenaires : actionnaires, institutions financières, fournisseurs, clients, État et administrations, salariés. Elle est aussi une source d'information sur les marchés (biens, financier, travail)."
+        },
+        {
+          "titre": "Les sources du droit comptable",
+          "contenu": "Le droit comptable est autonome et prend ses sources dans : le Code de commerce ; les règlements du Comité de la réglementation comptable, établis depuis 2009 par l'ANC ; le Plan comptable général (PCG) ; la jurisprudence et la doctrine ; les directives et règlements européens ; le droit comptable international (normes IAS/IFRS)."
+        },
+        {
+          "titre": "Repères historiques du droit comptable",
+          "contenu": "La réglementation comptable est relativement récente. Quelques dates-clés à retenir :",
+          "timeline": [
+            ["1673", "Ordonnance de Colbert rendant obligatoire la tenue de comptes"],
+            ["1807", "Promulgation du Code de commerce (15 sept.)"],
+            ["1867", "Loi obligeant certaines sociétés cotées à diffuser des informations comptables (24 juil.)"],
+            ["1945", "Création de l'Ordre des experts-comptables (OEC)"],
+            ["1947", "Commission de normalisation comptable puis premier plan comptable"],
+            ["1969", "Création de la Compagnie nationale des commissaires aux comptes (CNCC)"],
+            ["1983", "Loi comptable à l'origine d'un véritable droit comptable"],
+            ["1998", "Création du Comité de la réglementation comptable (CRC)"],
+            ["2009", "Création de l'Autorité des normes comptables (ANC)"],
+            ["2022", "Modernisation du PCG : états financiers et nomenclature des comptes"]
+          ]
+        },
+        {
+          "titre": "Les métiers de la comptabilité",
+          "contenu": "Assistant comptable (saisir, classer, paies, déclarations, préparer la clôture) ; comptable (compter, analyser, contrôler les flux, élaborer les documents de synthèse) ; directeur comptable (superviser, suivre l'évolution du droit, valider les documents de synthèse) ; expert-comptable — EC (assister et contrôler les travaux et documents de synthèse, conseiller sur tout le cycle de vie) ; commissaire aux comptes — CAC (certifier la sincérité et l'image fidèle, alerter le CA, les actionnaires et le procureur). Le droit comptable se nourrit du droit fiscal, du droit du travail et du droit des sociétés."
+        },
+        {
+          "titre": "Distinction création de valeur / trésorerie",
+          "contenu": "La création de valeur se mesure indépendamment des encaissements et des décaissements. Lorsqu'il y a des paiements différés, création de valeur et trésorerie divergent : un produit peut être constaté (valeur créée) sans que l'argent soit encore encaissé."
+        }
       ],
-      "comptes": ["6811 — Dotations aux amortissements", "28 — Amortissements"]
-    },
-    {
-      "id": 3,
-      "titre": "La TVA déductible",
-      "chapitre": "TVA",
-      "resume": "La TVA payée sur les achats est récupérable. Elle est enregistrée dans un compte distinct et déduite de la TVA collectée.",
-      "points_cles": [
-        "Taux normal : 20%",
-        "Compte 44562 — TVA déductible sur immobilisations",
-        "Compte 44566 — TVA déductible sur biens et services"
+      "vocabulaire": [
+        { "terme": "Comptabilité", "definition": "Système d'organisation de l'information financière permettant de saisir, classer, enregistrer des données chiffrées et de présenter une image fidèle du patrimoine, de la situation financière et du résultat (art. 121-1 du PCG)." },
+        { "terme": "Pièce comptable", "definition": "Justificatif d'origine (facture, relevé, bulletin de paie…) qui entre dans le système comptable." },
+        { "terme": "Document comptable", "definition": "Résultat produit par le système comptable (journal, grand livre, comptes annuels…)." },
+        { "terme": "Comptes annuels", "definition": "Ensemble indissociable : bilan + compte de résultat + annexe." },
+        { "terme": "Image fidèle", "definition": "Représentation la plus proche possible de la réalité du patrimoine, de la situation financière et du résultat de l'entité." },
+        { "terme": "Régularité", "definition": "Conformité de la comptabilité aux règles et procédures en vigueur." },
+        { "terme": "Sincérité", "definition": "Application de bonne foi des règles, en fonction de la connaissance que les responsables ont de la réalité." },
+        { "terme": "Droit comptable", "definition": "Ensemble autonome de règles encadrant la comptabilité (Code de commerce, PCG, règlements ANC, doctrine, textes européens, IAS/IFRS)." },
+        { "terme": "PCG", "definition": "Plan comptable général : texte réglementaire de référence de la comptabilité française." },
+        { "terme": "ANC", "definition": "Autorité des normes comptables : normalisateur comptable français, créé en 2009." },
+        { "terme": "CRC", "definition": "Comité de la réglementation comptable, créé en 1998 (fonctions reprises par l'ANC)." },
+        { "terme": "OEC", "definition": "Ordre des experts-comptables, créé en 1945." },
+        { "terme": "CNCC", "definition": "Compagnie nationale des commissaires aux comptes, créée en 1969." },
+        { "terme": "IAS / IFRS", "definition": "Normes comptables internationales constituant le droit comptable international." },
+        { "terme": "Expert-comptable (EC)", "definition": "Professionnel qui assiste et contrôle les travaux comptables et conseille l'entreprise tout au long de son cycle de vie." },
+        { "terme": "Commissaire aux comptes (CAC)", "definition": "Professionnel qui certifie que les comptes reflètent fidèlement les opérations et alerte en cas d'irrégularité." }
       ],
-      "comptes": ["44562", "44566", "44571 — TVA collectée"]
+      "questionsTypes": [
+        "Définir la comptabilité au sens de l'article 121-1 du PCG.",
+        "Citer et expliquer les différents rôles de la comptabilité.",
+        "Distinguer la comptabilité financière de la comptabilité de gestion.",
+        "Présenter les sources du droit comptable.",
+        "Expliquer en quoi et à quelles conditions la comptabilité peut servir de moyen de preuve.",
+        "Quels documents composent les comptes annuels ?",
+        "Distinguer les missions de l'expert-comptable de celles du commissaire aux comptes."
+      ],
+      "annales": {
+        "note": "Ce chapitre ne fait quasiment jamais l'objet d'un dossier dédié. Son contenu est mobilisé sous forme de questions rédactionnelles « de cours » réparties dans les dossiers (souvent en introduction d'un dossier de normalisation). Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+        "questionsRedactionnellesRecurrentes": [
+          "Définition de la comptabilité et de l'image fidèle.",
+          "Sources du droit comptable / rôle de l'ANC.",
+          "Utilité de l'information comptable pour les partenaires de l'entreprise."
+        ],
+        "entrees": []
+      }
     }
   ]
 }
-
