@@ -1,83 +1,201 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fiche — Comptaflow</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231E40AF'/><text x='50' y='72' font-size='70' font-weight='bold' text-anchor='middle' fill='%232DD4BF' font-family='Arial'>C</text></svg>">
-<style>
-:root{--blue-50:#EFF6FF;--blue-100:#DBEAFE;--blue-400:#60A5FA;--blue-500:#3B82F6;--blue-600:#2563EB;--blue-800:#1E40AF;--teal-50:#F0FDFA;--teal-200:#99F6E4;--teal-400:#2DD4BF;--teal-500:#14B8A6;--teal-600:#0D9488;--teal-700:#0F766E;--slate-100:#F1F5F9;--slate-200:#E2E8F0;--slate-400:#94A3B8;--slate-500:#64748B;--slate-800:#1E293B;--slate-900:#0F172A}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--blue-50);color:var(--slate-800)}
-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px;background:#fff;border-bottom:1px solid var(--blue-100)}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-mark{width:32px;height:32px;border-radius:8px;background:var(--blue-800);display:flex;align-items:center;justify-content:center;color:var(--teal-400);font-size:18px;font-weight:700}
-.logo-name{font-size:17px;font-weight:600;color:var(--slate-900)}
-.logo-name span{color:var(--blue-500)}
-.back-link{font-size:14px;color:var(--slate-500);text-decoration:none}
-.back-link:hover{color:var(--slate-900)}
-.content{max-width:760px;margin:0 auto;padding:48px 40px}
-.breadcrumb{font-size:13px;color:var(--slate-400);margin-bottom:20px}
-.breadcrumb a{color:var(--teal-600);text-decoration:none}
-.tag{display:inline-block;background:var(--teal-50);color:var(--teal-600);font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:14px}
-.fiche-titre{font-size:32px;font-weight:700;color:var(--slate-900);margin-bottom:16px}
-.fiche-resume{font-size:16px;color:var(--slate-500);line-height:1.7;margin-bottom:28px}
-.section-block{background:#fff;border:1px solid var(--blue-100);border-radius:14px;padding:24px;margin-bottom:16px}
-.block-title{font-size:12px;font-weight:600;color:var(--teal-600);text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px}
-.points-list{list-style:none}
-.points-list li{font-size:14px;color:var(--slate-800);padding:7px 0;display:flex;gap:10px;align-items:flex-start;border-bottom:1px solid var(--slate-100)}
-.points-list li:last-child{border-bottom:none}
-.points-list li::before{content:"→";color:var(--blue-600);flex-shrink:0;font-weight:600}
-.comptes{display:flex;flex-wrap:wrap;gap:8px}
-.compte-chip{background:var(--blue-50);border:1px solid var(--blue-100);color:var(--blue-600);font-size:12px;padding:6px 12px;border-radius:8px;font-family:monospace}
-.loading{color:var(--slate-400);text-align:center;padding:60px}
-.nav-fiches{display:flex;justify-content:space-between;margin-top:24px;gap:12px}
-.nav-btn{flex:1;background:#fff;border:1px solid var(--blue-100);border-radius:10px;padding:12px 16px;font-size:13px;color:var(--slate-800);text-decoration:none;cursor:pointer}
-.nav-btn:hover{border-color:var(--blue-400);background:var(--blue-50)}
-.nav-btn.disabled{opacity:.4;pointer-events:none}
-@media(max-width:768px){nav{padding:0 20px}.content{padding:32px 20px}.fiche-titre{font-size:26px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiche — Comptaflow</title>
+  <link rel="stylesheet" href="fiche-detail.css">
 </head>
 <body>
-<nav>
-  <a class="logo" href="/"><div class="logo-mark">C</div><span class="logo-name">Compta<span>flow</span></span></a>
-  <a class="back-link" href="/cours/ue9.html">← Toutes les fiches</a>
-</nav>
-<div class="content" id="fiche-content">
-  <p class="loading">Chargement de la fiche...</p>
-</div>
-<script>
-function getParam(name){
-  var url=new URL(window.location.href);
-  return url.searchParams.get(name);
-}
-var ficheId=parseInt(getParam('id'))||1;
-fetch('/data/ue9-fiches.json')
-  .then(function(r){return r.json();})
-  .then(function(data){
-    var fiches=data.fiches;
-    var idx=fiches.findIndex(function(f){return f.id===ficheId;});
-    if(idx===-1)idx=0;
-    var f=fiches[idx];
-    var content=document.getElementById('fiche-content');
-    var points=f.points_cles.map(function(p){return '<li>'+p+'</li>';}).join('');
-    var comptes=f.comptes.map(function(c){return '<span class="compte-chip">'+c+'</span>';}).join('');
-    var prev=idx>0?fiches[idx-1]:null;
-    var next=idx<fiches.length-1?fiches[idx+1]:null;
-    var prevBtn=prev?'<a class="nav-btn" href="/cours/fiche.html?id='+prev.id+'">← '+prev.titre+'</a>':'<span class="nav-btn disabled">← Début</span>';
-    var nextBtn=next?'<a class="nav-btn" href="/cours/fiche.html?id='+next.id+'" style="text-align:right">'+next.titre+' →</a>':'<span class="nav-btn disabled" style="text-align:right">Fin →</span>';
-    content.innerHTML=
-      '<div class="breadcrumb"><a href="/cours/ue9.html">UE9 — Comptabilité</a> / '+f.chapitre+'</div>'+
-      '<div class="tag">'+f.chapitre+'</div>'+
-      '<h1 class="fiche-titre">'+f.titre+'</h1>'+
-      '<p class="fiche-resume">'+f.resume+'</p>'+
-      '<div class="section-block"><div class="block-title">Points clés</div><ul class="points-list">'+points+'</ul></div>'+
-      '<div class="section-block"><div class="block-title">Comptes utilisés</div><div class="comptes">'+comptes+'</div></div>'+
-      '<div class="nav-fiches">'+prevBtn+nextBtn+'</div>';
-  })
-  .catch(function(){
-    document.getElementById('fiche-content').innerHTML='<p class="loading" style="color:#EF4444">Erreur de chargement de la fiche.</p>';
-  });
-</script>
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Compta<span>flow</span></a>
+      <a class="back" href="ue9.html">← UE9 · Introduction à la comptabilité</a>
+    </div>
+  </header>
+
+  <main class="wrap" id="app">
+    <div class="state"><div class="spin"></div>Chargement de la fiche…</div>
+  </main>
+
+  <footer class="foot wrap">Comptaflow — Révisions DCG</footer>
+
+  <script>
+  // ---------------------------------------------------------------------------
+  // Renderer générique de fiche.
+  // Pour ajouter une fiche : édite data/ue9-fiches.json, rien d'autre.
+  // URL : fiche.html?id=ue9-ch1   (à défaut, la première fiche du JSON)
+  // Ce fichier vit dans cours/ ; le JSON est dans data/ à la racine → ../data/
+  // ---------------------------------------------------------------------------
+  const DATA_URL = '../data/ue9-fiches.json';
+  const app = document.getElementById('app');
+
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c =>
+    ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+
+  function sectionHead(tagClass, tagText, title) {
+    return `<div class="section-head">
+      <span class="section-tag ${tagClass}">${esc(tagText)}</span>
+      <h2>${esc(title)}</h2>
+    </div>`;
+  }
+
+  function renderNotion(n) {
+    let inner = '';
+    if (n.reference) inner += `<span class="ref">${esc(n.reference)}</span>`;
+    inner += `<h3>${esc(n.titre)}</h3>`;
+    if (n.formule) inner += `<div class="formule">${esc(n.formule)}</div>`;
+    if (n.contenu) inner += `<p>${esc(n.contenu)}</p>`;
+    if (n.tableau) inner += renderTable(n.tableau);
+    if (n.timeline) inner += renderTimeline(n.timeline);
+    return `<div class="notion">${inner}</div>`;
+  }
+
+  function renderTable(t) {
+    const head = t.colonnes.map(c => `<th>${esc(c)}</th>`).join('');
+    const rows = t.lignes.map(r =>
+      `<tr>${r.map((cell, i) =>
+        i === 0 ? `<th scope="row">${esc(cell)}</th>` : `<td>${esc(cell)}</td>`
+      ).join('')}</tr>`).join('');
+    return `<div class="table-scroll"><table class="compare">
+      <thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table></div>`;
+  }
+
+  function renderTimeline(items) {
+    return `<ul class="timeline">${items.map(([y, e]) =>
+      `<li><span class="year">${esc(y)}</span><span class="event">${esc(e)}</span></li>`
+    ).join('')}</ul>`;
+  }
+
+  function renderGauge(u) {
+    const pct = Math.max(0, Math.min(100, Number(u.pourcentage) || 0));
+    const themes = (u.themesRecurrents || []).map(t => `<li>${esc(t)}</li>`).join('');
+    return `<section class="section">
+      ${sectionHead('t-amber', 'Examen', "Utilité à l'examen")}
+      <div class="card gauge-card">
+        <div class="gauge-top">
+          <div class="gauge-num" data-pct="${pct}">0<small>%</small></div>
+          <div class="gauge-level">${esc(u.niveau || '')}</div>
+        </div>
+        <div class="gauge-track"><div class="gauge-fill" data-pct="${pct}"></div></div>
+        <div class="gauge-scale"><span>0</span><span>50</span><span>100</span></div>
+        ${u.commentaire ? `<p class="gauge-comment">${esc(u.commentaire)}</p>` : ''}
+        ${themes ? `<div class="themes"><h4>Thèmes les plus fréquents en UE9</h4><ul>${themes}</ul></div>` : ''}
+      </div>
+    </section>`;
+  }
+
+  function renderVocab(list) {
+    const rows = list.map(v =>
+      `<div class="row"><dt>${esc(v.terme)}</dt><dd>${esc(v.definition)}</dd></div>`
+    ).join('');
+    return `<section class="section">
+      ${sectionHead('t-teal', 'Lexique', 'Vocabulaire du chapitre')}
+      <dl class="vocab">${rows}</dl>
+    </section>`;
+  }
+
+  function renderQuestions(list) {
+    const items = list.map(q => `<li>${esc(q)}</li>`).join('');
+    return `<section class="section">
+      ${sectionHead('t-violet', 'À réviser', "Questions types qui peuvent tomber")}
+      <ol class="qlist">${items}</ol>
+    </section>`;
+  }
+
+  function renderAnnales(a) {
+    let inner = '';
+    if (a.note) inner += `<p class="annales-note">${esc(a.note)}</p>`;
+    if (a.entrees && a.entrees.length) {
+      inner += a.entrees.map(e => `<div class="annale">
+        <span class="year-tag">Session ${esc(e.annee)}</span>
+        <h4>${esc(e.question)}</h4>
+        <div class="corrige"><strong>Corrigé type — </strong>${esc(e.corrige)}</div>
+      </div>`).join('');
+    } else {
+      inner += `<p class="empty">Aucune annale datée renseignée pour l'instant. Ajoute-les dans <code>annales.entrees</code> du JSON (année + question + corrigé).</p>`;
+    }
+    if (a.questionsRedactionnellesRecurrentes && a.questionsRedactionnellesRecurrentes.length) {
+      inner += `<div class="themes"><h4>Questions rédactionnelles récurrentes</h4>
+        <ul class="recur">${a.questionsRedactionnellesRecurrentes.map(q => `<li>${esc(q)}</li>`).join('')}</ul></div>`;
+    }
+    return `<section class="section">
+      ${sectionHead('t-amber', 'Annales', "Annales officielles liées au chapitre")}
+      <div class="card annales-card">${inner}</div>
+    </section>`;
+  }
+
+  function renderFiche(f) {
+    const chips = (f.motsCles || []).map(m => `<span class="chip">${esc(m)}</span>`).join('');
+    let html = `<header class="fiche-header">
+      <p class="eyebrow">${esc(f.axe || 'UE9 · Introduction à la comptabilité')}</p>
+      <span class="fiche-num">Fiche N°${esc(f.numero)}${f.pageManuel ? ` · p.${esc(f.pageManuel)}` : ''}</span>
+      <h1 class="fiche-title">${esc(f.titre)}</h1>
+      ${chips ? `<div class="motscles">${chips}</div>` : ''}
+      <div class="header-actions">
+        <a class="btn-exos" href="${esc(f.exercicesUrl || '#')}">
+          Exercices d'application du chapitre <span class="arrow">→</span>
+        </a>
+      </div>
+    </header>`;
+
+    if (f.formatEpreuve) html += `<p class="format-note">${esc(f.formatEpreuve)}</p>`;
+
+    if (f.notionsCles && f.notionsCles.length) {
+      html += `<section class="section">
+        ${sectionHead('t-blue', 'Cours', 'Notions clés du chapitre')}
+        ${f.notionsCles.map(renderNotion).join('')}
+      </section>`;
+    }
+    if (f.utilite) html += renderGauge(f.utilite);
+    if (f.vocabulaire && f.vocabulaire.length) html += renderVocab(f.vocabulaire);
+    if (f.questionsTypes && f.questionsTypes.length) html += renderQuestions(f.questionsTypes);
+    if (f.annales) html += renderAnnales(f.annales);
+
+    app.innerHTML = html;
+    document.title = `Fiche ${f.numero} — ${f.titre} · Comptaflow`;
+    animateGauge();
+  }
+
+  function animateGauge() {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const fill = document.querySelector('.gauge-fill');
+    const num = document.querySelector('.gauge-num');
+    if (!fill || !num) return;
+    const pct = Number(fill.dataset.pct) || 0;
+    if (reduce) { fill.style.width = pct + '%'; num.innerHTML = pct + '<small>%</small>'; return; }
+    requestAnimationFrame(() => { fill.style.width = pct + '%'; });
+    let start = null;
+    const dur = 900;
+    function step(ts) {
+      if (!start) start = ts;
+      const p = Math.min(1, (ts - start) / dur);
+      num.innerHTML = Math.round(p * pct) + '<small>%</small>';
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  (async function init() {
+    const id = new URLSearchParams(location.search).get('id');
+    try {
+      const res = await fetch(DATA_URL, { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      const data = await res.json();
+      const fiches = data.fiches || [];
+      const fiche = id ? fiches.find(f => f.id === id) : fiches[0];
+      if (!fiche) {
+        app.innerHTML = `<div class="state">Fiche introuvable${id ? ` (id « ${esc(id)} »)` : ''}.
+          <br><a class="back" href="ue9.html">← Retour à l'UE9</a></div>`;
+        return;
+      }
+      renderFiche(fiche);
+    } catch (err) {
+      app.innerHTML = `<div class="state">Impossible de charger la fiche.<br>
+        <small>${esc(err.message)} — vérifie que le site est servi en HTTP (Vercel, ou un serveur local), le protocole <code>file://</code> bloque le chargement du JSON.</small></div>`;
+    }
+  })();
+  </script>
 </body>
 </html>
