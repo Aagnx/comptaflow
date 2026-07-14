@@ -229,3 +229,106 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
   .btn-exos, .btn-exos .arrow { transition: none; }
   .spin { animation: none; }
 }
+
+/* ==========================================================================
+   Schémas visuels (flux, pyramide, métiers, trésorerie)
+   ========================================================================== */
+:root { --red: #EF4444; --red-ink: #DC2626; --indigo: #4338CA; }
+
+/* ---- Flux (système comptable) ---- */
+.flux { margin-top: 16px; }
+.flux-row { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; }
+.flux-step {
+  flex: 1 1 0; min-width: 130px; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 16px 12px; border-radius: 12px; color: #fff;
+  font-family: var(--display); font-weight: 600; font-size: .92rem; line-height: 1.25;
+}
+.flux-step.c-blue { background: var(--blue); }
+.flux-step.c-teal { background: var(--teal); }
+.flux-step.c-violet { background: var(--violet); }
+.flux-arrow { display: flex; align-items: center; color: var(--ink-soft); font-size: 1.4rem; font-weight: 700; }
+.flux-io { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+.flux-tag {
+  font-size: .85rem; padding: .45rem .8rem; border-radius: 9px; background: #EEF2F8;
+  color: var(--ink); border: 1px solid var(--line); white-space: nowrap;
+}
+.flux-tag.in { border-left: 3px solid var(--blue); }
+.flux-tag.out { border-left: 3px solid var(--violet); }
+.flux-connector {
+  flex: 1; height: 0; border-top: 2px dashed var(--line); position: relative;
+}
+.flux-connector::after {
+  content: "▶"; position: absolute; right: -2px; top: 50%; transform: translateY(-50%);
+  color: var(--line); font-size: .7rem;
+}
+
+/* ---- Pyramide de Kelsen (sources du droit) ---- */
+.pyramide { margin-top: 18px; display: flex; gap: 12px; align-items: stretch; }
+.pyr-axis {
+  display: flex; align-items: center; justify-content: center;
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .1em;
+  color: var(--ink-soft); text-transform: uppercase; white-space: nowrap;
+}
+.pyr-stack { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.pyr-tier {
+  border-radius: 10px; padding: 12px 18px; color: #fff; text-align: center;
+  box-shadow: var(--shadow); transition: transform .12s ease;
+}
+.pyr-tier:hover { transform: scale(1.015); }
+.pyr-niveau { display: block; font-family: var(--display); font-weight: 700; font-size: .98rem; }
+.pyr-items { display: block; font-size: .8rem; opacity: .93; margin-top: 3px; line-height: 1.35; }
+.pyr-tier.tier-0 { background: var(--indigo); }
+.pyr-tier.tier-1 { background: var(--blue); }
+.pyr-tier.tier-2 { background: var(--teal); }
+.pyr-tier.tier-3 { background: #64748B; }
+
+/* ---- Escalier des métiers ---- */
+.metiers { margin-top: 16px; }
+.metiers-stair { display: flex; flex-direction: column; gap: 10px; }
+.metier-step {
+  display: flex; gap: 14px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 12px; padding: 14px 16px 14px 18px; position: relative; overflow: hidden;
+  margin-left: calc(var(--i) * 22px);
+}
+.metier-step::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; }
+.metier-step.c-blue::before   { background: var(--blue); }
+.metier-step.c-teal::before   { background: var(--teal); }
+.metier-step.c-violet::before { background: var(--violet); }
+.metier-step.c-amber::before  { background: var(--amber); }
+.metier-step.c-red::before    { background: var(--red); }
+.metier-badge {
+  flex: 0 0 auto; align-self: flex-start; font-family: var(--mono); font-weight: 600;
+  font-size: .8rem; color: #fff; padding: .42rem .62rem; border-radius: 8px; white-space: nowrap;
+}
+.metier-step.c-blue   .metier-badge { background: var(--blue); }
+.metier-step.c-teal   .metier-badge { background: var(--teal); }
+.metier-step.c-violet .metier-badge { background: var(--violet); }
+.metier-step.c-amber  .metier-badge { background: var(--amber); }
+.metier-step.c-red    .metier-badge { background: var(--red); }
+.metier-body { flex: 1; min-width: 0; }
+.metier-top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.metier-nom { font-family: var(--display); font-weight: 600; font-size: 1rem; }
+.metier-duree { font-family: var(--mono); font-size: .74rem; color: var(--ink-soft); }
+.metier-diplome { font-size: .85rem; color: var(--blue-ink); font-weight: 500; margin: 3px 0 4px; }
+.metier-missions { font-size: .88rem; color: var(--ink-soft); }
+
+.passerelles { margin-top: 14px; background: #F5F2FF; border: 1px solid #E4DBFF; border-radius: 12px; padding: 14px 16px; }
+.passerelles h4 { margin: 0 0 8px; font-family: var(--display); font-size: .82rem; color: var(--violet-ink); text-transform: uppercase; letter-spacing: .06em; }
+.passerelles ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.passerelles li { font-size: .88rem; color: var(--ink-soft); display: flex; gap: .55rem; }
+.passerelles li::before { content: "→"; color: var(--violet); font-weight: 700; }
+
+/* ---- Schéma trésorerie / valeur ---- */
+.treso { margin-top: 16px; }
+.treso svg { width: 100%; height: auto; display: block; }
+.treso-legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 10px; font-size: .85rem; color: var(--ink-soft); }
+.treso-legend span { display: inline-flex; align-items: center; gap: .45rem; }
+.treso-legend i { width: 16px; height: 4px; border-radius: 2px; display: inline-block; }
+
+@media (max-width: 560px) {
+  .flux-row { flex-direction: column; }
+  .flux-arrow { transform: rotate(90deg); align-self: center; }
+  .metier-step { margin-left: calc(var(--i) * 9px); }
+  .pyr-axis { font-size: .6rem; }
+}

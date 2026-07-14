@@ -49,7 +49,109 @@
     if (n.contenu) inner += `<p>${esc(n.contenu)}</p>`;
     if (n.tableau) inner += renderTable(n.tableau);
     if (n.timeline) inner += renderTimeline(n.timeline);
+    if (n.visuel) inner += renderVisuel(n.visuel);
     return `<div class="notion">${inner}</div>`;
+  }
+
+  // ---- Schémas visuels ----
+  function renderVisuel(v) {
+    switch (v.type) {
+      case 'flux': return renderFlux(v);
+      case 'pyramide': return renderPyramide(v);
+      case 'metiers': return renderMetiers(v);
+      case 'treso-valeur': return renderTresoValeur();
+      default: return '';
+    }
+  }
+
+  function renderFlux(v) {
+    const steps = v.etapes.map((e, i) =>
+      `<div class="flux-step c-${esc(e.couleur)}">${esc(e.label)}</div>` +
+      (i < v.etapes.length - 1 ? `<div class="flux-arrow">→</div>` : '')
+    ).join('');
+    return `<div class="flux">
+      <div class="flux-row">${steps}</div>
+      <div class="flux-io">
+        <span class="flux-tag in">${esc(v.entree)}</span>
+        <span class="flux-connector"></span>
+        <span class="flux-tag out">${esc(v.sortie)}</span>
+      </div>
+    </div>`;
+  }
+
+  function renderPyramide(v) {
+    const n = v.tiers.length;
+    const tiers = v.tiers.map((t, i) => {
+      const w = (65 + i * (35 / (n - 1))).toFixed(1);
+      return `<div class="pyr-tier tier-${i}" style="width:${w}%">
+        <span class="pyr-niveau">${esc(t.niveau)}</span>
+        <span class="pyr-items">${esc(t.items)}</span>
+      </div>`;
+    }).join('');
+    return `<div class="pyramide">
+      <div class="pyr-axis"><span>▲ ${esc(v.legende || '')}</span></div>
+      <div class="pyr-stack">${tiers}</div>
+    </div>`;
+  }
+
+  function renderMetiers(v) {
+    const steps = v.roles.map((r, i) =>
+      `<div class="metier-step c-${esc(r.couleur)}" style="--i:${i}">
+        <div class="metier-badge">${esc(r.niveau)}</div>
+        <div class="metier-body">
+          <div class="metier-top">
+            <span class="metier-nom">${esc(r.nom)}</span>
+            <span class="metier-duree">${esc(r.duree)}</span>
+          </div>
+          <div class="metier-diplome">${esc(r.diplome)}</div>
+          <div class="metier-missions">${esc(r.missions)}</div>
+        </div>
+      </div>`
+    ).join('');
+    const pass = (v.passerelles || []).map(p => `<li>${esc(p)}</li>`).join('');
+    return `<div class="metiers">
+      <div class="metiers-stair">${steps}</div>
+      ${pass ? `<div class="passerelles"><h4>↔ Passerelles entre parcours</h4><ul>${pass}</ul></div>` : ''}
+    </div>`;
+  }
+
+  function renderTresoValeur() {
+    return `<div class="treso">
+      <svg viewBox="0 0 640 300" role="img" aria-label="Schéma création de valeur vs trésorerie">
+        <!-- zone de décalage -->
+        <rect x="185" y="110" width="255" height="140" fill="#F59E0B" opacity="0.12"/>
+        <!-- axes -->
+        <line x1="60" y1="45" x2="60" y2="250" stroke="#CBD5E1" stroke-width="1.5"/>
+        <line x1="60" y1="250" x2="605" y2="250" stroke="#CBD5E1" stroke-width="1.5"/>
+        <text x="52" y="52" text-anchor="end" font-size="13" fill="#64748B">€</text>
+        <text x="600" y="272" text-anchor="end" font-size="12" fill="#64748B">temps →</text>
+        <!-- lignes d'événements -->
+        <line x1="185" y1="60" x2="185" y2="250" stroke="#94A3B8" stroke-width="1.4" stroke-dasharray="4 4"/>
+        <line x1="440" y1="60" x2="440" y2="250" stroke="#94A3B8" stroke-width="1.4" stroke-dasharray="4 4"/>
+        <!-- création de valeur (violet) : saute à la vente -->
+        <path d="M60,250 L185,250 L185,110 L600,110" fill="none" stroke="#7C3AED" stroke-width="3" stroke-linejoin="round"/>
+        <!-- trésorerie (teal) : saute à l'encaissement -->
+        <path d="M60,244 L440,244 L440,118 L600,118" fill="none" stroke="#14B8A6" stroke-width="3" stroke-linejoin="round"/>
+        <circle cx="185" cy="110" r="5" fill="#7C3AED"/>
+        <circle cx="440" cy="118" r="5" fill="#14B8A6"/>
+        <!-- libellés événements -->
+        <text x="185" y="38" text-anchor="middle" font-size="12.5" font-weight="600" fill="#16233A">Vente (T₀)</text>
+        <text x="185" y="53" text-anchor="middle" font-size="11" fill="#7C3AED">valeur créée</text>
+        <text x="440" y="38" text-anchor="middle" font-size="12.5" font-weight="600" fill="#16233A">Encaissement</text>
+        <text x="440" y="53" text-anchor="middle" font-size="11" fill="#14B8A6">trésorerie ↑</text>
+        <!-- zone label -->
+        <text x="312" y="180" text-anchor="middle" font-size="11.5" fill="#B45309">Valeur créée,</text>
+        <text x="312" y="196" text-anchor="middle" font-size="11.5" fill="#B45309">pas encore encaissée</text>
+        <text x="312" y="212" text-anchor="middle" font-size="10.5" fill="#B45309">(créance client)</text>
+        <!-- accolade délai -->
+        <text x="312" y="288" text-anchor="middle" font-size="11.5" fill="#64748B">↔ délai de paiement</text>
+      </svg>
+      <div class="treso-legend">
+        <span><i style="background:#7C3AED"></i> Création de valeur</span>
+        <span><i style="background:#14B8A6"></i> Trésorerie</span>
+        <span><i style="background:#FCD9A6"></i> Décalage (créance)</span>
+      </div>
+    </div>`;
   }
 
   function renderTable(t) {
