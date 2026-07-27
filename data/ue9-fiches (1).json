@@ -1,0 +1,510 @@
+{
+  "ue": "UE9",
+  "intitule": "Introduction à la comptabilité",
+  "fiches": [
+    {
+      "id": "ue9-ch1",
+      "numero": 1,
+      "titre": "Le rôle de la comptabilité",
+      "axe": "Axe 1 — Introduction générale à la comptabilité",
+      "pageManuel": 9,
+      "exercicesUrl": "../exercices/ue9.html",
+      "motsCles": [
+        "Aide à la décision",
+        "Comptabilité",
+        "Contrôle",
+        "Droit comptable",
+        "Preuve",
+        "Source d'information"
+      ],
+      "utilite": {
+        "pourcentage": 8,
+        "niveau": "Faible — chapitre introductif",
+        "commentaire": "Chapitre de cadrage : il tombe très rarement comme dossier à part entière. Ce qui rapporte réellement des points ici, ce sont les questions rédactionnelles « de cours » : définir la comptabilité (art. 121-1 du PCG), citer les sources du droit comptable, distinguer les types de comptabilités. La thématique plus large « principes comptables et sources du droit comptable » apparaît dans environ 77 % des sujets (2014-2025), mais surtout via la Fiche 2. À connaître pour ne pas perdre les points faciles de définition, pas à sur-réviser.",
+        "themesRecurrents": [
+          "Opérations courantes avec les tiers — 100 % des sujets",
+          "Opérations d'inventaire — 100 %",
+          "Immobilisations, amortissements et dépréciations — 92 %",
+          "Liquidation de la TVA — 85 %",
+          "Principes comptables et sources du droit comptable — 77 %"
+        ]
+      },
+      "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+      "notionsCles": [
+        {
+          "titre": "Définition de la comptabilité",
+          "reference": "Art. 121-1 du PCG",
+          "contenu": "La comptabilité est un système d'information permettant de refléter les opérations de l'entreprise et sa situation. Au sens de l'article 121-1 du PCG, c'est un système d'organisation de l'information financière permettant de saisir, classer et enregistrer des données chiffrées, puis de présenter des états reflétant une image fidèle du patrimoine, de la situation financière et du résultat de l'entité à la date de clôture."
+        },
+        {
+          "titre": "Le fonctionnement du système comptable",
+          "contenu": "Le système comptable transforme des pièces comptables (en entrée) en documents comptables (en sortie), en trois temps :",
+          "visuel": {
+            "type": "flux",
+            "entree": "Pièces comptables",
+            "sortie": "Documents comptables",
+            "etapes": [
+              { "label": "Collecte & organisation", "couleur": "blue" },
+              { "label": "Enregistrement", "couleur": "teal" },
+              { "label": "Production & communication", "couleur": "violet" }
+            ]
+          }
+        },
+        {
+          "titre": "Les quatre rôles de la comptabilité",
+          "contenu": "1) Moyen de preuve entre commerçants. 2) Instrument de contrôle : santé et performance de l'entreprise, assiette de l'impôt, charges sociales. 3) Aide à la prise de décision : source d'information pour les partenaires et acteurs. 4) Matière première pour produire des indicateurs et outils de gestion : statistiques nationales, plan d'investissement."
+        },
+        {
+          "titre": "Régularité, sincérité et image fidèle",
+          "reference": "Art. L123-23 du Code de commerce",
+          "contenu": "La comptabilité doit être régulière et sincère et donner une image fidèle du patrimoine et de l'activité de l'entreprise. Dès lors qu'elle est tenue selon les normes applicables, elle est présumée sincère et peut servir de preuve en matière de droit commercial."
+        },
+        {
+          "titre": "Les comptes annuels",
+          "formule": "Comptes annuels = Bilan + Compte de résultat + Annexe",
+          "contenu": "Les comptes annuels forment un tout indissociable. Le bilan présente le patrimoine, le compte de résultat l'activité de l'exercice, et l'annexe complète et commente les deux précédents."
+        },
+        {
+          "titre": "Les différentes comptabilités",
+          "contenu": "La comptabilité financière (ou générale) est la seule obligatoire et fortement réglementée, destinée à des utilisateurs externes, en unité monétaire et de portée historique. La comptabilité de gestion, la comptabilité budgétaire et la gestion financière sont facultatives, non réglementées et tournées vers la prise de décision interne.",
+          "tableau": {
+            "colonnes": ["", "Comptabilité financière", "Comptabilité de gestion", "Comptabilité budgétaire", "Gestion financière"],
+            "lignes": [
+              ["Objectif", "Informer sur la situation de l'entreprise", "Aider aux prises de décisions", "Comparatif prévisionnel / réalisé", "Aider aux prises de décisions"],
+              ["Destinataires", "Externes", "Internes", "Internes", "Internes et externes"],
+              ["Force", "Obligatoire", "Facultative", "Facultative", "Facultative"],
+              ["Réglementation", "Forte", "Absence", "Absence", "Absence"],
+              ["Unité de mesure", "Monétaire", "Monétaire et/ou physique", "Monétaire et/ou physique", "Monétaire"],
+              ["Portée", "Historique", "Historique et prévisionnelle", "Historique et prévisionnelle", "Historique et prévisionnelle"]
+            ]
+          }
+        },
+        {
+          "titre": "Une discipline au confluent de l'économie et du droit",
+          "contenu": "La comptabilité reflète les relations économiques de l'entreprise avec ses partenaires : actionnaires, institutions financières, fournisseurs, clients, État et administrations, salariés. Elle est aussi une source d'information sur les marchés (biens, financier, travail)."
+        },
+        {
+          "titre": "Les sources du droit comptable",
+          "contenu": "Le droit comptable est autonome. Ses sources se classent selon leur force juridique, de la plus forte à la plus faible (logique de la pyramide de Kelsen) :",
+          "visuel": {
+            "type": "pyramide",
+            "legende": "Force juridique décroissante",
+            "tiers": [
+              { "niveau": "Textes supranationaux", "items": "Directives & règlements européens · Normes internationales IAS/IFRS" },
+              { "niveau": "La loi", "items": "Code de commerce" },
+              { "niveau": "Le règlement", "items": "Règlements de l'ANC (ex-CRC, depuis 2009) · Plan comptable général (PCG)" },
+              { "niveau": "L'interprétation", "items": "Jurisprudence · Doctrine" }
+            ]
+          }
+        },
+        {
+          "titre": "Repères historiques du droit comptable",
+          "contenu": "La réglementation comptable est relativement récente. Quelques dates-clés à retenir :",
+          "timeline": [
+            ["1673", "Ordonnance de Colbert rendant obligatoire la tenue de comptes"],
+            ["1807", "Promulgation du Code de commerce (15 sept.)"],
+            ["1867", "Loi obligeant certaines sociétés cotées à diffuser des informations comptables (24 juil.)"],
+            ["1945", "Création de l'Ordre des experts-comptables (OEC)"],
+            ["1947", "Commission de normalisation comptable puis premier plan comptable"],
+            ["1969", "Création de la Compagnie nationale des commissaires aux comptes (CNCC)"],
+            ["1983", "Loi comptable à l'origine d'un véritable droit comptable"],
+            ["1998", "Création du Comité de la réglementation comptable (CRC)"],
+            ["2009", "Création de l'Autorité des normes comptables (ANC)"],
+            ["2022", "Modernisation du PCG : états financiers et nomenclature des comptes"]
+          ]
+        },
+        {
+          "titre": "Les métiers de la comptabilité",
+          "contenu": "Les métiers se hiérarchisent selon le niveau d'études, du Bac +2 au Bac +8. Chaque diplôme est une étape autonome (on peut s'arrêter) et un tremplin vers le suivant.",
+          "visuel": {
+            "type": "metiers",
+            "roles": [
+              { "nom": "Assistant comptable", "niveau": "Bac +2", "duree": "2 ans", "diplome": "BTS CG ou BUT GEA", "missions": "Saisie, classement, paies, déclarations sociales et fiscales, préparation de la clôture.", "couleur": "blue" },
+              { "nom": "Comptable", "niveau": "Bac +3", "duree": "+1 an (3 ans)", "diplome": "DCG — grade licence", "missions": "Compter, analyser, contrôler les flux financiers, élaborer les documents de synthèse.", "couleur": "teal" },
+              { "nom": "Directeur / chef comptable", "niveau": "Bac +5", "duree": "+2 ans", "diplome": "DSCG — grade master (ou Master CCA)", "missions": "Superviser les équipes, suivre l'évolution du droit, valider les documents de synthèse.", "couleur": "violet" },
+              { "nom": "Expert-comptable (EC)", "niveau": "Bac +8", "duree": "+3 ans de stage", "diplome": "DEC (stage 3 ans + mémoire), inscription à l'Ordre", "missions": "Assister et contrôler les travaux et les comptes, conseiller l'entreprise sur tout son cycle de vie.", "couleur": "amber" },
+              { "nom": "Commissaire aux comptes (CAC)", "niveau": "Bac +5 à +8", "duree": "master + stage 3 ans", "diplome": "CAFCAC (voie audit) ou DEC", "missions": "Certifier la sincérité et l'image fidèle des comptes, alerter le CA, les actionnaires et le procureur.", "couleur": "red" }
+            ],
+            "passerelles": [
+              "BTS CG / BUT GEA → DCG : dispenses d'épreuves, entrée directe en 2ᵉ ou 3ᵉ année.",
+              "Master CCA → DSCG : dispense de 5 des 7 UE.",
+              "DEC → CAC : le diplôme d'expertise comptable donne accès à la fonction de commissaire aux comptes.",
+              "CAFCAC ↔ DEC : passerelle réciproque — le titulaire du CAFCAC peut se présenter au DEC."
+            ]
+          }
+        },
+        {
+          "titre": "Distinction création de valeur / trésorerie",
+          "contenu": "La création de valeur se mesure indépendamment des encaissements et des décaissements. Avec un paiement différé, la valeur est créée dès la vente, mais la trésorerie n'arrive qu'à l'encaissement : les deux divergent pendant le délai de paiement.",
+          "visuel": { "type": "treso-valeur" }
+        }
+      ],
+      "vocabulaire": [
+        { "terme": "Comptabilité", "definition": "Système d'organisation de l'information financière permettant de saisir, classer, enregistrer des données chiffrées et de présenter une image fidèle du patrimoine, de la situation financière et du résultat (art. 121-1 du PCG)." },
+        { "terme": "Pièce comptable", "definition": "Justificatif d'origine (facture, relevé, bulletin de paie…) qui entre dans le système comptable." },
+        { "terme": "Document comptable", "definition": "Résultat produit par le système comptable (journal, grand livre, comptes annuels…)." },
+        { "terme": "Comptes annuels", "definition": "Ensemble indissociable : bilan + compte de résultat + annexe." },
+        { "terme": "Image fidèle", "definition": "Représentation la plus proche possible de la réalité du patrimoine, de la situation financière et du résultat de l'entité." },
+        { "terme": "Régularité", "definition": "Conformité de la comptabilité aux règles et procédures en vigueur." },
+        { "terme": "Sincérité", "definition": "Application de bonne foi des règles, en fonction de la connaissance que les responsables ont de la réalité." },
+        { "terme": "Droit comptable", "definition": "Ensemble autonome de règles encadrant la comptabilité (Code de commerce, PCG, règlements ANC, doctrine, textes européens, IAS/IFRS)." },
+        { "terme": "PCG", "definition": "Plan comptable général : texte réglementaire de référence de la comptabilité française." },
+        { "terme": "ANC", "definition": "Autorité des normes comptables : normalisateur comptable français, créé en 2009." },
+        { "terme": "CRC", "definition": "Comité de la réglementation comptable, créé en 1998 (fonctions reprises par l'ANC)." },
+        { "terme": "OEC", "definition": "Ordre des experts-comptables, créé en 1945." },
+        { "terme": "CNCC", "definition": "Compagnie nationale des commissaires aux comptes, créée en 1969." },
+        { "terme": "IAS / IFRS", "definition": "Normes comptables internationales constituant le droit comptable international." },
+        { "terme": "Expert-comptable (EC)", "definition": "Professionnel qui assiste et contrôle les travaux comptables et conseille l'entreprise tout au long de son cycle de vie." },
+        { "terme": "Commissaire aux comptes (CAC)", "definition": "Professionnel qui certifie que les comptes reflètent fidèlement les opérations et alerte en cas d'irrégularité." }
+      ],
+      "questionsTypes": [
+        "Définir la comptabilité au sens de l'article 121-1 du PCG.",
+        "Citer et expliquer les différents rôles de la comptabilité.",
+        "Distinguer la comptabilité financière de la comptabilité de gestion.",
+        "Présenter les sources du droit comptable.",
+        "Expliquer en quoi et à quelles conditions la comptabilité peut servir de moyen de preuve.",
+        "Quels documents composent les comptes annuels ?",
+        "Distinguer les missions de l'expert-comptable de celles du commissaire aux comptes."
+      ],
+      "annales": {
+        "note": "Ce chapitre ne fait quasiment jamais l'objet d'un dossier dédié. Son contenu est mobilisé sous forme de questions rédactionnelles « de cours » réparties dans les dossiers (souvent en introduction d'un dossier de normalisation). Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+        "questionsRedactionnellesRecurrentes": [
+          "Définition de la comptabilité et de l'image fidèle.",
+          "Sources du droit comptable / rôle de l'ANC.",
+          "Utilité de l'information comptable pour les partenaires de l'entreprise."
+        ],
+        "entrees": []
+      }
+    },
+    {
+      "id": "ue9-ch2",
+      "numero": 2,
+      "titre": "La réglementation et la normalisation comptables",
+      "axe": "Axe 1 — Introduction générale à la comptabilité",
+      "pageManuel": 13,
+      "exercicesUrl": "../exercices/ue9.html",
+      "motsCles": [
+        "Classe",
+        "Harmonisation comptable",
+        "Normalisation comptable",
+        "PCG",
+        "Plan de comptes",
+        "Principes comptables",
+        "Sous-classe"
+      ],
+      "utilite": {
+        "pourcentage": 20,
+        "niveau": "Fort — chapitre théorique le plus rentable",
+        "commentaire": "C'est LE chapitre théorique à maîtriser. Les principes comptables sont une question rédactionnelle récurrente : on te donne une situation et tu dois citer ET justifier le principe appliqué. La thématique « principes comptables et sources du droit comptable » figure dans environ 77 % des sujets de 2014 à 2025. À connaître par cœur : les 10 principes et leur application, les 7 classes du PCG, et quelles normes s'appliquent selon le type de comptes.",
+        "themesRecurrents": [
+          "Opérations courantes avec les tiers — 100 % des sujets",
+          "Opérations d'inventaire — 100 %",
+          "Immobilisations, amortissements et dépréciations — 92 %",
+          "Liquidation de la TVA — 85 %",
+          "Principes comptables et sources du droit comptable — 77 %"
+        ]
+      },
+      "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice interdite.",
+      "notionsCles": [
+        {
+          "titre": "Normalisation et harmonisation",
+          "contenu": "La normalisation comptable est un processus qui vise à imposer des normes pour encadrer les pratiques comptables. L'harmonisation comptable est un processus qui consiste à rapprocher des règles et pratiques comptables divergentes. Ce sont deux processus distincts mais complémentaires. Exemple : fixer qu'un chocolat contient au moins 35 % de cacao est une norme ; une directive qui met d'accord les États européens sur l'ajout de matières grasses végétales relève de l'harmonisation ; quand ces conditions s'imposent à tous, elles deviennent une norme européenne (normalisation)."
+        },
+        {
+          "titre": "La diversité des besoins des utilisateurs",
+          "contenu": "Établie selon un cadre unique, la comptabilité doit répondre aux besoins d'information de partenaires très différents :",
+          "tableau": {
+            "colonnes": ["Utilisateurs", "Informations utiles"],
+            "lignes": [
+              ["Investisseurs / propriétaires", "Rentabilité, risque et stratégie de l'entreprise"],
+              ["Dirigeants", "Mesure et contrôle de la performance"],
+              ["Fournisseurs et autres créanciers", "Solvabilité de l'entreprise"],
+              ["Clients et autres débiteurs", "Continuité d'exploitation"],
+              ["Salariés", "Continuité d'exploitation et rémunération (politique sociale, intéressement, participation)"],
+              ["Bailleurs de fonds (institutions financières)", "Stabilité financière, choix de la structure financière"],
+              ["État (administrations fiscales et sociales)", "Calcul des charges fiscales et sociales"]
+            ]
+          }
+        },
+        {
+          "titre": "Des règles comptables propres à chaque pays",
+          "contenu": "Les règles comptables ne sont pas les mêmes partout : deux grandes traditions coexistent.",
+          "tableau": {
+            "colonnes": ["Modèle comptable", "Approche dominante"],
+            "lignes": [
+              ["Type continental (ex. France)", "Juridique et patrimoniale"],
+              ["Type anglo-saxon", "Économique et financière"]
+            ]
+          }
+        },
+        {
+          "titre": "De la réalité économique à l'information comptable",
+          "contenu": "L'information comptable n'est pas un décalque neutre de la réalité : sa construction dépend de la mise en pratique des règles (appréciations, choix, présentation). D'où une part de subjectivité, que la normalisation cherche justement à réduire.",
+          "visuel": {
+            "type": "flux",
+            "entree": "Réalité économique",
+            "sortie": "Informations comptables",
+            "etapes": [
+              { "label": "Appréciations", "couleur": "blue" },
+              { "label": "Choix comptables", "couleur": "teal" },
+              { "label": "Manipulations comptables", "couleur": "violet" }
+            ]
+          }
+        },
+        {
+          "titre": "La recherche d'un langage commun",
+          "contenu": "Les normes comptables définissent un cadre pour traduire la réalité économique en comptabilité : la normalisation vise à codifier ce langage. Pour que les utilisateurs et les pays partagent un langage commun, l'harmonisation cherche à rendre compatibles les différentes normes et pratiques."
+        },
+        {
+          "titre": "Les normes applicables en France",
+          "contenu": "La norme dépend du type de comptes établis :",
+          "tableau": {
+            "colonnes": ["Type de comptes", "Normes applicables"],
+            "lignes": [
+              ["Comptes individuels", "Plan comptable général (PCG)"],
+              ["Comptes consolidés — groupe coté", "Normes internationales IAS/IFRS (obligatoire)"],
+              ["Comptes consolidés — groupe non coté", "Directives européennes ou, sur option, IAS/IFRS"]
+            ]
+          }
+        },
+        {
+          "titre": "Le Plan comptable général (PCG)",
+          "reference": "Règlement ANC 2014-03, modifié par 2022-06",
+          "contenu": "Le PCG présente les règles et principes d'établissement et de présentation des comptes. Il précise : les objets et principes de la comptabilité ; la définition des actifs, passifs, produits et charges ; les règles de comptabilisation et d'évaluation ; la tenue, la structure et le fonctionnement des comptes ; la définition des documents de synthèse. Il organise enfin le plan des comptes en classes. À jour : la réforme du PCG (règlement ANC 2022-06, applicable depuis le 1ᵉʳ janvier 2025) a modernisé la nomenclature et la présentation des états financiers, mais les 7 classes et les principes comptables restent inchangés."
+        },
+        {
+          "titre": "Les 7 classes de comptes du PCG",
+          "contenu": "Chaque classe est subdivisée en sous-classes, et l'entreprise adapte son propre plan de comptes. Les classes 1 à 5 sont les comptes de bilan ; les classes 6 et 7 sont les comptes de gestion (charges et produits).",
+          "tableau": {
+            "colonnes": ["Classe", "Nature des comptes"],
+            "lignes": [
+              ["Classe 1", "Comptes de capitaux"],
+              ["Classe 2", "Comptes d'immobilisations"],
+              ["Classe 3", "Comptes de stocks"],
+              ["Classe 4", "Comptes de tiers"],
+              ["Classe 5", "Comptes financiers"],
+              ["Classe 6", "Comptes de charges"],
+              ["Classe 7", "Comptes de produits"]
+            ]
+          }
+        },
+        {
+          "titre": "Les 10 principes comptables",
+          "contenu": "La comptabilité doit fournir une image fidèle de la réalité économique, établie selon les principes suivants (à connaître par cœur) :",
+          "tableau": {
+            "colonnes": ["Principe", "Définition"],
+            "lignes": [
+              ["Régularité", "Conformité aux règles et procédures en vigueur"],
+              ["Sincérité", "Appréciation objective et de bonne foi de la réalité économique"],
+              ["Continuité d'exploitation", "Présomption de poursuite d'activité (à distinguer de la liquidation)"],
+              ["Indépendance des exercices", "Rattachement des charges et des produits à l'exercice concerné"],
+              ["Non-compensation", "Interdiction de compenser actif/passif et charges/produits"],
+              ["Permanence des méthodes", "Non-modification des règles et options appliquées, sauf cas exceptionnel justifié"],
+              ["Prudence", "Prise en compte des événements futurs défavorables connus à la clôture"],
+              ["Intangibilité du bilan d'ouverture", "Bilan de clôture N-1 = bilan d'ouverture N"],
+              ["Coût historique", "Valorisation au coût d'entrée, sans tenir compte de l'inflation ni de l'appréciation"],
+              ["Importance relative", "Prise en compte des seules informations pertinentes et utiles aux documents comptables"]
+            ]
+          }
+        },
+        {
+          "titre": "Reconnaître un principe (exemples d'application)",
+          "contenu": "L'exercice classique de l'examen : une situation est donnée, il faut identifier le principe. Entraîne-toi avec ces cas types :",
+          "tableau": {
+            "colonnes": ["Situation", "Principe appliqué"],
+            "lignes": [
+              ["On ne constate pas les plus-values latentes sur titres, mais on enregistre une charge en cas de moins-value", "Prudence"],
+              ["Impossible de changer de mode de comptabilisation selon le résultat voulu (sauf changement justifié, exceptionnel)", "Permanence des méthodes"],
+              ["Acomptes versés et dettes fournisseurs figurent séparément à l'actif et au passif", "Non-compensation"],
+              ["On ne peut pas imputer sur l'ouverture des comptes des erreurs constatées après la clôture précédente", "Intangibilité du bilan d'ouverture"],
+              ["Intérêts d'un emprunt de janvier N payés en N+1 : rattachés à l'exercice N", "Indépendance des exercices"],
+              ["Impossible de tenir compte de l'inflation pour réévaluer un bien en fin d'exercice", "Coût historique"]
+            ]
+          }
+        },
+        {
+          "titre": "Le normalisateur : l'Autorité des normes comptables (ANC)",
+          "contenu": "L'ANC (créée en 2009) est le normalisateur comptable français. Ses missions : édicter les prescriptions comptables générales et sectorielles que doivent respecter les personnes tenues d'établir des documents comptables ; donner un avis sur les textes réglementaires contenant des dispositions comptables ; participer à l'élaboration des normes internationales et représenter la France ; conduire des travaux d'analyse et émettre des recommandations. Conseil de l'expert : suivre de près l'évolution de la réglementation (lettres d'information de l'ANC, doctrine comptable)."
+        }
+      ],
+      "vocabulaire": [
+        { "terme": "Normalisation comptable", "definition": "Processus visant à imposer des normes pour encadrer les pratiques comptables." },
+        { "terme": "Harmonisation comptable", "definition": "Processus consistant à rapprocher des règles et pratiques comptables divergentes." },
+        { "terme": "Principes comptables", "definition": "Conventions fondamentales garantissant une image fidèle (prudence, indépendance des exercices, coût historique...)." },
+        { "terme": "PCG", "definition": "Plan comptable général : référentiel des règles d'établissement et de présentation des comptes en France." },
+        { "terme": "Classe", "definition": "Premier niveau du plan de comptes du PCG, numérotée de 1 à 7 (+ 8 et 9 pour cas particuliers)." },
+        { "terme": "Sous-classe", "definition": "Subdivision d'une classe de comptes." },
+        { "terme": "Plan de comptes", "definition": "Liste des comptes utilisés par une entreprise, adaptée à partir du PCG." },
+        { "terme": "Comptes individuels", "definition": "Comptes d'une entité seule ; en France, établis selon le PCG." },
+        { "terme": "Comptes consolidés", "definition": "Comptes d'un groupe ; IAS/IFRS obligatoires si le groupe est coté." },
+        { "terme": "IAS / IFRS", "definition": "Normes comptables internationales (International Accounting Standards / International Financial Reporting Standards)." },
+        { "terme": "Comptabilité continentale", "definition": "Modèle d'approche juridique et patrimoniale (ex. France)." },
+        { "terme": "Comptabilité anglo-saxonne", "definition": "Modèle d'approche économique et financière." },
+        { "terme": "ANC", "definition": "Autorité des normes comptables : normalisateur comptable français (créée en 2009)." },
+        { "terme": "Coût historique", "definition": "Valorisation d'un élément à son coût d'entrée, sans réévaluation ultérieure." },
+        { "terme": "Juste valeur", "definition": "Valorisation à la valeur de marché ; logique privilégiée par les IAS/IFRS, par opposition au coût historique." },
+        { "terme": "Cadre conceptuel", "definition": "Ensemble de principes fondateurs sous-tendant les normes (notamment celui de l'IASB pour les IFRS)." }
+      ],
+      "questionsTypes": [
+        "Distinguer la normalisation et l'harmonisation comptables.",
+        "Citer et définir les principaux principes comptables.",
+        "Une situation est donnée : identifier et justifier le principe comptable appliqué.",
+        "Quelles normes s'appliquent aux comptes individuels, aux comptes consolidés cotés et non cotés ?",
+        "Distinguer le coût historique de la juste valeur.",
+        "Un terrain a doublé de valeur : peut-on constater cette hausse en comptabilité ? Justifier.",
+        "Peut-on renoncer à amortir pour éviter un résultat négatif ? Justifier.",
+        "Distinguer la comptabilité de type continental et de type anglo-saxon.",
+        "Présenter le rôle et les missions de l'ANC.",
+        "Citer les 7 classes de comptes du PCG."
+      ],
+      "annales": {
+        "note": "Ce chapitre est rarement un dossier entier, mais ses notions — surtout les principes comptables — reviennent en questions rédactionnelles réparties dans les dossiers. Thème présent dans environ 77 % des sujets. Ajoute ici tes propres annales au fil des révisions (année + question + corrigé).",
+        "questionsRedactionnellesRecurrentes": [
+          "Identifier et justifier le principe comptable appliqué à une situation.",
+          "Distinguer normalisation et harmonisation.",
+          "Normes applicables selon le type de comptes (individuels / consolidés).",
+          "Coût historique vs juste valeur."
+        ],
+        "entrees": [
+          {
+            "annee": "2023",
+            "question": "Identifier et justifier le principe comptable applicable à la régularisation de la consommation d'électricité de décembre (facture reçue l'exercice suivant).",
+            "corrige": "Principe d'indépendance des exercices : les charges se rattachent à l'exercice qu'elles concernent. La consommation de décembre N est une charge de N, constatée via une charge à payer même si la facture arrive en N+1."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ue9-ch3",
+      "numero": 3,
+      "titre": "La méthode comptable : écritures et documents comptables",
+      "axe": "Axe 2 — Appréhender la méthode comptable",
+      "pageManuel": 17,
+      "exercicesUrl": "../exercices/ue9.html",
+      "motsCles": [
+        "Bilan",
+        "Compte",
+        "Compte de résultat",
+        "Crédit",
+        "Débit",
+        "Emploi",
+        "Enregistrement comptable",
+        "Flux",
+        "Grand-livre",
+        "Livre-journal",
+        "Méthode comptable",
+        "Ressource"
+      ],
+      "utilite": {
+        "pourcentage": 15,
+        "niveau": "Modéré à fort — mécanique de base, rarement un dossier isolé mais mobilisée dans tous les dossiers d'écritures",
+        "commentaire": "Ce chapitre pose le vocabulaire et les outils que tu vas réutiliser dans TOUS les dossiers d'écritures : flux, emploi/ressource, débit/crédit, journal, grand-livre, balance. Il donne rarement lieu à un dossier autonome à l'examen, mais une erreur ici (mauvais sens débit/crédit, confusion emploi/ressource) fait perdre des points dans absolument tous les dossiers qui suivent. À maîtriser en réflexe avant d'aborder les opérations courantes.",
+        "themesRecurrents": [
+          "Opérations courantes avec les tiers — 100 % des sujets",
+          "Opérations d'inventaire — 100 %",
+          "Immobilisations, amortissements et dépréciations — 92 %",
+          "Liquidation de la TVA — 85 %",
+          "Principes comptables et sources du droit comptable — 77 %"
+        ]
+      },
+      "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+      "notionsCles": [
+        {
+          "titre": "L'enregistrement comptable",
+          "contenu": "La comptabilité, en tant que technique quantitative, propose une méthode comptable permettant de traduire les flux de l'entreprise afin de fournir des documents comptables reflétant sa situation et sa performance. L'enregistrement comptable consiste à traduire ces flux à partir d'une pièce comptable : pour chaque enregistrement sont comptabilisées l'origine et la finalité du flux. Exemple filé : l'entreprise Carla achète 50 paires de bottes à un fournisseur italien (paiement par virement de 1 000 €) et en revend une paire à un client français (paiement par chèque de 60 €)."
+        },
+        {
+          "titre": "Les flux de l'entreprise",
+          "contenu": "Les flux comptables représentent les échanges réalisés par l'entreprise avec ses partenaires. On distingue trois types de flux.",
+          "tableau": {
+            "colonnes": ["Type de flux", "Définition", "Exemple (Carla)"],
+            "lignes": [
+              ["Flux réel", "Échange de biens et de services", "Achat puis revente de bottes"],
+              ["Flux monétaire", "Contrepartie monétaire d'un flux réel", "Virement de 1 000 €, chèque de 60 €"],
+              ["Flux financier", "Échange monétaire sans contrepartie réelle", "Octroi d'un emprunt"]
+            ]
+          }
+        },
+        {
+          "titre": "Les emplois et les ressources",
+          "contenu": "À chaque flux sont associées une origine et une finalité. L'origine du flux correspond comptablement à une ressource : elle précise ce qui permet la réalisation de l'opération. La finalité du flux correspond comptablement à un emploi : il précise l'utilisation du flux par l'entreprise ou son impact sur celle-ci. L'emploi et la ressource se définissent l'un par rapport à l'autre. L'emploi est aussi appelé débit, la ressource crédit.",
+          "tableau": {
+            "colonnes": ["Partenaire", "Ce qui sort de Carla vers lui", "Ce qu'il reçoit / apporte"],
+            "lignes": [
+              ["Fournisseur italien", "Ressource : virement bancaire de 1 000 €", "Emploi pour Carla : 50 paires de bottes"],
+              ["Client français", "Ressource : 1 paire de bottes", "Emploi pour Carla : chèque de 60 €"]
+            ]
+          }
+        },
+        {
+          "titre": "Les comptes",
+          "contenu": "Un compte est un instrument permettant de spécifier les emplois et les ressources. Il prend la forme d'un tableau synthétique caractérisé par : un numéro de compte, un intitulé de compte, la valeur de l'opération, la date de l'opération, le libellé de l'opération, et une partie où sont inscrites les opérations débitrices et une autre pour les opérations créditrices. Afin d'apprécier l'état d'un compte, on en calcule le solde en effectuant la différence entre la somme des montants portés au débit et la somme des montants portés au crédit.",
+          "formule": "Débit > Crédit → solde débiteur · Crédit > Débit → solde créditeur"
+        },
+        {
+          "titre": "Le livre-journal",
+          "contenu": "Le livre-journal (ou journal) est un livre comptable présentant de manière chronologique les enregistrements comptables. Chaque écriture y indique la date de l'opération, le(s) compte(s) débité(s) et crédité(s) avec leurs numéros, les montants débités et crédités, ainsi que le libellé et la pièce justificative de l'opération. Exemple : la vente de la paire de bottes au client français (60 €) se traduit par un débit du compte 512 – Banques et un crédit du compte 707 – Ventes de marchandises, référencé par le numéro de facture."
+        },
+        {
+          "titre": "Le grand-livre et la balance",
+          "contenu": "L'ensemble des comptes constitue le grand-livre. À partir du grand-livre est extraite la balance, tableau récapitulant le total des mouvements et les soldes de chacun des comptes. Les balances peuvent se présenter de différentes manières (à 2, 4 ou 6 colonnes).",
+          "tableau": {
+            "colonnes": ["Nom des comptes", "Solde au 01/01/N (débiteur / créditeur)", "Mouvements (au débit / au crédit)", "Solde au 31/12/N (débiteur / créditeur)"],
+            "lignes": [
+              ["…", "…", "…", "…"],
+              ["Total", "", "", ""]
+            ]
+          }
+        },
+        {
+          "titre": "Le bilan et le compte de résultat",
+          "contenu": "À partir de la balance se définissent les deux documents de synthèse : le bilan et le compte de résultat. Le bilan regroupe les comptes des classes 1 à 5 ; c'est un document comptable fournissant une image de la situation patrimoniale de l'entreprise, en présentant les éléments d'actif et de passif. Le compte de résultat regroupe les comptes des classes 6 et 7 ; il informe sur la formation du bénéfice ou de la perte réalisé par l'entreprise, en présentant les produits et les charges qui participent à la formation du résultat de l'exercice."
+        },
+        {
+          "titre": "Astuce pour identifier emploi et ressource",
+          "contenu": "Pour chaque enregistrement, il faut toujours déterminer a minima un emploi et une ressource. Phrase-clé pour s'aider : « Grâce à… (ressource), l'entreprise a pu… (emploi) »."
+        }
+      ],
+      "vocabulaire": [
+        { "terme": "Méthode comptable", "definition": "Ensemble de règles permettant de traduire les flux de l'entreprise afin de fournir des documents comptables reflétant sa situation et sa performance." },
+        { "terme": "Enregistrement comptable", "definition": "Traduction d'un flux, à partir d'une pièce comptable, en comptabilisant son origine (ressource) et sa finalité (emploi)." },
+        { "terme": "Flux", "definition": "Échange réalisé par l'entreprise avec l'un de ses partenaires. On distingue les flux réels, monétaires et financiers." },
+        { "terme": "Flux réel", "definition": "Échange de biens et de services." },
+        { "terme": "Flux monétaire", "definition": "Contrepartie monétaire apportée en réponse à un flux réel." },
+        { "terme": "Flux financier", "definition": "Échange monétaire sans contrepartie réelle, tel l'octroi d'un emprunt." },
+        { "terme": "Emploi", "definition": "Finalité d'un flux : précise l'utilisation du flux par l'entreprise ou son impact sur celle-ci. Autre nom : débit." },
+        { "terme": "Ressource", "definition": "Origine d'un flux : précise ce qui permet la réalisation de l'opération. Autre nom : crédit." },
+        { "terme": "Débit", "definition": "Autre nom de l'emploi ; partie gauche d'un compte." },
+        { "terme": "Crédit", "definition": "Autre nom de la ressource ; partie droite d'un compte." },
+        { "terme": "Compte", "definition": "Instrument permettant de spécifier les emplois et les ressources, sous forme de tableau synthétique (numéro, intitulé, valeur, date, libellé, débit/crédit)." },
+        { "terme": "Solde débiteur", "definition": "Situation d'un compte où le total des débits excède le total des crédits." },
+        { "terme": "Solde créditeur", "definition": "Situation d'un compte où le total des crédits excède le total des débits." },
+        { "terme": "Livre-journal", "definition": "Livre comptable (aussi appelé journal) présentant de manière chronologique les enregistrements comptables." },
+        { "terme": "Grand-livre", "definition": "Ensemble des comptes de l'entreprise." },
+        { "terme": "Balance", "definition": "Tableau extrait du grand-livre récapitulant le total des mouvements et les soldes de chaque compte." },
+        { "terme": "Bilan", "definition": "Document de synthèse regroupant les comptes des classes 1 à 5, présentant les éléments d'actif et de passif de l'entreprise." },
+        { "terme": "Compte de résultat", "definition": "Document de synthèse regroupant les comptes des classes 6 et 7, présentant les charges et produits formant le résultat de l'exercice." }
+      ],
+      "questionsTypes": [
+        "Définir la méthode comptable et l'enregistrement comptable.",
+        "Distinguer flux réel, flux monétaire et flux financier, à l'aide d'exemples.",
+        "Pour une opération donnée, identifier l'emploi et la ressource.",
+        "Expliquer le lien entre emploi/ressource et débit/crédit.",
+        "Présenter la structure d'un compte et déterminer son solde (débiteur ou créditeur).",
+        "Présenter le rôle et le contenu du livre-journal.",
+        "Expliquer le passage du grand-livre à la balance, puis de la balance aux comptes annuels.",
+        "Distinguer les comptes qui alimentent le bilan de ceux qui alimentent le compte de résultat."
+      ],
+      "annales": {
+        "note": "Chapitre rarement testé comme dossier isolé, mais ses mécanismes (identifier emploi/ressource, déterminer un sens débit/crédit, passer une écriture) sont mobilisés dans la quasi-totalité des dossiers d'écritures comptables. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+        "questionsRedactionnellesRecurrentes": [
+          "Identifier l'emploi et la ressource d'une opération donnée.",
+          "Justifier le sens (débit ou crédit) d'une écriture.",
+          "Distinguer flux réel, monétaire et financier.",
+          "Expliquer le passage des comptes à la balance puis aux comptes annuels."
+        ],
+        "entrees": []
+      }
+    }
+  ]
+}
