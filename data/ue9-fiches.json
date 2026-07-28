@@ -1439,5 +1439,197 @@
     ],
     "entrees": []
   }
-}  ]
+}, {
+  "id": "ue9-ch6",
+  "numero": 6,
+  "titre": "La TVA : comptabilisation",
+  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+  "pageManuel": 29,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": ["Assujettissement", "Crédit de TVA", "Opération intracommunautaire", "Régime du réel normal"],
+  "utilite": {
+    "pourcentage": 25,
+    "niveau": "Très fort — comptabilisation quasi systématique dans les dossiers d'opérations courantes",
+    "commentaire": "Après les généralités (fiche 5), cette fiche est celle qu'on applique concrètement dans presque tous les dossiers d'achats et de ventes. Les écritures type (fournisseur/client, immobilisation/ABS), l'autoliquidation pour les opérations intracommunautaires et hors UE, et le calcul de la TVA à décaisser ou du crédit de TVA sont des mécanismes à automatiser : ils reviennent dans la quasi-totalité des sujets (liquidation de la TVA présente dans 85 % des sujets 2014-2025).",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "notionsCles": [
+    {
+      "titre": "Les opérations réalisées sur le territoire national",
+      "contenu": "Ces opérations sont systématiquement imposables à la TVA."
+    },
+    {
+      "titre": "L'enregistrement chez le fournisseur",
+      "contenu": "Lors d'une vente, le fournisseur débite le compte client du montant TTC, et crédite à la fois le compte de produit (montant HT) et le compte de TVA collectée.",
+      "tableau": {
+        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+        "lignes": [
+          ["411", "Clients", "TTC", ""],
+          ["70.", "Ventes…", "", "HT"],
+          ["44571", "État, TVA collectée", "", "TVA"]
+        ]
+      }
+    },
+    {
+      "titre": "L'enregistrement chez le client — achat d'une immobilisation",
+      "contenu": "En cas d'acquisition d'une immobilisation :",
+      "tableau": {
+        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+        "lignes": [
+          ["2.", "Compte d'immobilisation concerné", "HT", ""],
+          ["44562", "État, TVA déductible sur immobilisations", "TVA", ""],
+          ["404", "Fournisseurs d'immobilisations", "", "TTC"]
+        ]
+      }
+    },
+    {
+      "titre": "L'enregistrement chez le client — achat de biens autres qu'une immobilisation",
+      "contenu": "En cas d'achat de biens autres qu'une immobilisation :",
+      "tableau": {
+        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+        "lignes": [
+          ["60.", "Achats de…", "HT", ""],
+          ["44566", "État, TVA déductible sur ABS", "TVA", ""],
+          ["401", "Fournisseurs", "", "TTC"]
+        ]
+      }
+    },
+    {
+      "titre": "Exemple — achat de biens à crédit",
+      "contenu": "Achat à crédit de 20 paires de ski : 1 500 € HT, TVA 20 %, le 25/08/N.",
+      "tableau": {
+        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+        "lignes": [
+          ["607", "Achats de marchandises", "1 500,00", ""],
+          ["44566", "État, TVA déductible sur ABS", "300,00", ""],
+          ["401", "Fournisseurs", "", "1 800,00"]
+        ]
+      }
+    },
+    {
+      "titre": "Les opérations intracommunautaires (au sein de l'UE)",
+      "contenu": "Les règles de TVA applicables aux opérations intracommunautaires diffèrent selon l'assujettissement du client ou du vendeur à la TVA :",
+      "tableau": {
+        "colonnes": ["", "En cas d'assujettissement à la TVA", "En cas de non-assujettissement à la TVA"],
+        "lignes": [
+          ["Livraisons (ou ventes) intracommunautaires", "Opération exonérée au départ de la France et taxée dans le pays de destination.", "Opération taxée au départ de la France et exonérée dans le pays de destination."],
+          ["Acquisitions (ou achats) intracommunautaires", "Autoliquidation de TVA : opération soumise à la TVA dans le pays d'arrivée — la TVA intracommunautaire est à la fois collectée et déductible par l'acquéreur.", "Opération soumise à la TVA dans le pays de départ et exempte d'imposition à la TVA française."]
+        ]
+      }
+    },
+    {
+      "titre": "Les opérations hors Union européenne",
+      "contenu": "En dehors du cadre de l'UE, exportations et importations de biens suivent des règles spécifiques :",
+      "tableau": {
+        "colonnes": ["Opération", "Traitement"],
+        "lignes": [
+          ["Exportations (ou ventes) de biens", "Exonérées de TVA : elles sont enregistrées hors taxe."],
+          ["Importations (ou achats) de biens", "Autoliquidation de TVA : opération soumise à la TVA dans le pays d'arrivée — la TVA est à la fois collectée et déductible par l'importateur."]
+        ]
+      }
+    },
+    {
+      "titre": "Exemple — importation hors UE",
+      "contenu": "Importation en avril N : achat comptant auprès d'un fournisseur suisse de friandises au chocolat : 10 000 €, TVA : 2 000 € (facture n°14).",
+      "tableau": {
+        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+        "lignes": [
+          ["60700", "Achats de marchandises hors UE", "10 000,00", ""],
+          ["445668", "État, TVA déductible/ABS sur importation (autoliquidation)", "2 000,00", ""],
+          ["40130", "Fournisseur hors UE", "", "10 000,00"],
+          ["445798", "État, TVA due sur importation (autoliquidation)", "", "2 000,00"]
+        ]
+      }
+    },
+    {
+      "titre": "La déclaration et le paiement de la TVA",
+      "contenu": "Les entreprises soumises au régime du réel normal doivent établir chaque mois une déclaration de TVA (imprimé CA3). Le montant de la TVA due au titre de la période correspond soit à une TVA à décaisser, soit à un crédit de TVA. En cas de crédit de TVA, l'entreprise peut soit reporter le solde de TVA déductible non imputé sur les périodes suivantes (crédit de taxe reportable sans limite de délai), soit en demander le remboursement selon certaines conditions."
+    },
+    {
+      "titre": "A. La TVA à décaisser — exemple de liquidation",
+      "contenu": "Lorsque la TVA collectée excède la TVA déductible, l'écart constitue une TVA à décaisser. Exemple : mois de mars N, TVA collectée 15 300 €, TVA déductible sur autres biens et services 8 000 €, TVA déductible sur immobilisations 800 €.",
+      "tableau": {
+        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+        "lignes": [
+          ["44571", "État, TVA collectée", "15 300,00", ""],
+          ["44566", "État, TVA déductible sur ABS", "", "8 000,00"],
+          ["44562", "État, TVA déductible sur immobilisations", "", "800,00"],
+          ["44551", "État, TVA à décaisser", "", "6 500,00"]
+        ]
+      }
+    },
+    {
+      "titre": "Écriture de règlement de la TVA à décaisser",
+      "contenu": "Le règlement de la TVA à décaisser s'enregistre au moment du paiement effectif :",
+      "tableau": {
+        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+        "lignes": [
+          ["44551", "État, TVA à décaisser", "6 500,00", ""],
+          ["512", "Banques", "", "6 500,00"]
+        ]
+      }
+    },
+    {
+      "titre": "B. Le crédit de TVA — exemple de liquidation",
+      "contenu": "Lorsque la TVA déductible excède la TVA collectée, l'écart constitue un crédit de TVA, reportable sur les déclarations suivantes (compte 44567) ou remboursable sous conditions. Exemple : mois de mars N, TVA collectée 15 300 €, TVA déductible sur autres biens et services 8 000 €, TVA déductible sur immobilisations 10 000 €.",
+      "tableau": {
+        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+        "lignes": [
+          ["44571", "État, TVA collectée", "15 300,00", ""],
+          ["44567", "État, crédit de TVA à reporter", "2 700,00", ""],
+          ["44566", "État, TVA déductible sur ABS", "", "8 000,00"],
+          ["44562", "État, TVA déductible sur immobilisations", "", "10 000,00"]
+        ]
+      }
+    },
+    {
+      "titre": "Astuce : déterminer la TVA applicable",
+      "contenu": "Le + de l'expert : déterminez la nature de l'opération (bien ou service) et sa territorialité (nationale, intracommunautaire, hors UE) pour définir la TVA associée — collectée, déductible, autoliquidée ou exonérée."
+    }
+  ],
+  "vocabulaire": [
+    { "terme": "Assujettissement", "definition": "Statut d'une personne ou entreprise soumise à la TVA du fait de son activité économique." },
+    { "terme": "Crédit de TVA", "definition": "Situation où la TVA déductible excède la TVA collectée sur une période ; reportable ou remboursable sous conditions." },
+    { "terme": "Opération intracommunautaire", "definition": "Échange de biens ou services entre la France et un autre État membre de l'Union européenne." },
+    { "terme": "Régime du réel normal", "definition": "Régime de TVA imposant une déclaration mensuelle (imprimé CA3) aux entreprises concernées." },
+    { "terme": "TVA collectée", "definition": "TVA facturée par l'entreprise à ses clients, enregistrée au crédit du compte 44571." },
+    { "terme": "TVA déductible sur ABS", "definition": "TVA récupérable sur les achats de biens et services autres que les immobilisations, enregistrée au débit du compte 44566." },
+    { "terme": "TVA déductible sur immobilisations", "definition": "TVA récupérable sur l'acquisition d'immobilisations, enregistrée au débit du compte 44562." },
+    { "terme": "TVA à décaisser", "definition": "Montant de TVA à reverser au Trésor public lorsque la TVA collectée excède la TVA déductible ; compte 44551." },
+    { "terme": "Autoliquidation", "definition": "Mécanisme par lequel l'acquéreur ou l'importateur déclare lui-même la TVA due, en la portant simultanément en TVA collectée et en TVA déductible." },
+    { "terme": "Livraison intracommunautaire", "definition": "Vente de biens vers un autre État membre de l'UE ; exonérée de TVA française si l'acquéreur est assujetti." },
+    { "terme": "Acquisition intracommunautaire", "definition": "Achat de biens en provenance d'un autre État membre de l'UE, soumis à autoliquidation de la TVA." },
+    { "terme": "Exportation", "definition": "Vente de biens vers un pays hors Union européenne, exonérée de TVA et enregistrée hors taxe." },
+    { "terme": "Importation", "definition": "Achat de biens en provenance d'un pays hors UE, soumis à autoliquidation de la TVA lors du dédouanement." },
+    { "terme": "Déclaration CA3", "definition": "Imprimé de déclaration mensuelle de TVA pour les entreprises soumises au régime du réel normal." }
+  ],
+  "questionsTypes": [
+    "Présenter l'écriture d'enregistrement d'une vente chez le fournisseur (client, produit, TVA collectée).",
+    "Présenter l'écriture d'enregistrement d'un achat chez le client, selon qu'il s'agit d'une immobilisation ou non.",
+    "Expliquer le traitement de la TVA pour une livraison intracommunautaire, selon l'assujettissement du client.",
+    "Expliquer le mécanisme de l'autoliquidation de la TVA pour une acquisition intracommunautaire ou une importation.",
+    "Distinguer le traitement TVA d'une exportation et d'une importation hors UE.",
+    "Calculer et comptabiliser la TVA à décaisser ou le crédit de TVA d'une période.",
+    "Passer l'écriture de règlement de la TVA à décaisser.",
+    "Expliquer les options dont dispose une entreprise en cas de crédit de TVA."
+  ],
+  "annales": {
+    "note": "La comptabilisation de la TVA (nationale, intracommunautaire, hors UE, déclaration et crédit) est mobilisée dans la quasi-totalité des dossiers d'opérations courantes. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "questionsRedactionnellesRecurrentes": [
+      "Passer l'écriture d'une vente ou d'un achat avec TVA, national ou intracommunautaire.",
+      "Justifier le traitement de la TVA d'une opération avec l'étranger (UE ou hors UE).",
+      "Calculer la TVA à décaisser ou le crédit de TVA d'une période et passer l'écriture de liquidation.",
+      "Expliquer le mécanisme de l'autoliquidation."
+    ],
+    "entrees": []
+  }
+}
+  ]
 }
