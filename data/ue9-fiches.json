@@ -1290,346 +1290,1233 @@
         ],
         "entrees": []
       }
-    }, 
-    {
-  "id": "ue9-ch5",
-  "numero": 5,
-  "titre": "La TVA : généralités",
-  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
-  "pageManuel": 25,
-  "exercicesUrl": "../exercices/ue9.html",
-  "motsCles": ["Exigibilité", "Fait générateur", "TVA", "TVA collectée", "TVA déductible", "TVA sur les débits"],
-  "utilite": {
-    "pourcentage": 25,
-    "niveau": "Très fort — thème quasi systématique à l'examen",
-    "commentaire": "La liquidation de la TVA apparaît dans environ 85 % des sujets de 2014 à 2025 : c'est l'un des dossiers les plus rentables. Cette fiche pose les bases indispensables (fait générateur, exigibilité, TVA collectée/déductible) avant d'aborder la comptabilisation à proprement parler en fiche 6. Bien maîtriser la distinction encaissement/débits pour les prestations de services : c'est une source d'erreur fréquente.",
-    "themesRecurrents": [
-      "Opérations courantes avec les tiers — 100 % des sujets",
-      "Opérations d'inventaire — 100 %",
-      "Immobilisations, amortissements et dépréciations — 92 %",
-      "Liquidation de la TVA — 85 %",
-      "Principes comptables et sources du droit comptable — 77 %"
-    ]
-  },
-  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
-  "notionsCles": [
-    {
-      "titre": "Définition de la TVA",
-      "contenu": "La taxe sur la valeur ajoutée (TVA) est un impôt sur la consommation de biens et services. Elle est collectée par les entreprises et supportée par le consommateur final."
     },
     {
-      "titre": "Le champ d'application de la TVA",
-      "contenu": "Une opération est imposable à la TVA selon trois fondements possibles :",
-      "tableau": {
-        "colonnes": ["Fondement", "Conditions"],
-        "lignes": [
-          ["En raison de la nature de l'opération", "Trois critères réunis : livraisons de biens meubles corporels et prestations de services ; réalisées par un assujetti (personne exerçant une activité économique de manière indépendante, à titre habituel et onéreux) ; relevant d'une activité économique indépendante effectuée à titre onéreux."],
-          ["Par une disposition expresse de la loi", "Les importations et acquisitions intracommunautaires ; certaines opérations immobilières."],
-          ["Sur option de l'entreprise", "Une option à une imposition volontaire à la TVA est possible pour certaines opérations normalement exonérées."]
+      "id": "ue9-ch5",
+      "numero": 5,
+      "titre": "La TVA : généralités",
+      "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+      "pageManuel": 25,
+      "exercicesUrl": "../exercices/ue9.html",
+      "motsCles": [
+        "Exigibilité",
+        "Fait générateur",
+        "TVA",
+        "TVA collectée",
+        "TVA déductible",
+        "TVA sur les débits"
+      ],
+      "utilite": {
+        "pourcentage": 25,
+        "niveau": "Très fort — thème quasi systématique à l'examen",
+        "commentaire": "La liquidation de la TVA apparaît dans environ 85 % des sujets de 2014 à 2025 : c'est l'un des dossiers les plus rentables. Cette fiche pose les bases indispensables (fait générateur, exigibilité, TVA collectée/déductible) avant d'aborder la comptabilisation à proprement parler en fiche 6. Bien maîtriser la distinction encaissement/débits pour les prestations de services : c'est une source d'erreur fréquente.",
+        "themesRecurrents": [
+          "Opérations courantes avec les tiers — 100 % des sujets",
+          "Opérations d'inventaire — 100 %",
+          "Immobilisations, amortissements et dépréciations — 92 %",
+          "Liquidation de la TVA — 85 %",
+          "Principes comptables et sources du droit comptable — 77 %"
         ]
+      },
+      "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+      "notionsCles": [
+        {
+          "titre": "Définition de la TVA",
+          "contenu": "La taxe sur la valeur ajoutée (TVA) est un impôt sur la consommation de biens et services. Elle est collectée par les entreprises et supportée par le consommateur final."
+        },
+        {
+          "titre": "Le champ d'application de la TVA",
+          "contenu": "Une opération est imposable à la TVA selon trois fondements possibles :",
+          "tableau": {
+            "colonnes": [
+              "Fondement",
+              "Conditions"
+            ],
+            "lignes": [
+              [
+                "En raison de la nature de l'opération",
+                "Trois critères réunis : livraisons de biens meubles corporels et prestations de services ; réalisées par un assujetti (personne exerçant une activité économique de manière indépendante, à titre habituel et onéreux) ; relevant d'une activité économique indépendante effectuée à titre onéreux."
+              ],
+              [
+                "Par une disposition expresse de la loi",
+                "Les importations et acquisitions intracommunautaires ; certaines opérations immobilières."
+              ],
+              [
+                "Sur option de l'entreprise",
+                "Une option à une imposition volontaire à la TVA est possible pour certaines opérations normalement exonérées."
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Le mécanisme général de la TVA",
+          "contenu": "Chaque entreprise est, en principe, redevable de la TVA calculée sur la valeur ajoutée qu'elle a produite. En pratique, les entreprises qui réalisent des opérations soumises à la TVA doivent : appliquer la TVA sur le prix de vente HT des opérations réalisées, en utilisant le taux fixé par la loi ; facturer et encaisser les prix de vente TTC à leurs clients ; reverser la taxe ainsi collectée au Trésor public, déduction faite de la TVA déjà versée à leurs fournisseurs à l'occasion de leurs achats.",
+          "visuel": {
+            "type": "flux",
+            "entree": "Achat de matières premières (TVA payée aux fournisseurs)",
+            "sortie": "Vente de produits finis (TVA facturée aux clients)",
+            "etapes": [
+              {
+                "label": "TVA déductible sur les achats",
+                "couleur": "blue"
+              },
+              {
+                "label": "TVA collectée sur les ventes",
+                "couleur": "teal"
+              },
+              {
+                "label": "Solde de TVA reversé au Trésor public",
+                "couleur": "violet"
+              }
+            ]
+          }
+        },
+        {
+          "titre": "Solde de TVA : TVA collectée et TVA déductible",
+          "contenu": "Le solde de TVA correspond à la différence entre la TVA collectée et la TVA déductible :",
+          "tableau": {
+            "colonnes": [
+              "Notion",
+              "Définition"
+            ],
+            "lignes": [
+              [
+                "TVA collectée (ou exigible)",
+                "TVA facturée par l'entreprise à ses clients sur les ventes de biens et services."
+              ],
+              [
+                "TVA déductible (ou récupérable)",
+                "TVA facturée à l'entreprise par ses fournisseurs et prestataires, sur les achats de biens et services et les autres charges soumises à TVA."
+              ],
+              [
+                "Solde de TVA",
+                "TVA à décaisser si TVA collectée > TVA déductible ; crédit de TVA si TVA collectée < TVA déductible."
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Les notions de fait générateur et d'exigibilité",
+          "contenu": "Le fait générateur est le fait par lequel sont réalisées les conditions légales pour l'exigibilité de la taxe. L'exigibilité fixe la date du paiement effectif de la taxe.",
+          "tableau": {
+            "colonnes": [
+              "Nature de l'opération",
+              "Fait générateur",
+              "Exigibilité"
+            ],
+            "lignes": [
+              [
+                "Livraisons de biens meubles corporels",
+                "Délivrance du bien",
+                "Délivrance du bien ou date d'encaissement en cas d'acompte sur le montant réglé"
+              ],
+              [
+                "Prestations de services et travaux immobiliers",
+                "Exécution des services ou des travaux",
+                "Encaissement du prix, sauf option pour les débits"
+              ],
+              [
+                "Importations",
+                "Entrée du bien sur le territoire communautaire",
+                "Dédouanement"
+              ],
+              [
+                "Acquisition intracommunautaire",
+                "Délivrance du bien ou réalisation de la prestation",
+                "Encaissement du prix ou d'un acompte"
+              ],
+              [
+                "Livraison à soi-même (LASM)",
+                "Exécution du service",
+                "Au fur et à mesure de l'exécution des prestations"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Le cas particulier des prestations de services : la TVA sur les débits",
+          "contenu": "Pour les prestations de services, les entreprises peuvent opter pour le régime de la TVA sur les débits. Dans ce cas, la TVA déductible et la TVA collectée sont constatées lors de l'exécution de la prestation de services (enregistrement à la facturation). Cette option ne peut pas retarder le paiement de la TVA : elle reste exigible en cas de versements d'avances ou d'acomptes.",
+          "tableau": {
+            "colonnes": [
+              "",
+              "Régime normal « TVA sur les encaissements »",
+              "Régime optionnel « TVA sur les débits »"
+            ],
+            "lignes": [
+              [
+                "Fait générateur",
+                "Achèvement de la prestation",
+                "Achèvement de la prestation"
+              ],
+              [
+                "Exigibilité",
+                "Encaissement du prix (même s'il précède l'achèvement)",
+                "Facturation (ou date d'encaissement en cas d'acompte)"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Astuce : les livraisons à soi-même (LASM)",
+          "contenu": "Les livraisons à soi-même (LASM) constituent également un cas particulier au regard de la TVA : leur fait générateur est l'exécution du service, et leur exigibilité intervient au fur et à mesure de l'exécution des prestations."
+        },
+        {
+          "titre": "Les taux de TVA applicables en France",
+          "contenu": "Il existe quatre taux de TVA en France, applicables selon la nature du bien ou du service :",
+          "tableau": {
+            "colonnes": [
+              "Taux",
+              "Utilisation courante"
+            ],
+            "lignes": [
+              [
+                "20 %",
+                "Taux normal, applicable à la majorité des biens et services."
+              ],
+              [
+                "10 %",
+                "Taux intermédiaire (ex. restauration, travaux de rénovation)."
+              ],
+              [
+                "5,5 %",
+                "Taux réduit (ex. produits alimentaires, livres, énergie)."
+              ],
+              [
+                "2,1 %",
+                "Taux particulier (ex. médicaments remboursables, presse)."
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Formules de calcul de la TVA",
+          "formule": "TVA = HT × taux · TTC = HT × (1 + taux) · HT = TTC ÷ (1 + taux)",
+          "contenu": "HT désigne le montant hors taxes, TTC le montant toutes taxes comprises, et le taux dépend de la nature de l'opération (20 %, 10 %, 5,5 % ou 2,1 %)."
+        }
+      ],
+      "vocabulaire": [
+        {
+          "terme": "TVA",
+          "definition": "Taxe sur la valeur ajoutée : impôt sur la consommation de biens et services, collecté par les entreprises et supporté par le consommateur final."
+        },
+        {
+          "terme": "Assujetti",
+          "definition": "Personne qui réalise une activité économique de manière indépendante, à titre habituel et onéreux, et qui est de ce fait soumise à la TVA."
+        },
+        {
+          "terme": "TVA collectée",
+          "definition": "TVA facturée par l'entreprise à ses clients sur les ventes de biens et services ; aussi appelée TVA exigible."
+        },
+        {
+          "terme": "TVA déductible",
+          "definition": "TVA facturée à l'entreprise par ses fournisseurs et prestataires, récupérable sur les achats et charges soumis à TVA."
+        },
+        {
+          "terme": "Fait générateur",
+          "definition": "Fait par lequel sont réalisées les conditions légales pour l'exigibilité de la TVA."
+        },
+        {
+          "terme": "Exigibilité",
+          "definition": "Date à laquelle le Trésor public peut réclamer le paiement effectif de la taxe."
+        },
+        {
+          "terme": "TVA sur les encaissements",
+          "definition": "Régime normal des prestations de services : la TVA est exigible à l'encaissement du prix."
+        },
+        {
+          "terme": "TVA sur les débits",
+          "definition": "Régime optionnel des prestations de services : la TVA est exigible dès la facturation, comme pour une livraison de biens."
+        },
+        {
+          "terme": "Livraison à soi-même (LASM)",
+          "definition": "Opération par laquelle une entreprise se livre à elle-même un bien ou un service qu'elle a produit ; cas particulier en matière de TVA."
+        },
+        {
+          "terme": "Solde de TVA",
+          "definition": "Différence entre la TVA collectée et la TVA déductible d'une période."
+        },
+        {
+          "terme": "TVA à décaisser",
+          "definition": "Solde de TVA positif à reverser au Trésor public, lorsque la TVA collectée excède la TVA déductible."
+        },
+        {
+          "terme": "Crédit de TVA",
+          "definition": "Solde de TVA négatif, lorsque la TVA déductible excède la TVA collectée."
+        },
+        {
+          "terme": "Importation",
+          "definition": "Entrée d'un bien en provenance d'un pays hors Union européenne sur le territoire national, soumise à TVA lors du dédouanement."
+        },
+        {
+          "terme": "Acquisition intracommunautaire",
+          "definition": "Achat d'un bien en provenance d'un autre État membre de l'Union européenne, soumis à TVA."
+        }
+      ],
+      "questionsTypes": [
+        "Définir la TVA et expliquer son mécanisme général.",
+        "Citer les critères qui rendent une opération imposable à la TVA.",
+        "Distinguer TVA collectée et TVA déductible.",
+        "Définir le fait générateur et l'exigibilité de la TVA, et les distinguer.",
+        "Présenter les principaux cas de faits générateurs et d'exigibilité selon la nature de l'opération.",
+        "Expliquer le régime optionnel de la TVA sur les débits pour les prestations de services.",
+        "Qu'est-ce qu'une livraison à soi-même (LASM) ?",
+        "Calculer un montant de TVA, de HT ou de TTC à partir des formules usuelles."
+      ],
+      "annales": {
+        "note": "La liquidation de la TVA est l'un des thèmes les plus fréquents à l'examen (environ 85 % des sujets 2014-2025), souvent combiné avec les opérations courantes. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+        "questionsRedactionnellesRecurrentes": [
+          "Identifier le fait générateur et l'exigibilité d'une opération donnée.",
+          "Justifier le régime de TVA applicable à une prestation de services.",
+          "Calculer le montant de TVA collectée, déductible, et le solde de TVA.",
+          "Distinguer une livraison de biens d'une prestation de services au regard de la TVA."
+        ],
+        "entrees": []
       }
     },
     {
-      "titre": "Le mécanisme général de la TVA",
-      "contenu": "Chaque entreprise est, en principe, redevable de la TVA calculée sur la valeur ajoutée qu'elle a produite. En pratique, les entreprises qui réalisent des opérations soumises à la TVA doivent : appliquer la TVA sur le prix de vente HT des opérations réalisées, en utilisant le taux fixé par la loi ; facturer et encaisser les prix de vente TTC à leurs clients ; reverser la taxe ainsi collectée au Trésor public, déduction faite de la TVA déjà versée à leurs fournisseurs à l'occasion de leurs achats.",
-      "visuel": {
-        "type": "flux",
-        "entree": "Achat de matières premières (TVA payée aux fournisseurs)",
-        "sortie": "Vente de produits finis (TVA facturée aux clients)",
-        "etapes": [
-          { "label": "TVA déductible sur les achats", "couleur": "blue" },
-          { "label": "TVA collectée sur les ventes", "couleur": "teal" },
-          { "label": "Solde de TVA reversé au Trésor public", "couleur": "violet" }
+      "id": "ue9-ch6",
+      "numero": 6,
+      "titre": "La TVA : comptabilisation",
+      "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+      "pageManuel": 29,
+      "exercicesUrl": "../exercices/ue9.html",
+      "motsCles": [
+        "Assujettissement",
+        "Crédit de TVA",
+        "Opération intracommunautaire",
+        "Régime du réel normal"
+      ],
+      "utilite": {
+        "pourcentage": 25,
+        "niveau": "Très fort — comptabilisation quasi systématique dans les dossiers d'opérations courantes",
+        "commentaire": "Après les généralités (fiche 5), cette fiche est celle qu'on applique concrètement dans presque tous les dossiers d'achats et de ventes. Les écritures type (fournisseur/client, immobilisation/ABS), l'autoliquidation pour les opérations intracommunautaires et hors UE, et le calcul de la TVA à décaisser ou du crédit de TVA sont des mécanismes à automatiser : ils reviennent dans la quasi-totalité des sujets (liquidation de la TVA présente dans 85 % des sujets 2014-2025).",
+        "themesRecurrents": [
+          "Opérations courantes avec les tiers — 100 % des sujets",
+          "Opérations d'inventaire — 100 %",
+          "Immobilisations, amortissements et dépréciations — 92 %",
+          "Liquidation de la TVA — 85 %",
+          "Principes comptables et sources du droit comptable — 77 %"
         ]
+      },
+      "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+      "notionsCles": [
+        {
+          "titre": "Les opérations réalisées sur le territoire national",
+          "contenu": "Ces opérations sont systématiquement imposables à la TVA."
+        },
+        {
+          "titre": "L'enregistrement chez le fournisseur",
+          "contenu": "Lors d'une vente, le fournisseur débite le compte client du montant TTC, et crédite à la fois le compte de produit (montant HT) et le compte de TVA collectée.",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "411",
+                "Clients",
+                "TTC",
+                ""
+              ],
+              [
+                "70.",
+                "Ventes…",
+                "",
+                "HT"
+              ],
+              [
+                "44571",
+                "État, TVA collectée",
+                "",
+                "TVA"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "L'enregistrement chez le client — achat d'une immobilisation",
+          "contenu": "En cas d'acquisition d'une immobilisation :",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "2.",
+                "Compte d'immobilisation concerné",
+                "HT",
+                ""
+              ],
+              [
+                "44562",
+                "État, TVA déductible sur immobilisations",
+                "TVA",
+                ""
+              ],
+              [
+                "404",
+                "Fournisseurs d'immobilisations",
+                "",
+                "TTC"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "L'enregistrement chez le client — achat de biens autres qu'une immobilisation",
+          "contenu": "En cas d'achat de biens autres qu'une immobilisation :",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "60.",
+                "Achats de…",
+                "HT",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS",
+                "TVA",
+                ""
+              ],
+              [
+                "401",
+                "Fournisseurs",
+                "",
+                "TTC"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Exemple — achat de biens à crédit",
+          "contenu": "Achat à crédit de 20 paires de ski : 1 500 € HT, TVA 20 %, le 25/08/N.",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "607",
+                "Achats de marchandises",
+                "1 500,00",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS",
+                "300,00",
+                ""
+              ],
+              [
+                "401",
+                "Fournisseurs",
+                "",
+                "1 800,00"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Les opérations intracommunautaires (au sein de l'UE)",
+          "contenu": "Les règles de TVA applicables aux opérations intracommunautaires diffèrent selon l'assujettissement du client ou du vendeur à la TVA :",
+          "tableau": {
+            "colonnes": [
+              "",
+              "En cas d'assujettissement à la TVA",
+              "En cas de non-assujettissement à la TVA"
+            ],
+            "lignes": [
+              [
+                "Livraisons (ou ventes) intracommunautaires",
+                "Opération exonérée au départ de la France et taxée dans le pays de destination.",
+                "Opération taxée au départ de la France et exonérée dans le pays de destination."
+              ],
+              [
+                "Acquisitions (ou achats) intracommunautaires",
+                "Autoliquidation de TVA : opération soumise à la TVA dans le pays d'arrivée — la TVA intracommunautaire est à la fois collectée et déductible par l'acquéreur.",
+                "Opération soumise à la TVA dans le pays de départ et exempte d'imposition à la TVA française."
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Les opérations hors Union européenne",
+          "contenu": "En dehors du cadre de l'UE, exportations et importations de biens suivent des règles spécifiques :",
+          "tableau": {
+            "colonnes": [
+              "Opération",
+              "Traitement"
+            ],
+            "lignes": [
+              [
+                "Exportations (ou ventes) de biens",
+                "Exonérées de TVA : elles sont enregistrées hors taxe."
+              ],
+              [
+                "Importations (ou achats) de biens",
+                "Autoliquidation de TVA : opération soumise à la TVA dans le pays d'arrivée — la TVA est à la fois collectée et déductible par l'importateur."
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Exemple — importation hors UE",
+          "contenu": "Importation en avril N : achat comptant auprès d'un fournisseur suisse de friandises au chocolat : 10 000 €, TVA : 2 000 € (facture n°14).",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "60700",
+                "Achats de marchandises hors UE",
+                "10 000,00",
+                ""
+              ],
+              [
+                "445668",
+                "État, TVA déductible/ABS sur importation (autoliquidation)",
+                "2 000,00",
+                ""
+              ],
+              [
+                "40130",
+                "Fournisseur hors UE",
+                "",
+                "10 000,00"
+              ],
+              [
+                "445798",
+                "État, TVA due sur importation (autoliquidation)",
+                "",
+                "2 000,00"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "La déclaration et le paiement de la TVA",
+          "contenu": "Les entreprises soumises au régime du réel normal doivent établir chaque mois une déclaration de TVA (imprimé CA3). Le montant de la TVA due au titre de la période correspond soit à une TVA à décaisser, soit à un crédit de TVA. En cas de crédit de TVA, l'entreprise peut soit reporter le solde de TVA déductible non imputé sur les périodes suivantes (crédit de taxe reportable sans limite de délai), soit en demander le remboursement selon certaines conditions."
+        },
+        {
+          "titre": "A. La TVA à décaisser — exemple de liquidation",
+          "contenu": "Lorsque la TVA collectée excède la TVA déductible, l'écart constitue une TVA à décaisser. Exemple : mois de mars N, TVA collectée 15 300 €, TVA déductible sur autres biens et services 8 000 €, TVA déductible sur immobilisations 800 €.",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "44571",
+                "État, TVA collectée",
+                "15 300,00",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS",
+                "",
+                "8 000,00"
+              ],
+              [
+                "44562",
+                "État, TVA déductible sur immobilisations",
+                "",
+                "800,00"
+              ],
+              [
+                "44551",
+                "État, TVA à décaisser",
+                "",
+                "6 500,00"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Écriture de règlement de la TVA à décaisser",
+          "contenu": "Le règlement de la TVA à décaisser s'enregistre au moment du paiement effectif :",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "44551",
+                "État, TVA à décaisser",
+                "6 500,00",
+                ""
+              ],
+              [
+                "512",
+                "Banques",
+                "",
+                "6 500,00"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "B. Le crédit de TVA — exemple de liquidation",
+          "contenu": "Lorsque la TVA déductible excède la TVA collectée, l'écart constitue un crédit de TVA, reportable sur les déclarations suivantes (compte 44567) ou remboursable sous conditions. Exemple : mois de mars N, TVA collectée 15 300 €, TVA déductible sur autres biens et services 8 000 €, TVA déductible sur immobilisations 10 000 €.",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "44571",
+                "État, TVA collectée",
+                "15 300,00",
+                ""
+              ],
+              [
+                "44567",
+                "État, crédit de TVA à reporter",
+                "2 700,00",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS",
+                "",
+                "8 000,00"
+              ],
+              [
+                "44562",
+                "État, TVA déductible sur immobilisations",
+                "",
+                "10 000,00"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Astuce : déterminer la TVA applicable",
+          "contenu": "Le + de l'expert : déterminez la nature de l'opération (bien ou service) et sa territorialité (nationale, intracommunautaire, hors UE) pour définir la TVA associée — collectée, déductible, autoliquidée ou exonérée."
+        }
+      ],
+      "vocabulaire": [
+        {
+          "terme": "Assujettissement",
+          "definition": "Statut d'une personne ou entreprise soumise à la TVA du fait de son activité économique."
+        },
+        {
+          "terme": "Crédit de TVA",
+          "definition": "Situation où la TVA déductible excède la TVA collectée sur une période ; reportable ou remboursable sous conditions."
+        },
+        {
+          "terme": "Opération intracommunautaire",
+          "definition": "Échange de biens ou services entre la France et un autre État membre de l'Union européenne."
+        },
+        {
+          "terme": "Régime du réel normal",
+          "definition": "Régime de TVA imposant une déclaration mensuelle (imprimé CA3) aux entreprises concernées."
+        },
+        {
+          "terme": "TVA collectée",
+          "definition": "TVA facturée par l'entreprise à ses clients, enregistrée au crédit du compte 44571."
+        },
+        {
+          "terme": "TVA déductible sur ABS",
+          "definition": "TVA récupérable sur les achats de biens et services autres que les immobilisations, enregistrée au débit du compte 44566."
+        },
+        {
+          "terme": "TVA déductible sur immobilisations",
+          "definition": "TVA récupérable sur l'acquisition d'immobilisations, enregistrée au débit du compte 44562."
+        },
+        {
+          "terme": "TVA à décaisser",
+          "definition": "Montant de TVA à reverser au Trésor public lorsque la TVA collectée excède la TVA déductible ; compte 44551."
+        },
+        {
+          "terme": "Autoliquidation",
+          "definition": "Mécanisme par lequel l'acquéreur ou l'importateur déclare lui-même la TVA due, en la portant simultanément en TVA collectée et en TVA déductible."
+        },
+        {
+          "terme": "Livraison intracommunautaire",
+          "definition": "Vente de biens vers un autre État membre de l'UE ; exonérée de TVA française si l'acquéreur est assujetti."
+        },
+        {
+          "terme": "Acquisition intracommunautaire",
+          "definition": "Achat de biens en provenance d'un autre État membre de l'UE, soumis à autoliquidation de la TVA."
+        },
+        {
+          "terme": "Exportation",
+          "definition": "Vente de biens vers un pays hors Union européenne, exonérée de TVA et enregistrée hors taxe."
+        },
+        {
+          "terme": "Importation",
+          "definition": "Achat de biens en provenance d'un pays hors UE, soumis à autoliquidation de la TVA lors du dédouanement."
+        },
+        {
+          "terme": "Déclaration CA3",
+          "definition": "Imprimé de déclaration mensuelle de TVA pour les entreprises soumises au régime du réel normal."
+        }
+      ],
+      "questionsTypes": [
+        "Présenter l'écriture d'enregistrement d'une vente chez le fournisseur (client, produit, TVA collectée).",
+        "Présenter l'écriture d'enregistrement d'un achat chez le client, selon qu'il s'agit d'une immobilisation ou non.",
+        "Expliquer le traitement de la TVA pour une livraison intracommunautaire, selon l'assujettissement du client.",
+        "Expliquer le mécanisme de l'autoliquidation de la TVA pour une acquisition intracommunautaire ou une importation.",
+        "Distinguer le traitement TVA d'une exportation et d'une importation hors UE.",
+        "Calculer et comptabiliser la TVA à décaisser ou le crédit de TVA d'une période.",
+        "Passer l'écriture de règlement de la TVA à décaisser.",
+        "Expliquer les options dont dispose une entreprise en cas de crédit de TVA."
+      ],
+      "annales": {
+        "note": "La comptabilisation de la TVA (nationale, intracommunautaire, hors UE, déclaration et crédit) est mobilisée dans la quasi-totalité des dossiers d'opérations courantes. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+        "questionsRedactionnellesRecurrentes": [
+          "Passer l'écriture d'une vente ou d'un achat avec TVA, national ou intracommunautaire.",
+          "Justifier le traitement de la TVA d'une opération avec l'étranger (UE ou hors UE).",
+          "Calculer la TVA à décaisser ou le crédit de TVA d'une période et passer l'écriture de liquidation.",
+          "Expliquer le mécanisme de l'autoliquidation."
+        ],
+        "entrees": []
       }
     },
     {
-      "titre": "Solde de TVA : TVA collectée et TVA déductible",
-      "contenu": "Le solde de TVA correspond à la différence entre la TVA collectée et la TVA déductible :",
-      "tableau": {
-        "colonnes": ["Notion", "Définition"],
-        "lignes": [
-          ["TVA collectée (ou exigible)", "TVA facturée par l'entreprise à ses clients sur les ventes de biens et services."],
-          ["TVA déductible (ou récupérable)", "TVA facturée à l'entreprise par ses fournisseurs et prestataires, sur les achats de biens et services et les autres charges soumises à TVA."],
-          ["Solde de TVA", "TVA à décaisser si TVA collectée > TVA déductible ; crédit de TVA si TVA collectée < TVA déductible."]
+      "id": "ue9-ch7",
+      "numero": 7,
+      "titre": "Les opérations d'achat et de vente",
+      "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+      "pageManuel": 33,
+      "exercicesUrl": "../exercices/ue9.html",
+      "motsCles": [
+        "Achat",
+        "Facture",
+        "Facture d'avoir",
+        "Facture de doit",
+        "Système d'information",
+        "Vente"
+      ],
+      "utilite": {
+        "pourcentage": 22,
+        "niveau": "Fort — cœur des opérations courantes avec les tiers",
+        "commentaire": "Les écritures d'achat et de vente de biens et de services sont le socle de la quasi-totalité des dossiers d'examen : le thème « opérations courantes avec les tiers » apparaît dans 100 % des sujets 2014-2025. Les mentions obligatoires de la facture et les retours (factures d'avoir) sont des questions rédactionnelles classiques. Le point le plus piégeux reste la distinction entre une vente de biens (TVA exigible dès la livraison) et une prestation de services sans option pour les débits (TVA exigible seulement à l'encaissement).",
+        "themesRecurrents": [
+          "Opérations courantes avec les tiers — 100 % des sujets",
+          "Opérations d'inventaire — 100 %",
+          "Immobilisations, amortissements et dépréciations — 92 %",
+          "Liquidation de la TVA — 85 %",
+          "Principes comptables et sources du droit comptable — 77 %"
         ]
+      },
+      "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+      "notionsCles": [
+        {
+          "titre": "La facture",
+          "contenu": "La facture est la pièce comptable justificative précisant les conditions d'achat et de vente des biens et services échangés. On distingue les factures de doit, émises lors d'une transaction, des factures d'avoir, émises lors d'un retour de biens aux fournisseurs ou pour une réduction accordée après la facture d'origine."
+        },
+        {
+          "titre": "Les mentions obligatoires d'une facture",
+          "contenu": "Une facture doit comporter un certain nombre de mentions obligatoires, réparties en trois zones :",
+          "tableau": {
+            "colonnes": [
+              "Partie de la facture",
+              "Mentions obligatoires"
+            ],
+            "lignes": [
+              [
+                "En-tête — informations sur le vendeur",
+                "Nom ou dénomination sociale, adresse, forme juridique et montant du capital, numéro SIRET ou SIREN, etc."
+              ],
+              [
+                "En-tête — informations sur la facture",
+                "Mention « facture », mention « doit » ou « avoir », numéro de la facture (séquence chronologique et continue), date de la facture."
+              ],
+              [
+                "En-tête — informations sur l'acheteur",
+                "Nom et adresse de facturation du client, numéro d'identification intracommunautaire en cas de livraison intracommunautaire, adresse de livraison si différente de l'adresse de facturation."
+              ],
+              [
+                "En-tête — nature des opérations",
+                "Livraison de biens, prestation de services, ou opérations mixtes."
+              ],
+              [
+                "Corps — informations sur les transactions",
+                "Désignation des biens et services, quantités, prix unitaire hors taxe, frais accessoires éventuels, réductions éventuelles, taux de TVA applicable, montant HT et montant de TVA pour chaque taux, net à payer."
+              ],
+              [
+                "Pied — modalités de paiement et TVA",
+                "Date du règlement, taux des pénalités exigibles, conditions d'escompte, mention « option TVA d'après débits » si l'entreprise a opté pour ce régime."
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Les opérations d'achat",
+          "contenu": "Un achat est une acquisition d'un bien ou d'un service à titre onéreux."
+        },
+        {
+          "titre": "Typologie des comptes d'achats",
+          "contenu": "Le compte d'achat utilisé dépend de la nature du bien ou du service acheté :",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Contenu"
+            ],
+            "lignes": [
+              [
+                "601",
+                "Achats stockés – Matières premières (et fournitures) : objets et substances plus ou moins élaborés destinés à entrer dans la composition des produits traités ou fabriqués."
+              ],
+              [
+                "602",
+                "Achats stockés – Autres approvisionnements : objets et substances consommés au premier usage ou rapidement, qui concourent au traitement, à la fabrication ou à l'exploitation, sans entrer dans la composition des produits (sous-comptes : 6021 Matières consommables, 6022 Fournitures consommables, 6026 Emballages)."
+              ],
+              [
+                "604",
+                "Achats d'études et prestations de services : sous-traitance de services immatériels qui s'intègrent directement dans le cycle de production."
+              ],
+              [
+                "605",
+                "Achats de matériel, équipements et travaux : sous-traitance de services matériels qui s'intègrent directement dans le cycle de production."
+              ],
+              [
+                "606",
+                "Achats non stockés de matières et fournitures."
+              ],
+              [
+                "607",
+                "Achats de marchandises : tout ce que l'entreprise achète pour le revendre en l'état."
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "La comptabilisation des achats",
+          "contenu": "L'écriture type d'un achat est la suivante :",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "60.",
+                "Achats de…",
+                "HT",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS",
+                "TVA",
+                ""
+              ],
+              [
+                "401",
+                "Fournisseurs",
+                "",
+                "TTC"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Exemple — achat d'ordinateurs",
+          "contenu": "Achat à crédit de 20 ordinateurs : 15 000 € HT, TVA : 20 %, le 25/08/N.",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "607",
+                "Achats de marchandises",
+                "15 000,00",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS",
+                "3 000,00",
+                ""
+              ],
+              [
+                "401",
+                "Fournisseurs",
+                "",
+                "18 000,00"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Les opérations de vente",
+          "contenu": "Une vente est une cession d'un bien ou d'un service à titre onéreux."
+        },
+        {
+          "titre": "Typologie des comptes de ventes",
+          "contenu": "Le compte de vente utilisé dépend de la nature du bien ou du service vendu :",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Contenu"
+            ],
+            "lignes": [
+              [
+                "701",
+                "Ventes de produits finis : produits ayant atteint un stade d'achèvement définitif dans le cycle de production."
+              ],
+              [
+                "702",
+                "Ventes de produits intermédiaires : produits ayant atteint un stade d'achèvement mais destinés à entrer dans une nouvelle phase du cycle de production."
+              ],
+              [
+                "703",
+                "Ventes de produits résiduels : produits constitués par les déchets et rebuts de fabrication."
+              ],
+              [
+                "704",
+                "Travaux : activité de construction immobilière."
+              ],
+              [
+                "705",
+                "Études : prestations de services."
+              ],
+              [
+                "706",
+                "Prestations de services."
+              ],
+              [
+                "707",
+                "Ventes de marchandises : cession de biens achetés par l'entreprise et revendus en l'état."
+              ],
+              [
+                "708",
+                "Produits des activités annexes, ne constituant pas l'activité principale de l'entreprise."
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "La comptabilisation des ventes",
+          "contenu": "L'écriture type d'une vente est la suivante :",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "411",
+                "Clients",
+                "TTC",
+                ""
+              ],
+              [
+                "70.",
+                "Ventes…",
+                "",
+                "HT"
+              ],
+              [
+                "44571",
+                "État, TVA collectée",
+                "",
+                "TVA"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Exemple — vente de costumes",
+          "contenu": "Vente à crédit de cinq costumes (non produits par l'entreprise) : 2 000 € HT, TVA : 20 %, le 25/08/N.",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "411",
+                "Clients",
+                "2 400,00",
+                ""
+              ],
+              [
+                "707",
+                "Ventes de marchandises",
+                "",
+                "2 000,00"
+              ],
+              [
+                "44571",
+                "État, TVA collectée",
+                "",
+                "400,00"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Les retours d'achats et de ventes",
+          "contenu": "Lors d'un désaccord entre le fournisseur et le client, il peut être entendu qu'une partie des achats soit retournée au fournisseur. Le fournisseur établit alors une facture d'avoir. Les écritures initiales concernant les biens retournés sont contrepassées dans les comptes de l'entreprise fournisseur et dans ceux de l'entreprise cliente."
+        },
+        {
+          "titre": "Exemple — retour de marchandises (chez le fournisseur)",
+          "contenu": "Retour de trois costumes vendus le 25/08/N, retourné le 28/08/N, montant du retour 1 000 € HT.",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "707",
+                "Ventes de marchandises",
+                "1 000,00",
+                ""
+              ],
+              [
+                "44571",
+                "État, TVA collectée",
+                "200,00",
+                ""
+              ],
+              [
+                "411",
+                "Clients",
+                "",
+                "1 200,00"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Cas particulier — prestations de services sans option pour les débits",
+          "contenu": "Pour les prestations de services, en l'absence d'option pour la TVA sur les débits (cf. fiche 5), la TVA n'est exigible qu'à l'encaissement du prix. La comptabilisation se fait donc en deux temps : à la facturation, la TVA est enregistrée dans un compte d'attente ; à l'encaissement, elle est transférée vers le compte de TVA définitif."
+        },
+        {
+          "titre": "Chez le vendeur — facturation puis encaissement d'une prestation",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "411",
+                "Clients (à la facturation)",
+                "TTC",
+                ""
+              ],
+              [
+                "706",
+                "Prestations de services",
+                "",
+                "HT"
+              ],
+              [
+                "44574",
+                "État, TVA en attente (régularisation)",
+                "",
+                "TVA"
+              ],
+              [
+                "512",
+                "Banques (à l'encaissement)",
+                "TTC",
+                ""
+              ],
+              [
+                "44574",
+                "État, TVA en attente (régularisation)",
+                "TVA",
+                ""
+              ],
+              [
+                "411",
+                "Clients",
+                "",
+                "TTC"
+              ],
+              [
+                "44571",
+                "État, TVA collectée",
+                "",
+                "TVA"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Chez l'acheteur — facturation puis paiement d'une prestation",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "6155",
+                "Charge de services, ex. entretien (à la facturation)",
+                "HT",
+                ""
+              ],
+              [
+                "44586",
+                "État, TVA déductible en attente",
+                "TVA",
+                ""
+              ],
+              [
+                "401",
+                "Fournisseurs",
+                "",
+                "TTC"
+              ],
+              [
+                "401",
+                "Fournisseurs (au paiement)",
+                "TTC",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS",
+                "TVA",
+                ""
+              ],
+              [
+                "44586",
+                "État, TVA déductible en attente",
+                "",
+                "TVA"
+              ],
+              [
+                "512",
+                "Banques",
+                "",
+                "TTC"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Astuce : l'option pour les débits",
+          "contenu": "Si le prestataire de services a opté pour le régime de la TVA sur les débits (cf. fiche 5), la TVA devient exigible dès la facturation : la comptabilisation redevient alors classique, en un seul temps, exactement comme pour un achat ou une vente de biens."
+        },
+        {
+          "titre": "Le + de l'expert",
+          "contenu": "Vous devez connaître par cœur les comptes de ventes et d'achats ainsi que les comptes clients, fournisseurs, TVA collectée et TVA déductible et les schémas de comptabilisation. Ces enregistrements sont très courants."
+        }
+      ],
+      "vocabulaire": [
+        {
+          "terme": "Facture de doit",
+          "definition": "Facture émise lors d'une transaction (achat ou vente) courante."
+        },
+        {
+          "terme": "Facture d'avoir",
+          "definition": "Facture rectificative émise lors d'un retour de biens ou d'une réduction accordée après la facture initiale."
+        },
+        {
+          "terme": "Système d'information",
+          "definition": "En comptabilité, système permettant de refléter les opérations de l'entreprise et sa situation."
+        },
+        {
+          "terme": "Achat",
+          "definition": "Acquisition d'un bien ou d'un service à titre onéreux."
+        },
+        {
+          "terme": "Vente",
+          "definition": "Cession d'un bien ou d'un service à titre onéreux."
+        },
+        {
+          "terme": "Achats stockés",
+          "definition": "Achats de matières ou marchandises destinés à figurer en stock avant leur consommation ou leur revente (comptes 601, 602, 607)."
+        },
+        {
+          "terme": "Achats non stockés",
+          "definition": "Achats de matières ou fournitures non destinés à être stockés, consommés immédiatement (compte 606)."
+        },
+        {
+          "terme": "Produits intermédiaires",
+          "definition": "Produits ayant atteint un stade d'achèvement mais destinés à entrer dans une nouvelle phase du cycle de production (compte 702)."
+        },
+        {
+          "terme": "Produits résiduels",
+          "definition": "Déchets et rebuts de fabrication (compte 703)."
+        },
+        {
+          "terme": "Retour de marchandises",
+          "definition": "Renvoi de biens au fournisseur, donnant lieu à une facture d'avoir et à la contrepassation des écritures initiales."
+        },
+        {
+          "terme": "TVA en attente (régularisation)",
+          "definition": "Compte transitoire utilisé chez le vendeur pour constater la TVA d'une prestation de services facturée mais non encore encaissée."
+        },
+        {
+          "terme": "TVA déductible en attente",
+          "definition": "Compte transitoire utilisé chez l'acheteur pour constater la TVA d'une prestation de services facturée mais non encore payée."
+        }
+      ],
+      "questionsTypes": [
+        "Définir la facture et distinguer facture de doit et facture d'avoir.",
+        "Citer les mentions obligatoires d'une facture.",
+        "Distinguer les comptes 601, 602, 604, 605, 606 et 607 selon la nature de l'achat.",
+        "Distinguer les comptes 701 à 708 selon la nature de la vente.",
+        "Passer les écritures d'achat et de vente de biens, chez le vendeur et chez l'acheteur.",
+        "Passer l'écriture d'un retour d'achat ou de vente (facture d'avoir).",
+        "Expliquer pourquoi la comptabilisation d'une prestation de services diffère de celle d'un bien, en l'absence d'option pour les débits.",
+        "Passer les écritures de facturation puis d'encaissement (ou de paiement) d'une prestation de services sans option pour les débits."
+      ],
+      "annales": {
+        "note": "Les écritures d'achat et de vente, ainsi que les retours (factures d'avoir), sont mobilisées dans la quasi-totalité des dossiers d'opérations courantes (100 % des sujets 2014-2025). Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+        "questionsRedactionnellesRecurrentes": [
+          "Passer l'écriture d'une vente ou d'un achat de biens.",
+          "Passer l'écriture d'un retour d'achat ou de vente.",
+          "Citer les mentions obligatoires d'une facture.",
+          "Passer les écritures d'une prestation de services sans option pour les débits (facturation puis encaissement/paiement)."
+        ],
+        "entrees": []
       }
-    },
-    {
-      "titre": "Les notions de fait générateur et d'exigibilité",
-      "contenu": "Le fait générateur est le fait par lequel sont réalisées les conditions légales pour l'exigibilité de la taxe. L'exigibilité fixe la date du paiement effectif de la taxe.",
-      "tableau": {
-        "colonnes": ["Nature de l'opération", "Fait générateur", "Exigibilité"],
-        "lignes": [
-          ["Livraisons de biens meubles corporels", "Délivrance du bien", "Délivrance du bien ou date d'encaissement en cas d'acompte sur le montant réglé"],
-          ["Prestations de services et travaux immobiliers", "Exécution des services ou des travaux", "Encaissement du prix, sauf option pour les débits"],
-          ["Importations", "Entrée du bien sur le territoire communautaire", "Dédouanement"],
-          ["Acquisition intracommunautaire", "Délivrance du bien ou réalisation de la prestation", "Encaissement du prix ou d'un acompte"],
-          ["Livraison à soi-même (LASM)", "Exécution du service", "Au fur et à mesure de l'exécution des prestations"]
-        ]
-      }
-    },
-    {
-      "titre": "Le cas particulier des prestations de services : la TVA sur les débits",
-      "contenu": "Pour les prestations de services, les entreprises peuvent opter pour le régime de la TVA sur les débits. Dans ce cas, la TVA déductible et la TVA collectée sont constatées lors de l'exécution de la prestation de services (enregistrement à la facturation). Cette option ne peut pas retarder le paiement de la TVA : elle reste exigible en cas de versements d'avances ou d'acomptes.",
-      "tableau": {
-        "colonnes": ["", "Régime normal « TVA sur les encaissements »", "Régime optionnel « TVA sur les débits »"],
-        "lignes": [
-          ["Fait générateur", "Achèvement de la prestation", "Achèvement de la prestation"],
-          ["Exigibilité", "Encaissement du prix (même s'il précède l'achèvement)", "Facturation (ou date d'encaissement en cas d'acompte)"]
-        ]
-      }
-    },
-    {
-      "titre": "Astuce : les livraisons à soi-même (LASM)",
-      "contenu": "Les livraisons à soi-même (LASM) constituent également un cas particulier au regard de la TVA : leur fait générateur est l'exécution du service, et leur exigibilité intervient au fur et à mesure de l'exécution des prestations."
-    },
-    {
-      "titre": "Les taux de TVA applicables en France",
-      "contenu": "Il existe quatre taux de TVA en France, applicables selon la nature du bien ou du service :",
-      "tableau": {
-        "colonnes": ["Taux", "Utilisation courante"],
-        "lignes": [
-          ["20 %", "Taux normal, applicable à la majorité des biens et services."],
-          ["10 %", "Taux intermédiaire (ex. restauration, travaux de rénovation)."],
-          ["5,5 %", "Taux réduit (ex. produits alimentaires, livres, énergie)."],
-          ["2,1 %", "Taux particulier (ex. médicaments remboursables, presse)."]
-        ]
-      }
-    },
-    {
-      "titre": "Formules de calcul de la TVA",
-      "formule": "TVA = HT × taux · TTC = HT × (1 + taux) · HT = TTC ÷ (1 + taux)",
-      "contenu": "HT désigne le montant hors taxes, TTC le montant toutes taxes comprises, et le taux dépend de la nature de l'opération (20 %, 10 %, 5,5 % ou 2,1 %)."
     }
-  ],
-  "vocabulaire": [
-    { "terme": "TVA", "definition": "Taxe sur la valeur ajoutée : impôt sur la consommation de biens et services, collecté par les entreprises et supporté par le consommateur final." },
-    { "terme": "Assujetti", "definition": "Personne qui réalise une activité économique de manière indépendante, à titre habituel et onéreux, et qui est de ce fait soumise à la TVA." },
-    { "terme": "TVA collectée", "definition": "TVA facturée par l'entreprise à ses clients sur les ventes de biens et services ; aussi appelée TVA exigible." },
-    { "terme": "TVA déductible", "definition": "TVA facturée à l'entreprise par ses fournisseurs et prestataires, récupérable sur les achats et charges soumis à TVA." },
-    { "terme": "Fait générateur", "definition": "Fait par lequel sont réalisées les conditions légales pour l'exigibilité de la TVA." },
-    { "terme": "Exigibilité", "definition": "Date à laquelle le Trésor public peut réclamer le paiement effectif de la taxe." },
-    { "terme": "TVA sur les encaissements", "definition": "Régime normal des prestations de services : la TVA est exigible à l'encaissement du prix." },
-    { "terme": "TVA sur les débits", "definition": "Régime optionnel des prestations de services : la TVA est exigible dès la facturation, comme pour une livraison de biens." },
-    { "terme": "Livraison à soi-même (LASM)", "definition": "Opération par laquelle une entreprise se livre à elle-même un bien ou un service qu'elle a produit ; cas particulier en matière de TVA." },
-    { "terme": "Solde de TVA", "definition": "Différence entre la TVA collectée et la TVA déductible d'une période." },
-    { "terme": "TVA à décaisser", "definition": "Solde de TVA positif à reverser au Trésor public, lorsque la TVA collectée excède la TVA déductible." },
-    { "terme": "Crédit de TVA", "definition": "Solde de TVA négatif, lorsque la TVA déductible excède la TVA collectée." },
-    { "terme": "Importation", "definition": "Entrée d'un bien en provenance d'un pays hors Union européenne sur le territoire national, soumise à TVA lors du dédouanement." },
-    { "terme": "Acquisition intracommunautaire", "definition": "Achat d'un bien en provenance d'un autre État membre de l'Union européenne, soumis à TVA." }
-  ],
-  "questionsTypes": [
-    "Définir la TVA et expliquer son mécanisme général.",
-    "Citer les critères qui rendent une opération imposable à la TVA.",
-    "Distinguer TVA collectée et TVA déductible.",
-    "Définir le fait générateur et l'exigibilité de la TVA, et les distinguer.",
-    "Présenter les principaux cas de faits générateurs et d'exigibilité selon la nature de l'opération.",
-    "Expliquer le régime optionnel de la TVA sur les débits pour les prestations de services.",
-    "Qu'est-ce qu'une livraison à soi-même (LASM) ?",
-    "Calculer un montant de TVA, de HT ou de TTC à partir des formules usuelles."
-  ],
-  "annales": {
-    "note": "La liquidation de la TVA est l'un des thèmes les plus fréquents à l'examen (environ 85 % des sujets 2014-2025), souvent combiné avec les opérations courantes. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
-    "questionsRedactionnellesRecurrentes": [
-      "Identifier le fait générateur et l'exigibilité d'une opération donnée.",
-      "Justifier le régime de TVA applicable à une prestation de services.",
-      "Calculer le montant de TVA collectée, déductible, et le solde de TVA.",
-      "Distinguer une livraison de biens d'une prestation de services au regard de la TVA."
-    ],
-    "entrees": []
-  }
-}, {
-  "id": "ue9-ch6",
-  "numero": 6,
-  "titre": "La TVA : comptabilisation",
-  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
-  "pageManuel": 29,
-  "exercicesUrl": "../exercices/ue9.html",
-  "motsCles": ["Assujettissement", "Crédit de TVA", "Opération intracommunautaire", "Régime du réel normal"],
-  "utilite": {
-    "pourcentage": 25,
-    "niveau": "Très fort — comptabilisation quasi systématique dans les dossiers d'opérations courantes",
-    "commentaire": "Après les généralités (fiche 5), cette fiche est celle qu'on applique concrètement dans presque tous les dossiers d'achats et de ventes. Les écritures type (fournisseur/client, immobilisation/ABS), l'autoliquidation pour les opérations intracommunautaires et hors UE, et le calcul de la TVA à décaisser ou du crédit de TVA sont des mécanismes à automatiser : ils reviennent dans la quasi-totalité des sujets (liquidation de la TVA présente dans 85 % des sujets 2014-2025).",
-    "themesRecurrents": [
-      "Opérations courantes avec les tiers — 100 % des sujets",
-      "Opérations d'inventaire — 100 %",
-      "Immobilisations, amortissements et dépréciations — 92 %",
-      "Liquidation de la TVA — 85 %",
-      "Principes comptables et sources du droit comptable — 77 %"
-    ]
-  },
-  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
-  "notionsCles": [
-    {
-      "titre": "Les opérations réalisées sur le territoire national",
-      "contenu": "Ces opérations sont systématiquement imposables à la TVA."
-    },
-    {
-      "titre": "L'enregistrement chez le fournisseur",
-      "contenu": "Lors d'une vente, le fournisseur débite le compte client du montant TTC, et crédite à la fois le compte de produit (montant HT) et le compte de TVA collectée.",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["411", "Clients", "TTC", ""],
-          ["70.", "Ventes…", "", "HT"],
-          ["44571", "État, TVA collectée", "", "TVA"]
-        ]
-      }
-    },
-    {
-      "titre": "L'enregistrement chez le client — achat d'une immobilisation",
-      "contenu": "En cas d'acquisition d'une immobilisation :",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["2.", "Compte d'immobilisation concerné", "HT", ""],
-          ["44562", "État, TVA déductible sur immobilisations", "TVA", ""],
-          ["404", "Fournisseurs d'immobilisations", "", "TTC"]
-        ]
-      }
-    },
-    {
-      "titre": "L'enregistrement chez le client — achat de biens autres qu'une immobilisation",
-      "contenu": "En cas d'achat de biens autres qu'une immobilisation :",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["60.", "Achats de…", "HT", ""],
-          ["44566", "État, TVA déductible sur ABS", "TVA", ""],
-          ["401", "Fournisseurs", "", "TTC"]
-        ]
-      }
-    },
-    {
-      "titre": "Exemple — achat de biens à crédit",
-      "contenu": "Achat à crédit de 20 paires de ski : 1 500 € HT, TVA 20 %, le 25/08/N.",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["607", "Achats de marchandises", "1 500,00", ""],
-          ["44566", "État, TVA déductible sur ABS", "300,00", ""],
-          ["401", "Fournisseurs", "", "1 800,00"]
-        ]
-      }
-    },
-    {
-      "titre": "Les opérations intracommunautaires (au sein de l'UE)",
-      "contenu": "Les règles de TVA applicables aux opérations intracommunautaires diffèrent selon l'assujettissement du client ou du vendeur à la TVA :",
-      "tableau": {
-        "colonnes": ["", "En cas d'assujettissement à la TVA", "En cas de non-assujettissement à la TVA"],
-        "lignes": [
-          ["Livraisons (ou ventes) intracommunautaires", "Opération exonérée au départ de la France et taxée dans le pays de destination.", "Opération taxée au départ de la France et exonérée dans le pays de destination."],
-          ["Acquisitions (ou achats) intracommunautaires", "Autoliquidation de TVA : opération soumise à la TVA dans le pays d'arrivée — la TVA intracommunautaire est à la fois collectée et déductible par l'acquéreur.", "Opération soumise à la TVA dans le pays de départ et exempte d'imposition à la TVA française."]
-        ]
-      }
-    },
-    {
-      "titre": "Les opérations hors Union européenne",
-      "contenu": "En dehors du cadre de l'UE, exportations et importations de biens suivent des règles spécifiques :",
-      "tableau": {
-        "colonnes": ["Opération", "Traitement"],
-        "lignes": [
-          ["Exportations (ou ventes) de biens", "Exonérées de TVA : elles sont enregistrées hors taxe."],
-          ["Importations (ou achats) de biens", "Autoliquidation de TVA : opération soumise à la TVA dans le pays d'arrivée — la TVA est à la fois collectée et déductible par l'importateur."]
-        ]
-      }
-    },
-    {
-      "titre": "Exemple — importation hors UE",
-      "contenu": "Importation en avril N : achat comptant auprès d'un fournisseur suisse de friandises au chocolat : 10 000 €, TVA : 2 000 € (facture n°14).",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["60700", "Achats de marchandises hors UE", "10 000,00", ""],
-          ["445668", "État, TVA déductible/ABS sur importation (autoliquidation)", "2 000,00", ""],
-          ["40130", "Fournisseur hors UE", "", "10 000,00"],
-          ["445798", "État, TVA due sur importation (autoliquidation)", "", "2 000,00"]
-        ]
-      }
-    },
-    {
-      "titre": "La déclaration et le paiement de la TVA",
-      "contenu": "Les entreprises soumises au régime du réel normal doivent établir chaque mois une déclaration de TVA (imprimé CA3). Le montant de la TVA due au titre de la période correspond soit à une TVA à décaisser, soit à un crédit de TVA. En cas de crédit de TVA, l'entreprise peut soit reporter le solde de TVA déductible non imputé sur les périodes suivantes (crédit de taxe reportable sans limite de délai), soit en demander le remboursement selon certaines conditions."
-    },
-    {
-      "titre": "A. La TVA à décaisser — exemple de liquidation",
-      "contenu": "Lorsque la TVA collectée excède la TVA déductible, l'écart constitue une TVA à décaisser. Exemple : mois de mars N, TVA collectée 15 300 €, TVA déductible sur autres biens et services 8 000 €, TVA déductible sur immobilisations 800 €.",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["44571", "État, TVA collectée", "15 300,00", ""],
-          ["44566", "État, TVA déductible sur ABS", "", "8 000,00"],
-          ["44562", "État, TVA déductible sur immobilisations", "", "800,00"],
-          ["44551", "État, TVA à décaisser", "", "6 500,00"]
-        ]
-      }
-    },
-    {
-      "titre": "Écriture de règlement de la TVA à décaisser",
-      "contenu": "Le règlement de la TVA à décaisser s'enregistre au moment du paiement effectif :",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["44551", "État, TVA à décaisser", "6 500,00", ""],
-          ["512", "Banques", "", "6 500,00"]
-        ]
-      }
-    },
-    {
-      "titre": "B. Le crédit de TVA — exemple de liquidation",
-      "contenu": "Lorsque la TVA déductible excède la TVA collectée, l'écart constitue un crédit de TVA, reportable sur les déclarations suivantes (compte 44567) ou remboursable sous conditions. Exemple : mois de mars N, TVA collectée 15 300 €, TVA déductible sur autres biens et services 8 000 €, TVA déductible sur immobilisations 10 000 €.",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["44571", "État, TVA collectée", "15 300,00", ""],
-          ["44567", "État, crédit de TVA à reporter", "2 700,00", ""],
-          ["44566", "État, TVA déductible sur ABS", "", "8 000,00"],
-          ["44562", "État, TVA déductible sur immobilisations", "", "10 000,00"]
-        ]
-      }
-    },
-    {
-      "titre": "Astuce : déterminer la TVA applicable",
-      "contenu": "Le + de l'expert : déterminez la nature de l'opération (bien ou service) et sa territorialité (nationale, intracommunautaire, hors UE) pour définir la TVA associée — collectée, déductible, autoliquidée ou exonérée."
-    }
-  ],
-  "vocabulaire": [
-    { "terme": "Assujettissement", "definition": "Statut d'une personne ou entreprise soumise à la TVA du fait de son activité économique." },
-    { "terme": "Crédit de TVA", "definition": "Situation où la TVA déductible excède la TVA collectée sur une période ; reportable ou remboursable sous conditions." },
-    { "terme": "Opération intracommunautaire", "definition": "Échange de biens ou services entre la France et un autre État membre de l'Union européenne." },
-    { "terme": "Régime du réel normal", "definition": "Régime de TVA imposant une déclaration mensuelle (imprimé CA3) aux entreprises concernées." },
-    { "terme": "TVA collectée", "definition": "TVA facturée par l'entreprise à ses clients, enregistrée au crédit du compte 44571." },
-    { "terme": "TVA déductible sur ABS", "definition": "TVA récupérable sur les achats de biens et services autres que les immobilisations, enregistrée au débit du compte 44566." },
-    { "terme": "TVA déductible sur immobilisations", "definition": "TVA récupérable sur l'acquisition d'immobilisations, enregistrée au débit du compte 44562." },
-    { "terme": "TVA à décaisser", "definition": "Montant de TVA à reverser au Trésor public lorsque la TVA collectée excède la TVA déductible ; compte 44551." },
-    { "terme": "Autoliquidation", "definition": "Mécanisme par lequel l'acquéreur ou l'importateur déclare lui-même la TVA due, en la portant simultanément en TVA collectée et en TVA déductible." },
-    { "terme": "Livraison intracommunautaire", "definition": "Vente de biens vers un autre État membre de l'UE ; exonérée de TVA française si l'acquéreur est assujetti." },
-    { "terme": "Acquisition intracommunautaire", "definition": "Achat de biens en provenance d'un autre État membre de l'UE, soumis à autoliquidation de la TVA." },
-    { "terme": "Exportation", "definition": "Vente de biens vers un pays hors Union européenne, exonérée de TVA et enregistrée hors taxe." },
-    { "terme": "Importation", "definition": "Achat de biens en provenance d'un pays hors UE, soumis à autoliquidation de la TVA lors du dédouanement." },
-    { "terme": "Déclaration CA3", "definition": "Imprimé de déclaration mensuelle de TVA pour les entreprises soumises au régime du réel normal." }
-  ],
-  "questionsTypes": [
-    "Présenter l'écriture d'enregistrement d'une vente chez le fournisseur (client, produit, TVA collectée).",
-    "Présenter l'écriture d'enregistrement d'un achat chez le client, selon qu'il s'agit d'une immobilisation ou non.",
-    "Expliquer le traitement de la TVA pour une livraison intracommunautaire, selon l'assujettissement du client.",
-    "Expliquer le mécanisme de l'autoliquidation de la TVA pour une acquisition intracommunautaire ou une importation.",
-    "Distinguer le traitement TVA d'une exportation et d'une importation hors UE.",
-    "Calculer et comptabiliser la TVA à décaisser ou le crédit de TVA d'une période.",
-    "Passer l'écriture de règlement de la TVA à décaisser.",
-    "Expliquer les options dont dispose une entreprise en cas de crédit de TVA."
-  ],
-  "annales": {
-    "note": "La comptabilisation de la TVA (nationale, intracommunautaire, hors UE, déclaration et crédit) est mobilisée dans la quasi-totalité des dossiers d'opérations courantes. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
-    "questionsRedactionnellesRecurrentes": [
-      "Passer l'écriture d'une vente ou d'un achat avec TVA, national ou intracommunautaire.",
-      "Justifier le traitement de la TVA d'une opération avec l'étranger (UE ou hors UE).",
-      "Calculer la TVA à décaisser ou le crédit de TVA d'une période et passer l'écriture de liquidation.",
-      "Expliquer le mécanisme de l'autoliquidation."
-    ],
-    "entrees": []
-  }
-}
   ]
 }
