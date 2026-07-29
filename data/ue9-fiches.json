@@ -2517,345 +2517,201 @@
         ],
         "entrees": []
       }
-    }, {
-  "id": "ue9-ch8",
-  "numero": 8,
-  "titre": "Les réductions commerciales sur les achats et ventes",
-  "motsCles": ["Extourne", "Facture d'avoir", "Facture de doit", "Net commercial", "Rabais", "Remise", "Ristourne"],
-  "exercicesUrl": "../exercices/ue9.html",
-  "utilite": {
-    "pourcentage": 10,
-    "niveau": "Essentiel (prérequis quasi systématique)",
-    "commentaire": "Rarement un dossier à part entière, mais le calcul du net commercial, la distinction facture de doit / facture d'avoir et le traitement de l'escompte de règlement sont mobilisés dans la quasi-totalité des écritures d'achats et de ventes, thème présent dans 100% des sujets récents.",
-    "themesRecurrents": [
-      "Calcul du net commercial (réductions en cascade)",
-      "Distinction facture de doit / facture d'avoir",
-      "Extourne de la TVA sur un avoir de RRR",
-      "Escompte de règlement : calcul du net financier et assiette de la TVA",
-      "Réduction commerciale vs escompte de règlement (financier)"
-    ]
-  },
-  "formatEpreuve": "N'apparaît quasiment jamais comme question isolée : ce sont des réflexes techniques attendus dès la première écriture d'achat ou de vente d'un dossier 'opérations courantes avec les tiers', qui pèse pour la quasi-totalité des sujets UE9 chaque année.",
-  "notionsCles": [
-    {
-      "titre": "Les trois réductions commerciales",
-      "reference": "Fiche 8 - 1.A",
-      "contenu": "Le rabais corrige un défaut (qualité, retard, non-conformité). La remise récompense l'importance de l'achat ou la profession de l'acheteur. La ristourne porte sur le volume global des opérations avec un même partenaire sur une période donnée. Les trois sont de nature commerciale et ne sont jamais comptabilisées séparément lorsqu'elles figurent sur la facture initiale : seul le net commercial est enregistré.",
-      "tableau": {
-        "headers": ["Réduction", "Déclencheur"],
-        "rows": [
-          ["Rabais", "Défaut de paiement, de qualité ou retard de livraison"],
-          ["Remise", "Importance de l'achat ou profession de l'acheteur"],
-          ["Ristourne", "Volume global des opérations sur une période donnée"]
-        ]
-      }
     },
     {
-      "titre": "Facture de doit vs facture d'avoir",
-      "reference": "Fiche 8 - 1.B",
-      "contenu": "Si la réduction est accordée lors de la facturation initiale, elle figure directement sur la facture de doit : elle ne fait alors l'objet d'aucune écriture séparée, on comptabilise directement le net commercial. Si elle est accordée après coup, elle donne lieu à une facture d'avoir distincte, avec extourne de la TVA initialement constatée. En cas de retour de marchandises ayant bénéficié de réductions, la facture d'avoir doit reprendre les biens pour leur montant net des réductions.",
-      "tableau": {
-        "headers": ["Moment de la réduction", "Document", "Traitement comptable"],
-        "rows": [
-          ["Facturation initiale", "Facture de doit", "Net commercial directement enregistré, pas de compte de réduction"],
-          ["Après la facturation initiale", "Facture d'avoir", "Comptes 609/709 + extourne de la TVA correspondante"]
-        ]
-      }
-    },
-    {
-      "titre": "Le calcul du net commercial en cascade",
-      "reference": "Fiche 8 - 1.C",
-      "formule": "Net commercial = Montant brut HT − Réductions successives (chacune calculée sur le montant restant après la réduction précédente)",
-      "contenu": "Sauf mention contraire, les réductions se calculent sur les montants HT, et la TVA s'applique sur le montant après réduction (sauf mention 'net de taxe'). Quand plusieurs réductions sont accordées, il ne faut jamais les additionner : chaque réduction s'applique sur le montant obtenu après la réduction précédente.",
-      "visuel": {
-        "type": "flux",
-        "titre": "Calcul en cascade d'une remise puis d'un rabais",
-        "etapes": [
-          { "label": "Montant HT", "valeur": "2 500,00 €" },
-          { "label": "Remise 10 %", "valeur": "− 250,00 €" },
-          { "label": "Sous-total", "valeur": "2 250,00 €" },
-          { "label": "Rabais 5 % sur 2 250 €", "valeur": "− 112,50 €" }
-        ],
-        "input": "2 500,00 € HT",
-        "output": "Net commercial = 2 137,50 €"
-      }
-    },
-    {
-      "titre": "Les réductions financières : l'escompte de règlement",
-      "reference": "Fiche 8 - complément (réductions financières)",
-      "formule": "Net commercial − Escompte = Net financier ; TVA = Net financier × taux ; Net à payer = Net financier + TVA",
-      "contenu": "L'escompte de règlement (comptes 665 Escomptes accordés chez le vendeur / 765 Escomptes obtenus chez l'acheteur) récompense un paiement rapide ou comptant : c'est une réduction financière, jamais commerciale, et elle ne se cumule pas avec le net commercial de la même façon. Point clé à ne pas confondre avec les RRR : la TVA ne se calcule pas sur le net commercial mais sur le net financier, c'est-à-dire après déduction de l'escompte. Comme pour les réductions commerciales, l'escompte peut être accordé directement sur la facture de doit (au moment de la vente) ou a posteriori sur une facture d'avoir.",
-      "tableau": {
-        "headers": ["Cas", "Chez le vendeur", "Chez l'acheteur"],
-        "rows": [
-          ["Escompte sur facture de doit (accordé immédiatement)", "Débit 411 Clients + 665 Escompte accordé / Crédit 701 Ventes + 44571 TVA collectée (sur net financier)", "Débit 601/606 Achats + 44566 TVA déductible (sur net financier) / Crédit 401 Fournisseurs + 765 Escompte obtenu"],
-          ["Escompte sur facture d'avoir (accordé après coup)", "Débit 665 Escompte accordé + 44571 TVA collectée (extournée) / Crédit 411 Clients", "Débit 401 Fournisseurs / Crédit 765 Escompte obtenu + 44566 TVA déductible (extournée)"]
+      "id": "ue9-ch8",
+      "numero": 8,
+      "titre": "Les réductions commerciales sur les achats et ventes",
+      "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+      "pageManuel": 37,
+      "exercicesUrl": "../exercices/ue9.html",
+      "motsCles": [
+        "Extourne",
+        "Facture d'avoir",
+        "Facture de doit",
+        "Net commercial",
+        "Rabais",
+        "Remise",
+        "Ristourne"
+      ],
+      "utilite": {
+        "pourcentage": 15,
+        "niveau": "Modéré à fort — réflexe technique quasi systématique dans les écritures d'achats et de ventes",
+        "commentaire": "Rarement un dossier à part entière, mais le calcul du net commercial, la distinction facture de doit / facture d'avoir et le traitement de l'escompte de règlement sont mobilisés dans la quasi-totalité des écritures d'achats et de ventes du dossier « opérations courantes avec les tiers », présent dans 100 % des sujets.",
+        "themesRecurrents": [
+          "Opérations courantes avec les tiers — 100 % des sujets",
+          "Opérations d'inventaire — 100 %",
+          "Immobilisations, amortissements et dépréciations — 92 %",
+          "Liquidation de la TVA — 85 %",
+          "Principes comptables et sources du droit comptable — 77 %"
         ]
       },
-      "visuel": {
-        "type": "flux",
-        "titre": "Cascade complète : du prix catalogue au net à payer",
-        "etapes": [
-          { "label": "Produit HT", "valeur": "brut" },
-          { "label": "− Remise", "valeur": "réduction commerciale" },
-          { "label": "= Net commercial", "valeur": "base RRR" },
-          { "label": "− Escompte", "valeur": "réduction financière" },
-          { "label": "= Net financier", "valeur": "base de la TVA" },
-          { "label": "+ TVA", "valeur": "sur le net financier" }
+      "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+      "notionsCles": [
+        {
+          "titre": "Les trois réductions commerciales",
+          "contenu": "Le rabais corrige un défaut (qualité, retard, non-conformité). La remise récompense l'importance de l'achat ou la profession de l'acheteur. La ristourne porte sur le volume global des opérations avec un même partenaire sur une période donnée. Les trois sont de nature commerciale et ne sont jamais comptabilisées séparément lorsqu'elles figurent sur la facture initiale : seul le net commercial est enregistré.",
+          "tableau": {
+            "colonnes": ["Réduction", "Déclencheur"],
+            "lignes": [
+              ["Rabais", "Défaut de paiement, de qualité ou retard de livraison"],
+              ["Remise", "Importance de l'achat ou profession de l'acheteur"],
+              ["Ristourne", "Volume global des opérations sur une période donnée"]
+            ]
+          }
+        },
+        {
+          "titre": "Facture de doit vs facture d'avoir",
+          "contenu": "Si la réduction est accordée lors de la facturation initiale, elle figure directement sur la facture de doit : elle ne fait alors l'objet d'aucune écriture séparée, on comptabilise directement le net commercial. Si elle est accordée après coup, elle donne lieu à une facture d'avoir distincte, avec extourne de la TVA initialement constatée. En cas de retour de marchandises ayant bénéficié de réductions, la facture d'avoir doit reprendre les biens pour leur montant net des réductions.",
+          "tableau": {
+            "colonnes": ["Moment de la réduction", "Document", "Traitement comptable"],
+            "lignes": [
+              ["Facturation initiale", "Facture de doit", "Net commercial directement enregistré, pas de compte de réduction"],
+              ["Après la facturation initiale", "Facture d'avoir", "Comptes 609/709 + extourne de la TVA correspondante"]
+            ]
+          }
+        },
+        {
+          "titre": "Le calcul du net commercial en cascade",
+          "formule": "Net commercial = Montant brut HT − Réductions successives (chacune calculée sur le montant restant après la réduction précédente)",
+          "contenu": "Sauf mention contraire, les réductions se calculent sur les montants HT, et la TVA s'applique sur le montant après réduction (sauf mention « net de taxe »). Quand plusieurs réductions sont accordées, il ne faut jamais les additionner : chaque réduction s'applique sur le montant obtenu après la réduction précédente. Exemple : une remise de 10 % puis un rabais de 5 % sur 2 500 € HT donnent 2 500 − 250 = 2 250, puis 2 250 − 112,50 = 2 137,50 € de net commercial (et non 2 500 × 85 % = 2 125 €).",
+          "visuel": {
+            "type": "flux",
+            "entree": "Montant brut HT",
+            "sortie": "Net commercial",
+            "etapes": [
+              { "label": "1re réduction (ex. remise)", "couleur": "blue" },
+              { "label": "2e réduction (ex. rabais, sur le solde restant)", "couleur": "teal" }
+            ]
+          }
+        },
+        {
+          "titre": "Exemple — achat avec remise sur facture de doit",
+          "contenu": "Achat à crédit de 20 ordinateurs : 16 000 € HT, remise de 2 %, TVA 20 %, le 25/08/N.",
+          "tableau": {
+            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "lignes": [
+              ["607", "Achats de marchandises (net commercial = 16 000 × 98 %)", "15 680,00", ""],
+              ["44566", "État, TVA déductible sur ABS (15 680 × 20 %)", "3 136,00", ""],
+              ["401", "Fournisseurs (net à payer)", "", "18 816,00"]
+            ]
+          }
+        },
+        {
+          "titre": "Les réductions financières : l'escompte de règlement",
+          "formule": "Net commercial − Escompte = Net financier ; TVA = Net financier × taux ; Net à payer = Net financier + TVA",
+          "contenu": "L'escompte de règlement (compte 665 Escomptes accordés chez le vendeur / compte 765 Escomptes obtenus chez l'acheteur) récompense un paiement rapide ou comptant : c'est une réduction financière, jamais commerciale. Point clé à ne pas confondre avec les RRR : la TVA ne se calcule pas sur le net commercial mais sur le net financier, c'est-à-dire après déduction de l'escompte. Comme pour les réductions commerciales, l'escompte peut être accordé directement sur la facture de doit (au moment de la vente) ou a posteriori sur une facture d'avoir.",
+          "tableau": {
+            "colonnes": ["Cas", "Chez le vendeur", "Chez l'acheteur"],
+            "lignes": [
+              ["Escompte sur facture de doit (immédiat)", "Débit 411 Clients + 665 Escompte accordé / Crédit 701 Ventes + 44571 TVA collectée (sur net financier)", "Débit 601/606 Achats + 44566 TVA déductible (sur net financier) / Crédit 401 Fournisseurs + 765 Escompte obtenu"],
+              ["Escompte sur facture d'avoir (après coup)", "Débit 665 Escompte accordé + 44571 TVA collectée (extournée) / Crédit 411 Clients", "Débit 401 Fournisseurs / Crédit 765 Escompte obtenu + 44566 TVA déductible (extournée)"]
+            ]
+          },
+          "visuel": {
+            "type": "flux",
+            "entree": "Produit HT (prix catalogue)",
+            "sortie": "Net à payer",
+            "etapes": [
+              { "label": "Réductions commerciales", "couleur": "blue" },
+              { "label": "Net commercial", "couleur": "teal" },
+              { "label": "Escompte de règlement", "couleur": "violet" },
+              { "label": "Net financier + TVA", "couleur": "amber" }
+            ]
+          }
+        },
+        {
+          "titre": "Comptabilisation de l'achat sur facture de doit",
+          "contenu": "L'écriture est identique à une facturation sans réduction (fiche 6) : l'achat est comptabilisé directement pour son net commercial, sans passer par un compte de réduction.",
+          "tableau": {
+            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "lignes": [
+              ["60.", "Achats de… (net commercial)", "HT", ""],
+              ["44566", "État, TVA déductible sur ABS", "TVA", ""],
+              ["401", "Fournisseurs (net à payer)", "", "TTC"]
+            ]
+          }
+        },
+        {
+          "titre": "Comptabilisation de la vente sur facture de doit",
+          "contenu": "Symétriquement, la vente est comptabilisée directement pour son net commercial.",
+          "tableau": {
+            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "lignes": [
+              ["411", "Clients (net à payer)", "TTC", ""],
+              ["70.", "Ventes… (net commercial)", "", "HT"],
+              ["44571", "État, TVA collectée", "", "TVA"]
+            ]
+          }
+        },
+        {
+          "titre": "Facture d'avoir chez l'acheteur (compte 609)",
+          "contenu": "Une réduction obtenue après la facture initiale transite par le compte 609 (Rabais, remises et ristournes obtenus sur achats), qui fonctionne en sens inverse de son compte de rattachement (règle du 9 en 3e position). La TVA déjà déduite sur la part réduite est extournée. Exemple : retour de marchandises pour 200 € HT, TVA 20 %.",
+          "tableau": {
+            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "lignes": [
+              ["401", "Fournisseurs", "240,00", ""],
+              ["44566", "État, TVA déductible sur ABS (extournée)", "", "40,00"],
+              ["609", "RRR obtenus sur achats", "", "200,00"]
+            ]
+          }
+        },
+        {
+          "titre": "Facture d'avoir chez le vendeur (compte 709)",
+          "contenu": "Symétriquement, une réduction accordée après la facture initiale transite par le compte 709 (Rabais, remises et ristournes accordés par l'entreprise). Le chiffre en 4e position précise la nature : 1 matières premières, 2 matières consommables, 7 marchandises. Exemple : retour de marchandises pour 200 € HT, TVA 20 %.",
+          "tableau": {
+            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "lignes": [
+              ["709", "RRR accordés sur ventes", "200,00", ""],
+              ["44571", "État, TVA collectée (extournée)", "40,00", ""],
+              ["411", "Clients", "", "240,00"]
+            ]
+          }
+        },
+        {
+          "titre": "Exemple — rabais supplémentaire accordé après facture",
+          "contenu": "Octroi d'un rabais supplémentaire de 2 % le 10/09/N sur l'achat d'ordinateurs facturé 15 680 € net commercial le 25/08/N (2 % × 15 680 = 313,60).",
+          "tableau": {
+            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "lignes": [
+              ["7097", "RRR accordés sur ventes de marchandises", "313,60", ""],
+              ["44571", "État, TVA collectée (extournée)", "62,72", ""],
+              ["411", "Clients", "", "376,32"]
+            ]
+          }
+        }
+      ],
+      "vocabulaire": [
+        { "terme": "Net commercial", "definition": "Montant HT de la facture diminué de toutes les réductions commerciales." },
+        { "terme": "Facture de doit", "definition": "Facture initiale ; les réductions y figurant ne sont jamais comptabilisées séparément." },
+        { "terme": "Facture d'avoir", "definition": "Facture émise après coup pour constater une réduction ou un retour, avec extourne de la TVA correspondante." },
+        { "terme": "Extourne", "definition": "Écriture qui annule la part de TVA devenue injustifiée suite à une réduction accordée postérieurement." },
+        { "terme": "Escompte de règlement", "definition": "Réduction financière (665 chez le vendeur, 765 chez l'acheteur) récompensant un paiement rapide ou comptant. Contrairement aux RRR, elle sert de base au calcul de la TVA (via le net financier)." },
+        { "terme": "Net financier", "definition": "Net commercial diminué de l'escompte de règlement ; c'est sur ce montant, et non sur le net commercial, que se calcule la TVA lorsqu'un escompte est accordé." }
+      ],
+      "questionsTypes": [
+        "Calculer le net commercial d'une facture comportant plusieurs réductions en cascade",
+        "Distinguer réduction commerciale (rabais/remise/ristourne) et réduction financière (escompte)",
+        "Comptabiliser une facture de doit avec réduction intégrée",
+        "Comptabiliser une facture d'avoir postérieure avec extourne de TVA",
+        "Calculer un net financier et déterminer l'assiette de la TVA en présence d'un escompte",
+        "Comptabiliser un escompte de règlement chez le vendeur (665) et chez l'acheteur (765), sur facture de doit ou d'avoir"
+      ],
+      "annales": {
+        "note": "Ce chapitre est rarement un dossier à part entière, mais ses mécanismes (calcul du net commercial, distinction facture de doit / facture d'avoir, escompte de règlement) sont mobilisés dans la quasi-totalité des dossiers d'achats et ventes. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+        "questionsRedactionnellesRecurrentes": [
+          "Présenter les trois réductions commerciales et leur traitement comptable respectif.",
+          "Distinguer réduction commerciale et réduction financière (escompte).",
+          "Justifier l'assiette de la TVA en présence de réductions commerciales et/ou d'un escompte."
         ],
-        "input": "Produit HT (prix catalogue)",
-        "output": "Net à payer"
-      }
-    },
-    {
-      "titre": "Comptabilisation sur facture de doit",
-      "reference": "Fiche 8 - 2.A",
-      "contenu": "L'écriture est identique à une facturation sans réduction (fiche 6) : achats et ventes sont comptabilisés directement pour leur net commercial, sans passer par un compte de réduction.",
-      "tableau": {
-        "headers": ["Sens", "Débit", "Crédit"],
-        "rows": [
-          ["Achat", "60. Achats (net commercial) / 44566 TVA déductible sur ABS", "401 Fournisseurs (net à payer)"],
-          ["Vente", "411 Clients (net à payer)", "70. Ventes (net commercial) / 44571 TVA collectée"]
+        "entrees": [
+          {
+            "annee": "2012",
+            "question": "Présenter les trois types de réductions commerciales et indiquer leur mode d'enregistrement comptable respectif.",
+            "corrige": "Rabais, remise et ristourne figurant sur la facture initiale ne donnent lieu à aucune écriture séparée : seul le net commercial est comptabilisé. Accordées après coup, elles transitent par une facture d'avoir et les comptes 609 (obtenus, chez l'acheteur) ou 709 (accordés, chez le vendeur), avec extourne de la TVA correspondante."
+          }
         ]
       }
-    },
-    {
-      "titre": "Comptabilisation sur facture d'avoir (comptes 609/709)",
-      "reference": "Fiche 8 - 2.B",
-      "contenu": "Les réductions accordées après coup transitent par des comptes dédiés : 609 Rabais, remises et ristournes obtenus sur achats, et 709 Rabais, remises et ristournes accordés par l'entreprise. Règle du plan comptable : les comptes comportant un 9 en 3e position fonctionnent en sens inverse de leur compte de rattachement. Le chiffre en 4e position précise la nature : 1 matières premières, 2 matières consommables, 7 marchandises. La TVA constatée sur la facture initiale n'est plus justifiée pour la part réduite : elle est extournée.",
-      "tableau": {
-        "headers": ["Sens", "Débit", "Crédit"],
-        "rows": [
-          ["Réduction obtenue sur achat", "40. Fournisseurs", "609 RRR obtenus sur achats / 44566 TVA déductible extournée"],
-          ["Réduction accordée sur vente", "709 RRR accordés / 44571 TVA collectée extournée", "411 Clients"]
-        ]
-      },
-      "exemple": "Rabais supplémentaire de 2 % accordé le 10/09/N sur un achat d'ordinateurs facturé 15 680 € net commercial le 25/08/N : 7097 RRR accordés (313,60 €) + 44571 TVA collectée (62,72 €) au débit, 411 Clients (376,32 €) au crédit."
-    }
-  ],
-  "vocabulaire": [
-    { "terme": "Net commercial", "definition": "Montant HT de la facture diminué de toutes les réductions commerciales." },
-    { "terme": "Facture de doit", "definition": "Facture initiale ; les réductions y figurant ne sont jamais comptabilisées séparément." },
-    { "terme": "Facture d'avoir", "definition": "Facture émise après coup pour constater une réduction ou un retour, avec extourne de la TVA correspondante." },
-    { "terme": "Extourne", "definition": "Écriture qui annule la part de TVA devenue injustifiée suite à une réduction accordée postérieurement." },
-    { "terme": "Escompte de règlement", "definition": "Réduction financière (665 chez le vendeur, 765 chez l'acheteur) récompensant un paiement rapide ou comptant. Contrairement aux RRR, elle sert de base au calcul de la TVA (via le net financier)." },
-    { "terme": "Net financier", "definition": "Net commercial diminué de l'escompte de règlement ; c'est sur ce montant, et non sur le net commercial, que se calcule la TVA lorsqu'un escompte est accordé." }
-  ],
-  "questionsTypes": [
-    "Calculer le net commercial d'une facture comportant plusieurs réductions en cascade",
-    "Distinguer réduction commerciale (rabais/remise/ristourne) et réduction financière (escompte)",
-    "Comptabiliser une facture de doit avec réduction intégrée",
-    "Comptabiliser une facture d'avoir postérieure avec extourne de TVA",
-    "Calculer un net financier et déterminer l'assiette de la TVA en présence d'un escompte",
-    "Comptabiliser un escompte de règlement chez le vendeur (665) et chez l'acheteur (765), sur facture de doit ou d'avoir"
-  ],
-  "annales": [
-    {
-      "annee": "2012",
-      "enonce": "Présenter les trois types de réductions commerciales et indiquer leur mode d'enregistrement comptable respectif.",
-      "note": "Question rédactionnelle isolée ; la plupart des autres sessions mobilisent la notion implicitement dans les écritures d'achats/ventes d'un dossier 'opérations courantes' plutôt que via une question dédiée."
-    },
-    {
-      "annee": "",
-      "enonce": "",
-      "note": "À compléter avec d'autres annales une fois identifiées avec certitude — ne pas inventer de sujet daté."
     }
   ]
 }
-  ]
-},{
-  "id": "ue9-ch8",
-  "numero": 8,
-  "titre": "Les réductions commerciales sur les achats et ventes",
-  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
-  "pageManuel": 37,
-  "exercicesUrl": "../exercices/ue9.html",
-  "motsCles": [
-    "Extourne",
-    "Facture d'avoir",
-    "Facture de doit",
-    "Net commercial",
-    "Rabais",
-    "Remise",
-    "Ristourne"
-  ],
-  "utilite": {
-    "pourcentage": 15,
-    "niveau": "Modéré à fort — réflexe technique quasi systématique dans les écritures d'achats et de ventes",
-    "commentaire": "Rarement un dossier à part entière, mais le calcul du net commercial, la distinction facture de doit / facture d'avoir et le traitement de l'escompte de règlement sont mobilisés dans la quasi-totalité des écritures d'achats et de ventes du dossier « opérations courantes avec les tiers », présent dans 100 % des sujets.",
-    "themesRecurrents": [
-      "Opérations courantes avec les tiers — 100 % des sujets",
-      "Opérations d'inventaire — 100 %",
-      "Immobilisations, amortissements et dépréciations — 92 %",
-      "Liquidation de la TVA — 85 %",
-      "Principes comptables et sources du droit comptable — 77 %"
-    ]
-  },
-  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
-  "notionsCles": [
-    {
-      "titre": "Les trois réductions commerciales",
-      "contenu": "Le rabais corrige un défaut (qualité, retard, non-conformité). La remise récompense l'importance de l'achat ou la profession de l'acheteur. La ristourne porte sur le volume global des opérations avec un même partenaire sur une période donnée. Les trois sont de nature commerciale et ne sont jamais comptabilisées séparément lorsqu'elles figurent sur la facture initiale : seul le net commercial est enregistré.",
-      "tableau": {
-        "colonnes": ["Réduction", "Déclencheur"],
-        "lignes": [
-          ["Rabais", "Défaut de paiement, de qualité ou retard de livraison"],
-          ["Remise", "Importance de l'achat ou profession de l'acheteur"],
-          ["Ristourne", "Volume global des opérations sur une période donnée"]
-        ]
-      }
-    },
-    {
-      "titre": "Facture de doit vs facture d'avoir",
-      "contenu": "Si la réduction est accordée lors de la facturation initiale, elle figure directement sur la facture de doit : elle ne fait alors l'objet d'aucune écriture séparée, on comptabilise directement le net commercial. Si elle est accordée après coup, elle donne lieu à une facture d'avoir distincte, avec extourne de la TVA initialement constatée. En cas de retour de marchandises ayant bénéficié de réductions, la facture d'avoir doit reprendre les biens pour leur montant net des réductions.",
-      "tableau": {
-        "colonnes": ["Moment de la réduction", "Document", "Traitement comptable"],
-        "lignes": [
-          ["Facturation initiale", "Facture de doit", "Net commercial directement enregistré, pas de compte de réduction"],
-          ["Après la facturation initiale", "Facture d'avoir", "Comptes 609/709 + extourne de la TVA correspondante"]
-        ]
-      }
-    },
-    {
-      "titre": "Le calcul du net commercial en cascade",
-      "formule": "Net commercial = Montant brut HT − Réductions successives (chacune calculée sur le montant restant après la réduction précédente)",
-      "contenu": "Sauf mention contraire, les réductions se calculent sur les montants HT, et la TVA s'applique sur le montant après réduction (sauf mention « net de taxe »). Quand plusieurs réductions sont accordées, il ne faut jamais les additionner : chaque réduction s'applique sur le montant obtenu après la réduction précédente. Exemple : une remise de 10 % puis un rabais de 5 % sur 2 500 € HT donnent 2 500 − 250 = 2 250, puis 2 250 − 112,50 = 2 137,50 € de net commercial (et non 2 500 × 85 % = 2 125 €).",
-      "visuel": {
-        "type": "flux",
-        "entree": "Montant brut HT",
-        "sortie": "Net commercial",
-        "etapes": [
-          { "label": "1re réduction (ex. remise)", "couleur": "blue" },
-          { "label": "2e réduction (ex. rabais, sur le solde restant)", "couleur": "teal" }
-        ]
-      }
-    },
-    {
-      "titre": "Exemple — achat avec remise sur facture de doit",
-      "contenu": "Achat à crédit de 20 ordinateurs : 16 000 € HT, remise de 2 %, TVA 20 %, le 25/08/N.",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["607", "Achats de marchandises (net commercial = 16 000 × 98 %)", "15 680,00", ""],
-          ["44566", "État, TVA déductible sur ABS (15 680 × 20 %)", "3 136,00", ""],
-          ["401", "Fournisseurs (net à payer)", "", "18 816,00"]
-        ]
-      }
-    },
-    {
-      "titre": "Les réductions financières : l'escompte de règlement",
-      "formule": "Net commercial − Escompte = Net financier ; TVA = Net financier × taux ; Net à payer = Net financier + TVA",
-      "contenu": "L'escompte de règlement (compte 665 Escomptes accordés chez le vendeur / compte 765 Escomptes obtenus chez l'acheteur) récompense un paiement rapide ou comptant : c'est une réduction financière, jamais commerciale. Point clé à ne pas confondre avec les RRR : la TVA ne se calcule pas sur le net commercial mais sur le net financier, c'est-à-dire après déduction de l'escompte. Comme pour les réductions commerciales, l'escompte peut être accordé directement sur la facture de doit (au moment de la vente) ou a posteriori sur une facture d'avoir.",
-      "tableau": {
-        "colonnes": ["Cas", "Chez le vendeur", "Chez l'acheteur"],
-        "lignes": [
-          ["Escompte sur facture de doit (immédiat)", "Débit 411 Clients + 665 Escompte accordé / Crédit 701 Ventes + 44571 TVA collectée (sur net financier)", "Débit 601/606 Achats + 44566 TVA déductible (sur net financier) / Crédit 401 Fournisseurs + 765 Escompte obtenu"],
-          ["Escompte sur facture d'avoir (après coup)", "Débit 665 Escompte accordé + 44571 TVA collectée (extournée) / Crédit 411 Clients", "Débit 401 Fournisseurs / Crédit 765 Escompte obtenu + 44566 TVA déductible (extournée)"]
-        ]
-      },
-      "visuel": {
-        "type": "flux",
-        "entree": "Produit HT (prix catalogue)",
-        "sortie": "Net à payer",
-        "etapes": [
-          { "label": "Réductions commerciales", "couleur": "blue" },
-          { "label": "Net commercial", "couleur": "teal" },
-          { "label": "Escompte de règlement", "couleur": "violet" },
-          { "label": "Net financier + TVA", "couleur": "amber" }
-        ]
-      }
-    },
-    {
-      "titre": "Comptabilisation de l'achat sur facture de doit",
-      "contenu": "L'écriture est identique à une facturation sans réduction (fiche 6) : l'achat est comptabilisé directement pour son net commercial, sans passer par un compte de réduction.",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["60.", "Achats de… (net commercial)", "HT", ""],
-          ["44566", "État, TVA déductible sur ABS", "TVA", ""],
-          ["401", "Fournisseurs (net à payer)", "", "TTC"]
-        ]
-      }
-    },
-    {
-      "titre": "Comptabilisation de la vente sur facture de doit",
-      "contenu": "Symétriquement, la vente est comptabilisée directement pour son net commercial.",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["411", "Clients (net à payer)", "TTC", ""],
-          ["70.", "Ventes… (net commercial)", "", "HT"],
-          ["44571", "État, TVA collectée", "", "TVA"]
-        ]
-      }
-    },
-    {
-      "titre": "Facture d'avoir chez l'acheteur (compte 609)",
-      "contenu": "Une réduction obtenue après la facture initiale transite par le compte 609 (Rabais, remises et ristournes obtenus sur achats), qui fonctionne en sens inverse de son compte de rattachement (règle du 9 en 3e position). La TVA déjà déduite sur la part réduite est extournée. Exemple : retour de marchandises pour 200 € HT, TVA 20 %.",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["401", "Fournisseurs", "240,00", ""],
-          ["44566", "État, TVA déductible sur ABS (extournée)", "", "40,00"],
-          ["609", "RRR obtenus sur achats", "", "200,00"]
-        ]
-      }
-    },
-    {
-      "titre": "Facture d'avoir chez le vendeur (compte 709)",
-      "contenu": "Symétriquement, une réduction accordée après la facture initiale transite par le compte 709 (Rabais, remises et ristournes accordés par l'entreprise). Le chiffre en 4e position précise la nature : 1 matières premières, 2 matières consommables, 7 marchandises. Exemple : retour de marchandises pour 200 € HT, TVA 20 %.",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["709", "RRR accordés sur ventes", "200,00", ""],
-          ["44571", "État, TVA collectée (extournée)", "40,00", ""],
-          ["411", "Clients", "", "240,00"]
-        ]
-      }
-    },
-    {
-      "titre": "Exemple — rabais supplémentaire accordé après facture",
-      "contenu": "Octroi d'un rabais supplémentaire de 2 % le 10/09/N sur l'achat d'ordinateurs facturé 15 680 € net commercial le 25/08/N (2 % × 15 680 = 313,60).",
-      "tableau": {
-        "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
-        "lignes": [
-          ["7097", "RRR accordés sur ventes de marchandises", "313,60", ""],
-          ["44571", "État, TVA collectée (extournée)", "62,72", ""],
-          ["411", "Clients", "", "376,32"]
-        ]
-      }
-    }
-  ],
-  "vocabulaire": [
-    { "terme": "Net commercial", "definition": "Montant HT de la facture diminué de toutes les réductions commerciales." },
-    { "terme": "Facture de doit", "definition": "Facture initiale ; les réductions y figurant ne sont jamais comptabilisées séparément." },
-    { "terme": "Facture d'avoir", "definition": "Facture émise après coup pour constater une réduction ou un retour, avec extourne de la TVA correspondante." },
-    { "terme": "Extourne", "definition": "Écriture qui annule la part de TVA devenue injustifiée suite à une réduction accordée postérieurement." },
-    { "terme": "Escompte de règlement", "definition": "Réduction financière (665 chez le vendeur, 765 chez l'acheteur) récompensant un paiement rapide ou comptant. Contrairement aux RRR, elle sert de base au calcul de la TVA (via le net financier)." },
-    { "terme": "Net financier", "definition": "Net commercial diminué de l'escompte de règlement ; c'est sur ce montant, et non sur le net commercial, que se calcule la TVA lorsqu'un escompte est accordé." }
-  ],
-  "questionsTypes": [
-    "Calculer le net commercial d'une facture comportant plusieurs réductions en cascade",
-    "Distinguer réduction commerciale (rabais/remise/ristourne) et réduction financière (escompte)",
-    "Comptabiliser une facture de doit avec réduction intégrée",
-    "Comptabiliser une facture d'avoir postérieure avec extourne de TVA",
-    "Calculer un net financier et déterminer l'assiette de la TVA en présence d'un escompte",
-    "Comptabiliser un escompte de règlement chez le vendeur (665) et chez l'acheteur (765), sur facture de doit ou d'avoir"
-  ],
-  "annales": {
-    "note": "Ce chapitre est rarement un dossier à part entière, mais ses mécanismes (calcul du net commercial, distinction facture de doit / facture d'avoir, escompte de règlement) sont mobilisés dans la quasi-totalité des dossiers d'achats et ventes. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
-    "questionsRedactionnellesRecurrentes": [
-      "Présenter les trois réductions commerciales et leur traitement comptable respectif.",
-      "Distinguer réduction commerciale et réduction financière (escompte).",
-      "Justifier l'assiette de la TVA en présence de réductions commerciales et/ou d'un escompte."
-    ],
-    "entrees": [
-      {
-        "annee": "2012",
-        "question": "Présenter les trois types de réductions commerciales et indiquer leur mode d'enregistrement comptable respectif.",
-        "corrige": "Rabais, remise et ristourne figurant sur la facture initiale ne donnent lieu à aucune écriture séparée : seul le net commercial est comptabilisé. Accordées après coup, elles transitent par une facture d'avoir et les comptes 609 (obtenus, chez l'acheteur) ou 709 (accordés, chez le vendeur), avec extourne de la TVA correspondante."
-      }
-    ]
-  }
-}
-
