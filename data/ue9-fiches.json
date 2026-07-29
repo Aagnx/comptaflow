@@ -2552,11 +2552,23 @@
           "titre": "Les trois réductions commerciales",
           "contenu": "Le rabais corrige un défaut (qualité, retard, non-conformité). La remise récompense l'importance de l'achat ou la profession de l'acheteur. La ristourne porte sur le volume global des opérations avec un même partenaire sur une période donnée. Les trois sont de nature commerciale et ne sont jamais comptabilisées séparément lorsqu'elles figurent sur la facture initiale : seul le net commercial est enregistré.",
           "tableau": {
-            "colonnes": ["Réduction", "Déclencheur"],
+            "colonnes": [
+              "Réduction",
+              "Déclencheur"
+            ],
             "lignes": [
-              ["Rabais", "Défaut de paiement, de qualité ou retard de livraison"],
-              ["Remise", "Importance de l'achat ou profession de l'acheteur"],
-              ["Ristourne", "Volume global des opérations sur une période donnée"]
+              [
+                "Rabais",
+                "Défaut de paiement, de qualité ou retard de livraison"
+              ],
+              [
+                "Remise",
+                "Importance de l'achat ou profession de l'acheteur"
+              ],
+              [
+                "Ristourne",
+                "Volume global des opérations sur une période donnée"
+              ]
             ]
           }
         },
@@ -2564,10 +2576,22 @@
           "titre": "Facture de doit vs facture d'avoir",
           "contenu": "Si la réduction est accordée lors de la facturation initiale, elle figure directement sur la facture de doit : elle ne fait alors l'objet d'aucune écriture séparée, on comptabilise directement le net commercial. Si elle est accordée après coup, elle donne lieu à une facture d'avoir distincte, avec extourne de la TVA initialement constatée. En cas de retour de marchandises ayant bénéficié de réductions, la facture d'avoir doit reprendre les biens pour leur montant net des réductions.",
           "tableau": {
-            "colonnes": ["Moment de la réduction", "Document", "Traitement comptable"],
+            "colonnes": [
+              "Moment de la réduction",
+              "Document",
+              "Traitement comptable"
+            ],
             "lignes": [
-              ["Facturation initiale", "Facture de doit", "Net commercial directement enregistré, pas de compte de réduction"],
-              ["Après la facturation initiale", "Facture d'avoir", "Comptes 609/709 + extourne de la TVA correspondante"]
+              [
+                "Facturation initiale",
+                "Facture de doit",
+                "Net commercial directement enregistré, pas de compte de réduction"
+              ],
+              [
+                "Après la facturation initiale",
+                "Facture d'avoir",
+                "Comptes 609/709 + extourne de la TVA correspondante"
+              ]
             ]
           }
         },
@@ -2580,8 +2604,14 @@
             "entree": "Montant brut HT",
             "sortie": "Net commercial",
             "etapes": [
-              { "label": "1re réduction (ex. remise)", "couleur": "blue" },
-              { "label": "2e réduction (ex. rabais, sur le solde restant)", "couleur": "teal" }
+              {
+                "label": "1re réduction (ex. remise)",
+                "couleur": "blue"
+              },
+              {
+                "label": "2e réduction (ex. rabais, sur le solde restant)",
+                "couleur": "teal"
+              }
             ]
           }
         },
@@ -2589,11 +2619,31 @@
           "titre": "Exemple — achat avec remise sur facture de doit",
           "contenu": "Achat à crédit de 20 ordinateurs : 16 000 € HT, remise de 2 %, TVA 20 %, le 25/08/N.",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["607", "Achats de marchandises (net commercial = 16 000 × 98 %)", "15 680,00", ""],
-              ["44566", "État, TVA déductible sur ABS (15 680 × 20 %)", "3 136,00", ""],
-              ["401", "Fournisseurs (net à payer)", "", "18 816,00"]
+              [
+                "607",
+                "Achats de marchandises (net commercial = 16 000 × 98 %)",
+                "15 680,00",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS (15 680 × 20 %)",
+                "3 136,00",
+                ""
+              ],
+              [
+                "401",
+                "Fournisseurs (net à payer)",
+                "",
+                "18 816,00"
+              ]
             ]
           }
         },
@@ -2602,10 +2652,22 @@
           "formule": "Net commercial − Escompte = Net financier ; TVA = Net financier × taux ; Net à payer = Net financier + TVA",
           "contenu": "L'escompte de règlement (compte 665 Escomptes accordés chez le vendeur / compte 765 Escomptes obtenus chez l'acheteur) récompense un paiement rapide ou comptant : c'est une réduction financière, jamais commerciale. Point clé à ne pas confondre avec les RRR : la TVA ne se calcule pas sur le net commercial mais sur le net financier, c'est-à-dire après déduction de l'escompte. Comme pour les réductions commerciales, l'escompte peut être accordé directement sur la facture de doit (au moment de la vente) ou a posteriori sur une facture d'avoir.",
           "tableau": {
-            "colonnes": ["Cas", "Chez le vendeur", "Chez l'acheteur"],
+            "colonnes": [
+              "Cas",
+              "Chez le vendeur",
+              "Chez l'acheteur"
+            ],
             "lignes": [
-              ["Escompte sur facture de doit (immédiat)", "Débit 411 Clients + 665 Escompte accordé / Crédit 701 Ventes + 44571 TVA collectée (sur net financier)", "Débit 601/606 Achats + 44566 TVA déductible (sur net financier) / Crédit 401 Fournisseurs + 765 Escompte obtenu"],
-              ["Escompte sur facture d'avoir (après coup)", "Débit 665 Escompte accordé + 44571 TVA collectée (extournée) / Crédit 411 Clients", "Débit 401 Fournisseurs / Crédit 765 Escompte obtenu + 44566 TVA déductible (extournée)"]
+              [
+                "Escompte sur facture de doit (immédiat)",
+                "Débit 411 Clients + 665 Escompte accordé / Crédit 701 Ventes + 44571 TVA collectée (sur net financier)",
+                "Débit 601/606 Achats + 44566 TVA déductible (sur net financier) / Crédit 401 Fournisseurs + 765 Escompte obtenu"
+              ],
+              [
+                "Escompte sur facture d'avoir (après coup)",
+                "Débit 665 Escompte accordé + 44571 TVA collectée (extournée) / Crédit 411 Clients",
+                "Débit 401 Fournisseurs / Crédit 765 Escompte obtenu + 44566 TVA déductible (extournée)"
+              ]
             ]
           },
           "visuel": {
@@ -2613,10 +2675,22 @@
             "entree": "Produit HT (prix catalogue)",
             "sortie": "Net à payer",
             "etapes": [
-              { "label": "Réductions commerciales", "couleur": "blue" },
-              { "label": "Net commercial", "couleur": "teal" },
-              { "label": "Escompte de règlement", "couleur": "violet" },
-              { "label": "Net financier + TVA", "couleur": "amber" }
+              {
+                "label": "Réductions commerciales",
+                "couleur": "blue"
+              },
+              {
+                "label": "Net commercial",
+                "couleur": "teal"
+              },
+              {
+                "label": "Escompte de règlement",
+                "couleur": "violet"
+              },
+              {
+                "label": "Net financier + TVA",
+                "couleur": "amber"
+              }
             ]
           }
         },
@@ -2624,11 +2698,31 @@
           "titre": "Comptabilisation de l'achat sur facture de doit",
           "contenu": "L'écriture est identique à une facturation sans réduction (fiche 6) : l'achat est comptabilisé directement pour son net commercial, sans passer par un compte de réduction.",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["60.", "Achats de… (net commercial)", "HT", ""],
-              ["44566", "État, TVA déductible sur ABS", "TVA", ""],
-              ["401", "Fournisseurs (net à payer)", "", "TTC"]
+              [
+                "60.",
+                "Achats de… (net commercial)",
+                "HT",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS",
+                "TVA",
+                ""
+              ],
+              [
+                "401",
+                "Fournisseurs (net à payer)",
+                "",
+                "TTC"
+              ]
             ]
           }
         },
@@ -2636,11 +2730,31 @@
           "titre": "Comptabilisation de la vente sur facture de doit",
           "contenu": "Symétriquement, la vente est comptabilisée directement pour son net commercial.",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["411", "Clients (net à payer)", "TTC", ""],
-              ["70.", "Ventes… (net commercial)", "", "HT"],
-              ["44571", "État, TVA collectée", "", "TVA"]
+              [
+                "411",
+                "Clients (net à payer)",
+                "TTC",
+                ""
+              ],
+              [
+                "70.",
+                "Ventes… (net commercial)",
+                "",
+                "HT"
+              ],
+              [
+                "44571",
+                "État, TVA collectée",
+                "",
+                "TVA"
+              ]
             ]
           }
         },
@@ -2648,11 +2762,31 @@
           "titre": "Facture d'avoir chez l'acheteur (compte 609)",
           "contenu": "Une réduction obtenue après la facture initiale transite par le compte 609 (Rabais, remises et ristournes obtenus sur achats), qui fonctionne en sens inverse de son compte de rattachement (règle du 9 en 3e position). La TVA déjà déduite sur la part réduite est extournée. Exemple : retour de marchandises pour 200 € HT, TVA 20 %.",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["401", "Fournisseurs", "240,00", ""],
-              ["44566", "État, TVA déductible sur ABS (extournée)", "", "40,00"],
-              ["609", "RRR obtenus sur achats", "", "200,00"]
+              [
+                "401",
+                "Fournisseurs",
+                "240,00",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS (extournée)",
+                "",
+                "40,00"
+              ],
+              [
+                "609",
+                "RRR obtenus sur achats",
+                "",
+                "200,00"
+              ]
             ]
           }
         },
@@ -2660,11 +2794,31 @@
           "titre": "Facture d'avoir chez le vendeur (compte 709)",
           "contenu": "Symétriquement, une réduction accordée après la facture initiale transite par le compte 709 (Rabais, remises et ristournes accordés par l'entreprise). Le chiffre en 4e position précise la nature : 1 matières premières, 2 matières consommables, 7 marchandises. Exemple : retour de marchandises pour 200 € HT, TVA 20 %.",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["709", "RRR accordés sur ventes", "200,00", ""],
-              ["44571", "État, TVA collectée (extournée)", "40,00", ""],
-              ["411", "Clients", "", "240,00"]
+              [
+                "709",
+                "RRR accordés sur ventes",
+                "200,00",
+                ""
+              ],
+              [
+                "44571",
+                "État, TVA collectée (extournée)",
+                "40,00",
+                ""
+              ],
+              [
+                "411",
+                "Clients",
+                "",
+                "240,00"
+              ]
             ]
           }
         },
@@ -2672,22 +2826,60 @@
           "titre": "Exemple — rabais supplémentaire accordé après facture",
           "contenu": "Octroi d'un rabais supplémentaire de 2 % le 10/09/N sur l'achat d'ordinateurs facturé 15 680 € net commercial le 25/08/N (2 % × 15 680 = 313,60).",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["7097", "RRR accordés sur ventes de marchandises", "313,60", ""],
-              ["44571", "État, TVA collectée (extournée)", "62,72", ""],
-              ["411", "Clients", "", "376,32"]
+              [
+                "7097",
+                "RRR accordés sur ventes de marchandises",
+                "313,60",
+                ""
+              ],
+              [
+                "44571",
+                "État, TVA collectée (extournée)",
+                "62,72",
+                ""
+              ],
+              [
+                "411",
+                "Clients",
+                "",
+                "376,32"
+              ]
             ]
           }
         }
       ],
       "vocabulaire": [
-        { "terme": "Net commercial", "definition": "Montant HT de la facture diminué de toutes les réductions commerciales." },
-        { "terme": "Facture de doit", "definition": "Facture initiale ; les réductions y figurant ne sont jamais comptabilisées séparément." },
-        { "terme": "Facture d'avoir", "definition": "Facture émise après coup pour constater une réduction ou un retour, avec extourne de la TVA correspondante." },
-        { "terme": "Extourne", "definition": "Écriture qui annule la part de TVA devenue injustifiée suite à une réduction accordée postérieurement." },
-        { "terme": "Escompte de règlement", "definition": "Réduction financière (665 chez le vendeur, 765 chez l'acheteur) récompensant un paiement rapide ou comptant. Contrairement aux RRR, elle sert de base au calcul de la TVA (via le net financier)." },
-        { "terme": "Net financier", "definition": "Net commercial diminué de l'escompte de règlement ; c'est sur ce montant, et non sur le net commercial, que se calcule la TVA lorsqu'un escompte est accordé." }
+        {
+          "terme": "Net commercial",
+          "definition": "Montant HT de la facture diminué de toutes les réductions commerciales."
+        },
+        {
+          "terme": "Facture de doit",
+          "definition": "Facture initiale ; les réductions y figurant ne sont jamais comptabilisées séparément."
+        },
+        {
+          "terme": "Facture d'avoir",
+          "definition": "Facture émise après coup pour constater une réduction ou un retour, avec extourne de la TVA correspondante."
+        },
+        {
+          "terme": "Extourne",
+          "definition": "Écriture qui annule la part de TVA devenue injustifiée suite à une réduction accordée postérieurement."
+        },
+        {
+          "terme": "Escompte de règlement",
+          "definition": "Réduction financière (665 chez le vendeur, 765 chez l'acheteur) récompensant un paiement rapide ou comptant. Contrairement aux RRR, elle sert de base au calcul de la TVA (via le net financier)."
+        },
+        {
+          "terme": "Net financier",
+          "definition": "Net commercial diminué de l'escompte de règlement ; c'est sur ce montant, et non sur le net commercial, que se calcule la TVA lorsqu'un escompte est accordé."
+        }
       ],
       "questionsTypes": [
         "Calculer le net commercial d'une facture comportant plusieurs réductions en cascade",
@@ -2711,6 +2903,241 @@
             "corrige": "Rabais, remise et ristourne figurant sur la facture initiale ne donnent lieu à aucune écriture séparée : seul le net commercial est comptabilisé. Accordées après coup, elles transitent par une facture d'avoir et les comptes 609 (obtenus, chez l'acheteur) ou 709 (accordés, chez le vendeur), avec extourne de la TVA correspondante."
           }
         ]
+      }
+    },
+    {
+      "id": "ue9-ch9",
+      "numero": 9,
+      "titre": "Les emballages commerciaux consignés",
+      "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+      "pageManuel": 41,
+      "exercicesUrl": "../exercices/ue9.html",
+      "motsCles": [
+        "Boni sur reprise d'emballages",
+        "Consignation",
+        "Déconsignation",
+        "Emballage consigné",
+        "Emballage perdu",
+        "Mali sur emballages",
+        "Non-retour d'emballage"
+      ],
+      "utilite": {
+        "pourcentage": 12,
+        "niveau": "Modéré — mécanisme spécifique, moins systématique que la TVA ou les réductions commerciales",
+        "commentaire": "Ce chapitre tombe rarement comme dossier autonome, mais dès qu'un sujet met en scène une entreprise qui vend dans des contenants consignés (boissons, industrie agroalimentaire, etc.), les écritures de consignation/déconsignation sont un classique. Point d'actualité : le compte 6136 « Malis sur emballages » a été supprimé et remplacé par le compte 60262 pour les exercices ouverts à compter du 1er janvier 2025 (règlement ANC n°2022-06) — à utiliser systématiquement dans tes écritures désormais.",
+        "themesRecurrents": [
+          "Opérations courantes avec les tiers — 100 % des sujets",
+          "Opérations d'inventaire — 100 %",
+          "Immobilisations, amortissements et dépréciations — 92 %",
+          "Liquidation de la TVA — 85 %",
+          "Principes comptables et sources du droit comptable — 77 %"
+        ]
+      },
+      "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+      "notionsCles": [
+        {
+          "titre": "Emballages perdus vs emballages récupérables",
+          "contenu": "Un emballage perdu (carton, film plastique...) est vendu avec la marchandise et n'est jamais restitué : son coût est directement inclus dans le prix de vente ou d'achat, sans traitement comptable spécifique. Un emballage récupérable (casier, palette, fût...) reste la propriété du fournisseur : il est consigné au client contre un dépôt de garantie, à restituer contre remboursement de ce dépôt.",
+          "tableau": {
+            "colonnes": [
+              "Type d'emballage",
+              "Traitement"
+            ],
+            "lignes": [
+              [
+                "Emballage perdu",
+                "Coût inclus dans le prix de vente/d'achat, aucune écriture spécifique"
+              ],
+              [
+                "Emballage récupérable consigné",
+                "Dépôt de garantie enregistré aux comptes 4196 (vendeur) / 4096 (acheteur)"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "La consignation : un prêt, pas une vente",
+          "formule": "Consignation = dépôt de garantie (créance/dette), jamais une vente : donc pas de TVA sur le montant consigné",
+          "contenu": "La consignation s'apparente à un prêt : le fournisseur reste propriétaire de l'emballage et s'engage à rembourser le dépôt si le client le restitue. N'étant pas une vente, la consignation n'est jamais soumise à la TVA. Mnémotechnique : compte 4196 « Clients, dettes sur emballages et matériels consignés » chez le vendeur (créditeur) ; compte 4096 « Fournisseurs, créances pour emballages et matériel à rendre » chez l'acheteur (débiteur)."
+        },
+        {
+          "titre": "Exemple filé — consignation lors d'une vente",
+          "contenu": "Vente de marchandises 2 000 € HT (TVA 20 % = 400 €), livrées dans 3 casiers consignés à 100 € l'unité (300 € de dépôt, hors TVA). Total réglé : 2 700 €.",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "411",
+                "Clients",
+                "2 700,00",
+                ""
+              ],
+              [
+                "707",
+                "Ventes de marchandises",
+                "",
+                "2 000,00"
+              ],
+              [
+                "44571",
+                "État, TVA collectée",
+                "",
+                "400,00"
+              ],
+              [
+                "4196",
+                "Clients, dettes sur emballages consignés",
+                "",
+                "300,00"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Exemple filé — consignation chez l'acheteur",
+          "contenu": "Écriture miroir chez l'acheteur pour le même achat (2 000 € HT, TVA 20 %, 3 casiers consignés à 100 €).",
+          "tableau": {
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
+            "lignes": [
+              [
+                "607",
+                "Achats de marchandises",
+                "2 000,00",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS",
+                "400,00",
+                ""
+              ],
+              [
+                "4096",
+                "Fournisseurs, créances pour emballages à rendre",
+                "300,00",
+                ""
+              ],
+              [
+                "401",
+                "Fournisseurs",
+                "",
+                "2 700,00"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "La déconsignation au même prix",
+          "contenu": "Si les emballages sont restitués et repris au même prix que la consignation, l'opération est neutre : le dépôt est simplement remboursé, sans TVA ni gain ou perte. Suite de l'exemple : les 3 casiers sont rendus, remboursement intégral des 300 €.",
+          "tableau": {
+            "colonnes": [
+              "Cas",
+              "Chez le vendeur",
+              "Chez l'acheteur"
+            ],
+            "lignes": [
+              [
+                "Retour au même prix (300 €)",
+                "Débit 4196 (300,00) / Crédit 411 Clients (300,00)",
+                "Débit 401 Fournisseurs (300,00) / Crédit 4096 (300,00)"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "La déconsignation à prix inférieur : bonis et malis",
+          "formule": "Boni (vendeur, compte 7086) = Mali (acheteur, compte 60262) = Prix de consignation − Prix de reprise (HT), TVA due sur cet écart",
+          "contenu": "Si le prix de reprise est inférieur au prix de consignation, l'écart constitue un boni pour le vendeur (compte 7086 « Bonis sur reprises d'emballages consignés ») et un mali pour l'acheteur (compte 60262 « Malis sur emballages », qui a remplacé le compte 6136 depuis le 1ᵉʳ janvier 2025). Contrairement au dépôt initial, cet écart est soumis à TVA. Suite de l'exemple : les 3 casiers sont repris pour 270 € au lieu des 300 € consignés (écart de 30 € TTC = 25 € HT + 5 € de TVA).",
+          "tableau": {
+            "colonnes": [
+              "Cas",
+              "Chez le vendeur",
+              "Chez l'acheteur"
+            ],
+            "lignes": [
+              [
+                "Reprise à prix inférieur (270 € au lieu de 300 €)",
+                "Débit 4196 (300,00) / Crédit 411 Clients (270,00) + 7086 Boni (25,00) + 44571 TVA collectée (5,00)",
+                "Débit 60262 Mali (25,00) + 44566 TVA déductible (5,00) + 401 Fournisseurs (270,00) / Crédit 4096 (300,00)"
+              ]
+            ]
+          }
+        },
+        {
+          "titre": "Le non-retour de l'emballage consigné",
+          "contenu": "Si le client ne restitue jamais l'emballage, la consignation devient définitive et se transforme en cession : chez le vendeur, tout le dépôt devient un produit (compte 7088 « Autres produits des activités annexes »), avec TVA collectée sur ce montant. Chez l'acheteur, le dépôt devient une charge d'achat (compte 606, parfois détaillé en 60265 « Achats d'emballages récupérables non identifiables » selon les plans de comptes), avec TVA déductible correspondante. Suite de l'exemple : les 3 casiers ne sont jamais rendus (dépôt de 300 € définitivement acquis, soit 250 € HT + 50 € de TVA).",
+          "tableau": {
+            "colonnes": [
+              "Cas",
+              "Chez le vendeur",
+              "Chez l'acheteur"
+            ],
+            "lignes": [
+              [
+                "Non-retour définitif (dépôt de 300 € TTC)",
+                "Débit 4196 (300,00) / Crédit 7088 (250,00) + 44571 TVA collectée (50,00)",
+                "Débit 606 (250,00) + 44566 TVA déductible (50,00) / Crédit 4096 (300,00)"
+              ]
+            ]
+          }
+        }
+      ],
+      "vocabulaire": [
+        {
+          "terme": "Emballage perdu",
+          "definition": "Emballage non récupérable, dont le coût est inclus dans le prix de vente ou d'achat, sans écriture spécifique."
+        },
+        {
+          "terme": "Emballage récupérable (consigné)",
+          "definition": "Emballage restant la propriété du fournisseur, confié au client contre un dépôt de garantie (consignation) à restituer."
+        },
+        {
+          "terme": "Consignation",
+          "definition": "Dépôt de garantie versé par le client au fournisseur pour un emballage récupérable ; assimilé à un prêt, donc non soumis à TVA. Compte 4196 chez le vendeur (dette), compte 4096 chez l'acheteur (créance)."
+        },
+        {
+          "terme": "Déconsignation",
+          "definition": "Restitution de l'emballage consigné et remboursement du dépôt correspondant, au même prix ou à un prix inférieur (boni/mali)."
+        },
+        {
+          "terme": "Boni sur reprise d'emballages",
+          "definition": "Gain du vendeur (compte 7086) lorsque le prix de reprise d'un emballage consigné est inférieur au prix de consignation ; soumis à TVA."
+        },
+        {
+          "terme": "Mali sur emballages",
+          "definition": "Perte de l'acheteur (compte 60262, anciennement 6136 avant le 1ᵉʳ janvier 2025) lorsque le prix de reprise est inférieur à la consignation ; soumis à TVA."
+        },
+        {
+          "terme": "Non-retour d'emballage",
+          "definition": "Absence définitive de restitution : la consignation devient une cession taxable (compte 7088 chez le vendeur, compte d'achat chez l'acheteur)."
+        }
+      ],
+      "questionsTypes": [
+        "Distinguer emballage perdu et emballage récupérable consigné.",
+        "Justifier pourquoi la consignation initiale n'est pas soumise à TVA.",
+        "Comptabiliser la consignation d'un emballage chez le vendeur et chez l'acheteur.",
+        "Comptabiliser la déconsignation au même prix que la consignation.",
+        "Calculer et comptabiliser un boni (vendeur) et un mali (acheteur) lors d'une reprise à prix inférieur.",
+        "Comptabiliser le non-retour définitif d'un emballage consigné, chez le vendeur et chez l'acheteur."
+      ],
+      "annales": {
+        "note": "Ce chapitre est rarement un dossier à part entière, mais les écritures de consignation/déconsignation sont un classique dès qu'un sujet met en scène des emballages récupérables (agroalimentaire, boissons...). Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+        "questionsRedactionnellesRecurrentes": [
+          "Justifier l'absence de TVA sur la consignation initiale.",
+          "Distinguer boni et mali de déconsignation, et leur compte respectif.",
+          "Expliquer le traitement comptable du non-retour d'un emballage consigné."
+        ],
+        "entrees": []
       }
     }
   ]
