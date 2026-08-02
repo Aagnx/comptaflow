@@ -1,0 +1,401 @@
+
+Aucun élément sélectionné
+
+Aller au contenu
+Utiliser Gmail avec un lecteur d'écran
+
+1 sur 4 591
+(aucun objet)
+Boîte de réception
+
+Antoine Ginioux <antoine.ginioux@gmail.com>
+Pièces jointes
+21:40 (il y a 2 minutes)
+À moi
+
+
+
+Antoine GINIOUX 
+ 
+ 10 pièces jointes
+  •  Analysé par Gmail
+{
+  "id": "ue9-ch2",
+  "numero": 2,
+  "titre": "La réglementation et la normalisation comptables",
+  "axe": "Axe 1 — Introduction générale à la comptabilité",
+  "pageManuel": 13,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": [
+    "Classe",
+    "Harmonisation comptable",
+    "Normalisation comptable",
+    "PCG",
+    "Plan de comptes",
+    "Principes comptables",
+    "Sous-classe"
+  ],
+  "utilite": {
+    "pourcentage": 20,
+    "niveau": "Fort — chapitre théorique le plus rentable",
+    "commentaire": "C'est LE chapitre théorique à maîtriser. Les principes comptables sont une question rédactionnelle récurrente : on te donne une situation et tu dois citer ET justifier le principe appliqué. La thématique « principes comptables et sources du droit comptable » figure dans environ 77 % des sujets de 2014 à 2025. À connaître par cœur : les 10 principes et leur application, les 7 classes du PCG, et quelles normes s'appliquent selon le type de comptes.",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice interdite.",
+  "notionsCles": [
+    {
+      "titre": "Normalisation et harmonisation",
+      "contenu": "La normalisation comptable est un processus qui vise à imposer des normes pour encadrer les pratiques comptables. L'harmonisation comptable est un processus qui consiste à rapprocher des règles et pratiques comptables divergentes. Ce sont deux processus distincts mais complémentaires. Exemple : fixer qu'un chocolat contient au moins 35 % de cacao est une norme ; une directive qui met d'accord les États européens sur l'ajout de matières grasses végétales relève de l'harmonisation ; quand ces conditions s'imposent à tous, elles deviennent une norme européenne (normalisation)."
+    },
+    {
+      "titre": "La diversité des besoins des utilisateurs",
+      "contenu": "Établie selon un cadre unique, la comptabilité doit répondre aux besoins d'information de partenaires très différents :",
+      "tableau": {
+        "colonnes": [
+          "Utilisateurs",
+          "Informations utiles"
+        ],
+        "lignes": [
+          [
+            "Investisseurs / propriétaires",
+            "Rentabilité, risque et stratégie de l'entreprise"
+          ],
+          [
+            "Dirigeants",
+            "Mesure et contrôle de la performance"
+          ],
+          [
+            "Fournisseurs et autres créanciers",
+            "Solvabilité de l'entreprise"
+          ],
+          [
+            "Clients et autres débiteurs",
+            "Continuité d'exploitation"
+          ],
+          [
+            "Salariés",
+            "Continuité d'exploitation et rémunération (politique sociale, intéressement, participation)"
+          ],
+          [
+            "Bailleurs de fonds (institutions financières)",
+            "Stabilité financière, choix de la structure financière"
+          ],
+          [
+            "État (administrations fiscales et sociales)",
+            "Calcul des charges fiscales et sociales"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Des règles comptables propres à chaque pays",
+      "contenu": "Les règles comptables ne sont pas les mêmes partout : deux grandes traditions coexistent.",
+      "tableau": {
+        "colonnes": [
+          "Modèle comptable",
+          "Approche dominante"
+        ],
+        "lignes": [
+          [
+            "Type continental (ex. France)",
+            "Juridique et patrimoniale"
+          ],
+          [
+            "Type anglo-saxon",
+            "Économique et financière"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "De la réalité économique à l'information comptable",
+      "contenu": "L'information comptable n'est pas un décalque neutre de la réalité : sa construction dépend de la mise en pratique des règles (appréciations, choix, présentation). D'où une part de subjectivité, que la normalisation cherche justement à réduire.",
+      "visuel": {
+        "type": "flux",
+        "entree": "Réalité économique",
+        "sortie": "Informations comptables",
+        "etapes": [
+          {
+            "label": "Appréciations",
+            "couleur": "blue"
+          },
+          {
+            "label": "Choix comptables",
+            "couleur": "teal"
+          },
+          {
+            "label": "Manipulations comptables",
+            "couleur": "violet"
+          }
+        ]
+      }
+    },
+    {
+      "titre": "La recherche d'un langage commun",
+      "contenu": "Les normes comptables définissent un cadre pour traduire la réalité économique en comptabilité : la normalisation vise à codifier ce langage. Pour que les utilisateurs et les pays partagent un langage commun, l'harmonisation cherche à rendre compatibles les différentes normes et pratiques."
+    },
+    {
+      "titre": "Les normes applicables en France",
+      "contenu": "La norme dépend du type de comptes établis :",
+      "tableau": {
+        "colonnes": [
+          "Type de comptes",
+          "Normes applicables"
+        ],
+        "lignes": [
+          [
+            "Comptes individuels",
+            "Plan comptable général (PCG)"
+          ],
+          [
+            "Comptes consolidés — groupe coté",
+            "Normes internationales IAS/IFRS (obligatoire)"
+          ],
+          [
+            "Comptes consolidés — groupe non coté",
+            "Directives européennes ou, sur option, IAS/IFRS"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le Plan comptable général (PCG)",
+      "reference": "Règlement ANC 2014-03, modifié par 2022-06",
+      "contenu": "Le PCG présente les règles et principes d'établissement et de présentation des comptes. Il précise : les objets et principes de la comptabilité ; la définition des actifs, passifs, produits et charges ; les règles de comptabilisation et d'évaluation ; la tenue, la structure et le fonctionnement des comptes ; la définition des documents de synthèse. Il organise enfin le plan des comptes en classes. À jour : la réforme du PCG (règlement ANC 2022-06, applicable depuis le 1ᵉʳ janvier 2025) a modernisé la nomenclature et la présentation des états financiers, mais les 7 classes et les principes comptables restent inchangés."
+    },
+    {
+      "titre": "Les 7 classes de comptes du PCG",
+      "contenu": "Chaque classe est subdivisée en sous-classes, et l'entreprise adapte son propre plan de comptes. Les classes 1 à 5 sont les comptes de bilan ; les classes 6 et 7 sont les comptes de gestion (charges et produits).",
+      "tableau": {
+        "colonnes": [
+          "Classe",
+          "Nature des comptes"
+        ],
+        "lignes": [
+          [
+            "Classe 1",
+            "Comptes de capitaux"
+          ],
+          [
+            "Classe 2",
+            "Comptes d'immobilisations"
+          ],
+          [
+            "Classe 3",
+            "Comptes de stocks"
+          ],
+          [
+            "Classe 4",
+            "Comptes de tiers"
+          ],
+          [
+            "Classe 5",
+            "Comptes financiers"
+          ],
+          [
+            "Classe 6",
+            "Comptes de charges"
+          ],
+          [
+            "Classe 7",
+            "Comptes de produits"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les 10 principes comptables",
+      "contenu": "La comptabilité doit fournir une image fidèle de la réalité économique, établie selon les principes suivants (à connaître par cœur) :",
+      "tableau": {
+        "colonnes": [
+          "Principe",
+          "Définition"
+        ],
+        "lignes": [
+          [
+            "Régularité",
+            "Conformité aux règles et procédures en vigueur"
+          ],
+          [
+            "Sincérité",
+            "Appréciation objective et de bonne foi de la réalité économique"
+          ],
+          [
+            "Continuité d'exploitation",
+            "Présomption de poursuite d'activité (à distinguer de la liquidation)"
+          ],
+          [
+            "Indépendance des exercices",
+            "Rattachement des charges et des produits à l'exercice concerné"
+          ],
+          [
+            "Non-compensation",
+            "Interdiction de compenser actif/passif et charges/produits"
+          ],
+          [
+            "Permanence des méthodes",
+            "Non-modification des règles et options appliquées, sauf cas exceptionnel justifié"
+          ],
+          [
+            "Prudence",
+            "Prise en compte des événements futurs défavorables connus à la clôture"
+          ],
+          [
+            "Intangibilité du bilan d'ouverture",
+            "Bilan de clôture N-1 = bilan d'ouverture N"
+          ],
+          [
+            "Coût historique",
+            "Valorisation au coût d'entrée, sans tenir compte de l'inflation ni de l'appréciation"
+          ],
+          [
+            "Importance relative",
+            "Prise en compte des seules informations pertinentes et utiles aux documents comptables"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Reconnaître un principe (exemples d'application)",
+      "contenu": "L'exercice classique de l'examen : une situation est donnée, il faut identifier le principe. Entraîne-toi avec ces cas types :",
+      "tableau": {
+        "colonnes": [
+          "Situation",
+          "Principe appliqué"
+        ],
+        "lignes": [
+          [
+            "On ne constate pas les plus-values latentes sur titres, mais on enregistre une charge en cas de moins-value",
+            "Prudence"
+          ],
+          [
+            "Impossible de changer de mode de comptabilisation selon le résultat voulu (sauf changement justifié, exceptionnel)",
+            "Permanence des méthodes"
+          ],
+          [
+            "Acomptes versés et dettes fournisseurs figurent séparément à l'actif et au passif",
+            "Non-compensation"
+          ],
+          [
+            "On ne peut pas imputer sur l'ouverture des comptes des erreurs constatées après la clôture précédente",
+            "Intangibilité du bilan d'ouverture"
+          ],
+          [
+            "Intérêts d'un emprunt de janvier N payés en N+1 : rattachés à l'exercice N",
+            "Indépendance des exercices"
+          ],
+          [
+            "Impossible de tenir compte de l'inflation pour réévaluer un bien en fin d'exercice",
+            "Coût historique"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le normalisateur : l'Autorité des normes comptables (ANC)",
+      "contenu": "L'ANC (créée en 2009) est le normalisateur comptable français. Ses missions : édicter les prescriptions comptables générales et sectorielles que doivent respecter les personnes tenues d'établir des documents comptables ; donner un avis sur les textes réglementaires contenant des dispositions comptables ; participer à l'élaboration des normes internationales et représenter la France ; conduire des travaux d'analyse et émettre des recommandations. Conseil de l'expert : suivre de près l'évolution de la réglementation (lettres d'information de l'ANC, doctrine comptable)."
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "Normalisation comptable",
+      "definition": "Processus visant à imposer des normes pour encadrer les pratiques comptables."
+    },
+    {
+      "terme": "Harmonisation comptable",
+      "definition": "Processus consistant à rapprocher des règles et pratiques comptables divergentes."
+    },
+    {
+      "terme": "Principes comptables",
+      "definition": "Conventions fondamentales garantissant une image fidèle (prudence, indépendance des exercices, coût historique...)."
+    },
+    {
+      "terme": "PCG",
+      "definition": "Plan comptable général : référentiel des règles d'établissement et de présentation des comptes en France."
+    },
+    {
+      "terme": "Classe",
+      "definition": "Premier niveau du plan de comptes du PCG, numérotée de 1 à 7 (+ 8 et 9 pour cas particuliers)."
+    },
+    {
+      "terme": "Sous-classe",
+      "definition": "Subdivision d'une classe de comptes."
+    },
+    {
+      "terme": "Plan de comptes",
+      "definition": "Liste des comptes utilisés par une entreprise, adaptée à partir du PCG."
+    },
+    {
+      "terme": "Comptes individuels",
+      "definition": "Comptes d'une entité seule ; en France, établis selon le PCG."
+    },
+    {
+      "terme": "Comptes consolidés",
+      "definition": "Comptes d'un groupe ; IAS/IFRS obligatoires si le groupe est coté."
+    },
+    {
+      "terme": "IAS / IFRS",
+      "definition": "Normes comptables internationales (International Accounting Standards / International Financial Reporting Standards)."
+    },
+    {
+      "terme": "Comptabilité continentale",
+      "definition": "Modèle d'approche juridique et patrimoniale (ex. France)."
+    },
+    {
+      "terme": "Comptabilité anglo-saxonne",
+      "definition": "Modèle d'approche économique et financière."
+    },
+    {
+      "terme": "ANC",
+      "definition": "Autorité des normes comptables : normalisateur comptable français (créée en 2009)."
+    },
+    {
+      "terme": "Coût historique",
+      "definition": "Valorisation d'un élément à son coût d'entrée, sans réévaluation ultérieure."
+    },
+    {
+      "terme": "Juste valeur",
+      "definition": "Valorisation à la valeur de marché ; logique privilégiée par les IAS/IFRS, par opposition au coût historique."
+    },
+    {
+      "terme": "Cadre conceptuel",
+      "definition": "Ensemble de principes fondateurs sous-tendant les normes (notamment celui de l'IASB pour les IFRS)."
+    }
+  ],
+  "questionsTypes": [
+    "Distinguer la normalisation et l'harmonisation comptables.",
+    "Citer et définir les principaux principes comptables.",
+    "Une situation est donnée : identifier et justifier le principe comptable appliqué.",
+    "Quelles normes s'appliquent aux comptes individuels, aux comptes consolidés cotés et non cotés ?",
+    "Distinguer le coût historique de la juste valeur.",
+    "Un terrain a doublé de valeur : peut-on constater cette hausse en comptabilité ? Justifier.",
+    "Peut-on renoncer à amortir pour éviter un résultat négatif ? Justifier.",
+    "Distinguer la comptabilité de type continental et de type anglo-saxon.",
+    "Présenter le rôle et les missions de l'ANC.",
+    "Citer les 7 classes de comptes du PCG."
+  ],
+  "annales": {
+    "note": "Ce chapitre est rarement un dossier entier, mais ses notions — surtout les principes comptables — reviennent en questions rédactionnelles réparties dans les dossiers. Thème présent dans environ 77 % des sujets. Ajoute ici tes propres annales au fil des révisions (année + question + corrigé).",
+    "questionsRedactionnellesRecurrentes": [
+      "Identifier et justifier le principe comptable appliqué à une situation.",
+      "Distinguer normalisation et harmonisation.",
+      "Normes applicables selon le type de comptes (individuels / consolidés).",
+      "Coût historique vs juste valeur."
+    ],
+    "entrees": [
+      {
+        "annee": "2023",
+        "question": "Identifier et justifier le principe comptable applicable à la régularisation de la consommation d'électricité de décembre (facture reçue l'exercice suivant).",
+        "corrige": "Principe d'indépendance des exercices : les charges se rattachent à l'exercice qu'elles concernent. La consommation de décembre N est une charge de N, constatée via une charge à payer même si la facture arrive en N+1."
+      }
+    ]
+  }
+}
+2.txt
+Affichage de 2.txt en cours...
