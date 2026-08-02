@@ -3138,7 +3138,9 @@
           "Expliquer le traitement comptable du non-retour d'un emballage consigné."
         ],
         "entrees": []
-      },{
+      }
+      },
+    {
       "id": "ue9-ch10",
       "numero": 10,
       "titre": "Les frais accessoires liés aux achats et aux ventes",
