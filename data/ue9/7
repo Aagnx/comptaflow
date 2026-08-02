@@ -1,0 +1,538 @@
+
+Aucun élément sélectionné
+
+Aller au contenu
+Utiliser Gmail avec un lecteur d'écran
+
+1 sur 4 591
+(aucun objet)
+Boîte de réception
+
+Antoine Ginioux <antoine.ginioux@gmail.com>
+Pièces jointes
+21:40 (il y a 4 minutes)
+À moi
+
+
+
+Antoine GINIOUX 
+ 
+ 10 pièces jointes
+  •  Analysé par Gmail
+{
+  "id": "ue9-ch7",
+  "numero": 7,
+  "titre": "Les opérations d'achat et de vente",
+  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+  "pageManuel": 33,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": [
+    "Achat",
+    "Facture",
+    "Facture d'avoir",
+    "Facture de doit",
+    "Système d'information",
+    "Vente"
+  ],
+  "utilite": {
+    "pourcentage": 22,
+    "niveau": "Fort — cœur des opérations courantes avec les tiers",
+    "commentaire": "Les écritures d'achat et de vente de biens et de services sont le socle de la quasi-totalité des dossiers d'examen : le thème « opérations courantes avec les tiers » apparaît dans 100 % des sujets 2014-2025. Les mentions obligatoires de la facture et les retours (factures d'avoir) sont des questions rédactionnelles classiques. Le point le plus piégeux reste la distinction entre une vente de biens (TVA exigible dès la livraison) et une prestation de services sans option pour les débits (TVA exigible seulement à l'encaissement).",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "notionsCles": [
+    {
+      "titre": "La facture",
+      "contenu": "La facture est la pièce comptable justificative précisant les conditions d'achat et de vente des biens et services échangés. On distingue les factures de doit, émises lors d'une transaction, des factures d'avoir, émises lors d'un retour de biens aux fournisseurs ou pour une réduction accordée après la facture d'origine."
+    },
+    {
+      "titre": "Les mentions obligatoires d'une facture",
+      "contenu": "Une facture doit comporter un certain nombre de mentions obligatoires, réparties en trois zones :",
+      "tableau": {
+        "colonnes": [
+          "Partie de la facture",
+          "Mentions obligatoires"
+        ],
+        "lignes": [
+          [
+            "En-tête — informations sur le vendeur",
+            "Nom ou dénomination sociale, adresse, forme juridique et montant du capital, numéro SIRET ou SIREN, etc."
+          ],
+          [
+            "En-tête — informations sur la facture",
+            "Mention « facture », mention « doit » ou « avoir », numéro de la facture (séquence chronologique et continue), date de la facture."
+          ],
+          [
+            "En-tête — informations sur l'acheteur",
+            "Nom et adresse de facturation du client, numéro d'identification intracommunautaire en cas de livraison intracommunautaire, adresse de livraison si différente de l'adresse de facturation."
+          ],
+          [
+            "En-tête — nature des opérations",
+            "Livraison de biens, prestation de services, ou opérations mixtes."
+          ],
+          [
+            "Corps — informations sur les transactions",
+            "Désignation des biens et services, quantités, prix unitaire hors taxe, frais accessoires éventuels, réductions éventuelles, taux de TVA applicable, montant HT et montant de TVA pour chaque taux, net à payer."
+          ],
+          [
+            "Pied — modalités de paiement et TVA",
+            "Date du règlement, taux des pénalités exigibles, conditions d'escompte, mention « option TVA d'après débits » si l'entreprise a opté pour ce régime."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les opérations d'achat",
+      "contenu": "Un achat est une acquisition d'un bien ou d'un service à titre onéreux."
+    },
+    {
+      "titre": "Typologie des comptes d'achats",
+      "contenu": "Le compte d'achat utilisé dépend de la nature du bien ou du service acheté :",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Contenu"
+        ],
+        "lignes": [
+          [
+            "601",
+            "Achats stockés – Matières premières (et fournitures) : objets et substances plus ou moins élaborés destinés à entrer dans la composition des produits traités ou fabriqués."
+          ],
+          [
+            "602",
+            "Achats stockés – Autres approvisionnements : objets et substances consommés au premier usage ou rapidement, qui concourent au traitement, à la fabrication ou à l'exploitation, sans entrer dans la composition des produits (sous-comptes : 6021 Matières consommables, 6022 Fournitures consommables, 6026 Emballages)."
+          ],
+          [
+            "604",
+            "Achats d'études et prestations de services : sous-traitance de services immatériels qui s'intègrent directement dans le cycle de production."
+          ],
+          [
+            "605",
+            "Achats de matériel, équipements et travaux : sous-traitance de services matériels qui s'intègrent directement dans le cycle de production."
+          ],
+          [
+            "606",
+            "Achats non stockés de matières et fournitures."
+          ],
+          [
+            "607",
+            "Achats de marchandises : tout ce que l'entreprise achète pour le revendre en l'état."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La comptabilisation des achats",
+      "contenu": "L'écriture type d'un achat est la suivante :",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "60.",
+            "Achats de…",
+            "HT",
+            ""
+          ],
+          [
+            "44566",
+            "État, TVA déductible sur ABS",
+            "TVA",
+            ""
+          ],
+          [
+            "401",
+            "Fournisseurs",
+            "",
+            "TTC"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Exemple — achat d'ordinateurs",
+      "contenu": "Achat à crédit de 20 ordinateurs : 15 000 € HT, TVA : 20 %, le 25/08/N.",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "607",
+            "Achats de marchandises",
+            "15 000,00",
+            ""
+          ],
+          [
+            "44566",
+            "État, TVA déductible sur ABS",
+            "3 000,00",
+            ""
+          ],
+          [
+            "401",
+            "Fournisseurs",
+            "",
+            "18 000,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les opérations de vente",
+      "contenu": "Une vente est une cession d'un bien ou d'un service à titre onéreux."
+    },
+    {
+      "titre": "Typologie des comptes de ventes",
+      "contenu": "Le compte de vente utilisé dépend de la nature du bien ou du service vendu :",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Contenu"
+        ],
+        "lignes": [
+          [
+            "701",
+            "Ventes de produits finis : produits ayant atteint un stade d'achèvement définitif dans le cycle de production."
+          ],
+          [
+            "702",
+            "Ventes de produits intermédiaires : produits ayant atteint un stade d'achèvement mais destinés à entrer dans une nouvelle phase du cycle de production."
+          ],
+          [
+            "703",
+            "Ventes de produits résiduels : produits constitués par les déchets et rebuts de fabrication."
+          ],
+          [
+            "704",
+            "Travaux : activité de construction immobilière."
+          ],
+          [
+            "705",
+            "Études : prestations de services."
+          ],
+          [
+            "706",
+            "Prestations de services."
+          ],
+          [
+            "707",
+            "Ventes de marchandises : cession de biens achetés par l'entreprise et revendus en l'état."
+          ],
+          [
+            "708",
+            "Produits des activités annexes, ne constituant pas l'activité principale de l'entreprise."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La comptabilisation des ventes",
+      "contenu": "L'écriture type d'une vente est la suivante :",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "411",
+            "Clients",
+            "TTC",
+            ""
+          ],
+          [
+            "70.",
+            "Ventes…",
+            "",
+            "HT"
+          ],
+          [
+            "44571",
+            "État, TVA collectée",
+            "",
+            "TVA"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Exemple — vente de costumes",
+      "contenu": "Vente à crédit de cinq costumes (non produits par l'entreprise) : 2 000 € HT, TVA : 20 %, le 25/08/N.",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "411",
+            "Clients",
+            "2 400,00",
+            ""
+          ],
+          [
+            "707",
+            "Ventes de marchandises",
+            "",
+            "2 000,00"
+          ],
+          [
+            "44571",
+            "État, TVA collectée",
+            "",
+            "400,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les retours d'achats et de ventes",
+      "contenu": "Lors d'un désaccord entre le fournisseur et le client, il peut être entendu qu'une partie des achats soit retournée au fournisseur. Le fournisseur établit alors une facture d'avoir. Les écritures initiales concernant les biens retournés sont contrepassées dans les comptes de l'entreprise fournisseur et dans ceux de l'entreprise cliente."
+    },
+    {
+      "titre": "Exemple — retour de marchandises (chez le fournisseur)",
+      "contenu": "Retour de trois costumes vendus le 25/08/N, retourné le 28/08/N, montant du retour 1 000 € HT.",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "707",
+            "Ventes de marchandises",
+            "1 000,00",
+            ""
+          ],
+          [
+            "44571",
+            "État, TVA collectée",
+            "200,00",
+            ""
+          ],
+          [
+            "411",
+            "Clients",
+            "",
+            "1 200,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Cas particulier — prestations de services sans option pour les débits",
+      "contenu": "Pour les prestations de services, en l'absence d'option pour la TVA sur les débits (cf. fiche 5), la TVA n'est exigible qu'à l'encaissement du prix. La comptabilisation se fait donc en deux temps : à la facturation, la TVA est enregistrée dans un compte d'attente ; à l'encaissement, elle est transférée vers le compte de TVA définitif."
+    },
+    {
+      "titre": "Chez le vendeur — facturation puis encaissement d'une prestation",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "411",
+            "Clients (à la facturation)",
+            "TTC",
+            ""
+          ],
+          [
+            "706",
+            "Prestations de services",
+            "",
+            "HT"
+          ],
+          [
+            "44574",
+            "État, TVA en attente (régularisation)",
+            "",
+            "TVA"
+          ],
+          [
+            "512",
+            "Banques (à l'encaissement)",
+            "TTC",
+            ""
+          ],
+          [
+            "44574",
+            "État, TVA en attente (régularisation)",
+            "TVA",
+            ""
+          ],
+          [
+            "411",
+            "Clients",
+            "",
+            "TTC"
+          ],
+          [
+            "44571",
+            "État, TVA collectée",
+            "",
+            "TVA"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Chez l'acheteur — facturation puis paiement d'une prestation",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "6155",
+            "Charge de services, ex. entretien (à la facturation)",
+            "HT",
+            ""
+          ],
+          [
+            "44586",
+            "État, TVA déductible en attente",
+            "TVA",
+            ""
+          ],
+          [
+            "401",
+            "Fournisseurs",
+            "",
+            "TTC"
+          ],
+          [
+            "401",
+            "Fournisseurs (au paiement)",
+            "TTC",
+            ""
+          ],
+          [
+            "44566",
+            "État, TVA déductible sur ABS",
+            "TVA",
+            ""
+          ],
+          [
+            "44586",
+            "État, TVA déductible en attente",
+            "",
+            "TVA"
+          ],
+          [
+            "512",
+            "Banques",
+            "",
+            "TTC"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Astuce : l'option pour les débits",
+      "contenu": "Si le prestataire de services a opté pour le régime de la TVA sur les débits (cf. fiche 5), la TVA devient exigible dès la facturation : la comptabilisation redevient alors classique, en un seul temps, exactement comme pour un achat ou une vente de biens."
+    },
+    {
+      "titre": "Le + de l'expert",
+      "contenu": "Vous devez connaître par cœur les comptes de ventes et d'achats ainsi que les comptes clients, fournisseurs, TVA collectée et TVA déductible et les schémas de comptabilisation. Ces enregistrements sont très courants."
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "Facture de doit",
+      "definition": "Facture émise lors d'une transaction (achat ou vente) courante."
+    },
+    {
+      "terme": "Facture d'avoir",
+      "definition": "Facture rectificative émise lors d'un retour de biens ou d'une réduction accordée après la facture initiale."
+    },
+    {
+      "terme": "Système d'information",
+      "definition": "En comptabilité, système permettant de refléter les opérations de l'entreprise et sa situation."
+    },
+    {
+      "terme": "Achat",
+      "definition": "Acquisition d'un bien ou d'un service à titre onéreux."
+    },
+    {
+      "terme": "Vente",
+      "definition": "Cession d'un bien ou d'un service à titre onéreux."
+    },
+    {
+      "terme": "Achats stockés",
+      "definition": "Achats de matières ou marchandises destinés à figurer en stock avant leur consommation ou leur revente (comptes 601, 602, 607)."
+    },
+    {
+      "terme": "Achats non stockés",
+      "definition": "Achats de matières ou fournitures non destinés à être stockés, consommés immédiatement (compte 606)."
+    },
+    {
+      "terme": "Produits intermédiaires",
+      "definition": "Produits ayant atteint un stade d'achèvement mais destinés à entrer dans une nouvelle phase du cycle de production (compte 702)."
+    },
+    {
+      "terme": "Produits résiduels",
+      "definition": "Déchets et rebuts de fabrication (compte 703)."
+    },
+    {
+      "terme": "Retour de marchandises",
+      "definition": "Renvoi de biens au fournisseur, donnant lieu à une facture d'avoir et à la contrepassation des écritures initiales."
+    },
+    {
+      "terme": "TVA en attente (régularisation)",
+      "definition": "Compte transitoire utilisé chez le vendeur pour constater la TVA d'une prestation de services facturée mais non encore encaissée."
+    },
+    {
+      "terme": "TVA déductible en attente",
+      "definition": "Compte transitoire utilisé chez l'acheteur pour constater la TVA d'une prestation de services facturée mais non encore payée."
+    }
+  ],
+  "questionsTypes": [
+    "Définir la facture et distinguer facture de doit et facture d'avoir.",
+    "Citer les mentions obligatoires d'une facture.",
+    "Distinguer les comptes 601, 602, 604, 605, 606 et 607 selon la nature de l'achat.",
+    "Distinguer les comptes 701 à 708 selon la nature de la vente.",
+    "Passer les écritures d'achat et de vente de biens, chez le vendeur et chez l'acheteur.",
+    "Passer l'écriture d'un retour d'achat ou de vente (facture d'avoir).",
+    "Expliquer pourquoi la comptabilisation d'une prestation de services diffère de celle d'un bien, en l'absence d'option pour les débits.",
+    "Passer les écritures de facturation puis d'encaissement (ou de paiement) d'une prestation de services sans option pour les débits."
+  ],
+  "annales": {
+    "note": "Les écritures d'achat et de vente, ainsi que les retours (factures d'avoir), sont mobilisées dans la quasi-totalité des dossiers d'opérations courantes (100 % des sujets 2014-2025). Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "questionsRedactionnellesRecurrentes": [
+      "Passer l'écriture d'une vente ou d'un achat de biens.",
+      "Passer l'écriture d'un retour d'achat ou de vente.",
+      "Citer les mentions obligatoires d'une facture.",
+      "Passer les écritures d'une prestation de services sans option pour les débits (facturation puis encaissement/paiement)."
+    ],
+    "entrees": []
+  }
+}
+7.json
+Affichage de 5.json en cours...
