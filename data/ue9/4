@@ -1,0 +1,353 @@
+
+Aucun élément sélectionné
+
+Aller au contenu
+Utiliser Gmail avec un lecteur d'écran
+
+1 sur 4 591
+(aucun objet)
+Boîte de réception
+
+Antoine Ginioux <antoine.ginioux@gmail.com>
+Pièces jointes
+21:40 (il y a 2 minutes)
+À moi
+
+
+
+Antoine GINIOUX 
+ 
+ 10 pièces jointes
+  •  Analysé par Gmail
+{
+  "id": "ue9-ch4",
+  "numero": 4,
+  "titre": "La classification comptable : actif, passif, charge, produit",
+  "axe": "Axe 2 — Appréhender la méthode comptable",
+  "pageManuel": 21,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": [
+    "Actif",
+    "Charge",
+    "Passif",
+    "Produit"
+  ],
+  "utilite": {
+    "pourcentage": 15,
+    "niveau": "Modéré à fort — définitions mobilisées dans presque tous les dossiers",
+    "commentaire": "Ce chapitre pose les quatre briques de base (actif, passif, charge, produit) que tu vas devoir classer correctement dans chaque dossier de l'examen. L'erreur la plus fréquente : confondre un actif et une charge (ex. un investissement vs une dépense courante). Les critères de définition du passif externe et la distinction dette/provision/charge à payer reviennent régulièrement dans les questions rédactionnelles. À maîtriser en réflexe avant les dossiers d'écritures courantes.",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "notionsCles": [
+    {
+      "titre": "L'actif",
+      "contenu": "L'actif correspond aux éléments identifiables et contrôlés par l'entreprise et qui concourent à son activité."
+    },
+    {
+      "titre": "Critères de définition d'un actif",
+      "contenu": "Pour être qualifié d'actif, un élément doit remplir trois critères de définition :",
+      "tableau": {
+        "colonnes": [
+          "Critère",
+          "Contenu"
+        ],
+        "lignes": [
+          [
+            "Élément identifiable",
+            "Séparable des activités de l'entreprise (ex. dépôt d'un brevet) ; résultant d'un droit légal ou contractuel (ex. droits logiciels)."
+          ],
+          [
+            "Élément contrôlé par l'entreprise",
+            "Maîtrise par l'entreprise des avantages économiques générés par le bien ; prise en charge par l'entreprise de l'essentiel des risques attachés au bien (ex. agencement d'un immeuble loué)."
+          ],
+          [
+            "Susceptible de procurer des avantages économiques futurs",
+            "Procurer un potentiel de production ; offrir une possibilité de conversion en trésorerie ; permettre une réduction des sorties de trésoreries ; présenter un caractère indispensable à la réalisation des avantages économiques futurs d'autres actifs."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Critères de comptabilisation d'un actif",
+      "contenu": "Un élément qui répond aux critères de définition n'est comptabilisé à l'actif que s'il remplit en plus deux critères de comptabilisation :",
+      "tableau": {
+        "colonnes": [
+          "Critère",
+          "Contenu"
+        ],
+        "lignes": [
+          [
+            "Avantages bénéficiant à l'entreprise",
+            "Critère satisfait si le critère de contrôle est lui-même satisfait."
+          ],
+          [
+            "Coût ou valeur mesurable avec une fiabilité suffisante",
+            "Pour les biens acquis : identification du coût d'entrée à l'aide des pièces attestant la transaction d'échanges (ex. facture). Pour les biens produits : identification du coût d'entrée à l'aide des pièces attestant les biens et services nécessaires à la production."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Typologie des actifs",
+      "contenu": "On distingue les actifs immobilisés, emplois permanents de l'entreprise, des actifs circulants, emplois temporaires.",
+      "tableau": {
+        "colonnes": [
+          "Catégorie",
+          "Type",
+          "Définition"
+        ],
+        "lignes": [
+          [
+            "Actifs immobilisés — emplois permanents",
+            "Immobilisation",
+            "Actif dont l'entreprise attend qu'il soit utilisé au-delà de l'exercice en cours, destiné à être utilisé dans la production ou la fourniture de biens et services, loué à des tiers, ou affecté à la gestion interne (ex. matériel de transports)."
+          ],
+          [
+            "Actifs circulants — emplois temporaires",
+            "Stocks",
+            "Actif destiné à être vendu dans le cours normal de l'activité, ou consommé dans le processus de production ou de prestation de services (ex. stocks de marchandises)."
+          ],
+          [
+            "Actifs circulants — emplois temporaires",
+            "Créances",
+            "Droit que détient l'entreprise à l'encontre d'un tiers à la suite de la fourniture d'un bien ou service qui n'a pas été réglé comptant (ex. créance clients)."
+          ],
+          [
+            "Actifs circulants — emplois temporaires",
+            "Disponibilités",
+            "Actif monétaire ou qui peut être transformé en monnaie sans nuire à l'activité de l'entreprise et dans un bref délai (ex. valeurs mobilières de placement)."
+          ],
+          [
+            "Actifs circulants — emplois temporaires",
+            "Comptes de régularisation",
+            "Charges constatées d'avance : actif dont l'utilisation est ultérieure à l'exercice."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le passif",
+      "contenu": "Le passif représente les ressources de l'entreprise lui permettant de disposer de son patrimoine économique, et les obligations sous-jacentes à son activité. Se distinguent le passif externe et les capitaux propres. Les capitaux propres correspondent essentiellement aux ressources fournies par l'exploitant, les associés ou les actionnaires de l'entreprise, et aux résultats générés par l'entreprise."
+    },
+    {
+      "titre": "Les critères de définition du passif externe",
+      "contenu": "Le passif externe doit répondre à trois critères de définition :",
+      "tableau": {
+        "colonnes": [
+          "Critère",
+          "Détail"
+        ],
+        "lignes": [
+          [
+            "Une obligation de droit ou de fait de l'entreprise à l'égard d'un tiers existant à la clôture de l'exercice",
+            "Obligation légale (ex. impôt dû à l'État), réglementaire (ex. frais de déplacements), contractuelle (ex. dettes fournisseurs), induite par des pratiques antérieures, déduite de la politique menée par l'entreprise, ou découlant d'engagements publics (ex. garantie « satisfait ou remboursé »)."
+          ],
+          [
+            "… dont il est probable ou certain qu'elle provoquera une sortie de ressources au bénéfice de ces tiers…",
+            "Dépense qui concourt à l'extinction de l'obligation (ex. remboursement du capital emprunté)."
+          ],
+          [
+            "… sans contrepartie au moins équivalente attendue.",
+            "Absence de bénéfice d'avantages économiques (ex. au moment du remboursement du capital emprunté, l'entreprise n'obtient rien en retour)."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Exemples et typologie du passif externe",
+      "contenu": "Si l'entreprise sollicite un emprunt auprès d'une banque, elle l'inscrit dans son passif : l'emprunt lui apporte une ressource mais aussi une obligation de remboursement sans contrepartie de la banque, c'est un passif externe. À l'inverse, si l'entreprise bénéficie d'un don, celui-ci lui apporte une ressource mais elle n'a pas d'obligation ni de sortie de ressources au bénéfice du donateur : le don n'est pas un passif externe.",
+      "tableau": {
+        "colonnes": [
+          "Type",
+          "Définition"
+        ],
+        "lignes": [
+          [
+            "Dette",
+            "Passif certain dont l'échéance et le montant sont fixés de façon précise (ex. dettes financières)."
+          ],
+          [
+            "Provisions",
+            "Passif dont l'échéance ou le montant ne sont pas fixés de façon précise mais que l'on peut estimer de façon fiable (ex. provisions pour litiges)."
+          ],
+          [
+            "Charges à payer",
+            "Passif dont l'échéance ou le montant ne sont pas fixés de façon précise mais que l'on peut estimer de façon plus incertaine que pour les provisions."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les charges",
+      "contenu": "Une charge correspond à une consommation de biens et services par l'entreprise au cours de son activité. C'est un emploi définitif, c'est-à-dire une somme versée ou à verser en contrepartie de biens ou services consommés par l'entreprise, en exécution d'une obligation légale ou, exceptionnellement, sans contrepartie. Exemple : l'acquisition d'un véhicule est inscrite dans les actifs, tandis que l'achat du carburant nécessaire au véhicule est inscrit dans les charges."
+    },
+    {
+      "titre": "Typologie de charges",
+      "contenu": "On distingue trois types de charges selon leur origine :",
+      "tableau": {
+        "colonnes": [
+          "Type",
+          "Définition"
+        ],
+        "lignes": [
+          [
+            "Charge d'exploitation",
+            "Charges courantes liées à l'activité de l'entreprise (ex. achats de matières premières, charges de personnel, etc.)."
+          ],
+          [
+            "Charge financière",
+            "Charges attachées à l'activité financière de l'entreprise (ex. charges d'intérêts, perte de change, etc.)."
+          ],
+          [
+            "Charge exceptionnelle",
+            "Charges hors gestion courante de l'entreprise (ex. pénalités, amendes). La réforme du PCG (obligatoire à partir de 2025, par anticipation dès 2023) restreint cette catégorie aux charges liées à un événement majeur et inhabituel, ou d'origine purement fiscale."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les produits",
+      "contenu": "Un produit correspond à une ressource interne générée par l'activité de l'entreprise. Il procure un enrichissement à l'entreprise : c'est une somme reçue ou à recevoir en contrepartie de la fourniture de biens ou services par l'entreprise, en exécution d'une obligation légale par un tiers, ou exceptionnellement sans contrepartie. Exemple : la vente de produits finis constitue un produit, alors que les emprunts contractés pour acquérir des machines de production sont inscrits au passif."
+    },
+    {
+      "titre": "Typologie de produits",
+      "contenu": "On distingue trois types de produits selon leur origine :",
+      "tableau": {
+        "colonnes": [
+          "Type",
+          "Définition"
+        ],
+        "lignes": [
+          [
+            "Produit d'exploitation",
+            "Produit lié à l'exploitation normale et courante de l'activité de l'entreprise (ex. ventes de marchandises)."
+          ],
+          [
+            "Produit financier",
+            "Produit attaché à l'activité financière de l'entreprise (ex. plus-values)."
+          ],
+          [
+            "Produit exceptionnel",
+            "Produits hors gestion courante de l'entreprise (ex. cession d'immobilisations, dégrèvements d'impôts). La réforme du PCG (obligatoire à partir de 2025, par anticipation dès 2023) restreint cette catégorie aux produits liés à un événement majeur et inhabituel, ou d'origine purement fiscale."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Astuce : ne pas confondre actif et charge",
+      "contenu": "Évitez l'erreur classique consistant à confondre actif et charge : l'actif est un emploi intermédiaire (le bien reste utilisable, il génère des avantages économiques futurs), la charge est un emploi définitif (la ressource est consommée sans retour)."
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "Actif",
+      "definition": "Élément identifiable et contrôlé par l'entreprise, susceptible de procurer des avantages économiques futurs, et qui concourt à son activité."
+    },
+    {
+      "terme": "Immobilisation",
+      "definition": "Actif immobilisé destiné à être utilisé par l'entreprise au-delà de l'exercice en cours (emploi permanent)."
+    },
+    {
+      "terme": "Stocks",
+      "definition": "Actif circulant destiné à être vendu ou consommé dans le processus de production ou de prestation de services."
+    },
+    {
+      "terme": "Créances",
+      "definition": "Droit que détient l'entreprise à l'encontre d'un tiers suite à la fourniture d'un bien ou service non réglé comptant."
+    },
+    {
+      "terme": "Disponibilités",
+      "definition": "Actif monétaire ou transformable rapidement en monnaie sans nuire à l'activité de l'entreprise."
+    },
+    {
+      "terme": "Comptes de régularisation",
+      "definition": "Charges constatées d'avance : actif dont l'utilisation est ultérieure à l'exercice."
+    },
+    {
+      "terme": "Passif",
+      "definition": "Ressources de l'entreprise lui permettant de disposer de son patrimoine économique, et obligations sous-jacentes à son activité."
+    },
+    {
+      "terme": "Capitaux propres",
+      "definition": "Ressources fournies par l'exploitant, les associés ou actionnaires, et résultats générés par l'entreprise."
+    },
+    {
+      "terme": "Passif externe",
+      "definition": "Obligation de l'entreprise à l'égard d'un tiers, dont il est probable qu'elle entraînera une sortie de ressources sans contrepartie équivalente attendue."
+    },
+    {
+      "terme": "Dette",
+      "definition": "Passif externe certain dont l'échéance et le montant sont fixés de façon précise."
+    },
+    {
+      "terme": "Provisions",
+      "definition": "Passif externe dont l'échéance ou le montant ne sont pas fixés précisément mais peuvent être estimés de façon fiable."
+    },
+    {
+      "terme": "Charges à payer",
+      "definition": "Passif externe dont l'échéance ou le montant sont estimés de façon plus incertaine que pour les provisions."
+    },
+    {
+      "terme": "Charge",
+      "definition": "Consommation de biens et services par l'entreprise ; emploi définitif correspondant à une somme versée ou à verser."
+    },
+    {
+      "terme": "Charge d'exploitation",
+      "definition": "Charge courante liée à l'activité de l'entreprise (ex. achats, charges de personnel)."
+    },
+    {
+      "terme": "Charge financière",
+      "definition": "Charge attachée à l'activité financière de l'entreprise (ex. charges d'intérêts)."
+    },
+    {
+      "terme": "Charge exceptionnelle",
+      "definition": "Charge hors gestion courante, liée à un événement majeur et inhabituel ou d'origine purement fiscale (définition PCG 2025)."
+    },
+    {
+      "terme": "Produit",
+      "definition": "Ressource interne générée par l'activité de l'entreprise, procurant un enrichissement."
+    },
+    {
+      "terme": "Produit d'exploitation",
+      "definition": "Produit lié à l'exploitation normale et courante de l'entreprise (ex. ventes de marchandises)."
+    },
+    {
+      "terme": "Produit financier",
+      "definition": "Produit attaché à l'activité financière de l'entreprise (ex. plus-values)."
+    },
+    {
+      "terme": "Produit exceptionnel",
+      "definition": "Produit hors gestion courante, lié à un événement majeur et inhabituel ou d'origine purement fiscale (définition PCG 2025)."
+    }
+  ],
+  "questionsTypes": [
+    "Définir l'actif et citer ses critères de définition et de comptabilisation.",
+    "Distinguer actifs immobilisés et actifs circulants, avec un exemple de chaque.",
+    "Définir le passif et distinguer passif externe et capitaux propres.",
+    "Citer et justifier les trois critères de définition du passif externe.",
+    "Distinguer dette, provision et charge à payer.",
+    "Définir la charge et le produit, en illustrant chacun par un exemple.",
+    "Distinguer une charge d'exploitation, financière et exceptionnelle.",
+    "Distinguer un produit d'exploitation, financier et exceptionnel.",
+    "Expliquer la différence entre un actif et une charge (emploi intermédiaire vs emploi définitif)."
+  ],
+  "annales": {
+    "note": "Chapitre rarement testé comme dossier isolé, mais ses définitions (actif, passif, charge, produit) sont mobilisées pour justifier le classement de quasiment toutes les opérations dans les dossiers. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "questionsRedactionnellesRecurrentes": [
+      "Justifier si un élément donné constitue un actif ou une charge.",
+      "Justifier le classement d'une charge ou d'un produit (exploitation / financier / exceptionnel).",
+      "Distinguer dette, provision et charge à payer.",
+      "Justifier si un élément constitue un passif externe."
+    ],
+    "entrees": []
+  }
+}
+4.json
+Affichage de 4.json en cours...
