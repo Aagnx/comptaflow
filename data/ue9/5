@@ -1,0 +1,305 @@
+
+Aucun élément sélectionné
+
+Aller au contenu
+Utiliser Gmail avec un lecteur d'écran
+
+1 sur 4 591
+(aucun objet)
+Boîte de réception
+
+Antoine Ginioux <antoine.ginioux@gmail.com>
+Pièces jointes
+21:40 (il y a 3 minutes)
+À moi
+
+
+
+Antoine GINIOUX 
+ 
+ 10 pièces jointes
+  •  Analysé par Gmail
+{
+  "id": "ue9-ch5",
+  "numero": 5,
+  "titre": "La TVA : généralités",
+  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+  "pageManuel": 25,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": [
+    "Exigibilité",
+    "Fait générateur",
+    "TVA",
+    "TVA collectée",
+    "TVA déductible",
+    "TVA sur les débits"
+  ],
+  "utilite": {
+    "pourcentage": 25,
+    "niveau": "Très fort — thème quasi systématique à l'examen",
+    "commentaire": "La liquidation de la TVA apparaît dans environ 85 % des sujets de 2014 à 2025 : c'est l'un des dossiers les plus rentables. Cette fiche pose les bases indispensables (fait générateur, exigibilité, TVA collectée/déductible) avant d'aborder la comptabilisation à proprement parler en fiche 6. Bien maîtriser la distinction encaissement/débits pour les prestations de services : c'est une source d'erreur fréquente.",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "notionsCles": [
+    {
+      "titre": "Définition de la TVA",
+      "contenu": "La taxe sur la valeur ajoutée (TVA) est un impôt sur la consommation de biens et services. Elle est collectée par les entreprises et supportée par le consommateur final."
+    },
+    {
+      "titre": "Le champ d'application de la TVA",
+      "contenu": "Une opération est imposable à la TVA selon trois fondements possibles :",
+      "tableau": {
+        "colonnes": [
+          "Fondement",
+          "Conditions"
+        ],
+        "lignes": [
+          [
+            "En raison de la nature de l'opération",
+            "Trois critères réunis : livraisons de biens meubles corporels et prestations de services ; réalisées par un assujetti (personne exerçant une activité économique de manière indépendante, à titre habituel et onéreux) ; relevant d'une activité économique indépendante effectuée à titre onéreux."
+          ],
+          [
+            "Par une disposition expresse de la loi",
+            "Les importations et acquisitions intracommunautaires ; certaines opérations immobilières."
+          ],
+          [
+            "Sur option de l'entreprise",
+            "Une option à une imposition volontaire à la TVA est possible pour certaines opérations normalement exonérées."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le mécanisme général de la TVA",
+      "contenu": "Chaque entreprise est, en principe, redevable de la TVA calculée sur la valeur ajoutée qu'elle a produite. En pratique, les entreprises qui réalisent des opérations soumises à la TVA doivent : appliquer la TVA sur le prix de vente HT des opérations réalisées, en utilisant le taux fixé par la loi ; facturer et encaisser les prix de vente TTC à leurs clients ; reverser la taxe ainsi collectée au Trésor public, déduction faite de la TVA déjà versée à leurs fournisseurs à l'occasion de leurs achats.",
+      "visuel": {
+        "type": "flux",
+        "entree": "Achat de matières premières (TVA payée aux fournisseurs)",
+        "sortie": "Vente de produits finis (TVA facturée aux clients)",
+        "etapes": [
+          {
+            "label": "TVA déductible sur les achats",
+            "couleur": "blue"
+          },
+          {
+            "label": "TVA collectée sur les ventes",
+            "couleur": "teal"
+          },
+          {
+            "label": "Solde de TVA reversé au Trésor public",
+            "couleur": "violet"
+          }
+        ]
+      }
+    },
+    {
+      "titre": "Solde de TVA : TVA collectée et TVA déductible",
+      "contenu": "Le solde de TVA correspond à la différence entre la TVA collectée et la TVA déductible :",
+      "tableau": {
+        "colonnes": [
+          "Notion",
+          "Définition"
+        ],
+        "lignes": [
+          [
+            "TVA collectée (ou exigible)",
+            "TVA facturée par l'entreprise à ses clients sur les ventes de biens et services."
+          ],
+          [
+            "TVA déductible (ou récupérable)",
+            "TVA facturée à l'entreprise par ses fournisseurs et prestataires, sur les achats de biens et services et les autres charges soumises à TVA."
+          ],
+          [
+            "Solde de TVA",
+            "TVA à décaisser si TVA collectée > TVA déductible ; crédit de TVA si TVA collectée < TVA déductible."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les notions de fait générateur et d'exigibilité",
+      "contenu": "Le fait générateur est le fait par lequel sont réalisées les conditions légales pour l'exigibilité de la taxe. L'exigibilité fixe la date du paiement effectif de la taxe.",
+      "tableau": {
+        "colonnes": [
+          "Nature de l'opération",
+          "Fait générateur",
+          "Exigibilité"
+        ],
+        "lignes": [
+          [
+            "Livraisons de biens meubles corporels",
+            "Délivrance du bien",
+            "Délivrance du bien ou date d'encaissement en cas d'acompte sur le montant réglé"
+          ],
+          [
+            "Prestations de services et travaux immobiliers",
+            "Exécution des services ou des travaux",
+            "Encaissement du prix, sauf option pour les débits"
+          ],
+          [
+            "Importations",
+            "Entrée du bien sur le territoire communautaire",
+            "Dédouanement"
+          ],
+          [
+            "Acquisition intracommunautaire",
+            "Délivrance du bien ou réalisation de la prestation",
+            "Encaissement du prix ou d'un acompte"
+          ],
+          [
+            "Livraison à soi-même (LASM)",
+            "Exécution du service",
+            "Au fur et à mesure de l'exécution des prestations"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le cas particulier des prestations de services : la TVA sur les débits",
+      "contenu": "Pour les prestations de services, les entreprises peuvent opter pour le régime de la TVA sur les débits. Dans ce cas, la TVA déductible et la TVA collectée sont constatées lors de l'exécution de la prestation de services (enregistrement à la facturation). Cette option ne peut pas retarder le paiement de la TVA : elle reste exigible en cas de versements d'avances ou d'acomptes.",
+      "tableau": {
+        "colonnes": [
+          "",
+          "Régime normal « TVA sur les encaissements »",
+          "Régime optionnel « TVA sur les débits »"
+        ],
+        "lignes": [
+          [
+            "Fait générateur",
+            "Achèvement de la prestation",
+            "Achèvement de la prestation"
+          ],
+          [
+            "Exigibilité",
+            "Encaissement du prix (même s'il précède l'achèvement)",
+            "Facturation (ou date d'encaissement en cas d'acompte)"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Astuce : les livraisons à soi-même (LASM)",
+      "contenu": "Les livraisons à soi-même (LASM) constituent également un cas particulier au regard de la TVA : leur fait générateur est l'exécution du service, et leur exigibilité intervient au fur et à mesure de l'exécution des prestations."
+    },
+    {
+      "titre": "Les taux de TVA applicables en France",
+      "contenu": "Il existe quatre taux de TVA en France, applicables selon la nature du bien ou du service :",
+      "tableau": {
+        "colonnes": [
+          "Taux",
+          "Utilisation courante"
+        ],
+        "lignes": [
+          [
+            "20 %",
+            "Taux normal, applicable à la majorité des biens et services."
+          ],
+          [
+            "10 %",
+            "Taux intermédiaire (ex. restauration, travaux de rénovation)."
+          ],
+          [
+            "5,5 %",
+            "Taux réduit (ex. produits alimentaires, livres, énergie)."
+          ],
+          [
+            "2,1 %",
+            "Taux particulier (ex. médicaments remboursables, presse)."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Formules de calcul de la TVA",
+      "formule": "TVA = HT × taux · TTC = HT × (1 + taux) · HT = TTC ÷ (1 + taux)",
+      "contenu": "HT désigne le montant hors taxes, TTC le montant toutes taxes comprises, et le taux dépend de la nature de l'opération (20 %, 10 %, 5,5 % ou 2,1 %)."
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "TVA",
+      "definition": "Taxe sur la valeur ajoutée : impôt sur la consommation de biens et services, collecté par les entreprises et supporté par le consommateur final."
+    },
+    {
+      "terme": "Assujetti",
+      "definition": "Personne qui réalise une activité économique de manière indépendante, à titre habituel et onéreux, et qui est de ce fait soumise à la TVA."
+    },
+    {
+      "terme": "TVA collectée",
+      "definition": "TVA facturée par l'entreprise à ses clients sur les ventes de biens et services ; aussi appelée TVA exigible."
+    },
+    {
+      "terme": "TVA déductible",
+      "definition": "TVA facturée à l'entreprise par ses fournisseurs et prestataires, récupérable sur les achats et charges soumis à TVA."
+    },
+    {
+      "terme": "Fait générateur",
+      "definition": "Fait par lequel sont réalisées les conditions légales pour l'exigibilité de la TVA."
+    },
+    {
+      "terme": "Exigibilité",
+      "definition": "Date à laquelle le Trésor public peut réclamer le paiement effectif de la taxe."
+    },
+    {
+      "terme": "TVA sur les encaissements",
+      "definition": "Régime normal des prestations de services : la TVA est exigible à l'encaissement du prix."
+    },
+    {
+      "terme": "TVA sur les débits",
+      "definition": "Régime optionnel des prestations de services : la TVA est exigible dès la facturation, comme pour une livraison de biens."
+    },
+    {
+      "terme": "Livraison à soi-même (LASM)",
+      "definition": "Opération par laquelle une entreprise se livre à elle-même un bien ou un service qu'elle a produit ; cas particulier en matière de TVA."
+    },
+    {
+      "terme": "Solde de TVA",
+      "definition": "Différence entre la TVA collectée et la TVA déductible d'une période."
+    },
+    {
+      "terme": "TVA à décaisser",
+      "definition": "Solde de TVA positif à reverser au Trésor public, lorsque la TVA collectée excède la TVA déductible."
+    },
+    {
+      "terme": "Crédit de TVA",
+      "definition": "Solde de TVA négatif, lorsque la TVA déductible excède la TVA collectée."
+    },
+    {
+      "terme": "Importation",
+      "definition": "Entrée d'un bien en provenance d'un pays hors Union européenne sur le territoire national, soumise à TVA lors du dédouanement."
+    },
+    {
+      "terme": "Acquisition intracommunautaire",
+      "definition": "Achat d'un bien en provenance d'un autre État membre de l'Union européenne, soumis à TVA."
+    }
+  ],
+  "questionsTypes": [
+    "Définir la TVA et expliquer son mécanisme général.",
+    "Citer les critères qui rendent une opération imposable à la TVA.",
+    "Distinguer TVA collectée et TVA déductible.",
+    "Définir le fait générateur et l'exigibilité de la TVA, et les distinguer.",
+    "Présenter les principaux cas de faits générateurs et d'exigibilité selon la nature de l'opération.",
+    "Expliquer le régime optionnel de la TVA sur les débits pour les prestations de services.",
+    "Qu'est-ce qu'une livraison à soi-même (LASM) ?",
+    "Calculer un montant de TVA, de HT ou de TTC à partir des formules usuelles."
+  ],
+  "annales": {
+    "note": "La liquidation de la TVA est l'un des thèmes les plus fréquents à l'examen (environ 85 % des sujets 2014-2025), souvent combiné avec les opérations courantes. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "questionsRedactionnellesRecurrentes": [
+      "Identifier le fait générateur et l'exigibilité d'une opération donnée.",
+      "Justifier le régime de TVA applicable à une prestation de services.",
+      "Calculer le montant de TVA collectée, déductible, et le solde de TVA.",
+      "Distinguer une livraison de biens d'une prestation de services au regard de la TVA."
+    ],
+    "entrees": []
+  }
+}
+5.json
+Affichage de 5.json en cours...
