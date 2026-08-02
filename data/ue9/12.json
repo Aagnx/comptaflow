@@ -1,0 +1,539 @@
+{
+  "id": "ue9-ch12",
+  "numero": 12,
+  "titre": "Les immobilisations incorporelles, corporelles et les titres financiers",
+  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+  "pageManuel": 55,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": [
+    "Coût d'acquisition",
+    "Évaluation",
+    "Immobilisation corporelle",
+    "Immobilisation incorporelle",
+    "TIAP",
+    "Titres de participation",
+    "Titres immobilisés",
+    "Valeur vénale",
+    "VMP"
+  ],
+  "utilite": {
+    "pourcentage": 20,
+    "niveau": "Fort — cœur du thème immobilisations, présent dans 92 % des sujets",
+    "commentaire": "Fiche dense qui regroupe volontairement deux chapitres du manuel (immobilisations incorporelles/corporelles, puis titres financiers), car ils partagent la même logique d'évaluation (coût d'acquisition / coût de production / valeur vénale selon le mode d'obtention) et le même schéma de comptabilisation. Les avances et acomptes sur immobilisations et les immobilisations en cours de production (à cheval sur deux exercices) sont des mécanismes techniques à automatiser : ils reviennent régulièrement dans les dossiers d'investissement.",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "notionsCles": [
+    {
+      "titre": "PARTIE 1 — Immobilisations incorporelles et corporelles : définitions",
+      "contenu": "Une immobilisation incorporelle est une immobilisation qui ne présente ni substance physique ni substance monétaire. Une immobilisation corporelle est une immobilisation qui a une substance physique et une durée d'utilisation immédiate supérieure à l'exercice."
+    },
+    {
+      "titre": "Les critères de définition et de comptabilisation",
+      "contenu": "Pour qu'un élément soit comptabilisé en immobilisation, il doit satisfaire aux critères de définition ET de comptabilisation. Trois critères opérationnalisent cette analyse : élément identifiable (possibilité de l'individualiser et de le détacher des autres éléments du patrimoine), contrôle par l'entreprise (possibilité de l'utiliser pour ses besoins et de bénéficier des revenus qu'il procure), avantages économiques futurs identifiables (futures entrées de fonds). Une fois ces critères validés, on distingue les deux voies : si le bien présente une substance physique et une durée d'utilisation immédiate supérieure à l'exercice, c'est une immobilisation corporelle ; s'il n'a ni substance physique ni substance monétaire, c'est une immobilisation incorporelle.",
+      "tableau": {
+        "colonnes": [
+          "Critère",
+          "Contenu"
+        ],
+        "lignes": [
+          [
+            "Élément identifiable",
+            "Possibilité d'individualiser les éléments et de les détacher des autres éléments du patrimoine"
+          ],
+          [
+            "Contrôle par l'entreprise",
+            "Possibilité d'utiliser les éléments pour ses besoins et de bénéficier des revenus qu'ils procurent"
+          ],
+          [
+            "Avantages économiques futurs identifiables",
+            "Futures entrées de fonds"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Typologie des immobilisations incorporelles (comptes 201 à 208)",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Caractéristiques"
+        ],
+        "lignes": [
+          [
+            "201. Frais d'établissement",
+            "Dépenses conditionnant l'existence ou le développement de l'entreprise sans lien direct avec une production (frais de constitution, de premier établissement, d'augmentation de capital). Méthode préférentielle : comptabilisation en charges."
+          ],
+          [
+            "203. Frais de recherche et de développement",
+            "Coûts de développement inscriptibles en immobilisation si : faisabilité technique du projet, intention d'achèvement avec ressources disponibles, avantages économiques futurs assurés, dépenses définies de façon fiable."
+          ],
+          [
+            "205. Concessions, brevets, licences, marques, procédés, logiciels...",
+            "Dépenses pour l'obtention de la protection accordée à l'inventeur, l'auteur ou le bénéficiaire d'un droit d'exploitation (brevet, licence, procédé, propriété littéraire et artistique, concession)."
+          ],
+          [
+            "206. Droit au bail",
+            "Montant versé au locataire précédent pour le transfert des droits résultant des conventions et de la législation sur la propriété commerciale."
+          ],
+          [
+            "207. Fonds commercial",
+            "Éléments incorporels (y compris le droit de bail si indissociable) non évalués séparément, concourant au maintien ou développement du potentiel d'activité."
+          ],
+          [
+            "208. Autres immobilisations incorporelles",
+            "Ex. : fichier des clients acquis."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Typologie des immobilisations corporelles (comptes 211 à 218)",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Caractéristiques"
+        ],
+        "lignes": [
+          [
+            "211. Terrains",
+            "Terrains nus, aménagés, sous-sol et sur-sol, terrains de gisement, carrières, terrains bâtis."
+          ],
+          [
+            "212. Agencements et aménagements de terrains",
+            "Travaux destinés à mettre le terrain en état d'utilisation (clôtures, mouvements de terre, drainage, défrichement...)."
+          ],
+          [
+            "213. Constructions",
+            "Bâtiments, installations, agencements, aménagements et ouvrages d'infrastructures."
+          ],
+          [
+            "214. Constructions sur sol d'autrui",
+            "Constructions édifiées sur des terrains appartenant à autrui (ex. terrains en location)."
+          ],
+          [
+            "215. Installations techniques, matériel et outillage industriels et commerciaux",
+            "Installations techniques, matériel et outillage, ainsi que leurs agencements et aménagements."
+          ],
+          [
+            "218. Autres immobilisations corporelles",
+            "Installations générales non détenues en propriété, matériel de transport, matériel de bureau et informatique, mobilier, emballages récupérables."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "L'évaluation des immobilisations selon le mode d'obtention",
+      "formule": "Coût d'acquisition = Prix d'achat (douane + taxes non récupérables incluses) − RRR − Escomptes + frais directement attribuables + coût de démantèlement/remise en état + frais d'acquisition sur option + coût d'emprunt sur option + frais de formation sur option · Coût de production = Prix des matières premières + charges directes + charges indirectes attribuées + coût de démantèlement + coût d'emprunt sur option · Valeur vénale = Montant obtenu de la vente − coûts de sortie liés à la vente",
+      "contenu": "L'évaluation dépend du mode d'obtention : acquisition à titre onéreux → coût d'acquisition ; production par l'entreprise elle-même → coût de production ; acquisition à titre gratuit ou par voie d'échange → valeur vénale. Cas particulier à connaître : pour l'acquisition à titre onéreux d'un véhicule de tourisme, la TVA ne peut pas être récupérée — elle est alors intégrée dans le coût d'acquisition du véhicule (à ne pas confondre avec la déductibilité partielle de la TVA sur le carburant de ces mêmes véhicules, une règle distincte)."
+    },
+    {
+      "titre": "La comptabilisation des immobilisations selon le mode d'obtention",
+      "contenu": "La comptabilisation s'effectue selon le mode d'obtention de l'immobilisation : à titre onéreux, à titre gratuit, ou produite par l'entreprise.",
+      "tableau": {
+        "colonnes": [
+          "Mode d'obtention",
+          "Comptes débités",
+          "Comptes crédités"
+        ],
+        "lignes": [
+          [
+            "Acquise à titre onéreux",
+            "Comptes d'immobilisations 20/21 (montant HT) + 44562 État, TVA déductible sur immobilisations",
+            "404 Fournisseurs (montant TTC)"
+          ],
+          [
+            "Produite par l'entreprise",
+            "Comptes d'immobilisations 20/21 (montant HT) + 44562 État, TVA déductible sur immobilisations",
+            "72. Production immobilisée (montant HT) + 44571 État, TVA collectée"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Exemple — acquisition d'un matériel industriel avec remise et frais annexes",
+      "contenu": "Acquisition à crédit d'un matériel industriel le 05/01/N : montant brut 10 000 € HT avec une remise de 1 %, frais de transport 700 € HT, frais d'installation 400 € HT, frais de formation du personnel 300 € HT (l'entreprise n'opte pas pour l'immobilisation des frais activables sur option, donc la formation reste hors coût d'acquisition). Coût d'acquisition = 10 000 − 100 + 700 + 400 = 11 000 €.",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "21540",
+            "Matériel industriel",
+            "11 000,00",
+            ""
+          ],
+          [
+            "44562",
+            "État, TVA déductible sur immobilisations (11 000 × 20 %)",
+            "2 200,00",
+            ""
+          ],
+          [
+            "40400",
+            "Fournisseurs d'immobilisations",
+            "",
+            "13 200,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les avances et acomptes sur immobilisations",
+      "contenu": "Un acompte versé sur une commande d'immobilisation est réputé TTC : il se répartit en une part HT (compte 238, Avances et acomptes versés sur commandes d'immobilisations corporelles) et une part de TVA déductible, dès le versement. À la livraison, la facture définitive solde le compte d'avance et enregistre le complément de TVA restant à déduire.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "25/02/N",
+            "238",
+            "Avances et acomptes versés sur commandes d'immobilisations corporelles",
+            "750,00",
+            ""
+          ],
+          [
+            "25/02/N",
+            "44562",
+            "État, TVA déductible sur immobilisations",
+            "150,00",
+            ""
+          ],
+          [
+            "25/02/N",
+            "512",
+            "Banques (acompte de 900 € réputé TTC)",
+            "",
+            "900,00"
+          ],
+          [
+            "15/03/N",
+            "218",
+            "Autres immobilisations corporelles (coût total HT)",
+            "6 000,00",
+            ""
+          ],
+          [
+            "15/03/N",
+            "44562",
+            "État, TVA déductible sur immobilisations (complément)",
+            "1 050,00",
+            ""
+          ],
+          [
+            "15/03/N",
+            "238",
+            "Avances et acomptes versés sur commandes d'immobilisations corporelles (solde de l'avance)",
+            "",
+            "750,00"
+          ],
+          [
+            "15/03/N",
+            "404",
+            "Fournisseurs d'immobilisations (solde à payer)",
+            "",
+            "6 300,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les immobilisations en cours de production",
+      "contenu": "Quand la production s'achève dans l'exercice, l'écriture est directe : débit du compte d'immobilisation définitif (ex. 213 Constructions), crédit du compte 722 Production immobilisée. Quand la construction n'est pas terminée à la clôture, on constate d'abord une immobilisation en cours (compte 231) ; l'année suivante, à l'achèvement, on solde le compte 231 et on comptabilise l'immobilisation définitive pour son coût total. Dans les deux cas, l'impact sur le résultat est nul : les charges consommées pour la production ont déjà été enregistrées en comptes de charges au fil de l'eau, le compte 72 ne fait que les neutraliser.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "31/12/N-1",
+            "231",
+            "Immobilisations corporelles en cours (travaux réalisés en N-1)",
+            "50 000,00",
+            ""
+          ],
+          [
+            "31/12/N-1",
+            "722",
+            "Production immobilisée",
+            "",
+            "50 000,00"
+          ],
+          [
+            "15/04/N",
+            "213",
+            "Constructions (coût total : 50 000 + 36 000 de travaux complémentaires)",
+            "86 000,00",
+            ""
+          ],
+          [
+            "15/04/N",
+            "231",
+            "Immobilisations corporelles en cours (solde)",
+            "",
+            "50 000,00"
+          ],
+          [
+            "15/04/N",
+            "722",
+            "Production immobilisée (travaux N)",
+            "",
+            "36 000,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les éléments monétaires immobilisés (comptes 274 à 276)",
+      "contenu": "Ces comptes regroupent des créances à caractère monétaire, et non des titres, classées en immobilisations financières du fait de leur horizon long.",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Définition"
+        ],
+        "lignes": [
+          [
+            "274. Prêts",
+            "Sommes prêtées à l'origine pour plus d'un an (ex. prêts aux salariés)."
+          ],
+          [
+            "275. Dépôts et cautionnements versés",
+            "Sommes récupérées en fin de contrat."
+          ],
+          [
+            "276. Autres créances immobilisées",
+            "Créances non récupérables à court terme et ne figurant pas dans un autre compte spécifique, y compris les intérêts acquis mais non encore perçus."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "PARTIE 2 — Les titres financiers : typologies (comptes 261, 271-273, 50)",
+      "contenu": "Les titres financiers se classent selon la durée de détention envisagée et l'objectif de leur acquisition (influence/contrôle, rentabilité de long terme, ou gain à brève échéance).",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Caractéristiques"
+        ],
+        "lignes": [
+          [
+            "261. Titres de participation",
+            "Possession durable jugée utile à l'activité, notamment pour exercer une influence ou assurer le contrôle de la société émettrice (participation présumée si 10 % du capital détenu, ou titres acquis par OPA/OPE)."
+          ],
+          [
+            "273. Titres immobilisés de l'activité de portefeuille (TIAP)",
+            "Titres acquis pour une rentabilité satisfaisante à plus ou moins longue échéance, sans intervention dans la gestion de la société émettrice."
+          ],
+          [
+            "271. Titres immobilisés autres que les TIAP (droit de propriété) / 272. Titres immobilisés (droit de créance)",
+            "Titres que l'entreprise a l'intention ou la contrainte de conserver durablement."
+          ],
+          [
+            "50. Valeurs mobilières de placement (VMP)",
+            "Titres acquis en vue de réaliser un gain à brève échéance."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "L'évaluation des titres financiers",
+      "formule": "Coût d'acquisition = Prix d'achat + coûts directement attribuables (ex. commissions bancaires) · Valeur vénale = Montant obtenu de la vente des titres − coûts de sortie liés à la vente",
+      "contenu": "Comme pour les immobilisations, l'évaluation dépend du mode d'obtention : acquisition à titre onéreux → coût d'acquisition ; acquisition à titre gratuit → valeur vénale. Exception à connaître : pour les VMP, les frais d'acquisition (commissions...) sont comptabilisés directement en charges, et non intégrés au coût d'acquisition du titre."
+    },
+    {
+      "titre": "Exemple — comptabilisation d'un titre à l'entrée",
+      "contenu": "Acquisition, le 25/08/N, de 120 actions L'Oréal cotées 54 €, dans le cadre d'une stratégie globale de gestion de portefeuille de titres (donc en TIAP).",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "273",
+            "Titres immobilisés de l'activité de portefeuille (120 × 54)",
+            "6 480,00",
+            ""
+          ],
+          [
+            "512",
+            "Banques (avis de débit)",
+            "",
+            "6 480,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La comptabilisation des revenus issus de titres",
+      "contenu": "La détention de titres procure des revenus financiers non soumis à TVA : des dividendes pour les titulaires de droits de propriété, des intérêts pour les détenteurs de droits de créance. Le compte de produit utilisé dépend de la nature du titre : 761 Produits de participation pour les titres de participation, 762 Produits des autres immobilisations financières pour les titres immobilisés et TIAP, 764 Revenus des VMP pour les valeurs mobilières de placement. Exemple filé (SA Genesis) : perception d'intérêts de bons du Trésor, puis annonce et versement d'un dividende sur des titres de participation (175 000 actions Grimberg sur 300 000, dividende de 1,20 € par action).",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "12/05/N",
+            "512",
+            "Banques",
+            "458,00",
+            ""
+          ],
+          [
+            "12/05/N",
+            "764",
+            "Revenus des valeurs mobilières de placement (intérêts des bons du Trésor)",
+            "",
+            "458,00"
+          ],
+          [
+            "15/07/N",
+            "4687",
+            "Produits à recevoir (dividende annoncé)",
+            "210 000,00",
+            ""
+          ],
+          [
+            "15/07/N",
+            "761",
+            "Produits de participation (dividende SA Grimberg = 175 000 × 1,20)",
+            "",
+            "210 000,00"
+          ],
+          [
+            "01/09/N",
+            "512",
+            "Banques (versement effectif)",
+            "210 000,00",
+            ""
+          ],
+          [
+            "01/09/N",
+            "4687",
+            "Produits à recevoir (soldé)",
+            "",
+            "210 000,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Valorisation particulière du coût d'entrée",
+      "contenu": "Certains modes d'acquisition, communs aux immobilisations et aux titres financiers, appellent une règle d'évaluation spécifique à l'entrée du patrimoine.",
+      "tableau": {
+        "colonnes": [
+          "Mode d'acquisition",
+          "Évaluation à l'entrée"
+        ],
+        "lignes": [
+          [
+            "Acquisition en devises",
+            "Cours de la devise au jour de l'acquisition"
+          ],
+          [
+            "Acquisition à titre gratuit",
+            "Valeur vénale"
+          ],
+          [
+            "Acquisition par voie d'échange, avec substance commerciale",
+            "Valeur vénale"
+          ],
+          [
+            "Acquisition par voie d'échange, sans substance commerciale",
+            "Valeur comptable du bien échangé"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le + de l'expert",
+      "contenu": "Pour les immobilisations : dans la pratique, la difficulté d'enregistrement réside dans l'opérationnalisation des critères de définition et de comptabilisation, ainsi que dans l'évaluation — plus particulièrement pour les immobilisations incorporelles et pour les immobilisations produites en interne. Pour les titres financiers : pour les enregistrer correctement, il faut préalablement définir la motivation d'acquisition des titres et l'échéance de détention envisagée."
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "Immobilisation incorporelle",
+      "definition": "Immobilisation qui ne présente ni substance physique ni substance monétaire."
+    },
+    {
+      "terme": "Immobilisation corporelle",
+      "definition": "Immobilisation qui a une substance physique, avec une durée d'utilisation immédiate supérieure à l'exercice."
+    },
+    {
+      "terme": "Coût d'acquisition",
+      "definition": "Prix d'achat (douane et taxes non récupérables incluses, RRR et escomptes déduits) majoré des frais directement attribuables à l'acquisition et à la mise en service."
+    },
+    {
+      "terme": "Coût de production",
+      "definition": "Prix des matières premières majoré des charges directes et indirectes de production, du coût de démantèlement et, sur option, du coût d'emprunt."
+    },
+    {
+      "terme": "Valeur vénale",
+      "definition": "Montant qui pourrait être obtenu de la vente d'un élément, diminué des coûts de sortie liés à cette vente."
+    },
+    {
+      "terme": "Immobilisation en cours (compte 231)",
+      "definition": "Compte constatant, à la clôture, une production d'immobilisation non encore achevée ; soldé l'exercice suivant à l'achèvement des travaux."
+    },
+    {
+      "terme": "Avances et acomptes sur immobilisations (compte 238)",
+      "definition": "Somme versée par avance sur une commande d'immobilisation, réputée TTC ; soldée à la livraison définitive."
+    },
+    {
+      "terme": "Titres de participation",
+      "definition": "Titres détenus durablement pour exercer une influence ou assurer le contrôle de la société émettrice (compte 261)."
+    },
+    {
+      "terme": "TIAP",
+      "definition": "Titres immobilisés de l'activité de portefeuille : détenus pour une rentabilité satisfaisante à plus ou moins long terme, sans intervention dans la gestion de la société émettrice (compte 273)."
+    },
+    {
+      "terme": "VMP",
+      "definition": "Valeurs mobilières de placement : titres acquis en vue d'un gain à brève échéance (compte 50), dont les frais d'acquisition sont comptabilisés en charges."
+    }
+  ],
+  "questionsTypes": [
+    "Distinguer immobilisation incorporelle et immobilisation corporelle à partir des critères de définition.",
+    "Calculer un coût d'acquisition ou un coût de production intégrant les éléments annexes (frais, remises, démantèlement...).",
+    "Comptabiliser l'acquisition d'une immobilisation à titre onéreux, à titre gratuit, ou produite par l'entreprise.",
+    "Comptabiliser un acompte versé sur une commande d'immobilisation puis la facture définitive.",
+    "Comptabiliser une immobilisation en cours de production à cheval sur deux exercices.",
+    "Distinguer les différents types de titres financiers (participation, TIAP, titres immobilisés, VMP) selon la durée de détention et l'objectif.",
+    "Comptabiliser l'acquisition d'un titre financier et les revenus qu'il procure (dividendes, intérêts).",
+    "Justifier l'évaluation d'un bien acquis en devises, à titre gratuit, ou par voie d'échange."
+  ],
+  "annales": {
+    "note": "Les immobilisations (incorporelles, corporelles, financières) figurent parmi les thèmes les plus fréquents de l'UE9 (92 % des sujets). Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "questionsRedactionnellesRecurrentes": [
+      "Justifier si un élément satisfait aux critères de définition et de comptabilisation d'une immobilisation.",
+      "Calculer un coût d'acquisition ou de production détaillé.",
+      "Justifier le classement d'un titre financier (participation, TIAP, VMP...) selon l'intention de détention."
+    ],
+    "entrees": []
+  }
+}
