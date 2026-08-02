@@ -1,0 +1,315 @@
+{
+  "id": "ue9-ch11",
+  "numero": 11,
+  "titre": "Les autres charges et produits",
+  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+  "pageManuel": 49,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": [
+    "Charges et produits d'exploitation",
+    "Charges et produits exceptionnels",
+    "Charges et produits financiers",
+    "Charges et produits spécifiques"
+  ],
+  "utilite": {
+    "pourcentage": 14,
+    "niveau": "Modéré — référence PCG à savoir mobiliser, pas à mémoriser par cœur",
+    "commentaire": "Ce chapitre est avant tout un chapitre de repérage : associer une charge ou un produit donné à son compte, et justifier sa catégorie (exploitation / financière / exceptionnelle). Le PCG étant autorisé à l'examen, l'enjeu n'est pas de connaître tous les numéros de compte par cœur mais de savoir raisonner par nature et retrouver rapidement le bon compte. Point d'actualité à connaître : la réforme du PCG (obligatoire à partir de 2025, par anticipation dès 2023) a resserré la définition des charges et produits exceptionnels autour des seuls événements majeurs et inhabituels ou d'origine purement fiscale, et a supprimé les comptes 79 « Transferts de charges ».",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "notionsCles": [
+    {
+      "titre": "Trois activités, deux classes de comptes",
+      "contenu": "Les charges et les produits sont catégorisés selon l'activité de l'entreprise : activité d'exploitation (activité normale et courante), activité financière (gestion financière de l'entreprise), activité exceptionnelle (événements inhabituels de l'entreprise). Les charges s'enregistrent dans les comptes de la classe 6, les produits dans les comptes de la classe 7. Au sein de chaque classe, les comptes sont organisés selon la nature de la charge ou du produit, et peuvent être subdivisés selon les fonctions concernées (ex. compte 61637 « Primes d'assurances – Assurance-transport sur ventes »). Au-delà des achats et ventes (fiches 6 à 9), il existe d'autres charges et produits qui suivent le même schéma de comptabilisation."
+    },
+    {
+      "titre": "La codification des charges d'exploitation (comptes 60 à 65)",
+      "contenu": "Les charges d'exploitation se répartissent en six grandes familles de comptes.",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Analyse"
+        ],
+        "lignes": [
+          [
+            "60. Achats",
+            "Acquisitions de biens (hors immobilisations, cf. fiches 11 et 12)"
+          ],
+          [
+            "61. Services extérieurs",
+            "Prestations de partenaires externes relatives aux investissements de l'entreprise (ex. charges locatives et de copropriété)"
+          ],
+          [
+            "62. Autres services extérieurs",
+            "Prestations de partenaires externes relatives à l'activité de l'entreprise (ex. publicité)"
+          ],
+          [
+            "63. Impôts, taxes et versements assimilés",
+            "Versés à l'administration fiscale (631 et 635) ou à d'autres organismes (633 et 637)"
+          ],
+          [
+            "64. Charges de personnel",
+            "Rémunérations brutes (641 et 644), charges patronales (645 et 646), autres charges sociales et de personnel (647 et 648) (cf. fiche 12)"
+          ],
+          [
+            "65. Autres charges de gestion courante",
+            "Charges liées à l'exploitation mais non considérées comme des consommations intermédiaires (redevances diverses, jetons de présence...)"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les charges financières et exceptionnelles (comptes 66 et 67)",
+      "contenu": "Le compte 66 regroupe les charges à caractère financier liées à la gestion financière de l'entreprise. Le compte 67 « Charges exceptionnelles » a été resserré par la réforme du PCG (obligatoire à partir de 2025, par anticipation dès 2023) : il ne recouvre plus que les charges liées à un événement majeur et inhabituel, ou d'origine purement fiscale. Un événement est majeur si ses conséquences sont susceptibles d'exercer une influence sur le jugement, et inhabituel s'il n'est pas lié à l'exploitation normale et courante de l'entreprise. La valeur comptable des éléments d'actif cédés n'est notamment plus enregistrée en charges exceptionnelles."
+    },
+    {
+      "titre": "Les comptes de charges spécifiques",
+      "contenu": "Ce tableau (« Le + de l'expert » du manuel) sert de guide de repérage rapide dans le PCG face à une situation donnée : la précision n'est pas à mémoriser par cœur, mais le raisonnement (quel compte pour quelle situation) est à maîtriser.",
+      "tableau": {
+        "colonnes": [
+          "Situation",
+          "Compte(s)",
+          "Analyse"
+        ],
+        "lignes": [
+          [
+            "Sous-traitance",
+            "604 / 605 / 611",
+            "604-605 : sous-traitance incorporée aux ouvrages, travaux ou produits fabriqués · 611 : autre sous-traitance"
+          ],
+          [
+            "Opérations bancaires",
+            "661 / 627",
+            "661 : intérêts financiers (rémunération d'un emprunt) · 627 : services bancaires et assimilés (commissions)"
+          ],
+          [
+            "Frais postaux",
+            "6242 / 626",
+            "6242 : frais d'expédition des produits vendus · 626 : autres cas"
+          ],
+          [
+            "Frais de stationnement",
+            "6135 / 6251",
+            "6135 : emplacements de parking loués · 6251 : droits de stationnement occasionnel"
+          ],
+          [
+            "Impôts supportés par l'entreprise",
+            "63 / 695",
+            "63 : règle générale · 695 : impôt sur les bénéfices des sociétés"
+          ],
+          [
+            "Frais de recherche et développement",
+            "64 / 617 / 611",
+            "64 : recherche assurée par le personnel · 617 : recherche assurée par des tiers · 611 : recherche assurée par des sous-traitants"
+          ],
+          [
+            "Emploi de personnel intérimaire",
+            "621",
+            "Tout emploi de personnel extérieur à l'entreprise"
+          ],
+          [
+            "Déplacements du personnel",
+            "6251 / 6256",
+            "6251 : frais de transport · 6256 : autres frais (repas...) occasionnés lors des déplacements"
+          ],
+          [
+            "Créances impayées",
+            "654",
+            "Perte à caractère « normal » sur créances irrécouvrables"
+          ],
+          [
+            "Annonce parue dans la presse",
+            "6284 / 6231",
+            "6284 : annonce pour embaucher du personnel · 6231 : annonce à titre publicitaire"
+          ],
+          [
+            "Loyers versés",
+            "6132 / 6135",
+            "6132 : loyers pour l'occupation d'un local · 6135 : loyers pour l'utilisation d'une machine"
+          ],
+          [
+            "Financement du transport du personnel",
+            "6413 / 6331",
+            "6413 : prime de transport versée aux salariés · 6331 : contribution au financement des transports en commun"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La codification des produits (comptes 70 à 76)",
+      "contenu": "Les produits d'exploitation et financiers se répartissent en six grandes familles de comptes.",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Analyse"
+        ],
+        "lignes": [
+          [
+            "70. Ventes de produits fabriqués, prestations de services, marchandises",
+            "Ventes de biens et services"
+          ],
+          [
+            "71. Production stockée (ou déstockage)",
+            "Différence entre le stock de produits fabriqués ou en cours à la clôture et à l'ouverture de l'exercice (cf. fiche 21)"
+          ],
+          [
+            "72. Production immobilisée",
+            "Production de l'exercice conservée par l'entreprise en vue de son immobilisation (cf. fiche 14)"
+          ],
+          [
+            "74. Subventions d'exploitation",
+            "Subvention compensant l'insuffisance de certains produits d'exploitation ou certaines charges d'exploitation (cf. fiche 17)"
+          ],
+          [
+            "75. Autres produits de gestion courante",
+            "Produits liés à l'exploitation mais non issus de la production (redevances diverses, jetons de présence...)"
+          ],
+          [
+            "76. Produits financiers",
+            "Produits à caractère financier liés à l'activité financière de l'entreprise"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les produits exceptionnels (compte 77) et la réforme PCG",
+      "contenu": "Comme pour les charges, la réforme du PCG (obligatoire à partir de 2025, par anticipation dès 2023) resserre la définition des produits exceptionnels : ce sont désormais uniquement les produits liés à un événement majeur et inhabituel, ou d'origine purement fiscale. Ne sont plus enregistrés en produits exceptionnels : les transferts de charges, les produits de cession, la quote-part des subventions d'investissement virée au résultat, ni les aides, remboursements et indemnités reçus en compensation de charges d'exploitation."
+    },
+    {
+      "titre": "Les comptes de produits spécifiques",
+      "contenu": "Point d'actualité : les comptes 79 « Transferts de charges » sont supprimés par la réforme du PCG 2022, en vigueur obligatoirement en 2025 — ils ne doivent donc plus être utilisés.",
+      "tableau": {
+        "colonnes": [
+          "Situation",
+          "Compte(s)",
+          "Analyse"
+        ],
+        "lignes": [
+          [
+            "Envoi d'une quittance pour un loyer immobilier",
+            "706 / 708",
+            "706 : si la location immobilière est l'activité principale · 708 : si c'est une activité secondaire"
+          ],
+          [
+            "Transferts de charges (compte supprimé depuis 2025)",
+            "79",
+            "Transfert d'éléments enregistrés initialement en charges, de manière temporaire, en attendant leur affectation définitive"
+          ],
+          [
+            "Dégrèvement d'impôt",
+            "7717",
+            "Remboursement d'un impôt (autre que l'impôt sur les bénéfices) versé à tort"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Exemple — associer un élément à son compte",
+      "contenu": "À chaque charge et produit correspond un compte du PCG. Voici quelques associations classiques à titre d'exemple.",
+      "tableau": {
+        "colonnes": [
+          "Élément",
+          "Compte"
+        ],
+        "lignes": [
+          [
+            "Cadeaux à la clientèle",
+            "6234. Cadeaux à la clientèle"
+          ],
+          [
+            "Réparations d'une machine",
+            "6155. Entretiens et réparations sur biens mobiliers"
+          ],
+          [
+            "Location d'un coffre à la banque",
+            "6276. Location de coffres"
+          ],
+          [
+            "Stockage de produits finis",
+            "71355. Variation des stocks de produits finis"
+          ],
+          [
+            "Intérêts sur prêts accordés à une filiale",
+            "7626. Revenus des prêts"
+          ],
+          [
+            "Pénalités perçues à la suite d'un retard d'un partenaire",
+            "7711. Dédits et pénalités perçus sur achats et sur ventes"
+          ],
+          [
+            "Pourboires",
+            "6238. Divers (pourboires, dons courants, etc.)"
+          ],
+          [
+            "Frais de bouche lors d'un déplacement",
+            "6256. Missions"
+          ],
+          [
+            "Commissions payées pour opérations d'achats",
+            "6221. Commissions et courtages sur achats"
+          ],
+          [
+            "Escomptes accordés",
+            "665. Escomptes accordés"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le + de l'expert",
+      "contenu": "Il n'est pas nécessaire de connaître par cœur tous les comptes. Vous devez en revanche être capable de les retrouver dans le PCG, document autorisé à l'examen."
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "Charge d'exploitation",
+      "definition": "Charge liée à l'activité normale et courante de l'entreprise, enregistrée dans les comptes 60 à 65."
+    },
+    {
+      "terme": "Charge financière",
+      "definition": "Charge à caractère financier liée à la gestion financière de l'entreprise (compte 66)."
+    },
+    {
+      "terme": "Charge exceptionnelle",
+      "definition": "Depuis la réforme PCG 2025 (anticipée dès 2023) : charge liée à un événement majeur et inhabituel, ou d'origine purement fiscale (compte 67)."
+    },
+    {
+      "terme": "Produit d'exploitation",
+      "definition": "Produit lié à l'activité normale et courante de l'entreprise, enregistré dans les comptes 70 à 75."
+    },
+    {
+      "terme": "Produit financier",
+      "definition": "Produit à caractère financier lié à l'activité financière de l'entreprise (compte 76)."
+    },
+    {
+      "terme": "Produit exceptionnel",
+      "definition": "Depuis la réforme PCG 2025 (anticipée dès 2023) : produit lié à un événement majeur et inhabituel, ou d'origine purement fiscale (compte 77)."
+    },
+    {
+      "terme": "Transferts de charges (compte 79)",
+      "definition": "Compte permettant de transférer temporairement un élément de charge en attendant son affectation définitive ; supprimé par la réforme du PCG 2022, en vigueur obligatoirement en 2025."
+    }
+  ],
+  "questionsTypes": [
+    "Associer un élément de charge ou de produit donné à son compte du PCG.",
+    "Distinguer charge/produit d'exploitation, financier et exceptionnel.",
+    "Justifier si un événement relève des charges/produits exceptionnels selon la définition du PCG réformé (2025).",
+    "Expliquer la suppression du compte 79 « Transferts de charges » depuis 2025.",
+    "Retrouver dans le PCG le compte correspondant à une situation donnée."
+  ],
+  "annales": {
+    "note": "Ce chapitre sert surtout de grille de lecture pour classer des opérations rencontrées dans d'autres dossiers (opérations courantes, inventaire). Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "questionsRedactionnellesRecurrentes": [
+      "Justifier le caractère exceptionnel (ou non) d'une charge ou d'un produit selon la définition PCG en vigueur depuis 2025.",
+      "Retrouver le compte adapté à une charge ou un produit inhabituel dans le PCG."
+    ],
+    "entrees": []
+  }
+}
