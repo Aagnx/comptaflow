@@ -1,0 +1,252 @@
+
+Aucun élément sélectionné
+
+Aller au contenu
+Utiliser Gmail avec un lecteur d'écran
+
+1 sur 4 591
+(aucun objet)
+Boîte de réception
+
+Antoine Ginioux <antoine.ginioux@gmail.com>
+Pièces jointes
+21:40 (il y a 2 minutes)
+À moi
+
+
+
+Antoine GINIOUX 
+ 
+ 10 pièces jointes
+  •  Analysé par Gmail
+{
+  "id": "ue9-ch3",
+  "numero": 3,
+  "titre": "La méthode comptable : écritures et documents comptables",
+  "axe": "Axe 2 — Appréhender la méthode comptable",
+  "pageManuel": 17,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": [
+    "Bilan",
+    "Compte",
+    "Compte de résultat",
+    "Crédit",
+    "Débit",
+    "Emploi",
+    "Enregistrement comptable",
+    "Flux",
+    "Grand-livre",
+    "Livre-journal",
+    "Méthode comptable",
+    "Ressource"
+  ],
+  "utilite": {
+    "pourcentage": 15,
+    "niveau": "Modéré à fort — mécanique de base, rarement un dossier isolé mais mobilisée dans tous les dossiers d'écritures",
+    "commentaire": "Ce chapitre pose le vocabulaire et les outils que tu vas réutiliser dans TOUS les dossiers d'écritures : flux, emploi/ressource, débit/crédit, journal, grand-livre, balance. Il donne rarement lieu à un dossier autonome à l'examen, mais une erreur ici (mauvais sens débit/crédit, confusion emploi/ressource) fait perdre des points dans absolument tous les dossiers qui suivent. À maîtriser en réflexe avant d'aborder les opérations courantes.",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "notionsCles": [
+    {
+      "titre": "L'enregistrement comptable",
+      "contenu": "La comptabilité, en tant que technique quantitative, propose une méthode comptable permettant de traduire les flux de l'entreprise afin de fournir des documents comptables reflétant sa situation et sa performance. L'enregistrement comptable consiste à traduire ces flux à partir d'une pièce comptable : pour chaque enregistrement sont comptabilisées l'origine et la finalité du flux. Exemple filé : l'entreprise Carla achète 50 paires de bottes à un fournisseur italien (paiement par virement de 1 000 €) et en revend une paire à un client français (paiement par chèque de 60 €)."
+    },
+    {
+      "titre": "Les flux de l'entreprise",
+      "contenu": "Les flux comptables représentent les échanges réalisés par l'entreprise avec ses partenaires. On distingue trois types de flux.",
+      "tableau": {
+        "colonnes": [
+          "Type de flux",
+          "Définition",
+          "Exemple (Carla)"
+        ],
+        "lignes": [
+          [
+            "Flux réel",
+            "Échange de biens et de services",
+            "Achat puis revente de bottes"
+          ],
+          [
+            "Flux monétaire",
+            "Contrepartie monétaire d'un flux réel",
+            "Virement de 1 000 €, chèque de 60 €"
+          ],
+          [
+            "Flux financier",
+            "Échange monétaire sans contrepartie réelle",
+            "Octroi d'un emprunt"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les emplois et les ressources",
+      "contenu": "À chaque flux sont associées une origine et une finalité. L'origine du flux correspond comptablement à une ressource : elle précise ce qui permet la réalisation de l'opération. La finalité du flux correspond comptablement à un emploi : il précise l'utilisation du flux par l'entreprise ou son impact sur celle-ci. L'emploi et la ressource se définissent l'un par rapport à l'autre. L'emploi est aussi appelé débit, la ressource crédit.",
+      "tableau": {
+        "colonnes": [
+          "Partenaire",
+          "Ce qui sort de Carla vers lui",
+          "Ce qu'il reçoit / apporte"
+        ],
+        "lignes": [
+          [
+            "Fournisseur italien",
+            "Ressource : virement bancaire de 1 000 €",
+            "Emploi pour Carla : 50 paires de bottes"
+          ],
+          [
+            "Client français",
+            "Ressource : 1 paire de bottes",
+            "Emploi pour Carla : chèque de 60 €"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les comptes",
+      "contenu": "Un compte est un instrument permettant de spécifier les emplois et les ressources. Il prend la forme d'un tableau synthétique caractérisé par : un numéro de compte, un intitulé de compte, la valeur de l'opération, la date de l'opération, le libellé de l'opération, et une partie où sont inscrites les opérations débitrices et une autre pour les opérations créditrices. Afin d'apprécier l'état d'un compte, on en calcule le solde en effectuant la différence entre la somme des montants portés au débit et la somme des montants portés au crédit.",
+      "formule": "Débit > Crédit → solde débiteur · Crédit > Débit → solde créditeur"
+    },
+    {
+      "titre": "Le livre-journal",
+      "contenu": "Le livre-journal (ou journal) est un livre comptable présentant de manière chronologique les enregistrements comptables. Chaque écriture y indique la date de l'opération, le(s) compte(s) débité(s) et crédité(s) avec leurs numéros, les montants débités et crédités, ainsi que le libellé et la pièce justificative de l'opération. Exemple : la vente de la paire de bottes au client français (60 €) se traduit par un débit du compte 512 – Banques et un crédit du compte 707 – Ventes de marchandises, référencé par le numéro de facture."
+    },
+    {
+      "titre": "Le grand-livre et la balance",
+      "contenu": "L'ensemble des comptes constitue le grand-livre. À partir du grand-livre est extraite la balance, tableau récapitulant le total des mouvements et les soldes de chacun des comptes. Les balances peuvent se présenter de différentes manières (à 2, 4 ou 6 colonnes).",
+      "tableau": {
+        "colonnes": [
+          "Nom des comptes",
+          "Solde au 01/01/N (débiteur / créditeur)",
+          "Mouvements (au débit / au crédit)",
+          "Solde au 31/12/N (débiteur / créditeur)"
+        ],
+        "lignes": [
+          [
+            "…",
+            "…",
+            "…",
+            "…"
+          ],
+          [
+            "Total",
+            "",
+            "",
+            ""
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le bilan et le compte de résultat",
+      "contenu": "À partir de la balance se définissent les deux documents de synthèse : le bilan et le compte de résultat. Le bilan regroupe les comptes des classes 1 à 5 ; c'est un document comptable fournissant une image de la situation patrimoniale de l'entreprise, en présentant les éléments d'actif et de passif. Le compte de résultat regroupe les comptes des classes 6 et 7 ; il informe sur la formation du bénéfice ou de la perte réalisé par l'entreprise, en présentant les produits et les charges qui participent à la formation du résultat de l'exercice."
+    },
+    {
+      "titre": "Astuce pour identifier emploi et ressource",
+      "contenu": "Pour chaque enregistrement, il faut toujours déterminer a minima un emploi et une ressource. Phrase-clé pour s'aider : « Grâce à… (ressource), l'entreprise a pu… (emploi) »."
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "Méthode comptable",
+      "definition": "Ensemble de règles permettant de traduire les flux de l'entreprise afin de fournir des documents comptables reflétant sa situation et sa performance."
+    },
+    {
+      "terme": "Enregistrement comptable",
+      "definition": "Traduction d'un flux, à partir d'une pièce comptable, en comptabilisant son origine (ressource) et sa finalité (emploi)."
+    },
+    {
+      "terme": "Flux",
+      "definition": "Échange réalisé par l'entreprise avec l'un de ses partenaires. On distingue les flux réels, monétaires et financiers."
+    },
+    {
+      "terme": "Flux réel",
+      "definition": "Échange de biens et de services."
+    },
+    {
+      "terme": "Flux monétaire",
+      "definition": "Contrepartie monétaire apportée en réponse à un flux réel."
+    },
+    {
+      "terme": "Flux financier",
+      "definition": "Échange monétaire sans contrepartie réelle, tel l'octroi d'un emprunt."
+    },
+    {
+      "terme": "Emploi",
+      "definition": "Finalité d'un flux : précise l'utilisation du flux par l'entreprise ou son impact sur celle-ci. Autre nom : débit."
+    },
+    {
+      "terme": "Ressource",
+      "definition": "Origine d'un flux : précise ce qui permet la réalisation de l'opération. Autre nom : crédit."
+    },
+    {
+      "terme": "Débit",
+      "definition": "Autre nom de l'emploi ; partie gauche d'un compte."
+    },
+    {
+      "terme": "Crédit",
+      "definition": "Autre nom de la ressource ; partie droite d'un compte."
+    },
+    {
+      "terme": "Compte",
+      "definition": "Instrument permettant de spécifier les emplois et les ressources, sous forme de tableau synthétique (numéro, intitulé, valeur, date, libellé, débit/crédit)."
+    },
+    {
+      "terme": "Solde débiteur",
+      "definition": "Situation d'un compte où le total des débits excède le total des crédits."
+    },
+    {
+      "terme": "Solde créditeur",
+      "definition": "Situation d'un compte où le total des crédits excède le total des débits."
+    },
+    {
+      "terme": "Livre-journal",
+      "definition": "Livre comptable (aussi appelé journal) présentant de manière chronologique les enregistrements comptables."
+    },
+    {
+      "terme": "Grand-livre",
+      "definition": "Ensemble des comptes de l'entreprise."
+    },
+    {
+      "terme": "Balance",
+      "definition": "Tableau extrait du grand-livre récapitulant le total des mouvements et les soldes de chaque compte."
+    },
+    {
+      "terme": "Bilan",
+      "definition": "Document de synthèse regroupant les comptes des classes 1 à 5, présentant les éléments d'actif et de passif de l'entreprise."
+    },
+    {
+      "terme": "Compte de résultat",
+      "definition": "Document de synthèse regroupant les comptes des classes 6 et 7, présentant les charges et produits formant le résultat de l'exercice."
+    }
+  ],
+  "questionsTypes": [
+    "Définir la méthode comptable et l'enregistrement comptable.",
+    "Distinguer flux réel, flux monétaire et flux financier, à l'aide d'exemples.",
+    "Pour une opération donnée, identifier l'emploi et la ressource.",
+    "Expliquer le lien entre emploi/ressource et débit/crédit.",
+    "Présenter la structure d'un compte et déterminer son solde (débiteur ou créditeur).",
+    "Présenter le rôle et le contenu du livre-journal.",
+    "Expliquer le passage du grand-livre à la balance, puis de la balance aux comptes annuels.",
+    "Distinguer les comptes qui alimentent le bilan de ceux qui alimentent le compte de résultat."
+  ],
+  "annales": {
+    "note": "Chapitre rarement testé comme dossier isolé, mais ses mécanismes (identifier emploi/ressource, déterminer un sens débit/crédit, passer une écriture) sont mobilisés dans la quasi-totalité des dossiers d'écritures comptables. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "questionsRedactionnellesRecurrentes": [
+      "Identifier l'emploi et la ressource d'une opération donnée.",
+      "Justifier le sens (débit ou crédit) d'une écriture.",
+      "Distinguer flux réel, monétaire et financier.",
+      "Expliquer le passage des comptes à la balance puis aux comptes annuels."
+    ],
+    "entrees": []
+  }
+}
+3.json
+Affichage de 2.txt en cours...
