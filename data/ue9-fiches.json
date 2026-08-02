@@ -3139,7 +3139,7 @@
         ],
         "entrees": []
       }
-      },
+    },
     {
       "id": "ue9-ch10",
       "numero": 10,
@@ -3181,11 +3181,23 @@
           "titre": "Trois modalités d'enregistrement chez l'acheteur",
           "contenu": "Les frais accessoires sur achats peuvent être enregistrés selon trois modalités au choix de l'entreprise, sans incidence sur le montant total dû au fournisseur.",
           "tableau": {
-            "colonnes": ["Modalité", "Principe"],
+            "colonnes": [
+              "Modalité",
+              "Principe"
+            ],
             "lignes": [
-              ["Modalité 1", "Frais inclus directement dans le compte d'achats de marchandises (60.) : aucun compte de frais distinct"],
-              ["Modalité 2", "Frais enregistrés dans des comptes de charges par nature (616 assurances, 622 honoraires, 624 transports, etc.)"],
-              ["Modalité 3", "Frais enregistrés dans un compte dédié de frais accessoires sur achats (608.)"]
+              [
+                "Modalité 1",
+                "Frais inclus directement dans le compte d'achats de marchandises (60.) : aucun compte de frais distinct"
+              ],
+              [
+                "Modalité 2",
+                "Frais enregistrés dans des comptes de charges par nature (616 assurances, 622 honoraires, 624 transports, etc.)"
+              ],
+              [
+                "Modalité 3",
+                "Frais enregistrés dans un compte dédié de frais accessoires sur achats (608.)"
+              ]
             ]
           }
         },
@@ -3193,11 +3205,31 @@
           "titre": "Exemple — Modalité 1 : frais inclus dans le compte d'achats",
           "contenu": "L'entreprise Aubert achète 1 000 € de marchandises, 50 € de frais de transport sont facturés (TVA taux normal 20 %).",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["607", "Achats de marchandises (net commercial : 1 000 + 50)", "1 050,00", ""],
-              ["44566", "État, TVA déductible sur ABS (1 050 × 20 %)", "210,00", ""],
-              ["401", "Fournisseurs", "", "1 260,00"]
+              [
+                "607",
+                "Achats de marchandises (net commercial : 1 000 + 50)",
+                "1 050,00",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS (1 050 × 20 %)",
+                "210,00",
+                ""
+              ],
+              [
+                "401",
+                "Fournisseurs",
+                "",
+                "1 260,00"
+              ]
             ]
           }
         },
@@ -3205,12 +3237,37 @@
           "titre": "Exemple — Modalité 2 : frais dans un compte de charges par nature",
           "contenu": "Même opération (1 000 € de marchandises, 50 € de transport, TVA 20 %), frais isolés dans un compte de charges par nature.",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["607", "Achats de marchandises", "1 000,00", ""],
-              ["6242", "Transport sur achats", "50,00", ""],
-              ["44566", "État, TVA déductible sur ABS (1 050 × 20 %)", "210,00", ""],
-              ["401", "Fournisseurs", "", "1 260,00"]
+              [
+                "607",
+                "Achats de marchandises",
+                "1 000,00",
+                ""
+              ],
+              [
+                "6242",
+                "Transport sur achats",
+                "50,00",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS (1 050 × 20 %)",
+                "210,00",
+                ""
+              ],
+              [
+                "401",
+                "Fournisseurs",
+                "",
+                "1 260,00"
+              ]
             ]
           }
         },
@@ -3218,12 +3275,37 @@
           "titre": "Exemple — Modalité 3 : frais accessoires sur achats (608)",
           "contenu": "Même opération (1 000 € de marchandises, 50 € de transport, TVA 20 %), frais isolés dans un compte dédié de frais accessoires sur achats.",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["607", "Achats de marchandises", "1 000,00", ""],
-              ["6087", "Frais accessoires sur achats de marchandises", "50,00", ""],
-              ["44566", "État, TVA déductible sur ABS (1 050 × 20 %)", "210,00", ""],
-              ["401", "Fournisseurs", "", "1 260,00"]
+              [
+                "607",
+                "Achats de marchandises",
+                "1 000,00",
+                ""
+              ],
+              [
+                "6087",
+                "Frais accessoires sur achats de marchandises",
+                "50,00",
+                ""
+              ],
+              [
+                "44566",
+                "État, TVA déductible sur ABS (1 050 × 20 %)",
+                "210,00",
+                ""
+              ],
+              [
+                "401",
+                "Fournisseurs",
+                "",
+                "1 260,00"
+              ]
             ]
           }
         },
@@ -3231,10 +3313,22 @@
           "titre": "Chez le vendeur : conditions arrivée/départ et franco/non franco",
           "contenu": "La comptabilisation des frais accessoires liés à la vente dépend des conditions contractuelles et commerciales de l'opération. En conditions « arrivée », le transfert de propriété a lieu chez le client ; en conditions « départ », il a lieu chez le fournisseur. Une vente est « franco » si les frais sont à la charge du vendeur et intégrés au prix de vente, ou « non franco » si les frais accessoires apparaissent distinctement sur la facture.",
           "tableau": {
-            "colonnes": ["Clause contractuelle", "Ventes « franco »", "Ventes « non franco »"],
+            "colonnes": [
+              "Clause contractuelle",
+              "Ventes « franco »",
+              "Ventes « non franco »"
+            ],
             "lignes": [
-              ["Conditions « arrivée » (transfert de propriété chez le client)", "Frais élément du prix de vente, TVA au même taux que les marchandises, frais inclus dans les comptes 701 à 707", "Frais accessoires considérés comme élément du prix de vente, taux de TVA identique aux marchandises, frais distincts sur facture et enregistrés au compte 7085"],
-              ["Conditions « départ » (transfert de propriété chez le fournisseur)", "Même traitement que conditions arrivée franco : frais élément du prix, TVA au même taux, inclus dans 701 à 707", "Si les frais ne sont pas dissociés du montant de la vente, TVA au même taux que les marchandises ; s'ils sont dissociés, TVA au taux normal (20 %). Frais distincts sur facture, enregistrés au compte 7085"]
+              [
+                "Conditions « arrivée » (transfert de propriété chez le client)",
+                "Frais élément du prix de vente, TVA au même taux que les marchandises, frais inclus dans les comptes 701 à 707",
+                "Frais accessoires considérés comme élément du prix de vente, taux de TVA identique aux marchandises, frais distincts sur facture et enregistrés au compte 7085"
+              ],
+              [
+                "Conditions « départ » (transfert de propriété chez le fournisseur)",
+                "Même traitement que conditions arrivée franco : frais élément du prix, TVA au même taux, inclus dans 701 à 707",
+                "Si les frais ne sont pas dissociés du montant de la vente, TVA au même taux que les marchandises ; s'ils sont dissociés, TVA au taux normal (20 %). Frais distincts sur facture, enregistrés au compte 7085"
+              ]
             ]
           }
         },
@@ -3242,11 +3336,31 @@
           "titre": "Exemple — vente franco de port (hypothèses 1 et 2)",
           "contenu": "Une entreprise vend 1 500 € de marchandises (TVA taux réduit 5,5 %), générant 100 € de frais de transport. Hypothèse 1 (conditions arrivée + franco de port) et hypothèse 2 (conditions départ + franco de port) donnent la même comptabilisation : les frais sont inclus dans le prix de vente, au même taux de TVA que les marchandises.",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["411", "Clients", "1 688,00", ""],
-              ["707", "Ventes de marchandises (net commercial : 1 500 + 100)", "", "1 600,00"],
-              ["44571", "État, TVA collectée (1 600 × 5,5 %)", "", "88,00"]
+              [
+                "411",
+                "Clients",
+                "1 688,00",
+                ""
+              ],
+              [
+                "707",
+                "Ventes de marchandises (net commercial : 1 500 + 100)",
+                "",
+                "1 600,00"
+              ],
+              [
+                "44571",
+                "État, TVA collectée (1 600 × 5,5 %)",
+                "",
+                "88,00"
+              ]
             ]
           }
         },
@@ -3254,12 +3368,37 @@
           "titre": "Exemple — vente non franco de port, frais non dissociés (hypothèses 3 et 4.1)",
           "contenu": "Même opération (1 500 € de marchandises, TVA 5,5 %, 100 € de transport), mais vente « non franco de port » avec frais distincts sur facture. Hypothèse 3 (conditions arrivée + non franco) et hypothèse 4.1 (conditions départ + non franco, prix du transport non dissocié de la vente) donnent la même comptabilisation : les frais suivent le taux de TVA des marchandises.",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["411", "Clients", "1 688,00", ""],
-              ["707", "Ventes de marchandises", "", "1 500,00"],
-              ["7085", "Ports et frais accessoires facturés", "", "100,00"],
-              ["44571", "État, TVA collectée (1 600 × 5,5 %)", "", "88,00"]
+              [
+                "411",
+                "Clients",
+                "1 688,00",
+                ""
+              ],
+              [
+                "707",
+                "Ventes de marchandises",
+                "",
+                "1 500,00"
+              ],
+              [
+                "7085",
+                "Ports et frais accessoires facturés",
+                "",
+                "100,00"
+              ],
+              [
+                "44571",
+                "État, TVA collectée (1 600 × 5,5 %)",
+                "",
+                "88,00"
+              ]
             ]
           }
         },
@@ -3267,12 +3406,37 @@
           "titre": "Exemple — vente conditions arrivée, franco, prix du transport dissocié (hypothèse 4.2)",
           "contenu": "Cas particulier : vente en conditions « arrivée » et « franco de port », mais le prix du transport est dissocié de la vente. Le transport suit alors le taux normal de TVA (20 %), différent du taux des marchandises (5,5 %).",
           "tableau": {
-            "colonnes": ["Compte", "Intitulé", "Débit", "Crédit"],
+            "colonnes": [
+              "Compte",
+              "Intitulé",
+              "Débit",
+              "Crédit"
+            ],
             "lignes": [
-              ["411", "Clients", "1 702,50", ""],
-              ["707", "Ventes de marchandises", "", "1 500,00"],
-              ["7085", "Ports et frais accessoires facturés", "", "100,00"],
-              ["44571", "État, TVA collectée ((1 500 × 5,5 %) + (100 × 20 %))", "", "102,50"]
+              [
+                "411",
+                "Clients",
+                "1 702,50",
+                ""
+              ],
+              [
+                "707",
+                "Ventes de marchandises",
+                "",
+                "1 500,00"
+              ],
+              [
+                "7085",
+                "Ports et frais accessoires facturés",
+                "",
+                "100,00"
+              ],
+              [
+                "44571",
+                "État, TVA collectée ((1 500 × 5,5 %) + (100 × 20 %))",
+                "",
+                "102,50"
+              ]
             ]
           }
         },
@@ -3282,13 +3446,34 @@
         }
       ],
       "vocabulaire": [
-        { "terme": "Frais accessoire", "definition": "Frais de transport, d'assurance, de commissions, de courtages, d'honoraires, etc., générés lors des achats et ventes de biens et services." },
-        { "terme": "Droits de douane", "definition": "Taxes à l'importation comptabilisées directement au débit du compte d'achats concerné, sans compte distinct." },
-        { "terme": "Condition arrivée", "definition": "Clause contractuelle où le transfert de propriété de la marchandise a lieu chez le client." },
-        { "terme": "Condition départ", "definition": "Clause contractuelle où le transfert de propriété de la marchandise a lieu chez le fournisseur." },
-        { "terme": "Franco de port", "definition": "Vente où les frais de transport sont à la charge du vendeur et intégrés au prix de vente, sans être facturés distinctement." },
-        { "terme": "Compte 7085", "definition": "Ports et frais accessoires facturés : compte utilisé côté vendeur lorsque les frais accessoires apparaissent distinctement sur la facture (vente non franco)." },
-        { "terme": "Compte 608", "definition": "Frais accessoires d'achat : compte dédié permettant d'isoler les frais accessoires (transport, assurance...) du prix d'achat des marchandises, sous-compte 6087 pour les marchandises." }
+        {
+          "terme": "Frais accessoire",
+          "definition": "Frais de transport, d'assurance, de commissions, de courtages, d'honoraires, etc., générés lors des achats et ventes de biens et services."
+        },
+        {
+          "terme": "Droits de douane",
+          "definition": "Taxes à l'importation comptabilisées directement au débit du compte d'achats concerné, sans compte distinct."
+        },
+        {
+          "terme": "Condition arrivée",
+          "definition": "Clause contractuelle où le transfert de propriété de la marchandise a lieu chez le client."
+        },
+        {
+          "terme": "Condition départ",
+          "definition": "Clause contractuelle où le transfert de propriété de la marchandise a lieu chez le fournisseur."
+        },
+        {
+          "terme": "Franco de port",
+          "definition": "Vente où les frais de transport sont à la charge du vendeur et intégrés au prix de vente, sans être facturés distinctement."
+        },
+        {
+          "terme": "Compte 7085",
+          "definition": "Ports et frais accessoires facturés : compte utilisé côté vendeur lorsque les frais accessoires apparaissent distinctement sur la facture (vente non franco)."
+        },
+        {
+          "terme": "Compte 608",
+          "definition": "Frais accessoires d'achat : compte dédié permettant d'isoler les frais accessoires (transport, assurance...) du prix d'achat des marchandises, sous-compte 6087 pour les marchandises."
+        }
       ],
       "questionsTypes": [
         "Définir les frais accessoires et expliquer le traitement des droits de douane.",
@@ -3313,7 +3498,6 @@
           }
         ]
       }
-    }
     }
   ]
 }
