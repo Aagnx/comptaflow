@@ -1,0 +1,258 @@
+
+Aucun élément sélectionné
+
+Aller au contenu
+Utiliser Gmail avec un lecteur d'écran
+
+1 sur 4 591
+(aucun objet)
+Boîte de réception
+
+Antoine Ginioux <antoine.ginioux@gmail.com>
+Pièces jointes
+21:40 (il y a 4 minutes)
+À moi
+
+
+
+Antoine GINIOUX 
+ 
+ 10 pièces jointes
+  •  Analysé par Gmail
+{
+  "id": "ue9-ch9",
+  "numero": 9,
+  "titre": "Les emballages commerciaux consignés",
+  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+  "pageManuel": 41,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": [
+    "Boni sur reprise d'emballages",
+    "Consignation",
+    "Déconsignation",
+    "Emballage consigné",
+    "Emballage perdu",
+    "Mali sur emballages",
+    "Non-retour d'emballage"
+  ],
+  "utilite": {
+    "pourcentage": 12,
+    "niveau": "Modéré — mécanisme spécifique, moins systématique que la TVA ou les réductions commerciales",
+    "commentaire": "Ce chapitre tombe rarement comme dossier autonome, mais dès qu'un sujet met en scène une entreprise qui vend dans des contenants consignés (boissons, industrie agroalimentaire, etc.), les écritures de consignation/déconsignation sont un classique. Point d'actualité : le compte 6136 « Malis sur emballages » a été supprimé et remplacé par le compte 60262 pour les exercices ouverts à compter du 1er janvier 2025 (règlement ANC n°2022-06) — à utiliser systématiquement dans tes écritures désormais.",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "notionsCles": [
+    {
+      "titre": "Emballages perdus vs emballages récupérables",
+      "contenu": "Un emballage perdu (carton, film plastique...) est vendu avec la marchandise et n'est jamais restitué : son coût est directement inclus dans le prix de vente ou d'achat, sans traitement comptable spécifique. Un emballage récupérable (casier, palette, fût...) reste la propriété du fournisseur : il est consigné au client contre un dépôt de garantie, à restituer contre remboursement de ce dépôt.",
+      "tableau": {
+        "colonnes": [
+          "Type d'emballage",
+          "Traitement"
+        ],
+        "lignes": [
+          [
+            "Emballage perdu",
+            "Coût inclus dans le prix de vente/d'achat, aucune écriture spécifique"
+          ],
+          [
+            "Emballage récupérable consigné",
+            "Dépôt de garantie enregistré aux comptes 4196 (vendeur) / 4096 (acheteur)"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La consignation : un prêt, pas une vente",
+      "formule": "Consignation = dépôt de garantie (créance/dette), jamais une vente : donc pas de TVA sur le montant consigné",
+      "contenu": "La consignation s'apparente à un prêt : le fournisseur reste propriétaire de l'emballage et s'engage à rembourser le dépôt si le client le restitue. N'étant pas une vente, la consignation n'est jamais soumise à la TVA. Mnémotechnique : compte 4196 « Clients, dettes sur emballages et matériels consignés » chez le vendeur (créditeur) ; compte 4096 « Fournisseurs, créances pour emballages et matériel à rendre » chez l'acheteur (débiteur)."
+    },
+    {
+      "titre": "Exemple filé — consignation lors d'une vente",
+      "contenu": "Vente de marchandises 2 000 € HT (TVA 20 % = 400 €), livrées dans 3 casiers consignés à 100 € l'unité (300 € de dépôt, hors TVA). Total réglé : 2 700 €.",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "411",
+            "Clients",
+            "2 700,00",
+            ""
+          ],
+          [
+            "707",
+            "Ventes de marchandises",
+            "",
+            "2 000,00"
+          ],
+          [
+            "44571",
+            "État, TVA collectée",
+            "",
+            "400,00"
+          ],
+          [
+            "4196",
+            "Clients, dettes sur emballages consignés",
+            "",
+            "300,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Exemple filé — consignation chez l'acheteur",
+      "contenu": "Écriture miroir chez l'acheteur pour le même achat (2 000 € HT, TVA 20 %, 3 casiers consignés à 100 €).",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "607",
+            "Achats de marchandises",
+            "2 000,00",
+            ""
+          ],
+          [
+            "44566",
+            "État, TVA déductible sur ABS",
+            "400,00",
+            ""
+          ],
+          [
+            "4096",
+            "Fournisseurs, créances pour emballages à rendre",
+            "300,00",
+            ""
+          ],
+          [
+            "401",
+            "Fournisseurs",
+            "",
+            "2 700,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La déconsignation au même prix",
+      "contenu": "Si les emballages sont restitués et repris au même prix que la consignation, l'opération est neutre : le dépôt est simplement remboursé, sans TVA ni gain ou perte. Suite de l'exemple : les 3 casiers sont rendus, remboursement intégral des 300 €.",
+      "tableau": {
+        "colonnes": [
+          "Cas",
+          "Chez le vendeur",
+          "Chez l'acheteur"
+        ],
+        "lignes": [
+          [
+            "Retour au même prix (300 €)",
+            "Débit 4196 (300,00) / Crédit 411 Clients (300,00)",
+            "Débit 401 Fournisseurs (300,00) / Crédit 4096 (300,00)"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La déconsignation à prix inférieur : bonis et malis",
+      "formule": "Boni (vendeur, compte 7086) = Mali (acheteur, compte 60262) = Prix de consignation − Prix de reprise (HT), TVA due sur cet écart",
+      "contenu": "Si le prix de reprise est inférieur au prix de consignation, l'écart constitue un boni pour le vendeur (compte 7086 « Bonis sur reprises d'emballages consignés ») et un mali pour l'acheteur (compte 60262 « Malis sur emballages », qui a remplacé le compte 6136 depuis le 1ᵉʳ janvier 2025). Contrairement au dépôt initial, cet écart est soumis à TVA. Suite de l'exemple : les 3 casiers sont repris pour 270 € au lieu des 300 € consignés (écart de 30 € TTC = 25 € HT + 5 € de TVA).",
+      "tableau": {
+        "colonnes": [
+          "Cas",
+          "Chez le vendeur",
+          "Chez l'acheteur"
+        ],
+        "lignes": [
+          [
+            "Reprise à prix inférieur (270 € au lieu de 300 €)",
+            "Débit 4196 (300,00) / Crédit 411 Clients (270,00) + 7086 Boni (25,00) + 44571 TVA collectée (5,00)",
+            "Débit 60262 Mali (25,00) + 44566 TVA déductible (5,00) + 401 Fournisseurs (270,00) / Crédit 4096 (300,00)"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le non-retour de l'emballage consigné",
+      "contenu": "Si le client ne restitue jamais l'emballage, la consignation devient définitive et se transforme en cession : chez le vendeur, tout le dépôt devient un produit (compte 7088 « Autres produits des activités annexes »), avec TVA collectée sur ce montant. Chez l'acheteur, le dépôt devient une charge d'achat (compte 606, parfois détaillé en 60265 « Achats d'emballages récupérables non identifiables » selon les plans de comptes), avec TVA déductible correspondante. Suite de l'exemple : les 3 casiers ne sont jamais rendus (dépôt de 300 € définitivement acquis, soit 250 € HT + 50 € de TVA).",
+      "tableau": {
+        "colonnes": [
+          "Cas",
+          "Chez le vendeur",
+          "Chez l'acheteur"
+        ],
+        "lignes": [
+          [
+            "Non-retour définitif (dépôt de 300 € TTC)",
+            "Débit 4196 (300,00) / Crédit 7088 (250,00) + 44571 TVA collectée (50,00)",
+            "Débit 606 (250,00) + 44566 TVA déductible (50,00) / Crédit 4096 (300,00)"
+          ]
+        ]
+      }
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "Emballage perdu",
+      "definition": "Emballage non récupérable, dont le coût est inclus dans le prix de vente ou d'achat, sans écriture spécifique."
+    },
+    {
+      "terme": "Emballage récupérable (consigné)",
+      "definition": "Emballage restant la propriété du fournisseur, confié au client contre un dépôt de garantie (consignation) à restituer."
+    },
+    {
+      "terme": "Consignation",
+      "definition": "Dépôt de garantie versé par le client au fournisseur pour un emballage récupérable ; assimilé à un prêt, donc non soumis à TVA. Compte 4196 chez le vendeur (dette), compte 4096 chez l'acheteur (créance)."
+    },
+    {
+      "terme": "Déconsignation",
+      "definition": "Restitution de l'emballage consigné et remboursement du dépôt correspondant, au même prix ou à un prix inférieur (boni/mali)."
+    },
+    {
+      "terme": "Boni sur reprise d'emballages",
+      "definition": "Gain du vendeur (compte 7086) lorsque le prix de reprise d'un emballage consigné est inférieur au prix de consignation ; soumis à TVA."
+    },
+    {
+      "terme": "Mali sur emballages",
+      "definition": "Perte de l'acheteur (compte 60262, anciennement 6136 avant le 1ᵉʳ janvier 2025) lorsque le prix de reprise est inférieur à la consignation ; soumis à TVA."
+    },
+    {
+      "terme": "Non-retour d'emballage",
+      "definition": "Absence définitive de restitution : la consignation devient une cession taxable (compte 7088 chez le vendeur, compte d'achat chez l'acheteur)."
+    }
+  ],
+  "questionsTypes": [
+    "Distinguer emballage perdu et emballage récupérable consigné.",
+    "Justifier pourquoi la consignation initiale n'est pas soumise à TVA.",
+    "Comptabiliser la consignation d'un emballage chez le vendeur et chez l'acheteur.",
+    "Comptabiliser la déconsignation au même prix que la consignation.",
+    "Calculer et comptabiliser un boni (vendeur) et un mali (acheteur) lors d'une reprise à prix inférieur.",
+    "Comptabiliser le non-retour définitif d'un emballage consigné, chez le vendeur et chez l'acheteur."
+  ],
+  "annales": {
+    "note": "Ce chapitre est rarement un dossier à part entière, mais les écritures de consignation/déconsignation sont un classique dès qu'un sujet met en scène des emballages récupérables (agroalimentaire, boissons...). Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "questionsRedactionnellesRecurrentes": [
+      "Justifier l'absence de TVA sur la consignation initiale.",
+      "Distinguer boni et mali de déconsignation, et leur compte respectif.",
+      "Expliquer le traitement comptable du non-retour d'un emballage consigné."
+    ],
+    "entrees": []
+  }
+}
+9.json
+Affichage de 8.json en cours...
