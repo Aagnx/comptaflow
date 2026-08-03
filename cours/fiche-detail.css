@@ -1,12 +1,12 @@
 /* ==========================================================================
-   Comptaflow — fiche-detail.css
-   Feuille de style des fiches détaillées de révision (UE9).
-   Palette de marque : bleu #3B82F6 · teal #14B8A6 · violet #7C3AED
-   Rôle des couleurs (structurel, pas décoratif) :
-     bleu   = notions clés
+   Comptaflow â€” fiche-detail.css
+   Feuille de style des fiches dÃ©taillÃ©es de rÃ©vision (UE9).
+   Palette de marque : bleu #3B82F6 Â· teal #14B8A6 Â· violet #7C3AED
+   RÃ´le des couleurs (structurel, pas dÃ©coratif) :
+     bleu   = notions clÃ©s
      teal   = vocabulaire
      violet = questions types
-     ambre  = ce qui concerne l'examen (utilité + annales)
+     ambre  = ce qui concerne l'examen (utilitÃ© + annales)
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
@@ -53,7 +53,7 @@ body {
 
 .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
 
-/* ---------- Barre supérieure / retour ---------- */
+/* ---------- Barre supÃ©rieure / retour ---------- */
 .topbar {
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, .8);
@@ -66,7 +66,7 @@ body {
 .back { font-size: .9rem; color: var(--ink-soft); text-decoration: none; display: inline-flex; align-items: center; gap: .4rem; }
 .back:hover { color: var(--blue-ink); }
 
-/* ---------- En-tête de fiche ---------- */
+/* ---------- En-tÃªte de fiche ---------- */
 .fiche-header { padding: 44px 0 8px; }
 .eyebrow {
   font-family: var(--mono); font-size: .72rem; letter-spacing: .16em;
@@ -123,7 +123,7 @@ h1.fiche-title {
   padding: 22px 24px;
 }
 
-/* ---------- Baromètre d'utilité (élément signature) ---------- */
+/* ---------- BaromÃ¨tre d'utilitÃ© (Ã©lÃ©ment signature) ---------- */
 .gauge-card { padding: 26px 24px; border-top: 4px solid var(--amber); }
 .gauge-top { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 .gauge-num { font-family: var(--mono); font-weight: 600; font-size: 2.6rem; color: var(--amber-ink); line-height: 1; }
@@ -145,7 +145,7 @@ h1.fiche-title {
 .themes h4 { font-family: var(--display); font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); margin: 0 0 10px; }
 .themes ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 7px; }
 .themes li { font-size: .9rem; display: flex; gap: .55rem; }
-.themes li::before { content: "▸"; color: var(--amber); }
+.themes li::before { content: "â–¸"; color: var(--amber); }
 
 /* ---------- Notions ---------- */
 .notion { border: 1px solid var(--line); border-left: 4px solid var(--blue); border-radius: var(--radius-sm); padding: 16px 18px; background: var(--surface); }
@@ -168,7 +168,8 @@ h1.fiche-title {
 table.compare { width: 100%; border-collapse: collapse; min-width: 620px; font-size: .88rem; }
 table.compare th, table.compare td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); }
 table.compare thead th { background: var(--blue); color: #fff; font-family: var(--display); font-weight: 600; }
-table.compare tbody th { background: #F1F5FF; font-weight: 600; color: var(--ink); white-space: nowrap; }
+table.compare tbody th { background: #F1F5FF; font-weight: 600; color: var(--ink); white-space: normal; width: 22%; max-width: 220px; vertical-align: top; }
+table.compare tbody td { vertical-align: top; }
 table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { border-bottom: 0; }
 
 /* ---------- Timeline ---------- */
@@ -205,16 +206,16 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 .annale .corrige { color: var(--ink-soft); font-size: .93rem; }
 .recur { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
 .recur li { font-size: .9rem; display: flex; gap: .5rem; color: var(--ink-soft); }
-.recur li::before { content: "•"; color: var(--amber); }
+.recur li::before { content: "â€¢"; color: var(--amber); }
 .empty { font-style: italic; color: var(--ink-soft); font-size: .9rem; padding: 10px 0; }
 
-/* ---------- Info format épreuve ---------- */
+/* ---------- Info format Ã©preuve ---------- */
 .format-note { font-size: .88rem; color: var(--ink-soft); border-left: 3px solid var(--blue); padding: 4px 0 4px 14px; margin: 16px 0; }
 
 /* ---------- Pied ---------- */
 .foot { color: var(--ink-soft); font-size: .82rem; text-align: center; padding: 40px 0 60px; }
 
-/* ---------- États de chargement / erreur ---------- */
+/* ---------- Ã‰tats de chargement / erreur ---------- */
 .state { text-align: center; padding: 80px 20px; color: var(--ink-soft); }
 .state .spin { width: 26px; height: 26px; border: 3px solid var(--line); border-top-color: var(--blue); border-radius: 50%; margin: 0 auto 14px; animation: spin .8s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -231,11 +232,11 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 }
 
 /* ==========================================================================
-   Schémas visuels (flux, pyramide, métiers, trésorerie)
+   SchÃ©mas visuels (flux, pyramide, mÃ©tiers, trÃ©sorerie)
    ========================================================================== */
 :root { --red: #EF4444; --red-ink: #DC2626; --indigo: #4338CA; }
 
-/* ---- Flux (système comptable) ---- */
+/* ---- Flux (systÃ¨me comptable) ---- */
 .flux { margin-top: 16px; }
 .flux-row { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; }
 .flux-step {
@@ -258,7 +259,7 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
   flex: 1; height: 0; border-top: 2px dashed var(--line); position: relative;
 }
 .flux-connector::after {
-  content: "▶"; position: absolute; right: -2px; top: 50%; transform: translateY(-50%);
+  content: "â–¶"; position: absolute; right: -2px; top: 50%; transform: translateY(-50%);
   color: var(--line); font-size: .7rem;
 }
 
@@ -283,7 +284,7 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 .pyr-tier.tier-2 { background: var(--teal); }
 .pyr-tier.tier-3 { background: #64748B; }
 
-/* ---- Escalier des métiers ---- */
+/* ---- Escalier des mÃ©tiers ---- */
 .metiers { margin-top: 16px; }
 .metiers-stair { display: flex; flex-direction: column; gap: 10px; }
 .metier-step {
@@ -317,9 +318,9 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 .passerelles h4 { margin: 0 0 8px; font-family: var(--display); font-size: .82rem; color: var(--violet-ink); text-transform: uppercase; letter-spacing: .06em; }
 .passerelles ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
 .passerelles li { font-size: .88rem; color: var(--ink-soft); display: flex; gap: .55rem; }
-.passerelles li::before { content: "→"; color: var(--violet); font-weight: 700; }
+.passerelles li::before { content: "â†’"; color: var(--violet); font-weight: 700; }
 
-/* ---- Schéma trésorerie / valeur ---- */
+/* ---- SchÃ©ma trÃ©sorerie / valeur ---- */
 .treso { margin-top: 16px; }
 .treso svg { width: 100%; height: auto; display: block; }
 .treso-legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 10px; font-size: .85rem; color: var(--ink-soft); }
