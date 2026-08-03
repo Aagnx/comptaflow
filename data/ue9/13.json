@@ -37,20 +37,20 @@
         ],
         "lignes": [
           [
-            "261. Titres de participation",
-            "Possession durable jugée utile à l'activité, notamment pour exercer une influence ou assurer le contrôle de la société émettrice (participation présumée si 10 % du capital détenu, ou titres acquis par OPA/OPE)."
+            "261",
+            "Titres de participation — possession durable jugée utile à l'activité, notamment pour exercer une influence ou assurer le contrôle de la société émettrice (participation présumée si 10 % du capital détenu, ou titres acquis par OPA/OPE)."
           ],
           [
-            "273. Titres immobilisés de l'activité de portefeuille (TIAP)",
-            "Titres acquis pour une rentabilité satisfaisante à plus ou moins longue échéance, sans intervention dans la gestion de la société émettrice."
+            "273",
+            "Titres immobilisés de l'activité de portefeuille (TIAP) — acquis pour une rentabilité satisfaisante à plus ou moins longue échéance, sans intervention dans la gestion de la société émettrice."
           ],
           [
-            "271. Titres immobilisés autres que les TIAP (droit de propriété) / 272. Titres immobilisés (droit de créance)",
-            "Titres que l'entreprise a l'intention ou la contrainte de conserver durablement."
+            "271 / 272",
+            "Titres immobilisés autres que les TIAP (271, droit de propriété) et titres immobilisés à droit de créance (272) — titres que l'entreprise a l'intention ou la contrainte de conserver durablement."
           ],
           [
-            "50. Valeurs mobilières de placement (VMP)",
-            "Titres acquis en vue de réaliser un gain à brève échéance."
+            "50",
+            "Valeurs mobilières de placement (VMP) — titres acquis en vue de réaliser un gain à brève échéance."
           ]
         ]
       }
