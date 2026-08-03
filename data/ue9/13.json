@@ -1,0 +1,219 @@
+{
+  "id": "ue9-ch13",
+  "numero": 13,
+  "titre": "Les titres financiers",
+  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+  "pageManuel": 59,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": [
+    "Coût d'acquisition",
+    "TIAP",
+    "Titres de participation",
+    "Titres immobilisés",
+    "Valeur vénale",
+    "VMP"
+  ],
+  "utilite": {
+    "pourcentage": 11,
+    "niveau": "Modéré — sous-thème des immobilisations financières",
+    "commentaire": "Sous-ensemble du grand thème « immobilisations » (92 % des sujets), mobilisé plus spécifiquement dans les dossiers de gestion de portefeuille de titres, de participations dans des filiales, ou de trésorerie (VMP). Le point clé à maîtriser : savoir classer un titre (participation / TIAP / titres immobilisés / VMP) selon l'intention de détention exprimée dans l'énoncé, ce qui détermine ensuite le compte et le traitement des frais d'acquisition.",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "notionsCles": [
+    {
+      "titre": "Les typologies de titres financiers (comptes 261, 271-273, 50)",
+      "contenu": "Les titres financiers se classent selon la durée de détention envisagée et l'objectif de leur acquisition (influence/contrôle, rentabilité de long terme, ou gain à brève échéance).",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Caractéristiques"
+        ],
+        "lignes": [
+          [
+            "261. Titres de participation",
+            "Possession durable jugée utile à l'activité, notamment pour exercer une influence ou assurer le contrôle de la société émettrice (participation présumée si 10 % du capital détenu, ou titres acquis par OPA/OPE)."
+          ],
+          [
+            "273. Titres immobilisés de l'activité de portefeuille (TIAP)",
+            "Titres acquis pour une rentabilité satisfaisante à plus ou moins longue échéance, sans intervention dans la gestion de la société émettrice."
+          ],
+          [
+            "271. Titres immobilisés autres que les TIAP (droit de propriété) / 272. Titres immobilisés (droit de créance)",
+            "Titres que l'entreprise a l'intention ou la contrainte de conserver durablement."
+          ],
+          [
+            "50. Valeurs mobilières de placement (VMP)",
+            "Titres acquis en vue de réaliser un gain à brève échéance."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "L'évaluation des titres financiers",
+      "formule": "Coût d'acquisition = Prix d'achat + coûts directement attribuables (ex. commissions bancaires) · Valeur vénale = Montant obtenu de la vente des titres − coûts de sortie liés à la vente",
+      "contenu": "Comme pour les immobilisations, l'évaluation dépend du mode d'obtention : acquisition à titre onéreux → coût d'acquisition ; acquisition à titre gratuit → valeur vénale. Exception à connaître : pour les VMP, les frais d'acquisition (commissions...) sont comptabilisés directement en charges, et non intégrés au coût d'acquisition du titre."
+    },
+    {
+      "titre": "Exemple — comptabilisation d'un titre à l'entrée",
+      "contenu": "Acquisition, le 25/08/N, de 120 actions L'Oréal cotées 54 €, dans le cadre d'une stratégie globale de gestion de portefeuille de titres (donc en TIAP).",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "273",
+            "Titres immobilisés de l'activité de portefeuille (120 × 54)",
+            "6 480,00",
+            ""
+          ],
+          [
+            "512",
+            "Banques (avis de débit)",
+            "",
+            "6 480,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La comptabilisation des revenus issus de titres",
+      "contenu": "La détention de titres procure des revenus financiers non soumis à TVA : des dividendes pour les titulaires de droits de propriété, des intérêts pour les détenteurs de droits de créance. Le compte de produit utilisé dépend de la nature du titre : 761 Produits de participation pour les titres de participation, 762 Produits des autres immobilisations financières pour les titres immobilisés et TIAP, 764 Revenus des VMP pour les valeurs mobilières de placement. Exemple filé (SA Genesis) : perception d'intérêts de bons du Trésor, puis annonce et versement d'un dividende sur des titres de participation (175 000 actions Grimberg sur 300 000, dividende de 1,20 € par action).",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "12/05/N",
+            "512",
+            "Banques",
+            "458,00",
+            ""
+          ],
+          [
+            "12/05/N",
+            "764",
+            "Revenus des valeurs mobilières de placement (intérêts des bons du Trésor)",
+            "",
+            "458,00"
+          ],
+          [
+            "15/07/N",
+            "4687",
+            "Produits à recevoir (dividende annoncé)",
+            "210 000,00",
+            ""
+          ],
+          [
+            "15/07/N",
+            "761",
+            "Produits de participation (dividende SA Grimberg = 175 000 × 1,20)",
+            "",
+            "210 000,00"
+          ],
+          [
+            "01/09/N",
+            "512",
+            "Banques (versement effectif)",
+            "210 000,00",
+            ""
+          ],
+          [
+            "01/09/N",
+            "4687",
+            "Produits à recevoir (soldé)",
+            "",
+            "210 000,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Valorisation particulière du coût d'entrée",
+      "contenu": "Certains modes d'acquisition, communs aux immobilisations et aux titres financiers, appellent une règle d'évaluation spécifique à l'entrée du patrimoine.",
+      "tableau": {
+        "colonnes": [
+          "Mode d'acquisition",
+          "Évaluation à l'entrée"
+        ],
+        "lignes": [
+          [
+            "Acquisition en devises",
+            "Cours de la devise au jour de l'acquisition"
+          ],
+          [
+            "Acquisition à titre gratuit",
+            "Valeur vénale"
+          ],
+          [
+            "Acquisition par voie d'échange, avec substance commerciale",
+            "Valeur vénale"
+          ],
+          [
+            "Acquisition par voie d'échange, sans substance commerciale",
+            "Valeur comptable du bien échangé"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le + de l'expert",
+      "contenu": "Pour enregistrer correctement les titres financiers, il faut préalablement définir la motivation d'acquisition des titres et l'échéance de détention envisagée."
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "Titres de participation",
+      "definition": "Titres détenus durablement pour exercer une influence ou assurer le contrôle de la société émettrice (compte 261)."
+    },
+    {
+      "terme": "TIAP",
+      "definition": "Titres immobilisés de l'activité de portefeuille : détenus pour une rentabilité satisfaisante à plus ou moins long terme, sans intervention dans la gestion de la société émettrice (compte 273)."
+    },
+    {
+      "terme": "VMP",
+      "definition": "Valeurs mobilières de placement : titres acquis en vue d'un gain à brève échéance (compte 50), dont les frais d'acquisition sont comptabilisés en charges."
+    },
+    {
+      "terme": "Titres immobilisés",
+      "definition": "Titres (271 droit de propriété, 272 droit de créance) que l'entreprise a l'intention ou la contrainte de conserver durablement, sans viser l'influence ou le contrôle."
+    },
+    {
+      "terme": "Coût d'acquisition (titre)",
+      "definition": "Prix d'achat majoré des coûts directement attribuables (ex. commissions bancaires), sauf pour les VMP dont les frais sont comptabilisés en charges."
+    },
+    {
+      "terme": "Valeur vénale (titre)",
+      "definition": "Montant qui pourrait être obtenu de la vente des titres, diminué des coûts de sortie liés à la vente."
+    }
+  ],
+  "questionsTypes": [
+    "Distinguer les différents types de titres financiers (participation, TIAP, titres immobilisés, VMP) selon la durée de détention et l'objectif.",
+    "Comptabiliser l'acquisition d'un titre financier et les revenus qu'il procure (dividendes, intérêts).",
+    "Justifier pourquoi les frais d'acquisition d'une VMP sont comptabilisés en charges et non intégrés au coût d'acquisition.",
+    "Justifier l'évaluation d'un titre acquis en devises, à titre gratuit, ou par voie d'échange."
+  ],
+  "annales": {
+    "note": "Ce chapitre est mobilisé notamment dans les dossiers de participations et de gestion de trésorerie. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "questionsRedactionnellesRecurrentes": [
+      "Justifier le classement d'un titre financier selon l'intention de détention exprimée dans l'énoncé.",
+      "Calculer et comptabiliser les revenus issus de titres financiers (dividendes, intérêts)."
+    ],
+    "entrees": []
+  }
+}
