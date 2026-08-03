@@ -1,25 +1,19 @@
 {
   "id": "ue9-ch12",
   "numero": 12,
-  "titre": "Les immobilisations incorporelles, corporelles et les titres financiers",
+  "titre": "Les immobilisations incorporelles et corporelles",
   "axe": "Axe 3 — Analyser comptablement des opérations courantes",
   "pageManuel": 55,
   "exercicesUrl": "../exercices/ue9.html",
   "motsCles": [
-    "Coût d'acquisition",
     "Évaluation",
     "Immobilisation corporelle",
-    "Immobilisation incorporelle",
-    "TIAP",
-    "Titres de participation",
-    "Titres immobilisés",
-    "Valeur vénale",
-    "VMP"
+    "Immobilisation incorporelle"
   ],
   "utilite": {
-    "pourcentage": 20,
+    "pourcentage": 18,
     "niveau": "Fort — cœur du thème immobilisations, présent dans 92 % des sujets",
-    "commentaire": "Fiche dense qui regroupe volontairement deux chapitres du manuel (immobilisations incorporelles/corporelles, puis titres financiers), car ils partagent la même logique d'évaluation (coût d'acquisition / coût de production / valeur vénale selon le mode d'obtention) et le même schéma de comptabilisation. Les avances et acomptes sur immobilisations et les immobilisations en cours de production (à cheval sur deux exercices) sont des mécanismes techniques à automatiser : ils reviennent régulièrement dans les dossiers d'investissement.",
+    "commentaire": "Les avances et acomptes sur immobilisations et les immobilisations en cours de production (à cheval sur deux exercices) sont des mécanismes techniques à automatiser : ils reviennent régulièrement dans les dossiers d'investissement. Le raisonnement sur les critères de définition et de comptabilisation (identifiable, contrôlé, avantages économiques futurs) est aussi une question rédactionnelle classique.",
     "themesRecurrents": [
       "Opérations courantes avec les tiers — 100 % des sujets",
       "Opérations d'inventaire — 100 %",
@@ -31,7 +25,7 @@
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
   "notionsCles": [
     {
-      "titre": "PARTIE 1 — Immobilisations incorporelles et corporelles : définitions",
+      "titre": "Définitions : immobilisation incorporelle vs corporelle",
       "contenu": "Une immobilisation incorporelle est une immobilisation qui ne présente ni substance physique ni substance monétaire. Une immobilisation corporelle est une immobilisation qui a une substance physique et une durée d'utilisation immédiate supérieure à l'exercice."
     },
     {
@@ -327,152 +321,8 @@
       }
     },
     {
-      "titre": "PARTIE 2 — Les titres financiers : typologies (comptes 261, 271-273, 50)",
-      "contenu": "Les titres financiers se classent selon la durée de détention envisagée et l'objectif de leur acquisition (influence/contrôle, rentabilité de long terme, ou gain à brève échéance).",
-      "tableau": {
-        "colonnes": [
-          "Compte",
-          "Caractéristiques"
-        ],
-        "lignes": [
-          [
-            "261. Titres de participation",
-            "Possession durable jugée utile à l'activité, notamment pour exercer une influence ou assurer le contrôle de la société émettrice (participation présumée si 10 % du capital détenu, ou titres acquis par OPA/OPE)."
-          ],
-          [
-            "273. Titres immobilisés de l'activité de portefeuille (TIAP)",
-            "Titres acquis pour une rentabilité satisfaisante à plus ou moins longue échéance, sans intervention dans la gestion de la société émettrice."
-          ],
-          [
-            "271. Titres immobilisés autres que les TIAP (droit de propriété) / 272. Titres immobilisés (droit de créance)",
-            "Titres que l'entreprise a l'intention ou la contrainte de conserver durablement."
-          ],
-          [
-            "50. Valeurs mobilières de placement (VMP)",
-            "Titres acquis en vue de réaliser un gain à brève échéance."
-          ]
-        ]
-      }
-    },
-    {
-      "titre": "L'évaluation des titres financiers",
-      "formule": "Coût d'acquisition = Prix d'achat + coûts directement attribuables (ex. commissions bancaires) · Valeur vénale = Montant obtenu de la vente des titres − coûts de sortie liés à la vente",
-      "contenu": "Comme pour les immobilisations, l'évaluation dépend du mode d'obtention : acquisition à titre onéreux → coût d'acquisition ; acquisition à titre gratuit → valeur vénale. Exception à connaître : pour les VMP, les frais d'acquisition (commissions...) sont comptabilisés directement en charges, et non intégrés au coût d'acquisition du titre."
-    },
-    {
-      "titre": "Exemple — comptabilisation d'un titre à l'entrée",
-      "contenu": "Acquisition, le 25/08/N, de 120 actions L'Oréal cotées 54 €, dans le cadre d'une stratégie globale de gestion de portefeuille de titres (donc en TIAP).",
-      "tableau": {
-        "colonnes": [
-          "Compte",
-          "Intitulé",
-          "Débit",
-          "Crédit"
-        ],
-        "lignes": [
-          [
-            "273",
-            "Titres immobilisés de l'activité de portefeuille (120 × 54)",
-            "6 480,00",
-            ""
-          ],
-          [
-            "512",
-            "Banques (avis de débit)",
-            "",
-            "6 480,00"
-          ]
-        ]
-      }
-    },
-    {
-      "titre": "La comptabilisation des revenus issus de titres",
-      "contenu": "La détention de titres procure des revenus financiers non soumis à TVA : des dividendes pour les titulaires de droits de propriété, des intérêts pour les détenteurs de droits de créance. Le compte de produit utilisé dépend de la nature du titre : 761 Produits de participation pour les titres de participation, 762 Produits des autres immobilisations financières pour les titres immobilisés et TIAP, 764 Revenus des VMP pour les valeurs mobilières de placement. Exemple filé (SA Genesis) : perception d'intérêts de bons du Trésor, puis annonce et versement d'un dividende sur des titres de participation (175 000 actions Grimberg sur 300 000, dividende de 1,20 € par action).",
-      "tableau": {
-        "colonnes": [
-          "Date",
-          "Compte",
-          "Intitulé",
-          "Débit",
-          "Crédit"
-        ],
-        "lignes": [
-          [
-            "12/05/N",
-            "512",
-            "Banques",
-            "458,00",
-            ""
-          ],
-          [
-            "12/05/N",
-            "764",
-            "Revenus des valeurs mobilières de placement (intérêts des bons du Trésor)",
-            "",
-            "458,00"
-          ],
-          [
-            "15/07/N",
-            "4687",
-            "Produits à recevoir (dividende annoncé)",
-            "210 000,00",
-            ""
-          ],
-          [
-            "15/07/N",
-            "761",
-            "Produits de participation (dividende SA Grimberg = 175 000 × 1,20)",
-            "",
-            "210 000,00"
-          ],
-          [
-            "01/09/N",
-            "512",
-            "Banques (versement effectif)",
-            "210 000,00",
-            ""
-          ],
-          [
-            "01/09/N",
-            "4687",
-            "Produits à recevoir (soldé)",
-            "",
-            "210 000,00"
-          ]
-        ]
-      }
-    },
-    {
-      "titre": "Valorisation particulière du coût d'entrée",
-      "contenu": "Certains modes d'acquisition, communs aux immobilisations et aux titres financiers, appellent une règle d'évaluation spécifique à l'entrée du patrimoine.",
-      "tableau": {
-        "colonnes": [
-          "Mode d'acquisition",
-          "Évaluation à l'entrée"
-        ],
-        "lignes": [
-          [
-            "Acquisition en devises",
-            "Cours de la devise au jour de l'acquisition"
-          ],
-          [
-            "Acquisition à titre gratuit",
-            "Valeur vénale"
-          ],
-          [
-            "Acquisition par voie d'échange, avec substance commerciale",
-            "Valeur vénale"
-          ],
-          [
-            "Acquisition par voie d'échange, sans substance commerciale",
-            "Valeur comptable du bien échangé"
-          ]
-        ]
-      }
-    },
-    {
       "titre": "Le + de l'expert",
-      "contenu": "Pour les immobilisations : dans la pratique, la difficulté d'enregistrement réside dans l'opérationnalisation des critères de définition et de comptabilisation, ainsi que dans l'évaluation — plus particulièrement pour les immobilisations incorporelles et pour les immobilisations produites en interne. Pour les titres financiers : pour les enregistrer correctement, il faut préalablement définir la motivation d'acquisition des titres et l'échéance de détention envisagée."
+      "contenu": "Dans la pratique, la difficulté d'enregistrement réside dans l'opérationnalisation des critères de définition et de comptabilisation, ainsi que dans l'évaluation — plus particulièrement pour les immobilisations incorporelles et pour les immobilisations produites en interne."
     }
   ],
   "vocabulaire": [
@@ -503,18 +353,6 @@
     {
       "terme": "Avances et acomptes sur immobilisations (compte 238)",
       "definition": "Somme versée par avance sur une commande d'immobilisation, réputée TTC ; soldée à la livraison définitive."
-    },
-    {
-      "terme": "Titres de participation",
-      "definition": "Titres détenus durablement pour exercer une influence ou assurer le contrôle de la société émettrice (compte 261)."
-    },
-    {
-      "terme": "TIAP",
-      "definition": "Titres immobilisés de l'activité de portefeuille : détenus pour une rentabilité satisfaisante à plus ou moins long terme, sans intervention dans la gestion de la société émettrice (compte 273)."
-    },
-    {
-      "terme": "VMP",
-      "definition": "Valeurs mobilières de placement : titres acquis en vue d'un gain à brève échéance (compte 50), dont les frais d'acquisition sont comptabilisés en charges."
     }
   ],
   "questionsTypes": [
@@ -522,17 +360,13 @@
     "Calculer un coût d'acquisition ou un coût de production intégrant les éléments annexes (frais, remises, démantèlement...).",
     "Comptabiliser l'acquisition d'une immobilisation à titre onéreux, à titre gratuit, ou produite par l'entreprise.",
     "Comptabiliser un acompte versé sur une commande d'immobilisation puis la facture définitive.",
-    "Comptabiliser une immobilisation en cours de production à cheval sur deux exercices.",
-    "Distinguer les différents types de titres financiers (participation, TIAP, titres immobilisés, VMP) selon la durée de détention et l'objectif.",
-    "Comptabiliser l'acquisition d'un titre financier et les revenus qu'il procure (dividendes, intérêts).",
-    "Justifier l'évaluation d'un bien acquis en devises, à titre gratuit, ou par voie d'échange."
+    "Comptabiliser une immobilisation en cours de production à cheval sur deux exercices."
   ],
   "annales": {
-    "note": "Les immobilisations (incorporelles, corporelles, financières) figurent parmi les thèmes les plus fréquents de l'UE9 (92 % des sujets). Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "note": "Les immobilisations incorporelles et corporelles figurent parmi les thèmes les plus fréquents de l'UE9 (92 % des sujets). Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
     "questionsRedactionnellesRecurrentes": [
       "Justifier si un élément satisfait aux critères de définition et de comptabilisation d'une immobilisation.",
-      "Calculer un coût d'acquisition ou de production détaillé.",
-      "Justifier le classement d'un titre financier (participation, TIAP, VMP...) selon l'intention de détention."
+      "Calculer un coût d'acquisition ou de production détaillé."
     ],
     "entrees": []
   }
