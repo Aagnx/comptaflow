@@ -270,6 +270,56 @@
       }
     },
     {
+      "titre": "Le règlement par le dirigeant (comptes 108 / 455)",
+      "contenu": "Lorsqu'une dépense professionnelle est réglée sur les fonds propres du dirigeant (ou inversement), on transite par un compte dédié plutôt que par la banque ou la caisse de l'entreprise : compte 108 « Compte de l'exploitant » en entreprise individuelle, compte 455 « Associés, comptes courants » en société.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "25/03/N",
+            "606",
+            "Achats non stockés de matériel et fournitures",
+            "20,00",
+            ""
+          ],
+          [
+            "25/03/N",
+            "44566",
+            "État, TVA déductible sur ABS",
+            "4,00",
+            ""
+          ],
+          [
+            "25/03/N",
+            "455",
+            "Associés, comptes courants (achat sur compte personnel)",
+            "",
+            "24,00"
+          ],
+          [
+            "26/03/N",
+            "455",
+            "Associés, comptes courants (prélèvement personnel)",
+            "200,00",
+            ""
+          ],
+          [
+            "26/03/N",
+            "530",
+            "Caisse (pièce de caisse n°...)",
+            "",
+            "200,00"
+          ]
+        ]
+      }
+    },
+    {
       "titre": "Les impayés",
       "contenu": "En cas de non-paiement temporaire, un avis d'impayé est émis par le créancier ; le bénéficiaire est avisé par sa banque, qui prélève généralement des frais d'impayé. Si le non-paiement devient définitif, la créance est constatée en perte.",
       "tableau": {
@@ -325,13 +375,131 @@
       "contenu": "Pour couvrir ses besoins de trésorerie à court terme, une entreprise peut mobiliser ses créances clients avant leur échéance normale, selon plusieurs techniques : l'escompte des effets de commerce, la négociation de LCR (lettres de change relevé) magnétiques, le crédit de mobilisation des créances commerciales (CMCC), la cession ou le nantissement de créances professionnelles (loi Dailly, en pleine propriété ou à titre de garantie), et l'affacturage. Règle de TVA transversale à toutes ces techniques : les intérêts facturés par la banque ne sont jamais soumis à TVA, alors que les services bancaires (commissions) le sont systématiquement."
     },
     {
+      "titre": "Les effets de commerce : rôles et vocabulaire",
+      "contenu": "Un effet de commerce est un titre par lequel un créancier (le fournisseur) donne l'ordre à son débiteur (le client) de payer une somme à une échéance donnée. Deux formes existent, avec des rôles nommés différemment. Lettre de change (ou traite) : le tireur (= le fournisseur) émet l'effet, le tiré (= le client) doit l'accepter en indiquant sur quel compte il souhaite être débité. Billet à ordre : le souscripteur (= le client) émet lui-même l'effet en s'engageant à payer, le bénéficiaire (= le fournisseur) le reçoit. Plusieurs créances peuvent être regroupées sur un seul document : on parle alors de lettre de change relevée ou de billet à ordre relevé."
+    },
+    {
+      "titre": "Le cycle de vie d'un effet de commerce : émission et acceptation",
+      "contenu": "L'émission correspond à l'envoi de l'effet par le fournisseur (tireur) ; l'acceptation correspond au renvoi de l'effet signé par le client (tiré), ce qui constate formellement la dette sous cette nouvelle forme. Exemple : le 03/04, le fournisseur tire une lettre de change échéance 31/05 (montant 1 000 €) ; le 08/04, le client accepte la traite et la renvoie au fournisseur ; le 10/04, le fournisseur reçoit la traite signée.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "08/04",
+            "401",
+            "Fournisseurs (acceptation de la traite par le client)",
+            "1 000,00",
+            ""
+          ],
+          [
+            "08/04",
+            "403",
+            "Fournisseurs, effets à payer",
+            "",
+            "1 000,00"
+          ],
+          [
+            "10/04",
+            "413",
+            "Clients, effets à recevoir (réception de la traite signée)",
+            "1 000,00",
+            ""
+          ],
+          [
+            "10/04",
+            "411",
+            "Clients",
+            "",
+            "1 000,00"
+          ],
+          [
+            "31/05",
+            "403",
+            "Fournisseurs, effets à payer (échéance de la traite)",
+            "1 000,00",
+            ""
+          ],
+          [
+            "31/05",
+            "512",
+            "Banques",
+            "",
+            "1 000,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La remise à l'encaissement (à l'échéance, sans intérêt)",
+      "contenu": "Un effet de commerce peut être endossé à l'échéance : le fournisseur le remet simplement à sa banque pour encaissement à la date prévue, moyennant une commission bancaire, mais sans intérêt (contrairement à la remise à l'escompte, qui anticipe l'échéance). L'écriture se fait en deux temps.",
+      "tableau": {
+        "colonnes": [
+          "Étape",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "1. Remise à l'encaissement (10/4)",
+            "5113",
+            "Effets à l'encaissement",
+            "1 000,00",
+            ""
+          ],
+          [
+            "1. Remise à l'encaissement (10/4)",
+            "413",
+            "Clients, effets à recevoir",
+            "",
+            "1 000,00"
+          ],
+          [
+            "2. Avis de crédit (25/5)",
+            "512",
+            "Banques (net reçu)",
+            "985,60",
+            ""
+          ],
+          [
+            "2. Avis de crédit (25/5)",
+            "627",
+            "Services bancaires et assimilés (commission HT)",
+            "12,00",
+            ""
+          ],
+          [
+            "2. Avis de crédit (25/5)",
+            "44566",
+            "État, TVA déductible sur ABS (TVA sur la commission)",
+            "2,40",
+            ""
+          ],
+          [
+            "2. Avis de crédit (25/5)",
+            "5113",
+            "Effets à l'encaissement",
+            "",
+            "1 000,00"
+          ]
+        ]
+      }
+    },
+    {
       "titre": "Le calcul de l'escompte : taux d'intérêt et net au crédit",
       "formule": "Intérêt = Capital × taux × (durée en jours ÷ 360), avec une année bancaire comptée pour 360 jours · Net au crédit = Montant de la traite − Commission HT − TVA sur commission − Intérêt",
       "contenu": "La durée retenue pour le calcul correspond au nombre de jours entre la date de remise à l'escompte et la date d'échéance prévue de la LCR, augmenté des jours de banque (délai forfaitaire supplémentaire prélevé par la banque). Exemple de calcul de durée : échéance au 31/12/N, remise à l'escompte le 21/11/N → 9 jours restants en novembre + 31 jours en décembre = 40 jours, + 2 jours de banque = 42 jours retenus. Exemple de calcul du net au crédit : montant de la traite 1 000 €, commission HT 12 €, TVA sur commission (20 %) 2,40 €, intérêt d'escompte 7,30 € → net au crédit = 1 000 − 12 − 2,40 − 7,30 = 978,30 €."
     },
     {
       "titre": "L'escompte des effets de commerce (LCR papier)",
-      "contenu": "Chez le tiré (celui qui doit payer, ex. un fournisseur pour l'entreprise qui a acheté), l'acceptation de la traite transforme la dette fournisseur en effet à payer, réglé à l'échéance. Chez le tireur (celui qui doit être payé, ex. un client pour l'entreprise qui a vendu), la créance client devient un effet à recevoir ; elle peut être remise à l'escompte avant son échéance pour obtenir des liquidités par anticipation, moyennant intérêts et commissions.",
+      "contenu": "À la différence de la remise à l'encaissement (qui attend l'échéance), la remise à l'escompte permet d'obtenir les fonds par anticipation, moyennant des intérêts en plus de la commission bancaire. Chez le tiré (celui qui doit payer, ex. un fournisseur pour l'entreprise qui a acheté), l'acceptation de la traite transforme la dette fournisseur en effet à payer, réglé à l'échéance. Chez le tireur (celui qui doit être payé, ex. un client pour l'entreprise qui a vendu), la créance client devient un effet à recevoir ; elle peut être remise à l'escompte avant son échéance pour obtenir des liquidités par anticipation, moyennant intérêts et commissions.",
       "tableau": {
         "colonnes": [
           "Date",
@@ -811,6 +979,30 @@
   ],
   "vocabulaire": [
     {
+      "terme": "Effet de commerce",
+      "definition": "Titre par lequel un créancier donne l'ordre à son débiteur de payer une somme à une échéance donnée ; prend la forme d'une lettre de change ou d'un billet à ordre."
+    },
+    {
+      "terme": "Tireur / Tiré (lettre de change)",
+      "definition": "Le tireur (le fournisseur) émet la lettre de change ; le tiré (le client) doit l'accepter et indique sur quel compte il souhaite être débité."
+    },
+    {
+      "terme": "Souscripteur / Bénéficiaire (billet à ordre)",
+      "definition": "Le souscripteur (le client) émet lui-même le billet à ordre en s'engageant à payer ; le bénéficiaire (le fournisseur) le reçoit."
+    },
+    {
+      "terme": "Acceptation",
+      "definition": "Renvoi de l'effet de commerce signé par le débiteur, qui constate formellement la dette sous cette forme."
+    },
+    {
+      "terme": "Remise à l'encaissement",
+      "definition": "Remise d'un effet de commerce à la banque pour encaissement à son échéance normale, moyennant une commission bancaire mais sans intérêt."
+    },
+    {
+      "terme": "Compte de l'exploitant (108) / Associés, comptes courants (455)",
+      "definition": "Comptes utilisés lorsqu'une dépense professionnelle est réglée sur les fonds propres du dirigeant (ou inversement) : 108 en entreprise individuelle, 455 en société."
+    },
+    {
       "terme": "Avis d'impayé",
       "definition": "Document émis par le créancier (via sa banque) en cas de non-paiement, temporaire ou définitif, d'un chèque ou effet."
     },
@@ -848,7 +1040,10 @@
     }
   ],
   "questionsTypes": [
-    "Comptabiliser un règlement selon le mode utilisé (espèces, virement, chèque, carte bancaire).",
+    "Comptabiliser un règlement selon le mode utilisé (espèces, virement, chèque, carte bancaire, dirigeant).",
+    "Distinguer lettre de change et billet à ordre, et identifier les rôles de chaque partie.",
+    "Comptabiliser l'émission et l'acceptation d'un effet de commerce.",
+    "Distinguer remise à l'encaissement et remise à l'escompte, et justifier la présence ou non d'intérêts.",
     "Comptabiliser un avis d'impayé temporaire, puis une perte définitive sur créance.",
     "Distinguer les différentes techniques de mobilisation de créances (escompte, CCR magnétique, CMCC, cession Dailly, affacturage).",
     "Calculer la durée et le montant de l'escompte d'un effet de commerce (intérêt, commission, net au crédit).",
