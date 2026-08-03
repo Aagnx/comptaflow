@@ -1,0 +1,633 @@
+{
+  "id": "ue9-ch15",
+  "numero": 15,
+  "titre": "Les arrhes, avances et acomptes",
+  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+  "pageManuel": 67,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": [
+    "Acomptes",
+    "Arrhes",
+    "Avances"
+  ],
+  "utilite": {
+    "pourcentage": 12,
+    "niveau": "Modéré — mécanisme technique, le vrai piège est la distinction biens/services",
+    "commentaire": "Sur les biens, le traitement est assez direct : le compte d'avance (238/4091 ou 4191) est simplement soldé à la facturation, sans complication de TVA. Sur les prestations de services en revanche, la mécanique de TVA devient un vrai point technique à maîtriser : elle diffère selon que l'entreprise a opté ou non pour la TVA sur les débits, avec la mobilisation temporaire de comptes de régularisation (44580, 44564, 44572) tant que la TVA n'est pas définitivement acquise.",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "notionsCles": [
+    {
+      "titre": "Définitions : arrhes, avances et acomptes",
+      "contenu": "Les arrhes sont des sommes d'argent versées pour exercer une option sur une vente : le montant n'est pas remboursé en cas de désistement de l'acheteur, et le vendeur doit reverser le double de la somme en cas de non-exécution de sa part. Les avances sont des sommes versées avant tout commencement d'exécution de la commande. Les acomptes sont des sommes versées sur justification d'une exécution partielle de la commande."
+    },
+    {
+      "titre": "Achats de biens : cycle complet (paiement, facturation, solde)",
+      "contenu": "Sur des biens (marchandises ou immobilisations), le traitement est direct : l'acompte est enregistré dans un compte d'attente (238 pour une immobilisation, 4091 pour une marchandise), qui est simplement soldé lors du décaissement final, sans mécanisme de régularisation de TVA.",
+      "tableau": {
+        "colonnes": [
+          "Étape",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "1. Paiement de l'acompte",
+            "238 ou 4091",
+            "Avances et acomptes sur commandes d'immobilisations corporelles / Fournisseurs, avances et acomptes versés sur commandes",
+            "X",
+            ""
+          ],
+          [
+            "1. Paiement de l'acompte",
+            "44562 ou 44566",
+            "État, TVA déductible sur immobilisations / État, TVA déductible sur ABS",
+            "X",
+            ""
+          ],
+          [
+            "1. Paiement de l'acompte",
+            "512",
+            "Banques (chèque n°...)",
+            "",
+            "X"
+          ],
+          [
+            "1. Paiement de l'acompte",
+            "44586",
+            "État, TVA en attente sur achat",
+            "",
+            "X"
+          ],
+          [
+            "2. Facturation",
+            "2. ou 6.",
+            "Immobilisations / Charges",
+            "X",
+            ""
+          ],
+          [
+            "2. Facturation",
+            "44562 ou 44566",
+            "État, TVA déductible sur immobilisations / État, TVA déductible sur ABS",
+            "X",
+            ""
+          ],
+          [
+            "2. Facturation",
+            "44586",
+            "État, TVA en attente sur achats",
+            "X",
+            ""
+          ],
+          [
+            "2. Facturation",
+            "404 ou 401",
+            "Fournisseurs d'immobilisations / Fournisseurs (facture n°...)",
+            "",
+            "X"
+          ],
+          [
+            "3. Décaissement du solde",
+            "401 ou 404",
+            "Fournisseurs / Fournisseurs d'immobilisations",
+            "X",
+            ""
+          ],
+          [
+            "3. Décaissement du solde",
+            "238 ou 4091",
+            "Avances et acomptes sur commandes d'immobilisations corporelles / Fournisseurs, avances et acomptes versés sur commandes",
+            "",
+            "X"
+          ],
+          [
+            "3. Décaissement du solde",
+            "512",
+            "Banques (chèque n°...)",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Ventes de biens : cycle complet (encaissement, facturation, solde)",
+      "contenu": "Symétriquement, côté vendeur, l'acompte reçu est enregistré au compte 4191, soldé à l'encaissement final du solde.",
+      "tableau": {
+        "colonnes": [
+          "Étape",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "1. Encaissement de l'acompte",
+            "512",
+            "Banques (chèque n°...)",
+            "X",
+            ""
+          ],
+          [
+            "1. Encaissement de l'acompte",
+            "44587",
+            "État, TVA en attente sur vente",
+            "X",
+            ""
+          ],
+          [
+            "1. Encaissement de l'acompte",
+            "4191",
+            "Clients, avances et acomptes reçus sur commandes",
+            "",
+            "X"
+          ],
+          [
+            "1. Encaissement de l'acompte",
+            "4457",
+            "État, TVA collectée",
+            "",
+            "X"
+          ],
+          [
+            "2. Facturation",
+            "411",
+            "Clients (facture n°...)",
+            "X",
+            ""
+          ],
+          [
+            "2. Facturation",
+            "70.",
+            "Ventes",
+            "",
+            "X"
+          ],
+          [
+            "2. Facturation",
+            "44571",
+            "État, TVA collectée",
+            "",
+            "X"
+          ],
+          [
+            "2. Facturation",
+            "44587",
+            "État, TVA en attente sur vente",
+            "",
+            "X"
+          ],
+          [
+            "3. Encaissement du solde",
+            "512",
+            "Banques (chèque n°...)",
+            "X",
+            ""
+          ],
+          [
+            "3. Encaissement du solde",
+            "4191",
+            "Clients, avances et acomptes reçus sur commandes",
+            "X",
+            ""
+          ],
+          [
+            "3. Encaissement du solde",
+            "411",
+            "Clients",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Prestations de services : une mécanique de TVA spécifique",
+      "contenu": "Sur les prestations de services, la TVA sur les acomptes suit une logique différente de celle des biens, et dépend de l'option ou non pour la TVA sur les débits (cf. fiche 5). Dans les deux cas (avec ou sans option), le paiement de l'acompte déclenche une reconnaissance immédiate de TVA. C'est au stade de la facturation que les deux régimes divergent : sans option, la TVA sur le solde ne devient déductible/collectée qu'à l'encaissement effectif (d'où des comptes de régularisation temporaires 44564 côté achats, 44572 côté ventes) ; avec option pour les débits, la TVA sur le solde est reconnue directement à la facturation, sans compte transitoire supplémentaire."
+    },
+    {
+      "titre": "Achats de services : paiement de l'acompte",
+      "contenu": "Qu'il y ait option ou non pour la TVA sur les débits, le paiement d'un acompte sur une prestation de services déclenche deux écritures : le décaissement lui-même, et la reconnaissance immédiate de la TVA déductible correspondante (provisoirement logée en compte de régularisation).",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "4091",
+            "Fournisseurs, avances et acomptes versés sur commandes (chèque n°...)",
+            "X",
+            ""
+          ],
+          [
+            "512",
+            "Banques",
+            "",
+            "X"
+          ],
+          [
+            "44566",
+            "État, TVA déductible sur ABS",
+            "X",
+            ""
+          ],
+          [
+            "44580",
+            "État, TVA à régulariser sur acomptes",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Achats de services : facturation, sans option pour la TVA sur les débits",
+      "contenu": "En l'absence d'option, la TVA sur le solde non encore payé n'est pas immédiatement déductible : elle est logée dans un compte de régularisation (44564) jusqu'au règlement effectif.",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "6.",
+            "Charges (facture n°...)",
+            "X",
+            ""
+          ],
+          [
+            "44580",
+            "État, TVA à régulariser sur acomptes (solde de l'acompte)",
+            "X",
+            ""
+          ],
+          [
+            "44564",
+            "État, TVA déductible sur encaissements",
+            "",
+            "X"
+          ],
+          [
+            "401",
+            "Fournisseurs",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Achats de services : facturation, avec option pour la TVA sur les débits",
+      "contenu": "Avec l'option pour la TVA sur les débits, la TVA sur le solde devient déductible dès la facturation, sans compte transitoire supplémentaire.",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "6.",
+            "Charges (facture n°...)",
+            "X",
+            ""
+          ],
+          [
+            "44580",
+            "État, TVA à régulariser sur acomptes (solde de l'acompte)",
+            "X",
+            ""
+          ],
+          [
+            "44566",
+            "État, TVA déductible sur ABS",
+            "X",
+            ""
+          ],
+          [
+            "401",
+            "Fournisseurs",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Achats de services : décaissement du solde",
+      "contenu": "Sans option, le décaissement du solde s'accompagne d'une seconde écriture qui transfère la TVA du compte de régularisation (44564) vers le compte définitif de TVA déductible (44566), puisque le paiement effectif rend la déduction définitivement acquise. Avec option, aucune écriture de TVA supplémentaire n'est nécessaire : tout a déjà été reconnu à la facturation.",
+      "tableau": {
+        "colonnes": [
+          "Cas",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "Sans option — règlement",
+            "401",
+            "Fournisseurs (chèque n°...)",
+            "X",
+            ""
+          ],
+          [
+            "Sans option — règlement",
+            "4091",
+            "Fournisseurs, avances et acomptes versés sur commandes",
+            "",
+            "X"
+          ],
+          [
+            "Sans option — règlement",
+            "512",
+            "Banques",
+            "",
+            "X"
+          ],
+          [
+            "Sans option — régularisation TVA",
+            "44566",
+            "État, TVA déductible sur ABS",
+            "X",
+            ""
+          ],
+          [
+            "Sans option — régularisation TVA",
+            "44564",
+            "État, TVA déductible sur encaissements",
+            "",
+            "X"
+          ],
+          [
+            "Avec option — règlement",
+            "401",
+            "Fournisseurs (chèque n°...)",
+            "X",
+            ""
+          ],
+          [
+            "Avec option — règlement",
+            "4091",
+            "Fournisseurs, avances et acomptes versés sur commandes",
+            "",
+            "X"
+          ],
+          [
+            "Avec option — règlement",
+            "512",
+            "Banques",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Ventes de services : encaissement de l'acompte",
+      "contenu": "Symétriquement côté vendeur : l'encaissement de l'acompte déclenche à la fois le mouvement de trésorerie et la reconnaissance immédiate de la TVA collectée correspondante.",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "512",
+            "Banques (chèque n°...)",
+            "X",
+            ""
+          ],
+          [
+            "4191",
+            "Clients, avances et acomptes reçus sur commandes",
+            "",
+            "X"
+          ],
+          [
+            "44580",
+            "État, TVA à régulariser sur acomptes",
+            "X",
+            ""
+          ],
+          [
+            "44571",
+            "État, TVA collectée",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Ventes de services : facturation, sans option pour la TVA sur les débits",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "411",
+            "Clients (facture n°1104)",
+            "X",
+            ""
+          ],
+          [
+            "706",
+            "Prestations de services",
+            "",
+            "X"
+          ],
+          [
+            "44580",
+            "État, TVA à régulariser sur acomptes (solde de l'acompte)",
+            "",
+            "X"
+          ],
+          [
+            "44572",
+            "État, TVA collectée sur encaissements",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Ventes de services : facturation, avec option pour la TVA sur les débits",
+      "tableau": {
+        "colonnes": [
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "411",
+            "Clients (facture n°1104)",
+            "X",
+            ""
+          ],
+          [
+            "706",
+            "Prestations de services",
+            "",
+            "X"
+          ],
+          [
+            "44580",
+            "État, TVA à régulariser sur acomptes (solde de l'acompte)",
+            "",
+            "X"
+          ],
+          [
+            "44571",
+            "État, TVA collectée",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Ventes de services : encaissement du solde",
+      "contenu": "Sans option, l'encaissement du solde déclenche une écriture supplémentaire qui transfère la TVA du compte de régularisation (44572) vers le compte définitif de TVA collectée (44571). Avec option, rien de plus à enregistrer : la TVA a déjà été intégralement reconnue à la facturation.",
+      "tableau": {
+        "colonnes": [
+          "Cas",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "Sans option — encaissement",
+            "512",
+            "Banques (chèque n°...)",
+            "X",
+            ""
+          ],
+          [
+            "Sans option — encaissement",
+            "4191",
+            "Clients, avances et acomptes reçus sur commandes",
+            "X",
+            ""
+          ],
+          [
+            "Sans option — encaissement",
+            "411",
+            "Clients",
+            "",
+            "X"
+          ],
+          [
+            "Sans option — régularisation TVA",
+            "44572",
+            "État, TVA collectée sur encaissements",
+            "X",
+            ""
+          ],
+          [
+            "Sans option — régularisation TVA",
+            "44571",
+            "État, TVA collectée",
+            "",
+            "X"
+          ],
+          [
+            "Avec option — encaissement",
+            "512",
+            "Banques (chèque n°...)",
+            "X",
+            ""
+          ],
+          [
+            "Avec option — encaissement",
+            "4191",
+            "Clients, avances et acomptes reçus sur commandes",
+            "X",
+            ""
+          ],
+          [
+            "Avec option — encaissement",
+            "411",
+            "Clients",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le + de l'expert",
+      "contenu": "L'option pour la TVA sur les débits peut conduire à payer la TVA postérieurement à l'encaissement d'acomptes ou d'avances eux-mêmes antérieurs à l'inscription au compte client — d'où la mobilisation de différents comptes de TVA (44580, 44564, 44572) pour suivre précisément à quel stade la TVA est définitivement acquise."
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "Arrhes",
+      "definition": "Sommes versées pour exercer une option sur une vente : non remboursées en cas de désistement de l'acheteur, reversées au double en cas de non-exécution par le vendeur."
+    },
+    {
+      "terme": "Avances",
+      "definition": "Sommes versées avant tout commencement d'exécution de la commande."
+    },
+    {
+      "terme": "Acomptes",
+      "definition": "Sommes versées sur justification d'une exécution partielle de la commande."
+    },
+    {
+      "terme": "TVA à régulariser sur acomptes (44580)",
+      "definition": "Compte transitoire, commun aux achats et ventes de services, dans lequel la TVA reconnue au moment du paiement/encaissement d'un acompte est provisoirement logée avant sa reprise à la facturation."
+    },
+    {
+      "terme": "TVA déductible sur encaissements (44564)",
+      "definition": "Compte transitoire côté acheteur (sans option pour la TVA sur les débits) : la TVA sur le solde facturé n'est pas encore déductible tant qu'il n'est pas réglé."
+    },
+    {
+      "terme": "TVA collectée sur encaissements (44572)",
+      "definition": "Compte transitoire côté vendeur (sans option pour la TVA sur les débits), symétrique du 44564 : la TVA sur le solde facturé n'est pas encore définitivement collectée tant qu'il n'est pas encaissé."
+    }
+  ],
+  "questionsTypes": [
+    "Distinguer arrhes, avances et acomptes.",
+    "Comptabiliser le cycle acompte/facturation/solde sur un achat ou une vente de biens.",
+    "Comptabiliser le cycle acompte/facturation/solde sur une prestation de services, avec ou sans option pour la TVA sur les débits.",
+    "Justifier l'usage des comptes de régularisation de TVA (44580, 44564, 44572) sur les prestations de services.",
+    "Expliquer l'impact de l'option pour la TVA sur les débits sur le moment de reconnaissance de la TVA."
+  ],
+  "annales": {
+    "note": "Ce chapitre est mobilisé dans les dossiers d'opérations courantes comportant des acomptes, en particulier sur prestations de services où la mécanique de TVA constitue un point technique discriminant. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "questionsRedactionnellesRecurrentes": [
+      "Justifier pourquoi la TVA sur acomptes de prestations de services diffère de celle sur les biens.",
+      "Expliquer le rôle des comptes 44580, 44564 et 44572 selon l'étape du cycle acompte/facturation/solde."
+    ],
+    "entrees": []
+  }
+}
