@@ -1,0 +1,868 @@
+{
+  "id": "ue9-ch14",
+  "numero": 14,
+  "titre": "Les règlements et le suivi de la trésorerie",
+  "axe": "Axe 3 — Analyser comptablement des opérations courantes",
+  "pageManuel": 63,
+  "exercicesUrl": "../exercices/ue9.html",
+  "motsCles": [
+    "Avis d'impayé",
+    "Compte Caisse",
+    "Moyen de paiement",
+    "Escompte",
+    "Affacturage",
+    "Cession de créances (Dailly)"
+  ],
+  "utilite": {
+    "pourcentage": 15,
+    "niveau": "Modéré à fort — mécanique de base (partie 1) + technique spécialisée (partie 2)",
+    "commentaire": "Fiche en deux parties bien distinctes. La partie 1 (les règlements) est un réflexe de base mobilisé dans quasiment tous les dossiers d'encaissement/décaissement. La partie 2 (le suivi de la trésorerie) est plus spécialisée : les techniques de mobilisation de créances (escompte, CMCC, cession Dailly, affacturage) forment un bloc technique cohérent, régulièrement testé dans les dossiers de financement à court terme. Règle transversale à retenir : les intérêts (financement) ne sont jamais soumis à TVA, contrairement aux commissions et services bancaires qui y sont systématiquement soumis.",
+    "themesRecurrents": [
+      "Opérations courantes avec les tiers — 100 % des sujets",
+      "Opérations d'inventaire — 100 %",
+      "Immobilisations, amortissements et dépréciations — 92 %",
+      "Liquidation de la TVA — 85 %",
+      "Principes comptables et sources du droit comptable — 77 %"
+    ]
+  },
+  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "notionsCles": [
+    {
+      "titre": "PARTIE 1 — Une typologie des modes de règlement",
+      "contenu": "Plusieurs moyens de paiement sont à la disposition des entreprises : les règlements en espèces, par prélèvements ou virements, par chèques, par cartes de paiement, etc.",
+      "tableau": {
+        "colonnes": [
+          "Mode de règlement",
+          "Pratiques comptables associées"
+        ],
+        "lignes": [
+          [
+            "Espèce",
+            "Encaissements et décaissements enregistrés dans un compte Caisse (53). Par nature, le compte Caisse ne peut jamais être créditeur."
+          ],
+          [
+            "Virement",
+            "Ordre de virement : demande de transfert d'une entreprise à son institution financière. Avis de crédit : information de l'enregistrement du virement par l'institution financière de l'entreprise bénéficiaire."
+          ],
+          [
+            "Chèque",
+            "Chèques obligatoirement barrés (encaissables uniquement via la banque du bénéficiaire). Le paiement donne lieu à un avis de débit chez le tireur (émetteur) et à un avis de crédit chez le bénéficiaire."
+          ],
+          [
+            "Carte de paiement",
+            "Les règlements par CB effectués au cours d'une journée se réalisent au crédit de la nuit suivante, avec prélèvement d'une commission bancaire (environ 0,50 % des encaissements). Enregistrement à partir des avis de débit/crédit ou des relevés de compte."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le règlement en espèces",
+      "contenu": "Encaissements → débit du compte 530 Caisse. Décaissements → crédit du compte 530 Caisse. Exemple : vente au comptant de 5 radiateurs à 200 € HT l'unité (TVA 20 %), le 25/08/N, paiement immédiat en espèces.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "25/08/N",
+            "411",
+            "Clients",
+            "1 200,00",
+            ""
+          ],
+          [
+            "25/08/N",
+            "707",
+            "Ventes de marchandises",
+            "",
+            "1 000,00"
+          ],
+          [
+            "25/08/N",
+            "44571",
+            "État, TVA collectée",
+            "",
+            "200,00"
+          ],
+          [
+            "25/08/N",
+            "530",
+            "Caisse (versement d'espèces)",
+            "1 200,00",
+            ""
+          ],
+          [
+            "25/08/N",
+            "411",
+            "Clients",
+            "",
+            "1 200,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le règlement par virement",
+      "contenu": "Virements reçus → débit du compte 512 Banques à la date de l'avis de crédit. Virements émis → crédit du compte 512 Banques à la date de l'avis de débit. Exemple : achat de 200 m de tuyaux de cuivre, 500 € HT, TVA 20 %, le 20/08/N. Paiement par virement, ordre de virement le 20/08/N, avis de crédit le 22/08/N.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "20/08/N",
+            "6022",
+            "Achats de fournitures consommables",
+            "500,00",
+            ""
+          ],
+          [
+            "20/08/N",
+            "44566",
+            "État, TVA déductible sur ABS",
+            "100,00",
+            ""
+          ],
+          [
+            "20/08/N",
+            "401",
+            "Fournisseurs",
+            "",
+            "600,00"
+          ],
+          [
+            "22/08/N",
+            "401",
+            "Fournisseurs (ordre de virement n°...)",
+            "600,00",
+            ""
+          ],
+          [
+            "22/08/N",
+            "512",
+            "Banques",
+            "",
+            "600,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le règlement par chèque",
+      "contenu": "Chèques reçus → débit du compte 512 Banques à la date de l'avis de crédit. Chèques émis → crédit du compte 512 Banques à la date d'émission. Exemple : vente au comptant de 5 radiateurs à 200 € HT (TVA 20 %) le 25/08/N, paiement immédiat par chèque, date de réception du chèque : 27/08/N.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "25/08/N",
+            "411",
+            "Clients",
+            "1 200,00",
+            ""
+          ],
+          [
+            "25/08/N",
+            "707",
+            "Ventes de marchandises",
+            "",
+            "1 000,00"
+          ],
+          [
+            "25/08/N",
+            "44571",
+            "État, TVA collectée",
+            "",
+            "200,00"
+          ],
+          [
+            "27/08/N",
+            "512",
+            "Banques (avis de crédit n°...)",
+            "1 200,00",
+            ""
+          ],
+          [
+            "27/08/N",
+            "411",
+            "Clients",
+            "",
+            "1 200,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le règlement par carte bancaire (CB)",
+      "contenu": "Encaissements réglés par CB : à la date de réalisation, débit du compte 5115 Cartes de crédit à encaisser ; à la date de l'avis de crédit, débit du compte 512 Banques. Décaissements réglés par CB : à la date de réalisation, crédit du compte 5125 Cartes de crédit en attente de débit ; à la date de l'avis de débit, crédit du compte 512 Banques. Exemple : achat de tuyaux de cuivre, 2 000 € HT, TVA 20 %, le 20/08/N, paiement immédiat par CB à débit différé, avis de crédit le 30/08/N.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "20/08/N",
+            "6022",
+            "Achats de fournitures consommables",
+            "2 000,00",
+            ""
+          ],
+          [
+            "20/08/N",
+            "44566",
+            "État, TVA déductible sur ABS",
+            "400,00",
+            ""
+          ],
+          [
+            "20/08/N",
+            "401",
+            "Fournisseurs",
+            "",
+            "2 400,00"
+          ],
+          [
+            "20/08/N",
+            "401",
+            "Fournisseurs (CB n°...)",
+            "2 400,00",
+            ""
+          ],
+          [
+            "20/08/N",
+            "5125",
+            "Carte de crédit — en attente de débit",
+            "",
+            "2 400,00"
+          ],
+          [
+            "30/08/N",
+            "5125",
+            "Carte de crédit — en attente de débit (avis de débit n°...)",
+            "2 400,00",
+            ""
+          ],
+          [
+            "30/08/N",
+            "512",
+            "Banques",
+            "",
+            "2 400,00"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les impayés",
+      "contenu": "En cas de non-paiement temporaire, un avis d'impayé est émis par le créancier ; le bénéficiaire est avisé par sa banque, qui prélève généralement des frais d'impayé. Si le non-paiement devient définitif, la créance est constatée en perte.",
+      "tableau": {
+        "colonnes": [
+          "Cas",
+          "Écriture chez le bénéficiaire"
+        ],
+        "lignes": [
+          [
+            "Chèque impayé (temporairement)",
+            "Débit compte du payeur (4.) / Crédit 512 Banques (rétablissement de la créance), puis débit 627 Services bancaires / crédit 512 Banques (frais d'impayé prélevés par la banque)"
+          ],
+          [
+            "Chèque non payé de façon définitive",
+            "Débit 654 Pertes sur créances irrécouvrables + 44571 État, TVA collectée (extournée) / Crédit 512 Banques"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Les autres modes de règlement",
+      "tableau": {
+        "colonnes": [
+          "Mode",
+          "Description"
+        ],
+        "lignes": [
+          [
+            "Paiement par TIP",
+            "Le fournisseur joint à sa facture un titre interbancaire de paiement (TIP). Le payeur le renvoie, après acceptation, au « centre TIP » correspondant en mentionnant ses coordonnées bancaires (sauf si déjà préremplies)."
+          ],
+          [
+            "Paiement par PayPal",
+            "Système dématérialisé et sécurisé permettant de payer et d'être payé sur Internet via une carte bancaire, un compte bancaire ou un solde PayPal."
+          ],
+          [
+            "Paiement par prepaid cash service (PCS)",
+            "Cartes de paiement prépayées permettant de payer en ligne sans laisser de coordonnées bancaires ni de données personnelles."
+          ],
+          [
+            "Paiement mobile (m-payment)",
+            "Paiement effectué depuis un téléphone mobile, débité sur une carte bancaire, la facture opérateur, ou un porte-monnaie électronique (alimenté par dépôt de cash auprès d'un agent ou d'un commerçant)."
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le + de l'expert (règlements)",
+      "contenu": "Les schémas d'enregistrement des règlements sont quasi identiques quel que soit le mode de règlement : un compte de trésorerie (caisse, banque, carte) est débité ou crédité en miroir du compte de tiers (client/fournisseur) soldé."
+    },
+    {
+      "titre": "PARTIE 2 — Les techniques de mobilisation des créances : vue d'ensemble",
+      "contenu": "Pour couvrir ses besoins de trésorerie à court terme, une entreprise peut mobiliser ses créances clients avant leur échéance normale, selon plusieurs techniques : l'escompte des effets de commerce, la négociation de LCR (lettres de change relevé) magnétiques, le crédit de mobilisation des créances commerciales (CMCC), la cession ou le nantissement de créances professionnelles (loi Dailly, en pleine propriété ou à titre de garantie), et l'affacturage. Règle de TVA transversale à toutes ces techniques : les intérêts facturés par la banque ne sont jamais soumis à TVA, alors que les services bancaires (commissions) le sont systématiquement."
+    },
+    {
+      "titre": "Le calcul de l'escompte : taux d'intérêt et net au crédit",
+      "formule": "Intérêt = Capital × taux × (durée en jours ÷ 360), avec une année bancaire comptée pour 360 jours · Net au crédit = Montant de la traite − Commission HT − TVA sur commission − Intérêt",
+      "contenu": "La durée retenue pour le calcul correspond au nombre de jours entre la date de remise à l'escompte et la date d'échéance prévue de la LCR, augmenté des jours de banque (délai forfaitaire supplémentaire prélevé par la banque). Exemple de calcul de durée : échéance au 31/12/N, remise à l'escompte le 21/11/N → 9 jours restants en novembre + 31 jours en décembre = 40 jours, + 2 jours de banque = 42 jours retenus. Exemple de calcul du net au crédit : montant de la traite 1 000 €, commission HT 12 €, TVA sur commission (20 %) 2,40 €, intérêt d'escompte 7,30 € → net au crédit = 1 000 − 12 − 2,40 − 7,30 = 978,30 €."
+    },
+    {
+      "titre": "L'escompte des effets de commerce (LCR papier)",
+      "contenu": "Chez le tiré (celui qui doit payer, ex. un fournisseur pour l'entreprise qui a acheté), l'acceptation de la traite transforme la dette fournisseur en effet à payer, réglé à l'échéance. Chez le tireur (celui qui doit être payé, ex. un client pour l'entreprise qui a vendu), la créance client devient un effet à recevoir ; elle peut être remise à l'escompte avant son échéance pour obtenir des liquidités par anticipation, moyennant intérêts et commissions.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "08/04",
+            "401",
+            "Fournisseurs (acceptation de la traite)",
+            "X",
+            ""
+          ],
+          [
+            "08/04",
+            "403",
+            "Fournisseurs, effets à payer",
+            "",
+            "X"
+          ],
+          [
+            "31/05",
+            "403",
+            "Fournisseurs, effets à payer (échéance de la traite)",
+            "X",
+            ""
+          ],
+          [
+            "31/05",
+            "512",
+            "Banques",
+            "",
+            "X"
+          ],
+          [
+            "10/04",
+            "413",
+            "Clients, effets à recevoir (acceptation de la traite)",
+            "X",
+            ""
+          ],
+          [
+            "10/04",
+            "411",
+            "Clients",
+            "",
+            "X"
+          ],
+          [
+            "15/04",
+            "5114",
+            "Effets à l'escompte (remise à l'escompte)",
+            "X",
+            ""
+          ],
+          [
+            "15/04",
+            "413",
+            "Clients, effets à recevoir",
+            "",
+            "X"
+          ],
+          [
+            "16/04",
+            "512",
+            "Banques (avis de crédit)",
+            "X",
+            ""
+          ],
+          [
+            "16/04",
+            "627",
+            "Services bancaires et assimilés",
+            "X",
+            ""
+          ],
+          [
+            "16/04",
+            "44586",
+            "État, TVA déductible sur ABS (sur la commission)",
+            "X",
+            ""
+          ],
+          [
+            "16/04",
+            "661",
+            "Charges d'intérêts",
+            "X",
+            ""
+          ],
+          [
+            "16/04",
+            "5114",
+            "Effets à l'escompte",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La négociation de la CCR magnétique",
+      "contenu": "Version dématérialisée de la remise à l'escompte (relevé de LCR magnétique) : la banque avance les fonds sous forme de concours bancaire courant, avant même l'encaissement effectif du client.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "15/04",
+            "512",
+            "Banques (avis de crédit de la banque)",
+            "X",
+            ""
+          ],
+          [
+            "15/04",
+            "627",
+            "Services bancaires et assimilés",
+            "X",
+            ""
+          ],
+          [
+            "15/04",
+            "661",
+            "Charges d'intérêts",
+            "X",
+            ""
+          ],
+          [
+            "15/04",
+            "44586",
+            "État, TVA déductible sur ABS (sur la commission)",
+            "X",
+            ""
+          ],
+          [
+            "15/04",
+            "519",
+            "Concours bancaires courants",
+            "",
+            "X"
+          ],
+          [
+            "31/05",
+            "512",
+            "Banques (règlement du client)",
+            "X",
+            ""
+          ],
+          [
+            "31/05",
+            "411",
+            "Clients",
+            "",
+            "X"
+          ],
+          [
+            "01/06",
+            "519",
+            "Concours bancaires courants (annulation de l'avance)",
+            "X",
+            ""
+          ],
+          [
+            "01/06",
+            "512",
+            "Banques",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le crédit de mobilisation des créances commerciales (CMCC)",
+      "contenu": "Technique utilisée lorsque plusieurs factures, à la même date, concernent différents clients. La banque se substitue alors globalement aux clients et l'entreprise lui remet un billet à ordre représentatif de l'ensemble de ces créances.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "05/04",
+            "512",
+            "Banques (remise du billet à ordre CMCC)",
+            "X",
+            ""
+          ],
+          [
+            "05/04",
+            "661",
+            "Charges d'intérêts",
+            "X",
+            ""
+          ],
+          [
+            "05/04",
+            "627",
+            "Services bancaires",
+            "X",
+            ""
+          ],
+          [
+            "05/04",
+            "44566",
+            "État, TVA déductible sur ABS",
+            "X",
+            ""
+          ],
+          [
+            "05/04",
+            "5191",
+            "Crédit de mobilisation de créances commerciales",
+            "",
+            "X"
+          ],
+          [
+            "31/05",
+            "512",
+            "Banques (règlement du client)",
+            "X",
+            ""
+          ],
+          [
+            "31/05",
+            "411",
+            "Clients",
+            "",
+            "X"
+          ],
+          [
+            "31/05",
+            "5191",
+            "Crédit de mobilisation de créances commerciales (remboursement)",
+            "X",
+            ""
+          ],
+          [
+            "31/05",
+            "512",
+            "Banques",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La cession de créances professionnelles en pleine propriété (loi Dailly)",
+      "contenu": "La banque devient pleinement propriétaire des créances cédées, contre un droit de tirage immédiat et une retenue de garantie (débloquée ultérieurement).",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "01/04",
+            "5121",
+            "Banque, droit de tirage (transfert du bordereau de cession)",
+            "X",
+            ""
+          ],
+          [
+            "01/04",
+            "5122",
+            "Banque, retenue de garantie",
+            "X",
+            ""
+          ],
+          [
+            "01/04",
+            "4116",
+            "Créances professionnelles cédées",
+            "",
+            "X"
+          ],
+          [
+            "31/05",
+            "512",
+            "Banques (règlement du client)",
+            "X",
+            ""
+          ],
+          [
+            "31/05",
+            "411",
+            "Clients",
+            "",
+            "X"
+          ],
+          [
+            "31/05",
+            "4116",
+            "Créances professionnelles cédées (annulation)",
+            "X",
+            ""
+          ],
+          [
+            "31/05",
+            "5121",
+            "Banque, droit de tirage",
+            "",
+            "X"
+          ],
+          [
+            "31/05",
+            "5122",
+            "Banque, retenue de garantie",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "La cession de créances professionnelles à titre de garantie (loi Dailly)",
+      "contenu": "Les créances cédées servent uniquement de garantie à un crédit bancaire classique ; l'entreprise reste propriétaire des créances et continue de les encaisser directement.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "27/03",
+            "512",
+            "Banques (obtention du crédit)",
+            "X",
+            ""
+          ],
+          [
+            "27/03",
+            "661",
+            "Charges d'intérêts",
+            "X",
+            ""
+          ],
+          [
+            "27/03",
+            "627",
+            "Services bancaires",
+            "X",
+            ""
+          ],
+          [
+            "27/03",
+            "44566",
+            "État, TVA déductible sur ABS",
+            "X",
+            ""
+          ],
+          [
+            "27/03",
+            "5194",
+            "Crédit garanti par des créances",
+            "",
+            "X"
+          ],
+          [
+            "31/05",
+            "512",
+            "Banques (encaissement du client)",
+            "X",
+            ""
+          ],
+          [
+            "31/05",
+            "411",
+            "Clients",
+            "",
+            "X"
+          ],
+          [
+            "31/05",
+            "5194",
+            "Crédit garanti par des créances (remboursement)",
+            "X",
+            ""
+          ],
+          [
+            "31/05",
+            "512",
+            "Banques",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "L'affacturage",
+      "contenu": "L'entreprise (l'adhérent) transfère ses créances clients à une société d'affacturage (le factor), qui en assume le risque d'impayé. Le client est informé qu'il doit désormais régler ses factures directement auprès du factor, et non plus auprès du fournisseur d'origine.",
+      "tableau": {
+        "colonnes": [
+          "Date",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
+        "lignes": [
+          [
+            "27/05",
+            "467",
+            "Divers comptes débiteurs (transfert des créances au factor)",
+            "X",
+            ""
+          ],
+          [
+            "27/05",
+            "668",
+            "Autres charges financières",
+            "X",
+            ""
+          ],
+          [
+            "27/05",
+            "622",
+            "Rémunérations d'intermédiaires et honoraires",
+            "X",
+            ""
+          ],
+          [
+            "27/05",
+            "44566",
+            "État, TVA déductible sur ABS",
+            "X",
+            ""
+          ],
+          [
+            "27/05",
+            "411",
+            "Clients",
+            "",
+            "X"
+          ],
+          [
+            "31/05",
+            "512",
+            "Banques (versement du factor)",
+            "X",
+            ""
+          ],
+          [
+            "31/05",
+            "467",
+            "Divers comptes débiteurs",
+            "",
+            "X"
+          ]
+        ]
+      }
+    },
+    {
+      "titre": "Le contrôle du compte banque (512)",
+      "contenu": "Le suivi de la trésorerie passe aussi par le contrôle régulier du compte banque : la réciprocité des comptes (vérifier que le solde tenu par l'entreprise correspond à celui tenu par la banque) et le rapprochement bancaire (justifier les écarts entre les deux, liés aux délais d'encaissement/débit)."
+    }
+  ],
+  "vocabulaire": [
+    {
+      "terme": "Avis d'impayé",
+      "definition": "Document émis par le créancier (via sa banque) en cas de non-paiement, temporaire ou définitif, d'un chèque ou effet."
+    },
+    {
+      "terme": "LCR (lettre de change relevé)",
+      "definition": "Effet de commerce dématérialisé permettant le règlement d'une créance à une date d'échéance donnée, pouvant être remis à l'escompte avant son terme."
+    },
+    {
+      "terme": "Escompte",
+      "definition": "Opération par laquelle une entreprise cède un effet de commerce à sa banque avant son échéance, contre le versement anticipé de son montant diminué des intérêts et commissions."
+    },
+    {
+      "terme": "Jours de banque",
+      "definition": "Délai forfaitaire supplémentaire ajouté par la banque à la durée réelle séparant la remise à l'escompte de l'échéance, pour le calcul des intérêts."
+    },
+    {
+      "terme": "CMCC",
+      "definition": "Crédit de mobilisation des créances commerciales : technique permettant de mobiliser en une seule fois plusieurs créances de clients différents, via un billet à ordre remis à la banque."
+    },
+    {
+      "terme": "Cession de créances professionnelles (loi Dailly)",
+      "definition": "Mécanisme permettant de céder des créances professionnelles à une banque, soit en pleine propriété (la banque devient propriétaire des créances), soit à titre de garantie (les créances garantissent un crédit, l'entreprise reste propriétaire)."
+    },
+    {
+      "terme": "Affacturage",
+      "definition": "Contrat par lequel une entreprise (l'adhérent) transfère ses créances clients à une société spécialisée (le factor), qui en assure le recouvrement et en assume le risque d'impayé."
+    },
+    {
+      "terme": "Concours bancaires courants (compte 519)",
+      "definition": "Avances de trésorerie à court terme consenties par la banque, notamment dans le cadre de la négociation de LCR magnétiques."
+    },
+    {
+      "terme": "Règle de TVA sur le financement à court terme",
+      "definition": "Les intérêts (charges d'intérêts, 661) ne sont jamais soumis à TVA ; les commissions et services bancaires (627) le sont systématiquement."
+    }
+  ],
+  "questionsTypes": [
+    "Comptabiliser un règlement selon le mode utilisé (espèces, virement, chèque, carte bancaire).",
+    "Comptabiliser un avis d'impayé temporaire, puis une perte définitive sur créance.",
+    "Distinguer les différentes techniques de mobilisation de créances (escompte, CCR magnétique, CMCC, cession Dailly, affacturage).",
+    "Calculer la durée et le montant de l'escompte d'un effet de commerce (intérêt, commission, net au crédit).",
+    "Justifier l'absence de TVA sur les intérêts, à la différence des commissions bancaires.",
+    "Comptabiliser une cession de créances professionnelles en pleine propriété ou à titre de garantie.",
+    "Comptabiliser une opération d'affacturage chez l'adhérent."
+  ],
+  "annales": {
+    "note": "La partie « règlements » est mobilisée dans la quasi-totalité des dossiers d'opérations courantes. La partie « suivi de la trésorerie » (techniques de mobilisation de créances) est plus spécifique aux dossiers de financement à court terme. Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
+    "questionsRedactionnellesRecurrentes": [
+      "Présenter le schéma d'enregistrement d'un règlement selon son mode.",
+      "Distinguer les techniques de mobilisation de créances et leur traitement comptable respectif.",
+      "Calculer un escompte (durée, intérêt, commission, net au crédit)."
+    ],
+    "entrees": []
+  }
+}
