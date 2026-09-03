@@ -1,35 +1,61 @@
 /* ==========================================================================
-   Comptaflow â€” fiche-detail.css
-   Feuille de style des fiches dÃ©taillÃ©es de rÃ©vision (UE9).
-   Palette de marque : bleu #3B82F6 Â· teal #14B8A6 Â· violet #7C3AED
-   RÃ´le des couleurs (structurel, pas dÃ©coratif) :
-     bleu   = notions clÃ©s
-     teal   = vocabulaire
-     violet = questions types
-     ambre  = ce qui concerne l'examen (utilitÃ© + annales)
+   Comptaflow — fiche-detail.css
+   Feuille de style des fiches détaillées de révision (UE9).
+
+   Palette de marque (révisée — famille menthe/cyan/encre, pensée pour une
+   lecture prolongée sans fatigue oculaire) :
+     Mint Cream #F2FFF6 · Tea Green #CAFFDE · Sky Aqua #25C5E9
+     Dark Cyan  #238689 · Ink Black #021225
+
+   Rôle des couleurs (structurel, pas décoratif) — les noms de variables
+   historiques (--blue, --teal, --violet, --amber, --red, --indigo) sont
+   conservés à l'identique car ils sont référencés directement par les
+   classes générées depuis les fiches JSON (t-blue, c-teal, etc.) : seules
+   leurs VALEURS changent ici, aucune fiche existante n'a besoin d'être
+   modifiée.
+     --blue (Dark Cyan)   = notions clés
+     --teal (Sky Aqua)    = vocabulaire
+     --violet (Ink Black) = questions types
+     --amber (vert dérivé de Tea Green) = ce qui concerne l'examen
+                                            (utilité + annales) — l'accent
+                                            "à retenir en priorité"
+     --red / --indigo     = tons additionnels pour les schémas (métiers,
+                             pyramide), dérivés de la même famille cyan/encre
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
 
 :root {
-  --blue: #3B82F6;
-  --blue-ink: #1D4ED8;
-  --teal: #14B8A6;
-  --teal-ink: #0F766E;
-  --violet: #7C3AED;
-  --violet-ink: #6D28D9;
-  --amber: #F59E0B;
-  --amber-ink: #B45309;
+  /* ---- palette de base fournie ---- */
+  --mint: #F2FFF6;
+  --tea: #CAFFDE;
+  --sky: #25C5E9;
+  --cyan: #238689;
+  --inkblack: #021225;
 
-  --ink: #16233A;
-  --ink-soft: #475569;
-  --line: #E4E9F2;
+  /* ---- rôles sémantiques (mêmes noms qu'avant, nouvelles valeurs) ---- */
+  --blue: var(--cyan);
+  --blue-ink: #1B6669;
+  --teal: var(--sky);
+  --teal-ink: #106E85;
+  --violet: var(--inkblack);
+  --violet-ink: #12263B;
+  --amber: #1F6B4A;
+  --amber-ink: #14523A;
+  --red: #0B4A52;
+  --red-ink: #083539;
+  --indigo: #08333A;
+
+  --ink: var(--inkblack);
+  --ink-soft: #4A5D63;
+  --ink-faint: #7C8F93;
+  --line: #DCEEE2;
   --surface: #FFFFFF;
-  --bg: #F4F6FB;
+  --bg: var(--mint);
 
   --radius: 16px;
   --radius-sm: 10px;
-  --shadow: 0 1px 2px rgba(16, 35, 58, .04), 0 12px 32px rgba(16, 35, 58, .06);
+  --shadow: 0 1px 2px rgba(2, 18, 37, .04), 0 12px 32px rgba(2, 18, 37, .06);
   --maxw: 860px;
 
   --display: 'Space Grotesk', system-ui, sans-serif;
@@ -44,8 +70,8 @@ body {
   font-family: var(--body);
   color: var(--ink);
   background:
-    radial-gradient(1200px 480px at 100% -10%, rgba(124, 58, 237, .06), transparent 60%),
-    radial-gradient(1000px 420px at -10% 0%, rgba(59, 130, 246, .07), transparent 55%),
+    radial-gradient(1200px 480px at 100% -10%, rgba(37, 197, 233, .05), transparent 60%),
+    radial-gradient(1000px 420px at -10% 0%, rgba(202, 255, 222, .55), transparent 55%),
     var(--bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -75,7 +101,7 @@ body {
 .fiche-num {
   display: inline-flex; align-items: center; gap: .55rem;
   font-family: var(--mono); font-weight: 600; font-size: .8rem;
-  color: var(--blue-ink); background: rgba(59, 130, 246, .1);
+  color: var(--blue-ink); background: rgba(35, 134, 137, .1);
   padding: .3rem .7rem; border-radius: 999px; margin-bottom: 14px;
 }
 h1.fiche-title {
@@ -94,10 +120,10 @@ h1.fiche-title {
   color: #fff; text-decoration: none;
   background: linear-gradient(135deg, var(--blue), var(--violet));
   padding: .78rem 1.3rem; border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(59, 130, 246, .28);
+  box-shadow: 0 8px 20px rgba(35, 134, 137, .28);
   transition: transform .15s ease, box-shadow .15s ease;
 }
-.btn-exos:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(124, 58, 237, .32); }
+.btn-exos:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(37, 197, 233, .35); }
 .btn-exos .arrow { transition: transform .15s ease; }
 .btn-exos:hover .arrow { transform: translateX(3px); }
 
@@ -131,12 +157,12 @@ h1.fiche-title {
 .gauge-level { font-family: var(--display); font-weight: 600; color: var(--ink); font-size: 1rem; }
 .gauge-track {
   position: relative; height: 12px; border-radius: 999px; margin: 16px 0 6px;
-  background: linear-gradient(90deg, #DCFCE7 0%, #FEF3C7 50%, #FEE2E2 100%);
+  background: linear-gradient(90deg, var(--tea) 0%, var(--sky) 55%, var(--cyan) 100%);
   overflow: hidden;
 }
 .gauge-fill {
   position: absolute; inset: 0 auto 0 0; width: 0;
-  background: linear-gradient(90deg, var(--teal), var(--amber));
+  background: linear-gradient(90deg, var(--sky), var(--cyan));
   border-radius: 999px; transition: width 1.1s cubic-bezier(.22, 1, .36, 1);
 }
 .gauge-scale { display: flex; justify-content: space-between; font-family: var(--mono); font-size: .68rem; color: var(--ink-soft); }
@@ -145,7 +171,7 @@ h1.fiche-title {
 .themes h4 { font-family: var(--display); font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); margin: 0 0 10px; }
 .themes ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 7px; }
 .themes li { font-size: .9rem; display: flex; gap: .55rem; }
-.themes li::before { content: "â–¸"; color: var(--amber); }
+.themes li::before { content: "▸"; color: var(--amber); }
 
 /* ---------- Notions ---------- */
 .notion { border: 1px solid var(--line); border-left: 4px solid var(--blue); border-radius: var(--radius-sm); padding: 16px 18px; background: var(--surface); }
@@ -154,12 +180,12 @@ h1.fiche-title {
 .notion p { margin: 0; color: var(--ink-soft); }
 .ref {
   display: inline-block; font-family: var(--mono); font-size: .72rem; font-weight: 600;
-  color: var(--blue-ink); background: rgba(59, 130, 246, .1);
+  color: var(--blue-ink); background: rgba(35, 134, 137, .1);
   padding: .16rem .5rem; border-radius: 6px; margin: 0 0 8px;
 }
 .formule {
   font-family: var(--mono); font-weight: 600; color: var(--ink);
-  background: #F1F5FF; border: 1px solid #DBE4FF; border-radius: 8px;
+  background: #EAF6F5; border: 1px solid #CDEBEA; border-radius: 8px;
   padding: .6rem .8rem; margin: 8px 0 4px; text-align: center; font-size: .95rem;
 }
 
@@ -168,7 +194,7 @@ h1.fiche-title {
 table.compare { width: 100%; border-collapse: collapse; min-width: 620px; font-size: .88rem; }
 table.compare th, table.compare td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); }
 table.compare thead th { background: var(--blue); color: #fff; font-family: var(--display); font-weight: 600; }
-table.compare tbody th { background: #F1F5FF; font-weight: 600; color: var(--ink); white-space: normal; width: 22%; max-width: 220px; vertical-align: top; }
+table.compare tbody th { background: #EAF6F5; font-weight: 600; color: var(--ink); white-space: normal; width: 22%; max-width: 220px; vertical-align: top; }
 table.compare tbody td { vertical-align: top; }
 table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { border-bottom: 0; }
 
@@ -199,14 +225,14 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 
 /* ---------- Annales ---------- */
 .annales-card { border-top: 4px solid var(--amber); }
-.annales-note { color: var(--ink-soft); font-size: .93rem; background: #FFFBEB; border: 1px solid #FDE68A; border-radius: var(--radius-sm); padding: 14px 16px; margin: 0 0 16px; }
+.annales-note { color: var(--ink-soft); font-size: .93rem; background: #E7FBEE; border: 1px solid #B9EFC7; border-radius: var(--radius-sm); padding: 14px 16px; margin: 0 0 16px; }
 .annale { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 16px; margin-top: 12px; }
-.annale .year-tag { font-family: var(--mono); font-size: .74rem; font-weight: 600; color: var(--amber-ink); background: rgba(245, 158, 11, .12); padding: .18rem .55rem; border-radius: 6px; }
+.annale .year-tag { font-family: var(--mono); font-size: .74rem; font-weight: 600; color: var(--amber-ink); background: rgba(31, 107, 74, .12); padding: .18rem .55rem; border-radius: 6px; }
 .annale h4 { font-family: var(--display); margin: 10px 0 6px; font-size: 1rem; }
 .annale .corrige { color: var(--ink-soft); font-size: .93rem; }
 .recur { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
 .recur li { font-size: .9rem; display: flex; gap: .5rem; color: var(--ink-soft); }
-.recur li::before { content: "â€¢"; color: var(--amber); }
+.recur li::before { content: "•"; color: var(--amber); }
 .empty { font-style: italic; color: var(--ink-soft); font-size: .9rem; padding: 10px 0; }
 
 /* ---------- Info format Ã©preuve ---------- */
@@ -234,7 +260,7 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 /* ==========================================================================
    SchÃ©mas visuels (flux, pyramide, mÃ©tiers, trÃ©sorerie)
    ========================================================================== */
-:root { --red: #EF4444; --red-ink: #DC2626; --indigo: #4338CA; }
+/* --red, --red-ink et --indigo sont déjà définis dans le :root principal ci-dessus */
 
 /* ---- Flux (systÃ¨me comptable) ---- */
 .flux { margin-top: 16px; }
@@ -250,7 +276,7 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 .flux-arrow { display: flex; align-items: center; color: var(--ink-soft); font-size: 1.4rem; font-weight: 700; }
 .flux-io { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
 .flux-tag {
-  font-size: .85rem; padding: .45rem .8rem; border-radius: 9px; background: #EEF2F8;
+  font-size: .85rem; padding: .45rem .8rem; border-radius: 9px; background: #EEF6F1;
   color: var(--ink); border: 1px solid var(--line); white-space: nowrap;
 }
 .flux-tag.in { border-left: 3px solid var(--blue); }
@@ -259,7 +285,7 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
   flex: 1; height: 0; border-top: 2px dashed var(--line); position: relative;
 }
 .flux-connector::after {
-  content: "â–¶"; position: absolute; right: -2px; top: 50%; transform: translateY(-50%);
+  content: "▶"; position: absolute; right: -2px; top: 50%; transform: translateY(-50%);
   color: var(--line); font-size: .7rem;
 }
 
@@ -282,7 +308,7 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 .pyr-tier.tier-0 { background: var(--indigo); }
 .pyr-tier.tier-1 { background: var(--blue); }
 .pyr-tier.tier-2 { background: var(--teal); }
-.pyr-tier.tier-3 { background: #64748B; }
+.pyr-tier.tier-3 { background: #6E8286; }
 
 /* ---- Escalier des mÃ©tiers ---- */
 .metiers { margin-top: 16px; }
@@ -314,11 +340,11 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 .metier-diplome { font-size: .85rem; color: var(--blue-ink); font-weight: 500; margin: 3px 0 4px; }
 .metier-missions { font-size: .88rem; color: var(--ink-soft); }
 
-.passerelles { margin-top: 14px; background: #F5F2FF; border: 1px solid #E4DBFF; border-radius: 12px; padding: 14px 16px; }
+.passerelles { margin-top: 14px; background: #EDF2F3; border: 1px solid #D6E2E3; border-radius: 12px; padding: 14px 16px; }
 .passerelles h4 { margin: 0 0 8px; font-family: var(--display); font-size: .82rem; color: var(--violet-ink); text-transform: uppercase; letter-spacing: .06em; }
 .passerelles ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
 .passerelles li { font-size: .88rem; color: var(--ink-soft); display: flex; gap: .55rem; }
-.passerelles li::before { content: "â†’"; color: var(--violet); font-weight: 700; }
+.passerelles li::before { content: "→"; color: var(--violet); font-weight: 700; }
 
 /* ---- SchÃ©ma trÃ©sorerie / valeur ---- */
 .treso { margin-top: 16px; }
