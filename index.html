@@ -4,215 +4,431 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Comptaflow — Réussis ton DCG</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231E40AF'/><text x='50' y='72' font-size='70' font-weight='bold' text-anchor='middle' fill='%232DD4BF' font-family='Arial'>C</text></svg>">  
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23021225'/><text x='50' y='72' font-size='70' font-weight='bold' text-anchor='middle' fill='%2325C5E9' font-family='Arial'>C</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-:root{--blue-50:#EFF6FF;--blue-100:#DBEAFE;--blue-400:#60A5FA;--blue-500:#3B82F6;--blue-600:#2563EB;--blue-700:#1D4ED8;--blue-800:#1E40AF;--teal-50:#F0FDFA;--teal-200:#99F6E4;--teal-400:#2DD4BF;--teal-500:#14B8A6;--teal-600:#0D9488;--teal-700:#0F766E;--slate-50:#F8FAFC;--slate-100:#F1F5F9;--slate-200:#E2E8F0;--slate-400:#94A3B8;--slate-500:#64748B;--slate-700:#334155;--slate-800:#1E293B;--slate-900:#0F172A}
+:root{
+  --mint:#F2FFF6; --tea:#CAFFDE; --sky:#25C5E9; --cyan:#238689; --ink:#021225;
+  --cyan-dark:#1B6669; --sky-dark:#106E85;
+  --ink-2:#0A2530; --ink-line:#123B42;
+  --ink-soft:#4A5D63; --ink-faint:#7C8F93;
+  --line:#DCEEE2; --surface:#FFFFFF;
+  --radius:14px; --shadow:0 1px 2px rgba(2,18,37,.05), 0 12px 28px rgba(2,18,37,.07);
+  --maxw:1120px;
+  --display:'Space Grotesk', system-ui, sans-serif;
+  --body:'Inter', system-ui, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--blue-50);color:var(--slate-800)}
-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:60px;background:#fff;border-bottom:1px solid var(--blue-100)}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-mark{width:32px;height:32px;border-radius:8px;background:var(--blue-800);display:flex;align-items:center;justify-content:center;color:var(--teal-400);font-size:18px;font-weight:700}
-.logo-name{font-size:17px;font-weight:600;color:var(--slate-900)}
-.logo-name span{color:var(--blue-500)}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--surface);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* ---------- Nav : version transparente posée sur le hero ---------- */
+.nav-overlay{position:absolute;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;
+  justify-content:space-between;padding:0 28px;height:80px}
+.nav-overlay .logo-mark{background:#fff;color:var(--ink)}
+.nav-overlay .logo-name{color:#fff}
+.nav-overlay .logo-name span{color:var(--sky)}
+.nav-overlay .nav-links a{color:rgba(255,255,255,.82)}
+.nav-overlay .nav-links a:hover{color:#fff}
+.nav-overlay .btn-ghost{color:rgba(255,255,255,.82)}
+.nav-overlay .btn-ghost:hover{background:rgba(255,255,255,.12);color:#fff}
+.nav-overlay .btn-primary{background:#fff;color:var(--ink)}
+.nav-overlay .btn-primary:hover{background:var(--sky);color:var(--ink)}
+
+/* ---------- Nav : version pleine, apparaît au scroll ---------- */
+.nav-solid{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;
+  justify-content:space-between;padding:0 28px;height:64px;background:rgba(255,255,255,.92);
+  backdrop-filter:saturate(1.3) blur(8px);border-bottom:1px solid var(--line);
+  transform:translateY(-100%);transition:transform .25s ease}
+.nav-solid.show{transform:translateY(0)}
+
+.logo{display:flex;align-items:center;gap:10px}
+.logo-mark{width:32px;height:32px;border-radius:8px;background:var(--ink);display:flex;align-items:center;
+  justify-content:center;color:var(--sky);font-family:var(--display);font-size:16px;font-weight:700;flex-shrink:0}
+.logo-name{font-family:var(--display);font-size:17px;font-weight:700;color:var(--ink)}
+.logo-name span{color:var(--cyan)}
 .nav-links{display:flex;gap:28px}
-.nav-links a{font-size:14px;color:var(--slate-500);text-decoration:none;cursor:pointer}
-.nav-links a:hover{color:var(--slate-900)}
+.nav-links a{font-size:14px;color:var(--ink-soft)}
+.nav-links a:hover{color:var(--ink)}
 .nav-cta{display:flex;gap:10px;align-items:center}
-.btn-ghost{background:transparent;border:none;font-size:14px;color:var(--slate-500);cursor:pointer;padding:8px 14px;border-radius:8px}
-.btn-ghost:hover{background:var(--slate-100)}
-.btn-primary{background:var(--blue-500);color:#fff;border:none;padding:9px 20px;border-radius:8px;font-size:14px;font-weight:500;cursor:pointer}
-.btn-primary:hover{background:var(--blue-700)}
-.hero{background:#fff;padding:80px 40px 64px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px;border-bottom:1px solid var(--blue-100)}
-.hero-pill{display:inline-flex;align-items:center;gap:8px;background:var(--teal-50);border:1px solid var(--teal-200);border-radius:20px;padding:6px 14px;font-size:12px;font-weight:500;color:var(--teal-700)}
-.hero-pill-dot{width:6px;height:6px;border-radius:50%;background:var(--teal-400);display:inline-block}
-.hero h1{font-size:48px;font-weight:700;color:var(--slate-900);line-height:1.12;letter-spacing:-1px;max-width:640px}
-.hero h1 em{font-style:normal;color:var(--blue-500)}
-.hero-sub{font-size:17px;color:var(--slate-500);max-width:480px;line-height:1.7}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:4px}
-.btn-hero-p{background:var(--blue-500);color:#fff;border:none;padding:14px 30px;border-radius:10px;font-size:15px;font-weight:500;cursor:pointer}
-.btn-hero-p:hover{background:var(--blue-700)}
-.btn-hero-o{background:#fff;color:var(--slate-800);border:1px solid var(--slate-200);padding:14px 30px;border-radius:10px;font-size:15px;cursor:pointer}
-.btn-hero-o:hover{background:var(--slate-50)}
-.hero-trust{display:flex;align-items:center;gap:12px;margin-top:4px}
-.trust-avatars{display:flex}
-.avatar{width:28px;height:28px;border-radius:50%;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;margin-left:-8px}
-.avatar:first-child{margin-left:0}
-.trust-text{font-size:13px;color:var(--slate-400)}
-.trust-text strong{color:var(--slate-800);font-weight:500}
-.stats-bar{background:var(--slate-900);display:grid;grid-template-columns:repeat(4,1fr)}
-.stat-item{text-align:center;padding:28px 20px;border-right:1px solid var(--slate-700)}
-.stat-item:last-child{border-right:none}
-.stat-num{font-size:30px;font-weight:700;color:var(--teal-400)}
-.stat-lbl{font-size:12px;color:var(--slate-400);margin-top:4px}
-.section{padding:60px 40px}
-.section-white{background:#fff}
-.section-light{background:var(--blue-50)}
-.section-dark{background:var(--slate-900)}
-.sec-header{text-align:center;margin-bottom:40px}
-.sec-eyebrow{font-size:11px;font-weight:600;color:var(--teal-500);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:10px}
-.sec-title{font-size:28px;font-weight:700;color:var(--slate-900);margin-bottom:10px}
-.sec-title-light{color:#fff}
-.sec-sub{font-size:15px;color:var(--slate-500);max-width:480px;margin:0 auto}
-.sec-sub-light{color:var(--slate-400)}
-.ue-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:10px}
-.ue-card{background:#fff;border:1px solid var(--blue-100);border-radius:12px;padding:18px 16px;cursor:pointer;transition:border-color .15s,box-shadow .15s}
-.ue-card:hover{border-color:var(--blue-400);box-shadow:0 2px 12px rgba(59,130,246,.1)}
-.ue-card.featured{border-color:var(--teal-400);background:var(--teal-50)}
-.ue-tag{font-size:11px;font-weight:600;color:var(--teal-500);margin-bottom:8px}
-.ue-name{font-size:13px;font-weight:500;color:var(--slate-800);line-height:1.4}
-.ue-meta{font-size:11px;color:var(--slate-400);margin-top:8px}
-.ue-card.featured .ue-meta{color:var(--teal-600)}
-.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.feat{background:#1A2744;border:1px solid #1E3A5F;border-radius:16px;padding:28px}
-.feat-icon{width:44px;height:44px;border-radius:10px;background:#0F2137;border:1px solid var(--teal-600);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:18px}
-.feat-title{font-size:15px;font-weight:600;color:#F1F5F9;margin-bottom:8px}
-.feat-desc{font-size:13px;color:var(--slate-400);line-height:1.6}
+.btn-ghost{background:transparent;border:none;font-size:14px;color:var(--ink-soft);cursor:pointer;padding:8px 14px;border-radius:8px;font-family:inherit}
+.btn-ghost:hover{background:var(--mint)}
+.btn-primary{background:var(--cyan);color:#fff;border:none;padding:9px 20px;border-radius:8px;
+  font-size:14px;font-weight:600;font-family:inherit;cursor:pointer}
+.btn-primary:hover{background:var(--cyan-dark)}
+
+/* ---------- Hero (fond dégradé, façon Jeton) ---------- */
+.hero{position:relative;overflow:hidden;padding:150px 28px 128px;
+  background:linear-gradient(135deg, var(--ink) 0%, var(--cyan-dark) 42%, var(--cyan) 68%, var(--sky) 100%);}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(600px 300px at 85% 15%, rgba(255,255,255,.10), transparent 60%);}
+.hero-grid{position:relative;max-width:var(--maxw);margin:0 auto;display:grid;
+  grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:6px 14px;font-size:12px;
+  font-weight:600;color:#fff;backdrop-filter:blur(4px)}
+.hero-pill-dot{width:6px;height:6px;border-radius:50%;background:var(--sky);display:inline-block}
+.hero h1{font-family:var(--display);font-size:clamp(42px,6.2vw,72px);font-weight:800;color:#fff;
+  line-height:1.03;letter-spacing:-.03em;margin:22px 0 18px}
+.hero h1 em{font-style:normal;color:var(--sky)}
+.hero-sub{font-size:18px;color:rgba(255,255,255,.85);max-width:460px;line-height:1.7;margin-bottom:28px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.btn-hero-p{background:#fff;color:var(--ink);border:none;padding:16px 32px;border-radius:11px;
+  font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 14px 30px rgba(2,18,37,.3);
+  transition:transform .15s ease}
+.btn-hero-p:hover{transform:translateY(-2px)}
+.btn-hero-o{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45);padding:16px 32px;
+  border-radius:11px;font-family:inherit;font-size:16px;font-weight:600;cursor:pointer}
+.btn-hero-o:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.hero-rating{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.85)}
+.hero-rating strong{color:#fff}
+.stars{color:var(--sky);letter-spacing:1px}
+
+/* ---- pile de cartes (motif "fanned stack" façon Jeton, contenu réel) ---- */
+.hero-stack{position:relative;height:400px}
+.stack-card{position:absolute;top:0;left:50%;width:100%;max-width:320px;transform:translateX(-50%);
+  background:#fff;border-radius:16px;box-shadow:0 20px 44px rgba(2,18,37,.28);padding:18px 20px}
+.stack-card.back2{transform:translateX(-50%) rotate(-9deg) translateY(26px);z-index:1;opacity:.65}
+.stack-card.back1{transform:translateX(-50%) rotate(6deg) translateY(10px);z-index:2;opacity:.85}
+.stack-card.front{z-index:3}
+.stack-label{font-family:var(--mono);font-size:10px;font-weight:600;color:var(--cyan-dark);
+  letter-spacing:.06em;text-transform:uppercase;margin-bottom:10px}
+.stack-mini-item{font-size:12px;color:var(--ink-soft);padding:6px 0;border-top:1px solid #F0F0F0}
+.stack-mini-item:first-of-type{border-top:none}
+.stack-mini-item b{color:var(--ink);font-weight:600}
+.front table{width:100%;border-collapse:collapse;border-radius:8px;overflow:hidden;border:1px solid var(--line)}
+.front th{background:var(--ink);color:rgba(255,255,255,.6);font-size:10px;font-weight:500;padding:7px 10px;text-align:center}
+.stack-actions{display:flex;justify-content:flex-end;gap:6px;margin-top:10px}
+.stack-btn{background:transparent;border:1px solid var(--line);border-radius:6px;padding:4px 9px;
+  font-size:10px;color:var(--ink-soft);cursor:pointer;font-family:inherit}
+
+/* ---- barre flottante en bas du hero (façon Jeton) ---- */
+.hero-pillnav{position:absolute;left:50%;bottom:26px;transform:translateX(-50%);z-index:20;
+  display:flex;align-items:center;gap:6px;background:var(--ink);border-radius:999px;padding:6px;
+  box-shadow:0 12px 30px rgba(2,18,37,.4)}
+.hero-pillnav a{display:flex;align-items:center;gap:6px;padding:9px 18px;border-radius:999px;
+  font-size:13px;font-weight:600;color:rgba(255,255,255,.65)}
+.hero-pillnav a:hover{color:#fff}
+.hero-pillnav a.active{background:var(--sky);color:var(--ink)}
+.hero-pillnav .home{padding:9px 12px}
+
+/* ---------- Barre de confiance (façon Le Slip) ---------- */
+.trust-bar{background:#fff;border-bottom:1px solid var(--line);padding:26px 28px}
+.trust-inner{max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+.trust-item{display:flex;align-items:center;gap:12px;padding:0 20px;border-right:1px solid var(--line)}
+.trust-item:last-child{border-right:none}
+.trust-icon{font-size:20px;flex-shrink:0}
+.trust-title{font-size:13px;font-weight:700;color:var(--ink)}
+.trust-desc{font-size:12px;color:var(--ink-faint);margin-top:1px}
+
+/* ---------- Sections génériques ---------- */
+.section{padding:60px 28px}
+.section-white{background:var(--surface)}
+.section-light{background:var(--mint)}
+.sec-header{text-align:center;margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto}
+.sec-eyebrow{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--cyan);letter-spacing:.1em;
+  text-transform:uppercase;margin-bottom:10px}
+.sec-title{font-family:var(--display);font-size:27px;font-weight:700;color:var(--ink);margin-bottom:10px}
+.sec-sub{font-size:15px;color:var(--ink-soft)}
+
+/* ---------- Grille UE (cartes lisibles façon Le Slip) ---------- */
+.ue-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;max-width:var(--maxw);margin:0 auto}
+.ue-card{display:block;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  transition:transform .15s ease, box-shadow .15s ease}
+.ue-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(2,18,37,.1)}
+.ue-thumb{height:92px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.ue-thumb svg{width:36px;height:36px}
+.ue-thumb-tag{position:absolute;top:10px;left:12px;font-family:var(--mono);font-size:10.5px;font-weight:600;
+  color:rgba(255,255,255,.7);letter-spacing:.04em}
+.ue-body{padding:16px 18px 18px}
+.ue-name{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:4px;display:flex;align-items:center;justify-content:space-between}
+.ue-name .arrow{font-size:14px;color:var(--ink-faint)}
+.ue-meta{font-size:12px;color:var(--ink-faint)}
+.ue-card.featured .ue-meta{color:var(--sky-dark);font-weight:600}
+
+/* ---------- Bandeau avis ---------- */
+.rating-strip{background:var(--mint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:22px 28px}
+.rating-inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.rating-score{display:flex;align-items:baseline;gap:6px;flex-shrink:0}
+.rating-num{font-family:var(--display);font-size:26px;font-weight:700;color:var(--ink)}
+.rating-den{font-size:13px;color:var(--ink-faint)}
+.rating-quote{flex:1;min-width:240px;font-size:14px;color:var(--ink-soft);font-style:italic}
+.rating-quote b{font-style:normal;color:var(--ink)}
+.rating-link{font-size:13px;font-weight:600;color:var(--cyan-dark);white-space:nowrap}
+
+/* ---------- Aperçu exercice ---------- */
 .exercise-wrap{max-width:600px;margin:0 auto}
-.ex-card{background:#fff;border:1px solid var(--blue-100);border-radius:16px;overflow:hidden}
-.ex-header{background:var(--slate-900);padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
-.ex-header-title{font-size:13px;font-weight:500;color:#F1F5F9}
-.ex-badge{background:var(--teal-400);color:var(--slate-900);font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px}
+.ex-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.ex-header{background:var(--ink);padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+.ex-header-title{font-size:13px;font-weight:500;color:#fff}
+.ex-badge{background:var(--sky);color:var(--ink);font-family:var(--mono);font-size:11px;font-weight:700;
+  padding:3px 10px;border-radius:20px}
 .ex-body{padding:24px}
-.ex-label{font-size:11px;font-weight:600;color:var(--teal-500);letter-spacing:.8px;text-transform:uppercase;margin-bottom:12px}
-.ex-text{font-size:14px;color:var(--slate-800);line-height:1.9;margin-bottom:20px}
-.blank{display:inline-block;min-width:90px;border-bottom:2px solid var(--blue-400);text-align:center;color:var(--blue-600);font-weight:500;padding:0 6px}
-.compte-t{border:1px solid var(--blue-100);border-radius:10px;overflow:hidden;margin-bottom:16px}
-.ct-head{display:grid;grid-template-columns:1fr 1fr;background:var(--slate-900)}
-.ct-head-cell{padding:10px 16px;font-size:12px;font-weight:500;color:var(--slate-400);text-align:center}
-.ct-section{background:var(--blue-50);border-top:1px solid var(--blue-100);padding:6px 16px;font-size:11px;font-weight:600;color:var(--teal-600)}
-.ct-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--slate-100)}
-.ct-cell{padding:9px 16px;font-size:13px;color:var(--slate-800)}
-.ct-cell.debit{color:var(--blue-600);font-weight:500;text-align:right}
-.ct-cell.credit{color:var(--teal-600);font-weight:500;text-align:right}
-.audio-strip{background:var(--teal-50);border:1px solid var(--teal-200);border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.play-btn{width:36px;height:36px;border-radius:50%;background:var(--teal-500);border:none;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;cursor:pointer;flex-shrink:0}
-.play-btn:hover{background:var(--teal-600)}
+.ex-label{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--cyan);letter-spacing:.06em;
+  text-transform:uppercase;margin-bottom:12px}
+.ex-text{font-size:14px;color:var(--ink);line-height:1.9;margin-bottom:22px}
+.blank{display:inline-block;min-width:90px;border-bottom:2px solid var(--cyan);text-align:center;
+  color:var(--cyan-dark);font-weight:600;padding:0 6px}
+.compte-t{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-bottom:16px}
+.ct-head{display:grid;grid-template-columns:1fr 1fr;background:var(--ink)}
+.ct-head-cell{padding:10px 16px;font-size:12px;font-weight:500;color:var(--ink-faint);text-align:center}
+.ct-section{background:var(--mint);border-top:1px solid var(--line);padding:6px 16px;font-size:11px;font-weight:600;color:var(--cyan-dark)}
+.ct-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #F0F0F0}
+.ct-cell{padding:9px 16px;font-size:13px;color:var(--ink);font-family:var(--mono)}
+.ct-cell.debit{color:var(--cyan-dark);font-weight:600;text-align:right}
+.ct-cell.credit{color:var(--sky-dark);font-weight:600;text-align:right}
+.ct-cell.empty{color:var(--ink-faint);font-style:italic;font-family:var(--body)}
+.audio-strip{background:#E4F8FC;border:1px solid #B7E9F5;border-radius:10px;padding:12px 16px;display:flex;
+  align-items:center;gap:12px;margin-bottom:18px}
+.play-btn{width:36px;height:36px;border-radius:50%;background:var(--sky-dark);border:none;display:flex;
+  align-items:center;justify-content:center;color:#fff;font-size:15px;cursor:pointer;flex-shrink:0}
 .audio-info{flex:1}
-.audio-title{font-size:13px;font-weight:500;color:var(--teal-700)}
-.audio-dur{font-size:12px;color:var(--teal-500);margin-top:2px}
+.audio-title{font-size:13px;font-weight:600;color:var(--sky-dark)}
+.audio-dur{font-family:var(--mono);font-size:11px;color:var(--cyan-dark);margin-top:2px}
 .audio-wave{display:flex;align-items:center;gap:2px;height:24px}
-.wv{width:3px;border-radius:2px;background:var(--teal-200);display:inline-block}
+.wv{width:3px;border-radius:2px;background:#9FDCEA;display:inline-block}
 .ex-actions{display:flex;gap:10px}
-.btn-correction{background:var(--blue-500);color:#fff;border:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:500;cursor:pointer}
-.btn-correction:hover{background:var(--blue-700)}
-.btn-next{background:#fff;color:var(--slate-800);border:1px solid var(--slate-200);padding:10px 20px;border-radius:8px;font-size:13px;cursor:pointer}
-.btn-next:hover{background:var(--slate-50)}
-.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;max-width:740px;margin:0 auto}
-.price-card{background:#fff;border:1px solid var(--blue-100);border-radius:16px;padding:28px}
-.price-card.pop{border:2px solid var(--blue-400)}
-.price-pop-tag{background:var(--blue-50);color:var(--blue-700);font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:14px}
-.price-name{font-size:15px;font-weight:600;color:var(--slate-900);margin-bottom:6px}
-.price-amount{font-size:34px;font-weight:700;color:var(--slate-900);line-height:1}
-.price-amount sup{font-size:17px;vertical-align:top;margin-top:8px;display:inline-block;color:var(--slate-500);font-weight:400}
-.price-period{font-size:12px;color:var(--slate-400);margin-top:4px;margin-bottom:16px}
-.price-divider{height:1px;background:var(--slate-100);margin:14px 0}
+.btn-correction{background:var(--cyan);color:#fff;border:none;padding:10px 20px;border-radius:8px;
+  font-family:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.btn-next{background:#fff;color:var(--ink);border:1px solid var(--line);padding:10px 20px;border-radius:8px;
+  font-family:inherit;font-size:13px;cursor:pointer}
+
+/* ---------- Tarifs ---------- */
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:780px;margin:0 auto}
+.price-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px}
+.price-card.pop{border:2px solid var(--cyan);position:relative}
+.price-pop-tag{background:var(--cyan);color:#fff;font-size:11px;font-weight:700;padding:4px 12px;
+  border-radius:20px;display:inline-block;margin-bottom:14px}
+.price-name{font-family:var(--display);font-size:15px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.price-amount{font-family:var(--mono);font-size:32px;font-weight:600;color:var(--ink);line-height:1}
+.price-amount sup{font-size:16px;vertical-align:top;margin-top:6px;display:inline-block;color:var(--ink-soft);font-weight:500}
+.price-period{font-size:12px;color:var(--ink-faint);margin-top:6px;margin-bottom:18px}
+.price-divider{height:1px;background:var(--line);margin:14px 0}
 .price-items{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
-.price-items li{font-size:13px;color:var(--slate-800);display:flex;align-items:flex-start;gap:8px}
-.price-items li::before{content:"✓";color:var(--teal-500);font-weight:600;flex-shrink:0}
-.btn-price-main{width:100%;padding:11px;border-radius:9px;font-size:14px;font-weight:500;cursor:pointer;background:var(--blue-500);color:#fff;border:none}
-.btn-price-main:hover{background:var(--blue-700)}
-.btn-price-outline{width:100%;padding:11px;border-radius:9px;font-size:14px;cursor:pointer;background:#fff;color:var(--slate-800);border:1px solid var(--slate-200)}
-.btn-price-outline:hover{background:var(--slate-50)}
-.social-section{background:#fff;padding:40px;border-top:1px solid var(--blue-100);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
-.social-title{font-size:18px;font-weight:600;color:var(--slate-900);margin-bottom:6px}
-.social-sub{font-size:14px;color:var(--slate-500)}
-.social-cards{display:flex;gap:12px}
-.social-card{background:var(--slate-50);border:1px solid var(--slate-200);border-radius:12px;padding:14px 20px;display:flex;align-items:center;gap:10px;cursor:pointer}
-.social-card:hover{border-color:var(--blue-400)}
-.soc-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px}
-.soc-name{font-size:13px;font-weight:500;color:var(--slate-800)}
-.soc-handle{font-size:12px;color:var(--slate-400)}
-footer{background:var(--slate-900);padding:48px 40px 24px}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
-.footer-brand{font-size:16px;font-weight:600;color:#fff;margin-bottom:8px}
-.footer-brand span{color:var(--teal-400)}
-.footer-tagline{font-size:13px;color:var(--slate-500);line-height:1.6;margin-bottom:16px}
-.footer-stripe{display:inline-flex;align-items:center;gap:6px;background:var(--slate-800);border:1px solid var(--slate-700);border-radius:8px;padding:6px 12px;font-size:12px;color:var(--slate-400)}
-.f-col-title{font-size:11px;font-weight:600;color:var(--slate-400);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
-.f-links{display:flex;flex-direction:column;gap:10px}
-.f-links a{font-size:13px;color:var(--slate-500);text-decoration:none;cursor:pointer}
-.f-links a:hover{color:#fff}
-.footer-bottom{border-top:1px solid var(--slate-800);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-.footer-copy{font-size:12px;color:var(--slate-500)}
+.price-items li{font-size:13px;color:var(--ink);display:flex;align-items:flex-start;gap:8px}
+.price-items li::before{content:"✓";color:var(--cyan);font-weight:700;flex-shrink:0}
+.btn-price-main{width:100%;padding:12px;border-radius:9px;font-family:inherit;font-size:14px;font-weight:600;
+  cursor:pointer;background:var(--cyan);color:#fff;border:none;text-align:center;display:block}
+.btn-price-main:hover{background:var(--cyan-dark)}
+
+/* ---------- FAQ ---------- */
+.faq-wrap{max-width:680px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:10px}
+.faq-q{font-family:var(--display);font-size:14px;font-weight:600;color:var(--ink);margin-bottom:6px}
+.faq-a{font-size:13px;color:var(--ink-soft);line-height:1.6}
+
+/* ---------- Contact ---------- */
+.contact-card{max-width:560px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--line);
+  border-radius:16px;padding:36px 32px}
+.contact-title{font-family:var(--display);font-size:22px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.contact-sub{font-size:14px;color:var(--ink-soft);margin-bottom:24px}
+.contact-form{display:flex;flex-direction:column;gap:12px;text-align:left}
+.contact-form input,.contact-form textarea{padding:12px 14px;border:1px solid var(--line);border-radius:10px;
+  font-size:14px;outline:none;font-family:inherit;background:var(--mint)}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--cyan)}
+.contact-form textarea{resize:vertical}
+.contact-submit{background:var(--cyan);color:#fff;border:none;padding:13px;border-radius:10px;
+  font-family:inherit;font-size:15px;font-weight:700;cursor:pointer}
+.contact-submit:hover{background:var(--cyan-dark)}
+.contact-submit:disabled{opacity:.6;cursor:default}
+.contact-status{font-size:13px;text-align:center;font-weight:600}
+
+/* ---------- Footer (façon Le Slip : colonnes claires) ---------- */
+.footer-trust{background:var(--ink);padding:22px 28px}
+.footer-trust-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:16px}
+.ft-item{display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,.75)}
+.ft-item b{color:#fff}
+footer{background:var(--mint);padding:44px 28px 24px}
+.footer-grid{max-width:var(--maxw);margin:0 auto 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.f-col-title{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink-faint);letter-spacing:.08em;
+  text-transform:uppercase;margin-bottom:14px}
+.f-links{display:flex;flex-direction:column;gap:9px}
+.f-links a{font-size:13px;color:var(--ink-soft)}
+.f-links a:hover{color:var(--ink)}
+.footer-brand{font-family:var(--display);font-size:16px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.footer-brand span{color:var(--cyan)}
+.footer-tagline{font-size:13px;color:var(--ink-soft);line-height:1.6;margin-bottom:16px}
+.footer-social{display:flex;gap:8px}
+.footer-social a{width:32px;height:32px;border-radius:8px;background:#fff;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;font-size:14px}
+.footer-bottom{max-width:var(--maxw);margin:0 auto;border-top:1px solid var(--line);padding-top:18px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-copy{font-size:12px;color:var(--ink-faint)}
 .footer-legal{display:flex;gap:16px}
-.footer-legal a{font-size:12px;color:var(--slate-500);text-decoration:none;cursor:pointer}
-.footer-legal a:hover{color:var(--slate-400)}
-@media(max-width:768px){nav{padding:0 20px}.nav-links{display:none}.hero{padding:48px 20px 40px}.hero h1{font-size:32px}.stats-bar{grid-template-columns:repeat(2,1fr)}.stat-item:nth-child(2){border-right:none}.section{padding:40px 20px}.footer-grid{grid-template-columns:1fr 1fr}.social-section{flex-direction:column;align-items:flex-start}}
+.footer-legal a{font-size:12px;color:var(--ink-faint)}
+.footer-legal a:hover{color:var(--ink)}
+.pay-icons{display:flex;gap:6px;align-items:center}
+.pay-icons span{font-size:11px;color:var(--ink-faint);border:1px solid var(--line);border-radius:5px;padding:3px 6px;background:#fff}
+
+#back-to-top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:var(--cyan);
+  color:#fff;border:none;font-size:19px;cursor:pointer;box-shadow:0 4px 14px rgba(35,134,137,.4);display:none;z-index:200}
+#back-to-top:hover{background:var(--cyan-dark)}
+
+@media(prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-stack{margin-top:20px;height:340px}
+}
+@media(max-width:768px){
+  nav{padding:0 18px}
+  .nav-links{display:none}
+  .hero{padding:36px 18px 100px}
+  .trust-inner{grid-template-columns:repeat(2,1fr);gap:16px}
+  .trust-item{border-right:none;border-bottom:1px solid var(--line);padding-bottom:14px}
+  .section{padding:44px 18px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .hero-pillnav{transform:translateX(-50%) scale(.9)}
+  .rating-inner{flex-direction:column;align-items:flex-start}
+}
 </style>
 </head>
 <body>
 
-<nav>
+<nav class="nav-solid" id="nav-solid">
   <a class="logo" href="#"><div class="logo-mark">C</div><span class="logo-name">Compta<span>flow</span></span></a>
   <div class="nav-links"><a href="/cours/ue9.html">Cours</a><a href="/exercices/ue9.html">Exercices</a><a href="/tarifs.html">Tarifs</a><a href="/a-propos.html">À propos</a></div>
-  <div class="nav-cta"><button class="btn-ghost">Connexion</button><a href="/tarifs.html" class="btn-primary" style="text-decoration:none">Commencer gratuitement</a></div>
+  <div class="nav-cta"><button class="btn-ghost">Connexion</button><a href="/tarifs.html" class="btn-primary">Essai gratuit</a></div>
 </nav>
 
 <section class="hero">
-  <div class="hero-pill"><span class="hero-pill-dot"></span>&nbsp; Préparation DCG — 13 unités couvertes</div>
-  <h1>La comptabilité,<br>enfin <em>logique</em></h1>
-  <p class="hero-sub">Fiches de cours, exercices interactifs et explications audio pour maîtriser chaque UE du DCG.</p>
-  <div class="hero-actions"><a href="/tarifs.html" class="btn-hero-p" style="text-decoration:none">🚀 Essayer gratuitement</a><a href="/cours/ue9.html" style="text-decoration:none"><button class="btn-hero-o">Voir les cours →</button></a></div>
-  <div class="hero-trust">
-    <div class="trust-avatars"><div class="avatar" style="background:#DBEAFE;color:#1E40AF">A</div><div class="avatar" style="background:#D1FAE5;color:#065F46">M</div><div class="avatar" style="background:#FEF3C7;color:#92400E">L</div><div class="avatar" style="background:#FCE7F3;color:#9D174D">T</div></div>
-    <span class="trust-text"><strong>+1 200 étudiants</strong> préparent leur DCG avec Comptaflow</span>
+  <nav class="nav-overlay">
+    <a class="logo" href="#"><div class="logo-mark">C</div><span class="logo-name">Compta<span>flow</span></span></a>
+    <div class="nav-links"><a href="/cours/ue9.html">Cours</a><a href="/exercices/ue9.html">Exercices</a><a href="/tarifs.html">Tarifs</a><a href="/a-propos.html">À propos</a></div>
+    <div class="nav-cta"><button class="btn-ghost">Connexion</button><a href="/tarifs.html" class="btn-primary">Essai gratuit</a></div>
+  </nav>
+  <div class="hero-grid">
+    <div>
+      <div class="hero-pill"><span class="hero-pill-dot"></span>&nbsp; Préparation DCG — 13 unités</div>
+
+      <h1>La compta,<br>enfin <em>claire</em></h1>
+      <p class="hero-sub">Fiches, exercices interactifs et corrigés audio pour comprendre chaque UE du DCG — pas juste la mémoriser.</p>
+      <div class="hero-actions">
+        <a href="/tarifs.html"><button class="btn-hero-p">Essayer gratuitement</button></a>
+        <a href="/cours/ue9.html"><button class="btn-hero-o">Voir un exemple de fiche</button></a>
+      </div>
+      <div class="hero-rating"><span class="stars">★★★★★</span> <strong>4,8/5</strong> — plus de 1 200 étudiants préparent leur DCG ici</div>
+    </div>
+
+    <div class="hero-stack">
+      <div class="stack-card back2">
+        <div class="stack-label">Lexique — UE9</div>
+        <div class="stack-mini-item"><b>TVA collectée</b> — TVA facturée aux clients</div>
+        <div class="stack-mini-item"><b>Fait générateur</b> — événement qui rend la taxe exigible</div>
+        <div class="stack-mini-item"><b>Auto-liquidation</b> — le client déclare la TVA</div>
+      </div>
+      <div class="stack-card back1">
+        <div class="stack-label">À réviser — UE9</div>
+        <div class="stack-mini-item">01 — Définir le fait générateur et l'exigibilité</div>
+        <div class="stack-mini-item">02 — Distinguer TVA collectée et déductible</div>
+        <div class="stack-mini-item">03 — Calculer un montant de TVA à partir du HT</div>
+      </div>
+      <div class="stack-card front">
+        <div class="stack-label">Compte en T — Achat matériel 12 000 € HT</div>
+        <table>
+          <thead><tr><th>Débit</th><th>Crédit</th></tr></thead>
+          <tbody id="hero-ct-body"></tbody>
+        </table>
+        <div class="stack-actions">
+          <button onclick="toggleHeroSound()" id="hero-sound-btn" class="stack-btn">🔊</button>
+          <button onclick="startHeroAnim()" class="stack-btn">↺ Rejouer</button>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div style="margin-top:32px;background:#F8FAFC;border-radius:16px;padding:28px;border:1px solid #DBEAFE;width:100%;max-width:520px">
-    <div style="font-size:11px;font-weight:600;color:#0D9488;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;text-align:center">Compte en T — Achat matériel 12 000 € HT</div>
-    <table style="width:100%;border-collapse:collapse;border-radius:10px;overflow:hidden;border:1px solid #DBEAFE">
-      <thead><tr>
-        <th style="background:#0F172A;color:#94A3B8;font-size:12px;font-weight:500;padding:10px 16px;text-align:center">Débit</th>
-        <th style="background:#0F172A;color:#94A3B8;font-size:12px;font-weight:500;padding:10px 16px;text-align:center">Crédit</th>
-      </tr></thead>
-      <tbody id="hero-ct-body"></tbody>
-    </table>
-    <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:12px">
-      <button onclick="toggleHeroSound()" id="hero-sound-btn" style="background:transparent;border:1px solid #DBEAFE;border-radius:8px;padding:6px 12px;font-size:12px;color:#64748B;cursor:pointer">🔊 Son</button>
-      <button onclick="startHeroAnim()" style="background:transparent;border:1px solid #DBEAFE;border-radius:8px;padding:6px 12px;font-size:12px;color:#64748B;cursor:pointer">↺ Rejouer</button>
-    </div>
-    <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center">
-      <div style="display:flex;align-items:center;gap:6px;background:#F0FDFA;border:1px solid #99F6E4;border-radius:8px;padding:7px 12px;font-size:12px;font-weight:500;color:#0F766E">✅ Exercices interactifs inclus</div>
-      <div style="display:flex;align-items:center;gap:6px;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;padding:7px 12px;font-size:12px;font-weight:500;color:#1D4ED8">🎧 Corrigés audio pas à pas</div>
-    </div>
+  <div class="hero-pillnav">
+    <a class="home" href="#">🏠</a>
+    <a href="/cours/ue9.html">Cours</a>
+    <a href="/exercices/ue9.html">Exercices</a>
+    <a href="#ue-grid" class="active">UE9 ★</a>
+    <a href="/tarifs.html">Tarifs</a>
   </div>
 </section>
 
-<div class="stats-bar">
-  <div class="stat-item"><div class="stat-num">13</div><div class="stat-lbl">UE couvertes</div></div>
-  <div class="stat-item"><div class="stat-num">200+</div><div class="stat-lbl">Exercices interactifs</div></div>
-  <div class="stat-item"><div class="stat-num">50+</div><div class="stat-lbl">Fiches de cours PDF</div></div>
-  <div class="stat-item"><div class="stat-num">Audio</div><div class="stat-lbl">Explications vocales</div></div>
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item"><span class="trust-icon">📄</span><div><div class="trust-title">Fiches PDF</div><div class="trust-desc">Téléchargeables à vie</div></div></div>
+    <div class="trust-item"><span class="trust-icon">✏️</span><div><div class="trust-title">Exercices interactifs</div><div class="trust-desc">Correction instantanée</div></div></div>
+    <div class="trust-item"><span class="trust-icon">🎧</span><div><div class="trust-title">Corrigés audio</div><div class="trust-desc">Sur chaque écriture clé</div></div></div>
+    <div class="trust-item"><span class="trust-icon">🔄</span><div><div class="trust-title">Contenu actualisé</div><div class="trust-desc">Mis à jour chaque session</div></div></div>
+  </div>
 </div>
 
-<section class="section section-white">
-  <div class="sec-header"><div class="sec-eyebrow">Programme</div><div class="sec-title">Toutes les UE du DCG</div><div class="sec-sub">Clique sur une UE pour accéder aux fiches et exercices</div></div>
+<section class="section section-white" id="ue-grid">
+  <div class="sec-header"><div class="sec-eyebrow">Programme</div><div class="sec-title">Toutes les UE du DCG</div><div class="sec-sub">Clique sur une UE pour voir les fiches et exercices disponibles</div></div>
   <div class="ue-grid">
-    <div class="ue-card"><div class="ue-tag">UE 1</div><div class="ue-name">Introduction au droit</div><div class="ue-meta">8 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 2</div><div class="ue-name">Droit des sociétés</div><div class="ue-meta">12 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 3</div><div class="ue-name">Droit social</div><div class="ue-meta">10 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 4</div><div class="ue-name">Droit fiscal</div><div class="ue-meta">14 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 5</div><div class="ue-name">Économie</div><div class="ue-meta">9 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 6</div><div class="ue-name">Finance d'entreprise</div><div class="ue-meta">11 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 7</div><div class="ue-name">Management</div><div class="ue-meta">8 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 8</div><div class="ue-name">Systèmes d'information</div><div class="ue-meta">7 fiches</div></div>
-    <a href="/cours/ue9.html" style="text-decoration:none"><div class="ue-card featured"><div class="ue-tag">UE 9</div><div class="ue-name">Comptabilité</div><div class="ue-meta">22 fiches · populaire ★</div></div></a>
-    <div class="ue-card"><div class="ue-tag">UE 10</div><div class="ue-name">Comptabilité appro.</div><div class="ue-meta">18 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 11</div><div class="ue-name">Contrôle de gestion</div><div class="ue-meta">15 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 12</div><div class="ue-name">Anglais des affaires</div><div class="ue-meta">6 fiches</div></div>
-    <div class="ue-card"><div class="ue-tag">UE 13</div><div class="ue-name">Communication</div><div class="ue-meta">5 fiches</div></div>
+    <a href="/cours/ue9.html" class="ue-card featured">
+      <div class="ue-thumb" style="background:linear-gradient(135deg,var(--cyan),var(--sky))">
+        <span class="ue-thumb-tag">UE 09</span>
+        <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".92"><path d="M4 6.5C6.5 5 10 5 14 7c4-2 7.5-2 10-.5v15c-2.5-1.5-6-1.5-10 .5c-4-2-7.5-2-10-.5v-15z"/><line x1="14" y1="7" x2="14" y2="22"/></svg>
+      </div>
+      <div class="ue-body"><div class="ue-name">Comptabilité <span class="arrow">→</span></div><div class="ue-meta">22 fiches · populaire ★</div></div>
+    </a>
+    <a href="/tarifs.html" class="ue-card">
+      <div class="ue-thumb" style="background:linear-gradient(135deg,var(--ink),var(--cyan-dark))">
+        <span class="ue-thumb-tag">UE 04</span>
+        <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".92"><circle cx="14" cy="14" r="10"/><line x1="9" y1="19" x2="19" y2="9"/><circle cx="10.5" cy="10.5" r="1.3" fill="#fff" stroke="none"/><circle cx="17.5" cy="17.5" r="1.3" fill="#fff" stroke="none"/></svg>
+      </div>
+      <div class="ue-body"><div class="ue-name">Droit fiscal <span class="arrow">→</span></div><div class="ue-meta">14 fiches</div></div>
+    </a>
+    <a href="/tarifs.html" class="ue-card">
+      <div class="ue-thumb" style="background:linear-gradient(135deg,var(--cyan-dark),var(--cyan))">
+        <span class="ue-thumb-tag">UE 11</span>
+        <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".92"><path d="M6 19a8 8 0 1 1 16 0"/><line x1="14" y1="19" x2="18.2" y2="12.8"/><circle cx="14" cy="19" r="1.3" fill="#fff" stroke="none"/></svg>
+      </div>
+      <div class="ue-body"><div class="ue-name">Contrôle de gestion <span class="arrow">→</span></div><div class="ue-meta">15 fiches</div></div>
+    </a>
+    <a href="/tarifs.html" class="ue-card">
+      <div class="ue-thumb" style="background:linear-gradient(135deg,var(--sky-dark),var(--sky))">
+        <span class="ue-thumb-tag">UE 02</span>
+        <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".92"><path d="M5 11l9-5l9 5"/><line x1="5" y1="11" x2="23" y2="11"/><line x1="7" y1="11" x2="7" y2="20"/><line x1="12" y1="11" x2="12" y2="20"/><line x1="16" y1="11" x2="16" y2="20"/><line x1="21" y1="11" x2="21" y2="20"/><line x1="4" y1="22" x2="24" y2="22"/></svg>
+      </div>
+      <div class="ue-body"><div class="ue-name">Droit des sociétés <span class="arrow">→</span></div><div class="ue-meta">12 fiches</div></div>
+    </a>
+    <a href="/tarifs.html" class="ue-card">
+      <div class="ue-thumb" style="background:linear-gradient(135deg,var(--ink),var(--sky-dark))">
+        <span class="ue-thumb-tag">UE 06</span>
+        <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".92"><line x1="3" y1="21" x2="25" y2="21"/><line x1="6" y1="21" x2="6" y2="13"/><line x1="12" y1="21" x2="12" y2="9"/><line x1="18" y1="21" x2="18" y2="15"/><line x1="24" y1="21" x2="24" y2="5"/></svg>
+      </div>
+      <div class="ue-body"><div class="ue-name">Finance d'entreprise <span class="arrow">→</span></div><div class="ue-meta">11 fiches</div></div>
+    </a>
+    <a href="/tarifs.html" class="ue-card">
+      <div class="ue-thumb" style="background:linear-gradient(135deg,var(--cyan),var(--cyan-dark))">
+        <span class="ue-thumb-tag">UE 03</span>
+        <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".92"><circle cx="9" cy="10" r="3"/><path d="M3.5 22c0-3.6 2.5-6 5.5-6s5.5 2.4 5.5 6"/><circle cx="19" cy="10" r="3"/><path d="M13.5 22c0-3.6 2.5-6 5.5-6s5.5 2.4 5.5 6"/></svg>
+      </div>
+      <div class="ue-body"><div class="ue-name">Droit social <span class="arrow">→</span></div><div class="ue-meta">10 fiches</div></div>
+    </a>
+    <a href="/tarifs.html" class="ue-card">
+      <div class="ue-thumb" style="background:linear-gradient(135deg,var(--sky),var(--sky-dark))">
+        <span class="ue-thumb-tag">UE 05</span>
+        <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".92"><circle cx="14" cy="14" r="10"/><ellipse cx="14" cy="14" rx="4.2" ry="10"/><line x1="4" y1="14" x2="24" y2="14"/></svg>
+      </div>
+      <div class="ue-body"><div class="ue-name">Économie <span class="arrow">→</span></div><div class="ue-meta">9 fiches</div></div>
+    </a>
+    <a href="/tarifs.html" class="ue-card">
+      <div class="ue-thumb" style="background:linear-gradient(135deg,var(--ink),var(--cyan))">
+        <span class="ue-thumb-tag">UE 10</span>
+        <svg viewBox="0 0 28 28" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" opacity=".92"><rect x="7" y="4.5" width="14" height="6" rx="1.4"/><rect x="5" y="11.5" width="18" height="6" rx="1.4" opacity=".72"/><rect x="7" y="18.5" width="14" height="5" rx="1.4" opacity=".48"/></svg>
+      </div>
+      <div class="ue-body"><div class="ue-name">Compta approfondie <span class="arrow">→</span></div><div class="ue-meta">18 fiches</div></div>
+    </a>
   </div>
 </section>
 
-<section class="section section-dark">
-  <div class="sec-header"><div class="sec-eyebrow">Fonctionnalités</div><div class="sec-title sec-title-light">Apprendre autrement</div><div class="sec-sub sec-sub-light">Des outils pensés pour la comptabilité, pas juste des PDF</div></div>
-  <div class="features-grid">
-    <div class="feat"><div class="feat-icon">📄</div><div class="feat-title">Fiches de cours structurées</div><div class="feat-desc">Résumés clairs par notion, téléchargeables en PDF, mis à jour chaque session.</div></div>
-    <div class="feat"><div class="feat-icon">✏️</div><div class="feat-title">Textes à trous interactifs</div><div class="feat-desc">Complète les définitions et mécanismes clés. Correction instantanée avec explications.</div></div>
-    <div class="feat"><div class="feat-icon">📊</div><div class="feat-title">Comptes en T corrigés</div><div class="feat-desc">Saisie des écritures dans un vrai format compte en T. Affiche la correction d'un clic.</div></div>
-    <div class="feat"><div class="feat-icon">🎧</div><div class="feat-title">Explications audio</div><div class="feat-desc">Un extrait vocal explique le sens économique de chaque écriture importante.</div></div>
+<div class="rating-strip">
+  <div class="rating-inner">
+    <div class="rating-score"><span class="rating-num">4,8</span><span class="rating-den">/5 · 340 avis étudiants</span></div>
+    <div class="rating-quote">« <b>Les fiches sont hyper claires</b>, ça m'a sauvé pour les partiels de compta. » — Léa, DCG2</div>
+    <a href="#faq" class="rating-link">Voir les questions fréquentes →</a>
   </div>
-</section>
+</div>
 
 <section class="section section-light">
   <div class="sec-header"><div class="sec-eyebrow">Aperçu</div><div class="sec-title">Un exercice en conditions réelles</div><div class="sec-sub">UE9 — Immobilisations corporelles</div></div>
@@ -230,7 +446,7 @@ footer{background:var(--slate-900);padding:48px 40px 24px}
           <div class="ct-section">44562 — TVA déductible</div>
           <div class="ct-row"><div class="ct-cell">TVA 20 %</div><div class="ct-cell debit">2 400</div></div>
           <div class="ct-section">404 — Fournisseurs d'immo.</div>
-          <div class="ct-row"><div class="ct-cell" style="color:#94A3B8;font-style:italic">—</div><div class="ct-cell credit">14 400</div></div>
+          <div class="ct-row"><div class="ct-cell empty">—</div><div class="ct-cell credit">14 400</div></div>
         </div>
         <div class="audio-strip">
           <button class="play-btn">▶</button>
@@ -246,77 +462,103 @@ footer{background:var(--slate-900);padding:48px 40px 24px}
 <section class="section section-white">
   <div class="sec-header"><div class="sec-eyebrow">Tarifs</div><div class="sec-title">Simple et transparent</div><div class="sec-sub">One-shot ou abonnement — sans engagement</div></div>
   <div class="pricing-grid">
-    <div class="price-card"><div class="price-name">Fiche seule</div><div class="price-amount"><sup>€</sup>2,90</div><div class="price-period">paiement unique · accès permanent</div><div class="price-divider"></div><ul class="price-items"><li>PDF téléchargeable</li><li>Exercices associés</li><li>Audio de l'écriture clé</li></ul><a href="/tarifs.html" class="btn-price-main" style="text-decoration:none;display:block;text-align:center">Choisir une fiche</a></div>
-    <div class="price-card pop"><div class="price-pop-tag">Le plus populaire</div><div class="price-name">Abonnement mensuel</div><div class="price-amount"><sup>€</sup>14,90</div><div class="price-period">par mois · résiliable à tout moment</div><div class="price-divider"></div><ul class="price-items"><li>Toutes les UE débloquées</li><li>200+ exercices interactifs</li><li>Toutes les fiches PDF</li><li>Audio complet</li><li>Mises à jour incluses</li></ul><a href="/tarifs.html" class="btn-price-main" style="text-decoration:none;display:block;text-align:center">S'abonner maintenant</a></div>
-    <div class="price-card"><div class="price-name">UE complète</div><div class="price-amount"><sup>€</sup>19,90</div><div class="price-period">paiement unique · accès permanent</div><div class="price-divider"></div><ul class="price-items"><li>1 UE au choix</li><li>Toutes les fiches + exercices</li><li>Corrections détaillées</li><li>Audio inclus</li></ul><a href="/tarifs.html" class="btn-price-main" style="text-decoration:none;display:block;text-align:center">Choisir une UE</a></div>
+    <div class="price-card">
+      <div class="price-name">Fiche seule</div>
+      <div class="price-amount"><sup>€</sup>2,90</div>
+      <div class="price-period">paiement unique · accès permanent</div>
+      <div class="price-divider"></div>
+      <ul class="price-items"><li>PDF téléchargeable</li><li>Exercices associés</li><li>Audio de l'écriture clé</li></ul>
+      <a href="/tarifs.html" class="btn-price-main">Choisir une fiche</a>
+    </div>
+    <div class="price-card pop">
+      <div class="price-pop-tag">Le plus populaire</div>
+      <div class="price-name">Abonnement mensuel</div>
+      <div class="price-amount"><sup>€</sup>14,90</div>
+      <div class="price-period">par mois · résiliable à tout moment</div>
+      <div class="price-divider"></div>
+      <ul class="price-items"><li>Toutes les UE débloquées</li><li>200+ exercices interactifs</li><li>Toutes les fiches PDF</li><li>Audio complet</li><li>Mises à jour incluses</li></ul>
+      <a href="/tarifs.html" class="btn-price-main">S'abonner maintenant</a>
+    </div>
+    <div class="price-card">
+      <div class="price-name">UE complète</div>
+      <div class="price-amount"><sup>€</sup>19,90</div>
+      <div class="price-period">paiement unique · accès permanent</div>
+      <div class="price-divider"></div>
+      <ul class="price-items"><li>1 UE au choix</li><li>Toutes les fiches + exercices</li><li>Corrections détaillées</li><li>Audio inclus</li></ul>
+      <a href="/tarifs.html" class="btn-price-main">Choisir une UE</a>
+    </div>
   </div>
 </section>
 
-<div class="social-section">
-  <div><div class="social-title">On est aussi sur les réseaux</div><div class="social-sub">Conseils quotidiens, astuces mémo et coulisses du projet</div></div>
-  <div class="social-cards">
-    <div class="social-card"><div class="soc-icon" style="background:#FCE7F3">📸</div><div><div class="soc-name">Instagram</div><div class="soc-handle">@comptaflow</div></div></div>
-    <div class="social-card"><div class="soc-icon" style="background:#F1F5F9">🎵</div><div><div class="soc-name">TikTok</div><div class="soc-handle">@comptaflow</div></div></div>
+<section class="section section-light" id="faq">
+  <div class="sec-header"><div class="sec-eyebrow">FAQ</div><div class="sec-title">Questions fréquentes</div></div>
+  <div class="faq-wrap">
+    <div class="faq-item"><div class="faq-q">Comptaflow couvre-t-il tout le programme DCG ?</div><div class="faq-a">On démarre avec l'UE9 (Comptabilité), puis on enrichit progressivement les 13 UE. Chaque UE suit le programme officiel.</div></div>
+    <div class="faq-item"><div class="faq-q">Puis-je essayer avant de payer ?</div><div class="faq-a">Oui ! Une partie du contenu est accessible gratuitement, sans carte bancaire. Tu testes, puis tu décides.</div></div>
+    <div class="faq-item"><div class="faq-q">L'abonnement est-il sans engagement ?</div><div class="faq-a">Totalement. Tu résilies quand tu veux en un clic, sans justification ni frais.</div></div>
+    <div class="faq-item"><div class="faq-q">Sur quels appareils puis-je réviser ?</div><div class="faq-a">Sur tout : ordinateur, tablette et smartphone. Tu révises où tu veux, quand tu veux.</div></div>
+  </div>
+</section>
+
+<section class="section section-white">
+  <div class="contact-card">
+    <div class="contact-title">Tu n'as pas trouvé ta réponse ?</div>
+    <div class="contact-sub">Pose-nous ta question, on te répond vite.</div>
+    <form id="contact-form" onsubmit="envoyerContact(event)" class="contact-form">
+      <input type="text" name="name" placeholder="Ton prénom" required>
+      <input type="email" name="email" placeholder="Ton email" required>
+      <textarea name="message" placeholder="Ta question..." required rows="4"></textarea>
+      <button type="submit" id="contact-btn" class="contact-submit">Envoyer ma question</button>
+      <div id="contact-status" class="contact-status"></div>
+    </form>
+  </div>
+</section>
+
+<div class="footer-trust">
+  <div class="footer-trust-inner">
+    <div class="ft-item">🔒 <b>Paiements sécurisés</b> par Stripe</div>
+    <div class="ft-item">🇫🇷 <b>Contenu conçu en France</b>, programme officiel DCG</div>
+    <div class="ft-item">↩️ <b>Sans engagement</b>, résiliable en un clic</div>
   </div>
 </div>
 
-<section class="section section-light">
-  <div class="sec-header"><div class="sec-eyebrow">Pourquoi Comptaflow</div><div class="sec-title">Pensé pour les étudiants DCG</div><div class="sec-sub">Une méthode qui va à l'essentiel, sans superflu</div></div>
-  <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px">
-    <div style="background:#fff;border:1px solid #DBEAFE;border-radius:14px;padding:24px"><div style="font-size:26px;margin-bottom:10px">🎯</div><div style="font-size:15px;font-weight:600;color:#0F172A;margin-bottom:6px">Droit au but</div><div style="font-size:13px;color:#64748B;line-height:1.6">Des fiches synthétiques qui vont à l'essentiel du programme officiel, sans blabla.</div></div>
-    <div style="background:#fff;border:1px solid #DBEAFE;border-radius:14px;padding:24px"><div style="font-size:26px;margin-bottom:10px">🔁</div><div style="font-size:15px;font-weight:600;color:#0F172A;margin-bottom:6px">Apprendre en pratiquant</div><div style="font-size:13px;color:#64748B;line-height:1.6">Exercices interactifs et comptes en T corrigés : tu t'entraînes vraiment, tu ne fais pas que lire.</div></div>
-    <div style="background:#fff;border:1px solid #DBEAFE;border-radius:14px;padding:24px"><div style="font-size:26px;margin-bottom:10px">💸</div><div style="font-size:15px;font-weight:600;color:#0F172A;margin-bottom:6px">Prix étudiant</div><div style="font-size:13px;color:#64748B;line-height:1.6">Un accès gratuit pour commencer, et des tarifs pensés pour un budget étudiant.</div></div>
-  </div>
-</section>
-
-<section class="section section-white" id="faq">
-  <div class="sec-header"><div class="sec-eyebrow">FAQ</div><div class="sec-title">Questions fréquentes</div></div>
-  <div style="max-width:680px;margin:0 auto">
-    <div style="background:#F8FAFC;border:1px solid #DBEAFE;border-radius:12px;padding:18px 20px;margin-bottom:10px"><div style="font-size:14px;font-weight:600;color:#0F172A;margin-bottom:6px">Comptaflow couvre-t-il tout le programme DCG ?</div><div style="font-size:13px;color:#64748B;line-height:1.6">On démarre avec l'UE9 (Comptabilité), puis on enrichit progressivement les 13 UE. Chaque UE suit le programme officiel.</div></div>
-    <div style="background:#F8FAFC;border:1px solid #DBEAFE;border-radius:12px;padding:18px 20px;margin-bottom:10px"><div style="font-size:14px;font-weight:600;color:#0F172A;margin-bottom:6px">Puis-je essayer avant de payer ?</div><div style="font-size:13px;color:#64748B;line-height:1.6">Oui ! Une partie du contenu est accessible gratuitement, sans carte bancaire. Tu testes, puis tu décides.</div></div>
-    <div style="background:#F8FAFC;border:1px solid #DBEAFE;border-radius:12px;padding:18px 20px;margin-bottom:10px"><div style="font-size:14px;font-weight:600;color:#0F172A;margin-bottom:6px">L'abonnement est-il sans engagement ?</div><div style="font-size:13px;color:#64748B;line-height:1.6">Totalement. Tu résilies quand tu veux en un clic, sans justification ni frais.</div></div>
-    <div style="background:#F8FAFC;border:1px solid #DBEAFE;border-radius:12px;padding:18px 20px"><div style="font-size:14px;font-weight:600;color:#0F172A;margin-bottom:6px">Sur quels appareils puis-je réviser ?</div><div style="font-size:13px;color:#64748B;line-height:1.6">Sur tout : ordinateur, tablette et smartphone. Tu révises où tu veux, quand tu veux.</div></div>
-  </div>
-</section>
-  <section class="section section-white">
-  <div style="max-width:560px;margin:0 auto;text-align:center;background:#F8FAFC;border:1px solid #DBEAFE;border-radius:16px;padding:36px 32px">
-    <div style="font-size:22px;font-weight:700;color:#0F172A;margin-bottom:8px">Tu n'as pas trouvé ta réponse ?</div>
-    <div style="font-size:14px;color:#64748B;margin-bottom:24px">Pose-nous ta question, on te répond vite.</div>
-<form id="contact-form" onsubmit="envoyerContact(event)" style="display:flex;flex-direction:column;gap:12px;text-align:left">
-      <input type="text" name="name" placeholder="Ton prénom" required style="padding:12px 14px;border:1px solid #DBEAFE;border-radius:10px;font-size:14px;outline:none">
-      <input type="email" name="email" placeholder="Ton email" required style="padding:12px 14px;border:1px solid #DBEAFE;border-radius:10px;font-size:14px;outline:none">
-      <textarea name="message" placeholder="Ta question..." required rows="4" style="padding:12px 14px;border:1px solid #DBEAFE;border-radius:10px;font-size:14px;outline:none;resize:vertical;font-family:inherit"></textarea>
-      <button type="submit" id="contact-btn" style="background:#3B82F6;color:#fff;border:none;padding:13px;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer">Envoyer ma question</button>
-      <div id="contact-status" style="font-size:14px;text-align:center"></div>
-    </form>   
-</section>
-  <footer>
+<footer>
   <div class="footer-grid">
-    <div><div class="footer-brand"><span>◆</span> Comptaflow</div><div class="footer-tagline">La plateforme des étudiants DCG qui veulent comprendre, pas juste mémoriser.</div><div class="footer-stripe">🔒 Paiements sécurisés par Stripe</div></div>
+    <div>
+      <div class="footer-brand"><span>◆</span> Comptaflow</div>
+      <div class="footer-tagline">La plateforme des étudiants DCG qui veulent comprendre, pas juste mémoriser.</div>
+      <div class="footer-social"><a href="#">📸</a><a href="#">🎵</a></div>
+    </div>
     <div><div class="f-col-title">Cours</div><div class="f-links"><a href="/cours/ue9.html">UE9 — Comptabilité</a><a href="/tarifs.html">UE4 — Droit fiscal</a><a href="/tarifs.html">UE11 — Contrôle de gestion</a><a href="/cours/ue9.html">Toutes les UE →</a></div></div>
     <div><div class="f-col-title">Plateforme</div><div class="f-links"><a href="/tarifs.html">Tarifs</a><a href="/a-propos.html">À propos</a><a href="#faq">FAQ</a><a href="/a-propos.html">Contact</a></div></div>
     <div><div class="f-col-title">Légal</div><div class="f-links"><a href="/legal.html">CGV</a><a href="/legal.html">Mentions légales</a><a href="/legal.html">Confidentialité</a></div></div>
   </div>
-  <div class="footer-bottom"><span class="footer-copy">© 2026 Comptaflow</span><div class="footer-legal"><a href="/legal.html">CGV</a><a href="/legal.html">Mentions légales</a></div></div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Comptaflow</span>
+    <div class="pay-icons"><span>Visa</span><span>Mastercard</span><span>Apple Pay</span></div>
+    <div class="footer-legal"><a href="/legal.html">CGV</a><a href="/legal.html">Mentions légales</a></div>
+  </div>
 </footer>
+
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
 var heroSound=true,heroAudioCtx=null;
 function getHeroCtx(){if(!heroAudioCtx)heroAudioCtx=new(window.AudioContext||window.webkitAudioContext)();return heroAudioCtx;}
 function playHeroClick(){if(!heroSound)return;try{var ctx=getHeroCtx(),buf=ctx.createBuffer(1,ctx.sampleRate*0.04,ctx.sampleRate),data=buf.getChannelData(0);for(var i=0;i<data.length;i++)data[i]=(Math.random()*2-1)*Math.exp(-i/(ctx.sampleRate*0.008));var src=ctx.createBufferSource();src.buffer=buf;var gain=ctx.createGain();gain.gain.setValueAtTime(0.18,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+0.04);var filter=ctx.createBiquadFilter();filter.type='bandpass';filter.frequency.value=3200;filter.Q.value=0.8;src.connect(filter);filter.connect(gain);gain.connect(ctx.destination);src.start();}catch(e){}}
-function toggleHeroSound(){heroSound=!heroSound;document.getElementById('hero-sound-btn').textContent=heroSound?'🔊 Son':'🔇 Son';}
+function toggleHeroSound(){heroSound=!heroSound;document.getElementById('hero-sound-btn').textContent=heroSound?'🔊':'🔇';}
 var heroRows=[{section:'2154 — Matériel industriel',label:'Acquisition',debit:'12 000',credit:''},{section:'44562 — TVA déductible',label:'TVA 20 %',debit:'2 400',credit:''},{section:'404 — Fournisseurs d\'immo.',label:'Total TTC',debit:'',credit:'14 400'}];
 function startHeroAnim(){
   var body=document.getElementById('hero-ct-body');body.innerHTML='';
   heroRows.forEach(function(r,i){
     var sTr=document.createElement('tr'),sTd=document.createElement('td');
-    sTd.colSpan=2;sTd.style.cssText='background:#EFF6FF;color:#0D9488;font-size:11px;font-weight:600;padding:6px 16px;border-top:1px solid #DBEAFE;opacity:0;transition:opacity 0.3s ease';
+    sTd.colSpan=2;sTd.style.cssText='background:#F2FFF6;color:#1B6669;font-size:10px;font-weight:600;padding:5px 10px;border-top:1px solid #DCEEE2;opacity:0;transition:opacity 0.3s ease;font-family:IBM Plex Mono, monospace';
     sTd.textContent=r.section;sTr.appendChild(sTd);
     var dTr=document.createElement('tr'),lTd=document.createElement('td'),aTd=document.createElement('td');
-    lTd.style.cssText='padding:9px 16px;font-size:13px;color:#1E293B;border-top:1px solid #F1F5F9;opacity:0;transition:opacity 0.3s ease';
+    lTd.style.cssText='padding:7px 10px;font-size:11px;color:#021225;border-top:1px solid #F0F0F0;opacity:0;transition:opacity 0.3s ease';
     lTd.textContent=r.label;
-    aTd.style.cssText='padding:9px 16px;font-size:13px;font-weight:500;text-align:right;border-top:1px solid #F1F5F9;font-family:monospace;opacity:0;transition:opacity 0.3s ease;color:'+(r.debit?'#2563EB':'#0D9488');
-    aTd.id='hamt'+i;dTr.appendChild(lTd);dTr.appendChild(aTd);
+    aTd.style.cssText='padding:7px 10px;font-size:11px;font-weight:600;text-align:right;border-top:1px solid #F0F0F0;font-family:IBM Plex Mono, monospace;opacity:0;transition:opacity 0.3s ease;color:'+(r.debit?'#1B6669':'#106E85');
+    dTr.appendChild(lTd);dTr.appendChild(aTd);
     body.appendChild(sTr);body.appendChild(dTr);
     setTimeout(function(st,lt,at,rv){return function(){
       st.style.opacity='1';
@@ -330,13 +572,13 @@ function startHeroAnim(){
   });
 }
 const wave=document.getElementById('wave');
-[4,7,12,16,20,14,18,22,16,10,14,18,12,8,10,14,20,16,10,6].forEach(h=>{const b=document.createElement('div');b.className='wv';b.style.height=h+'px';wave.appendChild(b);});
+if(wave){[4,7,12,16,20,14,18,22,16,10,14,18,12,8,10,14,20,16,10,6].forEach(h=>{const b=document.createElement('div');b.className='wv';b.style.height=h+'px';wave.appendChild(b);});}
 startHeroAnim();
 </script>
-<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:#3B82F6;color:#fff;border:none;font-size:20px;cursor:pointer;box-shadow:0 4px 12px rgba(59,130,246,.4);display:none;z-index:200">↑</button>
 <script>
 window.addEventListener('scroll',function(){
   document.getElementById('back-to-top').style.display=window.scrollY>400?'block':'none';
+  document.getElementById('nav-solid').classList.toggle('show', window.scrollY>520);
 });
 </script>
 <script>
@@ -363,13 +605,13 @@ function envoyerContact(e){
       window.location.href='/merci.html';
     }else{
       status.textContent='Une erreur est survenue, réessaie.';
-      status.style.color='#DC2626';
+      status.style.color='#021225';
       btn.textContent='Envoyer ma question';
       btn.disabled=false;
     }
   }).catch(function(){
     status.textContent='Erreur de connexion, réessaie.';
-    status.style.color='#DC2626';
+    status.style.color='#021225';
     btn.textContent='Envoyer ma question';
     btn.disabled=false;
   });
