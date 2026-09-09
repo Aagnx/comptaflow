@@ -144,6 +144,16 @@
       }
     },
     {
+      "titre": "Les comptes annuels",
+      "formule": "Comptes annuels = Bilan + Compte de résultat + Annexe",
+      "contenu": "Les comptes annuels forment un tout indissociable. Le bilan présente le patrimoine, le compte de résultat l'activité de l'exercice, et l'annexe complète et commente les deux précédents."
+    },
+    {
+      "titre": "Régularité, sincérité et image fidèle",
+      "reference": "Art. L123-23 du Code de commerce",
+      "contenu": "La comptabilité doit être régulière et sincère et donner une image fidèle du patrimoine et de l'activité de l'entreprise. Dès lors qu'elle est tenue selon les normes applicables, elle est présumée sincère et peut servir de preuve en matière de droit commercial."
+    },
+    {
       "titre": "Le Plan comptable général (PCG)",
       "reference": "Règlement ANC 2014-03, modifié par 2022-06",
       "contenu": "Le PCG présente les règles et principes d'établissement et de présentation des comptes. Il précise : les objets et principes de la comptabilité ; la définition des actifs, passifs, produits et charges ; les règles de comptabilisation et d'évaluation ; la tenue, la structure et le fonctionnement des comptes ; la définition des documents de synthèse. Il organise enfin le plan des comptes en classes. À jour : la réforme du PCG (règlement ANC 2022-06, applicable depuis le 1ᵉʳ janvier 2025) a modernisé la nomenclature et la présentation des états financiers, mais les 7 classes et les principes comptables restent inchangés."
@@ -345,6 +355,22 @@
     {
       "terme": "Cadre conceptuel",
       "definition": "Ensemble de principes fondateurs sous-tendant les normes (notamment celui de l'IASB pour les IFRS)."
+    },
+    {
+      "terme": "Comptes annuels",
+      "definition": "Ensemble indissociable : bilan + compte de résultat + annexe."
+    },
+    {
+      "terme": "Image fidèle",
+      "definition": "Représentation la plus proche possible de la réalité du patrimoine, de la situation financière et du résultat de l'entité."
+    },
+    {
+      "terme": "Régularité",
+      "definition": "Conformité de la comptabilité aux règles et procédures en vigueur."
+    },
+    {
+      "terme": "Sincérité",
+      "definition": "Application de bonne foi des règles, en fonction de la connaissance que les responsables ont de la réalité."
     }
   ],
   "questionsTypes": [
@@ -357,7 +383,8 @@
     "Peut-on renoncer à amortir pour éviter un résultat négatif ? Justifier.",
     "Distinguer la comptabilité de type continental et de type anglo-saxon.",
     "Présenter le rôle et les missions de l'ANC.",
-    "Citer les 7 classes de comptes du PCG."
+    "Citer les 7 classes de comptes du PCG.",
+    "Quels documents composent les comptes annuels ?"
   ],
   "annales": {
     "note": "Ce chapitre est rarement un dossier entier, mais ses notions — surtout les principes comptables — reviennent en questions rédactionnelles réparties dans les dossiers. Thème présent dans environ 77 % des sujets. Ajoute ici tes propres annales au fil des révisions (année + question + corrigé).",
