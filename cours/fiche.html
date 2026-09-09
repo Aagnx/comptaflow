@@ -66,14 +66,48 @@ return `<div class="exemple-box"><span class="exemple-tag">Exemple</span><p>${es
 }
 
 // ---- Découpage en parties / sous-parties (facultatif, rétrocompatible) ----
+// ---- Dégradés par partie (mêmes tons que la grille UE de la page d'accueil) ----
+const PARTIE_GRADIENTS = [
+['#238689', '#25C5E9'],
+['#021225', '#1B6669'],
+['#1B6669', '#238689'],
+['#106E85', '#25C5E9'],
+['#021225', '#106E85'],
+['#238689', '#1B6669'],
+['#021225', '#238689']
+];
+function partieColors(num) {
+const i = (parseInt(num, 10) - 1 + PARTIE_GRADIENTS.length) % PARTIE_GRADIENTS.length;
+return PARTIE_GRADIENTS[i] || PARTIE_GRADIENTS[0];
+}
+function renderPartieMarker(p) {
+if (!p) return '';
+const [a, b] = partieColors(p.num);
+return `<div class="partie-marker" id="${esc(p.ancre || '')}">
+<span class="partie-num" style="background:linear-gradient(135deg, ${a}, ${b})">${esc(p.num)}</span>
+<h2 class="partie-titre">${esc(p.titre)}</h2>
+</div>`;
+}
+function sommaireLookup(sommaire) {
+const map = {};
+(sommaire || []).forEach(p => {
+if (p.ancre) map[p.ancre] = p;
+(p.sousParties || []).forEach(sp => { if (sp.ancre) map[sp.ancre] = sp; });
+});
+return map;
+}
+
 function renderNotionsWithDividers(list) {
 let html = '';
 let lastPartie = null;
 let lastSous = null;
+let currentColorA = null;
 list.forEach(n => {
 if (n.partie && n.partie.num !== lastPartie) {
+const [a, b] = partieColors(n.partie.num);
+currentColorA = a;
 html += `<div class="partie-marker" id="${esc(n.partie.ancre || '')}">
-<span class="partie-num">${esc(n.partie.num)}</span>
+<span class="partie-num" style="background:linear-gradient(135deg, ${a}, ${b})">${esc(n.partie.num)}</span>
 <h2 class="partie-titre">${esc(n.partie.titre)}</h2>
 </div>`;
 lastPartie = n.partie.num;
@@ -81,7 +115,7 @@ lastSous = null;
 }
 if (n.sousPartie && n.sousPartie.lettre !== lastSous) {
 html += `<div class="sous-marker" id="${esc(n.sousPartie.ancre || '')}">
-<span class="sous-lettre">${esc(n.sousPartie.lettre)}</span>
+<span class="sous-lettre" style="border-color:${currentColorA};color:${currentColorA}">${esc(n.sousPartie.lettre)}</span>
 <h3 class="sous-titre">${esc(n.sousPartie.titre)}</h3>
 </div>`;
 lastSous = n.sousPartie.lettre;
@@ -94,11 +128,13 @@ return html;
 // ---- Sommaire cliquable (facultatif) ----
 function renderSommaire(s) {
 const items = s.map(part => {
+const [a, b] = partieColors(part.num);
+const dot = `<span class="sommaire-dot" style="background:linear-gradient(135deg, ${a}, ${b})"></span>`;
 const subs = part.sousParties
 ? `<ul class="sommaire-sub">${part.sousParties.map(sp =>
 `<li><a href="#${esc(sp.ancre)}">${esc(sp.lettre)}. ${esc(sp.titre)}</a></li>`).join('')}</ul>`
 : '';
-const label = `${esc(part.num)}. ${esc(part.titre)}`;
+const label = `${dot}${esc(part.num)}. ${esc(part.titre)}`;
 const head = part.ancre ? `<a href="#${esc(part.ancre)}">${label}</a>` : `<span>${label}</span>`;
 return `<li class="sommaire-item">${head}${subs}</li>`;
 }).join('');
@@ -251,10 +287,10 @@ return `<ul class="timeline">${items.map(([y, e]) =>
 ).join('')}</ul>`;
 }
 
-function renderGauge(u) {
+function renderGauge(u, partieInfo) {
 const pct = Math.max(0, Math.min(100, Number(u.pourcentage) || 0));
 const themes = (u.themesRecurrents || []).map(t => `<li>${esc(t)}</li>`).join('');
-return `<section class="section" id="sec-utilite">
+return `${renderPartieMarker(partieInfo)}<section class="section">
 ${sectionHead('t-amber', 'Examen', "Utilité à l'examen")}
 <div class="card gauge-card">
 <div class="gauge-top">
@@ -269,25 +305,25 @@ ${themes ? `<div class="themes"><h4>Thèmes les plus fréquents en UE9</h4><ul>$
 </section>`;
 }
 
-function renderVocab(list) {
+function renderVocab(list, partieInfo) {
 const rows = list.map(v =>
 `<div class="row"><dt>${esc(v.terme)}</dt><dd>${esc(v.definition)}</dd></div>`
 ).join('');
-return `<section class="section" id="sec-vocab">
+return `${renderPartieMarker(partieInfo)}<section class="section">
 ${sectionHead('t-teal', 'Lexique', 'Vocabulaire du chapitre')}
 <dl class="vocab">${rows}</dl>
 </section>`;
 }
 
-function renderQuestions(list) {
+function renderQuestions(list, partieInfo) {
 const items = list.map(q => `<li>${esc(q)}</li>`).join('');
-return `<section class="section" id="sec-questions">
+return `${renderPartieMarker(partieInfo)}<section class="section">
 ${sectionHead('t-violet', 'À réviser', "Questions types qui peuvent tomber")}
 <ol class="qlist">${items}</ol>
 </section>`;
 }
 
-function renderAnnales(a) {
+function renderAnnales(a, partieInfo) {
 let inner = '';
 if (a.note) inner += `<p class="annales-note">${esc(a.note)}</p>`;
 if (a.entrees && a.entrees.length) {
@@ -303,7 +339,7 @@ if (a.questionsRedactionnellesRecurrentes && a.questionsRedactionnellesRecurrent
 inner += `<div class="themes"><h4>Questions rédactionnelles récurrentes</h4>
 <ul class="recur">${a.questionsRedactionnellesRecurrentes.map(q => `<li>${esc(q)}</li>`).join('')}</ul></div>`;
 }
-return `<section class="section" id="sec-annales">
+return `${renderPartieMarker(partieInfo)}<section class="section">
 ${sectionHead('t-amber', 'Annales', "Annales officielles liées au chapitre")}
 <div class="card annales-card">${inner}</div>
 </section>`;
@@ -333,10 +369,11 @@ ${sectionHead('t-blue', 'Cours', 'Notions clés du chapitre')}
 ${renderNotionsWithDividers(f.notionsCles)}
 </section>`;
 }
-if (f.utilite) html += renderGauge(f.utilite);
-if (f.vocabulaire && f.vocabulaire.length) html += renderVocab(f.vocabulaire);
-if (f.questionsTypes && f.questionsTypes.length) html += renderQuestions(f.questionsTypes);
-if (f.annales) html += renderAnnales(f.annales);
+const sMap = f.sommaire ? sommaireLookup(f.sommaire) : {};
+if (f.utilite) html += renderGauge(f.utilite, sMap['sec-utilite']);
+if (f.vocabulaire && f.vocabulaire.length) html += renderVocab(f.vocabulaire, sMap['sec-vocab']);
+if (f.questionsTypes && f.questionsTypes.length) html += renderQuestions(f.questionsTypes, sMap['sec-questions']);
+if (f.annales) html += renderAnnales(f.annales, sMap['sec-annales']);
 
 app.innerHTML = html;
 document.title = `Fiche ${f.numero} — ${f.titre} · Comptaflow`;
