@@ -182,20 +182,31 @@ const cx = 230, cy = 230, R = 168;
 const n = v.satellites.length;
 const nodes = v.satellites.map((s, i) => {
 const angle = (2 * Math.PI / n) * i - Math.PI / 2;
-return { x: cx + R * Math.cos(angle), y: cy + R * Math.sin(angle), label: s };
+const [nodeColor] = partieColors(i + 1);
+return { x: cx + R * Math.cos(angle), y: cy + R * Math.sin(angle), label: s, color: nodeColor };
 });
 const lines = nodes.map(p =>
-`<line x1="${cx}" y1="${cy}" x2="${p.x.toFixed(1)}" y2="${p.y.toFixed(1)}" class="etoile-line"/>`
+`<line x1="${cx}" y1="${cy}" x2="${p.x.toFixed(1)}" y2="${p.y.toFixed(1)}" class="etoile-line" style="stroke:url(#etoileLineGrad)"/>`
 ).join('');
 const boxes = nodes.map(p =>
 `<foreignObject x="${(p.x - 63).toFixed(1)}" y="${(p.y - 25).toFixed(1)}" width="126" height="50">
-<div xmlns="http://www.w3.org/1999/xhtml" class="etoile-node">${esc(p.label)}</div>
+<div xmlns="http://www.w3.org/1999/xhtml" class="etoile-node" style="border-top-color:${p.color}">${esc(p.label)}</div>
 </foreignObject>`
 ).join('');
 return `<div class="etoile-wrap"><svg viewBox="0 0 460 460" class="etoile-svg" role="img" aria-label="Schéma des relations de l'entreprise avec ses partenaires">
+<defs>
+<linearGradient id="etoileLineGrad" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#021225" stop-opacity=".5"/>
+<stop offset="100%" stop-color="#25C5E9" stop-opacity=".5"/>
+</linearGradient>
+<linearGradient id="etoileCenterGrad" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0%" stop-color="#021225"/>
+<stop offset="100%" stop-color="#1B6669"/>
+</linearGradient>
+</defs>
 ${lines}
 ${boxes}
-<circle cx="${cx}" cy="${cy}" r="58" class="etoile-center-circle"/>
+<circle cx="${cx}" cy="${cy}" r="58" class="etoile-center-circle" style="fill:url(#etoileCenterGrad)"/>
 <foreignObject x="${cx - 58}" y="${cy - 30}" width="116" height="60">
 <div xmlns="http://www.w3.org/1999/xhtml" class="etoile-center-label">${esc(v.centre)}</div>
 </foreignObject>
