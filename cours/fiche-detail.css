@@ -69,10 +69,15 @@ body {
   margin: 0;
   font-family: var(--body);
   color: var(--ink);
-  background:
-    radial-gradient(1200px 480px at 100% -10%, rgba(37, 197, 233, .05), transparent 60%),
-    radial-gradient(1000px 420px at -10% 0%, rgba(202, 255, 222, .55), transparent 55%),
-    var(--bg);
+  background-color: #F7FBFA;
+  background-image:
+    radial-gradient(900px 520px at 94% -4%, rgba(37, 197, 233, .10), transparent 60%),
+    radial-gradient(760px 520px at 2% 22%, rgba(202, 255, 222, .55), transparent 55%),
+    radial-gradient(820px 480px at 90% 92%, rgba(35, 134, 137, .07), transparent 55%),
+    radial-gradient(circle, rgba(2, 18, 37, .05) 1px, transparent 1.6px);
+  background-size: auto, auto, auto, 24px 24px;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  background-attachment: fixed, fixed, fixed, fixed;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -358,6 +363,7 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
   .flux-arrow { transform: rotate(90deg); align-self: center; }
   .metier-step { margin-left: calc(var(--i) * 9px); }
   .pyr-axis { font-size: .6rem; }
+  body { background-attachment: scroll, scroll, scroll, scroll; }
 }
 
 /* ---- Sommaire cliquable ---- */
@@ -381,6 +387,18 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 .sous-marker { display: flex; align-items: center; gap: 10px; margin: 22px 0 10px; scroll-margin-top: 90px; }
 .sous-lettre { flex-shrink: 0; width: 25px; height: 25px; border-radius: 7px; border: 1.8px solid var(--blue); color: var(--blue-ink); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-weight: 700; font-size: .78rem; background: #fff; }
 .sous-titre { font-family: var(--display); font-size: .98rem; font-weight: 600; color: var(--ink); margin: 0; }
+
+/* ---- Zone teintée par partie (fond dégradé très léger + bord d'accent) ---- */
+.partie-zone {
+  position: relative;
+  margin: 0 -14px 6px;
+  padding: 2px 14px 18px;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(var(--zc), .09), rgba(var(--zc), .025) 200px, transparent 340px);
+}
+.partie-zone .partie-marker { border-top: none; padding-top: 8px; margin-top: 0; }
+.partie-zone .notion, .partie-zone .card { box-shadow: 0 1px 2px rgba(2,18,37,.04), 0 8px 20px rgba(2,18,37,.05); }
 
 /* ---- Liste à tirets avec libellé gras coloré ---- */
 .liste-roles { list-style: none; margin: 10px 0 4px; padding: 0; display: flex; flex-direction: column; gap: 9px; }
