@@ -359,3 +359,42 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
   .metier-step { margin-left: calc(var(--i) * 9px); }
   .pyr-axis { font-size: .6rem; }
 }
+
+/* ---- Sommaire cliquable ---- */
+.sommaire { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 24px; margin: 20px 0 30px; scroll-margin-top: 90px; }
+.sommaire-title { font-family: var(--mono); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+.sommaire-list { list-style: none; margin: 0; padding: 0; }
+.sommaire-item { margin-bottom: 9px; font-size: .93rem; }
+.sommaire-item > a, .sommaire-item > span { font-weight: 700; color: var(--ink); text-decoration: none; }
+.sommaire-item > a:hover { color: var(--blue); }
+.sommaire-sub { list-style: none; margin: 7px 0 2px 26px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.sommaire-sub li a { font-size: .87rem; color: var(--ink-soft); text-decoration: none; }
+.sommaire-sub li a:hover { color: var(--blue); text-decoration: underline; }
+
+/* ---- Découpage en parties / sous-parties dans le corps de la fiche ---- */
+.partie-marker { display: flex; align-items: center; gap: 13px; margin: 34px 0 16px; padding-top: 22px; border-top: 2px solid var(--line); scroll-margin-top: 90px; }
+.partie-marker:first-of-type { border-top: none; padding-top: 0; margin-top: 4px; }
+.partie-num { flex-shrink: 0; width: 32px; height: 32px; border-radius: 8px; background: var(--blue); color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-weight: 700; font-size: .92rem; }
+.partie-titre { font-family: var(--display); font-size: 1.12rem; font-weight: 700; color: var(--ink); margin: 0; }
+.sous-marker { display: flex; align-items: center; gap: 10px; margin: 22px 0 10px; scroll-margin-top: 90px; }
+.sous-lettre { flex-shrink: 0; width: 25px; height: 25px; border-radius: 6px; border: 1.6px solid var(--blue); color: var(--blue-ink); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-weight: 700; font-size: .78rem; }
+.sous-titre { font-family: var(--display); font-size: .98rem; font-weight: 600; color: var(--ink); margin: 0; }
+
+/* ---- Liste à tirets avec libellé gras coloré ---- */
+.liste-roles { list-style: none; margin: 10px 0 4px; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+.liste-roles li { display: flex; gap: 9px; font-size: .95rem; line-height: 1.55; color: var(--ink); }
+.liste-roles li::before { content: "—"; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+.role-label { font-weight: 700; color: var(--blue-ink); }
+
+/* ---- Encadré exemple ---- */
+.exemple-box { margin-top: 14px; background: #EAF6F5; border-left: 3px solid var(--blue); border-radius: 8px; padding: 12px 14px; }
+.exemple-tag { display: block; font-family: var(--mono); font-size: .65rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--blue-ink); margin-bottom: 5px; }
+.exemple-box p { margin: 0; font-size: .9rem; color: var(--ink-soft); line-height: 1.6; }
+
+/* ---- Schéma en étoile (entreprise + parties prenantes) ---- */
+.etoile-wrap { display: flex; justify-content: center; margin: 14px 0 6px; }
+.etoile-svg { width: 100%; max-width: 430px; height: auto; overflow: visible; }
+.etoile-line { stroke: var(--line); stroke-width: 1.6; }
+.etoile-node { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; background: #fff; border: 1.4px solid var(--line); border-radius: 10px; font-size: .72rem; font-weight: 600; color: var(--ink); padding: 4px 6px; box-shadow: 0 2px 6px rgba(2,18,37,.06); }
+.etoile-center-circle { fill: var(--violet); }
+.etoile-center-label { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: .8rem; text-align: center; font-family: var(--display); }
