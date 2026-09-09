@@ -48,10 +48,64 @@ if (n.reference) inner += `<span class="ref">${esc(n.reference)}</span>`;
 inner += `<h3>${esc(n.titre)}</h3>`;
 if (n.formule) inner += `<div class="formule">${esc(n.formule)}</div>`;
 if (n.contenu) inner += `<p>${esc(n.contenu)}</p>`;
+if (n.liste) inner += renderListe(n.liste);
 if (n.tableau) inner += renderTable(n.tableau);
 if (n.timeline) inner += renderTimeline(n.timeline);
 if (n.visuel) inner += renderVisuel(n.visuel);
+if (n.exemple) inner += renderExemple(n.exemple);
 return `<div class="notion">${inner}</div>`;
+}
+
+function renderListe(items) {
+const rows = items.map(it => `<li><span class="role-label">${esc(it.label)}</span> — ${esc(it.texte)}</li>`).join('');
+return `<ul class="liste-roles">${rows}</ul>`;
+}
+
+function renderExemple(texte) {
+return `<div class="exemple-box"><span class="exemple-tag">Exemple</span><p>${esc(texte)}</p></div>`;
+}
+
+// ---- Découpage en parties / sous-parties (facultatif, rétrocompatible) ----
+function renderNotionsWithDividers(list) {
+let html = '';
+let lastPartie = null;
+let lastSous = null;
+list.forEach(n => {
+if (n.partie && n.partie.num !== lastPartie) {
+html += `<div class="partie-marker" id="${esc(n.partie.ancre || '')}">
+<span class="partie-num">${esc(n.partie.num)}</span>
+<h2 class="partie-titre">${esc(n.partie.titre)}</h2>
+</div>`;
+lastPartie = n.partie.num;
+lastSous = null;
+}
+if (n.sousPartie && n.sousPartie.lettre !== lastSous) {
+html += `<div class="sous-marker" id="${esc(n.sousPartie.ancre || '')}">
+<span class="sous-lettre">${esc(n.sousPartie.lettre)}</span>
+<h3 class="sous-titre">${esc(n.sousPartie.titre)}</h3>
+</div>`;
+lastSous = n.sousPartie.lettre;
+}
+html += renderNotion(n);
+});
+return html;
+}
+
+// ---- Sommaire cliquable (facultatif) ----
+function renderSommaire(s) {
+const items = s.map(part => {
+const subs = part.sousParties
+? `<ul class="sommaire-sub">${part.sousParties.map(sp =>
+`<li><a href="#${esc(sp.ancre)}">${esc(sp.lettre)}. ${esc(sp.titre)}</a></li>`).join('')}</ul>`
+: '';
+const label = `${esc(part.num)}. ${esc(part.titre)}`;
+const head = part.ancre ? `<a href="#${esc(part.ancre)}">${label}</a>` : `<span>${label}</span>`;
+return `<li class="sommaire-item">${head}${subs}</li>`;
+}).join('');
+return `<nav class="sommaire" aria-label="Sommaire de la fiche">
+<div class="sommaire-title">Sommaire</div>
+<ol class="sommaire-list">${items}</ol>
+</nav>`;
 }
 
 // ---- Schémas visuels ----
@@ -61,8 +115,34 @@ case 'flux': return renderFlux(v);
 case 'pyramide': return renderPyramide(v);
 case 'metiers': return renderMetiers(v);
 case 'treso-valeur': return renderTresoValeur();
+case 'etoile': return renderEtoile(v);
 default: return '';
 }
+}
+
+function renderEtoile(v) {
+const cx = 230, cy = 230, R = 168;
+const n = v.satellites.length;
+const nodes = v.satellites.map((s, i) => {
+const angle = (2 * Math.PI / n) * i - Math.PI / 2;
+return { x: cx + R * Math.cos(angle), y: cy + R * Math.sin(angle), label: s };
+});
+const lines = nodes.map(p =>
+`<line x1="${cx}" y1="${cy}" x2="${p.x.toFixed(1)}" y2="${p.y.toFixed(1)}" class="etoile-line"/>`
+).join('');
+const boxes = nodes.map(p =>
+`<foreignObject x="${(p.x - 63).toFixed(1)}" y="${(p.y - 25).toFixed(1)}" width="126" height="50">
+<div xmlns="http://www.w3.org/1999/xhtml" class="etoile-node">${esc(p.label)}</div>
+</foreignObject>`
+).join('');
+return `<div class="etoile-wrap"><svg viewBox="0 0 460 460" class="etoile-svg" role="img" aria-label="Schéma des relations de l'entreprise avec ses partenaires">
+${lines}
+${boxes}
+<circle cx="${cx}" cy="${cy}" r="58" class="etoile-center-circle"/>
+<foreignObject x="${cx - 58}" y="${cy - 30}" width="116" height="60">
+<div xmlns="http://www.w3.org/1999/xhtml" class="etoile-center-label">${esc(v.centre)}</div>
+</foreignObject>
+</svg></div>`;
 }
 
 function renderFlux(v) {
@@ -174,7 +254,7 @@ return `<ul class="timeline">${items.map(([y, e]) =>
 function renderGauge(u) {
 const pct = Math.max(0, Math.min(100, Number(u.pourcentage) || 0));
 const themes = (u.themesRecurrents || []).map(t => `<li>${esc(t)}</li>`).join('');
-return `<section class="section">
+return `<section class="section" id="sec-utilite">
 ${sectionHead('t-amber', 'Examen', "Utilité à l'examen")}
 <div class="card gauge-card">
 <div class="gauge-top">
@@ -193,7 +273,7 @@ function renderVocab(list) {
 const rows = list.map(v =>
 `<div class="row"><dt>${esc(v.terme)}</dt><dd>${esc(v.definition)}</dd></div>`
 ).join('');
-return `<section class="section">
+return `<section class="section" id="sec-vocab">
 ${sectionHead('t-teal', 'Lexique', 'Vocabulaire du chapitre')}
 <dl class="vocab">${rows}</dl>
 </section>`;
@@ -201,7 +281,7 @@ ${sectionHead('t-teal', 'Lexique', 'Vocabulaire du chapitre')}
 
 function renderQuestions(list) {
 const items = list.map(q => `<li>${esc(q)}</li>`).join('');
-return `<section class="section">
+return `<section class="section" id="sec-questions">
 ${sectionHead('t-violet', 'À réviser', "Questions types qui peuvent tomber")}
 <ol class="qlist">${items}</ol>
 </section>`;
@@ -223,7 +303,7 @@ if (a.questionsRedactionnellesRecurrentes && a.questionsRedactionnellesRecurrent
 inner += `<div class="themes"><h4>Questions rédactionnelles récurrentes</h4>
 <ul class="recur">${a.questionsRedactionnellesRecurrentes.map(q => `<li>${esc(q)}</li>`).join('')}</ul></div>`;
 }
-return `<section class="section">
+return `<section class="section" id="sec-annales">
 ${sectionHead('t-amber', 'Annales', "Annales officielles liées au chapitre")}
 <div class="card annales-card">${inner}</div>
 </section>`;
@@ -245,10 +325,12 @@ Exercices d'application du chapitre <span class="arrow">→</span>
 
 if (f.formatEpreuve) html += `<p class="format-note">${esc(f.formatEpreuve)}</p>`;
 
+if (f.sommaire) html += renderSommaire(f.sommaire);
+
 if (f.notionsCles && f.notionsCles.length) {
 html += `<section class="section">
 ${sectionHead('t-blue', 'Cours', 'Notions clés du chapitre')}
-${f.notionsCles.map(renderNotion).join('')}
+${renderNotionsWithDividers(f.notionsCles)}
 </section>`;
 }
 if (f.utilite) html += renderGauge(f.utilite);
