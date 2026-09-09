@@ -69,15 +69,7 @@ body {
   margin: 0;
   font-family: var(--body);
   color: var(--ink);
-  background-color: #F7FBFA;
-  background-image:
-    radial-gradient(900px 520px at 94% -4%, rgba(37, 197, 233, .10), transparent 60%),
-    radial-gradient(760px 520px at 2% 22%, rgba(202, 255, 222, .55), transparent 55%),
-    radial-gradient(820px 480px at 90% 92%, rgba(35, 134, 137, .07), transparent 55%),
-    radial-gradient(circle, rgba(2, 18, 37, .05) 1px, transparent 1.6px);
-  background-size: auto, auto, auto, 24px 24px;
-  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
-  background-attachment: fixed, fixed, fixed, fixed;
+  background: #fff;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -97,38 +89,51 @@ body {
 .back { font-size: .9rem; color: var(--ink-soft); text-decoration: none; display: inline-flex; align-items: center; gap: .4rem; }
 .back:hover { color: var(--blue-ink); }
 
-/* ---------- En-tÃªte de fiche ---------- */
-.fiche-header { padding: 44px 0 8px; }
+/* ---------- En-tête de fiche : bannière hero dégradée (même palette que l'accueil) ---------- */
+.fiche-header {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 46px calc(50vw - 50%) 40px;
+  background: linear-gradient(135deg, var(--violet) 0%, var(--blue-ink) 42%, var(--blue) 68%, var(--teal) 100%);
+  overflow: hidden;
+}
+.fiche-header::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(700px 320px at 88% -10%, rgba(255,255,255,.12), transparent 60%);
+}
+.fiche-header > * { position: relative; }
 .eyebrow {
   font-family: var(--mono); font-size: .72rem; letter-spacing: .16em;
-  text-transform: uppercase; color: var(--ink-soft); margin: 0 0 14px;
+  text-transform: uppercase; color: rgba(255,255,255,.68); margin: 0 0 14px;
 }
 .fiche-num {
   display: inline-flex; align-items: center; gap: .55rem;
   font-family: var(--mono); font-weight: 600; font-size: .8rem;
-  color: var(--blue-ink); background: rgba(35, 134, 137, .1);
-  padding: .3rem .7rem; border-radius: 999px; margin-bottom: 14px;
+  color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28);
+  padding: .3rem .7rem; border-radius: 999px; margin-bottom: 14px; backdrop-filter: blur(4px);
 }
 h1.fiche-title {
-  font-family: var(--display); font-weight: 700; letter-spacing: -.025em;
+  font-family: var(--display); font-weight: 700; letter-spacing: -.025em; color: #fff;
   font-size: clamp(1.9rem, 5vw, 2.7rem); line-height: 1.08; margin: 0 0 18px;
 }
 .motscles { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; }
 .chip {
-  font-size: .82rem; color: var(--ink-soft); background: var(--surface);
-  border: 1px solid var(--line); border-radius: 999px; padding: .32rem .74rem;
+  font-size: .82rem; color: rgba(255,255,255,.88); background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: .32rem .74rem;
 }
 .header-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
 .btn-exos {
   display: inline-flex; align-items: center; gap: .6rem;
-  font-family: var(--display); font-weight: 600; font-size: .98rem;
-  color: #fff; text-decoration: none;
-  background: linear-gradient(135deg, var(--blue), var(--violet));
+  font-family: var(--display); font-weight: 700; font-size: .98rem;
+  color: var(--ink); text-decoration: none;
+  background: #fff;
   padding: .78rem 1.3rem; border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(35, 134, 137, .28);
+  box-shadow: 0 10px 24px rgba(2, 18, 37, .28);
   transition: transform .15s ease, box-shadow .15s ease;
 }
-.btn-exos:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(37, 197, 233, .35); }
+.btn-exos:hover { transform: translateY(-2px); background: var(--teal); }
 .btn-exos .arrow { transition: transform .15s ease; }
 .btn-exos:hover .arrow { transform: translateX(3px); }
 
@@ -310,10 +315,10 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 .pyr-tier:hover { transform: scale(1.015); }
 .pyr-niveau { display: block; font-family: var(--display); font-weight: 700; font-size: .98rem; }
 .pyr-items { display: block; font-size: .8rem; opacity: .93; margin-top: 3px; line-height: 1.35; }
-.pyr-tier.tier-0 { background: var(--indigo); }
-.pyr-tier.tier-1 { background: var(--blue); }
-.pyr-tier.tier-2 { background: var(--teal); }
-.pyr-tier.tier-3 { background: #6E8286; }
+.pyr-tier.tier-0 { background: linear-gradient(135deg, #021225, #1B6669); }
+.pyr-tier.tier-1 { background: linear-gradient(135deg, #1B6669, #238689); }
+.pyr-tier.tier-2 { background: linear-gradient(135deg, #238689, #25C5E9); }
+.pyr-tier.tier-3 { background: linear-gradient(135deg, #106E85, #25C5E9); }
 
 /* ---- Escalier des mÃ©tiers ---- */
 .metiers { margin-top: 16px; }
@@ -363,7 +368,6 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
   .flux-arrow { transform: rotate(90deg); align-self: center; }
   .metier-step { margin-left: calc(var(--i) * 9px); }
   .pyr-axis { font-size: .6rem; }
-  body { background-attachment: scroll, scroll, scroll, scroll; }
 }
 
 /* ---- Sommaire cliquable ---- */
@@ -388,17 +392,19 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 .sous-lettre { flex-shrink: 0; width: 25px; height: 25px; border-radius: 7px; border: 1.8px solid var(--blue); color: var(--blue-ink); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-weight: 700; font-size: .78rem; background: #fff; }
 .sous-titre { font-family: var(--display); font-size: .98rem; font-weight: 600; color: var(--ink); margin: 0; }
 
-/* ---- Zone teintée par partie (fond dégradé très léger + bord d'accent) ---- */
+/* ---- Zone pleine largeur par partie (même logique que les sections alternées de l'accueil) ---- */
 .partie-zone {
   position: relative;
-  margin: 0 -14px 6px;
-  padding: 2px 14px 18px;
-  border-radius: 22px;
-  background:
-    linear-gradient(180deg, rgba(var(--zc), .09), rgba(var(--zc), .025) 200px, transparent 340px);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 36px calc(50vw - 50%) 42px;
+  background: rgba(var(--zc), .11);
+  border-top: 1px solid rgba(var(--zc), .35);
+  border-bottom: 1px solid rgba(var(--zc), .35);
 }
-.partie-zone .partie-marker { border-top: none; padding-top: 8px; margin-top: 0; }
-.partie-zone .notion, .partie-zone .card { box-shadow: 0 1px 2px rgba(2,18,37,.04), 0 8px 20px rgba(2,18,37,.05); }
+.partie-zone .partie-marker { border-top: none; padding-top: 0; margin-top: 0; }
+.partie-zone .notion, .partie-zone .card { box-shadow: 0 1px 2px rgba(2,18,37,.05), 0 10px 24px rgba(2,18,37,.07); }
 
 /* ---- Liste à tirets avec libellé gras coloré ---- */
 .liste-roles { list-style: none; margin: 10px 0 4px; padding: 0; display: flex; flex-direction: column; gap: 9px; }
@@ -414,7 +420,6 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 /* ---- Schéma en étoile (entreprise + parties prenantes) ---- */
 .etoile-wrap { display: flex; justify-content: center; margin: 14px 0 6px; }
 .etoile-svg { width: 100%; max-width: 430px; height: auto; overflow: visible; }
-.etoile-line { stroke: var(--line); stroke-width: 1.6; }
-.etoile-node { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; background: #fff; border: 1.4px solid var(--line); border-radius: 10px; font-size: .72rem; font-weight: 600; color: var(--ink); padding: 4px 6px; box-shadow: 0 2px 6px rgba(2,18,37,.06); }
-.etoile-center-circle { fill: var(--violet); }
+.etoile-line { stroke-width: 1.8; }
+.etoile-node { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; background: #fff; border: 1.4px solid var(--line); border-top: 3px solid var(--line); border-radius: 10px; font-size: .72rem; font-weight: 600; color: var(--ink); padding: 4px 6px; box-shadow: 0 3px 8px rgba(2,18,37,.09); }
 .etoile-center-label { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: .8rem; text-align: center; font-family: var(--display); }
