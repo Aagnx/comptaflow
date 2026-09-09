@@ -97,32 +97,53 @@ if (p.ancre) map[p.ancre] = p;
 return map;
 }
 
-function renderNotionsWithDividers(list) {
-let html = '';
-let lastPartie = null;
-let lastSous = null;
-let currentColorA = null;
-list.forEach(n => {
-if (n.partie && n.partie.num !== lastPartie) {
-const [a, b] = partieColors(n.partie.num);
-currentColorA = a;
-html += `<div class="partie-marker" id="${esc(n.partie.ancre || '')}">
-<span class="partie-num" style="background:linear-gradient(135deg, ${a}, ${b})">${esc(n.partie.num)}</span>
-<h2 class="partie-titre">${esc(n.partie.titre)}</h2>
-</div>`;
-lastPartie = n.partie.num;
-lastSous = null;
+function hexToRgb(hex) {
+const h = hex.replace('#', '');
+return `${parseInt(h.substring(0,2),16)},${parseInt(h.substring(2,4),16)},${parseInt(h.substring(4,6),16)}`;
 }
+
+function renderNotionsWithDividers(list) {
+// Regroupe les notions par partie pour pouvoir envelopper chaque groupe
+// dans une zone de fond teintée (facultatif, actif seulement si les
+// notions portent un champ "partie").
+const groups = [];
+let current = { partie: null, items: [] };
+groups.push(current);
+list.forEach(n => {
+if (n.partie) {
+current = { partie: n.partie, items: [] };
+groups.push(current);
+}
+current.items.push(n);
+});
+
+return groups.map(g => {
+let inner = '';
+let lastSous = null;
+let colorA = null;
+if (g.partie) {
+const [a, b] = partieColors(g.partie.num);
+colorA = a;
+inner += `<div class="partie-marker" id="${esc(g.partie.ancre || '')}">
+<span class="partie-num" style="background:linear-gradient(135deg, ${a}, ${b})">${esc(g.partie.num)}</span>
+<h2 class="partie-titre">${esc(g.partie.titre)}</h2>
+</div>`;
+}
+g.items.forEach(n => {
 if (n.sousPartie && n.sousPartie.lettre !== lastSous) {
-html += `<div class="sous-marker" id="${esc(n.sousPartie.ancre || '')}">
-<span class="sous-lettre" style="border-color:${currentColorA};color:${currentColorA}">${esc(n.sousPartie.lettre)}</span>
+inner += `<div class="sous-marker" id="${esc(n.sousPartie.ancre || '')}">
+<span class="sous-lettre" style="border-color:${colorA};color:${colorA}">${esc(n.sousPartie.lettre)}</span>
 <h3 class="sous-titre">${esc(n.sousPartie.titre)}</h3>
 </div>`;
 lastSous = n.sousPartie.lettre;
 }
-html += renderNotion(n);
+inner += renderNotion(n);
 });
-return html;
+if (g.partie) {
+return `<div class="partie-zone" style="--zc:${hexToRgb(colorA)}">${inner}</div>`;
+}
+return inner;
+}).join('');
 }
 
 // ---- Sommaire cliquable (facultatif) ----
@@ -287,10 +308,16 @@ return `<ul class="timeline">${items.map(([y, e]) =>
 ).join('')}</ul>`;
 }
 
+function wrapInZone(partieInfo, bodyHtml) {
+if (!partieInfo) return bodyHtml;
+const [a] = partieColors(partieInfo.num);
+return `<div class="partie-zone" style="--zc:${hexToRgb(a)}">${renderPartieMarker(partieInfo)}${bodyHtml}</div>`;
+}
+
 function renderGauge(u, partieInfo) {
 const pct = Math.max(0, Math.min(100, Number(u.pourcentage) || 0));
 const themes = (u.themesRecurrents || []).map(t => `<li>${esc(t)}</li>`).join('');
-return `${renderPartieMarker(partieInfo)}<section class="section">
+const body = `<section class="section">
 ${sectionHead('t-amber', 'Examen', "Utilité à l'examen")}
 <div class="card gauge-card">
 <div class="gauge-top">
@@ -303,24 +330,27 @@ ${u.commentaire ? `<p class="gauge-comment">${esc(u.commentaire)}</p>` : ''}
 ${themes ? `<div class="themes"><h4>Thèmes les plus fréquents en UE9</h4><ul>${themes}</ul></div>` : ''}
 </div>
 </section>`;
+return wrapInZone(partieInfo, body);
 }
 
 function renderVocab(list, partieInfo) {
 const rows = list.map(v =>
 `<div class="row"><dt>${esc(v.terme)}</dt><dd>${esc(v.definition)}</dd></div>`
 ).join('');
-return `${renderPartieMarker(partieInfo)}<section class="section">
+const body = `<section class="section">
 ${sectionHead('t-teal', 'Lexique', 'Vocabulaire du chapitre')}
 <dl class="vocab">${rows}</dl>
 </section>`;
+return wrapInZone(partieInfo, body);
 }
 
 function renderQuestions(list, partieInfo) {
 const items = list.map(q => `<li>${esc(q)}</li>`).join('');
-return `${renderPartieMarker(partieInfo)}<section class="section">
+const body = `<section class="section">
 ${sectionHead('t-violet', 'À réviser', "Questions types qui peuvent tomber")}
 <ol class="qlist">${items}</ol>
 </section>`;
+return wrapInZone(partieInfo, body);
 }
 
 function renderAnnales(a, partieInfo) {
@@ -339,10 +369,11 @@ if (a.questionsRedactionnellesRecurrentes && a.questionsRedactionnellesRecurrent
 inner += `<div class="themes"><h4>Questions rédactionnelles récurrentes</h4>
 <ul class="recur">${a.questionsRedactionnellesRecurrentes.map(q => `<li>${esc(q)}</li>`).join('')}</ul></div>`;
 }
-return `${renderPartieMarker(partieInfo)}<section class="section">
+const body = `<section class="section">
 ${sectionHead('t-amber', 'Annales', "Annales officielles liées au chapitre")}
 <div class="card annales-card">${inner}</div>
 </section>`;
+return wrapInZone(partieInfo, body);
 }
 
 function renderFiche(f) {
