@@ -26,8 +26,82 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Le système d'information comptable et les comptabilités",
+      "sousParties": [
+        {
+          "lettre": "A",
+          "titre": "Le système d'information comptable",
+          "ancre": "sec-1a"
+        },
+        {
+          "lettre": "B",
+          "titre": "Le rôle de la comptabilité",
+          "ancre": "sec-1b"
+        },
+        {
+          "lettre": "C",
+          "titre": "Les différents types de comptabilité",
+          "ancre": "sec-1c"
+        }
+      ]
+    },
+    {
+      "num": "2",
+      "titre": "Une discipline au confluent de l'économie et du droit",
+      "sousParties": [
+        {
+          "lettre": "A",
+          "titre": "La comptabilité et l'économie",
+          "ancre": "sec-2a"
+        },
+        {
+          "lettre": "B",
+          "titre": "La comptabilité et le droit",
+          "ancre": "sec-2b"
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "titre": "Les métiers de la comptabilité",
+      "ancre": "sec-3"
+    },
+    {
+      "num": "4",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "5",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "6",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "7",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Le système d'information comptable et les comptabilités",
+        "ancre": "sec-1"
+      },
+      "sousPartie": {
+        "lettre": "A",
+        "titre": "Le système d'information comptable",
+        "ancre": "sec-1a"
+      },
       "titre": "Définition de la comptabilité",
       "reference": "Art. 121-1 du PCG",
       "contenu": "La comptabilité est un système d'information permettant de refléter les opérations de l'entreprise et sa situation. Au sens de l'article 121-1 du PCG, c'est un système d'organisation de l'information financière permettant de saisir, classer et enregistrer des données chiffrées, puis de présenter des états reflétant une image fidèle du patrimoine, de la situation financière et du résultat de l'entité à la date de clôture."
@@ -56,21 +130,39 @@
       }
     },
     {
+      "sousPartie": {
+        "lettre": "B",
+        "titre": "Le rôle de la comptabilité",
+        "ancre": "sec-1b"
+      },
       "titre": "Les quatre rôles de la comptabilité",
-      "contenu": "1) Moyen de preuve entre commerçants. 2) Instrument de contrôle : santé et performance de l'entreprise, assiette de l'impôt, charges sociales. 3) Aide à la prise de décision : source d'information pour les partenaires et acteurs. 4) Matière première pour produire des indicateurs et outils de gestion : statistiques nationales, plan d'investissement."
+      "liste": [
+        {
+          "label": "Moyen de preuve",
+          "texte": "entre commerçants."
+        },
+        {
+          "label": "Instrument de contrôle",
+          "texte": "de la santé et de la performance de l'entreprise, et de l'assiette de l'impôt et des charges sociales."
+        },
+        {
+          "label": "Aide à la prise de décision",
+          "texte": "en tant que source d'information pour les partenaires et acteurs de l'entreprise."
+        },
+        {
+          "label": "Matière première pour la production d'indicateurs et d'outils de gestion",
+          "texte": "statistiques nationales, plan d'investissement."
+        }
+      ],
+      "exemple": "Si l'entreprise sollicite un financement auprès d'une banque, cette dernière pourra étudier les documents comptables de l'entreprise pour accorder ou non un crédit à l'entreprise en besoin de financement."
     },
     {
-      "titre": "Régularité, sincérité et image fidèle",
-      "reference": "Art. L123-23 du Code de commerce",
-      "contenu": "La comptabilité doit être régulière et sincère et donner une image fidèle du patrimoine et de l'activité de l'entreprise. Dès lors qu'elle est tenue selon les normes applicables, elle est présumée sincère et peut servir de preuve en matière de droit commercial."
-    },
-    {
-      "titre": "Les comptes annuels",
-      "formule": "Comptes annuels = Bilan + Compte de résultat + Annexe",
-      "contenu": "Les comptes annuels forment un tout indissociable. Le bilan présente le patrimoine, le compte de résultat l'activité de l'exercice, et l'annexe complète et commente les deux précédents."
-    },
-    {
-      "titre": "Les différentes comptabilités",
+      "sousPartie": {
+        "lettre": "C",
+        "titre": "Les différents types de comptabilité",
+        "ancre": "sec-1c"
+      },
+      "titre": "Les différents types de comptabilité",
       "contenu": "La comptabilité financière (ou générale) est la seule obligatoire et fortement réglementée, destinée à des utilisateurs externes, en unité monétaire et de portée historique. La comptabilité de gestion, la comptabilité budgétaire et la gestion financière sont facultatives, non réglementées et tournées vers la prise de décision interne.",
       "tableau": {
         "colonnes": [
@@ -127,36 +219,37 @@
       }
     },
     {
-      "titre": "Une discipline au confluent de l'économie et du droit",
-      "contenu": "La comptabilité reflète les relations économiques de l'entreprise avec ses partenaires : actionnaires, institutions financières, fournisseurs, clients, État et administrations, salariés. Elle est aussi une source d'information sur les marchés (biens, financier, travail)."
-    },
-    {
-      "titre": "Les sources du droit comptable",
-      "contenu": "Le droit comptable est autonome. Ses sources se classent selon leur force juridique, de la plus forte à la plus faible (logique de la pyramide de Kelsen) :",
+      "partie": {
+        "num": "2",
+        "titre": "Une discipline au confluent de l'économie et du droit",
+        "ancre": "sec-2"
+      },
+      "sousPartie": {
+        "lettre": "A",
+        "titre": "La comptabilité et l'économie",
+        "ancre": "sec-2a"
+      },
+      "titre": "La comptabilité, reflet des relations économiques",
+      "contenu": "La comptabilité reflète les relations économiques de l'entreprise avec ses partenaires. Elle est aussi une source d'information sur les marchés (biens, financier, travail).",
       "visuel": {
-        "type": "pyramide",
-        "legende": "Force juridique décroissante",
-        "tiers": [
-          {
-            "niveau": "Textes supranationaux",
-            "items": "Directives & règlements européens · Normes internationales IAS/IFRS"
-          },
-          {
-            "niveau": "La loi",
-            "items": "Code de commerce"
-          },
-          {
-            "niveau": "Le règlement",
-            "items": "Règlements de l'ANC (ex-CRC, depuis 2009) · Plan comptable général (PCG)"
-          },
-          {
-            "niveau": "L'interprétation",
-            "items": "Jurisprudence · Doctrine"
-          }
+        "type": "etoile",
+        "centre": "Entreprise",
+        "satellites": [
+          "Actionnaires",
+          "Institutions financières",
+          "Clients",
+          "Salariés",
+          "État et administration",
+          "Fournisseurs"
         ]
       }
     },
     {
+      "sousPartie": {
+        "lettre": "B",
+        "titre": "La comptabilité et le droit",
+        "ancre": "sec-2b"
+      },
       "titre": "Repères historiques du droit comptable",
       "contenu": "La réglementation comptable est relativement récente. Quelques dates-clés à retenir :",
       "timeline": [
@@ -203,6 +296,37 @@
       ]
     },
     {
+      "titre": "Les sources du droit comptable",
+      "contenu": "Le droit comptable est autonome. Ses sources se classent selon leur force juridique, de la plus forte à la plus faible (logique de la pyramide de Kelsen) :",
+      "visuel": {
+        "type": "pyramide",
+        "legende": "Force juridique décroissante",
+        "tiers": [
+          {
+            "niveau": "Textes supranationaux",
+            "items": "Directives & règlements européens · Normes internationales IAS/IFRS"
+          },
+          {
+            "niveau": "La loi",
+            "items": "Code de commerce"
+          },
+          {
+            "niveau": "Le règlement",
+            "items": "Règlements de l'ANC (ex-CRC, depuis 2009) · Plan comptable général (PCG)"
+          },
+          {
+            "niveau": "L'interprétation",
+            "items": "Jurisprudence · Doctrine"
+          }
+        ]
+      }
+    },
+    {
+      "partie": {
+        "num": "3",
+        "titre": "Les métiers de la comptabilité",
+        "ancre": "sec-3"
+      },
       "titre": "Les métiers de la comptabilité",
       "contenu": "Les métiers se hiérarchisent selon le niveau d'études, du Bac +2 au Bac +8. Chaque diplôme est une étape autonome (on peut s'arrêter) et un tremplin vers le suivant.",
       "visuel": {
@@ -256,13 +380,6 @@
           "CAFCAC ↔ DEC : passerelle réciproque — le titulaire du CAFCAC peut se présenter au DEC."
         ]
       }
-    },
-    {
-      "titre": "Distinction création de valeur / trésorerie",
-      "contenu": "La création de valeur se mesure indépendamment des encaissements et des décaissements. Avec un paiement différé, la valeur est créée dès la vente, mais la trésorerie n'arrive qu'à l'encaissement : les deux divergent pendant le délai de paiement.",
-      "visuel": {
-        "type": "treso-valeur"
-      }
     }
   ],
   "vocabulaire": [
@@ -277,22 +394,6 @@
     {
       "terme": "Document comptable",
       "definition": "Résultat produit par le système comptable (journal, grand livre, comptes annuels…)."
-    },
-    {
-      "terme": "Comptes annuels",
-      "definition": "Ensemble indissociable : bilan + compte de résultat + annexe."
-    },
-    {
-      "terme": "Image fidèle",
-      "definition": "Représentation la plus proche possible de la réalité du patrimoine, de la situation financière et du résultat de l'entité."
-    },
-    {
-      "terme": "Régularité",
-      "definition": "Conformité de la comptabilité aux règles et procédures en vigueur."
-    },
-    {
-      "terme": "Sincérité",
-      "definition": "Application de bonne foi des règles, en fonction de la connaissance que les responsables ont de la réalité."
     },
     {
       "terme": "Droit comptable",
@@ -337,13 +438,12 @@
     "Distinguer la comptabilité financière de la comptabilité de gestion.",
     "Présenter les sources du droit comptable.",
     "Expliquer en quoi et à quelles conditions la comptabilité peut servir de moyen de preuve.",
-    "Quels documents composent les comptes annuels ?",
     "Distinguer les missions de l'expert-comptable de celles du commissaire aux comptes."
   ],
   "annales": {
     "note": "Ce chapitre ne fait quasiment jamais l'objet d'un dossier dédié. Son contenu est mobilisé sous forme de questions rédactionnelles « de cours » réparties dans les dossiers (souvent en introduction d'un dossier de normalisation). Ajoute ici tes annales réelles au fil de tes révisions : chaque entrée doit avoir année + question + corrigé.",
     "questionsRedactionnellesRecurrentes": [
-      "Définition de la comptabilité et de l'image fidèle.",
+      "Définition de la comptabilité.",
       "Sources du droit comptable / rôle de l'ANC.",
       "Utilité de l'information comptable pour les partenaires de l'entreprise."
     ],
