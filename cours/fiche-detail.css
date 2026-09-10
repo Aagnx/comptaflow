@@ -372,7 +372,7 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 
 /* ---- Sommaire cliquable ---- */
 .sommaire { position: relative; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 24px 20px; margin: 20px 0 30px; scroll-margin-top: 90px; }
-.sommaire::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #238689, #25C5E9, #021225, #1B6669, #106E85, #238689, #021225); }
+.sommaire::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #238689, #021225, #1F6B4A, #106E85, #238689, #021225, #1F6B4A); }
 .sommaire-title { font-family: var(--mono); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
 .sommaire-list { list-style: none; margin: 0; padding: 0; }
 .sommaire-item { margin-bottom: 10px; font-size: .93rem; }
@@ -399,9 +399,9 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: 36px calc(50vw - 50%) 42px;
-  background: rgba(var(--zc), .11);
-  border-top: 1px solid rgba(var(--zc), .35);
-  border-bottom: 1px solid rgba(var(--zc), .35);
+  background: linear-gradient(155deg, var(--zc-a), var(--zc-b));
+  border-top: 1px solid rgba(var(--zc), .38);
+  border-bottom: 1px solid rgba(var(--zc), .38);
 }
 .partie-zone .partie-marker { border-top: none; padding-top: 0; margin-top: 0; }
 .partie-zone .notion, .partie-zone .card { box-shadow: 0 1px 2px rgba(2,18,37,.05), 0 10px 24px rgba(2,18,37,.07); }
