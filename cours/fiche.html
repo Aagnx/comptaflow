@@ -66,19 +66,39 @@ return `<div class="exemple-box"><span class="exemple-tag">Exemple</span><p>${es
 }
 
 // ---- Découpage en parties / sous-parties (facultatif, rétrocompatible) ----
-// ---- Dégradés par partie (mêmes tons que la grille UE de la page d'accueil) ----
+// ---- Dégradés par partie : 4 familles de teintes qui alternent pour que deux
+// parties consécutives n'aient jamais la même couleur ----
 const PARTIE_GRADIENTS = [
-['#238689', '#25C5E9'],
-['#021225', '#1B6669'],
-['#1B6669', '#238689'],
-['#106E85', '#25C5E9'],
-['#021225', '#106E85'],
-['#238689', '#1B6669'],
-['#021225', '#238689']
+['#238689', '#25C5E9'], // 1 — cyan → sky
+['#021225', '#1B6669'], // 2 — encre → cyan foncé
+['#1F6B4A', '#14523A'], // 3 — vert → vert foncé
+['#106E85', '#25C5E9'], // 4 — sky foncé → sky
+['#238689', '#1B6669'], // 5 — cyan → cyan foncé
+['#021225', '#106E85'], // 6 — encre → sky foncé
+['#1F6B4A', '#0B4A52'] // 7 — vert → sarcelle foncé
+];
+// Teintes de fond claires assorties à chaque famille ci-dessus (même ton, en très clair)
+const ZONE_TINTS = [
+['#EEF9F8', '#DBF0ED'], // 1 — cyan clair
+['#EEF2F4', '#DEE7EB'], // 2 — encre clair
+['#EDF9F1', '#DAF0E1'], // 3 — vert clair
+['#EBF8FC', '#D4EFFA'], // 4 — sky clair
+['#EBF6F5', '#D6EDE9'], // 5 — cyan clair (variante)
+['#EEF1F3', '#DCE5E9'], // 6 — encre clair (variante)
+['#EDF8F0', '#D8EEDF'] // 7 — vert clair (variante)
 ];
 function partieColors(num) {
 const i = (parseInt(num, 10) - 1 + PARTIE_GRADIENTS.length) % PARTIE_GRADIENTS.length;
 return PARTIE_GRADIENTS[i] || PARTIE_GRADIENTS[0];
+}
+function zoneTint(num) {
+const i = (parseInt(num, 10) - 1 + ZONE_TINTS.length) % ZONE_TINTS.length;
+return ZONE_TINTS[i] || ZONE_TINTS[0];
+}
+function zoneStyle(num) {
+const [a] = partieColors(num);
+const [la, lb] = zoneTint(num);
+return `--zc:${hexToRgb(a)};--zc-a:${la};--zc-b:${lb}`;
 }
 function renderPartieMarker(p) {
 if (!p) return '';
@@ -140,7 +160,7 @@ lastSous = n.sousPartie.lettre;
 inner += renderNotion(n);
 });
 if (g.partie) {
-return `<div class="partie-zone" style="--zc:${hexToRgb(colorA)}">${inner}</div>`;
+return `<div class="partie-zone" style="${zoneStyle(g.partie.num)}">${inner}</div>`;
 }
 return inner;
 }).join('');
@@ -321,8 +341,7 @@ return `<ul class="timeline">${items.map(([y, e]) =>
 
 function wrapInZone(partieInfo, bodyHtml) {
 if (!partieInfo) return bodyHtml;
-const [a] = partieColors(partieInfo.num);
-return `<div class="partie-zone" style="--zc:${hexToRgb(a)}">${renderPartieMarker(partieInfo)}${bodyHtml}</div>`;
+return `<div class="partie-zone" style="${zoneStyle(partieInfo.num)}">${renderPartieMarker(partieInfo)}${bodyHtml}</div>`;
 }
 
 function renderGauge(u, partieInfo) {
