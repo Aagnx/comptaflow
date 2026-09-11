@@ -27,8 +27,82 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice interdite.",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "La normalisation et l'harmonisation comptables",
+      "sousParties": [
+        {
+          "lettre": "A",
+          "titre": "Pourquoi normaliser la comptabilité ?",
+          "ancre": "sec-1a"
+        },
+        {
+          "lettre": "B",
+          "titre": "La recherche d'un langage commun",
+          "ancre": "sec-1b"
+        }
+      ]
+    },
+    {
+      "num": "2",
+      "titre": "Les normes comptables applicables en France",
+      "ancre": "sec-2"
+    },
+    {
+      "num": "3",
+      "titre": "Le Plan comptable général (PCG)",
+      "sousParties": [
+        {
+          "lettre": "A",
+          "titre": "Présentation et contenu du PCG",
+          "ancre": "sec-3a"
+        },
+        {
+          "lettre": "B",
+          "titre": "Les principes comptables",
+          "ancre": "sec-3b"
+        }
+      ]
+    },
+    {
+      "num": "4",
+      "titre": "Le normalisateur français",
+      "ancre": "sec-4"
+    },
+    {
+      "num": "5",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "6",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "7",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "8",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "La normalisation et l'harmonisation comptables",
+        "ancre": "sec-1"
+      },
+      "sousPartie": {
+        "lettre": "A",
+        "titre": "Pourquoi normaliser la comptabilité ?",
+        "ancre": "sec-1a"
+      },
       "titre": "Normalisation et harmonisation",
       "contenu": "La normalisation comptable est un processus qui vise à imposer des normes pour encadrer les pratiques comptables. L'harmonisation comptable est un processus qui consiste à rapprocher des règles et pratiques comptables divergentes. Ce sont deux processus distincts mais complémentaires. Exemple : fixer qu'un chocolat contient au moins 35 % de cacao est une norme ; une directive qui met d'accord les États européens sur l'ajout de matières grasses végétales relève de l'harmonisation ; quand ces conditions s'imposent à tous, elles deviennent une norme européenne (normalisation)."
     },
@@ -116,10 +190,20 @@
       }
     },
     {
+      "sousPartie": {
+        "lettre": "B",
+        "titre": "La recherche d'un langage commun",
+        "ancre": "sec-1b"
+      },
       "titre": "La recherche d'un langage commun",
       "contenu": "Les normes comptables définissent un cadre pour traduire la réalité économique en comptabilité : la normalisation vise à codifier ce langage. Pour que les utilisateurs et les pays partagent un langage commun, l'harmonisation cherche à rendre compatibles les différentes normes et pratiques."
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Les normes comptables applicables en France",
+        "ancre": "sec-2"
+      },
       "titre": "Les normes applicables en France",
       "contenu": "La norme dépend du type de comptes établis :",
       "tableau": {
@@ -154,6 +238,16 @@
       "contenu": "La comptabilité doit être régulière et sincère et donner une image fidèle du patrimoine et de l'activité de l'entreprise. Dès lors qu'elle est tenue selon les normes applicables, elle est présumée sincère et peut servir de preuve en matière de droit commercial."
     },
     {
+      "partie": {
+        "num": "3",
+        "titre": "Le Plan comptable général (PCG)",
+        "ancre": "sec-3"
+      },
+      "sousPartie": {
+        "lettre": "A",
+        "titre": "Présentation et contenu du PCG",
+        "ancre": "sec-3a"
+      },
       "titre": "Le Plan comptable général (PCG)",
       "reference": "Règlement ANC 2014-03, modifié par 2022-06",
       "contenu": "Le PCG présente les règles et principes d'établissement et de présentation des comptes. Il précise : les objets et principes de la comptabilité ; la définition des actifs, passifs, produits et charges ; les règles de comptabilisation et d'évaluation ; la tenue, la structure et le fonctionnement des comptes ; la définition des documents de synthèse. Il organise enfin le plan des comptes en classes. À jour : la réforme du PCG (règlement ANC 2022-06, applicable depuis le 1ᵉʳ janvier 2025) a modernisé la nomenclature et la présentation des états financiers, mais les 7 classes et les principes comptables restent inchangés."
@@ -199,6 +293,11 @@
       }
     },
     {
+      "sousPartie": {
+        "lettre": "B",
+        "titre": "Les principes comptables",
+        "ancre": "sec-3b"
+      },
       "titre": "Les 10 principes comptables",
       "contenu": "La comptabilité doit fournir une image fidèle de la réalité économique, établie selon les principes suivants (à connaître par cœur) :",
       "tableau": {
@@ -287,6 +386,11 @@
       }
     },
     {
+      "partie": {
+        "num": "4",
+        "titre": "Le normalisateur français",
+        "ancre": "sec-4"
+      },
       "titre": "Le normalisateur : l'Autorité des normes comptables (ANC)",
       "contenu": "L'ANC (créée en 2009) est le normalisateur comptable français. Ses missions : édicter les prescriptions comptables générales et sectorielles que doivent respecter les personnes tenues d'établir des documents comptables ; donner un avis sur les textes réglementaires contenant des dispositions comptables ; participer à l'élaboration des normes internationales et représenter la France ; conduire des travaux d'analyse et émettre des recommandations. Conseil de l'expert : suivre de près l'évolution de la réglementation (lettres d'information de l'ANC, doctrine comptable)."
     }
