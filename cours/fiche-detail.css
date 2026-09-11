@@ -395,15 +395,19 @@ table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { bor
 /* ---- Zone pleine largeur par partie (même logique que les sections alternées de l'accueil) ---- */
 .partie-zone {
   position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  padding: 36px calc(50vw - 50%) 42px;
-  background: linear-gradient(135deg, var(--zc-a), var(--zc-b));
+  margin: 32px -4px 10px;
+  padding: 26px 22px 30px;
+  border-radius: 20px;
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, var(--zc-a), var(--zc-b)) border-box;
 }
-.partie-zone .partie-titre, .partie-zone .sous-titre { color: #fff; }
-.partie-zone .partie-marker, .partie-zone .sous-marker { text-shadow: 0 1px 3px rgba(2,18,37,.18); }
-.partie-zone .sous-lettre { background: #fff; box-shadow: 0 2px 6px rgba(2,18,37,.2); }
+.partie-zone::before {
+  content: ""; position: absolute; inset: 0; border-radius: 20px; z-index: 0; pointer-events: none;
+  background: linear-gradient(160deg, rgba(var(--zc), .05), transparent 60%);
+}
+.partie-zone > * { position: relative; z-index: 1; }
 .partie-zone .partie-marker { border-top: none; padding-top: 0; margin-top: 0; }
 .partie-zone .notion, .partie-zone .card { box-shadow: 0 1px 2px rgba(2,18,37,.05), 0 10px 24px rgba(2,18,37,.07); }
 
