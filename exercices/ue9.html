@@ -21,7 +21,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--body);background:var(--mint);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:var(--body);background:#fff;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 
 nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
@@ -35,33 +35,39 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .back-link{font-size:14px;color:var(--ink-soft);text-decoration:none}
 .back-link:hover{color:var(--ink)}
 
-.header{padding:44px 28px 22px;background:#fff;border-bottom:1px solid var(--line)}
-.header-inner{max-width:800px;margin:0 auto}
-.tag{display:inline-block;background:var(--tea);color:var(--cyan-dark);font-size:12px;font-weight:600;
-  padding:4px 12px;border-radius:20px;margin-bottom:12px}
-.header h1{font-family:var(--display);font-size:30px;font-weight:700;color:var(--ink);margin-bottom:8px}
-.header p{font-size:15px;color:var(--ink-soft)}
+.header{position:relative;padding:44px 28px 40px;overflow:hidden;
+  background:linear-gradient(135deg, var(--ink) 0%, var(--cyan-dark) 42%, var(--cyan) 68%, var(--sky) 100%)}
+.header::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(700px 320px at 88% -10%, rgba(255,255,255,.12), transparent 60%)}
+.header-inner{position:relative;max-width:800px;margin:0 auto}
+.tag{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);
+  color:#fff;font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:12px;
+  backdrop-filter:blur(4px)}
+.header h1{font-family:var(--display);font-size:30px;font-weight:700;color:#fff;margin-bottom:8px}
+.header p{font-size:15px;color:rgba(255,255,255,.82)}
 
-.progress-bar{max-width:800px;margin:0 auto;padding:18px 28px 0}
+.progress-bar{max-width:800px;margin:0 auto;padding:22px 28px 0}
 .progress-track{background:var(--line);border-radius:8px;height:8px;overflow:hidden}
 .progress-fill{background:var(--sky);height:100%;width:0;transition:width .4s ease}
 .progress-label{font-size:12px;color:var(--ink-faint);margin-top:8px;text-align:center}
 
 /* ---- nav rapide vers les axes ---- */
 .axe-nav{max-width:800px;margin:22px auto 0;padding:0 28px;display:flex;gap:8px;flex-wrap:wrap}
-.axe-nav a{font-family:var(--mono);font-size:11.5px;font-weight:600;color:var(--cyan-dark);
-  background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 13px;text-decoration:none}
+.axe-nav a{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--ink);
+  background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 8px;text-decoration:none}
 .axe-nav a:hover{border-color:var(--cyan)}
+.axe-nav-dot{width:9px;height:9px;border-radius:3px;flex-shrink:0}
 
 .content{max-width:800px;margin:0 auto;padding:20px 28px 90px}
 
-/* ---- bloc Axe ---- */
-.axe-block{margin-top:38px}
-.axe-head{display:flex;align-items:baseline;gap:12px;margin-bottom:14px;padding-bottom:10px;
-  border-bottom:2px solid var(--ink)}
-.axe-num{font-family:var(--mono);font-size:12px;font-weight:700;color:#fff;background:var(--ink);
-  padding:3px 10px;border-radius:5px;flex-shrink:0}
-.axe-title{font-family:var(--display);font-size:18px;font-weight:700;color:var(--ink)}
+/* ---- bloc Axe : cadre à bordure dégradée (même logique que la fiche 1) ---- */
+.axe-block{margin-top:32px;position:relative;padding:24px 22px 26px;border-radius:20px;
+  border:1.5px solid transparent;
+  background:linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg, var(--ax-a), var(--ax-b)) border-box}
+.axe-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.axe-num{flex-shrink:0;font-family:var(--mono);font-size:12px;font-weight:700;color:#fff;
+  background:linear-gradient(135deg, var(--ax-a), var(--ax-b));padding:5px 12px;border-radius:7px}
+.axe-title{font-family:var(--display);font-size:17px;font-weight:700;color:var(--ink)}
 .axe-empty{font-size:13px;color:var(--ink-faint);background:#fff;border:1px dashed var(--line);
   border-radius:10px;padding:14px 16px}
 
@@ -195,13 +201,17 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 </div>
 
 <div class="axe-nav">
-  <a href="#axe-1">Axe 1</a><a href="#axe-2">Axe 2</a><a href="#axe-3">Axe 3</a>
-  <a href="#axe-4">Axe 4</a><a href="#axe-5">Axe 5</a><a href="#axe-6">Axe 6</a>
+  <a href="#axe-1"><span class="axe-nav-dot" style="background:linear-gradient(135deg,#238689,#25C5E9)"></span>Axe 1 — Écosystème comptable</a>
+  <a href="#axe-2"><span class="axe-nav-dot" style="background:linear-gradient(135deg,#021225,#1B6669)"></span>Axe 2 — Méthode comptable</a>
+  <a href="#axe-3"><span class="axe-nav-dot" style="background:linear-gradient(135deg,#1F6B4A,#14523A)"></span>Axe 3 — Opérations courantes</a>
+  <a href="#axe-4"><span class="axe-nav-dot" style="background:linear-gradient(135deg,#106E85,#25C5E9)"></span>Axe 4 — Opérations d'inventaire</a>
+  <a href="#axe-5"><span class="axe-nav-dot" style="background:linear-gradient(135deg,#238689,#1B6669)"></span>Axe 5 — Comptes annuels</a>
+  <a href="#axe-6"><span class="axe-nav-dot" style="background:linear-gradient(135deg,#021225,#106E85)"></span>Axe 6 — Évolution technologique</a>
 </div>
 
 <div class="content">
 
-  <div class="axe-block" id="axe-1">
+  <div class="axe-block" id="axe-1" style="--ax-a:#238689;--ax-b:#25C5E9">
     <div class="axe-head"><span class="axe-num">Axe 1</span><span class="axe-title">Comprendre l'écosystème comptable</span></div>
     <div class="fiche-block" id="fiche-1" style="--fb-a:#238689;--fb-b:#25C5E9">
       <div class="fiche-block-head">
@@ -277,16 +287,90 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
         </div>
       </div>
     </div>
-    <div class="fiche-row"><div class="fiche-row-label"><b>Fiche 2</b> — La réglementation et la normalisation comptables</div><div class="fiche-row-status">à venir</div></div>
+    <div class="fiche-block" id="fiche-2" style="--fb-a:#021225;--fb-b:#1B6669">
+      <div class="fiche-block-head">
+        <span class="fiche-block-badge">2</span>
+        <span class="fiche-block-titre">Exercices — La réglementation et la normalisation comptables</span>
+      </div>
+      <nav class="fiche-mini-nav">
+        <a href="#ex-trous-2">① Texte à trous</a>
+        <a href="#ex-vf-2">② Vrai ou faux</a>
+        <a href="#ex-ordre-2">③ La construction de l'info comptable</a>
+        <a href="#ex-relier-2">④ Relier le vocabulaire</a>
+      </nav>
+
+      <div class="ex-card" id="ex-trous-2">
+        <div class="ex-num">Exercice 1 — Fiche 2</div>
+        <div class="ex-titre">Texte à trous — Normalisation et PCG</div>
+        <p class="ex-hint">Clique un mot dans la banque puis clique l'emplacement où le placer (ou fais-le glisser à la souris).</p>
+        <div class="ex-texte" id="dnd-text-2">
+          La normalisation comptable vise à imposer des <span class="dropzone" data-answer="normes" id="dz-2-0"></span> pour encadrer les pratiques comptables, tandis que l'harmonisation cherche à rapprocher des règles <span class="dropzone" data-answer="divergentes" id="dz-2-1"></span>. En France, les comptes individuels suivent le <span class="dropzone" data-answer="PCG" id="dz-2-2"></span>, tandis que les comptes consolidés d'un groupe coté doivent obligatoirement appliquer les normes <span class="dropzone" data-answer="IAS/IFRS" id="dz-2-3"></span>. Le PCG organise les comptes en <span class="dropzone" data-answer="7" id="dz-2-4"></span> classes, dont les classes 6 et 7 sont les comptes de <span class="dropzone" data-answer="gestion" id="dz-2-5"></span>.
+        </div>
+        <div class="word-bank" id="wb-2">
+          <span class="word-chip" draggable="true" data-word="normes">normes</span>
+          <span class="word-chip" draggable="true" data-word="divergentes">divergentes</span>
+          <span class="word-chip" draggable="true" data-word="PCG">PCG</span>
+          <span class="word-chip" draggable="true" data-word="IAS/IFRS">IAS/IFRS</span>
+          <span class="word-chip" draggable="true" data-word="7">7</span>
+          <span class="word-chip" draggable="true" data-word="gestion">gestion</span>
+          <span class="word-chip" draggable="true" data-word="ANC">ANC</span>
+          <span class="word-chip" draggable="true" data-word="prudence">prudence</span>
+        </div>
+        <div class="ex-actions">
+          <button class="btn-verif" onclick="verifierTrous2()">Vérifier</button>
+          <button class="btn-corrige" onclick="corrigerTrous2()">Voir la correction</button>
+          <span class="result" id="res-trous-2"></span>
+        </div>
+      </div>
+
+      <div class="ex-card" id="ex-vf-2">
+        <div class="ex-num">Exercice 2 — Fiche 2</div>
+        <div class="ex-titre">Vrai ou faux — Notions clés du chapitre</div>
+        <p class="ex-hint">Clique Vrai ou Faux pour chaque affirmation.</p>
+        <div class="vf-list" id="vf-list-2"></div>
+        <div class="ex-actions">
+          <button class="btn-verif" onclick="verifierVF2()">Vérifier</button>
+          <button class="btn-corrige" onclick="corrigerVF2()">Voir la correction</button>
+          <span class="result" id="res-vf-2"></span>
+        </div>
+      </div>
+
+      <div class="ex-card" id="ex-ordre-2">
+        <div class="ex-num">Exercice 3 — Fiche 2</div>
+        <div class="ex-titre">Remettre dans l'ordre — De la réalité économique à l'information comptable</div>
+        <p class="ex-hint">Utilise les flèches pour retrouver l'ordre des 3 étapes, de la réalité économique (en haut) à l'information comptable produite (en bas).</p>
+        <div class="ordre-list" id="ordre-list-2"></div>
+        <div class="ex-actions">
+          <button class="btn-verif" onclick="verifierOrdre2()">Vérifier</button>
+          <button class="btn-corrige" onclick="corrigerOrdre2()">Voir la correction</button>
+          <span class="result" id="res-ordre-2"></span>
+        </div>
+      </div>
+
+      <div class="ex-card" id="ex-relier-2">
+        <div class="ex-num">Exercice 4 — Fiche 2</div>
+        <div class="ex-titre">Relier le vocabulaire à sa définition</div>
+        <p class="ex-hint">Clique un terme à gauche, puis sa définition à droite.</p>
+        <div class="relier-grid">
+          <div class="relier-col" id="relier-termes-2"></div>
+          <div class="relier-col" id="relier-defs-2"></div>
+        </div>
+        <div class="ex-actions">
+          <button class="btn-verif" onclick="verifierRelier2()">Vérifier</button>
+          <button class="btn-corrige" onclick="corrigerRelier2()">Voir la correction</button>
+          <span class="result" id="res-relier-2"></span>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="axe-block" id="axe-2">
+  <div class="axe-block" id="axe-2" style="--ax-a:#021225;--ax-b:#1B6669">
     <div class="axe-head"><span class="axe-num">Axe 2</span><span class="axe-title">Appréhender la méthode comptable</span></div>
     <div class="fiche-row"><div class="fiche-row-label"><b>Fiche 3</b> — La méthode comptable : écritures et documents</div><div class="fiche-row-status">à venir</div></div>
     <div class="fiche-row"><div class="fiche-row-label"><b>Fiche 4</b> — Actif, passif, charge, produit</div><div class="fiche-row-status">à venir</div></div>
   </div>
 
-  <div class="axe-block" id="axe-3">
+  <div class="axe-block" id="axe-3" style="--ax-a:#1F6B4A;--ax-b:#14523A">
     <div class="axe-head"><span class="axe-num">Axe 3</span><span class="axe-title">Analyser comptablement des opérations courantes</span></div>
 
     <div class="fiche-row"><div class="fiche-row-label"><b>Fiche 5</b> — La TVA : généralités</div><div class="fiche-row-status">à venir</div></div>
@@ -323,17 +407,17 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
     <div class="fiche-row"><div class="fiche-row-label"><b>Fiche 16</b> — La paie</div><div class="fiche-row-status">à venir</div></div>
   </div>
 
-  <div class="axe-block" id="axe-4">
+  <div class="axe-block" id="axe-4" style="--ax-a:#106E85;--ax-b:#25C5E9">
     <div class="axe-head"><span class="axe-num">Axe 4</span><span class="axe-title">Opérer les régularisations liées aux opérations d'inventaire</span></div>
     <div class="axe-empty">Fiches et exercices à venir pour cet axe.</div>
   </div>
 
-  <div class="axe-block" id="axe-5">
+  <div class="axe-block" id="axe-5" style="--ax-a:#238689;--ax-b:#1B6669">
     <div class="axe-head"><span class="axe-num">Axe 5</span><span class="axe-title">Établir les comptes annuels et cerner les enjeux de leur diffusion</span></div>
     <div class="axe-empty">Fiches et exercices à venir pour cet axe.</div>
   </div>
 
-  <div class="axe-block" id="axe-6">
+  <div class="axe-block" id="axe-6" style="--ax-a:#021225;--ax-b:#106E85">
     <div class="axe-head"><span class="axe-num">Axe 6</span><span class="axe-title">Analyser les impacts de l'évolution technologique sur l'organisation comptable</span></div>
     <div class="axe-empty">Fiches et exercices à venir pour cet axe.</div>
   </div>
@@ -378,7 +462,7 @@ var exercices=[
   }
 ];
 
-var solved=[false,false,false,false,false,false,false];
+var solved=[false,false,false,false,false,false,false,false,false,false,false];
 
 function normalize(s){return s.trim().toLowerCase().replace(/\s+/g,' ');}
 
@@ -717,10 +801,289 @@ function corrigerRelier1(){
   solved[6]=true; updateProgress();
 }
 
+/* ==================== FICHE 2 — 4 exercices ==================== */
+
+/* ---- Exercice 1 : texte à trous ---- */
+var selectedWord2=null;
+function initTrous2(){
+  document.querySelectorAll('#wb-2 .word-chip').forEach(function(chip){
+    chip.addEventListener('dragstart', function(e){
+      e.dataTransfer.setData('text/plain', chip.dataset.word);
+      chip.classList.add('dragging');
+    });
+    chip.addEventListener('dragend', function(){ chip.classList.remove('dragging'); });
+    chip.addEventListener('click', function(){
+      if(chip.classList.contains('used')) return;
+      document.querySelectorAll('#wb-2 .word-chip').forEach(function(c){ c.classList.remove('selected'); });
+      chip.classList.add('selected');
+      selectedWord2=chip;
+    });
+  });
+  document.querySelectorAll('#dnd-text-2 .dropzone').forEach(function(dz){
+    dz.addEventListener('dragover', function(e){ e.preventDefault(); });
+    dz.addEventListener('drop', function(e){
+      e.preventDefault();
+      var word=e.dataTransfer.getData('text/plain');
+      if(word) placerMotTrous2(dz, word);
+    });
+    dz.addEventListener('click', function(){
+      if(dz.classList.contains('filled')){
+        var w=dz.dataset.filled;
+        dz.textContent=''; dz.classList.remove('filled','ok','ko'); delete dz.dataset.filled;
+        var chip=document.querySelector('#wb-2 .word-chip[data-word="'+CSS.escape(w)+'"]');
+        if(chip) chip.classList.remove('used');
+        return;
+      }
+      if(selectedWord2){
+        placerMotTrous2(dz, selectedWord2.dataset.word);
+        selectedWord2.classList.add('used');
+        selectedWord2.classList.remove('selected');
+        selectedWord2=null;
+      }
+    });
+  });
+}
+function placerMotTrous2(dz, word){
+  if(dz.dataset.filled){
+    var prevChip=document.querySelector('#wb-2 .word-chip[data-word="'+CSS.escape(dz.dataset.filled)+'"]');
+    if(prevChip) prevChip.classList.remove('used');
+  }
+  dz.textContent=word;
+  dz.dataset.filled=word;
+  dz.classList.add('filled');
+  dz.classList.remove('ok','ko');
+  var chip=document.querySelector('#wb-2 .word-chip[data-word="'+CSS.escape(word)+'"]');
+  if(chip) chip.classList.add('used');
+}
+function verifierTrous2(){
+  var allOk=true, allFilled=true;
+  document.querySelectorAll('#dnd-text-2 .dropzone').forEach(function(dz){
+    if(!dz.dataset.filled){ allFilled=false; return; }
+    var ok=dz.dataset.filled===dz.dataset.answer;
+    dz.classList.toggle('ok', ok);
+    dz.classList.toggle('ko', !ok);
+    if(!ok) allOk=false;
+  });
+
+  var res=document.getElementById('res-trous-2');
+  if(!allFilled){ res.textContent='Complète tous les trous avant de vérifier'; res.className='result ko'; return; }
+  if(allOk){ res.textContent='✅ Bravo, tout est correct !'; res.className='result ok'; solved[7]=true; }
+  else{ res.textContent='❌ Quelques erreurs, réessaie'; res.className='result ko'; solved[7]=false; }
+  updateProgress();
+}
+function corrigerTrous2(){
+  var bonnesReponses=['normes','divergentes','PCG','IAS/IFRS','7','gestion'];
+  document.querySelectorAll('#dnd-text-2 .dropzone').forEach(function(dz){
+    dz.textContent=dz.dataset.answer;
+    dz.dataset.filled=dz.dataset.answer;
+    dz.classList.add('filled','ok'); dz.classList.remove('ko');
+  });
+  document.querySelectorAll('#wb-2 .word-chip').forEach(function(c){
+    c.classList.toggle('used', bonnesReponses.indexOf(c.dataset.word)!==-1);
+  });
+  var res=document.getElementById('res-trous-2');
+  res.textContent='✅ Correction affichée'; res.className='result ok';
+  solved[7]=true; updateProgress();
+}
+
+/* ---- Exercice 2 : vrai ou faux ---- */
+var affirmations2=[
+  {texte:"La normalisation et l'harmonisation comptable désignent exactement le même processus.", vrai:false},
+  {texte:"Les comptes consolidés d'un groupe coté doivent obligatoirement appliquer les normes IAS/IFRS.", vrai:true},
+  {texte:"Le modèle comptable anglo-saxon privilégie une approche juridique et patrimoniale.", vrai:false},
+  {texte:"Le PCG comporte 7 classes de comptes, plus les classes 8 et 9 pour des cas particuliers.", vrai:true},
+  {texte:"Le principe de prudence permet de constater les plus-values latentes sur titres.", vrai:false},
+  {texte:"L'ANC a été créée en 2009 et est le normalisateur comptable français.", vrai:true}
+];
+var vfReponses2=[];
+function buildVF2(){
+  var box=document.getElementById('vf-list-2');
+  affirmations2.forEach(function(a,i){
+    var row=document.createElement('div'); row.className='vf-row';
+    row.innerHTML='<div class="vf-texte">'+a.texte+'</div>'+
+      '<div class="vf-btns">'+
+      '<button class="vf-btn" onclick="choisirVF2('+i+',true)">Vrai</button>'+
+      '<button class="vf-btn" onclick="choisirVF2('+i+',false)">Faux</button>'+
+      '</div>';
+    box.appendChild(row);
+  });
+}
+function choisirVF2(i,val){
+  vfReponses2[i]=val;
+  var row=document.querySelectorAll('#vf-list-2 .vf-row')[i];
+  row.classList.remove('row-ok','row-ko');
+  var btns=row.querySelectorAll('.vf-btn');
+  btns[0].classList.toggle('selected', val===true);
+  btns[1].classList.toggle('selected', val===false);
+}
+function verifierVF2(){
+  var allOk=true, allAnswered=true;
+  affirmations2.forEach(function(a,i){
+    var row=document.querySelectorAll('#vf-list-2 .vf-row')[i];
+    if(vfReponses2[i]===undefined){ allAnswered=false; return; }
+    var ok=vfReponses2[i]===a.vrai;
+    row.classList.toggle('row-ok', ok);
+    row.classList.toggle('row-ko', !ok);
+    if(!ok) allOk=false;
+  });
+  var res=document.getElementById('res-vf-2');
+  if(!allAnswered){ res.textContent='Réponds à toutes les affirmations'; res.className='result ko'; return; }
+  if(allOk){ res.textContent='✅ Bravo, tout est correct !'; res.className='result ok'; solved[8]=true; }
+  else{ res.textContent='❌ Quelques erreurs, réessaie'; res.className='result ko'; solved[8]=false; }
+  updateProgress();
+}
+function corrigerVF2(){
+  affirmations2.forEach(function(a,i){
+    vfReponses2[i]=a.vrai;
+    var row=document.querySelectorAll('#vf-list-2 .vf-row')[i];
+    var btns=row.querySelectorAll('.vf-btn');
+    btns[0].classList.toggle('selected', a.vrai===true);
+    btns[1].classList.toggle('selected', a.vrai===false);
+    row.classList.add('row-ok'); row.classList.remove('row-ko');
+  });
+  var res=document.getElementById('res-vf-2');
+  res.textContent='✅ Correction affichée'; res.className='result ok';
+  solved[8]=true; updateProgress();
+}
+
+/* ---- Exercice 3 : remettre dans l'ordre ---- */
+var ordreCorrect2=["Appréciations","Choix comptables","Manipulations comptables"];
+var ordreActuel2=["Manipulations comptables","Appréciations","Choix comptables"];
+function buildOrdre2(){ renderOrdre2(); }
+function renderOrdre2(){
+  var box=document.getElementById('ordre-list-2');
+  box.innerHTML='';
+  ordreActuel2.forEach(function(item,i){
+    var row=document.createElement('div'); row.className='ordre-row';
+    row.innerHTML='<span class="ordre-rank">'+(i+1)+'</span>'+
+      '<span class="ordre-label">'+item+'</span>'+
+      '<div class="ordre-arrows">'+
+      '<button '+(i===0?'disabled':'')+' onclick="deplacerOrdre2('+i+',-1)" aria-label="Monter">↑</button>'+
+      '<button '+(i===ordreActuel2.length-1?'disabled':'')+' onclick="deplacerOrdre2('+i+',1)" aria-label="Descendre">↓</button>'+
+      '</div>';
+    box.appendChild(row);
+  });
+}
+function deplacerOrdre2(i,dir){
+  var j=i+dir;
+  if(j<0||j>=ordreActuel2.length) return;
+  var tmp=ordreActuel2[i]; ordreActuel2[i]=ordreActuel2[j]; ordreActuel2[j]=tmp;
+  renderOrdre2();
+}
+function verifierOrdre2(){
+  var ok=ordreActuel2.every(function(v,i){ return v===ordreCorrect2[i]; });
+  document.querySelectorAll('#ordre-list-2 .ordre-row').forEach(function(row,i){
+    row.classList.toggle('row-ok', ordreActuel2[i]===ordreCorrect2[i]);
+    row.classList.toggle('row-ko', ordreActuel2[i]!==ordreCorrect2[i]);
+  });
+  var res=document.getElementById('res-ordre-2');
+  if(ok){ res.textContent='✅ Bravo, ordre correct !'; res.className='result ok'; solved[9]=true; }
+  else{ res.textContent="❌ L'ordre n'est pas encore bon"; res.className='result ko'; solved[9]=false; }
+  updateProgress();
+}
+function corrigerOrdre2(){
+  ordreActuel2=ordreCorrect2.slice();
+  renderOrdre2();
+  document.querySelectorAll('#ordre-list-2 .ordre-row').forEach(function(row){ row.classList.add('row-ok'); });
+  var res=document.getElementById('res-ordre-2');
+  res.textContent='✅ Correction affichée'; res.className='result ok';
+  solved[9]=true; updateProgress();
+}
+
+/* ---- Exercice 4 : relier vocabulaire / définition ---- */
+var pairesVocab2=[
+  {terme:"PCG", def:"Référentiel des règles d'établissement et de présentation des comptes en France."},
+  {terme:"ANC", def:"Autorité des normes comptables, normalisateur français créé en 2009."},
+  {terme:"IAS / IFRS", def:"Normes comptables internationales, obligatoires pour les comptes consolidés d'un groupe coté."},
+  {terme:"Coût historique", def:"Valorisation d'un élément à son coût d'entrée, sans réévaluation ultérieure."},
+  {terme:"Juste valeur", def:"Valorisation à la valeur de marché ; logique privilégiée par les IAS/IFRS."},
+  {terme:"Comptes consolidés", def:"Comptes d'un groupe ; IAS/IFRS obligatoires si le groupe est coté."}
+];
+var relierCouleurs2=['#021225','#1B6669','#238689','#106E85','#25C5E9','#1F6B4A'];
+var relierSelTerme2=null;
+var relierPaires2={};
+function buildRelier2(){
+  var termesBox=document.getElementById('relier-termes-2');
+  var defsBox=document.getElementById('relier-defs-2');
+  pairesVocab2.forEach(function(p,i){
+    var el=document.createElement('div');
+    el.className='relier-item relier-term'; el.dataset.i=i; el.textContent=p.terme;
+    el.onclick=function(){ selectTerme2(i, el); };
+    termesBox.appendChild(el);
+  });
+  var melange=pairesVocab2.map(function(p,i){ return {def:p.def, ref:i}; });
+  for(var i=melange.length-1;i>0;i--){
+    var j=Math.floor(Math.random()*(i+1));
+    var tmp=melange[i]; melange[i]=melange[j]; melange[j]=tmp;
+  }
+  melange.forEach(function(d){
+    var el=document.createElement('div');
+    el.className='relier-item relier-def'; el.dataset.ref=d.ref; el.textContent=d.def;
+    el.onclick=function(){ selectDef2(d.ref, el); };
+    defsBox.appendChild(el);
+  });
+}
+function selectTerme2(i, el){
+  if(el.classList.contains('locked')) return;
+  document.querySelectorAll('#relier-termes-2 .relier-term').forEach(function(t){ t.classList.remove('selected'); });
+  el.classList.add('selected');
+  relierSelTerme2=i;
+}
+function selectDef2(ref, el){
+  if(el.classList.contains('locked') || relierSelTerme2===null) return;
+  var termEl=document.querySelector('#relier-termes-2 .relier-term[data-i="'+relierSelTerme2+'"]');
+  var color=relierCouleurs2[relierSelTerme2 % relierCouleurs2.length];
+  termEl.classList.add('locked'); termEl.classList.remove('selected','pair-ko');
+  termEl.style.borderColor=color; termEl.style.background=color+'14';
+  el.classList.add('locked'); el.classList.remove('pair-ko');
+  el.style.borderColor=color; el.style.background=color+'14';
+  relierPaires2[relierSelTerme2]=ref;
+  relierSelTerme2=null;
+}
+function verifierRelier2(){
+  var total=pairesVocab2.length;
+  var fait=Object.keys(relierPaires2).length;
+  var res=document.getElementById('res-relier-2');
+  if(fait<total){ res.textContent='Relie tous les termes avant de vérifier'; res.className='result ko'; return; }
+  var allOk=true;
+  Object.keys(relierPaires2).forEach(function(k){
+    var ok=Number(k)===relierPaires2[k];
+    var termEl=document.querySelector('#relier-termes-2 .relier-term[data-i="'+k+'"]');
+    termEl.classList.toggle('pair-ko', !ok);
+    if(!ok) allOk=false;
+  });
+  if(allOk){ res.textContent='✅ Bravo, toutes les paires sont correctes !'; res.className='result ok'; solved[10]=true; }
+  else{ res.textContent='❌ Certaines paires sont fausses'; res.className='result ko'; solved[10]=false; }
+  updateProgress();
+}
+function corrigerRelier2(){
+  document.querySelectorAll('#relier-termes-2 .relier-term, #relier-defs-2 .relier-def').forEach(function(el){
+    el.classList.remove('selected','locked','pair-ko');
+    el.style.borderColor=''; el.style.background='';
+  });
+  relierPaires2={};
+  pairesVocab2.forEach(function(p,i){
+    var color=relierCouleurs2[i % relierCouleurs2.length];
+    var termEl=document.querySelector('#relier-termes-2 .relier-term[data-i="'+i+'"]');
+    var defEl=document.querySelector('#relier-defs-2 .relier-def[data-ref="'+i+'"]');
+    termEl.classList.add('locked'); termEl.style.borderColor=color; termEl.style.background=color+'14';
+    defEl.classList.add('locked'); defEl.style.borderColor=color; defEl.style.background=color+'14';
+    relierPaires2[i]=i;
+  });
+  var res=document.getElementById('res-relier-2');
+  res.textContent='✅ Correction affichée'; res.className='result ok';
+  solved[10]=true; updateProgress();
+}
+
 initTrous1();
 buildVF1();
 buildOrdre1();
 buildRelier1();
+
+initTrous2();
+buildVF2();
+buildOrdre2();
+buildRelier2();
 
 buildExercices();
 </script>
