@@ -96,6 +96,76 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .fiche-row-status{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);
   background:var(--mint);border-radius:6px;padding:3px 9px}
 
+/* ---- Bloc fiche avec plusieurs exercices (ex. Fiche 1) ---- */
+.fiche-block{background:#fff;border:1.5px solid transparent;border-radius:18px;margin-bottom:14px;
+  padding:22px 22px 20px;
+  background:linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg, var(--fb-a), var(--fb-b)) border-box;
+  scroll-margin-top:80px}
+.fiche-block-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.fiche-block-badge{flex-shrink:0;width:34px;height:34px;border-radius:10px;color:#fff;display:flex;
+  align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:14px;
+  background:linear-gradient(135deg, var(--fb-a), var(--fb-b))}
+.fiche-block-titre{font-family:var(--display);font-size:16px;font-weight:700;color:var(--ink)}
+.fiche-mini-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.fiche-mini-nav a{font-size:12.5px;font-weight:600;color:var(--cyan-dark);background:var(--mint);
+  border:1px solid var(--line);border-radius:999px;padding:6px 13px;text-decoration:none}
+.fiche-mini-nav a:hover{border-color:var(--cyan)}
+.fiche-block .ex-card{scroll-margin-top:80px}
+.ex-hint{font-size:13px;color:var(--ink-faint);margin:-8px 0 14px}
+
+/* ---- Exercice : texte à trous à glisser-déposer ---- */
+.word-bank{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px;padding:14px;background:var(--mint);
+  border-radius:10px;border:1px dashed var(--line)}
+.word-chip{display:inline-block;padding:6px 13px;background:#fff;border:1.5px solid var(--cyan);
+  border-radius:999px;font-size:13px;font-weight:600;color:var(--cyan-dark);cursor:grab;user-select:none;
+  transition:opacity .15s,transform .1s}
+.word-chip:active{cursor:grabbing}
+.word-chip.selected{background:var(--cyan);color:#fff;transform:scale(1.05)}
+.word-chip.used{opacity:.25;pointer-events:none}
+.word-chip.dragging{opacity:.4}
+.dropzone{display:inline-flex;align-items:center;justify-content:center;min-width:150px;min-height:30px;
+  padding:3px 10px;margin:0 2px;border:1.5px dashed var(--cyan);border-radius:7px;background:#fff;
+  color:var(--cyan-dark);font-weight:600;font-size:13.5px;cursor:pointer;vertical-align:middle}
+.dropzone.filled{border-style:solid;background:#EAF6F5}
+.dropzone.ok{border-color:var(--green);background:#E7FBEE;color:var(--green)}
+.dropzone.ko{border-color:#8C2F34;background:#FBEAEA;color:#8C2F34}
+
+/* ---- Exercice : vrai ou faux ---- */
+.vf-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 16px;
+  border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:#fff}
+.vf-texte{font-size:13.5px;color:var(--ink);flex:1}
+.vf-btns{display:flex;gap:6px;flex-shrink:0}
+.vf-btn{font-family:inherit;font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:7px;
+  border:1.5px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer}
+.vf-btn.selected{border-color:var(--cyan);background:var(--cyan);color:#fff}
+.vf-row.row-ok{border-color:var(--green);background:#F0FBF3}
+.vf-row.row-ko{border-color:#8C2F34;background:#FDF2F2}
+
+/* ---- Exercice : remettre dans l'ordre ---- */
+.ordre-row{display:flex;align-items:center;gap:12px;padding:11px 14px;border:1px solid var(--line);
+  border-radius:10px;margin-bottom:8px;background:#fff}
+.ordre-rank{flex-shrink:0;width:26px;height:26px;border-radius:7px;background:var(--cyan);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:12px}
+.ordre-label{flex:1;font-size:13.5px;font-weight:600;color:var(--ink)}
+.ordre-arrows{display:flex;gap:4px;flex-shrink:0}
+.ordre-arrows button{width:28px;height:28px;border-radius:6px;border:1px solid var(--line);background:#fff;
+  color:var(--cyan-dark);font-size:13px;cursor:pointer}
+.ordre-arrows button:hover:not(:disabled){background:var(--mint)}
+.ordre-arrows button:disabled{opacity:.3;cursor:default}
+.ordre-row.row-ok{border-color:var(--green);background:#F0FBF3}
+.ordre-row.row-ko{border-color:#8C2F34;background:#FDF2F2}
+
+/* ---- Exercice : relier terme/définition ---- */
+.relier-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 4px}
+.relier-item{padding:11px 13px;border:1.5px solid var(--line);border-radius:9px;background:#fff;
+  font-size:13px;margin-bottom:8px;cursor:pointer;transition:border-color .12s}
+.relier-term{font-weight:600;color:var(--ink)}
+.relier-def{color:var(--ink-soft)}
+.relier-item.selected{border-color:var(--cyan);box-shadow:0 0 0 2px rgba(35,134,137,.15)}
+.relier-item.locked{cursor:default}
+.relier-item.pair-ko{border-color:#8C2F34 !important;background:#FDF2F2 !important}
+@media(max-width:560px){ .relier-grid{grid-template-columns:1fr} }
+
 @media(max-width:768px){
   nav{padding:0 18px}
   .header{padding:32px 18px 18px}
@@ -133,7 +203,80 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 
   <div class="axe-block" id="axe-1">
     <div class="axe-head"><span class="axe-num">Axe 1</span><span class="axe-title">Comprendre l'écosystème comptable</span></div>
-    <div class="fiche-row"><div class="fiche-row-label"><b>Fiche 1</b> — Le rôle de la comptabilité</div><div class="fiche-row-status">à venir</div></div>
+    <div class="fiche-block" id="fiche-1" style="--fb-a:#238689;--fb-b:#25C5E9">
+      <div class="fiche-block-head">
+        <span class="fiche-block-badge">1</span>
+        <span class="fiche-block-titre">Exercices — Le rôle de la comptabilité</span>
+      </div>
+      <nav class="fiche-mini-nav">
+        <a href="#ex-trous-1">① Texte à trous</a>
+        <a href="#ex-vf-1">② Vrai ou faux</a>
+        <a href="#ex-ordre-1">③ La pyramide de Kelsen</a>
+        <a href="#ex-relier-1">④ Relier le vocabulaire</a>
+      </nav>
+
+      <div class="ex-card" id="ex-trous-1">
+        <div class="ex-num">Exercice 1 — Fiche 1</div>
+        <div class="ex-titre">Texte à trous — Le rôle de la comptabilité</div>
+        <p class="ex-hint">Clique un mot dans la banque puis clique l'emplacement où le placer (ou fais-le glisser à la souris).</p>
+        <div class="ex-texte" id="dnd-text-1">
+          La comptabilité est un <span class="dropzone" data-answer="système d'information" id="dz-1-0"></span> qui reflète les opérations de l'entreprise. Elle sert de <span class="dropzone" data-answer="moyen de preuve" id="dz-1-1"></span> entre commerçants, d'<span class="dropzone" data-answer="instrument de contrôle" id="dz-1-2"></span> de la performance de l'entreprise, d'aide à la <span class="dropzone" data-answer="prise de décision" id="dz-1-3"></span>, et de matière première pour la production d'<span class="dropzone" data-answer="indicateurs" id="dz-1-4"></span> et d'outils de gestion.
+        </div>
+        <div class="word-bank" id="wb-1">
+          <span class="word-chip" draggable="true" data-word="système d'information">système d'information</span>
+          <span class="word-chip" draggable="true" data-word="moyen de preuve">moyen de preuve</span>
+          <span class="word-chip" draggable="true" data-word="instrument de contrôle">instrument de contrôle</span>
+          <span class="word-chip" draggable="true" data-word="prise de décision">prise de décision</span>
+          <span class="word-chip" draggable="true" data-word="indicateurs">indicateurs</span>
+          <span class="word-chip" draggable="true" data-word="sincérité">sincérité</span>
+          <span class="word-chip" draggable="true" data-word="PCG">PCG</span>
+        </div>
+        <div class="ex-actions">
+          <button class="btn-verif" onclick="verifierTrous1()">Vérifier</button>
+          <button class="btn-corrige" onclick="corrigerTrous1()">Voir la correction</button>
+          <span class="result" id="res-trous-1"></span>
+        </div>
+      </div>
+
+      <div class="ex-card" id="ex-vf-1">
+        <div class="ex-num">Exercice 2 — Fiche 1</div>
+        <div class="ex-titre">Vrai ou faux — Notions clés du chapitre</div>
+        <p class="ex-hint">Clique Vrai ou Faux pour chaque affirmation.</p>
+        <div class="vf-list" id="vf-list-1"></div>
+        <div class="ex-actions">
+          <button class="btn-verif" onclick="verifierVF1()">Vérifier</button>
+          <button class="btn-corrige" onclick="corrigerVF1()">Voir la correction</button>
+          <span class="result" id="res-vf-1"></span>
+        </div>
+      </div>
+
+      <div class="ex-card" id="ex-ordre-1">
+        <div class="ex-num">Exercice 3 — Fiche 1</div>
+        <div class="ex-titre">Remettre dans l'ordre — La pyramide de Kelsen</div>
+        <p class="ex-hint">Utilise les flèches pour classer les sources du droit comptable de la plus forte (en haut) à la plus faible (en bas).</p>
+        <div class="ordre-list" id="ordre-list-1"></div>
+        <div class="ex-actions">
+          <button class="btn-verif" onclick="verifierOrdre1()">Vérifier</button>
+          <button class="btn-corrige" onclick="corrigerOrdre1()">Voir la correction</button>
+          <span class="result" id="res-ordre-1"></span>
+        </div>
+      </div>
+
+      <div class="ex-card" id="ex-relier-1">
+        <div class="ex-num">Exercice 4 — Fiche 1</div>
+        <div class="ex-titre">Relier le vocabulaire à sa définition</div>
+        <p class="ex-hint">Clique un terme à gauche, puis sa définition à droite.</p>
+        <div class="relier-grid">
+          <div class="relier-col" id="relier-termes-1"></div>
+          <div class="relier-col" id="relier-defs-1"></div>
+        </div>
+        <div class="ex-actions">
+          <button class="btn-verif" onclick="verifierRelier1()">Vérifier</button>
+          <button class="btn-corrige" onclick="corrigerRelier1()">Voir la correction</button>
+          <span class="result" id="res-relier-1"></span>
+        </div>
+      </div>
+    </div>
     <div class="fiche-row"><div class="fiche-row-label"><b>Fiche 2</b> — La réglementation et la normalisation comptables</div><div class="fiche-row-status">à venir</div></div>
   </div>
 
@@ -235,7 +378,7 @@ var exercices=[
   }
 ];
 
-var solved=[false,false,false];
+var solved=[false,false,false,false,false,false,false];
 
 function normalize(s){return s.trim().toLowerCase().replace(/\s+/g,' ');}
 
@@ -299,9 +442,285 @@ function corriger(ei){
 
 function updateProgress(){
   var count=solved.filter(Boolean).length;
-  document.getElementById('progress-fill').style.width=(count/exercices.length*100)+'%';
-  document.getElementById('progress-label').textContent=count+' / '+exercices.length+' exercices réussis';
+  document.getElementById('progress-fill').style.width=(count/solved.length*100)+'%';
+  document.getElementById('progress-label').textContent=count+' / '+solved.length+' exercices réussis';
 }
+
+/* ==================== FICHE 1 — 4 exercices ==================== */
+
+/* ---- Exercice 1 : texte à trous (glisser-déposer / cliquer) ---- */
+var selectedWord1=null;
+function initTrous1(){
+  document.querySelectorAll('#wb-1 .word-chip').forEach(function(chip){
+    chip.addEventListener('dragstart', function(e){
+      e.dataTransfer.setData('text/plain', chip.dataset.word);
+      chip.classList.add('dragging');
+    });
+    chip.addEventListener('dragend', function(){ chip.classList.remove('dragging'); });
+    chip.addEventListener('click', function(){
+      if(chip.classList.contains('used')) return;
+      document.querySelectorAll('#wb-1 .word-chip').forEach(function(c){ c.classList.remove('selected'); });
+      chip.classList.add('selected');
+      selectedWord1=chip;
+    });
+  });
+  document.querySelectorAll('#dnd-text-1 .dropzone').forEach(function(dz){
+    dz.addEventListener('dragover', function(e){ e.preventDefault(); });
+    dz.addEventListener('drop', function(e){
+      e.preventDefault();
+      var word=e.dataTransfer.getData('text/plain');
+      if(word) placerMotTrous1(dz, word);
+    });
+    dz.addEventListener('click', function(){
+      if(dz.classList.contains('filled')){
+        var w=dz.dataset.filled;
+        dz.textContent=''; dz.classList.remove('filled','ok','ko'); delete dz.dataset.filled;
+        var chip=document.querySelector('#wb-1 .word-chip[data-word="'+CSS.escape(w)+'"]');
+        if(chip) chip.classList.remove('used');
+        return;
+      }
+      if(selectedWord1){
+        placerMotTrous1(dz, selectedWord1.dataset.word);
+        selectedWord1.classList.add('used');
+        selectedWord1.classList.remove('selected');
+        selectedWord1=null;
+      }
+    });
+  });
+}
+function placerMotTrous1(dz, word){
+  if(dz.dataset.filled){
+    var prevChip=document.querySelector('#wb-1 .word-chip[data-word="'+CSS.escape(dz.dataset.filled)+'"]');
+    if(prevChip) prevChip.classList.remove('used');
+  }
+  dz.textContent=word;
+  dz.dataset.filled=word;
+  dz.classList.add('filled');
+  dz.classList.remove('ok','ko');
+  var chip=document.querySelector('#wb-1 .word-chip[data-word="'+CSS.escape(word)+'"]');
+  if(chip) chip.classList.add('used');
+}
+function verifierTrous1(){
+  var allOk=true, allFilled=true;
+  document.querySelectorAll('#dnd-text-1 .dropzone').forEach(function(dz){
+    if(!dz.dataset.filled){ allFilled=false; return; }
+    var ok=dz.dataset.filled===dz.dataset.answer;
+    dz.classList.toggle('ok', ok);
+    dz.classList.toggle('ko', !ok);
+    if(!ok) allOk=false;
+  });
+  var res=document.getElementById('res-trous-1');
+  if(!allFilled){ res.textContent='Complète tous les trous avant de vérifier'; res.className='result ko'; return; }
+  if(allOk){ res.textContent='✅ Bravo, tout est correct !'; res.className='result ok'; solved[3]=true; }
+  else{ res.textContent='❌ Quelques erreurs, réessaie'; res.className='result ko'; solved[3]=false; }
+  updateProgress();
+}
+function corrigerTrous1(){
+  document.querySelectorAll('#dnd-text-1 .dropzone').forEach(function(dz){
+    dz.textContent=dz.dataset.answer;
+    dz.dataset.filled=dz.dataset.answer;
+    dz.classList.add('filled','ok'); dz.classList.remove('ko');
+  });
+  document.querySelectorAll('#wb-1 .word-chip').forEach(function(c){
+    c.classList.toggle('used', ['système d\'information','moyen de preuve','instrument de contrôle','prise de décision','indicateurs'].indexOf(c.dataset.word)!==-1);
+  });
+  var res=document.getElementById('res-trous-1');
+  res.textContent='✅ Correction affichée'; res.className='result ok';
+  solved[3]=true; updateProgress();
+}
+
+/* ---- Exercice 2 : vrai ou faux ---- */
+var affirmations1=[
+  {texte:"La comptabilité financière est facultative pour une entreprise.", vrai:false},
+  {texte:"Le Plan comptable général (PCG) est un règlement de l'ANC.", vrai:true},
+  {texte:"L'expert-comptable et le commissaire aux comptes exercent exactement les mêmes missions.", vrai:false},
+  {texte:"La comptabilité peut servir de moyen de preuve entre commerçants.", vrai:true},
+  {texte:"Les normes IAS/IFRS se situent au même niveau que la loi dans la hiérarchie des sources du droit comptable.", vrai:false},
+  {texte:"L'ANC (Autorité des normes comptables) a remplacé le CRC en 2009.", vrai:true}
+];
+var vfReponses1=[];
+function buildVF1(){
+  var box=document.getElementById('vf-list-1');
+  affirmations1.forEach(function(a,i){
+    var row=document.createElement('div'); row.className='vf-row';
+    row.innerHTML='<div class="vf-texte">'+a.texte+'</div>'+
+      '<div class="vf-btns">'+
+      '<button class="vf-btn" onclick="choisirVF1('+i+',true)">Vrai</button>'+
+      '<button class="vf-btn" onclick="choisirVF1('+i+',false)">Faux</button>'+
+      '</div>';
+    box.appendChild(row);
+  });
+}
+function choisirVF1(i,val){
+  vfReponses1[i]=val;
+  var row=document.querySelectorAll('#vf-list-1 .vf-row')[i];
+  row.classList.remove('row-ok','row-ko');
+  var btns=row.querySelectorAll('.vf-btn');
+  btns[0].classList.toggle('selected', val===true);
+  btns[1].classList.toggle('selected', val===false);
+}
+function verifierVF1(){
+  var allOk=true, allAnswered=true;
+  affirmations1.forEach(function(a,i){
+    var row=document.querySelectorAll('#vf-list-1 .vf-row')[i];
+    if(vfReponses1[i]===undefined){ allAnswered=false; return; }
+    var ok=vfReponses1[i]===a.vrai;
+    row.classList.toggle('row-ok', ok);
+    row.classList.toggle('row-ko', !ok);
+    if(!ok) allOk=false;
+  });
+  var res=document.getElementById('res-vf-1');
+  if(!allAnswered){ res.textContent='Réponds à toutes les affirmations'; res.className='result ko'; return; }
+  if(allOk){ res.textContent='✅ Bravo, tout est correct !'; res.className='result ok'; solved[4]=true; }
+  else{ res.textContent='❌ Quelques erreurs, réessaie'; res.className='result ko'; solved[4]=false; }
+  updateProgress();
+}
+function corrigerVF1(){
+  affirmations1.forEach(function(a,i){
+    vfReponses1[i]=a.vrai;
+    var row=document.querySelectorAll('#vf-list-1 .vf-row')[i];
+    var btns=row.querySelectorAll('.vf-btn');
+    btns[0].classList.toggle('selected', a.vrai===true);
+    btns[1].classList.toggle('selected', a.vrai===false);
+    row.classList.add('row-ok'); row.classList.remove('row-ko');
+  });
+  var res=document.getElementById('res-vf-1');
+  res.textContent='✅ Correction affichée'; res.className='result ok';
+  solved[4]=true; updateProgress();
+}
+
+/* ---- Exercice 3 : remettre dans l'ordre (pyramide de Kelsen) ---- */
+var ordreCorrect1=["Textes supranationaux","La loi","Le règlement","L'interprétation"];
+var ordreActuel1=["Le règlement","Textes supranationaux","L'interprétation","La loi"];
+function buildOrdre1(){ renderOrdre1(); }
+function renderOrdre1(){
+  var box=document.getElementById('ordre-list-1');
+  box.innerHTML='';
+  ordreActuel1.forEach(function(item,i){
+    var row=document.createElement('div'); row.className='ordre-row';
+    row.innerHTML='<span class="ordre-rank">'+(i+1)+'</span>'+
+      '<span class="ordre-label">'+item+'</span>'+
+      '<div class="ordre-arrows">'+
+      '<button '+(i===0?'disabled':'')+' onclick="deplacerOrdre1('+i+',-1)" aria-label="Monter">↑</button>'+
+      '<button '+(i===ordreActuel1.length-1?'disabled':'')+' onclick="deplacerOrdre1('+i+',1)" aria-label="Descendre">↓</button>'+
+      '</div>';
+    box.appendChild(row);
+  });
+}
+function deplacerOrdre1(i,dir){
+  var j=i+dir;
+  if(j<0||j>=ordreActuel1.length) return;
+  var tmp=ordreActuel1[i]; ordreActuel1[i]=ordreActuel1[j]; ordreActuel1[j]=tmp;
+  renderOrdre1();
+}
+function verifierOrdre1(){
+  var ok=ordreActuel1.every(function(v,i){ return v===ordreCorrect1[i]; });
+  document.querySelectorAll('#ordre-list-1 .ordre-row').forEach(function(row,i){
+    row.classList.toggle('row-ok', ordreActuel1[i]===ordreCorrect1[i]);
+    row.classList.toggle('row-ko', ordreActuel1[i]!==ordreCorrect1[i]);
+  });
+  var res=document.getElementById('res-ordre-1');
+  if(ok){ res.textContent='✅ Bravo, ordre correct !'; res.className='result ok'; solved[5]=true; }
+  else{ res.textContent="❌ L'ordre n'est pas encore bon"; res.className='result ko'; solved[5]=false; }
+  updateProgress();
+}
+function corrigerOrdre1(){
+  ordreActuel1=ordreCorrect1.slice();
+  renderOrdre1();
+  document.querySelectorAll('#ordre-list-1 .ordre-row').forEach(function(row){ row.classList.add('row-ok'); });
+  var res=document.getElementById('res-ordre-1');
+  res.textContent='✅ Correction affichée'; res.className='result ok';
+  solved[5]=true; updateProgress();
+}
+
+/* ---- Exercice 4 : relier vocabulaire / définition ---- */
+var pairesVocab1=[
+  {terme:"PCG", def:"Texte réglementaire de référence de la comptabilité française."},
+  {terme:"ANC", def:"Autorité des normes comptables, normalisateur français créé en 2009."},
+  {terme:"Expert-comptable (EC)", def:"Professionnel qui assiste et conseille l'entreprise sur ses travaux comptables."},
+  {terme:"Commissaire aux comptes (CAC)", def:"Professionnel qui certifie que les comptes reflètent fidèlement les opérations."},
+  {terme:"IAS / IFRS", def:"Normes comptables internationales constituant le droit comptable international."}
+];
+var relierCouleurs1=['#238689','#25C5E9','#1F6B4A','#106E85','#1B6669'];
+var relierSelTerme1=null;
+var relierPaires1={};
+function buildRelier1(){
+  var termesBox=document.getElementById('relier-termes-1');
+  var defsBox=document.getElementById('relier-defs-1');
+  pairesVocab1.forEach(function(p,i){
+    var el=document.createElement('div');
+    el.className='relier-item relier-term'; el.dataset.i=i; el.textContent=p.terme;
+    el.onclick=function(){ selectTerme1(i, el); };
+    termesBox.appendChild(el);
+  });
+  var melange=pairesVocab1.map(function(p,i){ return {def:p.def, ref:i}; });
+  for(var i=melange.length-1;i>0;i--){
+    var j=Math.floor(Math.random()*(i+1));
+    var tmp=melange[i]; melange[i]=melange[j]; melange[j]=tmp;
+  }
+  melange.forEach(function(d){
+    var el=document.createElement('div');
+    el.className='relier-item relier-def'; el.dataset.ref=d.ref; el.textContent=d.def;
+    el.onclick=function(){ selectDef1(d.ref, el); };
+    defsBox.appendChild(el);
+  });
+}
+function selectTerme1(i, el){
+  if(el.classList.contains('locked')) return;
+  document.querySelectorAll('.relier-term').forEach(function(t){ t.classList.remove('selected'); });
+  el.classList.add('selected');
+  relierSelTerme1=i;
+}
+function selectDef1(ref, el){
+  if(el.classList.contains('locked') || relierSelTerme1===null) return;
+  var termEl=document.querySelector('.relier-term[data-i="'+relierSelTerme1+'"]');
+  var color=relierCouleurs1[relierSelTerme1 % relierCouleurs1.length];
+  termEl.classList.add('locked'); termEl.classList.remove('selected','pair-ko');
+  termEl.style.borderColor=color; termEl.style.background=color+'14';
+  el.classList.add('locked'); el.classList.remove('pair-ko');
+  el.style.borderColor=color; el.style.background=color+'14';
+  relierPaires1[relierSelTerme1]=ref;
+  relierSelTerme1=null;
+}
+function verifierRelier1(){
+  var total=pairesVocab1.length;
+  var fait=Object.keys(relierPaires1).length;
+  var res=document.getElementById('res-relier-1');
+  if(fait<total){ res.textContent='Relie tous les termes avant de vérifier'; res.className='result ko'; return; }
+  var allOk=true;
+  Object.keys(relierPaires1).forEach(function(k){
+    var ok=Number(k)===relierPaires1[k];
+    var termEl=document.querySelector('.relier-term[data-i="'+k+'"]');
+    termEl.classList.toggle('pair-ko', !ok);
+    if(!ok) allOk=false;
+  });
+  if(allOk){ res.textContent='✅ Bravo, toutes les paires sont correctes !'; res.className='result ok'; solved[6]=true; }
+  else{ res.textContent='❌ Certaines paires sont fausses'; res.className='result ko'; solved[6]=false; }
+  updateProgress();
+}
+function corrigerRelier1(){
+  document.querySelectorAll('.relier-term, .relier-def').forEach(function(el){
+    el.classList.remove('selected','locked','pair-ko');
+    el.style.borderColor=''; el.style.background='';
+  });
+  relierPaires1={};
+  pairesVocab1.forEach(function(p,i){
+    var color=relierCouleurs1[i % relierCouleurs1.length];
+    var termEl=document.querySelector('.relier-term[data-i="'+i+'"]');
+    var defEl=document.querySelector('.relier-def[data-ref="'+i+'"]');
+    termEl.classList.add('locked'); termEl.style.borderColor=color; termEl.style.background=color+'14';
+    defEl.classList.add('locked'); defEl.style.borderColor=color; defEl.style.background=color+'14';
+    relierPaires1[i]=i;
+  });
+  var res=document.getElementById('res-relier-1');
+  res.textContent='✅ Correction affichée'; res.className='result ok';
+  solved[6]=true; updateProgress();
+}
+
+initTrous1();
+buildVF1();
+buildOrdre1();
+buildRelier1();
 
 buildExercices();
 </script>
