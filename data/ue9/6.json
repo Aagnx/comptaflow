@@ -24,8 +24,61 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Les opérations nationales",
+      "ancre": "sec-1"
+    },
+    {
+      "num": "2",
+      "titre": "Les opérations internationales",
+      "sousParties": [
+        {
+          "lettre": "A",
+          "titre": "Intracommunautaire",
+          "ancre": "sec-2a"
+        },
+        {
+          "lettre": "B",
+          "titre": "Hors Union européenne",
+          "ancre": "sec-2b"
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "titre": "La déclaration et le paiement de la TVA",
+      "ancre": "sec-3"
+    },
+    {
+      "num": "4",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "5",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "6",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "7",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Les opérations nationales",
+        "ancre": "sec-1"
+      },
       "titre": "Les opérations réalisées sur le territoire national",
       "contenu": "Ces opérations sont systématiquement imposables à la TVA."
     },
@@ -158,6 +211,16 @@
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Les opérations internationales",
+        "ancre": "sec-2"
+      },
+      "sousPartie": {
+        "lettre": "A",
+        "titre": "Intracommunautaire",
+        "ancre": "sec-2a"
+      },
       "titre": "Les opérations intracommunautaires (au sein de l'UE)",
       "contenu": "Les règles de TVA applicables aux opérations intracommunautaires diffèrent selon l'assujettissement du client ou du vendeur à la TVA :",
       "tableau": {
@@ -181,6 +244,11 @@
       }
     },
     {
+      "sousPartie": {
+        "lettre": "B",
+        "titre": "Hors Union européenne",
+        "ancre": "sec-2b"
+      },
       "titre": "Les opérations hors Union européenne",
       "contenu": "En dehors du cadre de l'UE, exportations et importations de biens suivent des règles spécifiques :",
       "tableau": {
@@ -239,6 +307,11 @@
       }
     },
     {
+      "partie": {
+        "num": "3",
+        "titre": "La déclaration et le paiement de la TVA",
+        "ancre": "sec-3"
+      },
       "titre": "La déclaration et le paiement de la TVA",
       "contenu": "Les entreprises soumises au régime du réel normal doivent établir chaque mois une déclaration de TVA (imprimé CA3). Le montant de la TVA due au titre de la période correspond soit à une TVA à décaisser, soit à un crédit de TVA. En cas de crédit de TVA, l'entreprise peut soit reporter le solde de TVA déductible non imputé sur les périodes suivantes (crédit de taxe reportable sans limite de délai), soit en demander le remboursement selon certaines conditions."
     },
