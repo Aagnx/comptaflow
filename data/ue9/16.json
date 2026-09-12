@@ -26,18 +26,78 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Comprendre la paie",
+      "ancre": "sec-1"
+    },
+    {
+      "num": "2",
+      "titre": "Le calcul des cotisations et le PAS",
+      "ancre": "sec-2"
+    },
+    {
+      "num": "3",
+      "titre": "La comptabilisation de la paie",
+      "ancre": "sec-3"
+    },
+    {
+      "num": "4",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "5",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "6",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "7",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Comprendre la paie",
+        "ancre": "sec-1"
+      },
       "titre": "Les éléments constitutifs des charges de personnel",
       "contenu": "Le coût salarial supporté par l'employeur se décompose en salaire net à payer, avances et acomptes, oppositions, impôt sur le revenu prélevé à la source, cotisations salariales et cotisations patronales. L'employeur supporte par ailleurs les taxes assises sur les salaires.",
       "tableau": {
-        "colonnes": ["Composante du coût salarial", "Destinataire du règlement"],
+        "colonnes": [
+          "Composante du coût salarial",
+          "Destinataire du règlement"
+        ],
         "lignes": [
-          ["Salaire net à payer", "Règlement au personnel"],
-          ["Avances et acomptes", "Règlement au personnel"],
-          ["Oppositions", "Règlement au créancier"],
-          ["Impôt sur le revenu prélevé à la source", "Règlement à l'État"],
-          ["Cotisations salariales et patronales", "Règlement aux organismes sociaux"]
+          [
+            "Salaire net à payer",
+            "Règlement au personnel"
+          ],
+          [
+            "Avances et acomptes",
+            "Règlement au personnel"
+          ],
+          [
+            "Oppositions",
+            "Règlement au créancier"
+          ],
+          [
+            "Impôt sur le revenu prélevé à la source",
+            "Règlement à l'État"
+          ],
+          [
+            "Cotisations salariales et patronales",
+            "Règlement aux organismes sociaux"
+          ]
         ]
       }
     },
@@ -50,13 +110,31 @@
       "titre": "Les tranches de salaires et l'assiette",
       "contenu": "En 2021, le plafond mensuel de la Sécurité sociale (PMSS) est de 3 666 €.",
       "tableau": {
-        "colonnes": ["Tranche", "Définition"],
+        "colonnes": [
+          "Tranche",
+          "Définition"
+        ],
         "lignes": [
-          ["Totalité du salaire", "Salaire brut"],
-          ["Tranche A ou tranche 1", "Fraction du salaire brut (ou salaire brut) ≤ Plafond de la Sécurité sociale"],
-          ["Tranche B", "Plafond de Sécurité sociale < Fraction du salaire brut ≤ 4 × Plafond de la Sécurité sociale"],
-          ["Tranche C", "Fraction du salaire brut > 4 × Plafond de la Sécurité sociale"],
-          ["Tranche 2", "Plafond de Sécurité sociale < Fraction du salaire brut ≤ 8 × Plafond de la Sécurité sociale"]
+          [
+            "Totalité du salaire",
+            "Salaire brut"
+          ],
+          [
+            "Tranche A ou tranche 1",
+            "Fraction du salaire brut (ou salaire brut) ≤ Plafond de la Sécurité sociale"
+          ],
+          [
+            "Tranche B",
+            "Plafond de Sécurité sociale < Fraction du salaire brut ≤ 4 × Plafond de la Sécurité sociale"
+          ],
+          [
+            "Tranche C",
+            "Fraction du salaire brut > 4 × Plafond de la Sécurité sociale"
+          ],
+          [
+            "Tranche 2",
+            "Plafond de Sécurité sociale < Fraction du salaire brut ≤ 8 × Plafond de la Sécurité sociale"
+          ]
         ]
       }
     },
@@ -64,23 +142,67 @@
       "titre": "Exemple de répartition en tranches (PMSS 2021)",
       "contenu": "Avec un salaire brut mensuel global de 3 700 € et un plafond de la Sécurité sociale s'établissant à 3 666 € par mois.",
       "tableau": {
-        "colonnes": ["Tranche", "Montant de l'assiette"],
+        "colonnes": [
+          "Tranche",
+          "Montant de l'assiette"
+        ],
         "lignes": [
-          ["Totalité du salaire", "3 700 €"],
-          ["Tranche A ou Tranche 1", "3 666 €"],
-          ["Tranche B", "3 700 − 3 666 = 34 €"],
-          ["Tranche C", "0 €, la tranche débutant à 4 × 3 666 = 14 664 €"],
-          ["Tranche 2", "3 700 − 3 666 = 34 €"]
+          [
+            "Totalité du salaire",
+            "3 700 €"
+          ],
+          [
+            "Tranche A ou Tranche 1",
+            "3 666 €"
+          ],
+          [
+            "Tranche B",
+            "3 700 − 3 666 = 34 €"
+          ],
+          [
+            "Tranche C",
+            "0 €, la tranche débutant à 4 × 3 666 = 14 664 €"
+          ],
+          [
+            "Tranche 2",
+            "3 700 − 3 666 = 34 €"
+          ]
         ]
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Le calcul des cotisations et le PAS",
+        "ancre": "sec-2"
+      },
       "titre": "Le calcul d'une cotisation : l'exemple de l'assurance vieillesse",
       "tableau": {
-        "colonnes": ["Calcul de la cotisation", "Assiette", "Taux employeur", "Taux salarié", "Cotisation patronale", "Cotisation salariale"],
+        "colonnes": [
+          "Calcul de la cotisation",
+          "Assiette",
+          "Taux employeur",
+          "Taux salarié",
+          "Cotisation patronale",
+          "Cotisation salariale"
+        ],
         "lignes": [
-          ["Assurance-vieillesse déplafonnée", "Salaire brut", "1,90 %", "0,40 %", "3 700 × 0,019 = 70,3 €", "3 700 × 0,004 = 14,8 €"],
-          ["Assurance-vieillesse plafonnée", "Tranche A", "8,55 %", "6,90 %", "3 666 × 0,0855 = 313,44 €", "3 666 × 0,069 = 252,95 €"]
+          [
+            "Assurance-vieillesse déplafonnée",
+            "Salaire brut",
+            "1,90 %",
+            "0,40 %",
+            "3 700 × 0,019 = 70,3 €",
+            "3 700 × 0,004 = 14,8 €"
+          ],
+          [
+            "Assurance-vieillesse plafonnée",
+            "Tranche A",
+            "8,55 %",
+            "6,90 %",
+            "3 666 × 0,0855 = 313,44 €",
+            "3 666 × 0,069 = 252,95 €"
+          ]
         ]
       }
     },
@@ -91,37 +213,159 @@
     {
       "titre": "Les documents liés à la paie",
       "tableau": {
-        "colonnes": ["Document", "Contenu"],
+        "colonnes": [
+          "Document",
+          "Contenu"
+        ],
         "lignes": [
-          ["Bulletin de paie", "Remis à tout salarié une fois par mois lors du paiement du salaire. L'employeur doit conserver un double des bulletins de paie pendant au moins 5 ans."],
-          ["Registre unique du personnel", "Récapitule, dans l'ordre d'embauche, les noms, prénoms, nationalité, date de naissance, sexe, emploi, qualification, date d'entrée et de sortie de tous les salariés de l'entreprise."],
-          ["Livre de paie", "Contient toutes les mentions qui sont portées sur les bulletins de paie remis aux salariés et au minimum le montant total des salaires mensuels versés."],
-          ["DSN (déclaration sociale nominative)", "Transmission unique, mensuelle et dématérialisée des données issues de la paie permettant notamment de récupérer le taux de prélèvement à la source de chaque salarié et de déclarer l'ensemble des cotisations sociales et des prélèvements à la source."]
+          [
+            "Bulletin de paie",
+            "Remis à tout salarié une fois par mois lors du paiement du salaire. L'employeur doit conserver un double des bulletins de paie pendant au moins 5 ans."
+          ],
+          [
+            "Registre unique du personnel",
+            "Récapitule, dans l'ordre d'embauche, les noms, prénoms, nationalité, date de naissance, sexe, emploi, qualification, date d'entrée et de sortie de tous les salariés de l'entreprise."
+          ],
+          [
+            "Livre de paie",
+            "Contient toutes les mentions qui sont portées sur les bulletins de paie remis aux salariés et au minimum le montant total des salaires mensuels versés."
+          ],
+          [
+            "DSN (déclaration sociale nominative)",
+            "Transmission unique, mensuelle et dématérialisée des données issues de la paie permettant notamment de récupérer le taux de prélèvement à la source de chaque salarié et de déclarer l'ensemble des cotisations sociales et des prélèvements à la source."
+          ]
         ]
       }
     },
     {
+      "partie": {
+        "num": "3",
+        "titre": "La comptabilisation de la paie",
+        "ancre": "sec-3"
+      },
       "titre": "La comptabilisation de la paie : le schéma des six écritures",
       "contenu": "La comptabilisation de la paie s'effectue en six étapes : 1) constatation du salaire brut, 2) cotisations salariales et prélèvement à la source, 3) cotisations patronales, 4) paiement du salaire au personnel, 5) versement aux organismes sociaux, 6) versement de l'impôt à la source à l'État.",
       "tableau": {
-        "colonnes": ["Étape", "Compte", "Intitulé", "Débit", "Crédit"],
+        "colonnes": [
+          "Étape",
+          "Compte",
+          "Intitulé",
+          "Débit",
+          "Crédit"
+        ],
         "lignes": [
-          ["1. Salaires bruts", "641", "Rémunérations du personnel", "X", ""],
-          ["1. Salaires bruts", "421", "Personnel, rémunérations dues", "", "X"],
-          ["2. Cotisations salariales + PAS", "421", "Personnel, rémunérations dues", "X", ""],
-          ["2. Cotisations salariales + PAS", "431", "Sécurité sociale", "", "X"],
-          ["2. Cotisations salariales + PAS", "437", "Autres organismes sociaux", "", "X"],
-          ["2. Cotisations salariales + PAS", "4421", "Prélèvement à la source (impôt sur le revenu)", "", "X"],
-          ["3. Cotisations patronales", "645", "Charges de Sécurité sociale et de prévoyance", "X", ""],
-          ["3. Cotisations patronales", "431", "Sécurité sociale", "", "X"],
-          ["3. Cotisations patronales", "437", "Autres organismes sociaux", "", "X"],
-          ["4. Versement du salaire au personnel", "421", "Personnel, rémunérations dues", "X", ""],
-          ["4. Versement du salaire au personnel", "512", "Banques", "", "X"],
-          ["5. Versement aux organismes sociaux", "431", "Sécurité sociale", "X", ""],
-          ["5. Versement aux organismes sociaux", "437", "Autres organismes sociaux", "X", ""],
-          ["5. Versement aux organismes sociaux", "512", "Banques", "", "X"],
-          ["6. Versement du PAS à l'État", "4421", "Prélèvement à la source (impôt sur le revenu)", "X", ""],
-          ["6. Versement du PAS à l'État", "512", "Banques", "", "X"]
+          [
+            "1. Salaires bruts",
+            "641",
+            "Rémunérations du personnel",
+            "X",
+            ""
+          ],
+          [
+            "1. Salaires bruts",
+            "421",
+            "Personnel, rémunérations dues",
+            "",
+            "X"
+          ],
+          [
+            "2. Cotisations salariales + PAS",
+            "421",
+            "Personnel, rémunérations dues",
+            "X",
+            ""
+          ],
+          [
+            "2. Cotisations salariales + PAS",
+            "431",
+            "Sécurité sociale",
+            "",
+            "X"
+          ],
+          [
+            "2. Cotisations salariales + PAS",
+            "437",
+            "Autres organismes sociaux",
+            "",
+            "X"
+          ],
+          [
+            "2. Cotisations salariales + PAS",
+            "4421",
+            "Prélèvement à la source (impôt sur le revenu)",
+            "",
+            "X"
+          ],
+          [
+            "3. Cotisations patronales",
+            "645",
+            "Charges de Sécurité sociale et de prévoyance",
+            "X",
+            ""
+          ],
+          [
+            "3. Cotisations patronales",
+            "431",
+            "Sécurité sociale",
+            "",
+            "X"
+          ],
+          [
+            "3. Cotisations patronales",
+            "437",
+            "Autres organismes sociaux",
+            "",
+            "X"
+          ],
+          [
+            "4. Versement du salaire au personnel",
+            "421",
+            "Personnel, rémunérations dues",
+            "X",
+            ""
+          ],
+          [
+            "4. Versement du salaire au personnel",
+            "512",
+            "Banques",
+            "",
+            "X"
+          ],
+          [
+            "5. Versement aux organismes sociaux",
+            "431",
+            "Sécurité sociale",
+            "X",
+            ""
+          ],
+          [
+            "5. Versement aux organismes sociaux",
+            "437",
+            "Autres organismes sociaux",
+            "X",
+            ""
+          ],
+          [
+            "5. Versement aux organismes sociaux",
+            "512",
+            "Banques",
+            "",
+            "X"
+          ],
+          [
+            "6. Versement du PAS à l'État",
+            "4421",
+            "Prélèvement à la source (impôt sur le revenu)",
+            "X",
+            ""
+          ],
+          [
+            "6. Versement du PAS à l'État",
+            "512",
+            "Banques",
+            "",
+            "X"
+          ]
         ]
       }
     },
@@ -133,12 +377,27 @@
       "titre": "Les différentes notions de salaire net (terminologie du bulletin de paie)",
       "contenu": "Le bulletin de paie normalisé distingue plusieurs notions de « net », à ne pas confondre entre elles ni avec le salaire net à payer défini au sens comptable strict.",
       "tableau": {
-        "colonnes": ["Notion", "Définition"],
+        "colonnes": [
+          "Notion",
+          "Définition"
+        ],
         "lignes": [
-          ["Net à payer avant impôt", "Salaire brut − cotisations salariales. C'est le montant qui serait versé sur le compte bancaire du salarié avant application du prélèvement à la source."],
-          ["Net payé (après impôt)", "Net fiscal − prélèvement à la source. C'est le montant réellement versé au salarié."],
-          ["Net fiscal (imposable)", "Net à payer avant impôt + part non déductible de la CSG + CRDS. Sert de base au calcul du prélèvement à la source."],
-          ["Net social", "Montant de référence utilisé pour le calcul de certaines aides sociales (ex. prime d'activité)."]
+          [
+            "Net à payer avant impôt",
+            "Salaire brut − cotisations salariales. C'est le montant qui serait versé sur le compte bancaire du salarié avant application du prélèvement à la source."
+          ],
+          [
+            "Net payé (après impôt)",
+            "Net fiscal − prélèvement à la source. C'est le montant réellement versé au salarié."
+          ],
+          [
+            "Net fiscal (imposable)",
+            "Net à payer avant impôt + part non déductible de la CSG + CRDS. Sert de base au calcul du prélèvement à la source."
+          ],
+          [
+            "Net social",
+            "Montant de référence utilisé pour le calcul de certaines aides sociales (ex. prime d'activité)."
+          ]
         ]
       }
     },
