@@ -24,8 +24,45 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Les charges",
+      "ancre": "sec-1"
+    },
+    {
+      "num": "2",
+      "titre": "Les produits",
+      "ancre": "sec-2"
+    },
+    {
+      "num": "3",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "4",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "5",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "6",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Les charges",
+        "ancre": "sec-1"
+      },
       "titre": "Trois activités, deux classes de comptes",
       "contenu": "Les charges et les produits sont catégorisés selon l'activité de l'entreprise : activité d'exploitation (activité normale et courante), activité financière (gestion financière de l'entreprise), activité exceptionnelle (événements inhabituels de l'entreprise). Les charges s'enregistrent dans les comptes de la classe 6, les produits dans les comptes de la classe 7. Au sein de chaque classe, les comptes sont organisés selon la nature de la charge ou du produit, et peuvent être subdivisés selon les fonctions concernées (ex. compte 61637 « Primes d'assurances – Assurance-transport sur ventes »). Au-delà des achats et ventes (fiches 6 à 9), il existe d'autres charges et produits qui suivent le même schéma de comptabilisation."
     },
@@ -143,6 +180,11 @@
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Les produits",
+        "ancre": "sec-2"
+      },
       "titre": "La codification des produits (comptes 70 à 76)",
       "contenu": "Les produits d'exploitation et financiers se répartissent en six grandes familles de comptes.",
       "tableau": {
