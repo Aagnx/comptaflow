@@ -26,8 +26,45 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Les titres financiers",
+      "ancre": "sec-1"
+    },
+    {
+      "num": "2",
+      "titre": "La comptabilisation",
+      "ancre": "sec-2"
+    },
+    {
+      "num": "3",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "4",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "5",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "6",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Les titres financiers",
+        "ancre": "sec-1"
+      },
       "titre": "Les typologies de titres financiers (comptes 261, 271-273, 50)",
       "contenu": "Les titres financiers se classent selon la durée de détention envisagée et l'objectif de leur acquisition (influence/contrôle, rentabilité de long terme, ou gain à brève échéance).",
       "tableau": {
@@ -87,6 +124,11 @@
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "La comptabilisation",
+        "ancre": "sec-2"
+      },
       "titre": "La comptabilisation des revenus issus de titres",
       "contenu": "La détention de titres procure des revenus financiers non soumis à TVA : des dividendes pour les titulaires de droits de propriété, des intérêts pour les détenteurs de droits de créance. Le compte de produit utilisé dépend de la nature du titre : 761 Produits de participation pour les titres de participation, 762 Produits des autres immobilisations financières pour les titres immobilisés et TIAP, 764 Revenus des VMP pour les valeurs mobilières de placement. Exemple filé (SA Genesis) : perception d'intérêts de bons du Trésor, puis annonce et versement d'un dividende sur des titres de participation (175 000 actions Grimberg sur 300 000, dividende de 1,20 € par action).",
       "tableau": {
