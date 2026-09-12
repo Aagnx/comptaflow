@@ -27,8 +27,50 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Les réductions commerciales",
+      "ancre": "sec-1"
+    },
+    {
+      "num": "2",
+      "titre": "Les réductions financières : l'escompte",
+      "ancre": "sec-2"
+    },
+    {
+      "num": "3",
+      "titre": "La comptabilisation des réductions",
+      "ancre": "sec-3"
+    },
+    {
+      "num": "4",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "5",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "6",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "7",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Les réductions commerciales",
+        "ancre": "sec-1"
+      },
       "titre": "Les trois réductions commerciales",
       "contenu": "Le rabais corrige un défaut (qualité, retard, non-conformité). La remise récompense l'importance de l'achat ou la profession de l'acheteur. La ristourne porte sur le volume global des opérations avec un même partenaire sur une période donnée. Les trois sont de nature commerciale et ne sont jamais comptabilisées séparément lorsqu'elles figurent sur la facture initiale : seul le net commercial est enregistré.",
       "tableau": {
@@ -128,6 +170,11 @@
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Les réductions financières : l'escompte",
+        "ancre": "sec-2"
+      },
       "titre": "Les réductions financières : l'escompte de règlement",
       "formule": "Net commercial − Escompte = Net financier ; TVA = Net financier × taux ; Net à payer = Net financier + TVA",
       "contenu": "L'escompte de règlement (compte 665 Escomptes accordés chez le vendeur / compte 765 Escomptes obtenus chez l'acheteur) récompense un paiement rapide ou comptant : c'est une réduction financière, jamais commerciale. Point clé à ne pas confondre avec les RRR : la TVA ne se calcule pas sur le net commercial mais sur le net financier, c'est-à-dire après déduction de l'escompte. Comme pour les réductions commerciales, l'escompte peut être accordé directement sur la facture de doit (au moment de la vente) ou a posteriori sur une facture d'avoir.",
@@ -175,6 +222,11 @@
       }
     },
     {
+      "partie": {
+        "num": "3",
+        "titre": "La comptabilisation des réductions",
+        "ancre": "sec-3"
+      },
       "titre": "Comptabilisation de l'achat sur facture de doit",
       "contenu": "L'écriture est identique à une facturation sans réduction (fiche 6) : l'achat est comptabilisé directement pour son net commercial, sans passer par un compte de réduction.",
       "tableau": {
