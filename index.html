@@ -128,6 +128,9 @@ a{color:inherit;text-decoration:none}
 .section{padding:60px 28px}
 .section-white{background:var(--surface)}
 .section-light{background:var(--mint)}
+.section-sky-tint{background:linear-gradient(135deg, rgba(37,197,233,.05) 0%, rgba(37,197,233,.18) 45%, rgba(16,110,133,.12) 100%)}
+.section-mint-tint{background:linear-gradient(135deg, rgba(242,255,246,.95) 0%, rgba(202,255,222,.65) 55%, rgba(242,255,246,.9) 100%)}
+.section-tea-tint{background:linear-gradient(135deg, rgba(202,255,222,.25) 0%, rgba(202,255,222,.6) 50%, rgba(169,232,188,.4) 100%)}
 .sec-header{text-align:center;margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto}
 .sec-eyebrow{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--cyan);letter-spacing:.1em;
   text-transform:uppercase;margin-bottom:10px}
@@ -243,27 +246,29 @@ a{color:inherit;text-decoration:none}
   flex-wrap:wrap;gap:16px}
 .ft-item{display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,.75)}
 .ft-item b{color:#fff}
-footer{background:var(--mint);padding:44px 28px 24px}
+footer{position:relative;overflow:hidden;
+  background:linear-gradient(135deg, var(--ink) 0%, var(--cyan-dark) 42%, var(--cyan) 68%, var(--sky) 100%);
+  padding:44px 28px 24px}
 .footer-grid{max-width:var(--maxw);margin:0 auto 30px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
-.f-col-title{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink-faint);letter-spacing:.08em;
+.f-col-title{font-family:var(--mono);font-size:11px;font-weight:600;color:rgba(255,255,255,.55);letter-spacing:.08em;
   text-transform:uppercase;margin-bottom:14px}
 .f-links{display:flex;flex-direction:column;gap:9px}
-.f-links a{font-size:13px;color:var(--ink-soft)}
-.f-links a:hover{color:var(--ink)}
-.footer-brand{font-family:var(--display);font-size:16px;font-weight:600;color:var(--ink);margin-bottom:8px}
-.footer-brand span{color:var(--cyan)}
-.footer-tagline{font-size:13px;color:var(--ink-soft);line-height:1.6;margin-bottom:16px}
+.f-links a{font-size:13px;color:rgba(255,255,255,.75)}
+.f-links a:hover{color:#fff}
+.footer-brand{font-family:var(--display);font-size:16px;font-weight:600;color:#fff;margin-bottom:8px}
+.footer-brand span{color:var(--sky)}
+.footer-tagline{font-size:13px;color:rgba(255,255,255,.72);line-height:1.6;margin-bottom:16px}
 .footer-social{display:flex;gap:8px}
-.footer-social a{width:32px;height:32px;border-radius:8px;background:#fff;border:1px solid var(--line);
+.footer-social a{width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
   display:flex;align-items:center;justify-content:center;font-size:14px}
-.footer-bottom{max-width:var(--maxw);margin:0 auto;border-top:1px solid var(--line);padding-top:18px;
+.footer-bottom{max-width:var(--maxw);margin:0 auto;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;
   display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.footer-copy{font-size:12px;color:var(--ink-faint)}
+.footer-copy{font-size:12px;color:rgba(255,255,255,.55)}
 .footer-legal{display:flex;gap:16px}
-.footer-legal a{font-size:12px;color:var(--ink-faint)}
-.footer-legal a:hover{color:var(--ink)}
+.footer-legal a{font-size:12px;color:rgba(255,255,255,.55)}
+.footer-legal a:hover{color:#fff}
 .pay-icons{display:flex;gap:6px;align-items:center}
-.pay-icons span{font-size:11px;color:var(--ink-faint);border:1px solid var(--line);border-radius:5px;padding:3px 6px;background:#fff}
+.pay-icons span{font-size:11px;color:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.25);border-radius:5px;padding:3px 6px;background:rgba(255,255,255,.08)}
 
 #back-to-top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;border-radius:50%;background:var(--cyan);
   color:#fff;border:none;font-size:19px;cursor:pointer;box-shadow:0 4px 14px rgba(35,134,137,.4);display:none;z-index:200}
@@ -430,7 +435,7 @@ footer{background:var(--mint);padding:44px 28px 24px}
   </div>
 </div>
 
-<section class="section section-light">
+<section class="section section-sky-tint">
   <div class="sec-header"><div class="sec-eyebrow">Aperçu</div><div class="sec-title">Un exercice en conditions réelles</div><div class="sec-sub">UE9 — Immobilisations corporelles</div></div>
   <div class="exercise-wrap">
     <div class="ex-card">
@@ -459,7 +464,7 @@ footer{background:var(--mint);padding:44px 28px 24px}
   </div>
 </section>
 
-<section class="section section-white">
+<section class="section section-mint-tint">
   <div class="sec-header"><div class="sec-eyebrow">Tarifs</div><div class="sec-title">Simple et transparent</div><div class="sec-sub">One-shot ou abonnement — sans engagement</div></div>
   <div class="pricing-grid">
     <div class="price-card">
@@ -490,7 +495,7 @@ footer{background:var(--mint);padding:44px 28px 24px}
   </div>
 </section>
 
-<section class="section section-light" id="faq">
+<section class="section section-tea-tint" id="faq">
   <div class="sec-header"><div class="sec-eyebrow">FAQ</div><div class="sec-title">Questions fréquentes</div></div>
   <div class="faq-wrap">
     <div class="faq-item"><div class="faq-q">Comptaflow couvre-t-il tout le programme DCG ?</div><div class="faq-a">On démarre avec l'UE9 (Comptabilité), puis on enrichit progressivement les 13 UE. Chaque UE suit le programme officiel.</div></div>
