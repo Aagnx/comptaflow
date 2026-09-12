@@ -1,547 +1,459 @@
-{
-  "id": "ue9-ch2",
-  "numero": 2,
-  "titre": "La réglementation et la normalisation comptables",
-  "axe": "Axe 1 — Introduction générale à la comptabilité",
-  "pageManuel": 13,
-  "exercicesUrl": "../exercices/ue9.html#fiche-2",
-  "motsCles": [
-    "Classe",
-    "Harmonisation comptable",
-    "Normalisation comptable",
-    "PCG",
-    "Plan de comptes",
-    "Principes comptables",
-    "Sous-classe"
-  ],
-  "utilite": {
-    "pourcentage": 20,
-    "niveau": "Fort — chapitre théorique le plus rentable",
-    "commentaire": "C'est LE chapitre théorique à maîtriser. Les principes comptables sont une question rédactionnelle récurrente : on te donne une situation et tu dois citer ET justifier le principe appliqué. La thématique « principes comptables et sources du droit comptable » figure dans environ 77 % des sujets de 2014 à 2025. À connaître par cœur : les 10 principes et leur application, les 7 classes du PCG, et quelles normes s'appliquent selon le type de comptes.",
-    "themesRecurrents": [
-      "Opérations courantes avec les tiers — 100 % des sujets",
-      "Opérations d'inventaire — 100 %",
-      "Immobilisations, amortissements et dépréciations — 92 %",
-      "Liquidation de la TVA — 85 %",
-      "Principes comptables et sources du droit comptable — 77 %"
-    ]
-  },
-  "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice interdite.",
-  "sommaire": [
-    {
-      "num": "1",
-      "titre": "La normalisation et l'harmonisation comptables",
-      "sousParties": [
-        {
-          "lettre": "A",
-          "titre": "Pourquoi normaliser la comptabilité ?",
-          "ancre": "sec-1a"
-        },
-        {
-          "lettre": "B",
-          "titre": "La recherche d'un langage commun",
-          "ancre": "sec-1b"
-        }
-      ]
-    },
-    {
-      "num": "2",
-      "titre": "Les normes comptables applicables en France",
-      "ancre": "sec-2"
-    },
-    {
-      "num": "3",
-      "titre": "Le Plan comptable général (PCG)",
-      "sousParties": [
-        {
-          "lettre": "A",
-          "titre": "Présentation et contenu du PCG",
-          "ancre": "sec-3a"
-        },
-        {
-          "lettre": "B",
-          "titre": "Les principes comptables",
-          "ancre": "sec-3b"
-        }
-      ]
-    },
-    {
-      "num": "4",
-      "titre": "Le normalisateur français",
-      "ancre": "sec-4"
-    },
-    {
-      "num": "5",
-      "titre": "Utilité à l'examen",
-      "ancre": "sec-utilite"
-    },
-    {
-      "num": "6",
-      "titre": "Vocabulaire du chapitre",
-      "ancre": "sec-vocab"
-    },
-    {
-      "num": "7",
-      "titre": "Questions types à réviser",
-      "ancre": "sec-questions"
-    },
-    {
-      "num": "8",
-      "titre": "Sujets antérieurs liés au chapitre",
-      "ancre": "sec-annales"
-    }
-  ],
-  "notionsCles": [
-    {
-      "partie": {
-        "num": "1",
-        "titre": "La normalisation et l'harmonisation comptables",
-        "ancre": "sec-1"
-      },
-      "sousPartie": {
-        "lettre": "A",
-        "titre": "Pourquoi normaliser la comptabilité ?",
-        "ancre": "sec-1a"
-      },
-      "titre": "Normalisation et harmonisation",
-      "contenu": [
-        "La normalisation comptable est un processus qui vise à imposer des normes pour encadrer les pratiques comptables.",
-        "L'harmonisation comptable est un processus qui consiste à rapprocher des règles et pratiques comptables divergentes. Ce sont deux processus distincts mais complémentaires."
-      ],
-      "exemple": "Fixer qu'un chocolat contient au moins 35 % de cacao est une norme ; une directive qui met d'accord les États européens sur l'ajout de matières grasses végétales relève de l'harmonisation ; quand ces conditions s'imposent à tous, elles deviennent une norme européenne (normalisation)."
-    },
-    {
-      "titre": "La diversité des besoins des utilisateurs",
-      "contenu": "Établie selon un cadre unique, la comptabilité doit répondre aux besoins d'information de partenaires très différents :",
-      "tableau": {
-        "colonnes": [
-          "Utilisateurs",
-          "Informations utiles"
-        ],
-        "lignes": [
-          [
-            "Investisseurs / propriétaires",
-            "Rentabilité, risque et stratégie de l'entreprise"
-          ],
-          [
-            "Dirigeants",
-            "Mesure et contrôle de la performance"
-          ],
-          [
-            "Fournisseurs et autres créanciers",
-            "Solvabilité de l'entreprise"
-          ],
-          [
-            "Clients et autres débiteurs",
-            "Continuité d'exploitation"
-          ],
-          [
-            "Salariés",
-            "Continuité d'exploitation et rémunération (politique sociale, intéressement, participation)"
-          ],
-          [
-            "Bailleurs de fonds (institutions financières)",
-            "Stabilité financière, choix de la structure financière"
-          ],
-          [
-            "État (administrations fiscales et sociales)",
-            "Calcul des charges fiscales et sociales"
-          ]
-        ]
-      }
-    },
-    {
-      "titre": "Des règles comptables propres à chaque pays",
-      "contenu": "Les règles comptables ne sont pas les mêmes partout : deux grandes traditions coexistent.",
-      "tableau": {
-        "colonnes": [
-          "Modèle comptable",
-          "Approche dominante"
-        ],
-        "lignes": [
-          [
-            "Type continental (ex. France)",
-            "Juridique et patrimoniale"
-          ],
-          [
-            "Type anglo-saxon",
-            "Économique et financière"
-          ]
-        ]
-      }
-    },
-    {
-      "titre": "De la réalité économique à l'information comptable",
-      "contenu": "L'information comptable n'est pas un décalque neutre de la réalité : sa construction dépend de la mise en pratique des règles (appréciations, choix, présentation). D'où une part de subjectivité, que la normalisation cherche justement à réduire.",
-      "visuel": {
-        "type": "flux",
-        "entree": "Réalité économique",
-        "sortie": "Informations comptables",
-        "etapes": [
-          {
-            "label": "Appréciations",
-            "couleur": "blue"
-          },
-          {
-            "label": "Choix comptables",
-            "couleur": "teal"
-          },
-          {
-            "label": "Manipulations comptables",
-            "couleur": "violet"
-          }
-        ]
-      }
-    },
-    {
-      "sousPartie": {
-        "lettre": "B",
-        "titre": "La recherche d'un langage commun",
-        "ancre": "sec-1b"
-      },
-      "titre": "La recherche d'un langage commun",
-      "contenu": "Les normes comptables définissent un cadre pour traduire la réalité économique en comptabilité : la normalisation vise à codifier ce langage. Pour que les utilisateurs et les pays partagent un langage commun, l'harmonisation cherche à rendre compatibles les différentes normes et pratiques."
-    },
-    {
-      "partie": {
-        "num": "2",
-        "titre": "Les normes comptables applicables en France",
-        "ancre": "sec-2"
-      },
-      "titre": "Les normes applicables en France",
-      "contenu": "La norme dépend du type de comptes établis :",
-      "tableau": {
-        "colonnes": [
-          "Type de comptes",
-          "Normes applicables"
-        ],
-        "lignes": [
-          [
-            "Comptes individuels",
-            "Plan comptable général (PCG)"
-          ],
-          [
-            "Comptes consolidés — groupe coté",
-            "Normes internationales IAS/IFRS (obligatoire)"
-          ],
-          [
-            "Comptes consolidés — groupe non coté",
-            "Directives européennes ou, sur option, IAS/IFRS"
-          ]
-        ]
-      }
-    },
-    {
-      "titre": "Les comptes annuels",
-      "formule": "Comptes annuels = Bilan + Compte de résultat + Annexe",
-      "contenu": "Les comptes annuels forment un tout indissociable. Le bilan présente le patrimoine, le compte de résultat l'activité de l'exercice, et l'annexe complète et commente les deux précédents.",
-      "coeur": "À connaître par cœur pour l'examen :)"
-    },
-    {
-      "titre": "Régularité, sincérité et image fidèle",
-      "reference": "Art. L123-23 du Code de commerce",
-      "contenu": "La comptabilité doit être régulière et sincère et donner une image fidèle du patrimoine et de l'activité de l'entreprise. Dès lors qu'elle est tenue selon les normes applicables, elle est présumée sincère et peut servir de preuve en matière de droit commercial.",
-      "surlignes": [
-        "régulière",
-        "sincère",
-        "image fidèle",
-        "preuve"
-      ],
-      "coeur": "À connaître par cœur pour l'examen :)"
-    },
-    {
-      "partie": {
-        "num": "3",
-        "titre": "Le Plan comptable général (PCG)",
-        "ancre": "sec-3"
-      },
-      "sousPartie": {
-        "lettre": "A",
-        "titre": "Présentation et contenu du PCG",
-        "ancre": "sec-3a"
-      },
-      "titre": "Le Plan comptable général (PCG)",
-      "reference": "Règlement ANC 2014-03, modifié par 2022-06",
-      "contenu": [
-        "Le PCG présente les règles et principes d'établissement et de présentation des comptes. Il précise : les objets et principes de la comptabilité ; la définition des actifs, passifs, produits et charges ; les règles de comptabilisation et d'évaluation ; la tenue, la structure et le fonctionnement des comptes ; la définition des documents de synthèse. Il organise enfin le plan des comptes en classes.",
-        "À jour : la réforme du PCG (règlement ANC 2022-06, applicable depuis le 1ᵉʳ janvier 2025) a modernisé la nomenclature et la présentation des états financiers, mais les 7 classes et les principes comptables restent inchangés."
-      ]
-    },
-    {
-      "titre": "Les 7 classes de comptes du PCG",
-      "contenu": "Chaque classe est subdivisée en sous-classes, et l'entreprise adapte son propre plan de comptes. Les classes 1 à 5 sont les comptes de bilan ; les classes 6 et 7 sont les comptes de gestion (charges et produits).",
-      "tableau": {
-        "colonnes": [
-          "Classe",
-          "Nature des comptes"
-        ],
-        "lignes": [
-          [
-            "Classe 1",
-            "Comptes de capitaux"
-          ],
-          [
-            "Classe 2",
-            "Comptes d'immobilisations"
-          ],
-          [
-            "Classe 3",
-            "Comptes de stocks"
-          ],
-          [
-            "Classe 4",
-            "Comptes de tiers"
-          ],
-          [
-            "Classe 5",
-            "Comptes financiers"
-          ],
-          [
-            "Classe 6",
-            "Comptes de charges"
-          ],
-          [
-            "Classe 7",
-            "Comptes de produits"
-          ]
-        ],
-        "groupesLignes": [
-          "bilan",
-          "bilan",
-          "bilan",
-          "bilan",
-          "bilan",
-          "resultat",
-          "resultat"
-        ],
-        "legendeGroupes": [
-          {
-            "cle": "bilan",
-            "label": "Comptes de bilan (classes 1 à 5)"
-          },
-          {
-            "cle": "resultat",
-            "label": "Comptes de résultat (classes 6 et 7)"
-          }
-        ]
-      }
-    },
-    {
-      "sousPartie": {
-        "lettre": "B",
-        "titre": "Les principes comptables",
-        "ancre": "sec-3b"
-      },
-      "titre": "Les 10 principes comptables",
-      "contenu": "La comptabilité doit fournir une image fidèle de la réalité économique, établie selon les principes suivants (à connaître par cœur) :",
-      "tableau": {
-        "colonnes": [
-          "Principe",
-          "Définition"
-        ],
-        "lignes": [
-          [
-            "Régularité",
-            "Conformité aux règles et procédures en vigueur"
-          ],
-          [
-            "Sincérité",
-            "Appréciation objective et de bonne foi de la réalité économique"
-          ],
-          [
-            "Continuité d'exploitation",
-            "Présomption de poursuite d'activité (à distinguer de la liquidation)"
-          ],
-          [
-            "Indépendance des exercices",
-            "Rattachement des charges et des produits à l'exercice concerné"
-          ],
-          [
-            "Non-compensation",
-            "Interdiction de compenser actif/passif et charges/produits"
-          ],
-          [
-            "Permanence des méthodes",
-            "Non-modification des règles et options appliquées, sauf cas exceptionnel justifié"
-          ],
-          [
-            "Prudence",
-            "Prise en compte des événements futurs défavorables connus à la clôture"
-          ],
-          [
-            "Intangibilité du bilan d'ouverture",
-            "Bilan de clôture N-1 = bilan d'ouverture N"
-          ],
-          [
-            "Coût historique",
-            "Valorisation au coût d'entrée, sans tenir compte de l'inflation ni de l'appréciation"
-          ],
-          [
-            "Importance relative",
-            "Prise en compte des seules informations pertinentes et utiles aux documents comptables"
-          ]
-        ]
-      },
-      "coeur": "À connaître par cœur pour l'examen :)"
-    },
-    {
-      "titre": "Reconnaître un principe (exemples d'application)",
-      "contenu": "L'exercice classique de l'examen : une situation est donnée, il faut identifier le principe. Entraîne-toi avec ces cas types :",
-      "tableau": {
-        "colonnes": [
-          "Situation",
-          "Principe appliqué"
-        ],
-        "lignes": [
-          [
-            "On ne constate pas les plus-values latentes sur titres, mais on enregistre une charge en cas de moins-value",
-            "Prudence"
-          ],
-          [
-            "Impossible de changer de mode de comptabilisation selon le résultat voulu (sauf changement justifié, exceptionnel)",
-            "Permanence des méthodes"
-          ],
-          [
-            "Acomptes versés et dettes fournisseurs figurent séparément à l'actif et au passif",
-            "Non-compensation"
-          ],
-          [
-            "On ne peut pas imputer sur l'ouverture des comptes des erreurs constatées après la clôture précédente",
-            "Intangibilité du bilan d'ouverture"
-          ],
-          [
-            "Intérêts d'un emprunt de janvier N payés en N+1 : rattachés à l'exercice N",
-            "Indépendance des exercices"
-          ],
-          [
-            "Impossible de tenir compte de l'inflation pour réévaluer un bien en fin d'exercice",
-            "Coût historique"
-          ]
-        ]
-      }
-    },
-    {
-      "partie": {
-        "num": "4",
-        "titre": "Le normalisateur français",
-        "ancre": "sec-4"
-      },
-      "titre": "Le normalisateur : l'Autorité des normes comptables (ANC)",
-      "contenu": [
-        "L'ANC (créée en 2009) est le normalisateur comptable français. Ses missions : édicter les prescriptions comptables générales et sectorielles que doivent respecter les personnes tenues d'établir des documents comptables ; donner un avis sur les textes réglementaires contenant des dispositions comptables ; participer à l'élaboration des normes internationales et représenter la France ; conduire des travaux d'analyse et émettre des recommandations.",
-        "Conseil de l'expert : suivre de près l'évolution de la réglementation (lettres d'information de l'ANC, doctrine comptable)."
-      ]
-    }
-  ],
-  "vocabulaire": [
-    {
-      "terme": "Normalisation comptable",
-      "definition": "Processus visant à imposer des normes pour encadrer les pratiques comptables."
-    },
-    {
-      "terme": "Harmonisation comptable",
-      "definition": "Processus consistant à rapprocher des règles et pratiques comptables divergentes."
-    },
-    {
-      "terme": "Principes comptables",
-      "definition": "Conventions fondamentales garantissant une image fidèle (prudence, indépendance des exercices, coût historique...)."
-    },
-    {
-      "terme": "PCG",
-      "definition": "Plan comptable général : référentiel des règles d'établissement et de présentation des comptes en France."
-    },
-    {
-      "terme": "Classe",
-      "definition": "Premier niveau du plan de comptes du PCG, numérotée de 1 à 7 (+ 8 et 9 pour cas particuliers)."
-    },
-    {
-      "terme": "Sous-classe",
-      "definition": "Subdivision d'une classe de comptes."
-    },
-    {
-      "terme": "Plan de comptes",
-      "definition": "Liste des comptes utilisés par une entreprise, adaptée à partir du PCG."
-    },
-    {
-      "terme": "Comptes individuels",
-      "definition": "Comptes d'une entité seule ; en France, établis selon le PCG."
-    },
-    {
-      "terme": "Comptes consolidés",
-      "definition": "Comptes d'un groupe ; IAS/IFRS obligatoires si le groupe est coté."
-    },
-    {
-      "terme": "IAS / IFRS",
-      "definition": "Normes comptables internationales (International Accounting Standards / International Financial Reporting Standards)."
-    },
-    {
-      "terme": "Comptabilité continentale",
-      "definition": "Modèle d'approche juridique et patrimoniale (ex. France)."
-    },
-    {
-      "terme": "Comptabilité anglo-saxonne",
-      "definition": "Modèle d'approche économique et financière."
-    },
-    {
-      "terme": "ANC",
-      "definition": "Autorité des normes comptables : normalisateur comptable français (créée en 2009)."
-    },
-    {
-      "terme": "Coût historique",
-      "definition": "Valorisation d'un élément à son coût d'entrée, sans réévaluation ultérieure."
-    },
-    {
-      "terme": "Juste valeur",
-      "definition": "Valorisation à la valeur de marché ; logique privilégiée par les IAS/IFRS, par opposition au coût historique."
-    },
-    {
-      "terme": "Cadre conceptuel",
-      "definition": "Ensemble de principes fondateurs sous-tendant les normes (notamment celui de l'IASB pour les IFRS)."
-    },
-    {
-      "terme": "Comptes annuels",
-      "definition": "Ensemble indissociable : bilan + compte de résultat + annexe."
-    },
-    {
-      "terme": "Image fidèle",
-      "definition": "Représentation la plus proche possible de la réalité du patrimoine, de la situation financière et du résultat de l'entité."
-    },
-    {
-      "terme": "Régularité",
-      "definition": "Conformité de la comptabilité aux règles et procédures en vigueur."
-    },
-    {
-      "terme": "Sincérité",
-      "definition": "Application de bonne foi des règles, en fonction de la connaissance que les responsables ont de la réalité."
-    }
-  ],
-  "questionsTypes": [
-    "Distinguer la normalisation et l'harmonisation comptables.",
-    "Citer et définir les principaux principes comptables.",
-    "Une situation est donnée : identifier et justifier le principe comptable appliqué.",
-    "Quelles normes s'appliquent aux comptes individuels, aux comptes consolidés cotés et non cotés ?",
-    "Distinguer le coût historique de la juste valeur.",
-    "Un terrain a doublé de valeur : peut-on constater cette hausse en comptabilité ? Justifier.",
-    "Peut-on renoncer à amortir pour éviter un résultat négatif ? Justifier.",
-    "Distinguer la comptabilité de type continental et de type anglo-saxon.",
-    "Présenter le rôle et les missions de l'ANC.",
-    "Citer les 7 classes de comptes du PCG.",
-    "Quels documents composent les comptes annuels ?"
-  ],
-  "annales": {
-    "note": "Ce chapitre est rarement un dossier entier, mais ses notions — surtout les principes comptables — reviennent en questions rédactionnelles réparties dans les dossiers. Thème présent dans environ 77 % des sujets. Ajoute ici tes propres annales au fil des révisions (année + question + corrigé).",
-    "questionsRedactionnellesRecurrentes": [
-      "Identifier et justifier le principe comptable appliqué à une situation.",
-      "Distinguer normalisation et harmonisation.",
-      "Normes applicables selon le type de comptes (individuels / consolidés).",
-      "Coût historique vs juste valeur."
-    ],
-    "entrees": [
-      {
-        "annee": "2023",
-        "question": "Identifier et justifier le principe comptable applicable à la régularisation de la consommation d'électricité de décembre (facture reçue l'exercice suivant).",
-        "corrige": "Principe d'indépendance des exercices : les charges se rattachent à l'exercice qu'elles concernent. La consommation de décembre N est une charge de N, constatée via une charge à payer même si la facture arrive en N+1."
-      }
-    ]
-  }
+/* ==========================================================================
+   Comptaflow — fiche-detail.css
+   Feuille de style des fiches détaillées de révision (UE9).
+
+   Palette de marque (révisée — famille menthe/cyan/encre, pensée pour une
+   lecture prolongée sans fatigue oculaire) :
+     Mint Cream #F2FFF6 · Tea Green #CAFFDE · Sky Aqua #25C5E9
+     Dark Cyan  #238689 · Ink Black #021225
+
+   Rôle des couleurs (structurel, pas décoratif) — les noms de variables
+   historiques (--blue, --teal, --violet, --amber, --red, --indigo) sont
+   conservés à l'identique car ils sont référencés directement par les
+   classes générées depuis les fiches JSON (t-blue, c-teal, etc.) : seules
+   leurs VALEURS changent ici, aucune fiche existante n'a besoin d'être
+   modifiée.
+     --blue (Dark Cyan)   = notions clés
+     --teal (Sky Aqua)    = vocabulaire
+     --violet (Ink Black) = questions types
+     --amber (vert dérivé de Tea Green) = ce qui concerne l'examen
+                                            (utilité + annales) — l'accent
+                                            "à retenir en priorité"
+     --red / --indigo     = tons additionnels pour les schémas (métiers,
+                             pyramide), dérivés de la même famille cyan/encre
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+:root {
+  /* ---- palette de base fournie ---- */
+  --mint: #F2FFF6;
+  --tea: #CAFFDE;
+  --sky: #25C5E9;
+  --cyan: #238689;
+  --inkblack: #021225;
+
+  /* ---- rôles sémantiques (mêmes noms qu'avant, nouvelles valeurs) ---- */
+  --blue: var(--cyan);
+  --blue-ink: #1B6669;
+  --teal: var(--sky);
+  --teal-ink: #106E85;
+  --violet: var(--inkblack);
+  --violet-ink: #12263B;
+  --amber: #1F6B4A;
+  --amber-ink: #14523A;
+  --red: #0B4A52;
+  --red-ink: #083539;
+  --indigo: #08333A;
+
+  --ink: var(--inkblack);
+  --ink-soft: #4A5D63;
+  --ink-faint: #7C8F93;
+  --line: #DCEEE2;
+  --surface: #FFFFFF;
+  --bg: var(--mint);
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 2px rgba(2, 18, 37, .04), 0 12px 32px rgba(2, 18, 37, .06);
+  --maxw: 860px;
+
+  --display: 'Space Grotesk', system-ui, sans-serif;
+  --body: 'Inter', system-ui, sans-serif;
+  --mono: 'IBM Plex Mono', ui-monospace, monospace;
 }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--body);
+  color: var(--ink);
+  background: #fff;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+
+/* ---------- Barre supÃ©rieure / retour ---------- */
+.topbar {
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .8);
+  backdrop-filter: saturate(1.2) blur(6px);
+  position: sticky; top: 0; z-index: 20;
+}
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; }
+.brand { font-family: var(--display); font-weight: 700; letter-spacing: -.02em; color: var(--ink); text-decoration: none; font-size: 1.05rem; }
+.brand span { color: var(--blue); }
+.back { font-size: .9rem; color: var(--ink-soft); text-decoration: none; display: inline-flex; align-items: center; gap: .4rem; }
+.back:hover { color: var(--blue-ink); }
+
+/* ---------- En-tête de fiche : bannière hero dégradée (même palette que l'accueil) ---------- */
+.fiche-header {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 46px calc(50vw - 50%) 40px;
+  background: linear-gradient(135deg, var(--violet) 0%, var(--blue-ink) 42%, var(--blue) 68%, var(--teal) 100%);
+  overflow: hidden;
+}
+.fiche-header::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(700px 320px at 88% -10%, rgba(255,255,255,.12), transparent 60%);
+}
+.fiche-header > * { position: relative; }
+.eyebrow {
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .16em;
+  text-transform: uppercase; color: rgba(255,255,255,.68); margin: 0 0 14px;
+}
+.fiche-num {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-family: var(--mono); font-weight: 600; font-size: .8rem;
+  color: #fff; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.28);
+  padding: .3rem .7rem; border-radius: 999px; margin-bottom: 14px; backdrop-filter: blur(4px);
+}
+h1.fiche-title {
+  font-family: var(--display); font-weight: 700; letter-spacing: -.025em; color: #fff;
+  font-size: clamp(1.9rem, 5vw, 2.7rem); line-height: 1.08; margin: 0 0 18px;
+}
+.motscles { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; }
+.chip {
+  font-size: .82rem; color: rgba(255,255,255,.88); background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: .32rem .74rem;
+}
+.header-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 8px; }
+.btn-exos {
+  display: inline-flex; align-items: center; gap: .6rem;
+  font-family: var(--display); font-weight: 700; font-size: .98rem;
+  color: var(--ink); text-decoration: none;
+  background: #fff;
+  padding: .78rem 1.3rem; border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(2, 18, 37, .28);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn-exos:hover { transform: translateY(-2px); background: var(--teal); }
+.btn-exos .arrow { transition: transform .15s ease; }
+.btn-exos:hover .arrow { transform: translateX(3px); }
+
+/* ---------- Sections ---------- */
+.section { margin: 34px 0; }
+.section-head { display: flex; align-items: center; gap: .7rem; margin: 0 0 18px; }
+.section-tag {
+  font-family: var(--mono); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
+  padding: .28rem .6rem; border-radius: 7px; color: #fff; white-space: nowrap;
+}
+.section-head h2 {
+  font-family: var(--display); font-weight: 600; letter-spacing: -.02em;
+  font-size: 1.3rem; margin: 0;
+}
+.t-blue   { background: var(--blue); }
+.t-teal   { background: var(--teal); }
+.t-violet { background: var(--violet); }
+.t-amber  { background: var(--amber); }
+
+.card {
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 22px 24px;
+}
+
+/* ---------- BaromÃ¨tre d'utilitÃ© (Ã©lÃ©ment signature) ---------- */
+.gauge-card { padding: 26px 24px; border-top: 4px solid var(--amber); }
+.gauge-top { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.gauge-num { font-family: var(--mono); font-weight: 600; font-size: 2.6rem; color: var(--amber-ink); line-height: 1; }
+.gauge-num small { font-size: 1.1rem; }
+.gauge-level { font-family: var(--display); font-weight: 600; color: var(--ink); font-size: 1rem; }
+.gauge-track {
+  position: relative; height: 12px; border-radius: 999px; margin: 16px 0 6px;
+  background: linear-gradient(90deg, var(--tea) 0%, var(--sky) 55%, var(--cyan) 100%);
+  overflow: hidden;
+}
+.gauge-fill {
+  position: absolute; inset: 0 auto 0 0; width: 0;
+  background: linear-gradient(90deg, var(--sky), var(--cyan));
+  border-radius: 999px; transition: width 1.1s cubic-bezier(.22, 1, .36, 1);
+}
+.gauge-scale { display: flex; justify-content: space-between; font-family: var(--mono); font-size: .68rem; color: var(--ink-soft); }
+.gauge-comment { margin: 16px 0 0; color: var(--ink-soft); font-size: .95rem; }
+.themes { margin: 18px 0 0; padding: 16px 0 0; border-top: 1px dashed var(--line); }
+.themes h4 { font-family: var(--display); font-size: .82rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-soft); margin: 0 0 10px; }
+.themes ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 7px; }
+.themes li { font-size: .9rem; display: flex; gap: .55rem; }
+.themes li::before { content: "▸"; color: var(--amber); }
+
+/* ---------- Notions ---------- */
+.notion { border: 1px solid var(--line); border-left: 4px solid var(--blue); border-radius: var(--radius-sm); padding: 16px 18px; background: var(--surface); }
+.notion + .notion { margin-top: 12px; }
+.notion h3 { font-family: var(--display); font-weight: 600; font-size: 1.04rem; margin: 0 0 6px; }
+.notion p { margin: 0; color: var(--ink-soft); }
+.ref {
+  display: inline-block; font-family: var(--mono); font-size: .72rem; font-weight: 600;
+  color: var(--blue-ink); background: rgba(35, 134, 137, .1);
+  padding: .16rem .5rem; border-radius: 6px; margin: 0 0 8px;
+}
+.formule {
+  font-family: var(--mono); font-weight: 600; color: var(--ink);
+  background: #EAF6F5; border: 1px solid #CDEBEA; border-radius: 8px;
+  padding: .6rem .8rem; margin: 8px 0 4px; text-align: center; font-size: .95rem;
+}
+
+/* ---------- Tableau comparatif ---------- */
+.table-scroll { overflow-x: auto; margin-top: 12px; border-radius: var(--radius-sm); border: 1px solid var(--line); }
+table.compare { width: 100%; border-collapse: collapse; min-width: 620px; font-size: .88rem; }
+table.compare th, table.compare td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--line); }
+table.compare thead th { background: var(--blue); color: #fff; font-family: var(--display); font-weight: 600; }
+table.compare tbody th { background: #EAF6F5; font-weight: 600; color: var(--ink); white-space: normal; width: 22%; max-width: 220px; vertical-align: top; }
+table.compare tbody td { vertical-align: top; }
+table.compare tbody tr:last-child td, table.compare tbody tr:last-child th { border-bottom: 0; }
+
+/* ---------- Timeline ---------- */
+.timeline { list-style: none; margin: 12px 0 0; padding: 0 0 0 6px; }
+.timeline li { display: grid; grid-template-columns: 66px 1fr; gap: 14px; padding: 8px 0; border-left: 2px solid var(--line); padding-left: 16px; margin-left: 6px; position: relative; }
+.timeline li::before { content: ""; position: absolute; left: -6px; top: 14px; width: 10px; height: 10px; border-radius: 50%; background: var(--blue); border: 2px solid #fff; }
+.timeline .year { font-family: var(--mono); font-weight: 600; color: var(--blue-ink); }
+.timeline .event { color: var(--ink-soft); font-size: .92rem; }
+
+/* ---------- Vocabulaire ---------- */
+.vocab { display: grid; gap: 10px; }
+.vocab dt { font-family: var(--display); font-weight: 600; color: var(--teal-ink); }
+.vocab dd { margin: 2px 0 0; color: var(--ink-soft); font-size: .93rem; }
+.vocab .row { border: 1px solid var(--line); border-left: 4px solid var(--teal); border-radius: var(--radius-sm); padding: 12px 16px; background: var(--surface); }
+
+/* ---------- Questions types ---------- */
+.qlist { counter-reset: q; list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.qlist li {
+  counter-increment: q; position: relative; padding: 14px 16px 14px 52px;
+  background: var(--surface); border: 1px solid var(--line); border-left: 4px solid var(--violet);
+  border-radius: var(--radius-sm); font-size: .96rem;
+}
+.qlist li::before {
+  content: counter(q, decimal-leading-zero); position: absolute; left: 16px; top: 12px;
+  font-family: var(--mono); font-weight: 600; font-size: .82rem; color: var(--violet-ink);
+}
+
+/* ---------- Annales ---------- */
+.annales-card { border-top: 4px solid var(--amber); }
+.annales-note { color: var(--ink-soft); font-size: .93rem; background: #E7FBEE; border: 1px solid #B9EFC7; border-radius: var(--radius-sm); padding: 14px 16px; margin: 0 0 16px; }
+.annale { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 16px; margin-top: 12px; }
+.annale .year-tag { font-family: var(--mono); font-size: .74rem; font-weight: 600; color: var(--amber-ink); background: rgba(31, 107, 74, .12); padding: .18rem .55rem; border-radius: 6px; }
+.annale h4 { font-family: var(--display); margin: 10px 0 6px; font-size: 1rem; }
+.annale .corrige { color: var(--ink-soft); font-size: .93rem; }
+.recur { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.recur li { font-size: .9rem; display: flex; gap: .5rem; color: var(--ink-soft); }
+.recur li::before { content: "•"; color: var(--amber); }
+.empty { font-style: italic; color: var(--ink-soft); font-size: .9rem; padding: 10px 0; }
+
+/* ---------- Info format Ã©preuve ---------- */
+.format-note { font-size: .88rem; color: var(--ink-soft); border-left: 3px solid var(--blue); padding: 4px 0 4px 14px; margin: 16px 0; }
+
+/* ---------- Pied ---------- */
+.foot { color: var(--ink-soft); font-size: .82rem; text-align: center; padding: 40px 0 60px; }
+
+/* ---------- Ã‰tats de chargement / erreur ---------- */
+.state { text-align: center; padding: 80px 20px; color: var(--ink-soft); }
+.state .spin { width: 26px; height: 26px; border: 3px solid var(--line); border-top-color: var(--blue); border-radius: 50%; margin: 0 auto 14px; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 560px) {
+  .fiche-header { padding-top: 30px; }
+  .timeline li { grid-template-columns: 54px 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gauge-fill { transition: none; }
+  .btn-exos, .btn-exos .arrow { transition: none; }
+  .spin { animation: none; }
+}
+
+/* ==========================================================================
+   SchÃ©mas visuels (flux, pyramide, mÃ©tiers, trÃ©sorerie)
+   ========================================================================== */
+/* --red, --red-ink et --indigo sont déjà définis dans le :root principal ci-dessus */
+
+/* ---- Flux (systÃ¨me comptable) ---- */
+.flux { margin-top: 16px; }
+.flux-row { display: flex; flex-wrap: wrap; align-items: stretch; gap: 8px; }
+.flux-step {
+  flex: 1 1 0; min-width: 130px; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 16px 12px; border-radius: 12px; color: #fff;
+  font-family: var(--display); font-weight: 600; font-size: .92rem; line-height: 1.25;
+}
+.flux-step.c-blue { background: var(--blue); }
+.flux-step.c-teal { background: var(--teal); }
+.flux-step.c-violet { background: var(--violet); }
+.flux-arrow { display: flex; align-items: center; color: var(--ink-soft); font-size: 1.4rem; font-weight: 700; }
+.flux-io { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+.flux-tag {
+  font-size: .85rem; padding: .45rem .8rem; border-radius: 9px; background: #EEF6F1;
+  color: var(--ink); border: 1px solid var(--line); white-space: nowrap;
+}
+.flux-tag.in { border-left: 3px solid var(--blue); }
+.flux-tag.out { border-left: 3px solid var(--violet); }
+.flux-connector {
+  flex: 1; height: 0; border-top: 2px dashed var(--line); position: relative;
+}
+.flux-connector::after {
+  content: "▶"; position: absolute; right: -2px; top: 50%; transform: translateY(-50%);
+  color: var(--line); font-size: .7rem;
+}
+
+/* ---- Pyramide de Kelsen (sources du droit) ---- */
+.pyramide { margin-top: 18px; display: flex; gap: 12px; align-items: stretch; }
+.pyr-axis {
+  display: flex; align-items: center; justify-content: center;
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .1em;
+  color: var(--ink-soft); text-transform: uppercase; white-space: nowrap;
+}
+.pyr-stack { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.pyr-tier {
+  border-radius: 10px; padding: 12px 18px; color: #fff; text-align: center;
+  box-shadow: var(--shadow); transition: transform .12s ease;
+}
+.pyr-tier:hover { transform: scale(1.015); }
+.pyr-niveau { display: block; font-family: var(--display); font-weight: 700; font-size: .98rem; }
+.pyr-items { display: block; font-size: .8rem; opacity: .93; margin-top: 3px; line-height: 1.35; }
+.pyr-tier.tier-0 { background: linear-gradient(135deg, #021225, #1B6669); }
+.pyr-tier.tier-1 { background: linear-gradient(135deg, #1B6669, #238689); }
+.pyr-tier.tier-2 { background: linear-gradient(135deg, #238689, #25C5E9); }
+.pyr-tier.tier-3 { background: linear-gradient(135deg, #106E85, #25C5E9); }
+
+/* ---- Escalier des mÃ©tiers ---- */
+.metiers { margin-top: 16px; }
+.metiers-stair { display: flex; flex-direction: column; gap: 10px; }
+.metier-step {
+  display: flex; gap: 14px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 12px; padding: 14px 16px 14px 18px; position: relative; overflow: hidden;
+  margin-left: calc(var(--i) * 22px);
+}
+.metier-step::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; }
+.metier-step.c-blue::before   { background: var(--blue); }
+.metier-step.c-teal::before   { background: var(--teal); }
+.metier-step.c-violet::before { background: var(--violet); }
+.metier-step.c-amber::before  { background: var(--amber); }
+.metier-step.c-red::before    { background: var(--red); }
+.metier-badge {
+  flex: 0 0 auto; align-self: flex-start; font-family: var(--mono); font-weight: 600;
+  font-size: .8rem; color: #fff; padding: .42rem .62rem; border-radius: 8px; white-space: nowrap;
+}
+.metier-step.c-blue   .metier-badge { background: var(--blue); }
+.metier-step.c-teal   .metier-badge { background: var(--teal); }
+.metier-step.c-violet .metier-badge { background: var(--violet); }
+.metier-step.c-amber  .metier-badge { background: var(--amber); }
+.metier-step.c-red    .metier-badge { background: var(--red); }
+.metier-body { flex: 1; min-width: 0; }
+.metier-top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.metier-nom { font-family: var(--display); font-weight: 600; font-size: 1rem; }
+.metier-duree { font-family: var(--mono); font-size: .74rem; color: var(--ink-soft); }
+.metier-diplome { font-size: .85rem; color: var(--blue-ink); font-weight: 500; margin: 3px 0 4px; }
+.metier-missions { font-size: .88rem; color: var(--ink-soft); }
+
+.passerelles { margin-top: 14px; background: #EDF2F3; border: 1px solid #D6E2E3; border-radius: 12px; padding: 14px 16px; }
+.passerelles h4 { margin: 0 0 8px; font-family: var(--display); font-size: .82rem; color: var(--violet-ink); text-transform: uppercase; letter-spacing: .06em; }
+.passerelles ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+.passerelles li { font-size: .88rem; color: var(--ink-soft); display: flex; gap: .55rem; }
+.passerelles li::before { content: "→"; color: var(--violet); font-weight: 700; }
+
+/* ---- SchÃ©ma trÃ©sorerie / valeur ---- */
+.treso { margin-top: 16px; }
+.treso svg { width: 100%; height: auto; display: block; }
+.treso-legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 10px; font-size: .85rem; color: var(--ink-soft); }
+.treso-legend span { display: inline-flex; align-items: center; gap: .45rem; }
+.treso-legend i { width: 16px; height: 4px; border-radius: 2px; display: inline-block; }
+
+@media (max-width: 560px) {
+  .flux-row { flex-direction: column; }
+  .flux-arrow { transform: rotate(90deg); align-self: center; }
+  .metier-step { margin-left: calc(var(--i) * 9px); }
+  .pyr-axis { font-size: .6rem; }
+}
+
+/* ---- Sommaire cliquable ---- */
+.sommaire { position: relative; overflow: hidden; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 24px 20px; margin: 20px 0 30px; scroll-margin-top: 90px; }
+.sommaire::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #238689, #021225, #1F6B4A, #106E85, #238689, #021225, #1F6B4A); }
+.sommaire-title { font-family: var(--mono); font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+.sommaire-list { list-style: none; margin: 0; padding: 0; }
+.sommaire-item { margin-bottom: 10px; font-size: .93rem; }
+.sommaire-item > a, .sommaire-item > span { display: inline-flex; align-items: center; gap: 9px; font-weight: 700; color: var(--ink); text-decoration: none; }
+.sommaire-item > a:hover { color: var(--blue); }
+.sommaire-dot { width: 11px; height: 11px; border-radius: 3.5px; flex-shrink: 0; box-shadow: 0 1px 3px rgba(2,18,37,.25); }
+.sommaire-sub { list-style: none; margin: 7px 0 2px 30px; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.sommaire-sub li a { font-size: .87rem; color: var(--ink-soft); text-decoration: none; }
+.sommaire-sub li a:hover { color: var(--blue); text-decoration: underline; }
+
+/* ---- Découpage en parties / sous-parties dans le corps de la fiche ---- */
+.partie-marker { display: flex; align-items: center; gap: 14px; margin: 38px 0 18px; padding-top: 24px; border-top: 2px solid var(--line); scroll-margin-top: 90px; }
+.partie-marker:first-of-type { border-top: none; padding-top: 0; margin-top: 4px; }
+.partie-num { flex-shrink: 0; width: 38px; height: 38px; border-radius: 11px; color: #fff; display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-weight: 700; font-size: 1rem; box-shadow: 0 6px 16px rgba(2,18,37,.28); border: 2px solid rgba(255,255,255,.55); }
+.partie-titre { font-family: var(--display); font-size: 1.15rem; font-weight: 700; color: var(--ink); margin: 0; }
+.sous-marker { display: flex; align-items: center; gap: 10px; margin: 22px 0 10px; scroll-margin-top: 90px; }
+.sous-lettre { flex-shrink: 0; width: 25px; height: 25px; border-radius: 7px; border: 1.8px solid var(--blue); color: var(--blue-ink); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-weight: 700; font-size: .78rem; background: #fff; }
+.sous-titre { font-family: var(--display); font-size: .98rem; font-weight: 600; color: var(--ink); margin: 0; }
+
+/* ---- Zone pleine largeur par partie (même logique que les sections alternées de l'accueil) ---- */
+.partie-zone {
+  position: relative;
+  margin: 32px -4px 10px;
+  padding: 26px 22px 30px;
+  border-radius: 20px;
+  border: 1.5px solid transparent;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(135deg, var(--zc-a), var(--zc-b)) border-box;
+}
+.partie-zone::before {
+  content: ""; position: absolute; inset: 0; border-radius: 20px; z-index: 0; pointer-events: none;
+  background: linear-gradient(160deg, rgba(var(--zc), .05), transparent 60%);
+}
+.partie-zone > * { position: relative; z-index: 1; }
+.partie-zone .partie-marker { border-top: none; padding-top: 0; margin-top: 0; }
+.partie-zone .notion, .partie-zone .card { box-shadow: 0 1px 2px rgba(2,18,37,.05), 0 10px 24px rgba(2,18,37,.07); }
+
+/* ---- Liste à tirets avec libellé gras coloré ---- */
+.liste-roles { list-style: none; margin: 10px 0 4px; padding: 0; display: flex; flex-direction: column; gap: 9px; }
+.liste-roles li { display: flex; gap: 9px; font-size: .95rem; line-height: 1.55; color: var(--ink); }
+.liste-roles li::before { content: "—"; color: var(--blue); font-weight: 700; flex-shrink: 0; }
+.role-label { font-weight: 700; color: var(--blue-ink); }
+
+/* ---- Encadré exemple ---- */
+.exemple-box { margin-top: 14px; background: #EAF6F5; border-left: 3px solid var(--blue); border-radius: 8px; padding: 12px 14px; }
+.exemple-tag { display: block; font-family: var(--mono); font-size: .65rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--blue-ink); margin-bottom: 5px; }
+.exemple-box p { margin: 0; font-size: .9rem; color: var(--ink-soft); line-height: 1.6; }
+
+/* ---- Schéma en étoile (entreprise + parties prenantes) ---- */
+.etoile-wrap { display: flex; justify-content: center; margin: 14px 0 6px; }
+.etoile-svg { width: 100%; max-width: 430px; height: auto; overflow: visible; }
+.etoile-line { stroke-width: 1.8; }
+.etoile-node { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; text-align: center; background: #fff; border: 1.4px solid var(--line); border-top: 3px solid var(--line); border-radius: 10px; font-size: .72rem; font-weight: 600; color: var(--ink); padding: 4px 6px; box-shadow: 0 3px 8px rgba(2,18,37,.09); }
+.etoile-center-label { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: .8rem; text-align: center; font-family: var(--display); }
+
+/* ---- Mots surlignés dans un paragraphe ---- */
+.surligne { color: var(--blue-ink); font-weight: 700; }
+
+/* ---- Cœur avec infobulle "à connaître par cœur" ---- */
+.coeur-tip { position: relative; display: inline-block; cursor: help; font-size: .95em; margin-left: 4px; }
+.coeur-bubble {
+  position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%) translateY(4px);
+  background: var(--violet); color: #fff; font-family: var(--body); font-weight: 500; font-size: .78rem;
+  padding: 7px 12px; border-radius: 8px; white-space: nowrap; box-shadow: 0 6px 16px rgba(2,18,37,.28);
+  opacity: 0; pointer-events: none; transition: opacity .15s ease, transform .15s ease; z-index: 5;
+}
+.coeur-bubble::after {
+  content: ""; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  border: 5px solid transparent; border-top-color: var(--violet);
+}
+.coeur-tip:hover .coeur-bubble, .coeur-tip:focus .coeur-bubble { opacity: 1; transform: translateX(-50%) translateY(0); }
+.formule .coeur-tip { margin-left: 8px; }
+
+/* ---- Groupes de lignes de tableau (ex: bilan vs compte de résultat) ---- */
+table.compare tr.tr-bilan th, table.compare tr.tr-bilan td { border-left: 3px solid var(--blue); }
+table.compare tr.tr-resultat th, table.compare tr.tr-resultat td { border-left: 3px solid var(--amber); }
+table.compare tr.tr-bilan th { color: var(--blue-ink); }
+table.compare tr.tr-resultat th { color: var(--amber-ink); }
+.table-legende { display: flex; gap: 18px; margin-top: 10px; flex-wrap: wrap; }
+.legende-item { display: flex; align-items: center; gap: 6px; font-size: .8rem; color: var(--ink-soft); }
+.legende-dot { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+.legende-dot.tr-bilan { background: var(--blue); }
+.legende-dot.tr-resultat { background: var(--amber); }
