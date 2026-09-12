@@ -26,8 +26,72 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Une typologie des modes de règlement",
+      "sousParties": [
+        {
+          "lettre": "A",
+          "titre": "Une typologie des modes de règlement",
+          "ancre": "sec-1a"
+        },
+        {
+          "lettre": "B",
+          "titre": "Les différents moyens de paiement",
+          "ancre": "sec-1b"
+        }
+      ]
+    },
+    {
+      "num": "2",
+      "titre": "Les techniques de mobilisation des créances",
+      "sousParties": [
+        {
+          "lettre": "A",
+          "titre": "Les effets de commerce",
+          "ancre": "sec-2a"
+        },
+        {
+          "lettre": "B",
+          "titre": "Les cessions de créances et l'affacturage",
+          "ancre": "sec-2b"
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "4",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "5",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "6",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Une typologie des modes de règlement",
+        "ancre": "sec-1"
+      },
+      "sousPartie": {
+        "lettre": "A",
+        "titre": "Une typologie des modes de règlement",
+        "ancre": "sec-1a"
+      },
       "titre": "PARTIE 1 — Une typologie des modes de règlement",
       "contenu": "Plusieurs moyens de paiement sont à la disposition des entreprises : les règlements en espèces, par prélèvements ou virements, par chèques, par cartes de paiement, etc.",
       "tableau": {
@@ -56,6 +120,11 @@
       }
     },
     {
+      "sousPartie": {
+        "lettre": "B",
+        "titre": "Les différents moyens de paiement",
+        "ancre": "sec-1b"
+      },
       "titre": "Le règlement en espèces",
       "contenu": "Encaissements → débit du compte 530 Caisse. Décaissements → crédit du compte 530 Caisse. Exemple : vente au comptant de 5 radiateurs à 200 € HT l'unité (TVA 20 %), le 25/08/N, paiement immédiat en espèces.",
       "tableau": {
@@ -371,6 +440,16 @@
       "contenu": "Les schémas d'enregistrement des règlements sont quasi identiques quel que soit le mode de règlement : un compte de trésorerie (caisse, banque, carte) est débité ou crédité en miroir du compte de tiers (client/fournisseur) soldé."
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Les techniques de mobilisation des créances",
+        "ancre": "sec-2"
+      },
+      "sousPartie": {
+        "lettre": "A",
+        "titre": "Les effets de commerce",
+        "ancre": "sec-2a"
+      },
       "titre": "PARTIE 2 — Les techniques de mobilisation des créances : vue d'ensemble",
       "contenu": "Pour couvrir ses besoins de trésorerie à court terme, une entreprise peut mobiliser ses créances clients avant leur échéance normale, selon plusieurs techniques : l'escompte des effets de commerce, la négociation de LCR (lettres de change relevé) magnétiques, le crédit de mobilisation des créances commerciales (CMCC), la cession ou le nantissement de créances professionnelles (loi Dailly, en pleine propriété ou à titre de garantie), et l'affacturage. Règle de TVA transversale à toutes ces techniques : les intérêts facturés par la banque ne sont jamais soumis à TVA, alors que les services bancaires (commissions) le sont systématiquement."
     },
@@ -760,6 +839,11 @@
       }
     },
     {
+      "sousPartie": {
+        "lettre": "B",
+        "titre": "Les cessions de créances et l'affacturage",
+        "ancre": "sec-2b"
+      },
       "titre": "La cession de créances professionnelles en pleine propriété (loi Dailly)",
       "contenu": "La banque devient pleinement propriétaire des créances cédées, contre un droit de tirage immédiat et une retenue de garantie (débloquée ultérieurement).",
       "tableau": {
