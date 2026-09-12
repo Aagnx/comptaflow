@@ -128,9 +128,33 @@ a{color:inherit;text-decoration:none}
 .section{padding:60px 28px}
 .section-white{background:var(--surface)}
 .section-light{background:var(--mint)}
-.section-sky-tint{background:linear-gradient(135deg, rgba(202,255,222,.55) 0%, rgba(37,197,233,.4) 55%, rgba(16,110,133,.35) 100%)}
-.section-mint-tint{background:linear-gradient(135deg, rgba(242,255,246,1) 0%, rgba(202,255,222,.9) 45%, rgba(37,197,233,.22) 100%)}
-.section-tea-tint{background:linear-gradient(135deg, rgba(202,255,222,.75) 0%, rgba(35,134,137,.22) 55%, rgba(242,255,246,1) 100%)}
+.section-sky-tint{
+  border-top:10px solid #fff; border-bottom:10px solid #fff;
+  background:
+    radial-gradient(ellipse 55% 60% at 15% 20%, rgba(37,197,233,.32), transparent 62%),
+    radial-gradient(ellipse 65% 65% at 85% 30%, rgba(37,197,233,.48), transparent 65%),
+    radial-gradient(ellipse 60% 55% at 30% 85%, rgba(37,197,233,.28), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 90%, rgba(37,197,233,.4), transparent 60%),
+    #F2FFF6;
+}
+.section-mint-tint{
+  border-top:10px solid #fff; border-bottom:10px solid #fff;
+  background:
+    radial-gradient(ellipse 60% 55% at 10% 15%, rgba(242,255,246,1), transparent 60%),
+    radial-gradient(ellipse 55% 60% at 85% 20%, rgba(242,255,246,.65), transparent 62%),
+    radial-gradient(ellipse 60% 60% at 25% 90%, rgba(242,255,246,.85), transparent 60%),
+    radial-gradient(ellipse 45% 45% at 90% 85%, rgba(242,255,246,.55), transparent 60%),
+    #fff;
+}
+.section-tea-tint{
+  border-top:10px solid #fff; border-bottom:10px solid #fff;
+  background:
+    radial-gradient(ellipse 55% 55% at 15% 20%, rgba(35,134,137,.28), transparent 62%),
+    radial-gradient(ellipse 65% 60% at 85% 25%, rgba(35,134,137,.4), transparent 65%),
+    radial-gradient(ellipse 55% 55% at 25% 85%, rgba(35,134,137,.24), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 90%, rgba(35,134,137,.34), transparent 60%),
+    #F2FFF6;
+}
 .sec-header{text-align:center;margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto}
 .sec-eyebrow{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--cyan);letter-spacing:.1em;
   text-transform:uppercase;margin-bottom:10px}
