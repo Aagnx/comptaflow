@@ -104,7 +104,11 @@
         "ancre": "sec-1a"
       },
       "titre": "Normalisation et harmonisation",
-      "contenu": "La normalisation comptable est un processus qui vise à imposer des normes pour encadrer les pratiques comptables. L'harmonisation comptable est un processus qui consiste à rapprocher des règles et pratiques comptables divergentes. Ce sont deux processus distincts mais complémentaires. Exemple : fixer qu'un chocolat contient au moins 35 % de cacao est une norme ; une directive qui met d'accord les États européens sur l'ajout de matières grasses végétales relève de l'harmonisation ; quand ces conditions s'imposent à tous, elles deviennent une norme européenne (normalisation)."
+      "contenu": [
+        "La normalisation comptable est un processus qui vise à imposer des normes pour encadrer les pratiques comptables.",
+        "L'harmonisation comptable est un processus qui consiste à rapprocher des règles et pratiques comptables divergentes. Ce sont deux processus distincts mais complémentaires."
+      ],
+      "exemple": "Fixer qu'un chocolat contient au moins 35 % de cacao est une norme ; une directive qui met d'accord les États européens sur l'ajout de matières grasses végétales relève de l'harmonisation ; quand ces conditions s'imposent à tous, elles deviennent une norme européenne (normalisation)."
     },
     {
       "titre": "La diversité des besoins des utilisateurs",
@@ -230,12 +234,20 @@
     {
       "titre": "Les comptes annuels",
       "formule": "Comptes annuels = Bilan + Compte de résultat + Annexe",
-      "contenu": "Les comptes annuels forment un tout indissociable. Le bilan présente le patrimoine, le compte de résultat l'activité de l'exercice, et l'annexe complète et commente les deux précédents."
+      "contenu": "Les comptes annuels forment un tout indissociable. Le bilan présente le patrimoine, le compte de résultat l'activité de l'exercice, et l'annexe complète et commente les deux précédents.",
+      "coeur": "À connaître par cœur pour l'examen :)"
     },
     {
       "titre": "Régularité, sincérité et image fidèle",
       "reference": "Art. L123-23 du Code de commerce",
-      "contenu": "La comptabilité doit être régulière et sincère et donner une image fidèle du patrimoine et de l'activité de l'entreprise. Dès lors qu'elle est tenue selon les normes applicables, elle est présumée sincère et peut servir de preuve en matière de droit commercial."
+      "contenu": "La comptabilité doit être régulière et sincère et donner une image fidèle du patrimoine et de l'activité de l'entreprise. Dès lors qu'elle est tenue selon les normes applicables, elle est présumée sincère et peut servir de preuve en matière de droit commercial.",
+      "surlignes": [
+        "régulière",
+        "sincère",
+        "image fidèle",
+        "preuve"
+      ],
+      "coeur": "À connaître par cœur pour l'examen :)"
     },
     {
       "partie": {
@@ -250,7 +262,10 @@
       },
       "titre": "Le Plan comptable général (PCG)",
       "reference": "Règlement ANC 2014-03, modifié par 2022-06",
-      "contenu": "Le PCG présente les règles et principes d'établissement et de présentation des comptes. Il précise : les objets et principes de la comptabilité ; la définition des actifs, passifs, produits et charges ; les règles de comptabilisation et d'évaluation ; la tenue, la structure et le fonctionnement des comptes ; la définition des documents de synthèse. Il organise enfin le plan des comptes en classes. À jour : la réforme du PCG (règlement ANC 2022-06, applicable depuis le 1ᵉʳ janvier 2025) a modernisé la nomenclature et la présentation des états financiers, mais les 7 classes et les principes comptables restent inchangés."
+      "contenu": [
+        "Le PCG présente les règles et principes d'établissement et de présentation des comptes. Il précise : les objets et principes de la comptabilité ; la définition des actifs, passifs, produits et charges ; les règles de comptabilisation et d'évaluation ; la tenue, la structure et le fonctionnement des comptes ; la définition des documents de synthèse. Il organise enfin le plan des comptes en classes.",
+        "À jour : la réforme du PCG (règlement ANC 2022-06, applicable depuis le 1ᵉʳ janvier 2025) a modernisé la nomenclature et la présentation des états financiers, mais les 7 classes et les principes comptables restent inchangés."
+      ]
     },
     {
       "titre": "Les 7 classes de comptes du PCG",
@@ -289,6 +304,25 @@
             "Classe 7",
             "Comptes de produits"
           ]
+        ],
+        "groupesLignes": [
+          "bilan",
+          "bilan",
+          "bilan",
+          "bilan",
+          "bilan",
+          "resultat",
+          "resultat"
+        ],
+        "legendeGroupes": [
+          {
+            "cle": "bilan",
+            "label": "Comptes de bilan (classes 1 à 5)"
+          },
+          {
+            "cle": "resultat",
+            "label": "Comptes de résultat (classes 6 et 7)"
+          }
         ]
       }
     },
@@ -347,7 +381,8 @@
             "Prise en compte des seules informations pertinentes et utiles aux documents comptables"
           ]
         ]
-      }
+      },
+      "coeur": "À connaître par cœur pour l'examen :)"
     },
     {
       "titre": "Reconnaître un principe (exemples d'application)",
@@ -392,7 +427,10 @@
         "ancre": "sec-4"
       },
       "titre": "Le normalisateur : l'Autorité des normes comptables (ANC)",
-      "contenu": "L'ANC (créée en 2009) est le normalisateur comptable français. Ses missions : édicter les prescriptions comptables générales et sectorielles que doivent respecter les personnes tenues d'établir des documents comptables ; donner un avis sur les textes réglementaires contenant des dispositions comptables ; participer à l'élaboration des normes internationales et représenter la France ; conduire des travaux d'analyse et émettre des recommandations. Conseil de l'expert : suivre de près l'évolution de la réglementation (lettres d'information de l'ANC, doctrine comptable)."
+      "contenu": [
+        "L'ANC (créée en 2009) est le normalisateur comptable français. Ses missions : édicter les prescriptions comptables générales et sectorielles que doivent respecter les personnes tenues d'établir des documents comptables ; donner un avis sur les textes réglementaires contenant des dispositions comptables ; participer à l'élaboration des normes internationales et représenter la France ; conduire des travaux d'analyse et émettre des recommandations.",
+        "Conseil de l'expert : suivre de près l'évolution de la réglementation (lettres d'information de l'ANC, doctrine comptable)."
+      ]
     }
   ],
   "vocabulaire": [
