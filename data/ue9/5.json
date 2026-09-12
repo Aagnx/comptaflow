@@ -26,8 +26,50 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Comprendre la TVA",
+      "ancre": "sec-1"
+    },
+    {
+      "num": "2",
+      "titre": "Le fait générateur et l'exigibilité",
+      "ancre": "sec-2"
+    },
+    {
+      "num": "3",
+      "titre": "Taux et calcul de la TVA",
+      "ancre": "sec-3"
+    },
+    {
+      "num": "4",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "5",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "6",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "7",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Comprendre la TVA",
+        "ancre": "sec-1"
+      },
       "titre": "Définition de la TVA",
       "contenu": "La taxe sur la valeur ajoutée (TVA) est un impôt sur la consommation de biens et services. Elle est collectée par les entreprises et supportée par le consommateur final."
     },
@@ -79,6 +121,11 @@
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Le fait générateur et l'exigibilité",
+        "ancre": "sec-2"
+      },
       "titre": "Solde de TVA : TVA collectée et TVA déductible",
       "contenu": "Le solde de TVA correspond à la différence entre la TVA collectée et la TVA déductible :",
       "tableau": {
@@ -168,6 +215,11 @@
       "contenu": "Les livraisons à soi-même (LASM) constituent également un cas particulier au regard de la TVA : leur fait générateur est l'exécution du service, et leur exigibilité intervient au fur et à mesure de l'exécution des prestations."
     },
     {
+      "partie": {
+        "num": "3",
+        "titre": "Taux et calcul de la TVA",
+        "ancre": "sec-3"
+      },
       "titre": "Les taux de TVA applicables en France",
       "contenu": "Il existe quatre taux de TVA en France, applicables selon la nature du bien ou du service :",
       "tableau": {
