@@ -23,8 +23,50 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Définitions et achats/ventes de biens",
+      "ancre": "sec-1"
+    },
+    {
+      "num": "2",
+      "titre": "Les prestations de services : achats",
+      "ancre": "sec-2"
+    },
+    {
+      "num": "3",
+      "titre": "Les prestations de services : ventes",
+      "ancre": "sec-3"
+    },
+    {
+      "num": "4",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "5",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "6",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "7",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Définitions et achats/ventes de biens",
+        "ancre": "sec-1"
+      },
       "titre": "Définitions : arrhes, avances et acomptes",
       "contenu": "Les arrhes sont des sommes d'argent versées pour exercer une option sur une vente : le montant n'est pas remboursé en cas de désistement de l'acheteur, et le vendeur doit reverser le double de la somme en cas de non-exécution de sa part. Les avances sont des sommes versées avant tout commencement d'exécution de la commande. Les acomptes sont des sommes versées sur justification d'une exécution partielle de la commande."
     },
@@ -213,6 +255,11 @@
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Les prestations de services : achats",
+        "ancre": "sec-2"
+      },
       "titre": "Prestations de services : une mécanique de TVA spécifique",
       "contenu": "Sur les prestations de services, la TVA sur les acomptes suit une logique différente de celle des biens, et dépend de l'option ou non pour la TVA sur les débits (cf. fiche 5). Dans les deux cas (avec ou sans option), le paiement de l'acompte déclenche une reconnaissance immédiate de TVA. C'est au stade de la facturation que les deux régimes divergent : sans option, la TVA sur le solde ne devient déductible/collectée qu'à l'encaissement effectif (d'où des comptes de régularisation temporaires 44564 côté achats, 44572 côté ventes) ; avec option pour les débits, la TVA sur le solde est reconnue directement à la facturation, sans compte transitoire supplémentaire."
     },
@@ -402,6 +449,11 @@
       }
     },
     {
+      "partie": {
+        "num": "3",
+        "titre": "Les prestations de services : ventes",
+        "ancre": "sec-3"
+      },
       "titre": "Ventes de services : encaissement de l'acompte",
       "contenu": "Symétriquement côté vendeur : l'encaissement de l'acompte déclenche à la fois le mouvement de trésorerie et la reconnaissance immédiate de la TVA collectée correspondante.",
       "tableau": {
