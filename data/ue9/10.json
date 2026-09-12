@@ -25,8 +25,45 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Chez l'acheteur",
+      "ancre": "sec-1"
+    },
+    {
+      "num": "2",
+      "titre": "Chez le vendeur",
+      "ancre": "sec-2"
+    },
+    {
+      "num": "3",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "4",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "5",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "6",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Chez l'acheteur",
+        "ancre": "sec-1"
+      },
       "titre": "Frais accessoires et droits de douane : définitions",
       "contenu": "Les frais accessoires liés aux achats et aux ventes correspondent aux frais de transport, d'assurance, de commissions, de courtages, d'honoraires, etc., générés lors des achats et ventes de biens et services. Les droits de douane sont comptabilisés directement au débit du compte d'achats concerné, sans traitement distinct."
     },
@@ -168,6 +205,11 @@
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Chez le vendeur",
+        "ancre": "sec-2"
+      },
       "titre": "Chez le vendeur : conditions arrivée/départ et franco/non franco",
       "contenu": "La comptabilisation des frais accessoires liés à la vente dépend des conditions contractuelles et commerciales de l'opération. En conditions « arrivée », le transfert de propriété a lieu chez le client ; en conditions « départ », il a lieu chez le fournisseur. Une vente est « franco » si les frais sont à la charge du vendeur et intégrés au prix de vente, ou « non franco » si les frais accessoires apparaissent distinctement sur la facture.",
       "tableau": {
