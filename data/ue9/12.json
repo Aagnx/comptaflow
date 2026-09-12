@@ -23,8 +23,45 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Définir et reconnaître une immobilisation",
+      "ancre": "sec-1"
+    },
+    {
+      "num": "2",
+      "titre": "L'évaluation et la comptabilisation",
+      "ancre": "sec-2"
+    },
+    {
+      "num": "3",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "4",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "5",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "6",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Définir et reconnaître une immobilisation",
+        "ancre": "sec-1"
+      },
       "titre": "Définitions : immobilisation incorporelle vs corporelle",
       "contenu": "Une immobilisation incorporelle est une immobilisation qui ne présente ni substance physique ni substance monétaire. Une immobilisation corporelle est une immobilisation qui a une substance physique et une durée d'utilisation immédiate supérieure à l'exercice."
     },
@@ -123,6 +160,11 @@
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "L'évaluation et la comptabilisation",
+        "ancre": "sec-2"
+      },
       "titre": "L'évaluation des immobilisations selon le mode d'obtention",
       "formule": "Coût d'acquisition = Prix d'achat (douane + taxes non récupérables incluses) − RRR − Escomptes + frais directement attribuables + coût de démantèlement/remise en état + frais d'acquisition sur option + coût d'emprunt sur option + frais de formation sur option · Coût de production = Prix des matières premières + charges directes + charges indirectes attribuées + coût de démantèlement + coût d'emprunt sur option · Valeur vénale = Montant obtenu de la vente − coûts de sortie liés à la vente",
       "contenu": "L'évaluation dépend du mode d'obtention : acquisition à titre onéreux → coût d'acquisition ; production par l'entreprise elle-même → coût de production ; acquisition à titre gratuit ou par voie d'échange → valeur vénale. Cas particulier à connaître : pour l'acquisition à titre onéreux d'un véhicule de tourisme, la TVA ne peut pas être récupérée — elle est alors intégrée dans le coût d'acquisition du véhicule (à ne pas confondre avec la déductibilité partielle de la TVA sur le carburant de ces mêmes véhicules, une règle distincte)."
