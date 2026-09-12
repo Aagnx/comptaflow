@@ -32,12 +32,86 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "Enregistrer les flux économiques",
+      "sousParties": [
+        {
+          "lettre": "A",
+          "titre": "L'enregistrement comptable",
+          "ancre": "sec-1a"
+        },
+        {
+          "lettre": "B",
+          "titre": "Emplois et ressources",
+          "ancre": "sec-1b"
+        }
+      ]
+    },
+    {
+      "num": "2",
+      "titre": "Les comptes et leur organisation",
+      "sousParties": [
+        {
+          "lettre": "A",
+          "titre": "Le compte",
+          "ancre": "sec-2a"
+        },
+        {
+          "lettre": "B",
+          "titre": "Du journal au grand-livre",
+          "ancre": "sec-2b"
+        }
+      ]
+    },
+    {
+      "num": "3",
+      "titre": "Les documents de synthèse",
+      "ancre": "sec-3"
+    },
+    {
+      "num": "4",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "5",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "6",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "7",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "Enregistrer les flux économiques",
+        "ancre": "sec-1"
+      },
+      "sousPartie": {
+        "lettre": "A",
+        "titre": "L'enregistrement comptable",
+        "ancre": "sec-1a"
+      },
       "titre": "L'enregistrement comptable",
       "contenu": "La comptabilité, en tant que technique quantitative, propose une méthode comptable permettant de traduire les flux de l'entreprise afin de fournir des documents comptables reflétant sa situation et sa performance. L'enregistrement comptable consiste à traduire ces flux à partir d'une pièce comptable : pour chaque enregistrement sont comptabilisées l'origine et la finalité du flux. Exemple filé : l'entreprise Carla achète 50 paires de bottes à un fournisseur italien (paiement par virement de 1 000 €) et en revend une paire à un client français (paiement par chèque de 60 €)."
     },
     {
+      "sousPartie": {
+        "lettre": "B",
+        "titre": "Emplois et ressources",
+        "ancre": "sec-1b"
+      },
       "titre": "Les flux de l'entreprise",
       "contenu": "Les flux comptables représentent les échanges réalisés par l'entreprise avec ses partenaires. On distingue trois types de flux.",
       "tableau": {
@@ -89,11 +163,26 @@
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Les comptes et leur organisation",
+        "ancre": "sec-2"
+      },
+      "sousPartie": {
+        "lettre": "A",
+        "titre": "Le compte",
+        "ancre": "sec-2a"
+      },
       "titre": "Les comptes",
       "contenu": "Un compte est un instrument permettant de spécifier les emplois et les ressources. Il prend la forme d'un tableau synthétique caractérisé par : un numéro de compte, un intitulé de compte, la valeur de l'opération, la date de l'opération, le libellé de l'opération, et une partie où sont inscrites les opérations débitrices et une autre pour les opérations créditrices. Afin d'apprécier l'état d'un compte, on en calcule le solde en effectuant la différence entre la somme des montants portés au débit et la somme des montants portés au crédit.",
       "formule": "Débit > Crédit → solde débiteur · Crédit > Débit → solde créditeur"
     },
     {
+      "sousPartie": {
+        "lettre": "B",
+        "titre": "Du journal au grand-livre",
+        "ancre": "sec-2b"
+      },
       "titre": "Le livre-journal",
       "contenu": "Le livre-journal (ou journal) est un livre comptable présentant de manière chronologique les enregistrements comptables. Chaque écriture y indique la date de l'opération, le(s) compte(s) débité(s) et crédité(s) avec leurs numéros, les montants débités et crédités, ainsi que le libellé et la pièce justificative de l'opération. Exemple : la vente de la paire de bottes au client français (60 €) se traduit par un débit du compte 512 – Banques et un crédit du compte 707 – Ventes de marchandises, référencé par le numéro de facture."
     },
@@ -124,6 +213,11 @@
       }
     },
     {
+      "partie": {
+        "num": "3",
+        "titre": "Les documents de synthèse",
+        "ancre": "sec-3"
+      },
       "titre": "Le bilan et le compte de résultat",
       "contenu": "À partir de la balance se définissent les deux documents de synthèse : le bilan et le compte de résultat. Le bilan regroupe les comptes des classes 1 à 5 ; c'est un document comptable fournissant une image de la situation patrimoniale de l'entreprise, en présentant les éléments d'actif et de passif. Le compte de résultat regroupe les comptes des classes 6 et 7 ; il informe sur la formation du bénéfice ou de la perte réalisé par l'entreprise, en présentant les produits et les charges qui participent à la formation du résultat de l'exercice."
     },
