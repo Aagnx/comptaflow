@@ -26,8 +26,66 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "La facture",
+      "ancre": "sec-1"
+    },
+    {
+      "num": "2",
+      "titre": "Les achats",
+      "ancre": "sec-2"
+    },
+    {
+      "num": "3",
+      "titre": "Les ventes",
+      "ancre": "sec-3"
+    },
+    {
+      "num": "4",
+      "titre": "Retours et prestations de services",
+      "sousParties": [
+        {
+          "lettre": "A",
+          "titre": "Les retours d'achats et de ventes",
+          "ancre": "sec-4a"
+        },
+        {
+          "lettre": "B",
+          "titre": "Les prestations de services",
+          "ancre": "sec-4b"
+        }
+      ]
+    },
+    {
+      "num": "5",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "6",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "7",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "8",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "La facture",
+        "ancre": "sec-1"
+      },
       "titre": "La facture",
       "contenu": "La facture est la pièce comptable justificative précisant les conditions d'achat et de vente des biens et services échangés. On distingue les factures de doit, émises lors d'une transaction, des factures d'avoir, émises lors d'un retour de biens aux fournisseurs ou pour une réduction accordée après la facture d'origine."
     },
@@ -68,6 +126,11 @@
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Les achats",
+        "ancre": "sec-2"
+      },
       "titre": "Les opérations d'achat",
       "contenu": "Un achat est une acquisition d'un bien ou d'un service à titre onéreux."
     },
@@ -172,6 +235,11 @@
       }
     },
     {
+      "partie": {
+        "num": "3",
+        "titre": "Les ventes",
+        "ancre": "sec-3"
+      },
       "titre": "Les opérations de vente",
       "contenu": "Une vente est une cession d'un bien ou d'un service à titre onéreux."
     },
@@ -284,6 +352,16 @@
       }
     },
     {
+      "partie": {
+        "num": "4",
+        "titre": "Retours et prestations de services",
+        "ancre": "sec-4"
+      },
+      "sousPartie": {
+        "lettre": "A",
+        "titre": "Les retours d'achats et de ventes",
+        "ancre": "sec-4a"
+      },
       "titre": "Les retours d'achats et de ventes",
       "contenu": "Lors d'un désaccord entre le fournisseur et le client, il peut être entendu qu'une partie des achats soit retournée au fournisseur. Le fournisseur établit alors une facture d'avoir. Les écritures initiales concernant les biens retournés sont contrepassées dans les comptes de l'entreprise fournisseur et dans ceux de l'entreprise cliente."
     },
@@ -320,6 +398,11 @@
       }
     },
     {
+      "sousPartie": {
+        "lettre": "B",
+        "titre": "Les prestations de services",
+        "ancre": "sec-4b"
+      },
       "titre": "Cas particulier — prestations de services sans option pour les débits",
       "contenu": "Pour les prestations de services, en l'absence d'option pour la TVA sur les débits (cf. fiche 5), la TVA n'est exigible qu'à l'encaissement du prix. La comptabilisation se fait donc en deux temps : à la facturation, la TVA est enregistrée dans un compte d'attente ; à l'encaissement, elle est transférée vers le compte de TVA définitif."
     },
