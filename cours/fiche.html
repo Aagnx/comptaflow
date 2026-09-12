@@ -42,12 +42,37 @@ return `<div class="section-head">
 </div>`;
 }
 
+function highlightWords(escapedText, words) {
+if (!words || !words.length) return escapedText;
+let result = escapedText;
+words.forEach(w => {
+const escWord = esc(w);
+const safe = escWord.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const re = new RegExp(safe, 'g');
+result = result.replace(re, '<strong class="surligne">' + escWord + '</strong>');
+});
+return result;
+}
+
+function renderCoeur(tip) {
+return `<span class="coeur-tip" tabindex="0">❤️<span class="coeur-bubble">${esc(tip)}</span></span>`;
+}
+
 function renderNotion(n) {
 let inner = '';
 if (n.reference) inner += `<span class="ref">${esc(n.reference)}</span>`;
-inner += `<h3>${esc(n.titre)}</h3>`;
-if (n.formule) inner += `<div class="formule">${esc(n.formule)}</div>`;
-if (n.contenu) inner += `<p>${esc(n.contenu)}</p>`;
+let titreHtml = esc(n.titre);
+if (n.coeur && !n.formule) titreHtml += ' ' + renderCoeur(n.coeur);
+inner += `<h3>${titreHtml}</h3>`;
+if (n.formule) {
+let formuleHtml = esc(n.formule);
+if (n.coeur) formuleHtml += ' ' + renderCoeur(n.coeur);
+inner += `<div class="formule">${formuleHtml}</div>`;
+}
+if (n.contenu) {
+const paras = Array.isArray(n.contenu) ? n.contenu : [n.contenu];
+paras.forEach(p => { inner += `<p>${highlightWords(esc(p), n.surlignes)}</p>`; });
+}
 if (n.liste) inner += renderListe(n.liste);
 if (n.tableau) inner += renderTable(n.tableau);
 if (n.timeline) inner += renderTimeline(n.timeline);
@@ -310,12 +335,17 @@ return `<div class="treso">
 
 function renderTable(t) {
 const head = t.colonnes.map(c => `<th>${esc(c)}</th>`).join('');
-const rows = t.lignes.map(r =>
-`<tr>${r.map((cell, i) =>
-i === 0 ? `<th scope="row">${esc(cell)}</th>` : `<td>${esc(cell)}</td>`
-).join('')}</tr>`).join('');
+const rows = t.lignes.map((r, i) => {
+const g = t.groupesLignes && t.groupesLignes[i] ? ` class="tr-${esc(t.groupesLignes[i])}"` : '';
+return `<tr${g}>${r.map((cell, ci) =>
+ci === 0 ? `<th scope="row">${esc(cell)}</th>` : `<td>${esc(cell)}</td>`
+).join('')}</tr>`;
+}).join('');
+const legende = t.legendeGroupes ? `<div class="table-legende">${t.legendeGroupes.map(l =>
+`<span class="legende-item"><span class="legende-dot tr-${esc(l.cle)}"></span>${esc(l.label)}</span>`
+).join('')}</div>` : '';
 return `<div class="table-scroll"><table class="compare">
-<thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table></div>`;
+<thead><tr>${head}</tr></thead><tbody>${rows}</tbody></table></div>${legende}`;
 }
 
 function renderTimeline(items) {
