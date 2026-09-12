@@ -24,8 +24,61 @@
     ]
   },
   "formatEpreuve": "Épreuve écrite de 3 h, coefficient 1, 14 crédits ECTS. Plusieurs dossiers thématiques indépendants portant sur une même organisation. Seul document autorisé : la liste des comptes du PCG. Calculatrice généralement interdite (taux de TVA et calculs simplifiés en conséquence).",
+  "sommaire": [
+    {
+      "num": "1",
+      "titre": "L'actif",
+      "ancre": "sec-1"
+    },
+    {
+      "num": "2",
+      "titre": "Le passif",
+      "ancre": "sec-2"
+    },
+    {
+      "num": "3",
+      "titre": "Les charges et les produits",
+      "sousParties": [
+        {
+          "lettre": "A",
+          "titre": "Les charges",
+          "ancre": "sec-3a"
+        },
+        {
+          "lettre": "B",
+          "titre": "Les produits",
+          "ancre": "sec-3b"
+        }
+      ]
+    },
+    {
+      "num": "4",
+      "titre": "Utilité à l'examen",
+      "ancre": "sec-utilite"
+    },
+    {
+      "num": "5",
+      "titre": "Vocabulaire du chapitre",
+      "ancre": "sec-vocab"
+    },
+    {
+      "num": "6",
+      "titre": "Questions types à réviser",
+      "ancre": "sec-questions"
+    },
+    {
+      "num": "7",
+      "titre": "Sujets antérieurs liés au chapitre",
+      "ancre": "sec-annales"
+    }
+  ],
   "notionsCles": [
     {
+      "partie": {
+        "num": "1",
+        "titre": "L'actif",
+        "ancre": "sec-1"
+      },
       "titre": "L'actif",
       "contenu": "L'actif correspond aux éléments identifiables et contrôlés par l'entreprise et qui concourent à son activité."
     },
@@ -112,6 +165,11 @@
       }
     },
     {
+      "partie": {
+        "num": "2",
+        "titre": "Le passif",
+        "ancre": "sec-2"
+      },
       "titre": "Le passif",
       "contenu": "Le passif représente les ressources de l'entreprise lui permettant de disposer de son patrimoine économique, et les obligations sous-jacentes à son activité. Se distinguent le passif externe et les capitaux propres. Les capitaux propres correspondent essentiellement aux ressources fournies par l'exploitant, les associés ou les actionnaires de l'entreprise, et aux résultats générés par l'entreprise."
     },
@@ -164,6 +222,16 @@
       }
     },
     {
+      "partie": {
+        "num": "3",
+        "titre": "Les charges et les produits",
+        "ancre": "sec-3"
+      },
+      "sousPartie": {
+        "lettre": "A",
+        "titre": "Les charges",
+        "ancre": "sec-3a"
+      },
       "titre": "Les charges",
       "contenu": "Une charge correspond à une consommation de biens et services par l'entreprise au cours de son activité. C'est un emploi définitif, c'est-à-dire une somme versée ou à verser en contrepartie de biens ou services consommés par l'entreprise, en exécution d'une obligation légale ou, exceptionnellement, sans contrepartie. Exemple : l'acquisition d'un véhicule est inscrite dans les actifs, tandis que l'achat du carburant nécessaire au véhicule est inscrit dans les charges."
     },
@@ -192,6 +260,11 @@
       }
     },
     {
+      "sousPartie": {
+        "lettre": "B",
+        "titre": "Les produits",
+        "ancre": "sec-3b"
+      },
       "titre": "Les produits",
       "contenu": "Un produit correspond à une ressource interne générée par l'activité de l'entreprise. Il procure un enrichissement à l'entreprise : c'est une somme reçue ou à recevoir en contrepartie de la fourniture de biens ou services par l'entreprise, en exécution d'une obligation légale par un tiers, ou exceptionnellement sans contrepartie. Exemple : la vente de produits finis constitue un produit, alors que les emprunts contractés pour acquérir des machines de production sont inscrits au passif."
     },
