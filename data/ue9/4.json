@@ -171,7 +171,10 @@
         "ancre": "sec-2"
       },
       "titre": "Le passif",
-      "contenu": "Le passif représente les ressources de l'entreprise lui permettant de disposer de son patrimoine économique, et les obligations sous-jacentes à son activité. Se distinguent le passif externe et les capitaux propres. Les capitaux propres correspondent essentiellement aux ressources fournies par l'exploitant, les associés ou les actionnaires de l'entreprise, et aux résultats générés par l'entreprise."
+      "contenu": [
+        "Le passif représente les ressources de l'entreprise lui permettant de disposer de son patrimoine économique, et les obligations sous-jacentes à son activité. Se distinguent le passif externe et les capitaux propres.",
+        "Les capitaux propres correspondent essentiellement aux ressources fournies par l'exploitant, les associés ou les actionnaires de l'entreprise, et aux résultats générés par l'entreprise."
+      ]
     },
     {
       "titre": "Les critères de définition du passif externe",
@@ -199,7 +202,10 @@
     },
     {
       "titre": "Exemples et typologie du passif externe",
-      "contenu": "Si l'entreprise sollicite un emprunt auprès d'une banque, elle l'inscrit dans son passif : l'emprunt lui apporte une ressource mais aussi une obligation de remboursement sans contrepartie de la banque, c'est un passif externe. À l'inverse, si l'entreprise bénéficie d'un don, celui-ci lui apporte une ressource mais elle n'a pas d'obligation ni de sortie de ressources au bénéfice du donateur : le don n'est pas un passif externe.",
+      "contenu": [
+        "Si l'entreprise sollicite un emprunt auprès d'une banque, elle l'inscrit dans son passif : l'emprunt lui apporte une ressource mais aussi une obligation de remboursement sans contrepartie de la banque, c'est un passif externe.",
+        "À l'inverse, si l'entreprise bénéficie d'un don, celui-ci lui apporte une ressource mais elle n'a pas d'obligation ni de sortie de ressources au bénéfice du donateur : le don n'est pas un passif externe."
+      ],
       "tableau": {
         "colonnes": [
           "Type",
@@ -233,7 +239,8 @@
         "ancre": "sec-3a"
       },
       "titre": "Les charges",
-      "contenu": "Une charge correspond à une consommation de biens et services par l'entreprise au cours de son activité. C'est un emploi définitif, c'est-à-dire une somme versée ou à verser en contrepartie de biens ou services consommés par l'entreprise, en exécution d'une obligation légale ou, exceptionnellement, sans contrepartie. Exemple : l'acquisition d'un véhicule est inscrite dans les actifs, tandis que l'achat du carburant nécessaire au véhicule est inscrit dans les charges."
+      "contenu": "Une charge correspond à une consommation de biens et services par l'entreprise au cours de son activité. C'est un emploi définitif, c'est-à-dire une somme versée ou à verser en contrepartie de biens ou services consommés par l'entreprise, en exécution d'une obligation légale ou, exceptionnellement, sans contrepartie.",
+      "exemple": "L'acquisition d'un véhicule est inscrite dans les actifs, tandis que l'achat du carburant nécessaire au véhicule est inscrit dans les charges."
     },
     {
       "titre": "Typologie de charges",
@@ -266,7 +273,8 @@
         "ancre": "sec-3b"
       },
       "titre": "Les produits",
-      "contenu": "Un produit correspond à une ressource interne générée par l'activité de l'entreprise. Il procure un enrichissement à l'entreprise : c'est une somme reçue ou à recevoir en contrepartie de la fourniture de biens ou services par l'entreprise, en exécution d'une obligation légale par un tiers, ou exceptionnellement sans contrepartie. Exemple : la vente de produits finis constitue un produit, alors que les emprunts contractés pour acquérir des machines de production sont inscrits au passif."
+      "contenu": "Un produit correspond à une ressource interne générée par l'activité de l'entreprise. Il procure un enrichissement à l'entreprise : c'est une somme reçue ou à recevoir en contrepartie de la fourniture de biens ou services par l'entreprise, en exécution d'une obligation légale par un tiers, ou exceptionnellement sans contrepartie.",
+      "exemple": "La vente de produits finis constitue un produit, alors que les emprunts contractés pour acquérir des machines de production sont inscrits au passif."
     },
     {
       "titre": "Typologie de produits",
@@ -294,7 +302,7 @@
     },
     {
       "titre": "Astuce : ne pas confondre actif et charge",
-      "contenu": "Évitez l'erreur classique consistant à confondre actif et charge : l'actif est un emploi intermédiaire (le bien reste utilisable, il génère des avantages économiques futurs), la charge est un emploi définitif (la ressource est consommée sans retour)."
+      "astuce": "Évitez l'erreur classique consistant à confondre actif et charge : l'actif est un emploi intermédiaire (le bien reste utilisable, il génère des avantages économiques futurs), la charge est un emploi définitif (la ressource est consommée sans retour)."
     }
   ],
   "vocabulaire": [
