@@ -104,7 +104,30 @@
         "ancre": "sec-1a"
       },
       "titre": "L'enregistrement comptable",
-      "contenu": "La comptabilité, en tant que technique quantitative, propose une méthode comptable permettant de traduire les flux de l'entreprise afin de fournir des documents comptables reflétant sa situation et sa performance. L'enregistrement comptable consiste à traduire ces flux à partir d'une pièce comptable : pour chaque enregistrement sont comptabilisées l'origine et la finalité du flux. Exemple filé : l'entreprise Carla achète 50 paires de bottes à un fournisseur italien (paiement par virement de 1 000 €) et en revend une paire à un client français (paiement par chèque de 60 €)."
+      "contenu": [
+        "La comptabilité, en tant que technique quantitative, propose une méthode comptable permettant de traduire les flux de l'entreprise afin de fournir des documents comptables reflétant sa situation et sa performance.",
+        "L'enregistrement comptable consiste à traduire ces flux à partir d'une pièce comptable : pour chaque enregistrement sont comptabilisées l'origine et la finalité du flux."
+      ],
+      "exemple": "Exemple filé (repris tout au long du chapitre) : l'entreprise Carla achète 50 paires de bottes à un fournisseur italien (paiement par virement de 1 000 €) et en revend une paire à un client français (paiement par chèque de 60 €).",
+      "visuel": {
+        "type": "flux",
+        "entree": "Pièce comptable",
+        "sortie": "Document comptable",
+        "etapes": [
+          {
+            "label": "Origine du flux → Ressource",
+            "couleur": "teal"
+          },
+          {
+            "label": "Enregistrement comptable",
+            "couleur": "blue"
+          },
+          {
+            "label": "Finalité du flux → Emploi",
+            "couleur": "violet"
+          }
+        ]
+      }
     },
     {
       "sousPartie": {
@@ -141,7 +164,10 @@
     },
     {
       "titre": "Les emplois et les ressources",
-      "contenu": "À chaque flux sont associées une origine et une finalité. L'origine du flux correspond comptablement à une ressource : elle précise ce qui permet la réalisation de l'opération. La finalité du flux correspond comptablement à un emploi : il précise l'utilisation du flux par l'entreprise ou son impact sur celle-ci. L'emploi et la ressource se définissent l'un par rapport à l'autre. L'emploi est aussi appelé débit, la ressource crédit.",
+      "contenu": [
+        "À chaque flux sont associées une origine et une finalité. L'origine du flux correspond comptablement à une ressource : elle précise ce qui permet la réalisation de l'opération. La finalité du flux correspond comptablement à un emploi : il précise l'utilisation du flux par l'entreprise ou son impact sur celle-ci.",
+        "L'emploi et la ressource se définissent l'un par rapport à l'autre. L'emploi est aussi appelé débit, la ressource crédit."
+      ],
       "tableau": {
         "colonnes": [
           "Partenaire",
@@ -160,6 +186,25 @@
             "Emploi pour Carla : chèque de 60 €"
           ]
         ]
+      },
+      "visuel": {
+        "type": "arbre",
+        "scenario": "Exemple — l'entreprise Dupont achète des fournitures de bureau chez Bureau+, réglées immédiatement par carte bancaire.",
+        "question": "Ce flux correspond-il à ce que Dupont REÇOIT, ou à ce qui FINANCE l'opération ?",
+        "branches": [
+          {
+            "condition": "Dupont REÇOIT les fournitures de bureau",
+            "reponse": "EMPLOI",
+            "souligne": "= Débit",
+            "couleurHex": "#238689"
+          },
+          {
+            "condition": "Dupont DONNE de l'argent (règlement CB)",
+            "reponse": "RESSOURCE",
+            "souligne": "= Crédit",
+            "couleurHex": "#106E85"
+          }
+        ]
       }
     },
     {
@@ -174,8 +219,34 @@
         "ancre": "sec-2a"
       },
       "titre": "Les comptes",
-      "contenu": "Un compte est un instrument permettant de spécifier les emplois et les ressources. Il prend la forme d'un tableau synthétique caractérisé par : un numéro de compte, un intitulé de compte, la valeur de l'opération, la date de l'opération, le libellé de l'opération, et une partie où sont inscrites les opérations débitrices et une autre pour les opérations créditrices. Afin d'apprécier l'état d'un compte, on en calcule le solde en effectuant la différence entre la somme des montants portés au débit et la somme des montants portés au crédit.",
-      "formule": "Débit > Crédit → solde débiteur · Crédit > Débit → solde créditeur"
+      "contenu": "Un compte est un instrument permettant de spécifier les emplois et les ressources. Afin d'apprécier l'état d'un compte, on en calcule le solde en effectuant la différence entre la somme des montants portés au débit et la somme des montants portés au crédit.",
+      "visuel": {
+        "type": "compteT",
+        "numero": "512",
+        "intitule": "Banques",
+        "attributs": [
+          {
+            "nom": "Numéro de compte",
+            "tip": "Code du plan comptable qui identifie le compte (ex. 512 pour Banques)."
+          },
+          {
+            "nom": "Intitulé",
+            "tip": "Nom du compte, qui précise sa nature."
+          },
+          {
+            "nom": "Débit",
+            "tip": "Partie gauche du compte : on y inscrit les emplois."
+          },
+          {
+            "nom": "Crédit",
+            "tip": "Partie droite du compte : on y inscrit les ressources."
+          },
+          {
+            "nom": "Solde",
+            "tip": "Différence Débit − Crédit : débiteur si Débit > Crédit, créditeur si Crédit > Débit."
+          }
+        ]
+      }
     },
     {
       "sousPartie": {
@@ -184,11 +255,53 @@
         "ancre": "sec-2b"
       },
       "titre": "Le livre-journal",
-      "contenu": "Le livre-journal (ou journal) est un livre comptable présentant de manière chronologique les enregistrements comptables. Chaque écriture y indique la date de l'opération, le(s) compte(s) débité(s) et crédité(s) avec leurs numéros, les montants débités et crédités, ainsi que le libellé et la pièce justificative de l'opération. Exemple : la vente de la paire de bottes au client français (60 €) se traduit par un débit du compte 512 – Banques et un crédit du compte 707 – Ventes de marchandises, référencé par le numéro de facture."
+      "contenu": "Le livre-journal (ou journal) est un livre comptable présentant de manière chronologique les enregistrements comptables.",
+      "liste": [
+        {
+          "label": "Ordre chronologique",
+          "texte": "les écritures sont enregistrées dans l'ordre des opérations."
+        },
+        {
+          "label": "Date de l'opération",
+          "texte": "indiquée sur chaque écriture."
+        },
+        {
+          "label": "Comptes débités et crédités",
+          "texte": "mentionnés avec leurs numéros."
+        },
+        {
+          "label": "Montants",
+          "texte": "débités et crédités, toujours à l'équilibre."
+        },
+        {
+          "label": "Libellé et pièce justificative",
+          "texte": "référencent l'origine de l'écriture."
+        }
+      ],
+      "exemple": "La vente de la paire de bottes au client français (60 €) se traduit par un débit du compte 512 – Banques et un crédit du compte 707 – Ventes de marchandises, référencé par le numéro de facture.",
+      "visuel": {
+        "type": "flux",
+        "entree": "Pièce justificative",
+        "sortie": "Écriture datée au journal",
+        "etapes": [
+          {
+            "label": "Identifier la date",
+            "couleur": "blue"
+          },
+          {
+            "label": "Débiter un compte",
+            "couleur": "teal"
+          },
+          {
+            "label": "Créditer un compte",
+            "couleur": "violet"
+          }
+        ]
+      }
     },
     {
       "titre": "Le grand-livre et la balance",
-      "contenu": "L'ensemble des comptes constitue le grand-livre. À partir du grand-livre est extraite la balance, tableau récapitulant le total des mouvements et les soldes de chacun des comptes. Les balances peuvent se présenter de différentes manières (à 2, 4 ou 6 colonnes).",
+      "contenu": "L'ensemble des comptes constitue le grand-livre. À partir du grand-livre est extraite la balance, tableau récapitulant le total des mouvements et les soldes de chacun des comptes.",
       "tableau": {
         "colonnes": [
           "Nom des comptes",
@@ -210,6 +323,67 @@
             ""
           ]
         ]
+      },
+      "liste": [
+        {
+          "label": "Grand-livre",
+          "texte": "regroupe l'ensemble des comptes de l'entreprise, chacun alimenté par les écritures du journal."
+        },
+        {
+          "label": "Balance",
+          "texte": "récapitule, pour chaque compte, le solde initial, les mouvements et le solde final."
+        },
+        {
+          "label": "Présentation",
+          "texte": "la balance peut se présenter à 2, 4 ou 6 colonnes selon le niveau de détail souhaité."
+        }
+      ],
+      "visuel": {
+        "type": "flux",
+        "entree": "Livre-journal",
+        "sortie": "Balance",
+        "etapes": [
+          {
+            "label": "Reporter dans chaque compte",
+            "couleur": "blue"
+          },
+          {
+            "label": "Calculer les soldes",
+            "couleur": "teal"
+          },
+          {
+            "label": "Récapituler dans la balance",
+            "couleur": "violet"
+          }
+        ]
+      }
+    },
+    {
+      "titre": "Différences entre le livre-journal, le grand-livre et la balance",
+      "contenu": "Ces trois documents sont complémentaires mais n'ont ni le même rôle ni le même statut légal.",
+      "tableau": {
+        "colonnes": [
+          "Document",
+          "Rôle",
+          "Obligatoire ?"
+        ],
+        "lignes": [
+          [
+            "Livre-journal",
+            "Enregistrement chronologique de toutes les écritures",
+            "Oui — Art. L123-12 du Code de commerce"
+          ],
+          [
+            "Grand-livre",
+            "Regroupement des écritures par compte",
+            "Oui — Art. L123-12 du Code de commerce"
+          ],
+          [
+            "Balance",
+            "Récapitulatif des mouvements et soldes de chaque compte",
+            "Non — outil de contrôle non légalement imposé"
+          ]
+        ]
       }
     },
     {
@@ -219,11 +393,28 @@
         "ancre": "sec-3"
       },
       "titre": "Le bilan et le compte de résultat",
-      "contenu": "À partir de la balance se définissent les deux documents de synthèse : le bilan et le compte de résultat. Le bilan regroupe les comptes des classes 1 à 5 ; c'est un document comptable fournissant une image de la situation patrimoniale de l'entreprise, en présentant les éléments d'actif et de passif. Le compte de résultat regroupe les comptes des classes 6 et 7 ; il informe sur la formation du bénéfice ou de la perte réalisé par l'entreprise, en présentant les produits et les charges qui participent à la formation du résultat de l'exercice."
+      "contenu": "À partir de la balance se définissent les deux documents de synthèse : le bilan et le compte de résultat.",
+      "visuel": {
+        "type": "duo",
+        "cartes": [
+          {
+            "titre": "BILAN",
+            "sousTitre": "Classes 1 à 5",
+            "description": "Image de la situation patrimoniale de l'entreprise : éléments d'actif et de passif.",
+            "couleurHex": "#238689"
+          },
+          {
+            "titre": "COMPTE DE RÉSULTAT",
+            "sousTitre": "Classes 6 et 7",
+            "description": "Formation du bénéfice ou de la perte de l'exercice : charges et produits.",
+            "couleurHex": "#1F6B4A"
+          }
+        ]
+      }
     },
     {
       "titre": "Astuce pour identifier emploi et ressource",
-      "contenu": "Pour chaque enregistrement, il faut toujours déterminer a minima un emploi et une ressource. Phrase-clé pour s'aider : « Grâce à… (ressource), l'entreprise a pu… (emploi) »."
+      "astuce": "Pour chaque enregistrement, détermine toujours a minima un emploi et une ressource à l'aide de la phrase-clé : « Grâce à… (ressource), l'entreprise a pu… (emploi) »."
     }
   ],
   "vocabulaire": [
