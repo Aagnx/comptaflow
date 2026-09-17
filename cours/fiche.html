@@ -78,7 +78,12 @@ if (n.tableau) inner += renderTable(n.tableau);
 if (n.timeline) inner += renderTimeline(n.timeline);
 if (n.visuel) inner += renderVisuel(n.visuel);
 if (n.exemple) inner += renderExemple(n.exemple);
+if (n.astuce) inner += renderAstuce(n.astuce);
 return `<div class="notion">${inner}</div>`;
+}
+
+function renderAstuce(texte) {
+return `<div class="astuce-box"><span class="astuce-tag">💡 Astuce</span><p>${esc(texte)}</p></div>`;
 }
 
 function renderListe(items) {
@@ -203,8 +208,65 @@ case 'pyramide': return renderPyramide(v);
 case 'metiers': return renderMetiers(v);
 case 'treso-valeur': return renderTresoValeur();
 case 'etoile': return renderEtoile(v);
+case 'arbre': return renderArbre(v);
+case 'compteT': return renderCompteT(v);
+case 'duo': return renderDuo(v);
 default: return '';
 }
+}
+
+function renderArbre(v) {
+const branches = v.branches.map(b => `
+<div class="arbre-branche">
+<div class="arbre-fleche">↓</div>
+<div class="arbre-condition">${esc(b.condition)}</div>
+<div class="arbre-resultat" style="--ac:${esc(b.couleurHex || '#238689')}">
+<span class="arbre-reponse">${esc(b.reponse)}</span>
+${b.souligne ? `<span class="arbre-souligne">${esc(b.souligne)}</span>` : ''}
+</div>
+</div>`).join('');
+return `<div class="arbre-wrap">
+${v.scenario ? `<div class="arbre-scenario">${esc(v.scenario)}</div>` : ''}
+<div class="arbre-question">${esc(v.question)}</div>
+<div class="arbre-branches">${branches}</div>
+</div>`;
+}
+
+function renderCompteT(v) {
+const attrTag = (nom, tip, extraClass) => `<span class="ct-attr ${extraClass || ''} coeur-tip" tabindex="0">${esc(nom)}<span class="coeur-bubble">${esc(tip)}</span></span>`;
+const find = (nom) => (v.attributs || []).find(a => a.nom === nom) || { nom, tip: '' };
+const aNum = find('Numéro de compte');
+const aInt = find('Intitulé');
+const aDeb = find('Débit');
+const aCred = find('Crédit');
+const aSolde = find('Solde');
+return `<div class="compteT-wrap">
+<div class="compteT-header">
+${attrTag(aNum.nom, aNum.tip, 'ct-num')} <span class="compteT-num-val">${esc(v.numero)}</span>
+— ${attrTag(aInt.nom, aInt.tip, 'ct-int')} <span class="compteT-int-val">${esc(v.intitule)}</span>
+</div>
+<div class="compteT-body">
+<div class="compteT-col">
+${attrTag(aDeb.nom, aDeb.tip, 'ct-debit')}
+<div class="compteT-zone ct-zone-debit"></div>
+</div>
+<div class="compteT-col">
+${attrTag(aCred.nom, aCred.tip, 'ct-credit')}
+<div class="compteT-zone ct-zone-credit"></div>
+</div>
+</div>
+<div class="compteT-footer">${attrTag(aSolde.nom, aSolde.tip, 'ct-solde')}</div>
+</div>`;
+}
+
+function renderDuo(v) {
+const cartes = v.cartes.map(c => `
+<div class="duo-carte" style="--dc:${esc(c.couleurHex || '#238689')}">
+<div class="duo-titre">${esc(c.titre)}</div>
+<div class="duo-sous">${esc(c.sousTitre)}</div>
+<div class="duo-desc">${esc(c.description)}</div>
+</div>`).join('');
+return `<div class="duo-wrap">${cartes}</div>`;
 }
 
 function renderEtoile(v) {
