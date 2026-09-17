@@ -457,3 +457,44 @@ table.compare tr.tr-resultat td { border-left: 5px solid var(--amber); backgroun
 .legende-dot { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
 .legende-dot.tr-bilan { background: var(--blue); }
 .legende-dot.tr-resultat { background: var(--amber); }
+
+/* ---- Encadré Astuce (accent doré, distinct du reste de la palette) ---- */
+.astuce-box { margin-top: 14px; background: linear-gradient(135deg, rgba(251,191,36,.14), rgba(251,191,36,.05)); border: 1px solid rgba(217,158,10,.35); border-radius: 10px; padding: 14px 16px; }
+.astuce-tag { display: inline-flex; align-items: center; gap: 5px; font-family: var(--mono); font-size: .68rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: #92650A; margin-bottom: 6px; }
+.astuce-box p { margin: 0; font-size: .92rem; color: #6B4A08; line-height: 1.6; }
+
+/* ---- Arbre décisionnel (emploi vs ressource) ---- */
+.arbre-wrap { margin-top: 14px; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 20px; text-align: center; }
+.arbre-scenario { font-size: .85rem; font-style: italic; color: var(--ink-soft); margin-bottom: 12px; }
+.arbre-question { font-family: var(--display); font-weight: 700; font-size: .98rem; color: var(--ink); background: var(--mint); border-radius: 10px; padding: 12px 16px; margin-bottom: 6px; }
+.arbre-branches { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+.arbre-branche { flex: 1; min-width: 200px; max-width: 280px; display: flex; flex-direction: column; align-items: center; }
+.arbre-fleche { font-size: 1.2rem; color: var(--ink-faint); margin: 2px 0; }
+.arbre-condition { font-size: .85rem; color: var(--ink-soft); margin-bottom: 8px; min-height: 40px; }
+.arbre-resultat { width: 100%; border-radius: 10px; padding: 12px; background: color-mix(in srgb, var(--ac) 12%, white); border: 1.6px solid var(--ac); }
+.arbre-reponse { display: block; font-family: var(--display); font-weight: 700; font-size: 1rem; color: var(--ac); }
+.arbre-souligne { display: block; font-family: var(--mono); font-size: .78rem; color: var(--ink-soft); margin-top: 2px; }
+
+/* ---- Compte en T interactif ---- */
+.compteT-wrap { margin-top: 14px; background: #fff; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.compteT-header { background: var(--ink); color: #fff; padding: 10px 16px; font-size: .85rem; text-align: center; }
+.compteT-num-val, .compteT-int-val { font-weight: 700; }
+.compteT-body { display: grid; grid-template-columns: 1fr 1fr; }
+.compteT-col { padding: 12px 16px 16px; text-align: center; }
+.compteT-col:first-child { border-right: 1px solid var(--line); }
+.compteT-zone { margin-top: 10px; height: 70px; border: 1.5px dashed var(--line); border-radius: 8px; }
+.compteT-footer { border-top: 1px solid var(--line); padding: 10px; text-align: center; background: var(--mint); }
+.ct-attr { font-family: var(--mono); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--blue-ink); }
+.compteT-header .ct-attr { color: rgba(255,255,255,.85); }
+
+/* ---- Duo de cartes (ex: bilan / compte de résultat) ---- */
+.duo-wrap { display: flex; gap: 14px; margin-top: 14px; flex-wrap: wrap; }
+.duo-carte { flex: 1; min-width: 220px; background: color-mix(in srgb, var(--dc) 6%, white); border: 1.6px solid var(--dc); border-radius: 12px; padding: 18px; }
+.duo-titre { font-family: var(--display); font-weight: 700; font-size: 1rem; color: var(--dc); }
+.duo-sous { font-family: var(--mono); font-size: .74rem; color: var(--ink-soft); margin: 3px 0 8px; }
+.duo-desc { font-size: .85rem; color: var(--ink-soft); line-height: 1.5; }
+
+@media (max-width: 560px) {
+  .compteT-body { grid-template-columns: 1fr; }
+  .compteT-col:first-child { border-right: none; border-bottom: 1px solid var(--line); }
+}
