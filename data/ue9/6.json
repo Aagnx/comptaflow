@@ -313,11 +313,14 @@
         "ancre": "sec-3"
       },
       "titre": "La déclaration et le paiement de la TVA",
-      "contenu": "Les entreprises soumises au régime du réel normal doivent établir chaque mois une déclaration de TVA (imprimé CA3). Le montant de la TVA due au titre de la période correspond soit à une TVA à décaisser, soit à un crédit de TVA. En cas de crédit de TVA, l'entreprise peut soit reporter le solde de TVA déductible non imputé sur les périodes suivantes (crédit de taxe reportable sans limite de délai), soit en demander le remboursement selon certaines conditions."
+      "contenu": [
+        "Les entreprises soumises au régime du réel normal doivent établir chaque mois une déclaration de TVA (imprimé CA3). Le montant de la TVA due au titre de la période correspond soit à une TVA à décaisser, soit à un crédit de TVA.",
+        "En cas de crédit de TVA, l'entreprise peut soit reporter le solde de TVA déductible non imputé sur les périodes suivantes (crédit de taxe reportable sans limite de délai), soit en demander le remboursement selon certaines conditions."
+      ]
     },
     {
       "titre": "A. La TVA à décaisser — exemple de liquidation",
-      "contenu": "Lorsque la TVA collectée excède la TVA déductible, l'écart constitue une TVA à décaisser. Exemple : mois de mars N, TVA collectée 15 300 €, TVA déductible sur autres biens et services 8 000 €, TVA déductible sur immobilisations 800 €.",
+      "contenu": "Lorsque la TVA collectée excède la TVA déductible, l'écart constitue une TVA à décaisser.",
       "tableau": {
         "colonnes": [
           "Compte",
@@ -351,7 +354,8 @@
             "6 500,00"
           ]
         ]
-      }
+      },
+      "exemple": "Mois de mars N — TVA collectée : 15 300 € ; TVA déductible sur autres biens et services : 8 000 € ; TVA déductible sur immobilisations : 800 €."
     },
     {
       "titre": "Écriture de règlement de la TVA à décaisser",
@@ -381,7 +385,7 @@
     },
     {
       "titre": "B. Le crédit de TVA — exemple de liquidation",
-      "contenu": "Lorsque la TVA déductible excède la TVA collectée, l'écart constitue un crédit de TVA, reportable sur les déclarations suivantes (compte 44567) ou remboursable sous conditions. Exemple : mois de mars N, TVA collectée 15 300 €, TVA déductible sur autres biens et services 8 000 €, TVA déductible sur immobilisations 10 000 €.",
+      "contenu": "Lorsque la TVA déductible excède la TVA collectée, l'écart constitue un crédit de TVA, reportable sur les déclarations suivantes (compte 44567) ou remboursable sous conditions.",
       "tableau": {
         "colonnes": [
           "Compte",
@@ -415,11 +419,12 @@
             "10 000,00"
           ]
         ]
-      }
+      },
+      "exemple": "Mois de mars N — TVA collectée : 15 300 € ; TVA déductible sur autres biens et services : 8 000 € ; TVA déductible sur immobilisations : 10 000 €."
     },
     {
       "titre": "Astuce : déterminer la TVA applicable",
-      "contenu": "Le + de l'expert : déterminez la nature de l'opération (bien ou service) et sa territorialité (nationale, intracommunautaire, hors UE) pour définir la TVA associée — collectée, déductible, autoliquidée ou exonérée."
+      "astuce": "Le + de l'expert : déterminez la nature de l'opération (bien ou service) et sa territorialité (nationale, intracommunautaire, hors UE) pour définir la TVA associée — collectée, déductible, autoliquidée ou exonérée."
     }
   ],
   "vocabulaire": [
