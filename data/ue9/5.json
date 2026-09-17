@@ -209,11 +209,12 @@
             "Facturation (ou date d'encaissement en cas d'acompte)"
           ]
         ]
-      }
+      },
+      "coeur": "À connaître par cœur pour l'examen :)"
     },
     {
       "titre": "Astuce : les livraisons à soi-même (LASM)",
-      "contenu": "Les livraisons à soi-même (LASM) constituent également un cas particulier au regard de la TVA : leur fait générateur est l'exécution du service, et leur exigibilité intervient au fur et à mesure de l'exécution des prestations."
+      "astuce": "Les livraisons à soi-même (LASM) constituent également un cas particulier au regard de la TVA : leur fait générateur est l'exécution du service, et leur exigibilité intervient au fur et à mesure de l'exécution des prestations."
     },
     {
       "partie": {
