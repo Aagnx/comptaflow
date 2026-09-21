@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercices — Comptaflow</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23021225'/><text x='50' y='72' font-size='70' font-weight='bold' text-anchor='middle' fill='%2325C5E9' font-family='Arial'>C</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mint:#F2FFF6; --tea:#CAFFDE; --sky:#25C5E9; --cyan:#238689; --ink:#021225;
+  --cyan-dark:#1B6669; --sky-dark:#106E85;
+  --ink-soft:#4A5D63; --ink-faint:#7C8F93;
+  --line:#DCEEE2; --surface:#FFFFFF;
+  --green:#1F6B4A; --amber-ink:#14523A;
+  --radius:14px; --shadow:0 1px 2px rgba(2,18,37,.05), 0 12px 28px rgba(2,18,37,.07);
+  --display:'Space Grotesk', system-ui, sans-serif;
+  --body:'Inter', system-ui, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:#fff;color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:0 28px;height:64px;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.3) blur(8px);
+  border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-mark{width:30px;height:30px;border-radius:8px;background:var(--ink);display:flex;align-items:center;
+  justify-content:center;color:var(--sky);font-family:var(--display);font-size:15px;font-weight:700}
+.logo-name{font-family:var(--display);font-size:16px;font-weight:600;color:var(--ink)}
+.logo-name span{color:var(--cyan)}
+.back-link{font-size:14px;color:var(--ink-soft);text-decoration:none}
+.back-link:hover{color:var(--ink)}
+
+.header{position:relative;padding:44px 28px 40px;overflow:hidden;
+  background:linear-gradient(135deg, var(--ink) 0%, var(--cyan-dark) 42%, var(--cyan) 68%, var(--sky) 100%)}
+.header::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(700px 320px at 88% -10%, rgba(255,255,255,.12), transparent 60%)}
+.header-inner{position:relative;max-width:800px;margin:0 auto}
+.tag{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);
+  color:#fff;font-size:12px;font-weight:600;padding:4px 12px;border-radius:20px;margin-bottom:12px;
+  backdrop-filter:blur(4px)}
+.header h1{font-family:var(--display);font-size:30px;font-weight:700;color:#fff;margin-bottom:8px}
+.header p{font-size:15px;color:rgba(255,255,255,.82)}
+
+.progress-bar{max-width:800px;margin:0 auto;padding:22px 28px 0}
+.progress-track{background:var(--line);border-radius:8px;height:8px;overflow:hidden}
+.progress-fill{background:var(--sky);height:100%;width:0;transition:width .4s ease}
+.progress-label{font-size:12px;color:var(--ink-faint);margin-top:8px;text-align:center}
+
+/* ---- nav rapide vers les axes ---- */
+.axe-nav{max-width:800px;margin:22px auto 0;padding:0 28px;display:flex;gap:8px;flex-wrap:wrap}
+.axe-nav a{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;color:var(--ink);
+  background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 8px;text-decoration:none}
+.axe-nav a:hover{border-color:var(--cyan)}
+.axe-nav-dot{width:9px;height:9px;border-radius:3px;flex-shrink:0}
+
+.content{max-width:800px;margin:0 auto;padding:20px 28px 90px}
+
+/* ---- bloc Axe : cadre à bordure dégradée (même logique que la fiche 1) ---- */
+.axe-block{margin-top:32px;position:relative;padding:24px 22px 26px;border-radius:20px;
+  border:1.5px solid transparent;
+  background:linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg, var(--ax-a), var(--ax-b)) border-box}
+.axe-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.axe-num{flex-shrink:0;font-family:var(--mono);font-size:12px;font-weight:700;color:#fff;
+  background:linear-gradient(135deg, var(--ax-a), var(--ax-b));padding:5px 12px;border-radius:7px}
+.axe-title{font-family:var(--display);font-size:17px;font-weight:700;color:var(--ink)}
+.axe-empty{font-size:13px;color:var(--ink-faint);background:#fff;border:1px dashed var(--line);
+  border-radius:10px;padding:14px 16px}
+
+/* ---- carte exercice interactif (fiche avec exercice dispo) ---- */
+.ex-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;margin-bottom:14px;
+  box-shadow:var(--shadow);scroll-margin-top:80px}
+.ex-num{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--cyan-dark);
+  text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.ex-titre{font-family:var(--display);font-size:16px;font-weight:600;color:var(--ink);margin-bottom:16px}
+.ex-texte{font-size:14.5px;line-height:2.3;color:var(--ink)}
+.trou{display:inline-block;min-width:120px;border:1px solid var(--cyan);border-radius:6px;padding:4px 8px;
+  font-size:13.5px;color:var(--cyan-dark);text-align:center;outline:none;background:#fff;font-family:inherit}
+.trou:focus{border-color:var(--cyan-dark);box-shadow:0 0 0 2px rgba(35,134,137,.15)}
+.trou.ok{border-color:var(--green);background:#E7FBEE;color:var(--green);font-weight:600}
+.trou.ko{border-color:#8C2F34;background:#FBEAEA;color:#8C2F34}
+.ex-actions{display:flex;gap:10px;margin-top:18px;align-items:center;flex-wrap:wrap}
+.btn-verif{background:var(--cyan);color:#fff;border:none;padding:10px 20px;border-radius:8px;
+  font-size:13.5px;font-weight:600;cursor:pointer;font-family:inherit}
+.btn-verif:hover{background:var(--cyan-dark)}
+.btn-corrige{background:#fff;color:var(--ink);border:1px solid var(--line);padding:10px 20px;border-radius:8px;
+  font-size:13.5px;cursor:pointer;font-family:inherit}
+.btn-corrige:hover{background:var(--mint)}
+.result{font-size:13.5px;font-weight:600;margin-left:4px}
+.result.ok{color:var(--green)}
+.result.ko{color:#8C2F34}
+
+/* ---- ligne placeholder (fiche sans exercice pour l'instant) ---- */
+.fiche-row{display:flex;align-items:center;justify-content:space-between;background:#fff;
+  border:1px dashed var(--line);border-radius:10px;padding:12px 16px;margin-bottom:8px}
+.fiche-row-label{font-size:13.5px;color:var(--ink-soft)}
+.fiche-row-label b{color:var(--ink);font-weight:600}
+.fiche-row-status{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);
+  background:var(--mint);border-radius:6px;padding:3px 9px}
+
+/* ---- Bloc fiche avec plusieurs exercices (ex. Fiche 1) ---- */
+.fiche-block{background:#fff;border:1.5px solid transparent;border-radius:18px;margin-bottom:14px;
+  padding:22px 22px 20px;
+  background:linear-gradient(#fff,#fff) padding-box, linear-gradient(135deg, var(--fb-a), var(--fb-b)) border-box;
+  scroll-margin-top:80px}
+.fiche-block-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.fiche-block-badge{flex-shrink:0;width:34px;height:34px;border-radius:10px;color:#fff;display:flex;
+  align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:14px;
+  background:linear-gradient(135deg, var(--fb-a), var(--fb-b))}
+.fiche-block-titre{font-family:var(--display);font-size:16px;font-weight:700;color:var(--ink)}
+.fiche-mini-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.fiche-mini-nav a{font-size:12.5px;font-weight:600;color:var(--cyan-dark);background:var(--mint);
+  border:1px solid var(--line);border-radius:999px;padding:6px 13px;text-decoration:none}
+.fiche-mini-nav a:hover{border-color:var(--cyan)}
+.fiche-block .ex-card{scroll-margin-top:80px}
+.ex-hint{font-size:13px;color:var(--ink-faint);margin:-8px 0 14px}
+
+/* ---- Exercice : texte à trous à glisser-déposer ---- */
+.word-bank{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 4px;padding:14px;background:var(--mint);
+  border-radius:10px;border:1px dashed var(--line)}
+.word-chip{display:inline-block;padding:6px 13px;background:#fff;border:1.5px solid var(--cyan);
+  border-radius:999px;font-size:13px;font-weight:600;color:var(--cyan-dark);cursor:grab;user-select:none;
+  transition:opacity .15s,transform .1s}
+.word-chip:active{cursor:grabbing}
+.word-chip.selected{background:var(--cyan);color:#fff;transform:scale(1.05)}
+.word-chip.used{opacity:.25;pointer-events:none}
+.word-chip.dragging{opacity:.4}
+.dropzone{display:inline-flex;align-items:center;justify-content:center;min-width:150px;min-height:30px;
+  padding:3px 10px;margin:0 2px;border:1.5px dashed var(--cyan);border-radius:7px;background:#fff;
+  color:var(--cyan-dark);font-weight:600;font-size:13.5px;cursor:pointer;vertical-align:middle}
+.dropzone.filled{border-style:solid;background:#EAF6F5}
+.dropzone.ok{border-color:var(--green);background:#E7FBEE;color:var(--green)}
+.dropzone.ko{border-color:#8C2F34;background:#FBEAEA;color:#8C2F34}
+
+/* ---- Exercice : vrai ou faux ---- */
+.vf-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 16px;
+  border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:#fff}
+.vf-texte{font-size:13.5px;color:var(--ink);flex:1}
+.vf-btns{display:flex;gap:6px;flex-shrink:0}
+.vf-btn{font-family:inherit;font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:7px;
+  border:1.5px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer}
+.vf-btn.selected{border-color:var(--cyan);background:var(--cyan);color:#fff}
+.vf-row.row-ok{border-color:var(--green);background:#F0FBF3}
+.vf-row.row-ko{border-color:#8C2F34;background:#FDF2F2}
+
+/* ---- Exercice : remettre dans l'ordre ---- */
+.ordre-row{display:flex;align-items:center;gap:12px;padding:11px 14px;border:1px solid var(--line);
+  border-radius:10px;margin-bottom:8px;background:#fff}
+.ordre-rank{flex-shrink:0;width:26px;height:26px;border-radius:7px;background:var(--cyan);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:12px}
+.ordre-label{flex:1;font-size:13.5px;font-weight:600;color:var(--ink)}
+.ordre-arrows{display:flex;gap:4px;flex-shrink:0}
+.ordre-arrows button{width:28px;height:28px;border-radius:6px;border:1px solid var(--line);background:#fff;
+  color:var(--cyan-dark);font-size:13px;cursor:pointer}
+.ordre-arrows button:hover:not(:disabled){background:var(--mint)}
+.ordre-arrows button:disabled{opacity:.3;cursor:default}
+.ordre-row.row-ok{border-color:var(--green);background:#F0FBF3}
+.ordre-row.row-ko{border-color:#8C2F34;background:#FDF2F2}
+
+/* ---- Exercice : relier terme/définition ---- */
+.relier-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 4px}
+.relier-item{padding:11px 13px;border:1.5px solid var(--line);border-radius:9px;background:#fff;
+  font-size:13px;margin-bottom:8px;cursor:pointer;transition:border-color .12s}
+.relier-term{font-weight:600;color:var(--ink)}
+.relier-def{color:var(--ink-soft)}
+.relier-item.selected{border-color:var(--cyan);box-shadow:0 0 0 2px rgba(35,134,137,.15)}
+.relier-item.locked{cursor:default}
+.relier-item.pair-ko{border-color:#8C2F34 !important;background:#FDF2F2 !important}
+@media(max-width:560px){ .relier-grid{grid-template-columns:1fr} }
+
+@media(max-width:768px){
+  nav{padding:0 18px}
+  .header{padding:32px 18px 18px}
+  .header h1{font-size:25px}
+  .content{padding:16px 18px 60px}
+  .axe-nav{padding:0 18px}
+}
+
+/* ---- Cas pratique (mini étude de cas) ---- */
+.cas-contexte{font-size:13.5px;color:var(--ink-soft);line-height:1.7;margin-bottom:16px}
+.cas-contexte b{color:var(--ink)}
+.cas-table{width:100%;border-collapse:collapse;margin-bottom:16px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.cas-table th{background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:9px 14px;text-align:left}
+.cas-table td{padding:8px 14px;font-size:13.5px;border-top:1px solid var(--line)}
+.cas-table td.cas-total{font-weight:700;border-top:2px solid var(--ink)}
+.cas-capital-row{background:var(--mint)}
+.cas-capital-input{width:110px;text-align:center}
+
+/* ---- Point de vigilance (alerte rouge) ---- */
+.vigilance-box{margin:16px 0;background:#FDECEC;border:1.5px solid #E8A0A0;border-radius:10px;padding:14px 16px}
+.vigilance-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:11px;font-weight:700;
+  letter-spacing:.05em;text-transform:uppercase;color:#B3261E;margin-bottom:6px}
+.vigilance-box p{margin:0;font-size:13px;color:#7A1E1E;line-height:1.6}
+
+/* ---- Natures de comptes (4 cartes colorées avec icône) ---- */
+.natures-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:16px 0}
+.nature-card{border-radius:10px;padding:14px;border:1.6px solid var(--nc);background:color-mix(in srgb, var(--nc) 7%, white)}
+.nature-icon{font-size:22px;margin-bottom:6px}
+.nature-nom{font-weight:700;font-size:13px;color:var(--nc);margin-bottom:4px}
+.nature-exemples{font-size:12px;color:var(--ink-soft);line-height:1.5}
+
+/* ---- Questions ouvertes avec réponse à révéler ---- */
+.qr-item{border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:8px;background:#fff}
+.qr-question{font-size:13.5px;font-weight:600;color:var(--ink)}
+.qr-reponse{font-size:13px;color:var(--cyan-dark);margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);display:none}
+.qr-reponse.visible{display:block}
+.ex-label{font-weight:700;font-size:13.5px;color:var(--ink);margin-bottom:8px}
+</style>
+
+<body>
+<nav>
+  <a class="logo" href="/"><div class="logo-mark">C</div><span class="logo-name">Compta<span>flow</span></span></a>
+  <a class="back-link" href="ue9.html">← Tous les exercices</a>
+</nav>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="tag" id="fiche-tag">UE 9 · Exercices</div>
+    <h1 id="fiche-h1">Chargement…</h1>
+    <p id="fiche-p"></p>
+  </div>
+</div>
+
+<div class="progress-bar">
+  <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+  <div class="progress-label" id="progress-label">0 / 0 exercices réussis</div>
+</div>
+
+<div class="content" id="app">
+  <div class="fiche-block" id="fiche-block" style="--fb-a:#238689;--fb-b:#25C5E9">
+    <div class="fiche-block-head">
+      <span class="fiche-block-badge" id="fiche-badge">·</span>
+      <span class="fiche-block-titre" id="fiche-titre-txt">Chargement…</span>
+    </div>
+    <nav class="fiche-mini-nav" id="mini-nav"></nav>
+    <div id="ex-container"></div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   MOTEUR GÉNÉRIQUE D'EXERCICES — pilote entièrement par les
+   données de data/exercices/{id}.json. Pour ajouter ou modifier
+   les exercices d'une fiche, il suffit d'éditer ce fichier JSON :
+   aucune retouche de ce moteur n'est nécessaire.
+   ============================================================ */
+
+var examData = null;
+var solved = [];
+var state = {}; // état d'interaction par exercice (mots placés, paires faites, ordre courant...)
+
+function esc(s){
+  var d = document.createElement('div');
+  d.textContent = s == null ? '' : String(s);
+  return d.innerHTML;
+}
+
+async function init(){
+  var params = new URLSearchParams(location.search);
+  var id = params.get('id');
+  var app = document.getElementById('app');
+  if(!id){
+    app.innerHTML = erreurHtml('(aucun id fourni)', "Ajoute ?id=1 (par exemple) à l'URL.");
+    return;
+  }
+  try{
+    var res = await fetch('../data/exercices/' + id + '.json', {cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    examData = await res.json();
+  }catch(e){
+    app.innerHTML = erreurHtml(id, e.message + ' — vérifie que le fichier data/exercices/' + id + '.json existe.');
+    return;
+  }
+  render();
+}
+
+function erreurHtml(id, msg){
+  document.getElementById('fiche-h1').textContent = 'Exercices introuvables';
+  document.getElementById('fiche-p').textContent = '';
+  return '<div class="ex-card" style="max-width:600px;margin:40px auto;text-align:center">' +
+    '<p style="font-size:15px;color:var(--ink-soft)">Fiche « ' + esc(id) + ' » introuvable.</p>' +
+    '<p style="font-size:12.5px;color:var(--ink-faint);margin-top:8px">' + esc(msg) + '</p>' +
+    '<a href="ue9.html" style="display:inline-block;margin-top:16px;color:var(--cyan-dark)">← Retour aux exercices</a>' +
+    '</div>';
+}
+
+var SYMBOLS = ['①','②','③','④','⑤','⑥','⑦','⑧','⑨','⑩','⑪','⑫'];
+
+function render(){
+  var d = examData;
+  document.title = 'Exercices — Fiche ' + d.numero + ' | Comptaflow';
+  document.getElementById('fiche-tag').textContent = 'UE 9 · Exercices · Fiche ' + d.numero;
+  document.getElementById('fiche-h1').textContent = 'Entraîne-toi — ' + d.titre;
+  document.getElementById('fiche-p').textContent = "Organisés dans l'ordre de la fiche — corrige chaque exercice avant de passer au suivant.";
+
+  var block = document.getElementById('fiche-block');
+  block.style.setProperty('--fb-a', d.couleurA || '#238689');
+  block.style.setProperty('--fb-b', d.couleurB || '#25C5E9');
+  document.getElementById('fiche-badge').textContent = d.numero;
+  document.getElementById('fiche-titre-txt').textContent = 'Exercices — ' + d.titre;
+
+  solved = d.exercices.map(function(){ return false; });
+
+  var miniNav = document.getElementById('mini-nav');
+  var container = document.getElementById('ex-container');
+
+  d.exercices.forEach(function(ex, i){
+    var a = document.createElement('a');
+    a.href = '#ex-' + i;
+    a.textContent = (SYMBOLS[i] || (i+1) + '.') + ' ' + ex.titre;
+    miniNav.appendChild(a);
+
+    var card = document.createElement('div');
+    card.className = 'ex-card';
+    card.id = 'ex-' + i;
+    card.innerHTML =
+      '<div class="ex-num">Exercice ' + (i+1) + ' — Fiche ' + d.numero + '</div>' +
+      '<div class="ex-titre">' + esc(ex.titre) + '</div>' +
+      (ex.hint ? '<p class="ex-hint">' + esc(ex.hint) + '</p>' : '') +
+      '<div class="ex-body" id="ex-body-' + i + '"></div>' +
+      '<div class="ex-actions">' +
+        '<button class="btn-verif" onclick="verifier(' + i + ')">Vérifier</button>' +
+        '<button class="btn-corrige" onclick="corriger(' + i + ')">Voir la correction</button>' +
+        '<span class="result" id="res-' + i + '"></span>' +
+      '</div>';
+    container.appendChild(card);
+
+    buildExercice(ex, i);
+  });
+
+  updateProgress();
+}
+
+function updateProgress(){
+  var count = solved.filter(Boolean).length;
+  var total = solved.length;
+  document.getElementById('progress-fill').style.width = (total ? count/total*100 : 0) + '%';
+  document.getElementById('progress-label').textContent = count + ' / ' + total + ' exercices réussis';
+}
+
+function setResult(i, ok, msgOk, msgKo){
+  var res = document.getElementById('res-' + i);
+  if(ok){ res.textContent = msgOk || '✅ Bravo, tout est correct !'; res.className = 'result ok'; solved[i] = true; }
+  else{ res.textContent = msgKo || '❌ Quelques erreurs, réessaie'; res.className = 'result ko'; solved[i] = false; }
+  updateProgress();
+}
+
+/* ---------------------------------------------------------------
+   Dispatch par type d'exercice : chaque type fournit
+   build(ex,i), verify(ex,i), correct(ex,i)
+   --------------------------------------------------------------- */
+function buildExercice(ex, i){ TYPES[ex.type].build(ex, i); }
+function verifier(i){ var ex = examData.exercices[i]; TYPES[ex.type].verify(ex, i); }
+function corriger(i){ var ex = examData.exercices[i]; TYPES[ex.type].correct(ex, i); }
+
+var TYPES = {};
+
+/* ================= TEXTE À TROUS ================= */
+TYPES.texte_trous = {
+  build: function(ex, i){
+    var body = document.getElementById('ex-body-' + i);
+    var html = '<div class="ex-texte" id="tt-text-' + i + '">';
+    ex.segments.forEach(function(seg, si){
+      if(seg.blank){
+        html += '<span class="dropzone" data-answer="' + esc(seg.blank) + '" id="dz-' + i + '-' + si + '"></span>';
+      } else {
+        html += esc(seg.text);
+      }
+    });
+    html += '</div>';
+    var mots = ex.segments.filter(function(s){return s.blank;}).map(function(s){return s.blank;});
+    (ex.distracteurs || []).forEach(function(m){ mots.push(m); });
+    // mélange léger pour ne pas avoir les réponses dans l'ordre
+    for(var k=mots.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=mots[k]; mots[k]=mots[j]; mots[j]=t; }
+    html += '<div class="word-bank" id="wb-' + i + '">';
+    mots.forEach(function(m){
+      html += '<span class="word-chip" draggable="true" data-word="' + esc(m) + '">' + esc(m) + '</span>';
+    });
+    html += '</div>';
+    body.innerHTML = html;
+
+    state[i] = { selected: null };
+    var wb = document.getElementById('wb-' + i);
+    wb.querySelectorAll('.word-chip').forEach(function(chip){
+      chip.addEventListener('dragstart', function(e){
+        e.dataTransfer.setData('text/plain', chip.dataset.word);
+        chip.classList.add('dragging');
+      });
+      chip.addEventListener('dragend', function(){ chip.classList.remove('dragging'); });
+      chip.addEventListener('click', function(){
+        if(chip.classList.contains('used')) return;
+        wb.querySelectorAll('.word-chip').forEach(function(c){ c.classList.remove('selected'); });
+        chip.classList.add('selected');
+        state[i].selected = chip;
+      });
+    });
+    document.querySelectorAll('#tt-text-' + i + ' .dropzone').forEach(function(dz){
+      dz.addEventListener('dragover', function(e){ e.preventDefault(); });
+      dz.addEventListener('drop', function(e){
+        e.preventDefault();
+        var word = e.dataTransfer.getData('text/plain');
+        if(word) placerMot(i, dz, word);
+      });
+      dz.addEventListener('click', function(){
+        if(dz.classList.contains('filled')){
+          var w = dz.dataset.filled;
+          dz.textContent = ''; dz.classList.remove('filled','ok','ko'); delete dz.dataset.filled;
+          var chip = wb.querySelector('.word-chip[data-word="' + CSS.escape(w) + '"]');
+          if(chip) chip.classList.remove('used');
+          return;
+        }
+        if(state[i].selected){
+          placerMot(i, dz, state[i].selected.dataset.word);
+          state[i].selected.classList.add('used');
+          state[i].selected.classList.remove('selected');
+          state[i].selected = null;
+        }
+      });
+    });
+
+    function placerMot(i, dz, word){
+      if(dz.dataset.filled){
+        var prevChip = wb.querySelector('.word-chip[data-word="' + CSS.escape(dz.dataset.filled) + '"]');
+        if(prevChip) prevChip.classList.remove('used');
+      }
+      dz.textContent = word; dz.dataset.filled = word;
+      dz.classList.add('filled'); dz.classList.remove('ok','ko');
+      var chip = wb.querySelector('.word-chip[data-word="' + CSS.escape(word) + '"]');
+      if(chip) chip.classList.add('used');
+    }
+  },
+  verify: function(ex, i){
+    var allOk = true, allFilled = true;
+    document.querySelectorAll('#tt-text-' + i + ' .dropzone').forEach(function(dz){
+      if(!dz.dataset.filled){ allFilled = false; return; }
+      var ok = dz.dataset.filled === dz.dataset.answer;
+      dz.classList.toggle('ok', ok); dz.classList.toggle('ko', !ok);
+      if(!ok) allOk = false;
+    });
+    if(!allFilled){ var res=document.getElementById('res-'+i); res.textContent='Complète tous les trous avant de vérifier'; res.className='result ko'; return; }
+    setResult(i, allOk);
+  },
+  correct: function(ex, i){
+    var bonnes = ex.segments.filter(function(s){return s.blank;}).map(function(s){return s.blank;});
+    document.querySelectorAll('#tt-text-' + i + ' .dropzone').forEach(function(dz){
+      dz.textContent = dz.dataset.answer; dz.dataset.filled = dz.dataset.answer;
+      dz.classList.add('filled','ok'); dz.classList.remove('ko');
+    });
+    document.querySelectorAll('#wb-' + i + ' .word-chip').forEach(function(c){
+      c.classList.toggle('used', bonnes.indexOf(c.dataset.word) !== -1);
+    });
+    setResult(i, true, '✅ Correction affichée');
+  }
+};
+
+/* ================= VRAI / FAUX ================= */
+TYPES.vrai_faux = {
+  build: function(ex, i){
+    var body = document.getElementById('ex-body-' + i);
+    state[i] = { reponses: [] };
+    var html = '<div class="vf-list">';
+    ex.affirmations.forEach(function(a, ai){
+      html += '<div class="vf-row">' +
+        '<div class="vf-texte">' + esc(a.texte) + '</div>' +
+        '<div class="vf-btns">' +
+          '<button class="vf-btn" onclick="choisirVF(' + i + ',' + ai + ',true)">Vrai</button>' +
+          '<button class="vf-btn" onclick="choisirVF(' + i + ',' + ai + ',false)">Faux</button>' +
+        '</div></div>';
+    });
+    html += '</div>';
+    body.innerHTML = html;
+  },
+  verify: function(ex, i){
+    var rows = document.querySelectorAll('#ex-body-' + i + ' .vf-row');
+    var allOk = true, allAnswered = true;
+    ex.affirmations.forEach(function(a, ai){
+      if(state[i].reponses[ai] === undefined){ allAnswered = false; return; }
+      var ok = state[i].reponses[ai] === a.vrai;
+      rows[ai].classList.toggle('row-ok', ok); rows[ai].classList.toggle('row-ko', !ok);
+      if(!ok) allOk = false;
+    });
+    if(!allAnswered){ var res=document.getElementById('res-'+i); res.textContent='Réponds à toutes les affirmations'; res.className='result ko'; return; }
+    setResult(i, allOk);
+  },
+  correct: function(ex, i){
+    var rows = document.querySelectorAll('#ex-body-' + i + ' .vf-row');
+    ex.affirmations.forEach(function(a, ai){
+      state[i].reponses[ai] = a.vrai;
+      var btns = rows[ai].querySelectorAll('.vf-btn');
+      btns[0].classList.toggle('selected', a.vrai===true);
+      btns[1].classList.toggle('selected', a.vrai===false);
+      rows[ai].classList.add('row-ok'); rows[ai].classList.remove('row-ko');
+    });
+    setResult(i, true, '✅ Correction affichée');
+  }
+};
+function choisirVF(i, ai, val){
+  state[i].reponses[ai] = val;
+  var row = document.querySelectorAll('#ex-body-' + i + ' .vf-row')[ai];
+  row.classList.remove('row-ok','row-ko');
+  var btns = row.querySelectorAll('.vf-btn');
+  btns[0].classList.toggle('selected', val===true);
+  btns[1].classList.toggle('selected', val===false);
+}
+
+/* ================= REMETTRE DANS L'ORDRE ================= */
+TYPES.ordre = {
+  build: function(ex, i){
+    var actuel = ex.items.slice();
+    for(var k=actuel.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=actuel[k]; actuel[k]=actuel[j]; actuel[j]=t; }
+    state[i] = { actuel: actuel };
+    var body = document.getElementById('ex-body-' + i);
+    body.innerHTML = '<div class="ordre-list" id="ordre-list-' + i + '"></div>';
+    renderOrdre(ex, i);
+  },
+  verify: function(ex, i){
+    var ok = state[i].actuel.every(function(v, k){ return v === ex.items[k]; });
+    document.querySelectorAll('#ordre-list-' + i + ' .ordre-row').forEach(function(row, k){
+      row.classList.toggle('row-ok', state[i].actuel[k] === ex.items[k]);
+      row.classList.toggle('row-ko', state[i].actuel[k] !== ex.items[k]);
+    });
+    setResult(i, ok, "✅ Bravo, ordre correct !", "❌ L'ordre n'est pas encore bon");
+  },
+  correct: function(ex, i){
+    state[i].actuel = ex.items.slice();
+    renderOrdre(ex, i);
+    document.querySelectorAll('#ordre-list-' + i + ' .ordre-row').forEach(function(row){ row.classList.add('row-ok'); });
+    setResult(i, true, '✅ Correction affichée');
+  }
+};
+function renderOrdre(ex, i){
+  var box = document.getElementById('ordre-list-' + i);
+  box.innerHTML = '';
+  state[i].actuel.forEach(function(item, k){
+    var row = document.createElement('div'); row.className = 'ordre-row';
+    row.innerHTML = '<span class="ordre-rank">' + (k+1) + '</span>' +
+      '<span class="ordre-label">' + esc(item) + '</span>' +
+      '<div class="ordre-arrows">' +
+      '<button ' + (k===0?'disabled':'') + ' onclick="deplacerOrdre(' + i + ',' + k + ',-1)">↑</button>' +
+      '<button ' + (k===state[i].actuel.length-1?'disabled':'') + ' onclick="deplacerOrdre(' + i + ',' + k + ',1)">↓</button>' +
+      '</div>';
+    box.appendChild(row);
+  });
+}
+function deplacerOrdre(i, k, dir){
+  var j = k + dir;
+  if(j<0 || j>=state[i].actuel.length) return;
+  var tmp = state[i].actuel[k]; state[i].actuel[k] = state[i].actuel[j]; state[i].actuel[j] = tmp;
+  renderOrdre(examData.exercices[i], i);
+}
+
+/* ================= RELIER ================= */
+TYPES.relier = {
+  build: function(ex, i){
+    state[i] = { selTerme: null, paires: {} };
+    var body = document.getElementById('ex-body-' + i);
+    body.innerHTML = '<div class="relier-grid">' +
+      '<div class="relier-col" id="relier-termes-' + i + '"></div>' +
+      '<div class="relier-col" id="relier-defs-' + i + '"></div></div>';
+    var termesBox = document.getElementById('relier-termes-' + i);
+    var defsBox = document.getElementById('relier-defs-' + i);
+    ex.paires.forEach(function(p, pi){
+      var el = document.createElement('div');
+      el.className = 'relier-item relier-term'; el.dataset.i = pi; el.textContent = p.terme;
+      el.onclick = function(){ selectTerme(i, pi, el); };
+      termesBox.appendChild(el);
+    });
+    var melange = ex.paires.map(function(p, pi){ return {def:p.def, ref:pi}; });
+    for(var k=melange.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=melange[k]; melange[k]=melange[j]; melange[j]=t; }
+    melange.forEach(function(d){
+      var el = document.createElement('div');
+      el.className = 'relier-item relier-def'; el.dataset.ref = d.ref; el.textContent = d.def;
+      el.onclick = function(){ selectDef(i, d.ref, el); };
+      defsBox.appendChild(el);
+    });
+  },
+  verify: function(ex, i){
+    var total = ex.paires.length;
+    var fait = Object.keys(state[i].paires).length;
+    if(fait < total){ var res=document.getElementById('res-'+i); res.textContent='Relie tous les termes avant de vérifier'; res.className='result ko'; return; }
+    var allOk = true;
+    Object.keys(state[i].paires).forEach(function(k){
+      var ok = Number(k) === state[i].paires[k];
+      var termEl = document.querySelector('#relier-termes-' + i + ' .relier-term[data-i="' + k + '"]');
+      termEl.classList.toggle('pair-ko', !ok);
+      if(!ok) allOk = false;
+    });
+    setResult(i, allOk, '✅ Bravo, toutes les paires sont correctes !', '❌ Certaines paires sont fausses');
+  },
+  correct: function(ex, i){
+    var couleurs = ['#238689','#25C5E9','#1F6B4A','#106E85','#1B6669','#021225'];
+    document.querySelectorAll('#relier-termes-' + i + ' .relier-term, #relier-defs-' + i + ' .relier-def').forEach(function(el){
+      el.classList.remove('selected','locked','pair-ko'); el.style.borderColor=''; el.style.background='';
+    });
+    state[i].paires = {};
+    ex.paires.forEach(function(p, pi){
+      var color = couleurs[pi % couleurs.length];
+      var termEl = document.querySelector('#relier-termes-' + i + ' .relier-term[data-i="' + pi + '"]');
+      var defEl = document.querySelector('#relier-defs-' + i + ' .relier-def[data-ref="' + pi + '"]');
+      termEl.classList.add('locked'); termEl.style.borderColor=color; termEl.style.background=color+'14';
+      defEl.classList.add('locked'); defEl.style.borderColor=color; defEl.style.background=color+'14';
+      state[i].paires[pi] = pi;
+    });
+    setResult(i, true, '✅ Correction affichée');
+  }
+};
+function selectTerme(i, pi, el){
+  if(el.classList.contains('locked')) return;
+  document.querySelectorAll('#relier-termes-' + i + ' .relier-term').forEach(function(t){ t.classList.remove('selected'); });
+  el.classList.add('selected');
+  state[i].selTerme = pi;
+}
+function selectDef(i, ref, el){
+  if(el.classList.contains('locked') || state[i].selTerme === null) return;
+  var couleurs = ['#238689','#25C5E9','#1F6B4A','#106E85','#1B6669','#021225'];
+  var termEl = document.querySelector('#relier-termes-' + i + ' .relier-term[data-i="' + state[i].selTerme + '"]');
+  var color = couleurs[state[i].selTerme % couleurs.length];
+  termEl.classList.add('locked'); termEl.classList.remove('selected','pair-ko');
+  termEl.style.borderColor = color; termEl.style.background = color + '14';
+  el.classList.add('locked'); el.classList.remove('pair-ko');
+  el.style.borderColor = color; el.style.background = color + '14';
+  state[i].paires[state[i].selTerme] = ref;
+  state[i].selTerme = null;
+}
+
+/* ================= CAS PRATIQUE ================= */
+TYPES.cas_pratique = {
+  build: function(ex, i){
+    var body = document.getElementById('ex-body-' + i);
+    var maxRows = Math.max(ex.tableGauche.length, ex.tableDroite.length);
+    var rowsHtml = '';
+    for(var r=0; r<maxRows; r++){
+      var g = ex.tableGauche[r] || {label:'',valeur:''};
+      var d = ex.tableDroite[r] || {label:'',valeur:''};
+      rowsHtml += '<tr><td>' + esc(g.label) + '</td><td>' + esc(g.valeur) + '</td><td>' + esc(d.label) + '</td><td>' + esc(d.valeur) + '</td></tr>';
+    }
+    var html = '<div class="cas-contexte">' + ex.contexte + '</div>' +
+      '<div class="ex-label">' + esc(ex.questionCapital) + '</div>' +
+      '<table class="cas-table"><thead><tr><th>Ce que j\'ai (+)</th><th></th><th>Ce que je dois (−)</th><th></th></tr></thead><tbody>' +
+      rowsHtml +
+      '<tr><td class="cas-total">Total</td><td class="cas-total">' + esc(ex.totalGauche) + '</td><td class="cas-total">Total</td><td class="cas-total">' + esc(ex.totalDroite) + '</td></tr>' +
+      '<tr class="cas-capital-row"><td colspan="3"><b>Capital</b> = Ce que j\'ai − Ce que je dois =</td><td><input type="text" class="trou cas-capital-input" id="cas-capital-' + i + '" placeholder="?"></td></tr>' +
+      '</tbody></table>';
+
+    if(ex.vigilance){
+      html += '<div class="vigilance-box"><div class="vigilance-tag">🔴 Point de vigilance</div><p>' + esc(ex.vigilance) + '</p></div>';
+    }
+    if(ex.natures && ex.natures.length){
+      html += '<div class="ex-label" style="margin-top:20px">La nature des comptes</div><div class="natures-grid">';
+      ex.natures.forEach(function(n){
+        html += '<div class="nature-card" style="--nc:' + esc(n.couleur) + '"><div class="nature-icon">' + n.icone + '</div>' +
+          '<div class="nature-nom">' + esc(n.nom) + '</div><div class="nature-exemples">' + esc(n.exemples) + '</div></div>';
+      });
+      html += '</div>';
+    }
+    if(ex.questions && ex.questions.length){
+      html += '<div class="ex-label" style="margin-top:20px">Questions ouvertes</div><div id="qr-list-' + i + '"></div>' +
+        '<button class="btn-corrige" type="button" onclick="toggleReponsesCas(' + i + ')" id="btn-qr-' + i + '" style="margin-top:8px">Afficher les réponses</button>';
+    }
+    body.innerHTML = html;
+
+    if(ex.questions){
+      var qbox = document.getElementById('qr-list-' + i);
+      ex.questions.forEach(function(item, qi){
+        var div = document.createElement('div'); div.className = 'qr-item';
+        div.innerHTML = '<div class="qr-question">' + esc(item.q) + '</div><div class="qr-reponse" id="qr-rep-' + i + '-' + qi + '">' + esc(item.r) + '</div>';
+        qbox.appendChild(div);
+      });
+    }
+  },
+  verify: function(ex, i){
+    var input = document.getElementById('cas-capital-' + i);
+    var val = input.value.replace(/\s/g,'').replace(/[^\d]/g,'');
+    var attendu = ex.capitalCorrect.replace(/\s/g,'');
+    if(val === attendu){
+      input.classList.add('ok'); input.classList.remove('ko');
+      setResult(i, true, '✅ Bravo, le capital est bien de ' + ex.capitalCorrect + ' €');
+    } else {
+      input.classList.add('ko'); input.classList.remove('ok');
+      setResult(i, false, '', "❌ Ce n'est pas ça, réessaie");
+    }
+  },
+  correct: function(ex, i){
+    var input = document.getElementById('cas-capital-' + i);
+    input.value = ex.capitalCorrect;
+    input.classList.add('ok'); input.classList.remove('ko');
+    setResult(i, true, '✅ Correction affichée');
+  }
+};
+function toggleReponsesCas(i){
+  var btn = document.getElementById('btn-qr-' + i);
+  var shown = btn.dataset.shown === '1';
+  var ex = examData.exercices[i];
+  ex.questions.forEach(function(_, qi){
+    document.getElementById('qr-rep-' + i + '-' + qi).classList.toggle('visible', !shown);
+  });
+  btn.textContent = shown ? 'Afficher les réponses' : 'Masquer les réponses';
+  btn.dataset.shown = shown ? '0' : '1';
+}
+
+init();
+</script>
+</body>
+</html>
