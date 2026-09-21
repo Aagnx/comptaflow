@@ -209,6 +209,64 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .qr-reponse{font-size:13px;color:var(--cyan-dark);margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);display:none}
 .qr-reponse.visible{display:block}
 .ex-label{font-weight:700;font-size:13.5px;color:var(--ink);margin-bottom:8px}
+
+/* ---- Encadré Tips (valeur ajoutée dans la correction) ---- */
+.ex-tip{margin-top:14px;background:linear-gradient(135deg, rgba(251,191,36,.14), rgba(251,191,36,.05));border:1px solid rgba(217,158,10,.35);border-radius:10px;padding:12px 15px;display:none}
+.ex-tip.visible{display:block}
+.ex-tip-tag{display:inline-flex;align-items:center;gap:5px;font-family:var(--mono);font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#92650A;margin-bottom:5px}
+.ex-tip p{margin:0;font-size:.86rem;color:#6B4A08;line-height:1.55}
+
+/* ---- Cubes emploi / ressource ---- */
+.cube-op{border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:12px;background:#fff}
+.cube-op-texte{font-size:13px;color:var(--ink);margin-bottom:12px;line-height:1.5}
+.cube-zones{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.cube-zone{flex:1;min-width:160px}
+.cube-zone-label{font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-bottom:5px}
+.cube-zone.res .cube-zone-label{color:var(--cyan-dark)}
+.cube-zone.emp .cube-zone-label{color:var(--ink)}
+.cube-drop{min-height:44px;border:1.6px dashed var(--line);border-radius:8px;padding:8px 10px;font-size:12.5px;
+  display:flex;align-items:center;cursor:pointer;background:#fafcfb;text-align:center;justify-content:center}
+.cube-zone.res .cube-drop{border-color:rgba(37,197,233,.5)}
+.cube-zone.emp .cube-drop{border-color:rgba(2,18,37,.35)}
+.cube-drop.filled{border-style:solid;font-weight:600}
+.cube-zone.res .cube-drop.filled{background:#E4F8FC;border-color:var(--sky);color:var(--sky-dark)}
+.cube-zone.emp .cube-drop.filled{background:#EEF1F3;border-color:var(--ink);color:var(--ink)}
+.cube-drop.ok{border-color:var(--green)!important;background:#E7FBEE!important;color:var(--green)!important}
+.cube-drop.ko{border-color:#8C2F34!important;background:#FBEAEA!important;color:#8C2F34!important}
+.cube-bank{display:flex;gap:8px;flex-wrap:wrap}
+.cube-chip{padding:7px 12px;border-radius:8px;font-size:12px;font-weight:600;cursor:grab;user-select:none;border:1.6px solid}
+.cube-chip.res{background:#E4F8FC;border-color:var(--sky);color:var(--sky-dark)}
+.cube-chip.emp{background:#EEF1F3;border-color:var(--ink);color:var(--ink)}
+.cube-chip.selected{transform:scale(1.06)}
+.cube-chip.used{opacity:.25;pointer-events:none}
+.cube-chip.dragging{opacity:.4}
+
+/* ---- Compte en T interactif (à compléter) ---- */
+.ctx-wrap{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:10px 0}
+.ctx-header{background:var(--ink);color:#fff;padding:10px 16px;font-size:.85rem;text-align:center;font-weight:700}
+.ctx-body{display:grid;grid-template-columns:1fr 1fr}
+.ctx-col{padding:10px 14px 14px}
+.ctx-col:first-child{border-right:1px solid var(--line)}
+.ctx-col-title{font-family:var(--mono);font-size:11px;font-weight:700;text-align:center;margin-bottom:8px;color:var(--ink-soft)}
+.ctx-line{display:flex;align-items:center;gap:6px;font-size:12px;margin-bottom:6px}
+.ctx-line-libelle{flex:1;color:var(--ink-soft)}
+.ctx-line-date{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);flex-shrink:0}
+.ctx-montant-input{width:82px;flex-shrink:0;text-align:right;padding:4px 7px;border:1px solid var(--cyan);border-radius:6px;font-size:12px}
+.ctx-montant-input.ok{border-color:var(--green);background:#E7FBEE;color:var(--green);font-weight:600}
+.ctx-montant-input.ko{border-color:#8C2F34;background:#FBEAEA;color:#8C2F34}
+.ctx-montant-fixe{font-family:var(--mono);font-size:12.5px;font-weight:600;flex-shrink:0;min-width:70px;text-align:right}
+.ctx-solde-row{border-top:2px solid var(--ink);padding-top:8px;margin-top:8px;font-weight:700;font-size:12.5px;text-align:center}
+.ctx-cubebank{padding:12px 16px;border-top:1px solid var(--line);background:var(--mint);display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+
+/* ---- Champ libre / rédaction libre ---- */
+.champ-libre-wrap{margin:12px 0}
+.champ-libre-input{width:100%;max-width:340px;padding:9px 12px;border:1px solid var(--cyan);border-radius:8px;font-size:13px}
+.champ-libre-input.ok{border-color:var(--green);background:#E7FBEE}
+.champ-libre-input.ko{border-color:#8C2F34;background:#FBEAEA}
+.redaction-wrap{margin:12px 0}
+.redaction-textarea{width:100%;min-height:80px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:13px;font-family:inherit;resize:vertical}
+.redaction-reponse{margin-top:8px;background:var(--mint);border-radius:8px;padding:10px 12px;font-size:12.5px;color:var(--ink-soft);display:none}
+.redaction-reponse.visible{display:block}
 </style>
 
 <body>
@@ -326,7 +384,8 @@ function render(){
         '<button class="btn-verif" onclick="verifier(' + i + ')">Vérifier</button>' +
         '<button class="btn-corrige" onclick="corriger(' + i + ')">Voir la correction</button>' +
         '<span class="result" id="res-' + i + '"></span>' +
-      '</div>';
+      '</div>' +
+      (ex.tips ? '<div class="ex-tip" id="tip-' + i + '"><div class="ex-tip-tag">💡 Le + de l\'expert</div><p>' + esc(ex.tips) + '</p></div>' : '');
     container.appendChild(card);
 
     buildExercice(ex, i);
@@ -344,7 +403,11 @@ function updateProgress(){
 
 function setResult(i, ok, msgOk, msgKo){
   var res = document.getElementById('res-' + i);
-  if(ok){ res.textContent = msgOk || '✅ Bravo, tout est correct !'; res.className = 'result ok'; solved[i] = true; }
+  if(ok){
+    res.textContent = msgOk || '✅ Bravo, tout est correct !'; res.className = 'result ok'; solved[i] = true;
+    var tip = document.getElementById('tip-' + i);
+    if(tip) tip.classList.add('visible');
+  }
   else{ res.textContent = msgKo || '❌ Quelques erreurs, réessaie'; res.className = 'result ko'; solved[i] = false; }
   updateProgress();
 }
@@ -461,14 +524,16 @@ TYPES.texte_trous = {
 TYPES.vrai_faux = {
   build: function(ex, i){
     var body = document.getElementById('ex-body-' + i);
+    var labelA = ex.optionA || 'Vrai';
+    var labelB = ex.optionB || 'Faux';
     state[i] = { reponses: [] };
     var html = '<div class="vf-list">';
     ex.affirmations.forEach(function(a, ai){
       html += '<div class="vf-row">' +
         '<div class="vf-texte">' + esc(a.texte) + '</div>' +
         '<div class="vf-btns">' +
-          '<button class="vf-btn" onclick="choisirVF(' + i + ',' + ai + ',true)">Vrai</button>' +
-          '<button class="vf-btn" onclick="choisirVF(' + i + ',' + ai + ',false)">Faux</button>' +
+          '<button class="vf-btn" onclick="choisirVF(' + i + ',' + ai + ',true)">' + esc(labelA) + '</button>' +
+          '<button class="vf-btn" onclick="choisirVF(' + i + ',' + ai + ',false)">' + esc(labelB) + '</button>' +
         '</div></div>';
     });
     html += '</div>';
@@ -701,6 +766,262 @@ function toggleReponsesCas(i){
   btn.textContent = shown ? 'Afficher les réponses' : 'Masquer les réponses';
   btn.dataset.shown = shown ? '0' : '1';
 }
+
+/* ================= CUBES EMPLOI / RESSOURCE ================= */
+TYPES.cubes = {
+  build: function(ex, i){
+    var body = document.getElementById('ex-body-' + i);
+    var html = '';
+    ex.operations.forEach(function(op, oi){
+      var mots = [op.ressource, op.emploi].concat(op.distracteurs || []);
+      for(var k=mots.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=mots[k]; mots[k]=mots[j]; mots[j]=t; }
+      html += '<div class="cube-op" data-oi="' + oi + '">' +
+        '<div class="cube-op-texte">' + esc(op.texte) + '</div>' +
+        '<div class="cube-zones">' +
+          '<div class="cube-zone res"><div class="cube-zone-label">Ressource</div><div class="cube-drop" data-answer="' + esc(op.ressource) + '" id="cd-' + i + '-' + oi + '-res"></div></div>' +
+          '<div class="cube-zone emp"><div class="cube-zone-label">Emploi</div><div class="cube-drop" data-answer="' + esc(op.emploi) + '" id="cd-' + i + '-' + oi + '-emp"></div></div>' +
+        '</div>' +
+        '<div class="cube-bank" id="cb-' + i + '-' + oi + '">' +
+          mots.map(function(m){ return '<span class="cube-chip" draggable="true" data-word="' + esc(m) + '">' + esc(m) + '</span>'; }).join('') +
+        '</div></div>';
+    });
+    body.innerHTML = html;
+    state[i] = { selected: null };
+    ex.operations.forEach(function(op, oi){
+      var bank = document.getElementById('cb-' + i + '-' + oi);
+      bank.querySelectorAll('.cube-chip').forEach(function(chip){
+        chip.addEventListener('dragstart', function(e){ e.dataTransfer.setData('text/plain', chip.dataset.word); chip.classList.add('dragging'); });
+        chip.addEventListener('dragend', function(){ chip.classList.remove('dragging'); });
+        chip.addEventListener('click', function(){
+          if(chip.classList.contains('used')) return;
+          bank.querySelectorAll('.cube-chip').forEach(function(c){ c.classList.remove('selected'); });
+          chip.classList.add('selected');
+          state[i].selected = { chip: chip, bank: bank };
+        });
+      });
+      [document.getElementById('cd-'+i+'-'+oi+'-res'), document.getElementById('cd-'+i+'-'+oi+'-emp')].forEach(function(dz){
+        dz.addEventListener('dragover', function(e){ e.preventDefault(); });
+        dz.addEventListener('drop', function(e){
+          e.preventDefault();
+          var word = e.dataTransfer.getData('text/plain');
+          if(word) placerCube(i, dz, word, bank);
+        });
+        dz.addEventListener('click', function(){
+          if(dz.classList.contains('filled')){
+            var w = dz.dataset.filled;
+            dz.textContent=''; dz.classList.remove('filled','ok','ko'); delete dz.dataset.filled;
+            var chip = bank.querySelector('.cube-chip[data-word="' + CSS.escape(w) + '"]');
+            if(chip) chip.classList.remove('used');
+            return;
+          }
+          if(state[i].selected && state[i].selected.bank === bank){
+            placerCube(i, dz, state[i].selected.chip.dataset.word, bank);
+            state[i].selected.chip.classList.add('used');
+            state[i].selected.chip.classList.remove('selected');
+            state[i].selected = null;
+          }
+        });
+      });
+    });
+    function placerCube(i, dz, word, bank){
+      if(dz.dataset.filled){
+        var prevChip = bank.querySelector('.cube-chip[data-word="' + CSS.escape(dz.dataset.filled) + '"]');
+        if(prevChip) prevChip.classList.remove('used');
+      }
+      dz.textContent = word; dz.dataset.filled = word;
+      dz.classList.add('filled'); dz.classList.remove('ok','ko');
+      var chip = bank.querySelector('.cube-chip[data-word="' + CSS.escape(word) + '"]');
+      if(chip) chip.classList.add('used');
+    }
+  },
+  verify: function(ex, i){
+    var allOk = true, allFilled = true;
+    document.querySelectorAll('#ex-body-' + i + ' .cube-drop').forEach(function(dz){
+      if(!dz.dataset.filled){ allFilled = false; return; }
+      var ok = dz.dataset.filled === dz.dataset.answer;
+      dz.classList.toggle('ok', ok); dz.classList.toggle('ko', !ok);
+      if(!ok) allOk = false;
+    });
+    if(!allFilled){ var res=document.getElementById('res-'+i); res.textContent='Complète toutes les zones avant de vérifier'; res.className='result ko'; return; }
+    setResult(i, allOk);
+  },
+  correct: function(ex, i){
+    document.querySelectorAll('#ex-body-' + i + ' .cube-op').forEach(function(opEl, oi){
+      var op = ex.operations[oi];
+      [['res', op.ressource], ['emp', op.emploi]].forEach(function(pair){
+        var dz = document.getElementById('cd-' + i + '-' + oi + '-' + pair[0]);
+        dz.textContent = pair[1]; dz.dataset.filled = pair[1];
+        dz.classList.add('filled','ok'); dz.classList.remove('ko');
+      });
+      var bank = document.getElementById('cb-' + i + '-' + oi);
+      bank.querySelectorAll('.cube-chip').forEach(function(c){
+        c.classList.toggle('used', c.dataset.word === op.ressource || c.dataset.word === op.emploi);
+      });
+    });
+    setResult(i, true, '✅ Correction affichée');
+  }
+};
+
+/* ================= COMPTE EN T À COMPLÉTER ================= */
+TYPES.compte_t_actif = {
+  build: function(ex, i){
+    var body = document.getElementById('ex-body-' + i);
+    var montantsCubes = ex.cubesMontants ? ex.cubesMontants.slice() : null;
+    if(montantsCubes){ for(var k=montantsCubes.length-1;k>0;k--){ var j=Math.floor(Math.random()*(k+1)); var t=montantsCubes[k]; montantsCubes[k]=montantsCubes[j]; montantsCubes[j]=t; } }
+
+    function ligneHtml(l, side, li){
+      var champ;
+      if(montantsCubes){
+        champ = '<span class="ctx-montant-input cube-drop" style="width:82px;display:inline-flex;align-items:center;justify-content:flex-end" data-answer="' + esc(l.montant) + '" id="ctxd-' + i + '-' + side + '-' + li + '"></span>';
+      } else if(l.fixe){
+        champ = '<span class="ctx-montant-fixe">' + esc(l.montant) + '</span>';
+      } else {
+        champ = '<input type="text" class="ctx-montant-input" data-answer="' + esc(l.montant) + '" id="ctxi-' + i + '-' + side + '-' + li + '" placeholder="?">';
+      }
+      return '<div class="ctx-line"><span class="ctx-line-date">' + esc(l.date||'') + '</span><span class="ctx-line-libelle">' + esc(l.libelle) + '</span>' + champ + '</div>';
+    }
+
+    var debitHtml = (ex.soldeInitial && ex.soldeInitial.cote==='debit' ? '<div class="ctx-line"><span class="ctx-line-date">' + esc(ex.soldeInitial.date||'01/10') + '</span><span class="ctx-line-libelle">Solde initial</span><span class="ctx-montant-fixe">' + esc(ex.soldeInitial.montant) + '</span></div>' : '') +
+      ex.lignesDebit.map(function(l,li){ return ligneHtml(l,'d',li); }).join('');
+    var creditHtml = (ex.soldeInitial && ex.soldeInitial.cote==='credit' ? '<div class="ctx-line"><span class="ctx-line-date">' + esc(ex.soldeInitial.date||'01/10') + '</span><span class="ctx-line-libelle">Solde initial</span><span class="ctx-montant-fixe">' + esc(ex.soldeInitial.montant) + '</span></div>' : '') +
+      ex.lignesCredit.map(function(l,li){ return ligneHtml(l,'c',li); }).join('');
+
+    var html = '<div class="ctx-wrap">' +
+      '<div class="ctx-header">' + esc(ex.numero) + ' — ' + esc(ex.intitule) + '</div>' +
+      '<div class="ctx-body">' +
+        '<div class="ctx-col"><div class="ctx-col-title">DÉBIT</div>' + debitHtml + '</div>' +
+        '<div class="ctx-col"><div class="ctx-col-title">CRÉDIT</div>' + creditHtml + '</div>' +
+      '</div>';
+    if(montantsCubes){
+      html += '<div class="ctx-cubebank" id="ctxbank-' + i + '">' + montantsCubes.map(function(m){ return '<span class="cube-chip emp" draggable="true" data-word="' + esc(m) + '">' + esc(m) + '</span>'; }).join('') + '</div>';
+    }
+    html += '</div>';
+
+    if(ex.champLibre){
+      html += '<div class="champ-libre-wrap"><div class="ex-label">' + esc(ex.champLibre.question) + '</div>' +
+        '<input type="text" class="champ-libre-input" id="cl-' + i + '" placeholder="Ta réponse…"></div>';
+    }
+    if(ex.redactionLibre){
+      html += '<div class="redaction-wrap"><div class="ex-label">' + esc(ex.redactionLibre.question) + '</div>' +
+        '<textarea class="redaction-textarea" id="rl-' + i + '" placeholder="Rédige ta réponse ici…"></textarea>' +
+        '<button class="btn-corrige" type="button" style="margin-top:8px" onclick="toggleRedaction(' + i + ')" id="btn-rl-' + i + '">Voir un exemple de réponse</button>' +
+        '<div class="redaction-reponse" id="rl-rep-' + i + '">' + esc(ex.redactionLibre.reponseIndicative) + '</div></div>';
+    }
+    body.innerHTML = html;
+
+    if(montantsCubes){
+      state[i] = { selected: null };
+      var bank = document.getElementById('ctxbank-' + i);
+      bank.querySelectorAll('.cube-chip').forEach(function(chip){
+        chip.addEventListener('dragstart', function(e){ e.dataTransfer.setData('text/plain', chip.dataset.word); chip.classList.add('dragging'); });
+        chip.addEventListener('dragend', function(){ chip.classList.remove('dragging'); });
+        chip.addEventListener('click', function(){
+          if(chip.classList.contains('used')) return;
+          bank.querySelectorAll('.cube-chip').forEach(function(c){ c.classList.remove('selected'); });
+          chip.classList.add('selected');
+          state[i].selected = chip;
+        });
+      });
+      document.querySelectorAll('#ex-body-' + i + ' .cube-drop').forEach(function(dz){
+        dz.addEventListener('dragover', function(e){ e.preventDefault(); });
+        dz.addEventListener('drop', function(e){ e.preventDefault(); var w=e.dataTransfer.getData('text/plain'); if(w) placerMontant(i, dz, w, bank); });
+        dz.addEventListener('click', function(){
+          if(dz.classList.contains('filled')){
+            var w = dz.dataset.filled;
+            dz.textContent=''; dz.classList.remove('filled','ok','ko'); delete dz.dataset.filled;
+            var chip = bank.querySelector('.cube-chip[data-word="' + CSS.escape(w) + '"]');
+            if(chip) chip.classList.remove('used');
+            return;
+          }
+          if(state[i].selected){
+            placerMontant(i, dz, state[i].selected.dataset.word, bank);
+            state[i].selected.classList.add('used');
+            state[i].selected.classList.remove('selected');
+            state[i].selected = null;
+          }
+        });
+      });
+    }
+    function placerMontant(i, dz, word, bank){
+      if(dz.dataset.filled){
+        var prevChip = bank.querySelector('.cube-chip[data-word="' + CSS.escape(dz.dataset.filled) + '"]');
+        if(prevChip) prevChip.classList.remove('used');
+      }
+      dz.textContent = word; dz.dataset.filled = word;
+      dz.classList.add('filled'); dz.classList.remove('ok','ko');
+      var chip = bank.querySelector('.cube-chip[data-word="' + CSS.escape(word) + '"]');
+      if(chip) chip.classList.add('used');
+    }
+  },
+  verify: function(ex, i){
+    var allOk = true, allFilled = true;
+    document.querySelectorAll('#ex-body-' + i + ' .ctx-montant-input').forEach(function(el){
+      var val = (el.tagName === 'INPUT' ? el.value : (el.dataset.filled||'')).replace(/\s/g,'').replace(/[^\d,.\-]/g,'');
+      var attendu = el.dataset.answer.replace(/\s/g,'');
+      if(!val){ allFilled = false; return; }
+      var ok = val === attendu || val.replace(',','.') === attendu.replace(',','.');
+      el.classList.toggle('ok', ok); el.classList.toggle('ko', !ok);
+      if(!ok) allOk = false;
+    });
+    if(ex.champLibre){
+      var cl = document.getElementById('cl-' + i);
+      var val = cl.value.replace(/\s/g,'').replace(/[€]/g,'').toLowerCase();
+      var attendu = (ex.champLibre.reponse||'').replace(/\s/g,'').replace(/[€]/g,'').toLowerCase();
+      var ok = val && (val === attendu || val.indexOf(attendu.split('€')[0]) !== -1 || attendu.indexOf(val) !== -1);
+      // tolérance : on vérifie surtout la présence du nombre attendu
+      var numAttendu = (ex.champLibre.reponse||'').match(/[\d\s.,]+/);
+      var okNum = numAttendu && cl.value.replace(/\s/g,'').indexOf(numAttendu[0].replace(/\s/g,'')) !== -1;
+      cl.classList.toggle('ok', !!okNum); cl.classList.toggle('ko', !okNum);
+      if(!okNum) allOk = false;
+      if(!cl.value){ allFilled = false; }
+    }
+    if(!allFilled){ var res=document.getElementById('res-'+i); res.textContent='Complète tous les champs avant de vérifier'; res.className='result ko'; return; }
+    setResult(i, allOk);
+  },
+  correct: function(ex, i){
+    document.querySelectorAll('#ex-body-' + i + ' .ctx-montant-input').forEach(function(el){
+      if(el.tagName === 'INPUT'){ el.value = el.dataset.answer; }
+      else{ el.textContent = el.dataset.answer; el.dataset.filled = el.dataset.answer; el.classList.add('filled'); }
+      el.classList.add('ok'); el.classList.remove('ko');
+    });
+    if(ex.champLibre){
+      var cl = document.getElementById('cl-' + i);
+      cl.value = ex.champLibre.reponse;
+      cl.classList.add('ok'); cl.classList.remove('ko');
+    }
+    setResult(i, true, '✅ Correction affichée');
+  }
+};
+function toggleRedaction(i){
+  var btn = document.getElementById('btn-rl-' + i);
+  var rep = document.getElementById('rl-rep-' + i);
+  var shown = rep.classList.contains('visible');
+  rep.classList.toggle('visible', !shown);
+  btn.textContent = shown ? 'Voir un exemple de réponse' : "Masquer l'exemple";
+}
+
+/* ================= QUESTIONS OUVERTES (réponse à révéler) ================= */
+TYPES.questions_ouvertes = {
+  build: function(ex, i){
+    var body = document.getElementById('ex-body-' + i);
+    var html = '<div id="qo-list-' + i + '">';
+    ex.questions.forEach(function(item, qi){
+      html += '<div class="qr-item"><div class="qr-question">' + esc(item.q) + '</div>' +
+        '<div class="qr-reponse" id="qo-rep-' + i + '-' + qi + '">' + esc(item.r) + '</div></div>';
+    });
+    html += '</div>';
+    body.innerHTML = html;
+  },
+  verify: function(ex, i){
+    TYPES.questions_ouvertes.correct(ex, i);
+  },
+  correct: function(ex, i){
+    ex.questions.forEach(function(_, qi){
+      document.getElementById('qo-rep-' + i + '-' + qi).classList.add('visible');
+    });
+    setResult(i, true, '✅ Réponses affichées');
+  }
+};
 
 init();
 </script>
