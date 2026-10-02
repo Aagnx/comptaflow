@@ -1,0 +1,462 @@
+{
+  "numero": 4,
+  "titre": "La classification comptable : actif, passif, charge, produit",
+  "couleurA": "#106E85",
+  "couleurB": "#25C5E9",
+  "exercices": [
+    {
+      "type": "qcm",
+      "titre": "Application 1 — Distinguer actif, passif, charge, produit",
+      "hint": "Pour chaque compte, choisis la bonne catégorie.",
+      "questions": [
+        {
+          "q": "Prêts accordés au personnel",
+          "options": [
+            "Actif",
+            "Passif",
+            "Charge",
+            "Produit"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "q": "Ventes de marchandises",
+          "options": [
+            "Actif",
+            "Passif",
+            "Charge",
+            "Produit"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "q": "Sous-traitance générale",
+          "options": [
+            "Actif",
+            "Passif",
+            "Charge",
+            "Produit"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "q": "Mobilier de bureau",
+          "options": [
+            "Actif",
+            "Passif",
+            "Charge",
+            "Produit"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "q": "Banque (solde débiteur)",
+          "options": [
+            "Actif",
+            "Passif",
+            "Charge",
+            "Produit"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "q": "Fournisseurs d'immobilisations",
+          "options": [
+            "Actif",
+            "Passif",
+            "Charge",
+            "Produit"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "q": "Emprunts auprès des établissements de crédit",
+          "options": [
+            "Actif",
+            "Passif",
+            "Charge",
+            "Produit"
+          ],
+          "correctIndex": 1
+        },
+        {
+          "q": "Achats de marchandises",
+          "options": [
+            "Actif",
+            "Passif",
+            "Charge",
+            "Produit"
+          ],
+          "correctIndex": 2
+        },
+        {
+          "q": "Ventes d'emballages",
+          "options": [
+            "Actif",
+            "Passif",
+            "Charge",
+            "Produit"
+          ],
+          "correctIndex": 3
+        },
+        {
+          "q": "Locations de véhicules de transport",
+          "options": [
+            "Actif",
+            "Passif",
+            "Charge",
+            "Produit"
+          ],
+          "correctIndex": 2
+        }
+      ],
+      "tips": "Un fournisseur est toujours au passif : s'il est payé, il n'y a plus de fournisseur (la dette disparaît). Pour les comptes de trésorerie (Banque, Caisse), un solde débiteur normal se classe en actif."
+    },
+    {
+      "type": "qcm",
+      "titre": "QCM — Notions clés du chapitre",
+      "hint": "Certaines questions n'ont qu'une seule bonne réponse, d'autres plusieurs — c'est précisé pour chacune.",
+      "questions": [
+        {
+          "q": "Seuls les flux réels sont enregistrés en comptabilité.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correctIndex": 1,
+          "explication": "Faux : les flux réels ET les flux financiers sont enregistrés en comptabilité, en partie double."
+        },
+        {
+          "q": "Le journal est un document obligatoire.",
+          "options": [
+            "Vrai",
+            "Faux"
+          ],
+          "correctIndex": 0,
+          "explication": "Vrai : les livres obligatoires sont le journal, le grand-livre et le livre d'inventaire."
+        },
+        {
+          "q": "Une entreprise A achète des marchandises pour 2 000 €, règle les ¾ au comptant et obtient un délai de paiement pour le solde. L'entreprise A enregistre :",
+          "options": [
+            "Une dette de 1 500 €",
+            "Une créance de 500 €",
+            "Une dette de 500 €",
+            "Une baisse des disponibilités de 500 €"
+          ],
+          "correctIndex": 2,
+          "explication": "¾ de 2 000 € = 1 500 € payés comptant ; le solde de 500 € reste dû : c'est une dette (compte fournisseur crédité de 500 €)."
+        },
+        {
+          "q": "Une entreprise X vend des marchandises pour 4 000 € et accorde un délai de paiement d'un mois à son client. Vis-à-vis de l'entreprise X, le client détient :",
+          "options": [
+            "Une créance",
+            "Une dette"
+          ],
+          "correctIndex": 1,
+          "explication": "Le client doit encore de l'argent à X : il a une dette envers X (et symétriquement, X détient une créance sur son client)."
+        },
+        {
+          "q": "Dans une comptabilité de trésorerie :",
+          "options": [
+            "Les opérations sont comptabilisées dès leur naissance",
+            "Les opérations sont enregistrées au moment de l'encaissement ou du décaissement",
+            "Seuls les flux financiers font l'objet d'un enregistrement"
+          ],
+          "correctIndex": 1,
+          "explication": "C'est la définition même de la comptabilité de trésorerie : on n'enregistre qu'au moment du paiement ou de l'encaissement effectif."
+        },
+        {
+          "q": "Un compte :",
+          "multiple": true,
+          "options": [
+            "Peut être débité ou crédité",
+            "Dont le solde est créditeur signifie que le total du débit est supérieur au total du crédit",
+            "Débité signifie que le montant correspondant est inscrit à droite du compte",
+            "Crédité signifie que le montant correspondant est inscrit à droite du compte"
+          ],
+          "correctIndices": [
+            0,
+            3
+          ],
+          "explication": "Un solde créditeur signifie l'inverse (crédit > débit). Être débité = inscrit à GAUCHE, crédité = inscrit à DROITE."
+        },
+        {
+          "q": "Les comptes de l'actif du bilan :",
+          "multiple": true,
+          "options": [
+            "Augmentent au crédit",
+            "Diminuent au débit",
+            "Augmentent au débit",
+            "Diminuent au crédit"
+          ],
+          "correctIndices": [
+            2,
+            3
+          ],
+          "explication": "Règle fondamentale : les comptes d'actif augmentent au débit et diminuent au crédit (l'inverse pour les comptes de passif)."
+        },
+        {
+          "q": "Une entreprise vend des marchandises à un client pour 100 €. Le client paie au comptant par chèque bancaire.",
+          "multiple": true,
+          "options": [
+            "Le compte Ventes de marchandises est débité, ce qui augmente le résultat",
+            "Le compte Banque est débité, ce qui augmente l'actif du bilan",
+            "Le compte Ventes de marchandises est crédité, ce qui augmente le résultat",
+            "Le compte Banque est crédité, ce qui augmente l'actif du bilan"
+          ],
+          "correctIndices": [
+            1,
+            2
+          ],
+          "explication": "La banque (actif) est débitée car elle augmente ; les ventes (produit) sont créditées car un produit augmente le résultat au crédit."
+        },
+        {
+          "q": "Une entreprise emprunte 100 000 € auprès d'un établissement de crédit. Le remboursement de cette somme (capital + intérêts) est enregistré :",
+          "multiple": true,
+          "options": [
+            "Au crédit du compte de passif 164",
+            "Au débit du compte de passif 164",
+            "Au débit du compte de charges 661",
+            "Au crédit du compte de charges 661"
+          ],
+          "correctIndices": [
+            1,
+            2
+          ],
+          "explication": "Le remboursement du capital emprunté débite le compte de passif 164 (la dette diminue) ; les intérêts, qui sont une charge, débitent le compte 661. Le tout est crédité au compte de banque 512."
+        },
+        {
+          "q": "Dans une balance, le compte client 411 présente un solde créditeur. Cela signifie :",
+          "multiple": true,
+          "options": [
+            "Que le client a une dette envers l'entreprise",
+            "Que le client a une créance envers l'entreprise",
+            "Que le total du débit est supérieur au total du crédit",
+            "Que le total du crédit est supérieur au total du débit"
+          ],
+          "correctIndices": [
+            1,
+            3
+          ],
+          "explication": "Un solde créditeur signifie, par définition, que le crédit dépasse le débit. Sur un compte client, c'est une situation inhabituelle : cela signifie que l'entreprise doit de l'argent au client (le client a une créance sur elle), par exemple après un trop-perçu ou un avoir."
+        }
+      ],
+      "tips": "Retiens la distinction entre comptabilité de trésorerie (on n'enregistre qu'au paiement/encaissement — réservée aux très petites entités) et comptabilité d'engagement (on enregistre dès la naissance du flux, dette ou créance comprise) : c'est la norme pour la quasi-totalité des entreprises."
+    },
+    {
+      "type": "calcul",
+      "titre": "Application 2 — Documents de synthèse (cas Safed)",
+      "hint": "Au 30/09/N, les comptes de l'entreprise Safed présentent les soldes suivants. Le capital est à déterminer.",
+      "tableReference": {
+        "colonnes": [
+          "N° compte",
+          "Intitulé",
+          "Solde",
+          "Sens"
+        ],
+        "lignes": [
+          [
+            "607",
+            "Achats de marchandises",
+            "1 248 000 €",
+            "Débit"
+          ],
+          [
+            "101",
+            "Capital",
+            "à déterminer",
+            "Crédit"
+          ],
+          [
+            "211",
+            "Terrains",
+            "150 000 €",
+            "Débit"
+          ],
+          [
+            "530",
+            "Caisse",
+            "2 600 €",
+            "Débit"
+          ],
+          [
+            "77",
+            "Produits exceptionnels",
+            "1 700 €",
+            "Crédit"
+          ],
+          [
+            "63",
+            "Impôts et taxes",
+            "8 750 €",
+            "Débit"
+          ],
+          [
+            "27",
+            "Titres immobilisés",
+            "25 000 €",
+            "Débit"
+          ],
+          [
+            "66",
+            "Charges financières",
+            "3 645 €",
+            "Débit"
+          ],
+          [
+            "401",
+            "Fournisseurs",
+            "89 000 €",
+            "Crédit"
+          ],
+          [
+            "213",
+            "Constructions",
+            "236 000 €",
+            "Débit"
+          ],
+          [
+            "64",
+            "Charges de personnel",
+            "99 000 €",
+            "Débit"
+          ],
+          [
+            "512",
+            "Banque (découvert bancaire)",
+            "63 000 €",
+            "Crédit"
+          ],
+          [
+            "76",
+            "Produits financiers",
+            "1 850 €",
+            "Crédit"
+          ],
+          [
+            "218",
+            "Agencements, aménagements",
+            "44 700 €",
+            "Débit"
+          ],
+          [
+            "61",
+            "Services extérieurs",
+            "38 700 €",
+            "Débit"
+          ],
+          [
+            "67",
+            "Charges exceptionnelles",
+            "100 €",
+            "Débit"
+          ],
+          [
+            "707",
+            "Ventes de marchandises",
+            "1 620 000 €",
+            "Crédit"
+          ],
+          [
+            "411",
+            "Clients",
+            "165 000 €",
+            "Débit"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "question": "1. Quel est le montant du compte Capital ?",
+          "reponse": "245 945 €"
+        },
+        {
+          "question": "2. Quel est le résultat de l'exercice (compte de résultat au 30/09/N) ?",
+          "reponse": "225 355 €"
+        },
+        {
+          "question": "3. Quel est le total du bilan au 30/09/N ?",
+          "reponse": "623 300 €"
+        }
+      ],
+      "tips": "Le capital se retrouve toujours par différence : total des débits de la balance − somme de tous les autres crédits. Le résultat, lui, se retrouve en comparant le total des charges (classe 6) au total des produits (classe 7) : produits − charges. Un résultat positif (bénéfice) se place au passif du bilan, à côté du capital."
+    },
+    {
+      "type": "compte_t_actif",
+      "titre": "Application 4 — Le compte Banque (cas de synthèse Atrium)",
+      "hint": "L'entreprise Atrium tient une comptabilité d'engagement. Son compte Banque (512) présente un solde débiteur de 81 500 € au 30 avril N. Place le bon cube-montant sur chaque ligne des opérations de mai, puis calcule le solde au 31 mai.",
+      "numero": "512",
+      "intitule": "Banque",
+      "soldeInitial": {
+        "cote": "debit",
+        "date": "30/04",
+        "montant": "81 500"
+      },
+      "lignesDebit": [
+        {
+          "date": "mai",
+          "libelle": "Encaissement chèques — vente de marchandises au comptant",
+          "montant": "225 000"
+        },
+        {
+          "date": "mai",
+          "libelle": "Encaissement d'un client par chèque",
+          "montant": "21 000"
+        },
+        {
+          "date": "mai",
+          "libelle": "Dépôt d'espèces en banque",
+          "montant": "37 000"
+        }
+      ],
+      "lignesCredit": [
+        {
+          "date": "mai",
+          "libelle": "Règlement chèque — location du local commercial",
+          "montant": "4 000"
+        },
+        {
+          "date": "mai",
+          "libelle": "Règlement chèque — achat de marchandises",
+          "montant": "210 000"
+        },
+        {
+          "date": "mai",
+          "libelle": "Règlement chèque — annonce publicitaire",
+          "montant": "3 600"
+        },
+        {
+          "date": "mai",
+          "libelle": "Règlement chèque — contribution foncière des entreprises (CFE)",
+          "montant": "1 700"
+        },
+        {
+          "date": "mai",
+          "libelle": "Emprunt CPME — prélèvement (capital + intérêts)",
+          "montant": "10 000"
+        },
+        {
+          "date": "mai",
+          "libelle": "Salaire d'un vendeur à temps partiel",
+          "montant": "1 200"
+        }
+      ],
+      "cubesMontants": [
+        "225 000",
+        "21 000",
+        "37 000",
+        "4 000",
+        "210 000",
+        "3 600",
+        "1 700",
+        "10 000",
+        "1 200"
+      ],
+      "champLibre": {
+        "question": "Quel est le solde du compte Banque au 31 mai, et son sens ?",
+        "reponse": "134 000 € débiteur"
+      },
+      "tips": "Débit total = 81 500 + 225 000 + 21 000 + 37 000 = 364 500 € ; Crédit total = 4 000 + 210 000 + 3 600 + 1 700 + 10 000 + 1 200 = 230 500 € ; Solde = 364 500 − 230 500 = 134 000 € débiteur. L'achat de marchandises réglé en espèces (30 000 €) ne figure pas ici : il passe par le compte Caisse, pas par la Banque."
+    }
+  ]
+}
