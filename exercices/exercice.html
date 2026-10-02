@@ -267,6 +267,34 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .redaction-textarea{width:100%;min-height:80px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:13px;font-family:inherit;resize:vertical}
 .redaction-reponse{margin-top:8px;background:var(--mint);border-radius:8px;padding:10px 12px;font-size:12.5px;color:var(--ink-soft);display:none}
 .redaction-reponse.visible{display:block}
+
+/* ---- QCM (choix unique ou multiple) ---- */
+.qcm-item{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin-bottom:12px;background:#fff}
+.qcm-question{font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:10px}
+.qcm-tag{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:700;color:var(--ink-faint);
+  text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px}
+.qcm-opts{display:flex;flex-direction:column;gap:7px}
+.qcm-opt{display:flex;align-items:center;gap:9px;padding:8px 11px;border:1.4px solid var(--line);border-radius:8px;
+  cursor:pointer;font-size:12.8px;color:var(--ink)}
+.qcm-opt:hover{border-color:var(--cyan)}
+.qcm-opt .qcm-mark{width:16px;height:16px;border:1.6px solid var(--line);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:10px;color:#fff}
+.qcm-opt.single .qcm-mark{border-radius:50%}
+.qcm-opt.multi .qcm-mark{border-radius:4px}
+.qcm-opt.selected{border-color:var(--cyan);background:#EAF6F5}
+.qcm-opt.selected .qcm-mark{background:var(--cyan);border-color:var(--cyan)}
+.qcm-opt.ok{border-color:var(--green)!important;background:#E7FBEE!important}
+.qcm-opt.ok .qcm-mark{background:var(--green)!important;border-color:var(--green)!important}
+.qcm-opt.ko{border-color:#8C2F34!important;background:#FBEAEA!important}
+.qcm-opt.ko .qcm-mark{background:#8C2F34!important;border-color:#8C2F34!important}
+.qcm-explication{margin-top:9px;padding-top:9px;border-top:1px dashed var(--line);font-size:12px;color:var(--ink-soft);display:none}
+.qcm-explication.visible{display:block}
+
+/* ---- Tableau de référence statique (ex: balance donnée) ---- */
+.ref-table-wrap{overflow-x:auto;margin:10px 0}
+.ref-table{width:100%;border-collapse:collapse;font-size:11.5px}
+.ref-table th{background:var(--ink);color:#fff;padding:7px 9px;text-align:left;white-space:nowrap}
+.ref-table td{padding:6px 9px;border-top:1px solid var(--line);white-space:nowrap}
+.ref-table tr:nth-child(even) td{background:#fafcfb}
 </style>
 
 <body>
@@ -1020,6 +1048,119 @@ TYPES.questions_ouvertes = {
       document.getElementById('qo-rep-' + i + '-' + qi).classList.add('visible');
     });
     setResult(i, true, '✅ Réponses affichées');
+  }
+};
+
+/* ================= QCM (choix unique ou multiple) ================= */
+TYPES.qcm = {
+  build: function(ex, i){
+    var body = document.getElementById('ex-body-' + i);
+    state[i] = { reponses: {} }; // qi -> [indices sélectionnés]
+    var html = '';
+    ex.questions.forEach(function(q, qi){
+      var multi = !!q.multiple;
+      html += '<div class="qcm-item" data-qi="' + qi + '">' +
+        '<div class="qcm-tag">' + (multi ? 'Plusieurs réponses possibles' : 'Une seule réponse') + '</div>' +
+        '<div class="qcm-question">' + (qi+1) + '. ' + esc(q.q) + '</div>' +
+        '<div class="qcm-opts">';
+      q.options.forEach(function(opt, oi){
+        html += '<div class="qcm-opt ' + (multi?'multi':'single') + '" onclick="choisirQCM(' + i + ',' + qi + ',' + oi + ',' + multi + ')" id="qo-' + i + '-' + qi + '-' + oi + '">' +
+          '<span class="qcm-mark"></span><span>' + esc(opt) + '</span></div>';
+      });
+      html += '</div>' + (q.explication ? '<div class="qcm-explication" id="qex-' + i + '-' + qi + '">' + esc(q.explication) + '</div>' : '') + '</div>';
+    });
+    body.innerHTML = html;
+  },
+  verify: function(ex, i){
+    var allOk = true, allAnswered = true;
+    ex.questions.forEach(function(q, qi){
+      var sel = state[i].reponses[qi] || [];
+      if(!sel.length){ allAnswered = false; return; }
+      var correct = (q.multiple ? q.correctIndices.slice() : [q.correctIndex]).sort();
+      var got = sel.slice().sort();
+      var ok = JSON.stringify(correct) === JSON.stringify(got);
+      q.options.forEach(function(_, oi){
+        var el = document.getElementById('qo-' + i + '-' + qi + '-' + oi);
+        el.classList.remove('ok','ko');
+        if(correct.indexOf(oi) !== -1 && sel.indexOf(oi) !== -1) el.classList.add('ok');
+        else if(sel.indexOf(oi) !== -1 && correct.indexOf(oi) === -1) el.classList.add('ko');
+      });
+      if(!ok) allOk = false;
+    });
+    if(!allAnswered){ var res=document.getElementById('res-'+i); res.textContent='Réponds à toutes les questions avant de vérifier'; res.className='result ko'; return; }
+    setResult(i, allOk);
+  },
+  correct: function(ex, i){
+    ex.questions.forEach(function(q, qi){
+      var correct = q.multiple ? q.correctIndices : [q.correctIndex];
+      state[i].reponses[qi] = correct.slice();
+      q.options.forEach(function(_, oi){
+        var el = document.getElementById('qo-' + i + '-' + qi + '-' + oi);
+        el.classList.remove('ko');
+        el.classList.toggle('selected', correct.indexOf(oi)!==-1);
+        el.classList.toggle('ok', correct.indexOf(oi)!==-1);
+      });
+      var ex2 = document.getElementById('qex-' + i + '-' + qi);
+      if(ex2) ex2.classList.add('visible');
+    });
+    setResult(i, true, '✅ Correction affichée');
+  }
+};
+function choisirQCM(i, qi, oi, multi){
+  if(!state[i].reponses[qi]) state[i].reponses[qi] = [];
+  var sel = state[i].reponses[qi];
+  var el = document.getElementById('qo-' + i + '-' + qi + '-' + oi);
+  if(multi){
+    var idx = sel.indexOf(oi);
+    if(idx === -1){ sel.push(oi); el.classList.add('selected'); }
+    else { sel.splice(idx,1); el.classList.remove('selected'); }
+  } else {
+    var q = examData.exercices[i].questions[qi];
+    q.options.forEach(function(_, o2){
+      document.getElementById('qo-' + i + '-' + qi + '-' + o2).classList.remove('selected');
+    });
+    state[i].reponses[qi] = [oi];
+    el.classList.add('selected');
+  }
+}
+
+/* ================= CALCUL (tableau de référence + champs à calculer) ================= */
+TYPES.calcul = {
+  build: function(ex, i){
+    var body = document.getElementById('ex-body-' + i);
+    var html = '';
+    if(ex.tableReference){
+      var head = ex.tableReference.colonnes.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('');
+      var rows = ex.tableReference.lignes.map(function(r){
+        return '<tr>' + r.map(function(c){ return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>';
+      }).join('');
+      html += '<div class="ref-table-wrap"><table class="ref-table"><thead><tr>' + head + '</tr></thead><tbody>' + rows + '</tbody></table></div>';
+    }
+    ex.questions.forEach(function(q, qi){
+      html += '<div class="champ-libre-wrap"><div class="ex-label">' + esc(q.question) + '</div>' +
+        '<input type="text" class="champ-libre-input" id="calc-' + i + '-' + qi + '" placeholder="Ta réponse…"></div>';
+    });
+    body.innerHTML = html;
+  },
+  verify: function(ex, i){
+    var allOk = true, allFilled = true;
+    ex.questions.forEach(function(q, qi){
+      var el = document.getElementById('calc-' + i + '-' + qi);
+      if(!el.value){ allFilled = false; return; }
+      var numAttendu = (q.reponse || '').match(/[\d\s.,]+/);
+      var ok = numAttendu && el.value.replace(/\s/g,'').indexOf(numAttendu[0].replace(/\s/g,'')) !== -1;
+      el.classList.toggle('ok', !!ok); el.classList.toggle('ko', !ok);
+      if(!ok) allOk = false;
+    });
+    if(!allFilled){ var res=document.getElementById('res-'+i); res.textContent='Complète toutes les réponses avant de vérifier'; res.className='result ko'; return; }
+    setResult(i, allOk);
+  },
+  correct: function(ex, i){
+    ex.questions.forEach(function(q, qi){
+      var el = document.getElementById('calc-' + i + '-' + qi);
+      el.value = q.reponse; el.classList.add('ok'); el.classList.remove('ko');
+    });
+    setResult(i, true, '✅ Correction affichée');
   }
 };
 
