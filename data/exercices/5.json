@@ -1,1 +1,207 @@
-
+{
+  "numero": 5,
+  "titre": "La TVA : généralités",
+  "couleurA": "#238689",
+  "couleurB": "#1B6669",
+  "exercices": [
+    {
+      "type": "calcul",
+      "titre": "Exemple 1 — La chaîne de TVA (A → B → C → particulier)",
+      "hint": "L'entreprise A vend un bien de 100 € HT à B (sans achat préalable). B le revend 150 € HT à C, qui le revend 220 € HT à un particulier. Taux de TVA : 20 %.",
+      "tableReference": {
+        "colonnes": [
+          "Opérateur",
+          "Vente HT",
+          "Vente TTC"
+        ],
+        "lignes": [
+          [
+            "A",
+            "100 €",
+            "120 €"
+          ],
+          [
+            "B",
+            "150 €",
+            "180 €"
+          ],
+          [
+            "C",
+            "220 €",
+            "264 €"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "question": "1. Quelle est la TVA collectée par l'entreprise B ?",
+          "reponse": "30 €"
+        },
+        {
+          "question": "2. Quelle est la TVA déductible par l'entreprise B ?",
+          "reponse": "20 €"
+        },
+        {
+          "question": "3. Quelle est la TVA due (à reverser) par l'entreprise B ?",
+          "reponse": "10 €"
+        },
+        {
+          "question": "4. Quel est le montant total de TVA perçu par l'État sur toute la chaîne ?",
+          "reponse": "44 €"
+        }
+      ],
+      "tips": "Chaque entreprise ne reverse que la TVA sur sa propre valeur ajoutée (collectée − déductible). Mais au final, le montant total perçu par l'État est toujours égal à la TVA collectée par le DERNIER vendeur (ici C, qui vend au particulier) : 20+10+14 = 44 € = la TVA collectée par C. Normal : c'est le consommateur final qui supporte toute la TVA, les entreprises ne font que la collecter pour le compte de l'État."
+    },
+    {
+      "type": "calcul",
+      "titre": "Exemple 2 — Comptabiliser les opérations de TVA",
+      "hint": "Au cours du mois de janvier, l'entreprise a réalisé les opérations suivantes (taux de TVA : 20 %).",
+      "tableReference": {
+        "colonnes": [
+          "Opération",
+          "Montant HT",
+          "Nature"
+        ],
+        "lignes": [
+          [
+            "Achat de matières premières — fournisseur italien",
+            "1 750 €",
+            "Acquisition intracommunautaire"
+          ],
+          [
+            "Acquisition d'un meuble de bureau",
+            "1 000 €",
+            "Immobilisation, France"
+          ],
+          [
+            "Acquisition de matières premières en France",
+            "18 250 €",
+            "Achat, France"
+          ],
+          [
+            "Vente de produits finis",
+            "45 000 €",
+            "Vente, France"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "question": "1. Quel est le montant de TVA déductible sur l'acquisition du meuble de bureau ?",
+          "reponse": "200 €"
+        },
+        {
+          "question": "2. Quel est le montant de TVA déductible sur l'achat de matières premières en France ?",
+          "reponse": "3 650 €"
+        },
+        {
+          "question": "3. Quel est le montant de TVA collectée sur la vente de produits finis ?",
+          "reponse": "9 000 €"
+        },
+        {
+          "question": "4. Quel est le montant de TVA concerné par l'achat au fournisseur italien, et par quel mécanisme ?",
+          "reponse": "350 € (autoliquidation intracommunautaire : TVA due et déductible simultanément, donc sans impact de trésorerie)"
+        }
+      ],
+      "tips": "Pour un achat intracommunautaire (ici auprès d'un fournisseur italien), c'est l'acheteur français qui autoliquide la TVA : il la déclare à la fois en TVA due intracommunautaire (compte 4452, au crédit) ET en TVA déductible (compte 44566, au débit), pour le même montant. L'opération est donc neutre en trésorerie, mais doit bien apparaître dans la déclaration."
+    },
+    {
+      "type": "calcul",
+      "titre": "Exemple 3 — La TVA à décaisser avec des opérations internationales",
+      "hint": "Les opérations suivantes (taux normal de 20 %) permettent de déterminer la TVA à décaisser de l'entreprise pour le mois d'avril N.",
+      "tableReference": {
+        "colonnes": [
+          "Opération",
+          "Montant HT (avril N)"
+        ],
+        "lignes": [
+          [
+            "Chiffre d'affaires réalisé en France",
+            "200 000 €"
+          ],
+          [
+            "Acquisitions de biens et services en France",
+            "50 000 €"
+          ],
+          [
+            "Acquisition d'immobilisation en Allemagne (intracommunautaire)",
+            "24 000 €"
+          ],
+          [
+            "Acquisition d'immobilisation en France",
+            "10 000 €"
+          ],
+          [
+            "Acquisition d'immobilisation hors UE (import)",
+            "5 000 €"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "question": "1. Quel est le montant total de la TVA collectée (y compris la TVA due intracommunautaire et à l'import) ?",
+          "reponse": "45 800 €"
+        },
+        {
+          "question": "2. Quel est le montant total de la TVA déductible (sur ABS et sur immobilisations, y compris intracom et import) ?",
+          "reponse": "17 800 €"
+        },
+        {
+          "question": "3. Quel est le montant de la TVA à décaisser pour le mois d'avril ?",
+          "reponse": "28 000 €"
+        }
+      ],
+      "tips": "Les acquisitions intracommunautaires (Allemagne, 24 000 €) et les importations (hors UE, 5 000 €) génèrent chacune une TVA « due » qui s'ajoute à la fois à la TVA collectée ET à la TVA déductible — l'essentiel est de ne pas les oublier des deux côtés du calcul, sous peine de fausser la TVA à décaisser."
+    },
+    {
+      "type": "calcul",
+      "titre": "Exemple 4 — Crédit de TVA ou TVA à décaisser ?",
+      "hint": "Pour le mois de mai N, les comptes de TVA de l'entreprise présentent les soldes suivants.",
+      "tableReference": {
+        "colonnes": [
+          "N° compte",
+          "Intitulé",
+          "Solde",
+          "Sens"
+        ],
+        "lignes": [
+          [
+            "4452",
+            "TVA due intracommunautaire",
+            "8 792,23 €",
+            "Crédit"
+          ],
+          [
+            "44562",
+            "TVA déductible sur immobilisations",
+            "18 868,48 €",
+            "Débit"
+          ],
+          [
+            "44566",
+            "TVA déductible sur autres biens et services",
+            "43 715,81 €",
+            "Débit"
+          ],
+          [
+            "44571",
+            "TVA collectée",
+            "53 146,68 €",
+            "Crédit"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "question": "1. Quel est le montant du crédit de TVA (ou de la TVA à décaisser) pour le mois de mai, avec son sens ?",
+          "reponse": "Crédit de TVA de 645,38 €"
+        },
+        {
+          "question": "2. Sur quel compte se loge ce solde après la déclaration ?",
+          "reponse": "44567 (Crédit de TVA à reporter)"
+        }
+      ],
+      "tips": "TVA collectée totale = 53 146,68 + 8 792,23 = 61 938,91 € ; TVA déductible totale = 18 868,48 + 43 715,81 = 62 584,29 €. La déductible dépasse la collectée : c'est donc un crédit de TVA (62 584,29 − 61 938,91 = 645,38 €), pas une TVA à décaisser. Après la déclaration, les 4 comptes (4452, 44562, 44566, 44571) sont soldés à zéro, et le crédit est transféré au compte 44567, à reporter sur la déclaration suivante."
+    }
+  ]
+}
