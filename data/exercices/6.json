@@ -1,0 +1,179 @@
+{
+  "numero": 6,
+  "titre": "Les réductions commerciales et financières, la TVA sur les débits",
+  "couleurA": "#021225",
+  "couleurB": "#106E85",
+  "exercices": [
+    {
+      "type": "calcul",
+      "titre": "Exemple 1 — TVA sur les débits ou sur l'encaissement",
+      "hint": "Le 23 mai N, l'entreprise A facture une réparation à son client B pour 200 € HT (TVA 20 %), facture n° F2305. B règle par chèque le 6 juin N.",
+      "tableReference": {
+        "colonnes": [
+          "Hypothèse",
+          "Situation"
+        ],
+        "lignes": [
+          [
+            "Hypothèse 1",
+            "La facture ne comporte aucune mention particulière relative à la TVA (régime normal)"
+          ],
+          [
+            "Hypothèse 2",
+            "L'entreprise A a opté pour la TVA sur les débits"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "question": "1. Quel est le montant TTC de la facture ?",
+          "reponse": "240 €"
+        },
+        {
+          "question": "2. Hypothèse 2 (option débits) — À quelle date B peut-il déduire la TVA de 40 € ?",
+          "reponse": "23 mai (date de la facture)"
+        },
+        {
+          "question": "3. Hypothèse 1 (régime normal) — À quelle date B peut-il déduire la TVA de 40 € ?",
+          "reponse": "6 juin (date du règlement)"
+        }
+      ],
+      "tips": "Pour une prestation de SERVICE, la TVA n'est normalement exigible qu'à l'encaissement (pas à la facturation). Si le prestataire opte pour les « débits », il avance l'exigibilité à la date de facturation — ce qui permet à son client de déduire la TVA plus tôt. Sans option, le client doit attendre le règlement effectif : en attendant, la TVA transite par un compte « TVA en attente » (44586 côté achat, 44574 côté vente) avant d'être transférée au compte définitif."
+    },
+    {
+      "type": "calcul",
+      "titre": "Exemple 2 et 3 — Réductions en cascade et avoir sur retour",
+      "hint": "L'entreprise B (fournisseur de champagne) facture 100 bouteilles à 25 € à son client A : rabais 5 %, remise 10 %, escompte 2 % pour règlement comptant, TVA 20 %. A retourne ensuite 4 bouteilles non conformes (avoir A234).",
+      "tableReference": {
+        "colonnes": [
+          "Étape",
+          "Calcul",
+          "Montant"
+        ],
+        "lignes": [
+          [
+            "Brut HT",
+            "100 × 25 €",
+            "2 500 €"
+          ],
+          [
+            "Rabais 5 %",
+            "2 500 × 5 %",
+            "− 125 €"
+          ],
+          [
+            "Remise 10 %",
+            "2 375 × 10 %",
+            "− 237,50 €"
+          ],
+          [
+            "Escompte 2 %",
+            "2 137,50 × 2 %",
+            "− 42,75 €"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "question": "1. Quel est le montant Net Commercial (après rabais et remise, avant escompte) ?",
+          "reponse": "2 137,50 €"
+        },
+        {
+          "question": "2. Quel est le montant Net Financier (après escompte, avant TVA) ?",
+          "reponse": "2 094,75 €"
+        },
+        {
+          "question": "3. Quel est le montant TTC de la facture ?",
+          "reponse": "2 513,70 €"
+        },
+        {
+          "question": "4. Pour l'avoir sur le retour de 4 bouteilles (A234), quel est le montant TTC ?",
+          "reponse": "100,55 €"
+        }
+      ],
+      "tips": "Les réductions commerciales (rabais, remise) se retranchent en cascade AVANT de calculer le Net Commercial — c'est ce montant qui est enregistré en compte d'achat/vente (607/707). L'escompte, lui, est une réduction FINANCIÈRE : il ne diminue pas le compte d'achat/vente, il se comptabilise à part dans un compte 665 (escompte accordé) ou 765 (escompte obtenu). Pour un avoir sur retour, on applique bien sûr les mêmes taux de rabais et de remise que sur la facture d'origine, sur le prix brut des articles retournés."
+    },
+    {
+      "type": "calcul",
+      "titre": "Exemple 4 et 5 — Avoir sur réduction oubliée et escompte de règlement",
+      "hint": "Exemple 4 : l'entreprise A vend pour 500 € HT à son client B, une remise de 5 % oubliée sur la facture fait l'objet d'un avoir A456. Exemple 5 : l'entreprise E facture 800 € HT le 30 mai avec un escompte de 2 % si règlement avant le 15 juin ; le client paie le 10 juin.",
+      "questions": [
+        {
+          "question": "1. Exemple 4 — Quel est le montant HT de la remise de 5 % oubliée (sur 500 €) ?",
+          "reponse": "25 €"
+        },
+        {
+          "question": "2. Exemple 4 — Quel est le montant TTC de l'avoir A456 ?",
+          "reponse": "30 €"
+        },
+        {
+          "question": "3. Exemple 5 — Le client ayant payé avant le 15 juin, quel est le montant de l'escompte accordé (2 % de 960 €) ?",
+          "reponse": "19,20 €"
+        },
+        {
+          "question": "4. Exemple 5 — Quel montant le client règle-t-il effectivement le 10 juin ?",
+          "reponse": "940,80 €"
+        }
+      ],
+      "tips": "Un avoir pour réduction commerciale oubliée (exemple 4) impacte le compte de réduction (RRR, 7097 ou 6097) ET la TVA collectée ou déductible au prorata. Un escompte de règlement (exemple 5), lui, ne touche jamais le compte d'achat ou de vente d'origine : il vient en déduction du règlement, avec sa propre quote-part de TVA à régulariser."
+    },
+    {
+      "type": "calcul",
+      "titre": "Application 1 — Facture et facture rectificative (Varappe → Van)",
+      "hint": "Le 13 juin N, Varappe facture à son client Van : 30 sacs à dos à 45 € et 10 matelas de camping à 75 €, remise de 10 %, TVA 20 %. Van reçoit la facture le 15 juin.",
+      "tableReference": {
+        "colonnes": [
+          "Désignation",
+          "Quantité",
+          "PU HT",
+          "Montant"
+        ],
+        "lignes": [
+          [
+            "Sacs à dos",
+            "30",
+            "45 €",
+            "1 350 €"
+          ],
+          [
+            "Matelas camping",
+            "10",
+            "75 €",
+            "750 €"
+          ],
+          [
+            "Total brut HT",
+            "",
+            "",
+            "2 100 €"
+          ],
+          [
+            "Remise 10 %",
+            "",
+            "",
+            "− 210 €"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "question": "1. Quel est le montant Total HT de la facture initiale (après remise de 10 %) ?",
+          "reponse": "1 890 €"
+        },
+        {
+          "question": "2. Quel est le montant TTC de la facture initiale ?",
+          "reponse": "2 268 €"
+        },
+        {
+          "question": "3. Hypothèse H3 — Si la remise habituelle est en réalité de 15 % et non 10 %, quel est le montant HT de l'avoir complémentaire (facture rectificative n° 345) ?",
+          "reponse": "105 €"
+        },
+        {
+          "question": "4. Hypothèse H3 — Quel est le montant TTC de cet avoir complémentaire ?",
+          "reponse": "126 €"
+        }
+      ],
+      "tips": "Une facture rectificative pour correction de remise (H3) ne porte que sur la DIFFÉRENCE entre la remise appliquée et la remise qui aurait dû l'être : ici (15 % − 10 %) × 2 100 € = 105 € HT. On ne refait jamais tout le calcul depuis zéro — on isole uniquement l'écart à corriger."
+    }
+  ]
+}
