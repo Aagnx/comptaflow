@@ -141,6 +141,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
   border:1px solid var(--line);border-radius:10px;margin-bottom:8px;background:#fff}
 .vf-texte{font-size:13.5px;color:var(--ink);flex:1}
 .vf-btns{display:flex;gap:6px;flex-shrink:0}
+@media(max-width:560px){.vf-row{flex-wrap:wrap}.vf-btns{width:100%}.vf-btn{flex:1}}
 .vf-btn{font-family:inherit;font-size:12.5px;font-weight:600;padding:7px 14px;border-radius:7px;
   border:1.5px solid var(--line);background:#fff;color:var(--ink-soft);cursor:pointer}
 .vf-btn.selected{border-color:var(--cyan);background:var(--cyan);color:#fff}
@@ -184,6 +185,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .cas-contexte{font-size:13.5px;color:var(--ink-soft);line-height:1.7;margin-bottom:16px}
 .cas-contexte b{color:var(--ink)}
 .cas-table{width:100%;border-collapse:collapse;margin-bottom:16px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+@media(max-width:560px){.cas-table{display:block;overflow-x:auto}.cas-table th,.cas-table td{padding:7px 9px;font-size:12px}}
 .cas-table th{background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:9px 14px;text-align:left}
 .cas-table td{padding:8px 14px;font-size:13.5px;border-top:1px solid var(--line)}
 .cas-table td.cas-total{font-weight:700;border-top:2px solid var(--ink)}
@@ -244,7 +246,8 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 /* ---- Compte en T interactif (à compléter) ---- */
 .ctx-wrap{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:10px 0}
 .ctx-header{background:linear-gradient(135deg, #1B6669, #238689, #25C5E9);color:#fff;padding:10px 16px;font-size:.85rem;text-align:center;font-weight:700}
-.ctx-body{display:grid;grid-template-columns:1fr 1fr}
+.ctx-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:560px){.ctx-body{grid-template-columns:1fr}.ctx-col:first-child{border-right:none;border-bottom:1px solid var(--line)}}
 .ctx-col{padding:10px 14px 14px}
 .ctx-col:first-child{border-right:1px solid var(--line)}
 .ctx-col-title{font-family:var(--mono);font-size:11px;font-weight:700;text-align:center;margin-bottom:8px;color:var(--ink-soft)}
@@ -295,6 +298,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ref-table th{background:var(--ink);color:#fff;padding:7px 9px;text-align:left;white-space:nowrap}
 .ref-table td{padding:6px 9px;border-top:1px solid var(--line);white-space:nowrap}
 .ref-table tr:nth-child(even) td{background:#fafcfb}
+.ref-table td.ref-wrap{white-space:normal;min-width:170px;line-height:1.45}
 </style>
 
 <body>
@@ -1132,7 +1136,7 @@ TYPES.calcul = {
     if(ex.tableReference){
       var head = ex.tableReference.colonnes.map(function(c){ return '<th>' + esc(c) + '</th>'; }).join('');
       var rows = ex.tableReference.lignes.map(function(r){
-        return '<tr>' + r.map(function(c){ return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>';
+        return '<tr>' + r.map(function(c){ return '<td' + (String(c).length > 30 ? ' class="ref-wrap"' : '') + '>' + esc(c) + '</td>'; }).join('') + '</tr>';
       }).join('');
       html += '<div class="ref-table-wrap"><table class="ref-table"><thead><tr>' + head + '</tr></thead><tbody>' + rows + '</tbody></table></div>';
     }
