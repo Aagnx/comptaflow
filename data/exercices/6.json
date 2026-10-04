@@ -1,179 +1,364 @@
 {
   "numero": 6,
-  "titre": "Les réductions commerciales et financières, la TVA sur les débits",
+  "titre": "Factures, réductions commerciales et TVA sur les débits",
   "couleurA": "#021225",
   "couleurB": "#106E85",
   "exercices": [
     {
       "type": "calcul",
-      "titre": "Exemple 1 — TVA sur les débits ou sur l'encaissement",
-      "hint": "Le 23 mai N, l'entreprise A facture une réparation à son client B pour 200 € HT (TVA 20 %), facture n° F2305. B règle par chèque le 6 juin N.",
+      "titre": "Exemple 1 — TVA sur les débits ou à l'encaissement",
+      "hint": "Le 12 mars N, l'entreprise Réparations Fontaine facture à son client, le traiteur Moreau, la révision d'un four professionnel : 100 € HT, TVA 20 % (facture n° F1203). Le traiteur règle par chèque le 26 mars N.",
       "tableReference": {
         "colonnes": [
           "Hypothèse",
-          "Situation"
+          "Situation de Réparations Fontaine"
         ],
         "lignes": [
           [
             "Hypothèse 1",
-            "La facture ne comporte aucune mention particulière relative à la TVA (régime normal)"
+            "Aucune option particulière : la facture est soumise au régime normal pour une prestation de services"
           ],
           [
             "Hypothèse 2",
-            "L'entreprise A a opté pour la TVA sur les débits"
+            "L'entreprise a choisi de payer la TVA sur les débits"
           ]
         ]
       },
       "questions": [
         {
-          "question": "1. Quel est le montant TTC de la facture ?",
-          "reponse": "240 €"
+          "question": "1. Quel est le montant de la TVA facturée ?",
+          "reponse": "20 €"
         },
         {
-          "question": "2. Hypothèse 2 (option débits) — À quelle date B peut-il déduire la TVA de 40 € ?",
-          "reponse": "23 mai (date de la facture)"
+          "question": "2. Quel est le montant TTC à régler par le traiteur ?",
+          "reponse": "120 €"
         },
         {
-          "question": "3. Hypothèse 1 (régime normal) — À quelle date B peut-il déduire la TVA de 40 € ?",
-          "reponse": "6 juin (date du règlement)"
+          "question": "3. Hypothèse 2 — À quelle date le traiteur peut-il déduire la TVA ?",
+          "reponse": "12 mars (date de la facture)"
+        },
+        {
+          "question": "4. Hypothèse 1 — À quelle date le traiteur peut-il déduire la TVA ?",
+          "reponse": "26 mars (date du règlement)"
         }
       ],
-      "tips": "Pour une prestation de SERVICE, la TVA n'est normalement exigible qu'à l'encaissement (pas à la facturation). Si le prestataire opte pour les « débits », il avance l'exigibilité à la date de facturation — ce qui permet à son client de déduire la TVA plus tôt. Sans option, le client doit attendre le règlement effectif : en attendant, la TVA transite par un compte « TVA en attente » (44586 côté achat, 44574 côté vente) avant d'être transférée au compte définitif."
+      "tips": "Pour une prestation de services, la TVA devient normalement exigible à l'encaissement du prix. Le prestataire qui choisit l'option « débits » avance cette exigibilité au jour de la facture : son client peut alors déduire la TVA plus tôt. Sans option, le client attend d'avoir payé, et la TVA reste entre-temps dans un compte d'attente (« TVA en attente de règlement » chez le vendeur, « TVA déductible en attente » chez l'acheteur)."
     },
     {
       "type": "calcul",
-      "titre": "Exemple 2 et 3 — Réductions en cascade et avoir sur retour",
-      "hint": "L'entreprise B (fournisseur de champagne) facture 100 bouteilles à 25 € à son client A : rabais 5 %, remise 10 %, escompte 2 % pour règlement comptant, TVA 20 %. A retourne ensuite 4 bouteilles non conformes (avoir A234).",
+      "titre": "Exemples 2 et 3 — Réductions en cascade et avoir sur retour",
+      "hint": "Oléa Provence facture à l'Épicerie Marceau 50 bidons d'huile d'olive à 25 € l'unité (facture F317 du 8 avril N) : rabais 4 %, remise 10 %, escompte 5 % pour règlement comptant, TVA 20 %. Le 22 avril, l'épicerie retourne 2 bidons non conformes : un avoir A52 est émis aux mêmes conditions.",
       "tableReference": {
         "colonnes": [
-          "Étape",
-          "Calcul",
-          "Montant"
+          "Condition commerciale",
+          "Taux",
+          "Se calcule sur"
         ],
         "lignes": [
           [
-            "Brut HT",
-            "100 × 25 €",
-            "2 500 €"
+            "Rabais",
+            "4 %",
+            "le montant brut"
           ],
           [
-            "Rabais 5 %",
-            "2 500 × 5 %",
-            "− 125 €"
+            "Remise",
+            "10 %",
+            "le net commercial 1 (après rabais)"
           ],
           [
-            "Remise 10 %",
-            "2 375 × 10 %",
-            "− 237,50 €"
+            "Escompte",
+            "5 %",
+            "le net commercial 2 (après remise)"
           ],
           [
-            "Escompte 2 %",
-            "2 137,50 × 2 %",
-            "− 42,75 €"
+            "TVA",
+            "20 %",
+            "le net financier"
           ]
         ]
       },
       "questions": [
         {
-          "question": "1. Quel est le montant Net Commercial (après rabais et remise, avant escompte) ?",
-          "reponse": "2 137,50 €"
+          "question": "1. Quel est le net commercial (après rabais et remise, avant escompte) de la facture F317 ?",
+          "reponse": "1 080 €"
         },
         {
-          "question": "2. Quel est le montant Net Financier (après escompte, avant TVA) ?",
-          "reponse": "2 094,75 €"
+          "question": "2. Quel est le net financier (après escompte, avant TVA) ?",
+          "reponse": "1 026 €"
         },
         {
-          "question": "3. Quel est le montant TTC de la facture ?",
-          "reponse": "2 513,70 €"
+          "question": "3. Quel est le montant TTC de la facture F317 ?",
+          "reponse": "1 231,20 €"
         },
         {
-          "question": "4. Pour l'avoir sur le retour de 4 bouteilles (A234), quel est le montant TTC ?",
-          "reponse": "100,55 €"
+          "question": "4. Pour l'avoir A52 (retour de 2 bidons), quel est le net commercial enregistré en compte d'achat ou de vente ?",
+          "reponse": "43,20 €"
+        },
+        {
+          "question": "5. Quel est le montant TTC de l'avoir A52 (TVA arrondie au centime) ?",
+          "reponse": "49,25 €"
         }
       ],
-      "tips": "Les réductions commerciales (rabais, remise) se retranchent en cascade AVANT de calculer le Net Commercial — c'est ce montant qui est enregistré en compte d'achat/vente (607/707). L'escompte, lui, est une réduction FINANCIÈRE : il ne diminue pas le compte d'achat/vente, il se comptabilise à part dans un compte 665 (escompte accordé) ou 765 (escompte obtenu). Pour un avoir sur retour, on applique bien sûr les mêmes taux de rabais et de remise que sur la facture d'origine, sur le prix brut des articles retournés."
+      "tips": "Le rabais et la remise sont des réductions commerciales : elles s'enchaînent avant tout et c'est le net commercial qui alimente le compte d'achat ou de vente. L'escompte est une réduction financière : il ne touche pas ce compte, il va en résultat financier (665 pour le vendeur, 765 pour l'acheteur). Pour un retour, l'avoir reprend les mêmes taux que la facture d'origine, appliqués au prix brut des articles rendus."
     },
     {
       "type": "calcul",
-      "titre": "Exemple 4 et 5 — Avoir sur réduction oubliée et escompte de règlement",
-      "hint": "Exemple 4 : l'entreprise A vend pour 500 € HT à son client B, une remise de 5 % oubliée sur la facture fait l'objet d'un avoir A456. Exemple 5 : l'entreprise E facture 800 € HT le 30 mai avec un escompte de 2 % si règlement avant le 15 juin ; le client paie le 10 juin.",
+      "titre": "Exemples 4 et 5 — Remise oubliée et escompte de règlement",
+      "hint": "Exemple 4 : Kerloc'h Équipements vend du matériel pour 250 € HT au Garage Petit, mais oublie une remise de 5 % sur la facture ; après réclamation, elle émet l'avoir A118 le 9 septembre. Exemple 5 : le 3 octobre, la Sellerie Vasseur facture 400 € HT (TVA 20 %) à l'Écurie des Pins, avec 2 % d'escompte si le règlement a lieu avant le 18 octobre ; l'écurie paie par chèque le 14 octobre.",
       "questions": [
         {
-          "question": "1. Exemple 4 — Quel est le montant HT de la remise de 5 % oubliée (sur 500 €) ?",
-          "reponse": "25 €"
+          "question": "1. Exemple 4 — Quel est le montant HT de la remise de 5 % oubliée ?",
+          "reponse": "12,50 €"
         },
         {
-          "question": "2. Exemple 4 — Quel est le montant TTC de l'avoir A456 ?",
-          "reponse": "30 €"
+          "question": "2. Exemple 4 — Quel est le montant TTC de l'avoir A118 ?",
+          "reponse": "15 €"
         },
         {
-          "question": "3. Exemple 5 — Le client ayant payé avant le 15 juin, quel est le montant de l'escompte accordé (2 % de 960 €) ?",
-          "reponse": "19,20 €"
+          "question": "3. Exemple 5 — Quel est le montant TTC de l'escompte accordé (2 % de la facture TTC) ?",
+          "reponse": "9,60 €"
         },
         {
-          "question": "4. Exemple 5 — Quel montant le client règle-t-il effectivement le 10 juin ?",
-          "reponse": "940,80 €"
+          "question": "4. Exemple 5 — Quelle somme l'écurie verse-t-elle réellement le 14 octobre ?",
+          "reponse": "470,40 €"
         }
       ],
-      "tips": "Un avoir pour réduction commerciale oubliée (exemple 4) impacte le compte de réduction (RRR, 7097 ou 6097) ET la TVA collectée ou déductible au prorata. Un escompte de règlement (exemple 5), lui, ne touche jamais le compte d'achat ou de vente d'origine : il vient en déduction du règlement, avec sa propre quote-part de TVA à régulariser."
+      "tips": "Un avoir pour remise oubliée corrige à la fois la réduction (compte 7097 chez le vendeur, 6097 chez l'acheteur) et la TVA au prorata. L'escompte, lui, n'altère jamais le compte d'achat ou de vente : il se déduit du règlement, en même temps qu'une régularisation de TVA (ici 8 € HT + 1,60 € de TVA = 9,60 €)."
     },
     {
       "type": "calcul",
-      "titre": "Application 1 — Facture et facture rectificative (Varappe → Van)",
-      "hint": "Le 13 juin N, Varappe facture à son client Van : 30 sacs à dos à 45 € et 10 matelas de camping à 75 €, remise de 10 %, TVA 20 %. Van reçoit la facture le 15 juin.",
+      "titre": "Application 1 — Facture initiale et factures rectificatives",
+      "hint": "Le 9 octobre N, Montbel Outdoor (Annecy) facture à la SARL Trek & Co (Chambéry) : 15 gourdes isothermes à 45 € et 5 sacs de couchage à 75 €, remise 10 %, TVA 20 % (facture n° 2087). Trois situations distinctes sont étudiées, chacune donnant lieu à une facture rectificative datée du 18 octobre.",
       "tableReference": {
         "colonnes": [
-          "Désignation",
-          "Quantité",
-          "PU HT",
-          "Montant"
+          "Situation",
+          "Description"
         ],
         "lignes": [
           [
-            "Sacs à dos",
-            "30",
-            "45 €",
-            "1 350 €"
+            "H1",
+            "Les 15 gourdes présentent un défaut : Trek & Co les garde contre un rabais de 20 % sur le montant HT facturé pour ces articles, soit 607,50 € après remise"
           ],
           [
-            "Matelas camping",
-            "10",
-            "75 €",
-            "750 €"
+            "H2",
+            "La commande portait sur le modèle standard à 35 € l'unité, pas sur le modèle facturé 45 € : Montbel remplace les 15 gourdes et la rectification ne retient que l'écart de prix, remise de 10 % incluse"
           ],
           [
-            "Total brut HT",
-            "",
-            "",
-            "2 100 €"
-          ],
-          [
-            "Remise 10 %",
-            "",
-            "",
-            "− 210 €"
+            "H3",
+            "La livraison est conforme, mais la remise habituelle du client est de 15 % et non de 10 %"
           ]
         ]
       },
       "questions": [
         {
-          "question": "1. Quel est le montant Total HT de la facture initiale (après remise de 10 %) ?",
-          "reponse": "1 890 €"
+          "question": "1. Quel est le total HT de la facture initiale (après remise de 10 %) ?",
+          "reponse": "945 €"
         },
         {
           "question": "2. Quel est le montant TTC de la facture initiale ?",
-          "reponse": "2 268 €"
+          "reponse": "1 134 €"
         },
         {
-          "question": "3. Hypothèse H3 — Si la remise habituelle est en réalité de 15 % et non 10 %, quel est le montant HT de l'avoir complémentaire (facture rectificative n° 345) ?",
-          "reponse": "105 €"
+          "question": "3. H1 — Quel est le montant HT de l'avoir ?",
+          "reponse": "121,50 €"
         },
         {
-          "question": "4. Hypothèse H3 — Quel est le montant TTC de cet avoir complémentaire ?",
-          "reponse": "126 €"
+          "question": "4. H2 — Quel est le montant HT de l'avoir correspondant à l'écart de prix ?",
+          "reponse": "135 €"
+        },
+        {
+          "question": "5. H3 — Quel est le montant HT de l'avoir complémentaire ?",
+          "reponse": "52,50 €"
+        },
+        {
+          "question": "6. H3 — Quel est le montant TTC de cet avoir ?",
+          "reponse": "63 €"
         }
       ],
-      "tips": "Une facture rectificative pour correction de remise (H3) ne porte que sur la DIFFÉRENCE entre la remise appliquée et la remise qui aurait dû l'être : ici (15 % − 10 %) × 2 100 € = 105 € HT. On ne refait jamais tout le calcul depuis zéro — on isole uniquement l'écart à corriger."
+      "tips": "Une facture rectificative ne refait jamais toute la facture : elle isole l'écart à corriger. Pour H3, on calcule seulement la différence de remise (15 % − 10 %) sur le brut total : 1 050 × 5 % = 52,50 € HT. Pour H1 et H2, pense à vérifier si la remise de 10 % a déjà été appliquée aux articles concernés avant de calculer ton pourcentage."
+    },
+    {
+      "type": "calcul",
+      "titre": "Application 2 — Option pour les débits et escompte (société Radioson)",
+      "hint": "La société Radioson répare du matériel audio ; elle a opté pour la TVA sur les débits. Opérations de mars N (TVA 20 % partout). Le garage Lemoine n'a pas opté pour les débits ; Net'Pro, si.",
+      "tableReference": {
+        "colonnes": [
+          "Date",
+          "Opération"
+        ],
+        "lignes": [
+          [
+            "05/03",
+            "Réception de la facture 0305 du garage Lemoine pour l'entretien de la camionnette : 325 € brut HT, remise 4 %, escompte 5 % pour règlement sous huitaine"
+          ],
+          [
+            "06/03",
+            "Émission de la facture 0306 au client Studio Mélodie pour un dépannage : 160 € HT, règlement prévu le 18 mars"
+          ],
+          [
+            "12/03",
+            "Règlement par chèque de la facture 0305, escompte déduit"
+          ],
+          [
+            "18/03",
+            "Encaissement de la facture 0306"
+          ],
+          [
+            "24/03",
+            "Réception de la facture F72 de Net'Pro pour l'entretien des locaux : 225 € HT"
+          ],
+          [
+            "28/03",
+            "Règlement par chèque de la facture F72"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "question": "1. Quel est le net commercial de la facture 0305 du garage ?",
+          "reponse": "312 €"
+        },
+        {
+          "question": "2. Quelle somme Radioson règle-t-elle au garage le 12 mars, escompte de 5 % déduit (TTC) ?",
+          "reponse": "355,68 €"
+        },
+        {
+          "question": "3. Quelle TVA Radioson peut-elle déduire au règlement de la facture 0305, escompte déduit ?",
+          "reponse": "59,28 €"
+        },
+        {
+          "question": "4. Quelle TVA Radioson collecte-t-elle dès l'émission de la facture 0306 ?",
+          "reponse": "32 €"
+        },
+        {
+          "question": "5. Quelle TVA Radioson peut-elle déduire dès la réception de la facture F72 de Net'Pro ?",
+          "reponse": "45 €"
+        }
+      ],
+      "tips": "Le sens de l'option joue dans les deux directions : l'option de TON fournisseur détermine QUAND TU déduis, l'option de TON entreprise détermine QUAND TU collectes. Le garage n'a pas opté : la TVA de 62,40 € ne se déduit qu'au règlement, et l'escompte la réduit de 3,12 € (5 % de 62,40 €). Net'Pro a opté : la TVA est déductible dès la facture."
+    },
+    {
+      "type": "calcul",
+      "titre": "Application 3 — Opérations avec l'Union européenne et le reste du monde",
+      "hint": "Ferrand Bricolage commercialise du matériel de bricolage. Toutes les entreprises concernées communiquent leur numéro de TVA intracommunautaire. Opérations de novembre N :",
+      "tableReference": {
+        "colonnes": [
+          "Date",
+          "Opération"
+        ],
+        "lignes": [
+          [
+            "04/11",
+            "Vente de perceuses au client portugais Lusotools : 1 050 € net HT"
+          ],
+          [
+            "07/11",
+            "Achat de marchandises au fournisseur allemand Werkhaus : 2 715 € brut, remise 5 %, règlement comptant"
+          ],
+          [
+            "14/11",
+            "Achat de marchandises au fournisseur suisse Alpenwerk : 1 700 € ; dédouanement par un transitaire ; règlement sous huitaine"
+          ],
+          [
+            "18/11",
+            "Facture du transitaire : droits de douane 60 € (débours), commission 55 € HT, TVA 20 %"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "question": "1. Quel montant de TVA Ferrand facture-t-elle à Lusotools sur la vente du 4 novembre ?",
+          "reponse": "0 € (livraison intracommunautaire exonérée)"
+        },
+        {
+          "question": "2. Quel est le net commercial de l'achat au fournisseur allemand ?",
+          "reponse": "2 579,25 €"
+        },
+        {
+          "question": "3. Quel montant de TVA Ferrand autoliquide-t-elle sur cette acquisition intracommunautaire ?",
+          "reponse": "515,85 €"
+        },
+        {
+          "question": "4. Quelle TVA figure sur la facture du transitaire ?",
+          "reponse": "11 €"
+        },
+        {
+          "question": "5. Quel est le montant total TTC de la facture du transitaire ?",
+          "reponse": "126 €"
+        },
+        {
+          "question": "6. Quel est le coût d'achat des marchandises suisses (prix + droits de douane + commission du transitaire) ?",
+          "reponse": "1 815 €"
+        }
+      ],
+      "tips": "Trois mécanismes à distinguer : la livraison vers un client de l'UE disposant d'un numéro de TVA intracommunautaire est exonérée ; l'acquisition auprès d'un fournisseur de l'UE s'autoliquide (TVA due et déductible pour le même montant, sans impact de trésorerie) ; l'importation hors UE donne lieu à une TVA acquittée en douane. Chez le transitaire, les droits de douane sont des débours (ils n'entrent pas dans la base de TVA), seule sa commission est taxée."
+    },
+    {
+      "type": "qcm",
+      "titre": "QCM — Réductions, escompte et exigibilité de la TVA",
+      "hint": "Une seule bonne réponse par question.",
+      "questions": [
+        {
+          "q": "Parmi ces réductions, laquelle est une réduction financière ?",
+          "options": [
+            "Rabais",
+            "Remise",
+            "Ristourne",
+            "Escompte"
+          ],
+          "correctIndex": 3,
+          "explication": "L'escompte récompense un paiement anticipé : c'est une réduction financière. Rabais, remise et ristourne sont des réductions commerciales."
+        },
+        {
+          "q": "Un escompte obtenu d'un fournisseur se comptabilise :",
+          "options": [
+            "En diminution du compte d'achat",
+            "Au crédit d'un compte de produits financiers (765)",
+            "En charges exceptionnelles"
+          ],
+          "correctIndex": 1,
+          "explication": "L'escompte obtenu est un produit financier (765) ; le compte d'achat reste enregistré au net commercial."
+        },
+        {
+          "q": "Une facture d'achat ou de vente est comptabilisée pour son montant :",
+          "options": [
+            "Brut",
+            "Net commercial",
+            "Net financier"
+          ],
+          "correctIndex": 1,
+          "explication": "On enregistre le net commercial (après rabais, remises et ristournes). L'escompte est traité à part, en résultat financier."
+        },
+        {
+          "q": "Un prestataire de services a opté pour la TVA sur les débits. Son client peut déduire la TVA :",
+          "options": [
+            "Dès la date de la facture",
+            "Seulement à la date du règlement"
+          ],
+          "correctIndex": 0,
+          "explication": "L'option pour les débits rend la TVA exigible dès la facturation : le client la déduit donc dès réception de la facture."
+        },
+        {
+          "q": "Une entreprise française livre des marchandises à un client d'un autre État de l'UE qui lui a communiqué son numéro de TVA intracommunautaire. La vente est :",
+          "options": [
+            "Soumise à la TVA française à 20 %",
+            "Exonérée de TVA",
+            "Soumise à la TVA du pays du client, facturée par le vendeur"
+          ],
+          "correctIndex": 1,
+          "explication": "C'est une livraison intracommunautaire : exonérée chez le vendeur, la TVA étant autoliquidée par l'acquéreur dans son pays."
+        },
+        {
+          "q": "Les droits de douane refacturés par un transitaire sont-ils soumis à TVA sur sa facture ?",
+          "options": [
+            "Oui, à 20 %",
+            "Non, ce sont des débours"
+          ],
+          "correctIndex": 1,
+          "explication": "Le transitaire avance les droits de douane pour le compte de son client : ce sont des débours, hors base de TVA. Seule sa commission est taxée."
+        }
+      ],
+      "tips": "Pour ne pas confondre : réduction commerciale = elle change le prix de vente (donc le compte d'achat ou de vente) ; réduction financière = elle récompense le paiement rapide (donc le résultat financier). Et pour la TVA, retiens que c'est toujours la date d'exigibilité qui détermine le moment où l'on collecte, et celui où le client peut déduire."
     }
   ]
 }
