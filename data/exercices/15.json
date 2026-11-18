@@ -7,47 +7,47 @@
     {
       "type": "calcul",
       "titre": "Exemple 1 — Acompte et facture finale (TVA sur les débits)",
-      "hint": "Le 10 février, l'entreprise C perçoit un acompte de 600 € (TTC) sur une prestation d'entretien des locaux. Le 28 février, elle facture son client D : 2 000 € HT, TVA 20 %, avec la mention « TVA sur les débits ».",
+      "hint": "Le 12 mars, l'entreprise Clairval encaisse un acompte de 300 € TTC pour une prestation d'entretien de locaux. Le 30 mars, elle facture son client, l'hôtel Beauséjour : 1 000 € HT, TVA 20 %, avec la mention « TVA sur les débits ».",
       "tableReference": {
         "colonnes": [
-          "Facture du 28 février",
+          "Facture du 30 mars",
           "Montant"
         ],
         "lignes": [
           [
             "Prestation (HT)",
-            "2 000 €"
+            "1 000 €"
           ],
           [
             "TVA 20 %",
-            "400 €"
+            "200 €"
           ],
           [
             "Total TTC",
-            "2 400 €"
+            "1 200 €"
           ]
         ]
       },
       "questions": [
         {
-          "question": "1. Quel est le montant de TVA contenu dans l'acompte de 600 € TTC ?",
-          "reponse": "100 €"
+          "question": "1. Quel montant de TVA l'acompte de 300 € TTC contient-il ?",
+          "reponse": "50 €"
         },
         {
-          "question": "2. Quel montant TTC reste à payer par D à la réception de la facture finale (après déduction de l'acompte) ?",
-          "reponse": "1 800 €"
+          "question": "2. Quel montant TTC l'hôtel Beauséjour doit-il encore régler à la réception de la facture finale (acompte déduit) ?",
+          "reponse": "900 €"
         },
         {
-          "question": "3. Quelle TVA complémentaire C doit-elle encore collecter le 28 février (TVA totale − TVA déjà collectée sur l'acompte) ?",
-          "reponse": "300 €"
+          "question": "3. Quelle TVA complémentaire Clairval doit-elle encore collecter le 30 mars (TVA totale − TVA déjà collectée sur l'acompte) ?",
+          "reponse": "150 €"
         }
       ],
-      "tips": "La TVA est exigible dès l'encaissement de l'acompte : C collecte donc 100 € de TVA le 10 février (compte 44571), avec en contrepartie un compte transitoire « TVA récupérée d'avance » (44584) au débit. À la facture finale, ce compte est soldé et on ne collecte que le complément (300 €) : 100 + 300 = 400 €, soit exactement la TVA de la prestation."
+      "tips": "La TVA devient exigible dès l'encaissement de l'acompte : Clairval collecte donc 50 € de TVA le 12 mars (compte 44571), avec en contrepartie un compte transitoire « TVA récupérée d'avance » (44584) au débit. À la facture finale, ce compte est soldé et seul le complément (150 €) est collecté : 50 + 150 = 200 €, soit exactement la TVA de la prestation."
     },
     {
       "type": "calcul",
       "titre": "Exemples 2 à 4 — Frais accessoires sur achats et ventes",
-      "hint": "Le 25 février, l'entreprise A facture 20 unités à 50 € à son client B, avec une remise de 5 %, un port forfaitaire de 75 € et une assurance de 9 €. Taux de TVA : 20 %.",
+      "hint": "Le 14 avril, l'entreprise Vasseur facture 20 unités à 25 € à son client, la cave Mallet, avec une remise de 5 %, un port forfaitaire de 40 € et une assurance de 5 €. Taux de TVA : 20 %.",
       "tableReference": {
         "colonnes": [
           "Élément de la facture",
@@ -55,58 +55,106 @@
         ],
         "lignes": [
           [
-            "Marchandises : 20 × 50 €",
-            "1 000 €"
+            "Marchandises : 20 × 25 €",
+            "500 €"
           ],
           [
             "Remise 5 %",
-            "− 50 €"
+            "− 25 €"
           ],
           [
             "Net commercial",
-            "950 €"
+            "475 €"
           ],
           [
             "Port forfaitaire",
-            "75 €"
+            "40 €"
           ],
           [
             "Assurance",
-            "9 €"
+            "5 €"
           ]
         ]
       },
       "questions": [
         {
           "question": "1. Quelle est la base de calcul de la TVA (net commercial + port, sans l'assurance) ?",
-          "reponse": "1 025 €"
+          "reponse": "515 €"
         },
         {
           "question": "2. Quel est le montant de la TVA à 20 % ?",
-          "reponse": "205 €"
+          "reponse": "103 €"
         },
         {
-          "question": "3. Quel est le net à payer par B ?",
-          "reponse": "1 239 €"
+          "question": "3. Quel net à payer la cave Mallet doit-elle régler ?",
+          "reponse": "623 €"
         },
         {
-          "question": "4. Chez A (vendeur), quel montant total de frais accessoires facturés (port + assurance) est enregistré en produits ?",
-          "reponse": "84 €"
+          "question": "4. Chez Vasseur (vendeur), quel total de frais accessoires facturés (port + assurance) est enregistré en produits ?",
+          "reponse": "45 €"
         },
         {
-          "question": "5. Chez B (acheteur), si les frais accessoires sont incorporés au coût d'achat des marchandises stockées, quel est le montant débité au compte d'achat ?",
-          "reponse": "1 034 €"
+          "question": "5. Chez la cave Mallet (acheteur), si les frais accessoires sont incorporés au coût d'achat des marchandises en stock, quel montant est débité au compte d'achat ?",
+          "reponse": "520 €"
         }
       ],
-      "tips": "Le transport est un service soumis à TVA, mais pas l'assurance (on paie une prime sans recevoir de service en contrepartie) : voilà pourquoi la TVA porte sur 950 + 75 = 1 025 € et pas sur 1 034 €. Chez l'acheteur, deux méthodes : comptabiliser chaque frais « par nature » (transport, assurance...) ou, pour des biens stockés, les incorporer au coût d'achat (1 034 €) ; une troisième consiste à les isoler dans les sous-comptes du compte 608."
+      "tips": "Le transport est un service soumis à TVA, pas l'assurance (on verse une prime sans recevoir de prestation en échange) : la TVA porte donc sur 475 + 40 = 515 € et non sur 520 €. Chez l'acheteur, deux méthodes : comptabiliser chaque frais « par nature » (transport, assurance…) ou, pour des biens en stock, les incorporer au coût d'achat (520 €) ; une troisième consiste à les isoler dans les sous-comptes du compte 608."
     },
     {
       "type": "calcul",
       "titre": "Exemples 5 à 7 — Emballages consignés : facturation, retour et boni",
-      "hint": "Le 5 novembre, l'entreprise A facture 1 000 € HT de produits finis à son client B, emballés sur 2 palettes consignées à 50 € l'unité. Le 20 novembre, A récupère les 2 palettes.",
+      "hint": "Le 5 novembre, l'entreprise Lemoine facture 500 € HT de produits finis à son client Mareyeur, emballés sur 2 palettes consignées à 25 € l'unité. Le 20 novembre, Lemoine récupère les 2 palettes.",
       "tableReference": {
         "colonnes": [
           "Facture du 5 novembre",
+          "Montant"
+        ],
+        "lignes": [
+          [
+            "Produits finis (HT)",
+            "500 €"
+          ],
+          [
+            "TVA 20 %",
+            "100 €"
+          ],
+          [
+            "Consignation : 2 × 25 €",
+            "50 €"
+          ]
+        ]
+      },
+      "questions": [
+        {
+          "question": "1. Quel net à payer TTC revient à Mareyeur (la consignation n'étant pas soumise à TVA) ?",
+          "reponse": "650 €"
+        },
+        {
+          "question": "2. Exemple 6 — Lemoine reprend les palettes au prix consigné : quel est le montant de l'avoir ?",
+          "reponse": "50 €"
+        },
+        {
+          "question": "3. Exemple 7 — Lemoine reprend finalement les palettes à 22,50 € l'unité : quel est le montant du boni (écart entre 25 € et 22,50 € sur 2 palettes) ?",
+          "reponse": "5 €"
+        },
+        {
+          "question": "4. Quelle TVA s'applique à ce boni ?",
+          "reponse": "1 €"
+        },
+        {
+          "question": "5. Quel est le montant net de l'avoir (« note à votre crédit ») adressé à Mareyeur ?",
+          "reponse": "44 €"
+        }
+      ],
+      "tips": "Tant que l'emballage est repris au prix consigné, la consignation reste un simple dépôt remboursable, hors TVA. Si la reprise se fait à un prix inférieur, l'écart (5 €) est un boni pour le vendeur et un mali pour l'acheteur : cette opération-là est soumise à TVA (1 €). Avoir = 50 − 5 − 1 = 44 €. Chez le vendeur, la dette est suivie au compte 4196 ; chez l'acheteur, la créance au compte 4096."
+    },
+    {
+      "type": "calcul",
+      "titre": "Exemple 8 — Emballages consignés non retournés (non identifiables)",
+      "hint": "Le 23 novembre, l'entreprise Lemoine facture 1 000 € HT de produits finis à Mareyeur, emballés sur 2 palettes consignées à 25 € l'unité (net à payer : 1 250 €). Le 24 décembre, les palettes n'ont toujours pas été rendues : Lemoine les facture 37,50 € l'unité. Les emballages sont non identifiables.",
+      "tableReference": {
+        "colonnes": [
+          "Facture initiale",
           "Montant"
         ],
         "lignes": [
@@ -119,82 +167,34 @@
             "200 €"
           ],
           [
-            "Consignation : 2 × 50 €",
-            "100 €"
-          ]
-        ]
-      },
-      "questions": [
-        {
-          "question": "1. Quel est le net à payer TTC par B (la consignation n'étant pas soumise à TVA) ?",
-          "reponse": "1 300 €"
-        },
-        {
-          "question": "2. Exemple 6 — A reprend les palettes au prix consigné : quel est le montant de l'avoir ?",
-          "reponse": "100 €"
-        },
-        {
-          "question": "3. Exemple 7 — A reprend finalement les palettes à 45 € l'unité : quel est le montant du boni (différence entre 50 € et 45 € sur 2 palettes) ?",
-          "reponse": "10 €"
-        },
-        {
-          "question": "4. Quelle est la TVA sur ce boni ?",
-          "reponse": "2 €"
-        },
-        {
-          "question": "5. Quel est le montant net de l'avoir (« note à votre crédit ») émis au client B ?",
-          "reponse": "88 €"
-        }
-      ],
-      "tips": "Tant que l'emballage est restitué au prix consigné, la consignation reste un simple dépôt remboursable, hors TVA. Mais si la reprise se fait à un prix inférieur, la différence (10 €) est un boni pour le vendeur et un mali pour l'acheteur : c'est une opération qui, elle, est soumise à TVA (2 €). Avoir = 100 − 10 − 2 = 88 €. Chez le vendeur, la dette est suivie en 4196 ; chez l'acheteur, la créance en 4096."
-    },
-    {
-      "type": "calcul",
-      "titre": "Exemple 8 — Emballages consignés non retournés (non identifiables)",
-      "hint": "Le 23 novembre, A facture 2 000 € HT de produits finis à B, emballés sur 2 palettes consignées à 50 € l'unité (net à payer : 2 500 €). Le 24 décembre, B n'a toujours pas retourné les palettes : A les lui facture 75 € l'unité. Les emballages sont non identifiables.",
-      "tableReference": {
-        "colonnes": [
-          "Facture initiale",
-          "Montant"
-        ],
-        "lignes": [
-          [
-            "Produits finis (HT)",
-            "2 000 €"
-          ],
-          [
-            "TVA 20 %",
-            "400 €"
-          ],
-          [
-            "Consignation : 2 × 50 €",
-            "100 €"
+            "Consignation : 2 × 25 €",
+            "50 €"
           ],
           [
             "Net à payer",
-            "2 500 €"
+            "1 250 €"
           ]
         ]
       },
       "questions": [
         {
-          "question": "1. Quel montant HT A facture-t-elle pour les 2 palettes non retournées (2 × 75 €) ?",
-          "reponse": "150 €"
+          "question": "1. Quel montant HT Lemoine facture-t-elle pour les 2 palettes non rendues (2 × 37,50 €) ?",
+          "reponse": "75 €"
         },
         {
-          "question": "2. Quelle est la TVA collectée sur cette facturation ?",
-          "reponse": "30 €"
+          "question": "2. Quelle TVA est collectée sur cette facturation ?",
+          "reponse": "15 €"
         },
         {
           "question": "3. Quel est le montant TTC facturé pour les palettes ?",
-          "reponse": "180 €"
+          "reponse": "90 €"
         },
         {
-          "question": "4. Après déduction de la consignation de 100 € déjà versée, quel complément B doit-il payer ?",
-          "reponse": "80 €"
+          "question": "4. La consignation de 50 € ayant déjà été versée, quel complément Mareyeur doit-il régler ?",
+          "reponse": "40 €"
         }
       ],
-      "tips": "Une palette non rendue dans le délai est considérée comme vendue au client : A annule la dette de consignation (100 €) et facture la cession de l'emballage à son prix de vente. La TVA se calcule sur ce prix de cession (150 € HT → 30 €), pas sur la consignation initiale. Seule la différence entre 180 € TTC et les 100 € déjà versés reste à régler : 80 €."
+      "tips": "Une palette non rendue dans le délai est considérée comme vendue au client : le vendeur annule la dette de consignation (50 €) et facture la cession de l'emballage à son prix de vente. La TVA se calcule sur ce prix de cession (75 € HT → 15 €), pas sur la consignation initiale. Seule la différence entre 90 € TTC et les 50 € déjà versés reste à payer : 40 €."
     },
     {
       "type": "qcm",
@@ -202,7 +202,7 @@
       "hint": "Une seule bonne réponse, sauf mention contraire.",
       "questions": [
         {
-          "q": "Un acompte :",
+          "q": "À propos d'un acompte :",
           "options": [
             "Engage le vendeur et l'acheteur à réaliser le contrat",
             "Peut être librement remboursé par le vendeur",
@@ -212,7 +212,7 @@
           "explication": "L'acompte engage les deux parties à exécuter le contrat (pas de remboursement). C'est l'avance ou les arrhes qui n'engagent aucune des parties et laissent la possibilité de se dédire."
         },
         {
-          "q": "La TVA sur une avance ou un acompte est exigible :",
+          "q": "Quand la TVA sur une avance ou un acompte devient-elle exigible ?",
           "options": [
             "Dès le versement de l'avance ou de l'acompte",
             "À la livraison du bien",
@@ -222,7 +222,7 @@
           "explication": "La TVA est exigible dès l'encaissement des avances et acomptes, sans attendre la facture finale."
         },
         {
-          "q": "Parmi les frais accessoires facturés, lequel n'est pas soumis à TVA ?",
+          "q": "Parmi les frais accessoires facturés, lequel échappe à la TVA ?",
           "options": [
             "Le transport",
             "L'assurance",
@@ -232,7 +232,7 @@
           "explication": "Le transport est un service soumis à TVA (20 %). L'assurance ne l'est pas : on paie une prime sans contrepartie sous forme de service."
         },
         {
-          "q": "Quels éléments entrent dans le coût d'achat d'un bien (art. 213-31 du PCG) ?",
+          "q": "Quels éléments composent le coût d'achat d'un bien (art. 213-31 du PCG) ?",
           "multiple": true,
           "options": [
             "Le prix d'achat",
@@ -256,7 +256,7 @@
       "hint": "Pour chaque situation, choisis le bon numéro de compte.",
       "questions": [
         {
-          "q": "Emballage perdu (non repris, non vendu au client) :",
+          "q": "Emballage perdu (ni repris, ni revendu au client) :",
           "options": [
             "60261",
             "60265",
@@ -267,7 +267,7 @@
           "explication": "60261 — Emballages perdus."
         },
         {
-          "q": "Emballage récupérable non identifiable (ex. une palette lambda) :",
+          "q": "Emballage récupérable non identifiable (par exemple une palette standard) :",
           "options": [
             "60261",
             "60265",
@@ -289,7 +289,7 @@
           "explication": "2186 — Emballages récupérables : une immobilisation corporelle."
         },
         {
-          "q": "Matériel d'emballage destiné au stockage interne des matières (ex. une cuve pour le vin) :",
+          "q": "Matériel d'emballage servant au stockage interne des matières (par exemple une cuve de stockage de cidre) :",
           "options": [
             "60261",
             "60265",
@@ -300,7 +300,7 @@
           "explication": "Ce n'est pas un emballage commercial mais un équipement durable : matériel industriel (2154), à classer en immobilisations."
         },
         {
-          "q": "Chez le vendeur, la dette envers le client au titre des emballages consignés :",
+          "q": "Chez le vendeur, dette envers le client au titre des emballages consignés :",
           "options": [
             "4096",
             "4196",
@@ -311,7 +311,7 @@
           "explication": "4196 — Clients, dettes sur emballages et matériels consignés."
         },
         {
-          "q": "Chez l'acheteur, la créance sur le fournisseur au titre des emballages à rendre :",
+          "q": "Chez l'acheteur, créance sur le fournisseur au titre des emballages à rendre :",
           "options": [
             "4096",
             "4196",
@@ -322,7 +322,7 @@
           "explication": "4096 — Fournisseurs, créances pour emballages et matériels à rendre."
         },
         {
-          "q": "Chez le vendeur, un acompte reçu d'un client sur commande :",
+          "q": "Chez le vendeur, acompte reçu d'un client à la commande :",
           "options": [
             "4096",
             "4196",
@@ -333,7 +333,7 @@
           "explication": "4191 — Clients, avances et acomptes reçus sur commandes."
         },
         {
-          "q": "Chez l'acheteur, un acompte versé à un fournisseur :",
+          "q": "Chez l'acheteur, acompte versé à un fournisseur :",
           "options": [
             "4096",
             "4196",

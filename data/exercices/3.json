@@ -12,19 +12,19 @@
       "optionB": "Flux financier",
       "affirmations": [
         {
-          "texte": "a. Achats de matières premières",
+          "texte": "a. Achat de matières premières",
           "vrai": true
         },
         {
-          "texte": "b. Loyer du magasin",
+          "texte": "b. Loyer d'un local commercial",
           "vrai": true
         },
         {
-          "texte": "c. Règlement de la facture d'un transporteur",
+          "texte": "c. Paiement de la facture d'un transporteur",
           "vrai": false
         },
         {
-          "texte": "d. Ventes de produits finis à crédit",
+          "texte": "d. Vente de produits finis à crédit",
           "vrai": true
         },
         {
@@ -32,15 +32,15 @@
           "vrai": true
         },
         {
-          "texte": "f. Achat d'un matériel industriel",
+          "texte": "f. Acquisition d'une machine industrielle",
           "vrai": true
         },
         {
-          "texte": "g. Frais postaux",
+          "texte": "g. Frais d'affranchissement",
           "vrai": true
         },
         {
-          "texte": "h. Règlement de la facture de téléphone Orange",
+          "texte": "h. Règlement de la facture de l'opérateur téléphonique",
           "vrai": false
         }
       ],
@@ -49,26 +49,26 @@
     {
       "type": "cubes",
       "titre": "Application 2 — Distinguer les emplois et les ressources",
-      "hint": "L'entreprise A a réalisé les opérations suivantes. Pour chacune, place le bon cube dans la zone Ressource et dans la zone Emploi.",
+      "hint": "L'entreprise Lumicor a réalisé les opérations suivantes. Pour chacune, place le bon cube dans la zone Ressource et dans la zone Emploi.",
       "operations": [
         {
-          "texte": "Opération a — Achat à crédit de marchandises auprès du fournisseur B pour 2 800 €",
-          "ressource": "Dette fournisseur B",
-          "emploi": "Achat de marchandises (2 800 €)",
+          "texte": "Opération a — Achat de marchandises à crédit auprès du fournisseur Delmas pour 1 400 €",
+          "ressource": "Dette fournisseur Delmas",
+          "emploi": "Achat de marchandises (1 400 €)",
           "distracteurs": [
             "Banque"
           ]
         },
         {
-          "texte": "Opération b — Règlement par chèque du fournisseur B",
+          "texte": "Opération b — Paiement par chèque du fournisseur Delmas",
           "ressource": "Banque",
-          "emploi": "Dette fournisseur B (extinction)",
+          "emploi": "Dette fournisseur Delmas (extinction)",
           "distracteurs": [
             "Caisse"
           ]
         },
         {
-          "texte": "Opération c — Dépôt d'espèces à la banque 3 000 €",
+          "texte": "Opération c — Versement de 1 500 € d'espèces sur le compte bancaire",
           "ressource": "Caisse",
           "emploi": "Banque",
           "distracteurs": [
@@ -76,8 +76,8 @@
           ]
         },
         {
-          "texte": "Opération d — Remise en banque d'un chèque de 1 200 € reçu du client C",
-          "ressource": "Créance client C",
+          "texte": "Opération d — Remise en banque d'un chèque de 600 € reçu du client Perrin",
+          "ressource": "Créance client Perrin",
           "emploi": "Banque",
           "distracteurs": [
             "Dette fournisseur"
@@ -89,10 +89,10 @@
     {
       "type": "cubes",
       "titre": "Application 3 (question 1) — Représenter un compte schématique",
-      "hint": "L'entreprise « Beau Meuble » a réalisé les opérations suivantes en octobre. Pour chacune, place le bon cube dans la zone Ressource et dans la zone Emploi.",
+      "hint": "L'entreprise « Atelier Brunel » a réalisé les opérations suivantes en octobre. Pour chacune, place le bon cube dans la zone Ressource et dans la zone Emploi.",
       "operations": [
         {
-          "texte": "04/10 — 4 000 € encaissés par chèque en règlement de prestations réalisées",
+          "texte": "04/10 — Encaissement par chèque de 2 000 € en règlement de prestations réalisées",
           "ressource": "Prestations réalisées (produit)",
           "emploi": "Banque",
           "distracteurs": [
@@ -100,7 +100,7 @@
           ]
         },
         {
-          "texte": "09/10 — Paiement en espèces de fournitures de bureau pour 10 €",
+          "texte": "09/10 — Achat de fournitures de bureau payé en espèces : 5 €",
           "ressource": "Caisse",
           "emploi": "Fournitures de bureau (achat)",
           "distracteurs": [
@@ -108,7 +108,7 @@
           ]
         },
         {
-          "texte": "15/10 — Réception de la facture de location d'un véhicule, payable le 15/11 pour 2 000 €",
+          "texte": "15/10 — Réception de la facture de location d'un véhicule, à payer le 15/11 : 1 000 €",
           "ressource": "Dette fournisseur (location)",
           "emploi": "Charge de location",
           "distracteurs": [
@@ -116,7 +116,7 @@
           ]
         },
         {
-          "texte": "21/10 — Envoi de la facture de prestation réalisée pour le client B, 2 450 €",
+          "texte": "21/10 — Envoi au client B de la facture d'une prestation réalisée : 1 225 €",
           "ressource": "Prestations réalisées (produit)",
           "emploi": "Créance client B",
           "distracteurs": [
@@ -124,7 +124,7 @@
           ]
         },
         {
-          "texte": "28/10 — Règlement du fournisseur C, par chèque bancaire, 2 100 €",
+          "texte": "28/10 — Paiement par chèque bancaire du fournisseur C : 1 050 €",
           "ressource": "Banque",
           "emploi": "Dette fournisseur C (extinction)",
           "distracteurs": [
@@ -143,90 +143,90 @@
       "soldeInitial": {
         "cote": "debit",
         "date": "01/10",
-        "montant": "4 226"
+        "montant": "2 113"
       },
       "lignesDebit": [
         {
           "date": "04/10",
-          "libelle": "Encaissement chèque (prestations)",
-          "montant": "4 000"
+          "libelle": "Encaissement du chèque (prestations)",
+          "montant": "2 000"
         }
       ],
       "lignesCredit": [
         {
           "date": "28/10",
-          "libelle": "Règlement fournisseur C",
-          "montant": "2 100"
+          "libelle": "Paiement du fournisseur C",
+          "montant": "1 050"
         }
       ],
       "champLibre": {
-        "question": "Quel est le solde du compte Banque au 31 octobre, et son sens ?",
-        "reponse": "6 126 € débiteur"
+        "question": "Quel est le solde du compte Banque au 31 octobre, et quel est son sens ?",
+        "reponse": "3 063 € débiteur"
       },
-      "tips": "Débit total = 4 226 + 4 000 = 8 226 € ; Crédit total = 2 100 € ; Solde = 8 226 − 2 100 = 6 126 € débiteur. Un compte de trésorerie (Banque, Caisse) est presque toujours débiteur : c'est logique, une entreprise ne peut pas avoir « moins que rien » en banque (sauf découvert autorisé, qui relève d'un autre compte)."
+      "tips": "Total débit = 2 113 + 2 000 = 4 113 € ; total crédit = 1 050 € ; solde = 4 113 − 1 050 = 3 063 € débiteur. Un compte de trésorerie (Banque, Caisse) est presque toujours débiteur : une entreprise ne peut pas avoir « moins que rien » en banque (sauf découvert autorisé, qui relève d'un autre compte)."
     },
     {
       "type": "compte_t_actif",
       "titre": "Application 4 — Présentation détaillée d'un compte Client",
-      "hint": "L'entreprise D vend un produit à 56 € l'unité à son client Z. Place le bon cube-montant sur chaque ligne, puis réponds aux deux questions.",
+      "hint": "L'entreprise Maison Lefèvre vend un produit à 28 € l'unité à son client Yvon. Place le bon cube-montant sur chaque ligne, puis réponds aux deux questions.",
       "numero": "411",
-      "intitule": "Client Z",
+      "intitule": "Client Yvon",
       "soldeInitial": {
         "cote": "debit",
         "date": "01/10",
-        "montant": "2 650"
+        "montant": "1 325"
       },
       "lignesDebit": [
         {
           "date": "05/10",
-          "libelle": "Vente de 1 500 pièces",
-          "montant": "84 000"
+          "libelle": "Livraison de 1 500 pièces",
+          "montant": "42 000"
         },
         {
           "date": "09/10",
-          "libelle": "Vente de 900 pièces",
-          "montant": "50 400"
+          "libelle": "Livraison de 900 pièces",
+          "montant": "25 200"
         },
         {
           "date": "26/10",
-          "libelle": "Vente de 1 200 pièces",
-          "montant": "67 200"
+          "libelle": "Livraison de 1 200 pièces",
+          "montant": "33 600"
         }
       ],
       "lignesCredit": [
         {
           "date": "16/10",
-          "libelle": "Règlement (moitié du montant dû au 15/10)",
-          "montant": "68 525"
+          "libelle": "Règlement (moitié de la somme due au 15/10)",
+          "montant": "34 262,50"
         },
         {
           "date": "18/10",
           "libelle": "Retour de 250 pièces défectueuses",
-          "montant": "14 000"
+          "montant": "7 000"
         },
         {
           "date": "31/10",
-          "libelle": "Règlement (moitié du montant dû au 30/10)",
-          "montant": "60 862,50"
+          "libelle": "Règlement (moitié de la somme due au 30/10)",
+          "montant": "30 431,25"
         }
       ],
       "cubesMontants": [
-        "84 000",
-        "50 400",
-        "67 200",
-        "68 525",
-        "14 000",
-        "60 862,50"
+        "42 000",
+        "25 200",
+        "33 600",
+        "34 262,50",
+        "7 000",
+        "30 431,25"
       ],
       "champLibre": {
-        "question": "2. Quel est le montant et le sens du solde du compte au 31 octobre ?",
-        "reponse": "60 862,50 € débiteur"
+        "question": "2. Quel est le montant du solde du compte au 31 octobre, et quel est son sens ?",
+        "reponse": "30 431,25 € débiteur"
       },
       "redactionLibre": {
-        "question": "3. Indique, en une phrase, la signification du solde de ce compte.",
-        "reponseIndicative": "Au 31/10/N, le client Z doit encore 60 862,50 € à l'entreprise D : un compte client débiteur signifie que le client nous doit de l'argent."
+        "question": "3. Explique en une phrase ce que signifie le solde de ce compte.",
+        "reponseIndicative": "Au 31/10/N, le client Yvon doit encore 30 431,25 € à Maison Lefèvre : un compte client débiteur correspond à une créance de l'entreprise sur son client."
       },
-      "tips": "Toujours raisonner en valeur (prix unitaire × quantité), jamais en nombre de pièces. Un retour de marchandises défectueuses vient réduire ce que doit le client : il se place donc au crédit, comme un règlement. Et pour calculer un « montant dû », il faut reconstituer le solde du compte à la date exacte demandée, pas seulement additionner les ventes."
+      "tips": "Raisonne toujours en valeur (prix unitaire × quantité), jamais en nombre de pièces. Un retour de marchandises défectueuses réduit ce que le client doit : il s'inscrit donc au crédit, comme un règlement. Et pour trouver un « montant dû », il faut reconstituer le solde du compte à la date exacte demandée, pas seulement additionner les ventes."
     }
   ]
 }
